@@ -1,0 +1,14 @@
+{
+  "name": "wp-avalon",
+  "version": "1.0.0",
+  "description": "Free Theme for WP-Property plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wp-property/wp-avalon.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.4.1"
+  }
+}
