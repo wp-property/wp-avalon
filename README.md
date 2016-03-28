@@ -1,2 +1,2 @@
 # wp-avalon
-Free Theme for WP-Property plugin
+Free Theme for WP-Property plugin 
