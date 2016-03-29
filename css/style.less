@@ -8,11 +8,346 @@ Version: 1.0
 Text Domain: avalon
 */
 
+@import "components";
+
 body {
-    font-family: 'Ubuntu', sans-serif;
-    
-    .wrapper {
-        display: block;
+    .ubuntu-font;
+
+    /*Header bar*/
+    .header-bar {
+        background-color: #3f72bc;
+        display: none;
+        min-height: 600px;
+        
+        .hb__container {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
     }
+    /*Header bar*/
+    
+    header {
+        .clearfix;
+        background-color: #477fd3;
+        box-sizing: border-box;
+        border-bottom: 1px solid #0d255f;
+        height: 50px;
+
+        .container {
+
+            .logotype {
+
+                a {
+                    text-decoration: none;
+                    line-height: 50px;
+
+                    img {
+                        margin-top: -1px;
+                    }
+                    span {
+                        .text-shadow(0, 0, 3px, rgba(0, 0, 0, 0.3));
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #FFF;
+                    }
+                }
+            }/*logotype*/
+            .site-header-menu {
+
+                .main-navigation {
+
+                    ul {
+                        display: block;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            position: relative;
+                            text-align: center;
+                            float: left;
+                            display: block;
+                            line-height: 50px;
+
+                            a {
+                                .transition(all, 0.15s, linear, 0s);
+                                color: rgba(255, 255, 255, 0.5);
+                                display: block;
+                                font-size: 13px;
+                                padding: 0 10px;
+                                text-decoration: none;
+                            }
+                            ul.sub-menu {
+                                display: none;
+                                position: absolute;
+                                float: left;
+                                padding: 7px 0;
+                                background-color: #FFF;
+                                top: 100%;
+                                width: auto;
+
+                                li {
+                                    float: none;
+                                    width: 100%;
+                                    line-height: 23px;
+                                    text-align: left;
+                                    display: block;
+
+                                    a {
+                                        .transition(all, 0.15s, linear, 0s);
+                                        color: #414141;
+                                        padding: 5px 20px;
+                                        display: block;
+                                        white-space: nowrap;
+                                    }
+                                    ul.sub-menu {
+                                        display: none;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 100%;
+                                        padding: 0;
+
+                                        li {
+
+                                            a {
+                                                .transition(all, 0.15s, linear, 0s);
+                                                background-color: #FFF;
+                                            }
+                                            &:hover {
+
+                                                a {
+                                                    background-color: #efefef;
+                                                    color: #a1a1a1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:hover {
+
+                                        &:after {
+                                            color: #a1a1a1;
+                                        }
+                                        a {
+                                            background-color: #efefef;
+                                            color: #a1a1a1;
+                                        }
+                                        ul.sub-menu {
+                                            display: block;
+                                        }
+                                    }
+                                    &.menu-item-has-children {
+
+                                        &:after {
+                                            .glyphicon-font;
+                                            display: block;
+                                            content:"\e250";
+                                            font-size: 10px;
+                                            line-height: 33px;
+                                            position: absolute;
+                                            right: 5px;
+                                            top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &.current-menu-item,
+                            &:hover {
+
+                                a {
+                                    color: #FFF;
+                                }
+                            }
+                            &:hover {
+
+                                ul.sub-menu {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }/*site-header-menu*/
+            .nav-additional {
+
+                .additional-button {
+                    background-image: url('../images/additional-icons.png');
+                    background-repeat: no-repeat;
+                    height: 50px;
+                    width: 52px;
+                    box-sizing: border-box;
+                    float: left;
+                    display: block;
+                    outline: none;
+                    border-left: 1px solid #2f5389;
+                    .transition(background-color, 0.15s, linear, 0s);
+                    .box-shadow-inset(0, 0, 1px, rgba(255, 255, 255, 0.15));
+                    &.ab__profile {
+                        background-position: -35px 15px;
+                    }
+                    &.ab__openbar {
+                        background-position: -90px 15px;
+                        border-right: 1px solid #2f5389;
+                    }
+                    &:hover {
+                        background-color: #4073bf;
+                    }
+                }
+            }/*nav-additional*/
+        }
+    }
+    main.main-content {
+
+        /* Carousel
+        ----------------------------------------------------------------- */
+        .carousel-wrapper {
+            background-color: #2b5188;
+            height: 275px;
+
+            .container {
+
+                .carousel {
+                    .ubuntu-font;
+                    height: 275px;
+
+                    .carousel-inner {
+
+                        .item {
+                            padding-top: 35px;
+
+                            .item-title {
+                                font-size: 41px;
+                                font-weight: 600;
+                                line-height: 1.4;
+                                color: #FFF;
+                                .text-shadow(0, 0, 4px, rgba(0, 0, 0, 0.6));
+                            }
+                            .item-excerpt {
+                                font-size: 15px;
+                                line-height: 1.5;
+                                color: #FFF;
+                                .text-shadow(0, 0, 4px, rgba(0, 0, 0, 0.6));
+                            }
+                        }
+                    }
+                    .carousel-control {
+                        background: url('../images/carousel-arrows.png') no-repeat;
+                        bottom: 75px;
+                        height: 34px;
+                        top: auto;
+                        width: 34px;
+
+                        &.left {
+                            left: 0;
+                            background-position: 0 0;
+
+                            &:hover {
+                                background-size: 0 -34px;
+                            }
+                        }
+                        &.right {
+                            background-position: -35px 0;
+                            left: 48px;
+                            right: auto;
+
+                            &:hover {
+                                background-size: -35px -34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }/*Carousel*/
+
+        /* Container
+        --------------------------------------------------------------------- */
+        .container {
+
+            /*front Property serch*/
+            .front-property-search {
+                margin-top: -53px;
+
+                .nav-tabs {
+                    border: none;
+                    width: 100%;
+                    display: table;
+                    height: 53px;
+
+                    li {
+                        border-bottom: 1px solid #c0c2c7;
+                        display: table-cell;
+                        float: none;
+                        width: 25%;
+
+                        a {
+                            .transition(background-color, 0.1s, linear, 0s);
+                            outline: none;
+                            background-color: #e2e2e2;
+                            display: block;
+                            text-align: center;
+                            font-size: 15px;
+                            color: #a1a1a1;
+                            font-weight: 600;
+                            border-right: 1px solid #c0c2c7;
+                            margin: 0;
+                            padding: 0;
+                            line-height: 50px;
+                            .border-radius(0);
+                            &:hover {
+                                background-color: #efefef;
+                                border-color: transparent #c0c2c7 transparent transparent;
+                            }
+                        }
+                        &.active {
+                            border-color: #FFF;
+
+                            a {
+                                border-bottom-color: #FFF;
+                                border-left-color: #FFF;
+                                border-top-color: #FFF;
+                                color: #414141;
+                                background-color: #FFF;
+                            }
+                        }
+                        &:hover {
+
+                            a {
+
+                            }
+                        }
+                        &:first-child {
+
+                            a {
+                                .round-corners(5px, 0, 0, 0);
+                            }
+                        }
+                        &:last-child {
+
+                            a {
+                                .round-corners(0, 5px, 0, 0);
+                            }
+                        }
+                    }
+                }
+                .tab-content {
+
+                    .tab-pane {
+                        padding: 30px 40px;
+                        
+                        .row {
+                            margin-bottom: 20px;
+                        }
+                        .select2-container {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }/*front Property serch*/
+
+        }/*Container*/
+
+    }/*main content*/
 }
 

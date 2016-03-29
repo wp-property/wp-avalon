@@ -1,0 +1,101 @@
+/*Fonts*/
+.glyphicon-font {
+    font-family:'Glyphicons Halflings';
+}
+.ubuntu-font {
+    font-family: 'Ubuntu', sans-serif;
+}
+/*Fonts*/
+
+
+.placeholder {
+
+    &::-webkit-input-placeholder {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+    &:-moz-placeholder {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+    &::-moz-placeholder {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+    &:-ms-input-placeholder {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    &:focus:-moz-placeholder {
+        color: transparent;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    &:focus::-moz-placeholder {
+        color: transparent;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    &:focus:-ms-input-placeholder {
+        color: transparent;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+.border-radius(@r:0px) {
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -khtml-border-radius: @r; 
+}
+
+.round-corners(@lt:0px, @rt:0px, @rb:0px, @lb:0px) {
+    border-radius: @lt @rt @rb @lb;
+    -moz-border-radius: @lt @rt @rb @lb;
+    -webkit-border-radius: @lt @rt @rb @lb;
+}
+
+.transition(@for: all, @time: 0.1s, @effect: linear, @delay: 0s) {
+    -webkit-transition: @for @time @effect @delay;		 
+    -moz-transition: @for @time @effect @delay;
+    -o-transition: @for @time @effect @delay;
+    transition: @for @time @effect @delay;
+}
+
+.box-shadow(@x, @y, @z, @color) {
+    box-shadow: @x @y @z @color;
+    -moz-box-shadow: @x @y @z @color;
+    -webkit-box-shadow: @x @y @z @color;
+}
+
+.box-shadow-inset(@x, @y, @z, @color) {
+    box-shadow: inset @x @y @z @color;
+    -moz-box-shadow: inset @x @y @z @color;
+    -webkit-box-shadow: inset @x @y @z @color;
+}
+
+.text-shadow(@x, @y, @z, @color) {
+    text-shadow: @x @y @z @color;
+    -moz-text-shadow: @x @y @z @color;
+    -webkit-text-shadow: @x @y @z @color;
+}
+
+.clearfix {
+
+    &:before {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}

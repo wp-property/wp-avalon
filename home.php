@@ -1,6 +1,6 @@
 <?php
 /**
- * Main template file
+ * Home page template file
  *
  * @package UD
  * @subpackage Avalon
