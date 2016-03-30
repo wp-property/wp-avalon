@@ -66,6 +66,9 @@ body {
   /*Header bar*/
   /*Header bar*/
   /*main content*/
+  /* Footer
+    ------------------------------------------------------------------------- */
+  /*Footer*/
 }
 body .header-bar {
   background-color: #3f72bc;
@@ -113,6 +116,7 @@ body header .container .logotype a span {
   font-weight: 600;
   font-size: 16px;
   color: #FFF;
+  text-transform: uppercase;
 }
 body header .container .site-header-menu .main-navigation ul {
   display: block;
@@ -142,6 +146,7 @@ body header .container .site-header-menu .main-navigation ul li a {
 body header .container .site-header-menu .main-navigation ul li ul.sub-menu {
   display: none;
   position: absolute;
+  z-index: 9;
   float: left;
   padding: 7px 0;
   background-color: #FFF;
@@ -179,14 +184,19 @@ body header .container .site-header-menu .main-navigation ul li ul.sub-menu li u
   transition: all 0.15s linear 0s;
   background-color: #FFF;
 }
-body header .container .site-header-menu .main-navigation ul li ul.sub-menu li ul.sub-menu li:hover a {
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li ul.sub-menu li:hover a,
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li ul.sub-menu li.current-menu-item a {
   background-color: #efefef;
   color: #a1a1a1;
 }
-body header .container .site-header-menu .main-navigation ul li ul.sub-menu li:hover:after {
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li:hover:after,
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li.current-menu-item:after,
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li.current-menu-parent:after {
   color: #a1a1a1;
 }
-body header .container .site-header-menu .main-navigation ul li ul.sub-menu li:hover a {
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li:hover a,
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li.current-menu-item a,
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li.current-menu-parent a {
   background-color: #efefef;
   color: #a1a1a1;
 }
@@ -204,6 +214,8 @@ body header .container .site-header-menu .main-navigation ul li ul.sub-menu li.m
   top: 0;
 }
 body header .container .site-header-menu .main-navigation ul li.current-menu-item a,
+body header .container .site-header-menu .main-navigation ul li.current-menu-parent a,
+body header .container .site-header-menu .main-navigation ul li.current-menu-ancestor a,
 body header .container .site-header-menu .main-navigation ul li:hover a {
   color: #FFF;
 }
@@ -239,6 +251,8 @@ body header .container .nav-additional .additional-button:hover {
   background-color: #4073bf;
 }
 body main.main-content {
+  padding-bottom: 40px;
+  background-color: #edeeef;
   /* Carousel
         ----------------------------------------------------------------- */
   /*Carousel*/
@@ -299,9 +313,27 @@ body main.main-content .carousel-wrapper .container .carousel .carousel-control.
 body main.main-content .container {
   /*front Property serch*/
   /*front Property serch*/
+  /* Sidebar 
+            ----------------------------------------------------------------- */
+  /*Sidebar*/
+  /* Content
+            ----------------------------------------------------------------- */
+  /*Content*/
 }
 body main.main-content .container .front-property-search {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background-color: #FFF;
+  border-left: 1px solid #d2d3d6;
+  border-right: 1px solid #d2d3d6;
+  border-bottom: 1px solid #d2d3d6;
   margin-top: -53px;
+  position: relative;
 }
 body main.main-content .container .front-property-search .nav-tabs {
   border: none;
@@ -356,6 +388,7 @@ body main.main-content .container .front-property-search .nav-tabs li:first-chil
   -webkit-border-radius: 5px 0 0 0;
 }
 body main.main-content .container .front-property-search .nav-tabs li:last-child a {
+  border-right: none;
   border-radius: 0 5px 0 0;
   -moz-border-radius: 0 5px 0 0;
   -webkit-border-radius: 0 5px 0 0;
@@ -368,4 +401,64 @@ body main.main-content .container .front-property-search .tab-content .tab-pane 
 }
 body main.main-content .container .front-property-search .tab-content .tab-pane .select2-container {
   width: 100% !important;
+}
+body main.main-content .container .content .wp-caption,
+body main.main-content .container .content .wp-caption img,
+body main.main-content .container .content img {
+  max-width: 100%;
+  height: auto;
+}
+body .footer {
+  /*footer-widget-aria*/
+}
+body .footer .footer-widget-aria {
+  padding: 40px 0;
+  position: relative;
+  background-color: #fafafa;
+  border-top: 1px solid #d2d3d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+body .footer .footer-widget-aria .widget {
+  color: #5a5a5a;
+  line-height: 1.8;
+  font-size: 14px;
+  font-weight: 100;
+}
+body .footer .footer-widget-aria .widget .widget-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #a1a1a1;
+  margin: 0 0 15px;
+  line-height: 1.1;
+}
+body .footer .footer-area {
+  height: 82px;
+  border-top: 1px solid #c0c2c7;
+  position: relative;
+  background-color: #efefef;
+}
+body .footer .footer-area .logotype a {
+  text-decoration: none;
+  line-height: 80px;
+}
+body .footer .footer-area .logotype a img {
+  margin-top: -1px;
+}
+body .footer .footer-area .logotype a span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #a7a7a7;
+  text-transform: uppercase;
+}
+body .footer .footer-area .copyrights {
+  text-align: center;
+  line-height: 80px;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+body .footer .footer-area .copyrights p {
+  margin: 0;
 }

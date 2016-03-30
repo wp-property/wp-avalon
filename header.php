@@ -18,7 +18,7 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <?php get_template_part('template-parts/header-bar', 'avalon'); ?>
+        <?php get_template_part('template-parts/header/header-bar', 'avalon'); ?>
         <header class="header">
             <div class="container">
                 <div class="row">
@@ -29,16 +29,7 @@
                         </a>
                     </div>
                     <div class="site-header-menu col-md-7">
-                        <?php if (has_nav_menu('primary')) : ?>
-                            <nav id="site-navigation" class="main-navigation" role="navigation">
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'primary',
-                                    'menu_class' => 'primary-menu',
-                                ));
-                                ?>
-                            </nav><!-- .main-navigation -->
-                        <?php endif; ?>
+                        <?php get_template_part('template-parts/navigation/navigation-default', 'avalon'); ?>
                     </div>
                     <div class="nav-additional col-md-2">
                         <a href="#open-header-bar" data-wrap="login-bar" class="additional-button ab__profile" data-toggle="tooltip" data-placement="bottom" title="Go to My Profile"></a>
@@ -47,5 +38,7 @@
                 </div>
             </div>
         </header>
-    <main class="main-content">
-        <?php get_template_part('template-parts/header-carousel', 'avalon');
+    <main class="main-content" role="main">
+        <?php
+        get_template_part('template-parts/header/header-carousel', 'avalon');
+        

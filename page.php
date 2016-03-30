@@ -1,12 +1,13 @@
 <?php
 /**
- * Main template file
+ * Page template file
  *
  * @package UD
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-get_header(); ?>
+get_header();
+?>
 
 <div class="container">
 
@@ -18,7 +19,7 @@ get_header(); ?>
             
             while (have_posts()) : the_post();
         
-                get_template_part('template-parts/content/content', 'archive');
+                get_template_part('template-parts/content/content', 'page');
 
             endwhile;
             

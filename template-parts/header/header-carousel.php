@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying carousel
+ * The template for displaying carousel in header
  *
  * @package UD
  * @subpackage Avalon

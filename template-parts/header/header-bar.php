@@ -1,3 +1,12 @@
+<?php
+/*
+ * Template part for header bar
+ * 
+ * @package UD
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+?>
 <div class="header-bar">
     <div class="container">
         <div id="contacts-bar" class="hb__container">

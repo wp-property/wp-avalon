@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for property search on front page
+ *
+ * @package UD
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+?>
 <div class="front-property-search">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
