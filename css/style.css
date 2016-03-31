@@ -72,19 +72,96 @@ body {
 }
 body .header-bar {
   background-color: #3f72bc;
+  border-bottom: 1px solid #325280;
   display: none;
-  min-height: 600px;
+  padding: 45px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #FFF;
 }
-body .header-bar .hb__container {
-  display: none;
+body .header-bar a {
+  color: #FFF;
+  text-decoration: underline;
 }
-body .header-bar .hb__container.active {
+body .header-bar a:hover {
+  text-decoration: none;
+}
+body .header-bar .hb__title {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body .header-bar .hb__contact-form .hbcf__description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+body .header-bar .hb__contact-form .hbcf__container .row {
+  margin-bottom: 10px;
+}
+body .header-bar .hb__contact-form .hbcf__container .submit-btn,
+body .header-bar .hb__contact-form .hbcf__container input[type="submit"] {
+  float: right;
+}
+body .header-bar #loginform p label {
   display: block;
+}
+body .header-bar #loginform p input[type="text"],
+body .header-bar #loginform p input[type="password"] {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  width: 100%;
+}
+body .header-bar #loginform p #wp-submit {
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  background-color: #337ab7;
+  border: 1px solid #2e6da4;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+body .header-bar #loginform p #wp-submit:hover {
+  background-color: #286090;
+  border-color: #204d74;
 }
 body header {
   background-color: #477fd3;
   box-sizing: border-box;
   border-bottom: 1px solid #0d255f;
+  border-top: 1px solid #679be7;
   height: 50px;
 }
 body header:before {
@@ -222,10 +299,14 @@ body header .container .site-header-menu .main-navigation ul li:hover a {
 body header .container .site-header-menu .main-navigation ul li:hover ul.sub-menu {
   display: block;
 }
-body header .container .nav-additional .additional-button {
+body header .container .nav-additional .na__wrapper {
+  float: right;
+}
+body header .container .nav-additional .na__wrapper .additional-button {
   background-image: url('../images/additional-icons.png');
   background-repeat: no-repeat;
-  height: 50px;
+  /*margin-top: -2px;*/
+  height: 48px;
   width: 52px;
   box-sizing: border-box;
   float: left;
@@ -236,19 +317,23 @@ body header .container .nav-additional .additional-button {
   -moz-transition: background-color 0.15s linear 0s;
   -o-transition: background-color 0.15s linear 0s;
   transition: background-color 0.15s linear 0s;
-  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.15);
+  /*.box-shadow-inset(0, 0, 1px, rgba(255, 255, 255, 0.15));*/
 }
-body header .container .nav-additional .additional-button.ab__profile {
+body header .container .nav-additional .na__wrapper .additional-button.ab__profile {
   background-position: -35px 15px;
 }
-body header .container .nav-additional .additional-button.ab__openbar {
+body header .container .nav-additional .na__wrapper .additional-button.ab__contactus {
   background-position: -90px 15px;
   border-right: 1px solid #2f5389;
 }
-body header .container .nav-additional .additional-button:hover {
+body header .container .nav-additional .na__wrapper .additional-button:hover,
+body header .container .nav-additional .na__wrapper .additional-button.active {
   background-color: #4073bf;
+}
+body header .container .nav-additional .na__wrapper .additional-button.active {
+  margin-top: -2px;
+  height: 50px;
+  background-position: -147px 17px;
 }
 body main.main-content {
   padding-bottom: 40px;

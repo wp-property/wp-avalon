@@ -32,8 +32,7 @@
                         <?php get_template_part('template-parts/navigation/navigation-default', 'avalon'); ?>
                     </div>
                     <div class="nav-additional col-md-2">
-                        <a href="#open-header-bar" data-wrap="login-bar" class="additional-button ab__profile" data-toggle="tooltip" data-placement="bottom" title="Go to My Profile"></a>
-                        <a href="#open-header-bar" data-wrap="contacts-bar" class="additional-button ab__openbar"></a>
+                        <?php get_template_part('template-parts/navigation/navigation-additional', 'avalon'); ?>
                     </div>
                 </div>
             </div>

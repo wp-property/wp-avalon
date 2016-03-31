@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Avalon functions
  * 
@@ -30,6 +29,7 @@ function avalon_init() {
  */
 function avalon_theme_setup() {
     add_theme_support('post-thumbnails', array('post'));
+    add_theme_support('custom-header');
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');
@@ -78,3 +78,12 @@ function avalon_widgets_init() {
 
 add_action('widgets_init', 'avalon_widgets_init');
 
+function avalon_registration_redirect($registration_redirect) {
+    return site_url();
+}
+
+add_filter('registration_redirect', 'avalon_registration_redirect');
+
+function avalon_contact_us() {
+    
+}
