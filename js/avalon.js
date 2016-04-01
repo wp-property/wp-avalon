@@ -27,4 +27,7 @@ jQuery(function() {
         jQuery(this).tab('show');
     });
 
+    jQuery('select:not(.selectpicker)').selectpicker({
+        style: 'btn-default'
+    });
 });

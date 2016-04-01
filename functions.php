@@ -18,6 +18,7 @@ function avalon_init() {
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style('bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css', '3.3.6');
     wp_enqueue_style('bootstrap-select.min', get_template_directory_uri() . '/css/bootstrap-select.min.css');
+//    wp_enqueue_style('jquery-ui.min', get_template_directory_uri() . '/css/jquery-ui.min.css');
 
     /* Fonts */
     wp_enqueue_style('GoogleUbuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700,300,500&subset=latin,cyrillic-ext');
