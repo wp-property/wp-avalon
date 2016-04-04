@@ -15,6 +15,19 @@ jQuery(function() {
         }
     });
 
+//    Properties grid page
+    var height = 0,
+            columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
+    columns.each(function() {
+        var currentHeight = jQuery(this).height();
+        if (currentHeight > height)
+        {
+            height = currentHeight;
+        }
+    }
+    );
+    columns.height(height);
+
 //    Tooltips
     jQuery('[data-toggle="tooltip"]').tooltip();
 
@@ -27,4 +40,7 @@ jQuery(function() {
         jQuery(this).tab('show');
     });
 
+    jQuery('select:not(.selectpicker)').selectpicker({
+        style: 'btn-default'
+    });
 });

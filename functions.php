@@ -18,6 +18,7 @@ function avalon_init() {
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style('bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css', '3.3.6');
     wp_enqueue_style('bootstrap-select.min', get_template_directory_uri() . '/css/bootstrap-select.min.css');
+//    wp_enqueue_style('jquery-ui.min', get_template_directory_uri() . '/css/jquery-ui.min.css');
 
     /* Fonts */
     wp_enqueue_style('GoogleUbuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700,300,500&subset=latin,cyrillic-ext');
@@ -41,6 +42,21 @@ add_action('after_setup_theme', 'avalon_theme_setup');
 register_nav_menus(array(
     'primary' => __('Primary Menu', 'avalon'),
 ));
+
+/**
+ * Theme support menu.
+ * @since Avalon 1.0
+ */
+add_action('admin_menu', avalon_theme_support);
+function avalon_theme_support() {
+    if (function_exists('add_options_page')) {
+        add_menu_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
+    }
+}
+
+function avalon_themesupport() {
+    include TEMPLATEPATH . '/theme-support/theme-support.php';
+}
 
 /**
  * Registers a widget area.
