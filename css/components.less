@@ -86,6 +86,12 @@
     -webkit-text-shadow: @x @y @z @color;
 }
 
+.rotate(@deg: 0deg) {
+    transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+}
+
 .clearfix {
 
     &:before {

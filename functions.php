@@ -44,6 +44,21 @@ register_nav_menus(array(
 ));
 
 /**
+ * Theme support menu.
+ * @since Avalon 1.0
+ */
+add_action('admin_menu', avalon_theme_support);
+function avalon_theme_support() {
+    if (function_exists('add_options_page')) {
+        add_menu_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
+    }
+}
+
+function avalon_themesupport() {
+    include TEMPLATEPATH . '/theme-support/theme-support.php';
+}
+
+/**
  * Registers a widget area.
  * @since Avalon 1.0
  */
