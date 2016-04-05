@@ -20,7 +20,8 @@ module.exports = function build( grunt ) {
     less: {
       production: {
         files: {
-          'css/style.css': [ 'css/style.less' ]
+          'css/style.css': [ 'css/style.less' ],
+          'wp_properties.css': [ 'css/properties-styles.less' ]
         }
       }
     },

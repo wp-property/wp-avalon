@@ -2,16 +2,24 @@
 
     <acide class="sidebar col-md-4">
 
-        <?php dynamic_sidebar('sidebar-left'); ?>
-        
+        <ul>
+
+            <?php dynamic_sidebar('sidebar-left'); ?>
+
+        </ul>
+
     </acide>
 
 <?php elseif (is_active_sidebar('sidebar-right')) : ?>
 
     <acide class="sidebar col-md-4">
 
-        <?php dynamic_sidebar('sidebar-right'); ?>
-        
+        <ul>
+
+            <?php dynamic_sidebar('sidebar-right'); ?>
+
+        </ul>
+
     </acide>
 
 <?php endif; ?>
