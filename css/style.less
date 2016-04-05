@@ -964,6 +964,62 @@ body {
                         }
                     }/*wpp property attributes */
 
+                    &.widget_featuredpropertieswidget,
+                    &.widget_latestpropertieswidget {
+
+                        .property_widget_block {
+                            border-bottom: 1px dashed #cbccd0;
+                            margin-bottom: 10px;
+
+                            .thumbnail {
+                                margin-bottom: 5px;
+                            }
+                            .title {
+
+                                a {
+                                    .transition(color, 0.15s, ease-in-out, 0s);
+                                    color: #414141;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    &:hover {
+                                        color: #4a83db;
+                                    }
+                                }
+                            }
+                            .wpp_widget_attribute_list {
+                                margin: 0 0 5px;
+                                padding: 0;
+                                list-style: none;
+
+                                li {
+                                    line-height: 1.2;
+                                    margin-bottom: 5px;
+
+                                    .attribute {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            .more {
+                                text-align: right;
+                            }
+                        }
+                        .view-all {
+
+                            .btn {
+                                background-color: #5bc0de;
+                                border-color: #46b8da;
+                                color: #fff;
+                                &:hover {
+                                    background-color: #31b0d5;
+                                    border-color: #269abc;
+                                }
+                            }
+                        }
+                    }/*widget latestpropertieswidget*/
+
                     .wpp_feps_form {
                         color: #5a5a5a;
                         line-height: 1.5;
@@ -1036,6 +1092,9 @@ body {
                                                 }
                                             }
                                         }
+                                    }
+                                    .wpp_feps_map {
+                                        margin-top: 10px;
                                     }
                                 }
                             }

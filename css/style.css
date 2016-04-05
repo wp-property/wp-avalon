@@ -764,6 +764,7 @@ body main.main-content .container .content .widget {
   box-sizing: border-box;
   /*wpp property overview*/
   /*wpp property attributes */
+  /*widget latestpropertieswidget*/
   /*wpp_feps_form*/
   /*shortcode_featured_properties*/
 }
@@ -1018,6 +1019,61 @@ body main.main-content .container .content .widget.wpp_property_attributes .wpp_
 body main.main-content .container .content .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level {
   font-weight: 400;
 }
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block {
+  border-bottom: 1px dashed #cbccd0;
+  margin-bottom: 10px;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .thumbnail,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .thumbnail {
+  margin-bottom: 5px;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .title a,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .title a {
+  -webkit-transition: color 0.15s ease-in-out 0s;
+  -moz-transition: color 0.15s ease-in-out 0s;
+  -o-transition: color 0.15s ease-in-out 0s;
+  transition: color 0.15s ease-in-out 0s;
+  color: #414141;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .title a:hover,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .title a:hover {
+  color: #4a83db;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .wpp_widget_attribute_list,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .wpp_widget_attribute_list {
+  margin: 0 0 5px;
+  padding: 0;
+  list-style: none;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .wpp_widget_attribute_list li,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .wpp_widget_attribute_list li {
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .wpp_widget_attribute_list li .attribute,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .wpp_widget_attribute_list li .attribute {
+  font-weight: 600;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .property_widget_block .more,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .property_widget_block .more {
+  text-align: right;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .view-all .btn,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .view-all .btn {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  color: #fff;
+}
+body main.main-content .container .content .widget.widget_featuredpropertieswidget .view-all .btn:hover,
+body main.main-content .container .content .widget.widget_latestpropertieswidget .view-all .btn:hover {
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
 body main.main-content .container .content .widget .wpp_feps_form {
   color: #5a5a5a;
   line-height: 1.5;
@@ -1094,6 +1150,9 @@ body main.main-content .container .content .widget .wpp_feps_form ul.feps_proper
   max-width: 100%;
   width: 100%;
   vertical-align: middle;
+}
+body main.main-content .container .content .widget .wpp_feps_form ul.feps_property_input_fields li .wpp_feps_map {
+  margin-top: 10px;
 }
 body main.main-content .container .content .widget .wpp_feps_form input[type="text"] {
   display: block;

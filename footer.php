@@ -11,7 +11,7 @@
                     </a>
                 </div>
                 <div class="copyrights col-md-6">
-                    <p>&copy; 2013 Unreal Estate. All rights reserved.</p>
+                    <p>&copy; <?php echo date("Y"); ?> Unreal Estate. All rights reserved.</p>
                 </div>
                 <div class="socials col-md-3"></div>
             </div>
