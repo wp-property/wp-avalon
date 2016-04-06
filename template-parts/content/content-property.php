@@ -1,13 +1,13 @@
 <?php
 /**
- * Template part for index.php and archive.php
+ * Template part for single property page
  *
  * @package UD
  * @subpackage Avalon
  * @since Avalon 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('property-page-template'); ?> >
     <script type="text/javascript">
         var map;
         var marker;
@@ -70,54 +70,65 @@
     </script>
 
 
-    <div class="<?php wpp_css('property::title', "building_title_wrapper"); ?>">
-        <h1 class="property-title entry-title"><?php the_title(); ?></h1>
-        <h3 class="entry-subtitle"><?php the_tagline(); ?></h3>
-    </div>
+    <div class="property-page-container">
+        <div class="<?php wpp_css('property::title', "building_title_wrapper"); ?>">
+            <h1 class="property-title entry-title"><?php the_title(); ?></h1>
+            <?php the_tagline('<h3 class="entry-subtitle">', '</h3>'); ?>
+        </div>
 
 
-    <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
-        <div class="<?php wpp_css('property::the_content', "wpp_the_content"); ?>"><?php @the_content(); ?></div>
+        <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
 
-        <?php if (empty($wp_properties['property_groups']) || $wp_properties['configuration']['property_overview']['sort_stats_by_groups'] != 'true') : ?>
-            <ul id="property_stats" class="<?php wpp_css('property::property_stats', "property_stats overview_stats list"); ?>">
+            <?php if (!empty($wp_properties['configuration']['default_image']['default']['url'])) : ?>
+                <div class="<?php wpp_css('property::featured_image', "wpp_featured_image"); ?>">
+                    <a class="fancybox_image" rel="fancybox" href="<?php echo $wp_properties['configuration']['default_image']['default']['url']; ?>">
+                        <img src="<?php echo $wp_properties['configuration']['default_image']['default']['url']; ?>" alt="Featured image" />
+                    </a>
+                </div>
+            <?php endif; ?>
+
+            <div class="<?php wpp_css('property::the_content', "wpp_the_content"); ?>"><?php @the_content(); ?></div>
+
+            <?php if (empty($wp_properties['property_groups']) || $wp_properties['configuration']['property_overview']['sort_stats_by_groups'] != 'true') : ?>
+                <ul id="property_stats" class="<?php wpp_css('property::property_stats', "property_stats overview_stats list"); ?>">
+                    <?php @draw_stats("display=list&make_link=true"); ?>
+                </ul>
+            <?php else: ?>
                 <?php @draw_stats("display=list&make_link=true"); ?>
-            </ul>
-        <?php else: ?>
-            <?php @draw_stats("display=list&make_link=true"); ?>
-        <?php endif; ?>
+            <?php endif; ?>
 
-        <?php if (!empty($wp_properties['taxonomies'])) foreach ($wp_properties['taxonomies'] as $tax_slug => $tax_data): ?>
-                <?php if (get_features("type={$tax_slug}&format=count")): ?>
-                    <div class="<?php echo $tax_slug; ?>_list">
-                        <h2><?php echo apply_filters('wpp::attribute::label', $tax_data['label']); ?></h2>
-                        <ul class="clearfix">
-                            <?php get_features("type={$tax_slug}&format=list&links=true"); ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <?php if (!empty($wp_properties['taxonomies'])) foreach ($wp_properties['taxonomies'] as $tax_slug => $tax_data): ?>
+                    <?php if (get_features("type={$tax_slug}&format=count")): ?>
+                        <div class="<?php echo $tax_slug; ?>_list">
+                            <h2><?php echo apply_filters('wpp::attribute::label', $tax_data['label']); ?></h2>
+                            <ul class="clearfix">
+                                <?php get_features("type={$tax_slug}&format=list&links=true"); ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
 
-        <?php if (is_array($wp_properties['property_meta'])): ?>
-            <?php
-            foreach ($wp_properties['property_meta'] as $meta_slug => $meta_title):
-                if (empty($post->$meta_slug) || $meta_slug == 'tagline')
-                    continue;
-                ?>
-                <h2><?php echo $meta_title; ?></h2>
-                <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
-            <?php endforeach; ?>
-        <?php endif; ?>
+            <?php if (is_array($wp_properties['property_meta'])): ?>
+                <?php
+                foreach ($wp_properties['property_meta'] as $meta_slug => $meta_title):
+                    if (empty($post->$meta_slug) || $meta_slug == 'tagline')
+                        continue;
+                    ?>
+                    <h2><?php echo $meta_title; ?></h2>
+                    <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
 
-        <?php if (WPP_F::get_coordinates()): ?>
-            <div id="property_map" class="<?php wpp_css('property::property_map'); ?>" style="width:100%; height:450px"></div>
-        <?php endif; ?>
+            <?php if (WPP_F::get_coordinates()): ?>
+                <div id="property_map" class="<?php wpp_css('property::property_map'); ?>" style="width:100%; height:450px"></div>
+            <?php endif; ?>
 
-        <?php if ($post->post_parent): ?>
-            <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', ud_get_wp_property()->domain) ?></a>
-        <?php endif; ?>
+            <?php if ($post->post_parent): ?>
+                <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', ud_get_wp_property()->domain) ?></a>
+            <?php endif; ?>
 
-    </div><!-- .entry-content -->
+        </div><!-- .entry-content -->
+    </div><!-- .property-page-container -->
 
     <?php comments_template(); ?>
 

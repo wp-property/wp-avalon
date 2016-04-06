@@ -11,7 +11,7 @@ Text Domain: avalon
 @import "components";
 
 body {
-    .ubuntu-font;
+    font-family: "Ubuntu",sans-serif !important;
 
     /*Header bar*/
     .header-bar {
@@ -150,7 +150,7 @@ body {
                             text-align: center;
                             float: left;
                             display: block;
-                            line-height: 50px;
+                            line-height: 49px;
 
                             a {
                                 .transition(all, 0.15s, linear, 0s);
@@ -483,12 +483,28 @@ body {
                     max-width: 100%;
                     height: auto;
                 }
+                
+                h1, h2, h3, h4, h5, h6 {
+                    .ubuntu-font;
+                }
 
                 article {
 
+                    .page-title h1,
                     h1.entry-title,
                     h1.page-title {
                         margin-top: 0;
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+                    h2 {
+                        font-size: 28px;
+                    }
+                    h3 {
+                        font-size: 26px;
+                    }
+                    h4 {
+                        font-size: 24px;
                     }
                 }
 
@@ -623,19 +639,20 @@ body {
             border-top: 1px solid #d2d3d6;
             .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.15));
 
-            .widget {
-                color: #5a5a5a;
-                line-height: 1.8;
-                font-size: 14px;
-                font-weight: 100;
-
-                .widget-title {
-                    .ubuntu-font;
-                    font-weight: 600;
-                    font-size: 15px;
-                    color: #a1a1a1;
-                    margin: 0 0 15px;
-                    line-height: 1.1;
+            .col-md-4 {
+                margin-bottom: 20px;
+                
+                .widget {
+                    
+                    >ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        
+                        li {
+                            margin: 5px 0;
+                        }
+                    }
                 }
             }
         }/*footer-widget-aria*/

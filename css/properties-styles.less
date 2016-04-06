@@ -1,6 +1,7 @@
 @import "components";
 
-/*Property styles*/
+/* Property styles
+----------------------------------------------------------------------------- */
 .panel-grid-cell {
     word-wrap: break-word;
 }
@@ -18,13 +19,13 @@
                 font-weight: 600;
                 display: block;
                 float: left;
-                width: 25%;
+                width: 30%;
             }
             .wpp_sorter_options {
                 text-align: right;
                 display: block;
                 float: right;
-                width: 75%;
+                width: 70%;
 
                 .wpp_sort_by_text {
                     font-weight: 600;
@@ -32,6 +33,53 @@
                 .wpp_sortable_link {
                     cursor: pointer;
                     font-size: 100%;
+                }
+            }
+        }
+        .wpp_pagination_slider_wrapper {
+            margin: 10px 0;
+            .clearfix;
+
+            .wpp_pagination_button {
+                float: left;
+                padding: 1px 7px;
+                border-radius: 2px;
+                background-color: #5bc0de;
+                color: #FFF;
+                margin: 0 5px 0 0;
+                cursor: pointer;
+            }
+            .wpp_pagination_slider {
+                background-color: #efefef;
+                border: 1px solid #c6c7ca;
+                .border-radius(2px);
+                .box-shadow-inset(0, 0, 2px, rgba(0, 0, 0, 0.15));
+                float: right;
+                height: 10px;
+                position: relative;
+                top: 6px;
+                width: auto;
+
+                .ui-slider-handle {
+                    .transition(left, 0.15s, ease-in-out, 0s);
+                    margin-left: -10px;
+                    background-color: #FFF;
+                    border: 1px solid #c6c7ca;
+                    border-radius: 4px;
+                    color: #414141;
+                    font-size: 12px;
+                    font-weight: 600;
+                    height: 22px;
+                    line-height: 20px;
+                    padding: 0 5px;
+                    position: absolute;
+                    top: -7px;
+                    cursor: pointer;
+                    width: auto;
+
+                    .slider_page_info {
+
+                    }
                 }
             }
         }
@@ -296,16 +344,17 @@
 .widget,
 .wpp_widget {
     background-color: #FFF;
-    padding: 0 20px 10px 20px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    .border-radius(4px);
     border: 1px solid #c3c5c9;
     box-sizing: border-box;
 
-    h3.widget-title {
+    h3.widget-title,
+    h2.widget-title {
         background-color: #edeeef;
         border-bottom: 1px solid #c3c5c9;
         color: #414141;
-        font-size: 15px;
+        font-size: 15px !important;
         font-weight: 600;
         line-height: 20px;
         overflow: hidden;
@@ -313,13 +362,83 @@
         padding: 10px 20px;
         box-sizing: unset;
         margin-left: -20px;
-        margin-bottom: 15px;
-        margin-top: 0;
+        margin-bottom: 10px;
+        margin-top: -10px;
         width: 100%;
         .round-corners(4px, 4px, 0, 0);
     }
     ul {
         padding-left: 25px;
+    }
+    .wpp_feps_user_menu {
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+    .shortcode_featured_properties {
+        
+        ul.wpp_featured_properties_shortcode {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            li.shortcode_featured_properties  {
+                border-bottom: 1px dashed #cbccd0;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                
+                .property_overview_thumb {
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
+                ul.wp-caption-text {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    
+                    li {
+                        
+                        dl {
+                            margin-bottom: 5px;
+                            .clearfix;
+                            
+                            dt {
+                                float: left;
+                                margin-right: 5px;
+                            }
+                            dd {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.widget_search {
+
+        .searchform {
+            .clearfix;
+
+            .screen-reader-text {
+                display: block;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            input[type="text"] {
+                .default-input-style;
+                float: left;
+                width: 73%;
+            }
+            input[type="submit"] {
+                .submit-button-style;
+                float: right;
+                width: 23%;
+            }
+        }
     }
     &.widget_wpp_property_terms {
 
@@ -355,9 +474,9 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            
+
             li {
-                
+
                 .attribute {
                     font-weight: 600;
                     margin-right: 5px;
@@ -570,17 +689,23 @@
                         font-weight: 100;
                     }
                     .bootstrap-select {
+                        width: 100%;
 
-                        &:not([class*="col-"]),
+/*                        &:not([class*="col-"]),
                             &:not([class*="form-control"]),
                             &:not(.input-group-btn) {
                             width: 47%;
                             display: inline-block;
-                        }
+                        }*/
                     }
                     input[type="text"] {
                         .default-input-style;
 
+                        &.wpp_search_input_field_min,
+                        &.wpp_search_input_field_max {
+                            width: 48%;
+                            display: inline-block;
+                        }
                         &.wpp_range_input {
                             width: 47%;
                             display: inline-block;
@@ -792,5 +917,101 @@
         }
     }/*shortcode_featured_properties*/
 }/*widget*/
+
+/* Property page styles
+----------------------------------------------------------------------------- */
+article.property-page-template {
+
+    h3.entry-subtitle {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    .property-page-container {
+        background-color: #FFF;
+        padding: 20px;
+        .border-radius(4px);
+        border: 1px solid #c3c5c9;
+        box-sizing: border-box;
+
+        .widget, 
+        .wpp_widget {
+            background-color: transparent;
+            border: medium none;
+            border-radius: 0;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wpp_featured_image {
+            width: 100%;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .wpp_the_content {
+            margin-bottom: 20px;
+        }
+        ul.property_stats {
+            border-top: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-right: 1px solid #ededed;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                .clearfix;
+                border-bottom: 1px solid #ededed;
+
+                .attribute,
+                .value {
+                    padding: 1em;
+                    display: block;
+                    float: left;
+                    width: 50%;
+                }
+                .attribute {
+                    text-align: right;
+                    font-weight: 600;
+                }
+                .value {
+                    border-left: 1px solid #ededed;
+                }
+            }
+        }
+        .property_feature_list,
+        .community_feature_list {
+
+            h2 {
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            ul {
+                margin: 0 0 20px;
+                padding: 0;
+                list-style: none;
+
+                li {
+
+                    a {
+                        font-size: 15px;
+                        color: #4983db;
+                        line-height: 2;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Property page styles */
 
 /*Property styles*/

@@ -1,25 +1,25 @@
 <?php if (is_active_sidebar('sidebar-left')) : ?>
 
-    <acide class="sidebar col-md-4">
+    <aside class="sidebar col-md-4">
 
-        <ul>
+        <ul class="sidebar_widget_list">
 
             <?php dynamic_sidebar('sidebar-left'); ?>
 
         </ul>
 
-    </acide>
+    </aside>
 
 <?php elseif (is_active_sidebar('sidebar-right')) : ?>
 
-    <acide class="sidebar col-md-4">
+    <aside class="sidebar col-md-4">
 
-        <ul>
+        <ul class="sidebar_widget_list">
 
             <?php dynamic_sidebar('sidebar-right'); ?>
 
         </ul>
 
-    </acide>
+    </aside>
 
 <?php endif; ?>

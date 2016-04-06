@@ -1,3 +1,18 @@
+//    Properties grid page
+function property_grid() {
+    var height = 0,
+            columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
+    columns.each(function() {
+        var currentHeight = jQuery(this).height();
+        if (currentHeight > height)
+        {
+            height = currentHeight;
+        }
+    }
+    );
+    columns.height(height);
+}
+
 jQuery(function() {
 
 //    Header bar
@@ -16,17 +31,7 @@ jQuery(function() {
     });
 
 //    Properties grid page
-    var height = 0,
-            columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
-    columns.each(function() {
-        var currentHeight = jQuery(this).height();
-        if (currentHeight > height)
-        {
-            height = currentHeight;
-        }
-    }
-    );
-    columns.height(height);
+    property_grid();
 
 //    Tooltips
     jQuery('[data-toggle="tooltip"]').tooltip();
@@ -43,4 +48,8 @@ jQuery(function() {
     jQuery('select:not(.selectpicker)').selectpicker({
         style: 'btn-default'
     });
+});
+
+jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
+    property_grid();
 });

@@ -29,7 +29,7 @@ function avalon_init() {
  * @since Avalon 1.0
  */
 function avalon_theme_setup() {
-    add_theme_support('post-thumbnails', array('post'));
+    add_theme_support('post-thumbnails');
     add_theme_support('custom-header');
 }
 
@@ -67,8 +67,8 @@ function avalon_widgets_init() {
         'name' => __('Content Bottom', 'avalon'),
         'id' => 'sidebar-footer',
         'description' => __('Appears at the bottom of the content on all pages.', 'avalon'),
-        'before_widget' => '<div id="%1$s" class="widget col-md-4 %2$s">',
-        'after_widget' => '</div>',
+        'before_widget' => '<div class="col-md-4"><div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div></div>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
@@ -76,8 +76,8 @@ function avalon_widgets_init() {
         'name' => __('Sidebar Left', 'avalon'),
         'id' => 'sidebar-left',
         'description' => __('Appears at the left side of the content on all pages.', 'avalon'),
-        'before_widget' => '<div id="%1$s" class="widget col-md-4 %2$s">',
-        'after_widget' => '</div>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
@@ -85,8 +85,8 @@ function avalon_widgets_init() {
         'name' => __('Sidebar Right', 'avalon'),
         'id' => 'sidebar-right',
         'description' => __('Appears at the right side of the content on all pages.', 'avalon'),
-        'before_widget' => '<div id="%1$s" class="widget col-md-4 %2$s">',
-        'after_widget' => '</div>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));

@@ -116,7 +116,7 @@ Text Domain: avalon
   color: #fff;
 }
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif !important;
   /*Header bar*/
   /*Header bar*/
   /*main content*/
@@ -261,7 +261,7 @@ body header .container .site-header-menu .main-navigation ul li {
   text-align: center;
   float: left;
   display: block;
-  line-height: 50px;
+  line-height: 49px;
 }
 body header .container .site-header-menu .main-navigation ul li a {
   -webkit-transition: all 0.15s linear 0s;
@@ -565,9 +565,29 @@ body main.main-content .container .content img {
   max-width: 100%;
   height: auto;
 }
+body main.main-content .container .content h1,
+body main.main-content .container .content h2,
+body main.main-content .container .content h3,
+body main.main-content .container .content h4,
+body main.main-content .container .content h5,
+body main.main-content .container .content h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+body main.main-content .container .content article .page-title h1,
 body main.main-content .container .content article h1.entry-title,
 body main.main-content .container .content article h1.page-title {
   margin-top: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+body main.main-content .container .content article h2 {
+  font-size: 28px;
+}
+body main.main-content .container .content article h3 {
+  font-size: 26px;
+}
+body main.main-content .container .content article h4 {
+  font-size: 24px;
 }
 body main.main-content .container .content h3#comments {
   font-size: 15px;
@@ -716,19 +736,16 @@ body .footer .footer-widget-aria {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-body .footer .footer-widget-aria .widget {
-  color: #5a5a5a;
-  line-height: 1.8;
-  font-size: 14px;
-  font-weight: 100;
+body .footer .footer-widget-aria .col-md-4 {
+  margin-bottom: 20px;
 }
-body .footer .footer-widget-aria .widget .widget-title {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: #a1a1a1;
-  margin: 0 0 15px;
-  line-height: 1.1;
+body .footer .footer-widget-aria .col-md-4 .widget > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .footer .footer-widget-aria .col-md-4 .widget > ul li {
+  margin: 5px 0;
 }
 body .footer .footer-area {
   height: 82px;
