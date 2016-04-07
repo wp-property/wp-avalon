@@ -79,10 +79,14 @@
 
         <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
 
-            <?php if (!empty($wp_properties['configuration']['default_image']['default']['url'])) : ?>
+            <?php if (function_exists('ud_get_wpp_resp_slideshow')) : ?>
+                <div class="<?php wpp_css('property::property_responsive_slideshow', "property_responsive_slideshow_box"); ?>">
+                    <?php echo do_shortcode('[property_responsive_slideshow]'); ?>
+                </div>
+            <?php elseif (!empty(get_the_post_thumbnail(get_the_ID()))) : ?>
                 <div class="<?php wpp_css('property::featured_image', "wpp_featured_image"); ?>">
-                    <a class="fancybox_image" rel="fancybox" href="<?php echo $wp_properties['configuration']['default_image']['default']['url']; ?>">
-                        <img src="<?php echo $wp_properties['configuration']['default_image']['default']['url']; ?>" alt="Featured image" />
+                    <a class="fancybox_image" rel="fancybox" href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>">
+                        <?php echo get_the_post_thumbnail(get_the_ID()); ?>
                     </a>
                 </div>
             <?php endif; ?>

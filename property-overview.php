@@ -10,7 +10,6 @@ if (have_properties()) {
 
     $thumbnail_dimentions = WPP_F::get_image_dimensions($wpp_query['thumbnail_size']);
     ?>
-    <!--<div class="<?php wpp_css('property_overview::row_view', "wpp_row_view wpp_property_view_result"); ?>">-->
     <div class="<?php wpp_css('property_overview::grid_view', "wpp_grid_view wpp_property_view_result"); ?>">
         <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
             <?php foreach (returned_properties('load_gallery=false') as $property) { ?>
@@ -94,7 +93,7 @@ if (have_properties()) {
 
             <?php } /** end of the propertyloop. */ ?>
         </div><?php // .all-properties    ?>
-    </div><?php // .wpp_row_view     ?>
+    </div><?php // .wpp_grid_view     ?>
 <?php } else { ?>
     <div class="wpp_nothing_found">
         <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', ud_get_wp_property()->domain), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>

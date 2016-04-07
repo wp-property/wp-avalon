@@ -379,17 +379,17 @@
         }
     }
     .shortcode_featured_properties {
-        
+
         ul.wpp_featured_properties_shortcode {
             margin: 0;
             padding: 0;
             list-style: none;
-            
+
             li.shortcode_featured_properties  {
                 border-bottom: 1px dashed #cbccd0;
                 margin-bottom: 10px;
                 padding-bottom: 5px;
-                
+
                 .property_overview_thumb {
                     display: inline-block;
                     margin-bottom: 5px;
@@ -398,19 +398,19 @@
                     margin: 0;
                     padding: 0;
                     list-style: none;
-                    
+
                     li {
-                        
+
                         dl {
                             margin-bottom: 5px;
                             .clearfix;
-                            
+
                             dt {
                                 float: left;
                                 margin-right: 5px;
                             }
                             dd {
-                                
+
                             }
                         }
                     }
@@ -691,12 +691,12 @@
                     .bootstrap-select {
                         width: 100%;
 
-/*                        &:not([class*="col-"]),
-                            &:not([class*="form-control"]),
-                            &:not(.input-group-btn) {
-                            width: 47%;
-                            display: inline-block;
-                        }*/
+                        /*                        &:not([class*="col-"]),
+                                                    &:not([class*="form-control"]),
+                                                    &:not(.input-group-btn) {
+                                                    width: 47%;
+                                                    display: inline-block;
+                                                }*/
                     }
                     input[type="text"] {
                         .default-input-style;
@@ -953,6 +953,54 @@ article.property-page-template {
                 height: auto;
             }
         }
+
+        .property_responsive_slideshow_box {
+            margin-bottom: 20px;
+        }
+
+        #property_map,
+        .wpp_supermap {
+
+            .gm-style-iw,
+            .gm-style {
+
+                .wpp_google_maps_attribute_row_property_title {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+                .wpp_google_maps_infobox_table {
+
+                    .wpp_google_maps_left_col {
+                        padding-right: 10px;
+                    }
+                    .wpp_google_maps_right_col {
+
+                        .wpp_google_maps_infobox {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                            
+                            li {
+                                margin: 0 0 5px;
+                                
+                                .attribute {
+                                    position: relative;
+                                    margin: 0 5px 0 0;
+                                    font-weight: 600;
+                                    &:after {
+                                        content: ":";
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .wpp_the_content {
             margin-bottom: 20px;
         }
@@ -960,7 +1008,7 @@ article.property-page-template {
             border-top: 1px solid #ededed;
             border-left: 1px solid #ededed;
             border-right: 1px solid #ededed;
-            margin: 0;
+            margin: 0 0 20px;
             padding: 0;
             list-style: none;
 

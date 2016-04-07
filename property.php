@@ -11,7 +11,7 @@ get_header();
 
 <div class="container">
 
-    <?php if (isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
+    <?php if (isset($post->property_type) && (empty_sidebar("wpp_sidebar_" . $post->property_type))) : ?>
         <div class="content col-md-8">
         <?php else : ?>
             <div class="content col-md-12">
@@ -29,16 +29,7 @@ get_header();
             ?>
         </div>
 
-
-        <?php if (isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
-
-            <aside class="sidebar col-md-4">
-                <ul class="sidebar_widget_list">
-                    <?php dynamic_sidebar("wpp_sidebar_" . $post->property_type); ?>
-                </ul>
-            </aside>
-
-        <?php endif; ?>
+        <?php get_sidebar('property'); ?>
 
     </div>
 

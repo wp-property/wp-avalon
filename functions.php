@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Avalon functions
  * 
@@ -48,6 +49,7 @@ register_nav_menus(array(
  * @since Avalon 1.0
  */
 add_action('admin_menu', 'avalon_theme_support');
+
 function avalon_theme_support() {
     if (function_exists('add_options_page')) {
         add_menu_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
@@ -102,4 +104,12 @@ add_filter('registration_redirect', 'avalon_registration_redirect');
 
 function avalon_contact_us() {
     
+}
+
+function empty_sidebar($sidebar) {
+    if (is_active_sidebar($sidebar)) {
+        return TRUE;
+    } else {
+        return FALSE;
+    }
 }
