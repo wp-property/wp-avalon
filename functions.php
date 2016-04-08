@@ -75,6 +75,15 @@ function avalon_widgets_init() {
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
+        'name' => __('Frontpage multi-sidebar', 'avalon'),
+        'id' => 'sidebar-frontpage',
+        'description' => __('Appears at the top side of the frontpage content.', 'avalon'),
+        'before_widget' => '<div class="tab-pane" role="tabpanel" id="%1$s"><div class="multisidebar-widget %2$s">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+    register_sidebar(array(
         'name' => __('Sidebar Left', 'avalon'),
         'id' => 'sidebar-left',
         'description' => __('Appears at the left side of the content on all pages.', 'avalon'),

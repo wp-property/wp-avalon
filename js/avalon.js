@@ -44,7 +44,18 @@ jQuery(function() {
         e.preventDefault();
         jQuery(this).tab('show');
     });
+    if (!(jQuery('.front-property-search .tab-content').children('.tab-pane').hasClass('active'))) {
+        jQuery('.front-property-search .tab-content .tab-pane:first').addClass('active');
+    }
 
+//    Frontpage widgetaria tabs
+    jQuery('.tab-content div.tab-pane').each(function() {
+        var tab_id = jQuery(this).attr('id'),
+                widget_title = jQuery('.tab-pane#' + tab_id +' .widget-title').html();
+        jQuery('.frontpage-widgetaria-tabs .nav-tabs li a[href="#'+tab_id+'"]').html(widget_title);
+    });
+
+//    Selectpicker
     jQuery('select:not(.selectpicker)').selectpicker({
         style: 'btn-default'
     });

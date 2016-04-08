@@ -369,8 +369,8 @@ body {
         .container {
             margin-top: 20px;
 
-            /*front Property serch*/
-            .front-property-search {
+            /*frontpage widgetaria tabs*/
+            .frontpage-widgetaria-tabs {
                 .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.15));
                 .border-radius(5px);
                 background-color: #FFF;
@@ -383,14 +383,12 @@ body {
                 .nav-tabs {
                     border: none;
                     width: 100%;
-                    display: table;
                     height: 53px;
 
                     li {
                         border-bottom: 1px solid #c0c2c7;
                         display: table-cell;
                         float: none;
-                        width: 25%;
 
                         a {
                             .transition(background-color, 0.1s, linear, 0s);
@@ -448,15 +446,292 @@ body {
                     .tab-pane {
                         padding: 30px 40px;
 
+                        .widget-title {
+                            display: none;
+                        }
                         .row {
                             margin-bottom: 20px;
                         }
                         .select2-container {
                             width: 100% !important;
                         }
+                        /*Default property search*/
+                        &.tab-pane {
+
+                            &.property-search-defaul {
+
+                                .wpp_shortcode_search_form {
+
+                                    .wpp_search_elements {
+
+                                        >li {
+                                            display: block;
+                                            float: left;
+                                            width: 90%;
+                                            &.submit {
+                                                width: 10%;
+                                                text-align: right;
+                                                vertical-align: bottom;
+
+                                                .submit {
+                                                    .submit-button-style;
+                                                    margin-top: 27px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .wpp_shortcode_search_form {
+                                .clearfix;
+
+                                .wpp_search_elements {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+
+                                    ul {
+                                        margin: 0;
+                                        padding: 0;
+                                        list-style: none;
+                                    }
+                                    ul.wpp_search_group {
+                                        margin: 0 -10px;
+
+                                        >li {
+                                            width: 20%;
+                                            min-height: 62px;
+                                            margin-bottom: 15px;
+                                            float: left;
+                                            padding: 0 10px;
+
+                                            >label {
+                                                display: block;
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                            }
+                                            .wpp_search_attribute_wrap {
+                                                min-height: 35px;
+                                                .clearfix;
+
+                                                input[type="text"] {
+                                                    .default-input-style;
+                                                    &.wpp_search_input_field_min,
+                                                    &.wpp_search_input_field_max {
+                                                        display: inline-block;
+                                                        width: 46%;
+                                                    }
+                                                }
+                                                .wpp_multi_checkbox {
+
+                                                    li {
+                                                        display: inline-block;
+                                                        margin-right: 5px;
+
+                                                        label {
+                                                            font-weight: 400;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .wpp_dash,
+                                            .delimiter {
+                                                display: inline-block;
+                                                width: 2%;
+                                                text-align: center;
+                                            }
+                                            .bootstrap-select {
+                                                width: 97%;
+                                            }
+                                            &.seach_attribute_price {
+
+                                                .wpp_search_attribute_wrap {
+
+                                                    .bootstrap-select {
+                                                        width: 47%;
+                                                        display: inline-block;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    >li {
+                                        display: block;
+                                        width: 100%;
+                                        &.submit {
+                                            text-align: right;
+                                            vertical-align: bottom;
+
+                                            .submit {
+                                                margin-top: 26px;
+                                                .submit-button-style;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }/*Default property search*/
+
+                        .multisidebar-widget {
+
+                            /*Supermap*/
+                            .wpp_supermap_wrapper {
+                                .clearfix;
+                                border: 1px solid #d2d3d6;
+
+                                .super_map {
+                                    float: right;
+                                    width: 80%;
+                                    height: 400px;
+                                    overflow: hidden;
+                                }
+                                .super_map_list {
+
+                                    overflow-y: scroll;
+                                    float: left;
+                                    height: 400px;
+                                    width: 20%;
+
+                                    .supermap_filter_wrapper {
+
+                                        .hide_filter {
+
+                                            a {
+                                                display: block;
+                                                background-color: #ededed;
+                                                color: #a1a1a1;
+                                                padding: 5px 0;
+                                                width: 100%;
+                                                box-sizing: border-box;
+                                                font-size: 14px;
+                                                text-transform: uppercase;
+                                                text-align: center;
+                                                text-decoration: none;
+                                                outline: none;
+                                            }
+                                        }
+                                        .map_filters {
+                                            display: none;
+
+                                            .class_wpp_supermap_elements {
+                                                .clearfix;
+                                                padding: 5px 10px;
+
+                                                >ul {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    list-style: none;
+
+                                                    >li {
+                                                        .clearfix;
+                                                        border-bottom: 1px dashed #cbccd0;
+                                                        margin-bottom: 5px;
+                                                        padding-bottom: 10px;
+
+                                                        ul {
+                                                            margin: 0;
+                                                            padding: 0;
+                                                            list-style: none;
+                                                        }
+                                                        label.class_wpp_supermap_label {
+                                                            display: block;
+                                                        }
+                                                        .bootstrap-select {
+                                                            width: 100%;
+                                                        }
+                                                        input[type='text'] {
+                                                            .default-input-style;
+                                                            &.wpp_search_input_field_min,
+                                                            &.wpp_search_input_field_max {
+                                                                width: 47%;
+                                                                display: inline-block;
+                                                            }
+                                                        }
+
+                                                        &.seach_attribute_price {
+
+                                                            .bootstrap-select {
+                                                                display: block;
+                                                                float: left;
+                                                                width: 47%;
+                                                            }
+                                                            .delimiter {
+                                                                display: block;
+                                                                float: left;
+                                                                width: 6%;
+                                                                line-height: 34px;
+                                                                text-align: center;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                input.search_b {
+                                                    .submit-button-style;
+                                                    margin-bottom: 5px;
+                                                    float: right;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .super_map_list_property {
+
+                                        .no_properties {
+                                            font-size: 14px;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        .property_in_list {
+                                            border-bottom: 1px solid #cbccd0;
+                                            margin-bottom: 5px;
+                                            padding: 10px;
+
+                                            ul {
+                                                font-size: 13px;
+                                                margin: 0;
+                                                padding: 0;
+                                                list-style: none;
+
+                                                li {
+
+                                                    .attribute {
+                                                        font-weight: 600;
+                                                    }
+                                                    &.supermap_list_thumb {
+                                                        text-align: center;
+
+                                                        img {
+                                                            max-width: 100%;
+                                                            height: auto;
+                                                        }
+                                                    }
+                                                    &.supermap_list_title {
+                                                        font-size: 14px;
+                                                        color: #337ab7;
+                                                        line-height: 1.2;
+                                                        margin: 3px 0;
+                                                        cursor: pointer;
+                                                    }
+                                                    &.supermap_list_view_property {
+                                                        margin-top: 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .show_more.btn {
+                                        .submit-button-style;
+                                        margin: 0 auto 5px;
+                                        display: block;
+                                        width: 70%;
+                                    }
+                                }
+                            }/*Supermap*/
+                        }
+
                     }
                 }
-            }/*front Property serch*/
+            }/*frontpage widgetaria tabs*/
 
             /* Sidebar 
             ----------------------------------------------------------------- */
@@ -678,6 +953,11 @@ body {
                                             }
                                             &.supermap_list_thumb {
                                                 text-align: center;
+
+                                                img {
+                                                    max-width: 100%;
+                                                    height: auto;
+                                                }
                                             }
                                             &.supermap_list_title {
                                                 font-size: 14px;
@@ -692,6 +972,9 @@ body {
                                         }
                                     }
                                 }
+                            }
+                            .show_more.btn {
+                                margin: 0 auto;
                             }
                         }
                     }/*WPP Supermap page*/

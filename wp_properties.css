@@ -887,6 +887,11 @@
   background-color: #286090;
   border-color: #204d74;
 }
+.widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
+.wpp_widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select {
+  width: 47% !important;
+  display: inline-block;
+}
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group,
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group {
   margin: 0;
