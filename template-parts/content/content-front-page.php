@@ -9,5 +9,5 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
     <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
-    <?php the_content(); ?>
+    <?php the_post(); the_content(); ?>
 </article>

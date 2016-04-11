@@ -17,9 +17,11 @@ if (is_active_sidebar($sidebar_name)) {
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li role="presentation" class="active">
-                <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search'); ?></a>
-            </li>
+            <?php if (function_exists('ud_check_wp_property')) : ?>
+                <li role="presentation" class="active">
+                    <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search'); ?></a>
+                </li>
+            <?php endif; ?>
             <?php
             foreach ($sw__list as $id) {
                 ?>
