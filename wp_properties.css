@@ -495,6 +495,7 @@
   /*wpp property attributes */
   /*widget latestpropertieswidget*/
   /*widget wpp_agents_content_agent_card*/
+  /*Feps widget*/
   /*wpp_feps_form*/
   /*shortcode_featured_properties*/
 }
@@ -541,6 +542,11 @@
   border-bottom: 1px dashed #cbccd0;
   margin-bottom: 10px;
   padding-bottom: 5px;
+}
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child {
+  margin-bottom: 0;
+  border: none;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb {
@@ -1070,6 +1076,15 @@
   width: 80px;
   height: 80px;
 }
+.widget .wpp_feps_step_tabs,
+.wpp_widget .wpp_feps_step_tabs {
+  margin-bottom: 5px !important;
+}
+.widget .wpp_feps_step_tabs li,
+.wpp_widget .wpp_feps_step_tabs li {
+  margin-bottom: 5px;
+  padding: 5px 10px !important;
+}
 .widget .wpp_feps_form,
 .wpp_widget .wpp_feps_form {
   color: #5a5a5a;
@@ -1130,6 +1145,10 @@
   border-color: #398439;
   color: #fff;
 }
+.widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list,
+.wpp_widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list {
+  display: block !important;
+}
 .widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list:before,
 .wpp_widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list:before {
   display: block;
@@ -1144,10 +1163,11 @@
 }
 .widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list li,
 .wpp_widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list li {
+  width: auto !important;
   max-width: 50%;
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: inline-block !important;
   border: none;
 }
 .widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload ul.qq-upload-list li img,

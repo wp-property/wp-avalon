@@ -44,8 +44,8 @@ jQuery(function() {
         e.preventDefault();
         jQuery(this).tab('show');
     });
-    if (!(jQuery('.front-property-search .tab-content').children('.tab-pane').hasClass('active'))) {
-        jQuery('.front-property-search .tab-content .tab-pane:first').addClass('active');
+    if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
+        jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
     }
 
 //    Frontpage widgetaria tabs

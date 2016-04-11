@@ -279,12 +279,22 @@ body header .container .site-header-menu .main-navigation ul li ul.sub-menu {
   position: absolute;
   z-index: 9;
   float: left;
-  padding: 7px 0;
-  background-color: #FFF;
+  padding: 7px 0 0;
   top: 100%;
   width: auto;
 }
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu:before {
+  background-color: #fff;
+  content: "";
+  height: 10px;
+  left: 25%;
+  position: absolute;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 10px;
+}
 body header .container .site-header-menu .main-navigation ul li ul.sub-menu li {
+  background-color: #FFF;
   float: none;
   width: 100%;
   line-height: 23px;
@@ -307,6 +317,9 @@ body header .container .site-header-menu .main-navigation ul li ul.sub-menu li u
   top: 0;
   left: 100%;
   padding: 0;
+}
+body header .container .site-header-menu .main-navigation ul li ul.sub-menu li ul.sub-menu:before {
+  display: none;
 }
 body header .container .site-header-menu .main-navigation ul li ul.sub-menu li ul.sub-menu li a {
   -webkit-transition: all 0.15s linear 0s;
@@ -965,8 +978,115 @@ body main.main-content .container .sidebar ul.sidebar_widget_list li.wpp_widget 
   margin-bottom: 20px;
 }
 body main.main-content .container .content {
-  /*Comments styles*/
-  /*Comments styles*/
+  /*Comments styles
+                h3#comments {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: #a1a1a1;
+                    line-height: 1.5;
+                    margin: 20px 0 5px;
+                }
+
+                .navigation {
+
+                }
+
+                ol.commentlist {
+                    list-style: none;
+                    margin: 0 0 10px;
+                    padding: 0;
+                    background-color: #FFF;
+                    border-radius: 4px;
+                    border: 1px solid #c3c5c9;
+                    box-sizing: border-box;
+
+                    li {
+
+                        .comment-body {
+                            padding: 20px;
+                            border-bottom: 1px solid #c3c5c9;
+                            position: relative;
+
+                            .reply {
+                                .transition(opacity, 0.15s, ease-in-out, 0s);
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                opacity: 0;
+
+                                a {
+                                    font-size: 13px;
+                                    color: #4983d9;
+                                    display: inline-block;
+                                    background: url('../images/reply-arrow.png') no-repeat left center;
+                                    padding: 3px 0 0 15px;
+                                }
+                            }
+                            &:hover {
+
+                                .reply {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        ul.children {
+                            list-style: none;
+                            margin: 0;
+
+                            li {
+
+                                .comment-body {
+                                    padding: 20px;
+                                    border-bottom: 1px solid #c3c5c9;
+                                }
+                            }
+                        }
+                        &:last-child {
+
+                            .comment-body {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                #respond {
+                    margin-top: 20px;
+
+                    h3 {
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        color: #a1a1a1;
+                        line-height: 1.5;
+                        margin: 5px 0;
+                    }
+                    #cancel-comment-reply a {
+                        margin: 0 0 5px;
+                    }
+                    #commentform {
+                        padding: 20px;
+                        background-color: #FFF;
+                        border-radius: 4px;
+                        border: 1px solid #c3c5c9;
+                        box-sizing: border-box;
+
+                        input[type='text'],
+                        input[type='email'],
+                        textarea {
+                            .default-input-style;
+                        }
+                        textarea {
+                            height: 150px;
+                        }
+                        #submit {
+                            .submit-button-style;
+                        }
+                    }
+                }
+                /*Comments styles*/
 }
 body main.main-content .container .content .wp-caption,
 body main.main-content .container .content .wp-caption img,
@@ -985,6 +1105,11 @@ body main.main-content .container .content h6 {
 body main.main-content .container .content article {
   /*WPP Supermap page*/
   /*WPP Supermap page*/
+  /*Feps listing*/
+  /*Feps listing*/
+  /* Defaul styles
+                    --------------------------------------------------------- */
+  /*Defaul styles*/
 }
 body main.main-content .container .content article .page-title h1,
 body main.main-content .container .content article h1.entry-title,
@@ -1234,118 +1359,105 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn {
   margin: 0 auto;
 }
-body main.main-content .container .content article p.nocomments {
-  font-size: 14px;
-  margin: 20px 0;
-  padding: 0 5px;
-  text-transform: uppercase;
-}
-body main.main-content .container .content h3#comments {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #a1a1a1;
-  line-height: 1.5;
-  margin: 20px 0 5px;
-}
-body main.main-content .container .content ol.commentlist {
-  list-style: none;
-  margin: 0 0 10px;
-  padding: 0;
-  background-color: #FFF;
-  border-radius: 4px;
-  border: 1px solid #c3c5c9;
-  box-sizing: border-box;
-}
-body main.main-content .container .content ol.commentlist li .comment-body {
-  padding: 20px;
-  border-bottom: 1px solid #c3c5c9;
-  position: relative;
-}
-body main.main-content .container .content ol.commentlist li .comment-body .reply {
-  -webkit-transition: opacity 0.15s ease-in-out 0s;
-  -moz-transition: opacity 0.15s ease-in-out 0s;
-  -o-transition: opacity 0.15s ease-in-out 0s;
-  transition: opacity 0.15s ease-in-out 0s;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  opacity: 0;
-}
-body main.main-content .container .content ol.commentlist li .comment-body .reply a {
-  font-size: 13px;
-  color: #4983d9;
-  display: inline-block;
-  background: url('../images/reply-arrow.png') no-repeat left center;
-  padding: 3px 0 0 15px;
-}
-body main.main-content .container .content ol.commentlist li .comment-body:hover .reply {
-  opacity: 1;
-}
-body main.main-content .container .content ol.commentlist li ul.children {
-  list-style: none;
-  margin: 0;
-}
-body main.main-content .container .content ol.commentlist li ul.children li .comment-body {
-  padding: 20px;
-  border-bottom: 1px solid #c3c5c9;
-}
-body main.main-content .container .content ol.commentlist li:last-child .comment-body {
-  border: none;
-}
-body main.main-content .container .content #respond {
-  margin-top: 20px;
-}
-body main.main-content .container .content #respond h3 {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #a1a1a1;
-  line-height: 1.5;
-  margin: 5px 0;
-}
-body main.main-content .container .content #respond #cancel-comment-reply a {
-  margin: 0 0 5px;
-}
-body main.main-content .container .content #respond #commentform {
-  padding: 20px;
-  background-color: #FFF;
-  border-radius: 4px;
-  border: 1px solid #c3c5c9;
-  box-sizing: border-box;
-}
-body main.main-content .container .content #respond #commentform input[type='text'],
-body main.main-content .container .content #respond #commentform input[type='email'],
-body main.main-content .container .content #respond #commentform textarea {
+body main.main-content .container .content article .wpp_feps_sponsored_listing:before {
   display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_sponsored_listing:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li {
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  float: left;
+  display: block;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: 1px solid #d0d0d0;
 }
-body main.main-content .container .content #respond #commentform input[type='text']:focus,
-body main.main-content .container .content #respond #commentform input[type='email']:focus,
-body main.main-content .container .content #respond #commentform textarea:focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+body main.main-content .container .content article .wpp_feps_form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-body main.main-content .container .content #respond #commentform textarea {
-  height: 150px;
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields {
+  margin-bottom: 10px;
 }
-body main.main-content .container .content #respond #commentform #submit {
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .attribute_description_text {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-drop-area {
+  border: 2px dashed #ccc;
+  margin: 0 0 10px;
+  padding: 20px;
+  text-align: center;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button {
+  background-image: none;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 5px;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover {
+  background-color: #449d44;
+  border-color: #398439;
+  color: #fff;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-list {
+  display: table;
+  width: 100%;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-list li {
+  width: auto;
+  vertical-align: middle;
+  display: table-cell;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-list li img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding: 0 5px;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .wpp_feps_map {
+  margin-top: 10px;
+}
+body main.main-content .container .content article .wpp_feps_form .wpp_feps_submit_form {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1370,7 +1482,78 @@ body main.main-content .container .content #respond #commentform #submit {
   border-color: #2e6da4;
   color: #fff;
 }
-body main.main-content .container .content #respond #commentform #submit:hover {
+body main.main-content .container .content article .wpp_feps_form .wpp_feps_submit_form:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
+}
+body main.main-content .container .content article p.nocomments {
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 0 5px;
+  text-transform: uppercase;
+}
+body main.main-content .container .content article input[type="text"],
+body main.main-content .container .content article input[type="email"],
+body main.main-content .container .content article input[type="tel"],
+body main.main-content .container .content article input[type="password"],
+body main.main-content .container .content article textarea {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+body main.main-content .container .content article input[type="text"]:focus,
+body main.main-content .container .content article input[type="email"]:focus,
+body main.main-content .container .content article input[type="tel"]:focus,
+body main.main-content .container .content article input[type="password"]:focus,
+body main.main-content .container .content article textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+body main.main-content .container .content article textarea {
+  height: 100px;
+}
+body main.main-content .container .content article input[type="submit"] {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+}
+body main.main-content .container .content article input[type="submit"]:hover {
   background-color: #286090;
   border-color: #204d74;
   color: #fff;

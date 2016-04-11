@@ -389,6 +389,10 @@
                 border-bottom: 1px dashed #cbccd0;
                 margin-bottom: 10px;
                 padding-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                    border: none;
+                }
 
                 .property_overview_thumb {
                     display: inline-block;
@@ -672,7 +676,7 @@
                     }
                 }
                 &.seach_attribute_price {
-                    
+
                     .bootstrap-select {
                         width: 47% !important;
                         display: inline-block;
@@ -818,6 +822,15 @@
         }
     }/*widget wpp_agents_content_agent_card*/
 
+    /*Feps widget*/
+    .wpp_feps_step_tabs {
+        margin-bottom: 5px !important;
+
+        li {
+            margin-bottom: 5px;
+            padding: 5px 10px !important;
+        }
+    }
     .wpp_feps_form {
         color: #5a5a5a;
         line-height: 1.5;
@@ -872,13 +885,15 @@
                             }
                         }
                         ul.qq-upload-list {
+                            display: block !important;
                             .clearfix;
 
                             li {
+                                width: auto !important;
                                 max-width: 50%;
                                 padding: 0;
                                 margin: 0;
-                                display: inline-block;
+                                display: inline-block !important;
                                 border: none;
 
                                 img {
@@ -987,10 +1002,10 @@ article.property-page-template {
                             margin: 0;
                             padding: 0;
                             list-style: none;
-                            
+
                             li {
                                 margin: 0 0 5px;
-                                
+
                                 .attribute {
                                     position: relative;
                                     margin: 0 5px 0 0;

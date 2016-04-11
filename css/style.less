@@ -165,12 +165,22 @@ body {
                                 position: absolute;
                                 z-index: 9;
                                 float: left;
-                                padding: 7px 0;
-                                background-color: #FFF;
+                                padding: 7px 0 0;
                                 top: 100%;
                                 width: auto;
+                                &:before {
+                                    background-color: #fff;
+                                    content: "";
+                                    height: 10px;
+                                    left: 25%;
+                                    position: absolute;
+                                    top: 2px;
+                                    transform: rotate(45deg);
+                                    width: 10px;
+                                }
 
                                 li {
+                                    background-color: #FFF;
                                     float: none;
                                     width: 100%;
                                     line-height: 23px;
@@ -190,6 +200,9 @@ body {
                                         top: 0;
                                         left: 100%;
                                         padding: 0;
+                                        &:before {
+                                            display: none;
+                                        }
 
                                         li {
 
@@ -979,15 +992,132 @@ body {
                         }
                     }/*WPP Supermap page*/
 
+                    /*Feps listing*/
+                    .wpp_feps_sponsored_listing {
+                        .clearfix;
+
+                        .wpp_feps_step_tabs {
+                            .clearfix;
+                            margin: 0 0 20px;
+                            padding: 0;
+                            list-style: none;
+
+                            li {
+                                .border-radius(4px);
+                                float: left;
+                                display: block;
+                                padding: 10px 20px;
+                                margin-right: 5px;
+                                border: 1px solid #d0d0d0;
+                            }
+                        }
+                    }
+                    .wpp_feps_form {
+
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+
+                            &.feps_property_input_fields {
+                                margin-bottom: 10px;
+
+                                .attribute_description_text {
+                                    font-size: 12px;
+                                    margin-bottom: 5px;
+                                }
+                                .qq-upload-drop-area {
+                                    border: 2px dashed #ccc;
+                                    margin: 0 0 10px;
+                                    padding: 20px;
+                                    text-align: center;
+                                }
+                                .qq-upload-button {
+                                    background-image: none;
+                                    background-color: #5cb85c;
+                                    border-color: #4cae4c;
+                                    color: #fff;
+                                    border: 1px solid transparent;
+                                    .border-radius(4px);
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 1.42857;
+                                    margin-bottom: 5px;
+                                    padding: 6px 12px;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    white-space: nowrap;
+                                    &:hover {
+                                        background-color: #449d44;
+                                        border-color: #398439;
+                                        color: #fff;
+                                    }
+                                }
+                                .qq-upload-list {
+                                    display: table;
+                                    width: 100%;
+
+                                    li {
+                                        width: auto;
+                                        vertical-align: middle;
+                                        display: table-cell;
+
+                                        img {
+                                            max-width: 100%;
+                                            width: 100%;
+                                            height: auto;
+                                            padding: 0 5px;
+                                        }
+                                    }
+                                }
+                                .wpp_feps_map {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                        .wpp_feps_submit_form {
+                            .submit-button-style;
+                        }
+                    }/*Feps listing*/
+
                     p.nocomments {
                         font-size: 14px;
                         margin: 20px 0;
                         padding: 0 5px;
                         text-transform: uppercase;
                     }
+
+                    /* Defaul styles
+                    --------------------------------------------------------- */
+                    a {
+
+                    }
+                    p {
+
+                    }
+                    img,
+                    a img {
+
+                    }
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    input[type="password"],
+                    textarea {
+                        .default-input-style;
+                    }
+                    textarea {
+                        height: 100px;
+                    }
+                    input[type="submit"] {
+                        .submit-button-style;
+                    }
+                    /*Defaul styles*/
                 }
 
-                /*Comments styles*/
+                /*Comments styles
                 h3#comments {
                     font-size: 15px;
                     text-transform: uppercase;
