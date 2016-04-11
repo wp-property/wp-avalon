@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Avalon functions
  * 
@@ -122,3 +121,5 @@ function empty_sidebar($sidebar) {
         return FALSE;
     }
 }
+
+
