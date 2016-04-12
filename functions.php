@@ -16,6 +16,7 @@ function avalon_init() {
 
     /* CSS */
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
+    wp_enqueue_style('responsive', get_template_directory_uri() . '/css/responsive.css');
     wp_enqueue_style('bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css', '3.3.6');
     wp_enqueue_style('bootstrap-select.min', get_template_directory_uri() . '/css/bootstrap-select.min.css');
 //    wp_enqueue_style('jquery-ui.min', get_template_directory_uri() . '/css/jquery-ui.min.css');
@@ -124,22 +125,4 @@ function empty_sidebar($sidebar) {
 include_once 'theme-support/theme-customizer.php';
 
 //Settings page functions
-function avalon_settings_page() {
-    add_settings_section(
-            'avalon_setting_section', 'Avalon theme options', 'avalon_settings_section', 'avalon_themesupport'
-    );
-    add_settings_field(
-            'show_default_property_search', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_themesupport', 'avalon_setting_section'
-    );
-    register_setting('avalon_setting_section', 'show_default_property_search');
-}
-
-add_action('admin_init', 'avalon_settings_page');
-
-function avalon_settings_section() {
-    
-}
-
-function avalon_frontpage_property_search_function() {
-    echo '<p><input type="checkbox" name="show_default_property_search" value="1" ' . checked(1, get_option('show_default_property_search'), false) . ' /> check if Yes</p>';
-}
+include_once 'theme-support/theme-support-functions.php';

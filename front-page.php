@@ -12,11 +12,31 @@ get_header();
 <div class="container">
 
     <?php get_template_part('template-parts/front-page/frontpage-widget-aria', 'avalon'); ?>
-    
+
     <?php get_template_part('template-parts/front-page/frontpage-featured-items', 'avalon'); ?>
 
-    <?php get_template_part('template-parts/content/content', 'front-page'); ?>
-    
+    <?php get_sidebar(); ?>
+
+    <?php if (is_active_sidebar('sidebar-left')) : ?>
+        <div class="content col-md-8">
+        <?php else : ?>
+            <div class="content col-md-12">
+            <?php endif; ?>
+            <?php
+            if (have_posts()) :
+
+                while (have_posts()) : the_post();
+
+                    get_template_part('template-parts/content/content', 'front-page');
+
+                endwhile;
+
+            endif;
+            ?>
+        </div>
+
+    </div>
+
 </div>
 
 <?php get_footer(); ?>

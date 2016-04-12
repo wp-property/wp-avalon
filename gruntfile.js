@@ -21,6 +21,7 @@ module.exports = function build( grunt ) {
       production: {
         files: {
           'css/style.css': [ 'css/style.less' ],
+          'css/responsive.css': [ 'css/responsive.less' ],
           'wp_properties.css': [ 'css/properties-styles.less' ]
         }
       }

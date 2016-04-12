@@ -28,11 +28,20 @@
                             <span>Unreal Estate</span>
                         </a>
                     </div>
-                    <div class="site-header-menu col-md-7">
-                        <?php get_template_part('template-parts/navigation/navigation-default', 'avalon'); ?>
-                    </div>
-                    <div class="nav-additional col-md-2">
-                        <?php get_template_part('template-parts/navigation/navigation-additional', 'avalon'); ?>
+                    <div class="navigation-box col-md-9">
+                        <span class="nav-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="navigation-wrapper row">
+                            <div class="site-header-menu col-md-9">
+                                <?php get_template_part('template-parts/navigation/navigation-default', 'avalon'); ?>
+                            </div>
+                            <div class="nav-additional col-md-3">
+                                <?php get_template_part('template-parts/navigation/navigation-additional', 'avalon'); ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

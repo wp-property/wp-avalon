@@ -45,7 +45,7 @@ body {
             }
             .hbcf__container {
 
-                .row {
+                .form-control {
                     margin-bottom: 10px;
                 }
                 .submit-btn,
@@ -112,6 +112,7 @@ body {
         box-sizing: border-box;
         border-bottom: 1px solid #0d255f;
         border-top: 1px solid #679be7;
+        position: relative;
         height: 50px;
 
         .container {
@@ -134,181 +135,192 @@ body {
                     }
                 }
             }/*logotype*/
-            .site-header-menu {
 
-                .main-navigation {
+            .navigation-box {
 
-                    ul {
-                        display: block;
-                        width: 100%;
-                        margin: 0;
-                        padding: 0;
-                        list-style: none;
+                .nav-button {
+                    display: none;
+                }
+                .navigation-wrapper {
 
-                        li {
-                            position: relative;
-                            text-align: center;
-                            float: left;
-                            display: block;
-                            line-height: 49px;
+                    .site-header-menu {
 
-                            a {
-                                .transition(all, 0.15s, linear, 0s);
-                                color: rgba(255, 255, 255, 0.5);
+                        .main-navigation {
+
+                            ul {
                                 display: block;
-                                font-size: 13px;
-                                padding: 0 10px;
-                                text-decoration: none;
-                            }
-                            ul.sub-menu {
-                                display: none;
-                                position: absolute;
-                                z-index: 9;
-                                float: left;
-                                padding: 7px 0 0;
-                                top: 100%;
-                                width: auto;
-                                &:before {
-                                    background-color: #fff;
-                                    content: "";
-                                    height: 10px;
-                                    left: 25%;
-                                    position: absolute;
-                                    top: 2px;
-                                    transform: rotate(45deg);
-                                    width: 10px;
-                                }
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
 
                                 li {
-                                    background-color: #FFF;
-                                    float: none;
-                                    width: 100%;
-                                    line-height: 23px;
-                                    text-align: left;
+                                    position: relative;
+                                    text-align: center;
+                                    float: left;
                                     display: block;
+                                    line-height: 49px;
 
                                     a {
                                         .transition(all, 0.15s, linear, 0s);
-                                        color: #414141;
-                                        padding: 5px 20px;
+                                        color: rgba(255, 255, 255, 0.5);
                                         display: block;
-                                        white-space: nowrap;
+                                        font-size: 13px;
+                                        padding: 0 10px;
+                                        text-decoration: none;
                                     }
                                     ul.sub-menu {
                                         display: none;
                                         position: absolute;
-                                        top: 0;
-                                        left: 100%;
-                                        padding: 0;
+                                        z-index: 9;
+                                        float: left;
+                                        padding: 7px 0 0;
+                                        top: 100%;
+                                        width: auto;
                                         &:before {
-                                            display: none;
+                                            background-color: #fff;
+                                            content: "";
+                                            height: 10px;
+                                            left: 20px;
+                                            position: absolute;
+                                            top: 2px;
+                                            transform: rotate(45deg);
+                                            width: 10px;
                                         }
 
                                         li {
+                                            background-color: #FFF;
+                                            float: none;
+                                            width: 100%;
+                                            line-height: 23px;
+                                            text-align: left;
+                                            display: block;
 
                                             a {
                                                 .transition(all, 0.15s, linear, 0s);
-                                                background-color: #FFF;
+                                                color: #414141;
+                                                padding: 5px 20px;
+                                                display: block;
+                                                white-space: nowrap;
+                                            }
+                                            ul.sub-menu {
+                                                display: none;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 100%;
+                                                padding: 0;
+                                                &:before {
+                                                    display: none;
+                                                }
+
+                                                li {
+
+                                                    a {
+                                                        .transition(all, 0.15s, linear, 0s);
+                                                        background-color: #FFF;
+                                                    }
+                                                    &:hover,
+                                                        &.current-menu-item {
+
+                                                        >a {
+                                                            background-color: #efefef;
+                                                            color: #a1a1a1;
+                                                        }
+                                                    }
+                                                }
                                             }
                                             &:hover,
-                                                &.current-menu-item {
+                                                &.current-menu-item,
+                                                &.current-menu-parent {
 
-                                                a {
+                                                &:after {
+                                                    color: #a1a1a1;
+                                                }
+                                                >a {
                                                     background-color: #efefef;
                                                     color: #a1a1a1;
                                                 }
                                             }
+                                            &:hover { 
+
+                                                >ul.sub-menu {
+                                                    display: block;
+                                                }
+                                            }
+                                            &.menu-item-has-children {
+
+                                                &:after {
+                                                    .glyphicon-font;
+                                                    display: block;
+                                                    content:"\e250";
+                                                    font-size: 10px;
+                                                    line-height: 33px;
+                                                    position: absolute;
+                                                    right: 5px;
+                                                    top: 0;
+                                                }
+                                            }
                                         }
                                     }
-                                    &:hover,
-                                        &.current-menu-item,
-                                        &.current-menu-parent {
+                                    &.current-menu-item,
+                                    &.current-menu-parent,
+                                    &.current-menu-ancestor,
+                                    &:hover {
 
-                                        &:after {
-                                            color: #a1a1a1;
-                                        }
                                         a {
-                                            background-color: #efefef;
-                                            color: #a1a1a1;
+                                            color: #FFF;
                                         }
                                     }
-                                    &:hover { 
+                                    &:hover {
 
-                                        ul.sub-menu {
+                                        >ul.sub-menu {
                                             display: block;
                                         }
                                     }
-                                    &.menu-item-has-children {
-
-                                        &:after {
-                                            .glyphicon-font;
-                                            display: block;
-                                            content:"\e250";
-                                            font-size: 10px;
-                                            line-height: 33px;
-                                            position: absolute;
-                                            right: 5px;
-                                            top: 0;
-                                        }
-                                    }
-                                }
-                            }
-                            &.current-menu-item,
-                            &.current-menu-parent,
-                            &.current-menu-ancestor,
-                            &:hover {
-
-                                a {
-                                    color: #FFF;
-                                }
-                            }
-                            &:hover {
-
-                                ul.sub-menu {
-                                    display: block;
                                 }
                             }
                         }
-                    }
+                    }/*site-header-menu*/
+
+                    .nav-additional {
+
+                        .na__wrapper {
+                            float: right;
+
+                            .additional-button {
+                                background-image: url('../images/additional-icons.png');
+                                background-repeat: no-repeat;
+                                color: transparent;
+                                text-indent: -9999px;
+                                height: 48px;
+                                width: 50px;
+                                box-sizing: border-box;
+                                float: left;
+                                display: block;
+                                outline: none;
+                                border-left: 1px solid #2f5389;
+                                .transition(background-color, 0.15s, linear, 0s);
+                                &.ab__profile {
+                                    background-position: -36px 15px;
+                                }
+                                &.ab__contactus {
+                                    background-position: -91px 15px;
+                                    border-right: 1px solid #2f5389;
+                                }
+                                &:hover,
+                                    &.active {
+                                    background-color: #4073bf;
+                                }
+                                &.active {
+                                    margin-top: -2px;
+                                    height: 50px;
+                                    background-position: -147px 17px;
+                                }
+                            }
+                        }
+                    }/*nav-additional*/
                 }
-            }/*site-header-menu*/
-            .nav-additional {
-
-                .na__wrapper {
-                    float: right;
-
-                    .additional-button {
-                        background-image: url('../images/additional-icons.png');
-                        background-repeat: no-repeat;
-                        /*margin-top: -2px;*/
-                        height: 48px;
-                        width: 52px;
-                        box-sizing: border-box;
-                        float: left;
-                        display: block;
-                        outline: none;
-                        border-left: 1px solid #2f5389;
-                        .transition(background-color, 0.15s, linear, 0s);
-                        /*.box-shadow-inset(0, 0, 1px, rgba(255, 255, 255, 0.15));*/
-                        &.ab__profile {
-                            background-position: -35px 15px;
-                        }
-                        &.ab__contactus {
-                            background-position: -90px 15px;
-                            border-right: 1px solid #2f5389;
-                        }
-                        &:hover,
-                            &.active {
-                            background-color: #4073bf;
-                        }
-                        &.active {
-                            margin-top: -2px;
-                            height: 50px;
-                            background-position: -147px 17px;
-                        }
-                    }
-                }
-            }/*nav-additional*/
+            }/*navigation-box*/
         }
     }
     main.main-content {
@@ -390,7 +402,8 @@ body {
                 border-left: 1px solid #d2d3d6;
                 border-right: 1px solid #d2d3d6;
                 border-bottom: 1px solid #d2d3d6;
-                margin-top: -53px;
+                margin-top: -73px;
+                margin-bottom: 20px;
                 position: relative;
 
                 .nav-tabs {
@@ -740,6 +753,97 @@ body {
                                     }
                                 }
                             }/*Supermap*/
+
+                            /*wpp_feps_user_menu*/
+                            .wpp_feps_user_menu {
+
+                                ul {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                }
+                            }/*wpp_feps_user_menu*/
+
+                            /*wp_invoice_lookup*/
+                            .wp_invoice_lookup {
+
+                                div {
+                                    font-size: 14px;
+                                    margin-bottom: 5px;
+                                }
+                                input[type="text"],
+                                .input_field {
+                                    .default-input-style;
+                                    float: left;
+                                    margin-right: 10px;
+                                    width: 45%;
+                                }
+                                input[type="submit"] {
+                                    .submit-button-style;
+
+                                }
+                            }/*wp_invoice_lookup*/
+
+                            /*wpp_featured_properties_widget*/
+                            .wpp_featured_properties_widget {
+                                margin-left: -10px;
+                                margin-right: -10px;
+
+                                .property_widget_block {
+                                    .clearfix-disable;
+                                    float: left;
+                                    width: 20%;
+                                    padding: 0 10px;
+
+                                    .wpp_widget_attribute_list {
+                                        margin: 0 0 10px;
+                                        padding: 0;
+                                        list-style: none;
+
+                                        li {
+
+                                            .attribute {
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+                                p.view-all {
+                                    .clearfix;
+
+                                    a.btn {
+                                        margin-top: 10px;
+                                        .submit-button-style;
+                                    }
+                                }
+                            }/*wpp_featured_properties_widget*/
+
+                            /*wpp_latest_properties_widget*/
+                            .wpp_latest_properties_widget {
+                                margin-left: -10px;
+                                margin-right: -10px;
+                                .clearfix;
+
+                                .property_widget_block {
+                                    .clearfix-disable;
+                                    float: left;
+                                    width: 20% !important;
+                                    padding: 0 10px;
+
+                                    .wpp_widget_attribute_list {
+                                        margin: 0;
+                                        padding: 0;
+                                        list-style: none;
+
+                                        li {
+
+                                            .attribute {
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+                            }/*wpp_latest_properties_widget*/
                         }
 
                     }
@@ -1076,11 +1180,112 @@ body {
                                     margin-top: 10px;
                                 }
                             }
-                        }
-                        .wpp_feps_submit_form {
-                            .submit-button-style;
+                            &.feps_actions,
+                            &.feps_user_input_fields {
+                                .clearfix;
+
+                                li {
+                                    display: inline-block;
+
+                                    .wpp_feps_submit_form,
+                                    input[type="button"],
+                                    input[type="submit"] {
+                                        .submit-button-style;
+                                    }
+                                }
+                            }
                         }
                     }/*Feps listing*/
+
+                    /*Property search*/
+                    .wpp_shortcode_search_form {
+                        .clearfix;
+
+                        .wpp_search_elements {
+                            margin: 0 0 20px;
+                            padding: 0;
+                            list-style: none;
+
+                            ul {
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                            }
+                            ul.wpp_search_group {
+                                margin: 0 -10px;
+
+                                >li {
+                                    width: 20%;
+                                    min-height: 62px;
+                                    margin-bottom: 15px;
+                                    float: left;
+                                    padding: 0 10px;
+
+                                    >label {
+                                        display: block;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+                                    .wpp_search_attribute_wrap {
+                                        min-height: 35px;
+                                        .clearfix;
+
+                                        input[type="text"] {
+                                            .default-input-style;
+                                            &.wpp_search_input_field_min,
+                                            &.wpp_search_input_field_max {
+                                                display: inline-block;
+                                                width: 46%;
+                                            }
+                                        }
+                                        .wpp_multi_checkbox {
+
+                                            li {
+                                                display: inline-block;
+                                                margin-right: 5px;
+
+                                                label {
+                                                    font-weight: 400;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .wpp_dash,
+                                    .delimiter {
+                                        display: inline-block;
+                                        width: 2%;
+                                        text-align: center;
+                                    }
+                                    .bootstrap-select {
+                                        width: 97%;
+                                    }
+                                    &.seach_attribute_price {
+
+                                        .wpp_search_attribute_wrap {
+
+                                            .bootstrap-select {
+                                                width: 47%;
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            >li {
+                                display: block;
+                                width: 100%;
+                                &.submit {
+                                    .clearfix;
+                                    text-align: right;
+                                    vertical-align: bottom;
+
+                                    .submit {
+                                        .submit-button-style;
+                                    }
+                                }
+                            }
+                        }
+                    }/*Property search*/
 
                     p.nocomments {
                         font-size: 14px;
@@ -1117,7 +1322,7 @@ body {
                     /*Defaul styles*/
                 }
 
-                /*Comments styles
+                /*Comments styles*/
                 h3#comments {
                     font-size: 15px;
                     text-transform: uppercase;

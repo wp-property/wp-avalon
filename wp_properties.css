@@ -52,6 +52,12 @@
   content: "";
   clear: both;
 }
+.clearfix-disable:before {
+  display: none;
+}
+.clearfix-disable:after {
+  display: none;
+}
 .default-input-style {
   display: block;
   width: 100%;
@@ -438,6 +444,7 @@
   clear: both;
 }
 .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list {
+  min-height: 110px;
   margin: 0 0 10px;
   padding: 0 0 0 135px;
   list-style: none;

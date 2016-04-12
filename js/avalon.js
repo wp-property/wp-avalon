@@ -51,13 +51,18 @@ jQuery(function() {
 //    Frontpage widgetaria tabs
     jQuery('.tab-content div.tab-pane').each(function() {
         var tab_id = jQuery(this).attr('id'),
-                widget_title = jQuery('.tab-pane#' + tab_id +' .widget-title').html();
-        jQuery('.frontpage-widgetaria-tabs .nav-tabs li a[href="#'+tab_id+'"]').html(widget_title);
+                widget_title = jQuery('.tab-pane#' + tab_id + ' .widget-title').html();
+        jQuery('.frontpage-widgetaria-tabs .nav-tabs li a[href="#' + tab_id + '"]').html(widget_title);
     });
 
 //    Selectpicker
     jQuery('select:not(.selectpicker)').selectpicker({
         style: 'btn-default'
+    });
+
+//    Main Navigation (responsive)
+    jQuery(document).on('click', '.navigation-box .nav-button', function() {
+        jQuery('.navigation-box').toggleClass('active');
     });
 });
 
