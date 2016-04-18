@@ -16,22 +16,40 @@
                     Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.
                 </div>
                 <div class="hbcf__container">
-                    <form class="header-contact-form" method="POST" action="">
-                        <div class="row">
-                            <div class="col-md-6"><input type="text" name="name" class="form-control" value="" placeholder="Name" /></div>
-                            <div class="col-md-6"><input type="email" name="email" class="form-control" value="" placeholder="Email" /></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <textarea class="form-control" name="message" placeholder=""></textarea>
+                    <?php
+                    $options = get_option('contact_us_area_form');
+                    $CF_shortcode = $options['shortcode'];
+                    $CF_styles = $options['styles'];
+                    if ($options['value'] == '1' && (!empty($CF_shortcode))) {
+                        ?>
+                        <form class="header-contact-form" method="POST" action="">
+                            <div class="row">
+                                <div class="col-md-6"><input type="text" name="name" class="form-control" value="" placeholder="Name" /></div>
+                                <div class="col-md-6"><input type="email" name="email" class="form-control" value="" placeholder="Email" /></div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button class="submit-btn btn btn-primary">SEND</button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" placeholder=""></textarea>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="submit-btn btn btn-primary">SEND</button>
+                                </div>
+                            </div>
+                        </form>
+                        <?php
+                    } else {
+                        echo do_shortcode($CF_shortcode);
+                        if (!empty($CF_styles)) {
+                            ?>
+                            <style type="text/css">
+                                <?php echo $CF_styles; ?>
+                            </style>
+                            <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

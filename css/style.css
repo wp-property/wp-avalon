@@ -381,6 +381,7 @@ body header .container .navigation-box .navigation-wrapper .site-header-menu .ma
 }
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper {
   float: right;
+  border-right: 1px solid #2f5389;
 }
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button {
   background-image: url('../images/additional-icons.png');
@@ -404,7 +405,6 @@ body header .container .navigation-box .navigation-wrapper .nav-additional .na__
 }
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button.ab__contactus {
   background-position: -91px 15px;
-  border-right: 1px solid #2f5389;
 }
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button:hover,
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button.active {
@@ -413,7 +413,7 @@ body header .container .navigation-box .navigation-wrapper .nav-additional .na__
 body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button.active {
   margin-top: -2px;
   height: 50px;
-  background-position: -147px 17px;
+  background-position: -148px 17px;
 }
 body main.main-content {
   padding-bottom: 40px;
@@ -1439,7 +1439,37 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
   margin-top: 5px;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn {
-  margin: 0 auto;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+  margin: 0 auto 5px;
+  display: block;
+  width: 70%;
+}
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
 }
 body main.main-content .container .content article .wpp_feps_sponsored_listing:before {
   display: block;
@@ -1539,27 +1569,72 @@ body main.main-content .container .content article .wpp_feps_form ul.feps_proper
 body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .wpp_feps_map {
   margin-top: 10px;
 }
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions:before,
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li {
+  display: inline-block;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li .wpp_feps_submit_form,
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li input[type="button"],
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li input[type="submit"] {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li .wpp_feps_submit_form:hover,
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li input[type="button"]:hover,
+body main.main-content .container .content article .wpp_feps_form ul.feps_actions.feps_user_input_fields li input[type="submit"]:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
+}
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields:before {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions:after,
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields:after {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li,
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li {
-  display: inline-block;
+  margin-bottom: 10px;
+  display: block;
 }
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li .wpp_feps_submit_form,
+body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li:last-child {
+  margin-bottom: 0;
+}
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li .wpp_feps_submit_form,
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li input[type="button"],
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li input[type="button"],
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li input[type="submit"],
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li input[type="submit"] {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1585,11 +1660,8 @@ body main.main-content .container .content article .wpp_feps_form ul.feps_user_i
   border-color: #2e6da4;
   color: #fff;
 }
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li .wpp_feps_submit_form:hover,
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li .wpp_feps_submit_form:hover,
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li input[type="button"]:hover,
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li input[type="button"]:hover,
-body main.main-content .container .content article .wpp_feps_form ul.feps_actions li input[type="submit"]:hover,
 body main.main-content .container .content article .wpp_feps_form ul.feps_user_input_fields li input[type="submit"]:hover {
   background-color: #286090;
   border-color: #204d74;

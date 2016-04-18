@@ -130,6 +130,9 @@
             <?php if ($post->post_parent): ?>
                 <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', ud_get_wp_property()->domain) ?></a>
             <?php endif; ?>
+                
+                <p data-click="add-to-favorites" data-id="<?php the_ID(); ?>" class="fcp__button">Favorite</p>
+                <p data-click="compare_properties" data-id="<?php the_ID(); ?>" class="fcp__button">Compare</p>
 
         </div><!-- .entry-content -->
     </div><!-- .property-page-container -->

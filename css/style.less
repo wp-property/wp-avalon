@@ -286,6 +286,7 @@ body {
 
                         .na__wrapper {
                             float: right;
+                            border-right: 1px solid #2f5389;
 
                             .additional-button {
                                 background-image: url('../images/additional-icons.png');
@@ -305,7 +306,8 @@ body {
                                 }
                                 &.ab__contactus {
                                     background-position: -91px 15px;
-                                    border-right: 1px solid #2f5389;
+                                }
+                                &:last-child {
                                 }
                                 &:hover,
                                     &.active {
@@ -314,7 +316,7 @@ body {
                                 &.active {
                                     margin-top: -2px;
                                     height: 50px;
-                                    background-position: -147px 17px;
+                                    background-position: -148px 17px;
                                 }
                             }
                         }
@@ -1091,7 +1093,10 @@ body {
                                 }
                             }
                             .show_more.btn {
-                                margin: 0 auto;
+                                .submit-button-style;
+                                margin: 0 auto 5px;
+                                display: block;
+                                width: 70%;
                             }
                         }
                     }/*WPP Supermap page*/
@@ -1180,12 +1185,28 @@ body {
                                     margin-top: 10px;
                                 }
                             }
-                            &.feps_actions,
+                            &.feps_actions.feps_user_input_fields {
+
+                                li {
+                                    display: inline-block;
+
+                                    .wpp_feps_submit_form,
+                                    input[type="button"],
+                                    input[type="submit"] {
+                                        .submit-button-style;
+                                    }
+                                }
+                            }
                             &.feps_user_input_fields {
                                 .clearfix;
 
                                 li {
-                                    display: inline-block;
+                                    .clearfix;
+                                    margin-bottom: 10px;
+                                    display: block;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
 
                                     .wpp_feps_submit_form,
                                     input[type="button"],

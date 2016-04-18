@@ -20,6 +20,14 @@ function avalon_settings_page() {
             'contact_us_area_settings', 'Contuct us area settings', 'avalon_contact_us_area_settings', 'avalon_themesupport', 'avalon_setting_section'
     );
     register_setting('avalon_setting_section', 'contact_us_area_settings');
+    
+    add_settings_section(
+            'avalon_setting_section', 'Contact us form', 'avalon_settings_section', 'avalon_themesupport'
+    );
+    add_settings_field(
+            'contact_us_area_form', 'Contuct us form settings', 'avalon_contact_us_form', 'avalon_themesupport', 'avalon_setting_section'
+    );
+    register_setting('avalon_setting_section', 'contact_us_area_form');
 }
 
 add_action('admin_init', 'avalon_settings_page');
@@ -33,19 +41,29 @@ function avalon_frontpage_property_search_function() {
 }
 
 function avalon_contact_us_area_settings() {
-    $options = get_option('contact_us_area');
-    print_r($options);
-    if (isset($options)) {
+    $options = get_option('contact_us_area_settings');
+    if (isset($options) && $options['value'] == '') {
         $options['value'] = '2'; 
     }
-    $shortcode = get_option('contact_us_area_shortcode');
-    echo '<p><input type="radio" name="contact_us_area[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
-    echo '<label>' . _e('Disable contact us area') . '</label></p>';
+    echo '<p><label><input type="radio" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo __('Disable contact us area') . '</label></p>';
 
-    echo '<p><input type="radio" name="contact_us_area[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
-    echo '<label>' . _e('Use default area') . '</label></p>';
+    echo '<p><label><input type="radio" name="contact_us_area_settings[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo __('Enable contact us area') . '</label></p>';
+}
 
-    echo '<p><input type="radio" id="contact_us_area_custom" name="contact_us_area[value]" value="3" ' . checked(3, $options['value'], false) . ' />';
-    echo '<label for="contact_us_area_custom">' . _e('Use custom with shortcode') . '</label>';
-    echo '<div><input type="text" name="contact_us_area_shortcode" value="' . $shortcode . '" placeholder="' . _e('Enter shortcode here') . '" /></div></p>';
+function avalon_contact_us_form() {
+    $options = get_option('contact_us_area_form');
+    if (isset($options) && $options['value'] == '') {
+        $options['value'] = '1'; 
+    }
+    $shortcode = esc_attr($options['shortcode']);
+    $form_styles = esc_attr($options['styles']);
+    echo '<p><label><input type="radio" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo __('Use default form') . '</label></p>';
+
+    echo '<p><label><input type="radio" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo __('Use shortcode') . '</label><br />';
+    echo '<input type="text" value="'.$shortcode.'" name="contact_us_area_form[shortcode]" placeholder="' . __('Enter shortcode here') . '" /><br />';
+    echo '<textarea name="contact_us_area_form[styles]" placeholder="' . __('Custom form css styles') . '">'.$form_styles.'</textarea></p>';
 }
