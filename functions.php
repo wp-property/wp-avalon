@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Avalon functions
  * 
@@ -25,6 +26,14 @@ function avalon_init() {
     wp_enqueue_style('GoogleUbuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700,300,500&subset=latin,cyrillic-ext');
 }
 
+add_action('admin_enqueue_scripts', 'avalon_admin_init');
+
+function avalon_admin_init() {
+    wp_enqueue_script('avalon-admin-scripts', get_template_directory_uri() . '/js/avalon-admin-scripts.js', array('jquery'), '3.3.6');
+    wp_enqueue_style('avalon-admin-styles', get_template_directory_uri() . '/css/avalon-admin-styles.css');
+    wp_enqueue_media();
+}
+
 /**
  * Theme support
  * @since Avalon 1.0
@@ -32,6 +41,8 @@ function avalon_init() {
 function avalon_theme_setup() {
     add_theme_support('post-thumbnails');
     add_theme_support('custom-header');
+    add_theme_support('custom-logo');
+    add_theme_support('custom-background');
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');

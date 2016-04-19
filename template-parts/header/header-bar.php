@@ -6,21 +6,29 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
+$area_options = get_option('contact_us_area_settings');
+$form_options = get_option('contact_us_area_form');
+$location_area = get_option('location_area');
+$CF_shortcode = $form_options['shortcode'];
+$CF_styles = $form_options['styles'];
 ?>
 <div class="header-bar" id="contacts-bar" >
     <div class="container">
-        <div class="col-md-6">
+        <div class="col-md-6
+        <?php if ($location_area['value'] == '1') echo ' col-md-offset-3'; ?>
+             ">
             <div class="hb__contact-form">
-                <div class="hb__title">CONTACT FORM</div>
-                <div class="hbcf__description">
-                    Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.
-                </div>
+                <div class="hb__title"><?php echo (!empty($area_options['title'])) ? $area_options['title'] : __('CONTACT FORM'); ?></div>
+                <?php
+                if (!empty($area_options['description'])) {
+                    echo '<div class="hbcf__description">';
+                    echo $area_options['description'];
+                    echo '</div>';
+                }
+                ?>
                 <div class="hbcf__container">
                     <?php
-                    $options = get_option('contact_us_area_form');
-                    $CF_shortcode = $options['shortcode'];
-                    $CF_styles = $options['styles'];
-                    if ($options['value'] == '1' && (!empty($CF_shortcode))) {
+                    if ($form_options['value'] == '1' && (!empty($CF_shortcode))) {
                         ?>
                         <form class="header-contact-form" method="POST" action="">
                             <div class="row">
@@ -44,7 +52,7 @@
                         if (!empty($CF_styles)) {
                             ?>
                             <style type="text/css">
-                                <?php echo $CF_styles; ?>
+        <?php echo $CF_styles; ?>
                             </style>
                             <?php
                         }
@@ -53,32 +61,77 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="hb__location">
-                <div class="hb__title">Location & Address</div>
-                <div class="hbl__content">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img width="100%" height="auto" src="<?php echo get_template_directory_uri(); ?>/images/location-map.jpg" alt="Location map" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Head Office</h5>
-                            <p>Reiner street 5, Los Angeles, CA 48523<br />
-                                Phone: +32 (0)2 494 01 28<br />
-                                Email: <a href="mailto:hidentica@gmail.com">hidentica@gmail.com</a></p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Representative</h5>
-                            <p>Winsont F. st. 10, New York, 48523<br />
-                                Phone: +32 (0)2 494 01 28<br />
-                                Email: <a href="mailto:hidentica@gmail.com">hidentica@gmail.com</a></p>
+        <?php if ($location_area['value'] == '2') : ?>
+            <div class="col-md-6">
+                <?php
+                $location_title = $location_area['title'];
+                $location_map_code = $location_area['map_code'];
+                $location_map_image = $location_area['map_image'];
+                $location_text = $location_area['text'];
+                ?>
+                <div class="hb__location">
+                    <div class="hb__title"><?php echo (!empty($location_title)) ? $location_title : __('Location & Address'); ?></div>
+                    <div class="hbl__content">
+                        <?php if (!empty($location_map_code) || !empty($location_map_image)) : ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <?php
+                                    if (!empty($location_map_code)) :
+                                        ?>
+                                        <div class="google-map-box">
+                                            <input id="adress" name="location_area[map_code]" type="hidden" value="<?php echo $location_map_code; ?>" />
+                                            <div id="map" style="width: 100%; height: 300px;"></div>
+                                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places&callback=initAutocomplete"
+                                            async defer></script>
+                                            <script type="text/javascript">
+                                                function MapInit() {
+                                                    geocoder = new google.maps.Geocoder();
+                                                    var address = document.getElementById("adress").value;
+
+                                                    geocoder.geocode({'address': address}, function(results, status) {
+                                                        if (status == google.maps.GeocoderStatus.OK) {
+                                                            //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
+                                                            map_box.setCenter(results[0].geometry.location);
+                                                            var latlng = new google.maps.LatLng(results[0].geometry.location);
+                                                            var marker = new google.maps.Marker({
+                                                                map: map_box,
+                                                                position: results[0].geometry.location,
+                                                                center: latlng
+                                                            });
+                                                            console.log(results[0]);
+                                                        } else {
+                                                            alert("Geocode was not successful for the following reason: " + status);
+                                                        }
+                                                    });
+                                                    map_box = new google.maps.Map(document.getElementById('map'), {
+                                                        center: {lat: 0, lng: 0},
+                                                        zoom: 14,
+                                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                    });
+                                                }
+                                            </script>
+                                        </div>
+                                        <?php
+                                    else :
+                                        ?>
+                                        <img width="100%" height="auto" src="<?php echo $location_map_image; ?>" alt="Location map" />
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php
+                                if (!empty($location_text)) :
+                                    echo $location_text;
+                                endif;
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     </div>
 </div>
 <div class="header-bar" id="login-bar">
