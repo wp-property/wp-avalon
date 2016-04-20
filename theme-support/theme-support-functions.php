@@ -5,12 +5,22 @@
 
 function avalon_frontpage_settings_page() {
     add_settings_section(
-            'avalon_frontpage_settings_page', __('Settings page for site front page'), 'avalon_settings_section', 'avalon_frontpage_themesupport'
+            'avalon_frontpage_settings_page', __('Main site settings'), 'avalon_settings_section', 'avalon_frontpage_themesupport'
     );
     add_settings_field(
             'show_default_property_search', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_default_property_search');
+    
+    add_settings_field(
+            'show_featured_image_in_head', 'Use featured images in header bar', 'featured_image_in_head', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+    );
+    register_setting('avalon_frontpage_settings_page', 'show_featured_image_in_head');
+    
+    add_settings_field(
+            'show_slideshow', 'Show slideshow', 'avalon_header_slideshow', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+    );
+    register_setting('avalon_frontpage_settings_page', 'show_slideshow');
 }
 
 add_action('admin_init', 'avalon_frontpage_settings_page');
@@ -42,7 +52,42 @@ function avalon_settings_section() {
 }
 
 function avalon_frontpage_property_search_function() {
-    echo '<p><input type="checkbox" name="show_default_property_search" value="1" ' . checked(1, get_option('show_default_property_search'), false) . ' /> check if Yes</p>';
+    $options = get_option('show_default_property_search');
+    if (isset($options) && $options == '') {
+        $options['value'] = '1';
+    }
+    echo '<p><label><input type="radio" name="show_default_property_search" value="1" ' . checked(1, $options, false) . ' /> '.__('Yes').'</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search" value="2" ' . checked(2, $options, false) . ' /> '.__('No').'</label></p>';
+}
+
+function featured_image_in_head() {
+    $options = get_option('show_featured_image_in_head');
+    if (isset($options) && $options == '') {
+        $options['value'] = '1';
+    }
+    echo '<p><label><input type="radio" name="show_featured_image_in_head" value="1" ' . checked(1, $options, false) . ' /> '.__('Yes').'</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head" value="2" ' . checked(2, $options, false) . ' /> '.__('No').'</label></p>';
+}
+
+function avalon_header_slideshow() {
+    $options = get_option('show_slideshow');
+    $slideshow_shortcode = $options['slideshow_shortcode'];
+    $slideshow_css = $options['slideshow_css'];
+    if (isset($options) && $options['value'] == '') {
+        $options['value'] = '1';
+    }
+    echo '<p><label><input type="radio" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo __('Disable slideshow') . '</label></p>';
+    
+    echo '<p><label><input type="radio" class="enable" name="show_slideshow[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo __('Enable slideshow') . '</label>';
+    echo '<br /><div class="enable-content ';
+    if ($options['value'] == '2') {
+        echo ' active';
+    }
+    echo '"><label>'.__('Use shortcode').' <br /><input type="text" value="'.$slideshow_shortcode.'" name="show_slideshow[slideshow_shortcode]" placeholder="'.__('Enter slideshow shortcode').'" /></label>';
+    echo '<br /><label>'.__('Slideshow custom CSS').' <br /><textarea name="show_slideshow[slideshow_css]" placeholder="'.__('Enrer your custom CSS styles for slideshow').'">'.$slideshow_css.'</textarea></label>';
+    echo '</div></p>';
 }
 
 function avalon_contact_us_area_settings() {
@@ -71,10 +116,12 @@ function avalon_contact_us_form() {
     if (isset($options) && $options['value'] == '') {
         $options['value'] = '1';
     }
+    $default_email = $options['default_email'];
     $shortcode = esc_attr($options['shortcode']);
     $form_styles = esc_attr($options['styles']);
     echo '<p><label><input type="radio" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
-    echo __('Use default form') . '</label></p>';
+    echo __('Use default form') . '</label><br />';
+    echo '<input type="email" val="'.$default_email.'" name="contact_us_area_form[default_email]" placeholder="'.__('Your email for default form').'" /></p>';
 
     echo '<p><label><input type="radio" class="enable" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Use shortcode') . '</label></p>';

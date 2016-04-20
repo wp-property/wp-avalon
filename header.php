@@ -18,15 +18,12 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <?php get_template_part('template-parts/header/header-bar', 'avalon'); ?>
+        <?php get_template_part('template-parts/header/header', 'bar'); ?>
         <header class="header">
             <div class="container">
                 <div class="row">
                     <div class="logotype col-md-3">
-                        <a href="<?php echo site_url(); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-icon.png" />
-                            <span>Unreal Estate</span>
-                        </a>
+                        <?php get_template_part('template-parts/header/header', 'logotype'); ?>
                     </div>
                     <div class="navigation-box col-md-9">
                         <span class="nav-button">
@@ -48,5 +45,5 @@
         </header>
     <main class="main-content" role="main">
         <?php
-        get_template_part('template-parts/header/header-carousel', 'avalon');
+        get_template_part('template-parts/header/header', 'secondary');
         

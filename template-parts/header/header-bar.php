@@ -29,6 +29,7 @@ $CF_styles = $form_options['styles'];
                 <div class="hbcf__container">
                     <?php
                     if ($form_options['value'] == '1' && (!empty($CF_shortcode))) {
+                        $admin_email = $form_options['default_email'];
                         ?>
                         <form class="header-contact-form" method="POST" action="">
                             <div class="row">

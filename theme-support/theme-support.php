@@ -12,11 +12,11 @@ global $wpdb;
     <h1><?php _e('Theme options'); ?></h1>
     <div class="aw__container">
         <ul class="tab-list">
-            <li class="tab-head active" data-click="front_page_settings">Front page settings</li>
+            <li class="tab-head active" data-click="main_settings">Main settings</li>
             <li class="tab-head" data-click="head_settings">Head side settings</li>
         </ul>
         <div class="tab-container">
-            <div id="front_page_settings" class="tab-content active">
+            <div id="main_settings" class="tab-content active">
                 <form method="POST" action="options.php">
                     <?php
                     settings_fields('avalon_frontpage_settings_page');
