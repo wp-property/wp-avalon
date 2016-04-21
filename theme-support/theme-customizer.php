@@ -286,6 +286,21 @@ function avalon_customize_register($wp_customize) {
     ));
     
 //    Copyrights
+    $wp_customize->add_section('avalon_copyrights', array(
+        'title' => __('Copyrights', 'avalon'),
+        'description' => '',
+        'priority' => 120,
+    ));
+//    Blur settings
+    $wp_customize->add_setting('avalon_copyrights_settings', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_copyrights_control', array(
+        'label' => __('Copyrights', 'avalon'),
+        'section' => 'avalon_copyrights',
+        'settings' => 'avalon_copyrights_settings',
+    ));
 }
 
 add_action('customize_register', 'avalon_customize_register');

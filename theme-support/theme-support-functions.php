@@ -11,17 +11,17 @@ function avalon_frontpage_settings_page() {
             'show_default_property_search', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_default_property_search');
-    
+
     add_settings_field(
             'show_featured_image_in_head', 'Use featured images in header bar', 'featured_image_in_head', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_featured_image_in_head');
-    
+
     add_settings_field(
             'show_head_img_or_featured_img', 'If page don`t have a featured image, use default header image', 'head_img_or_featured_img', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_head_img_or_featured_img');
-    
+
     add_settings_field(
             'show_slideshow', 'Show slideshow', 'avalon_header_slideshow', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
@@ -61,8 +61,8 @@ function avalon_frontpage_property_search_function() {
     if (isset($options) && $options == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
-    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function featured_image_in_head() {
@@ -70,16 +70,17 @@ function featured_image_in_head() {
     if (isset($options) && $options == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
-    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
 }
+
 function head_img_or_featured_img() {
     $options = get_option('show_head_img_or_featured_img');
     if (isset($options) && $options == '') {
         $options['value'] = '2';
     }
-    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
-    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function avalon_header_slideshow() {
@@ -91,15 +92,15 @@ function avalon_header_slideshow() {
     }
     echo '<p><label><input type="radio" class="show_hide_input disble" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable slideshow') . '</label></p>';
-    
+
     echo '<p><label><input type="radio" class="show_hide_input enable" name="show_slideshow[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Enable slideshow') . '</label>';
     echo '<br /><div class="enable-content ';
     if ($options['value'] == '2') {
         echo ' active';
     }
-    echo '"><label>'.__('Use shortcode').' <br /><input type="text" value="'.$slideshow_shortcode.'" name="show_slideshow[slideshow_shortcode]" placeholder="'.__('Enter slideshow shortcode').'" /></label>';
-    echo '<br /><label>'.__('Slideshow custom CSS').' <br /><textarea name="show_slideshow[slideshow_css]" placeholder="'.__('Enrer your custom CSS styles for slideshow').'">'.$slideshow_css.'</textarea></label>';
+    echo '"><label>' . __('Use shortcode') . ' <br /><input type="text" value="' . $slideshow_shortcode . '" name="show_slideshow[slideshow_shortcode]" placeholder="' . __('Enter slideshow shortcode') . '" /></label>';
+    echo '<br /><label>' . __('Slideshow custom CSS') . ' <br /><textarea name="show_slideshow[slideshow_css]" placeholder="' . __('Enrer your custom CSS styles for slideshow') . '">' . $slideshow_css . '</textarea></label>';
     echo '</div></p>';
 }
 
@@ -119,8 +120,8 @@ function avalon_contact_us_area_settings() {
     if ($options['value'] == '2') {
         echo ' active';
     }
-    echo '"><label>'.__('Section title').'</label><br /><input type="text" name="contact_us_area_settings[title]" value="' . $title . '" placeholder="' . __('Section title') . '" /><br />';
-    echo '<label>'.__('Section description').'</label><br /><textarea name="contact_us_area_settings[description]" placeholder="' . __('Section description') . '">' . $description . '</textarea>';
+    echo '"><label>' . __('Section title') . '</label><br /><input type="text" name="contact_us_area_settings[title]" value="' . $title . '" placeholder="' . __('Section title') . '" /><br />';
+    echo '<label>' . __('Section description') . '</label><br /><textarea name="contact_us_area_settings[description]" placeholder="' . __('Section description') . '">' . $description . '</textarea>';
     echo '</div>';
 }
 
@@ -129,12 +130,16 @@ function avalon_contact_us_form() {
     if (isset($options) && $options['value'] == '') {
         $options['value'] = '1';
     }
-    $default_email = $options['default_email'];
+    if (!empty($options['default_form_email'])) {
+        $default_email = $options['default_form_email'];
+    } else {
+        $default_email = '';
+    }
     $shortcode = esc_attr($options['shortcode']);
     $form_styles = esc_attr($options['styles']);
     echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Use default form') . '</label><br />';
-    echo '<input type="email" val="'.$default_email.'" name="contact_us_area_form[default_email]" placeholder="'.__('Your email for default form').'" /></p>';
+    echo '<input type="text" value="' . $default_email . '" name="contact_us_area_form[default_form_email]" placeholder="' . __('Your email for default form') . '" /></p>';
 
     echo '<p><label><input type="radio" class="show_hide_input enable" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Use shortcode') . '</label></p>';
@@ -142,8 +147,8 @@ function avalon_contact_us_form() {
     if ($options['value'] == '2') {
         echo ' active';
     }
-    echo '"><label>'.__('Shortcode').'</label><br /><input type="text" value="' . $shortcode . '" name="contact_us_area_form[shortcode]" placeholder="' . __('Enter shortcode here') . '" /><br />';
-    echo '<label>'.__('Custom CSS').'</label><br /><textarea name="contact_us_area_form[styles]" placeholder="' . __('Custom form css styles') . '">' . $form_styles . '</textarea>';
+    echo '"><label>' . __('Shortcode') . '</label><br /><input type="text" value="' . $shortcode . '" name="contact_us_area_form[shortcode]" placeholder="' . __('Enter shortcode here') . '" /><br />';
+    echo '<label>' . __('Custom CSS') . '</label><br /><textarea name="contact_us_area_form[styles]" placeholder="' . __('Custom form css styles') . '">' . $form_styles . '</textarea>';
     echo '</div>';
 }
 
@@ -156,6 +161,9 @@ function avalon_location_section() {
 
     if (isset($options) && $options['value'] == '') {
         $options['value'] = '1';
+    }
+    if (isset($options) && $options['map_img'] == '') {
+        $options['map_img'] = '1';
     }
     echo '<p><label><input type="radio" class="show_hide_input disable" name="location_area[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable Location area') . '</label></p>';
@@ -202,20 +210,20 @@ function avalon_location_section() {
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
 
-    // Create the search box and link it to the UI element.
+                // Create the search box and link it to the UI element.
                 var input = document.getElementById('pac-input');
                 var searchBox = new google.maps.places.SearchBox(input);
                 map_box.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    // Bias the SearchBox results towards current map's viewport.
+                // Bias the SearchBox results towards current map's viewport.
                 map_box.addListener('bounds_changed', function() {
                     searchBox.setBounds(map_box.getBounds());
                 });
 
                 var markers = [];
-    // [START region_getplaces]
-    // Listen for the event fired when the user selects a prediction and retrieve
-    // more details for that place.
+                // [START region_getplaces]
+                // Listen for the event fired when the user selects a prediction and retrieve
+                // more details for that place.
                 searchBox.addListener('places_changed', function() {
                     var places = searchBox.getPlaces();
 
@@ -257,7 +265,7 @@ function avalon_location_section() {
                     });
                     map_box.fitBounds(bounds);
                 });
-    // [END region_getplaces]
+                // [END region_getplaces]
             }
         </script>
     </div>
@@ -267,13 +275,13 @@ function avalon_location_section() {
     <div class="map-image-select">
         <input type="hidden" name="location_area[map_image]" id="img_path" value="<?php echo $map_image; ?>" />
         <img id="map_img"
-    <?php if (!empty($map_image)) echo ' src="' . $map_image . '"'; ?>
+        <?php if (!empty($map_image)) echo ' src="' . $map_image . '"'; ?>
              />
         <span class="map-img-select-button button button-primary" data-uploader_title="<?php _e('Select image'); ?>"><?php _e('Select image'); ?></span>
         <span class="map-img-delete-button button button-cancel"><?php _e('Delete image'); ?></span>
     </div>
     <?php
-    echo '<p><label>' . __('Location area text section (you can use HTML)') . '</label><br />';
+    echo '<br /><p><label>' . __('Location area text section (you can use HTML)') . '</label><br />';
     echo '<textarea name="location_area[text]" placeholder="' . __('Location area text section') . '">' . $location_text . '</textarea></p>';
     echo '</div>';
 }

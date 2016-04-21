@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for site logo
+ * Template for site logo in header
  */
 ?>
 
@@ -14,8 +14,10 @@
     if (!empty($logo_image)) :
         echo '<img class="full_image_logo" style="margin-top: ' . $margin . 'px" alt="Logotype" src="' . $logo_image . '">';
     else :
-        ?>
-        <img class="logo-icon" style="margin-top: <?php echo $margin_icon; ?>px" src="<?php echo $icon_url; ?>" alt="Logo icon" />
+        if (!empty($icon_url)) :
+            ?>
+            <img class="logo-icon" style="margin-top: <?php echo $margin_icon; ?>px" src="<?php echo $icon_url; ?>" alt="Logo icon" />
+        <?php endif; ?>
         <span><?php echo $logo_text; ?></span>
     <?php endif; ?>
 </a>

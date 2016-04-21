@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logotype col-md-3">
-                        <?php get_template_part('template-parts/header/header', 'logotype'); ?>
+                        <?php get_template_part('template-parts/header/header', 'logo'); ?>
                     </div>
                     <div class="navigation-box col-md-9">
                         <span class="nav-button">

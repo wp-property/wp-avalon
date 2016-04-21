@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
         jQuery('.aw__container .tab-container .tab-content').removeClass('active');
         jQuery(this).addClass('active');
         jQuery('.aw__container .tab-container .tab-content#' + that).addClass('active');
-        if (that == 'head_settings') {
+        if (that == 'header_settings') {
             google.maps.event.trigger(map_box, 'resize');
         }
     });

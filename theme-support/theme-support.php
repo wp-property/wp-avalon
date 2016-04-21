@@ -13,7 +13,7 @@ global $wpdb;
     <div class="aw__container">
         <ul class="tab-list">
             <li class="tab-head active" data-click="main_settings">Main settings</li>
-            <li class="tab-head" data-click="head_settings">Head side settings</li>
+            <li class="tab-head" data-click="header_settings">Header settings</li>
         </ul>
         <div class="tab-container">
             <div id="main_settings" class="tab-content active">
@@ -25,7 +25,7 @@ global $wpdb;
                     ?>
                 </form>
             </div>
-            <div id="head_settings" class="tab-content">
+            <div id="header_settings" class="tab-content">
                 <form method="POST" action="options.php">
                     <?php
                     settings_fields('avalon_head_setting_section');
