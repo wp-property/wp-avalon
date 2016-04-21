@@ -71,10 +71,10 @@
 
 
     <div class="property-page-container">
-        <div class="<?php wpp_css('property::title', "building_title_wrapper"); ?>">
+<!--        <div class="<?php wpp_css('property::title', "building_title_wrapper"); ?>">
             <h1 class="property-title entry-title"><?php the_title(); ?></h1>
-            <?php the_tagline('<h3 class="entry-subtitle">', '</h3>'); ?>
-        </div>
+        <?php the_tagline('<h3 class="entry-subtitle">', '</h3>'); ?>
+        </div>-->
 
 
         <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
@@ -101,16 +101,20 @@
                 <?php @draw_stats("display=list&make_link=true"); ?>
             <?php endif; ?>
 
-            <?php if (!empty($wp_properties['taxonomies'])) foreach ($wp_properties['taxonomies'] as $tax_slug => $tax_data): ?>
-                    <?php if (get_features("type={$tax_slug}&format=count")): ?>
-                        <div class="<?php echo $tax_slug; ?>_list">
-                            <h2><?php echo apply_filters('wpp::attribute::label', $tax_data['label']); ?></h2>
-                            <ul class="clearfix">
-                                <?php get_features("type={$tax_slug}&format=list&links=true"); ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+            <?php if (!empty($wp_properties['taxonomies'])) : ?>
+                <div class="feature_lists">
+                    <?php foreach ($wp_properties['taxonomies'] as $tax_slug => $tax_data): ?>
+                        <?php if (get_features("type={$tax_slug}&format=count")): ?>
+                            <div class="<?php echo $tax_slug; ?>_list">
+                                <h2><?php echo apply_filters('wpp::attribute::label', $tax_data['label']); ?></h2>
+                                <ul class="clearfix">
+                                    <?php get_features("type={$tax_slug}&format=list&links=true"); ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
 
             <?php if (is_array($wp_properties['property_meta'])): ?>
                 <?php
@@ -118,8 +122,10 @@
                     if (empty($post->$meta_slug) || $meta_slug == 'tagline')
                         continue;
                     ?>
-                    <h2><?php echo $meta_title; ?></h2>
-                    <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+                    <div class="property_meta_box">
+                        <h2><?php echo $meta_title; ?></h2>
+                        <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+                    </div>
                 <?php endforeach; ?>
             <?php endif; ?>
 
@@ -130,9 +136,6 @@
             <?php if ($post->post_parent): ?>
                 <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', ud_get_wp_property()->domain) ?></a>
             <?php endif; ?>
-                
-                <p data-click="add-to-favorites" data-id="<?php the_ID(); ?>" class="fcp__button">Favorite</p>
-                <p data-click="compare_properties" data-id="<?php the_ID(); ?>" class="fcp__button">Compare</p>
 
         </div><!-- .entry-content -->
     </div><!-- .property-page-container -->

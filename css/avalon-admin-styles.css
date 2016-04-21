@@ -77,6 +77,10 @@ Styles for admin page
     -o-border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    &#pac-input {
+        width: 400px;
+        top: 9px !important;
+    }
 }
 .aw__container textarea {
     padding: 5px 10px;

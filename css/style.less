@@ -123,8 +123,14 @@ body {
                     text-decoration: none;
                     line-height: 50px;
 
-                    img {
+                    img.logo-icon {
                         margin-top: -1px;
+                        max-height: 20px;
+                        width: auto;
+                    }
+                    img.full_image_logo {
+                        max-height: 50px;
+                        line-height: 100%;
                     }
                     span {
                         .text-shadow(0, 0, 3px, rgba(0, 0, 0, 0.3));
@@ -357,9 +363,11 @@ body {
                     display: block;
                 }
             }
-            
-            h1.page-title {
+
+            h1.page-title,
+            h3.page-tagline {
                 color: #FFF;
+                .text-shadow(0, 0, 4px, rgba(0, 0, 0, 0.5));
             }
 
             .container {
@@ -1244,6 +1252,16 @@ body {
                                 }
                             }
                         }
+                        .form-actions {
+
+                            input.wpi_checkout_process_payment {
+                                margin: 0 0 10px;
+                            }
+                            .total_price {
+                                display: block;
+                                .clearfix;
+                            }
+                        }
                     }/*Feps listing*/
 
                     /*Property search*/
@@ -1372,114 +1390,123 @@ body {
                 }
 
                 /*Comments styles*/
-                h3#comments {
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    color: #a1a1a1;
-                    line-height: 1.5;
-                    margin: 20px 0 5px;
-                }
+                .comments-area {
 
-                .navigation {
-
-                }
-
-                ol.commentlist {
-                    list-style: none;
-                    margin: 0 0 10px;
-                    padding: 0;
-                    background-color: #FFF;
-                    border-radius: 4px;
-                    border: 1px solid #c3c5c9;
-                    box-sizing: border-box;
-
-                    li {
-
-                        .comment-body {
-                            padding: 20px;
-                            border-bottom: 1px solid #c3c5c9;
-                            position: relative;
-
-                            .reply {
-                                .transition(opacity, 0.15s, ease-in-out, 0s);
-                                position: absolute;
-                                top: 20px;
-                                right: 20px;
-                                opacity: 0;
-
-                                a {
-                                    font-size: 13px;
-                                    color: #4983d9;
-                                    display: inline-block;
-                                    background: url('../images/reply-arrow.png') no-repeat left center;
-                                    padding: 3px 0 0 15px;
-                                }
-                            }
-                            &:hover {
-
-                                .reply {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-
-                        ul.children {
-                            list-style: none;
-                            margin: 0;
-
-                            li {
-
-                                .comment-body {
-                                    padding: 20px;
-                                    border-bottom: 1px solid #c3c5c9;
-                                }
-                            }
-                        }
-                        &:last-child {
-
-                            .comment-body {
-                                border: none;
-                            }
-                        }
-                    }
-                }
-
-                #respond {
-                    margin-top: 20px;
-
-                    h3 {
+                    h2.comments-title,
+                    h2.comment-reply-title {
                         font-size: 15px;
                         text-transform: uppercase;
                         font-weight: 600;
                         color: #a1a1a1;
                         line-height: 1.5;
-                        margin: 5px 0;
+                        margin: 20px 0 5px;
                     }
-                    #cancel-comment-reply a {
-                        margin: 0 0 5px;
+
+                    .navigation {
+
                     }
-                    #commentform {
-                        padding: 20px;
+
+                    ol.commentlist {
+                        list-style: none;
+                        margin: 0 0 10px;
+                        padding: 0;
                         background-color: #FFF;
                         border-radius: 4px;
                         border: 1px solid #c3c5c9;
                         box-sizing: border-box;
 
-                        input[type='text'],
-                        input[type='email'],
-                        textarea {
-                            .default-input-style;
-                        }
-                        textarea {
-                            height: 150px;
-                        }
-                        #submit {
-                            .submit-button-style;
+                        li {
+
+                            .comment-body {
+                                padding: 10px 20px;
+                                border-bottom: 1px solid #c3c5c9;
+                                position: relative;
+
+                                .reply {
+                                    .transition(opacity, 0.15s, ease-in-out, 0s);
+                                    position: absolute;
+                                    top: 20px;
+                                    right: 20px;
+                                    opacity: 0;
+
+                                    a {
+                                        font-size: 13px;
+                                        color: #4983d9;
+                                        display: inline-block;
+                                        background: url('../images/reply-arrow.png') no-repeat left center;
+                                        padding: 3px 0 0 15px;
+                                    }
+                                }
+                                &:hover {
+
+                                    .reply {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            .children {
+                                list-style: none;
+                                margin: 0;
+
+                                li {
+
+                                    .comment-body {
+                                        padding: 10px 20px;
+                                        border-bottom: 1px solid #c3c5c9;
+                                    }
+                                    &:last-child {
+
+                                        .comment-body {
+                                            border: none;
+                                        }
+                                    }
+                                }
+                            }
+                            &:last-child {
+
+                                .comment-body {
+                                    border: none;
+                                }
+                            }
                         }
                     }
-                }
-                /*Comments styles*/
+
+                    #respond {
+                        margin-top: 20px;
+
+                        h3 {
+                            font-size: 15px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            color: #a1a1a1;
+                            line-height: 1.5;
+                            margin: 5px 0;
+                        }
+                        #cancel-comment-reply a {
+                            margin: 0 0 5px;
+                        }
+                        #commentform {
+                            padding: 20px;
+                            background-color: #FFF;
+                            border-radius: 4px;
+                            border: 1px solid #c3c5c9;
+                            box-sizing: border-box;
+
+                            input[type='text'],
+                            input[type='email'],
+                            textarea {
+                                .default-input-style;
+                            }
+                            textarea {
+                                height: 150px;
+                            }
+                            #submit {
+                                .submit-button-style;
+                            }
+                        }
+                    }
+                }/*Comments styles*/
 
             }/*Content*/
 

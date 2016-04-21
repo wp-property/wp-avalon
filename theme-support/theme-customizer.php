@@ -8,17 +8,6 @@ function avalon_customize_register($wp_customize) {
         'description' => '',
         'priority' => 120,
     ));
-//    Logo text color
-    $wp_customize->add_setting('avalon_logo_text_color', array(
-        'default' => '#FFF',
-        'sanitize_callback' => 'sanitize_hex_color',
-        'capability' => 'edit_theme_options',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_logo_text_color', array(
-        'label' => __('Logo Text Color', 'avalon'),
-        'section' => 'avalon_color_scheme',
-        'settings' => 'avalon_logo_text_color',
-    )));
 //    header bg color
     $wp_customize->add_setting('avalon_header_bg_color', array(
         'default' => '#477fd3',
@@ -135,6 +124,168 @@ function avalon_customize_register($wp_customize) {
             'step' => 0.1,
         ),
     ));
+    
+//    Logo settings
+    $wp_customize->add_section('avalon_logo_settings', array(
+        'title' => __('Logotype settings', 'avalon'),
+        'description' => '',
+        'priority' => 120,
+    ));
+//    Logo icon
+    $wp_customize->add_setting('avalon_logo_icon_settings', array(
+        'default'           => get_template_directory_uri() .'/images/logo-icon.png',
+        'capability'        => 'edit_theme_options',
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'avalon_logo_icon_settings', array(
+        'label'    => __('Logo icon (Recommended height 20px)', 'avalon'),
+        'section'  => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_icon_settings',
+    )));
+//    Logo img margin top
+    $wp_customize->add_setting('avalon_logo_icon_margin_setting', array(
+        'default' => '-1',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_logo_icon_margin', array(
+        'label' => __('Margin top in px', 'avalon'),
+        'section' => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_icon_margin_setting',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => -50,
+            'max' => 50,
+            'step' => 1,
+        ),
+    ));
+//    logo text settings
+    $wp_customize->add_setting('avalon_logo_text_settings', array(
+        'default' => 'Unreal Estate',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_logo_text_control', array(
+        'label' => __('Logotype text', 'avalon'),
+        'section' => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_text_settings',
+    ));
+//    Logo text color
+    $wp_customize->add_setting('avalon_logo_text_color_settings', array(
+        'default' => '#FFF',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_logo_color_text_settings', array(
+        'label' => __('Logo Text Color', 'avalon'),
+        'section' => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_text_color_settings',
+    )));
+//    Logo image
+    $wp_customize->add_setting('avalon_logo_big_image_settings', array(
+        'default'           => '',
+        'capability'        => 'edit_theme_options',
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'avalon_logo_big_image_settings', array(
+        'label'    => __('Or load full logo image instead of logo with text', 'avalon'),
+        'section'  => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_big_image_settings',
+    )));
+//    Logo img margin top
+    $wp_customize->add_setting('avalon_logo_img_margin_setting', array(
+        'default' => '0',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_logo_img_margin', array(
+        'label' => __('Margin top in px', 'avalon'),
+        'section' => 'avalon_logo_settings',
+        'settings' => 'avalon_logo_img_margin_setting',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => -50,
+            'max' => 50,
+            'step' => 1,
+        ),
+    ));
+    
+//    FOOTER Logo settings
+    $wp_customize->add_section('avalon_footer_logo_settings', array(
+        'title' => __('Footer Logotype settings', 'avalon'),
+        'description' => '',
+        'priority' => 120,
+    ));
+//    Footer Logo icon
+    $wp_customize->add_setting('avalon_footer_logo_icon_settings', array(
+        'default'           => get_template_directory_uri() .'/images/logo-icon.png',
+        'capability'        => 'edit_theme_options',
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'avalon_footer_logo_icon_settings', array(
+        'label'    => __('Logo icon (Recommended height 20px)', 'avalon'),
+        'section'  => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_icon_settings',
+    )));
+//    Footer Logo img margin top
+    $wp_customize->add_setting('avalon_footer_logo_icon_margin_setting', array(
+        'default' => '-1',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_footer_logo_icon_margin', array(
+        'label' => __('Margin top in px', 'avalon'),
+        'section' => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_icon_margin_setting',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => -50,
+            'max' => 50,
+            'step' => 1,
+        ),
+    ));
+//    Footer logo text settings
+    $wp_customize->add_setting('avalon_footer_logo_text_settings', array(
+        'default' => 'Unreal Estate',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_footer_logo_text_control', array(
+        'label' => __('Logotype text', 'avalon'),
+        'section' => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_text_settings',
+    ));
+//    Footer Logo text color
+    $wp_customize->add_setting('avalon_footer_logo_text_color_settings', array(
+        'default' => '#a7a7a7',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_footer_logo_color_text_settings', array(
+        'label' => __('Logo Text Color', 'avalon'),
+        'section' => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_text_color_settings',
+    )));
+//    Footer Logo image
+    $wp_customize->add_setting('avalon_footer_logo_big_image_settings', array(
+        'default'           => '',
+        'capability'        => 'edit_theme_options',
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'avalon_footer_logo_big_image_settings', array(
+        'label'    => __('Or load full logo image instead of logo with text', 'avalon'),
+        'section'  => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_big_image_settings',
+    )));
+//    Footer Logo img margin top
+    $wp_customize->add_setting('avalon_footer_logo_img_margin_setting', array(
+        'default' => '0',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('avalon_footer_logo_img_margin', array(
+        'label' => __('Margin top in px', 'avalon'),
+        'section' => 'avalon_footer_logo_settings',
+        'settings' => 'avalon_footer_logo_img_margin_setting',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => -50,
+            'max' => 50,
+            'step' => 1,
+        ),
+    ));
+    
+//    Copyrights
 }
 
 add_action('customize_register', 'avalon_customize_register');
@@ -142,7 +293,7 @@ add_action('customize_register', 'avalon_customize_register');
 function avalon_customize_css() {
     ?>
     <style type="text/css">
-        body header .container .logotype a span { color:<?php echo get_theme_mod('avalon_logo_text_color'); ?>; }
+        body header .container .logotype a span { color:<?php echo get_theme_mod('avalon_logo_text_color_settings'); ?>; }
         body header {
             background-color: <?php echo get_theme_mod('avalon_header_bg_color'); ?>;
             border-bottom: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color'); ?>;

@@ -14,6 +14,7 @@ function avalon_init() {
     wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6');
     wp_enqueue_script('bootstrap-select.min', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'));
     wp_enqueue_script('avalon', get_template_directory_uri() . '/js/avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
+    wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places', array('jquery'));
 
     /* CSS */
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');

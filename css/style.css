@@ -243,8 +243,14 @@ body header .container .logotype a {
   text-decoration: none;
   line-height: 50px;
 }
-body header .container .logotype a img {
+body header .container .logotype a img.logo-icon {
   margin-top: -1px;
+  max-height: 20px;
+  width: auto;
+}
+body header .container .logotype a img.full_image_logo {
+  max-height: 50px;
+  line-height: 100%;
 }
 body header .container .logotype a span {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -450,8 +456,12 @@ body main.main-content .secondary-header .secondary-header-image:after {
   content: "";
   display: block;
 }
-body main.main-content .secondary-header h1.page-title {
+body main.main-content .secondary-header h1.page-title,
+body main.main-content .secondary-header h3.page-tagline {
   color: #FFF;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 body main.main-content .secondary-header .container {
   position: relative;
@@ -1692,6 +1702,22 @@ body main.main-content .container .content article .wpp_feps_form ul.feps_user_i
   border-color: #204d74;
   color: #fff;
 }
+body main.main-content .container .content article .wpp_feps_form .form-actions input.wpi_checkout_process_payment {
+  margin: 0 0 10px;
+}
+body main.main-content .container .content article .wpp_feps_form .form-actions .total_price {
+  display: block;
+}
+body main.main-content .container .content article .wpp_feps_form .form-actions .total_price:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .content article .wpp_feps_form .form-actions .total_price:after {
+  display: block;
+  content: "";
+  clear: both;
+}
 body main.main-content .container .content article > .wpp_shortcode_search:before {
   display: block;
   content: "";
@@ -1908,7 +1934,8 @@ body main.main-content .container .content article input[type="submit"]:hover {
   border-color: #204d74;
   color: #fff;
 }
-body main.main-content .container .content h3#comments {
+body main.main-content .container .content .comments-area h2.comments-title,
+body main.main-content .container .content .comments-area h2.comment-reply-title {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1916,7 +1943,7 @@ body main.main-content .container .content h3#comments {
   line-height: 1.5;
   margin: 20px 0 5px;
 }
-body main.main-content .container .content ol.commentlist {
+body main.main-content .container .content .comments-area ol.commentlist {
   list-style: none;
   margin: 0 0 10px;
   padding: 0;
@@ -1925,12 +1952,12 @@ body main.main-content .container .content ol.commentlist {
   border: 1px solid #c3c5c9;
   box-sizing: border-box;
 }
-body main.main-content .container .content ol.commentlist li .comment-body {
-  padding: 20px;
+body main.main-content .container .content .comments-area ol.commentlist li .comment-body {
+  padding: 10px 20px;
   border-bottom: 1px solid #c3c5c9;
   position: relative;
 }
-body main.main-content .container .content ol.commentlist li .comment-body .reply {
+body main.main-content .container .content .comments-area ol.commentlist li .comment-body .reply {
   -webkit-transition: opacity 0.15s ease-in-out 0s;
   -moz-transition: opacity 0.15s ease-in-out 0s;
   -o-transition: opacity 0.15s ease-in-out 0s;
@@ -1940,31 +1967,34 @@ body main.main-content .container .content ol.commentlist li .comment-body .repl
   right: 20px;
   opacity: 0;
 }
-body main.main-content .container .content ol.commentlist li .comment-body .reply a {
+body main.main-content .container .content .comments-area ol.commentlist li .comment-body .reply a {
   font-size: 13px;
   color: #4983d9;
   display: inline-block;
   background: url('../images/reply-arrow.png') no-repeat left center;
   padding: 3px 0 0 15px;
 }
-body main.main-content .container .content ol.commentlist li .comment-body:hover .reply {
+body main.main-content .container .content .comments-area ol.commentlist li .comment-body:hover .reply {
   opacity: 1;
 }
-body main.main-content .container .content ol.commentlist li ul.children {
+body main.main-content .container .content .comments-area ol.commentlist li .children {
   list-style: none;
   margin: 0;
 }
-body main.main-content .container .content ol.commentlist li ul.children li .comment-body {
-  padding: 20px;
+body main.main-content .container .content .comments-area ol.commentlist li .children li .comment-body {
+  padding: 10px 20px;
   border-bottom: 1px solid #c3c5c9;
 }
-body main.main-content .container .content ol.commentlist li:last-child .comment-body {
+body main.main-content .container .content .comments-area ol.commentlist li .children li:last-child .comment-body {
   border: none;
 }
-body main.main-content .container .content #respond {
+body main.main-content .container .content .comments-area ol.commentlist li:last-child .comment-body {
+  border: none;
+}
+body main.main-content .container .content .comments-area #respond {
   margin-top: 20px;
 }
-body main.main-content .container .content #respond h3 {
+body main.main-content .container .content .comments-area #respond h3 {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1972,19 +2002,19 @@ body main.main-content .container .content #respond h3 {
   line-height: 1.5;
   margin: 5px 0;
 }
-body main.main-content .container .content #respond #cancel-comment-reply a {
+body main.main-content .container .content .comments-area #respond #cancel-comment-reply a {
   margin: 0 0 5px;
 }
-body main.main-content .container .content #respond #commentform {
+body main.main-content .container .content .comments-area #respond #commentform {
   padding: 20px;
   background-color: #FFF;
   border-radius: 4px;
   border: 1px solid #c3c5c9;
   box-sizing: border-box;
 }
-body main.main-content .container .content #respond #commentform input[type='text'],
-body main.main-content .container .content #respond #commentform input[type='email'],
-body main.main-content .container .content #respond #commentform textarea {
+body main.main-content .container .content .comments-area #respond #commentform input[type='text'],
+body main.main-content .container .content .comments-area #respond #commentform input[type='email'],
+body main.main-content .container .content .comments-area #respond #commentform textarea {
   display: block;
   width: 100%;
   height: 34px;
@@ -2002,18 +2032,18 @@ body main.main-content .container .content #respond #commentform textarea {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-body main.main-content .container .content #respond #commentform input[type='text']:focus,
-body main.main-content .container .content #respond #commentform input[type='email']:focus,
-body main.main-content .container .content #respond #commentform textarea:focus {
+body main.main-content .container .content .comments-area #respond #commentform input[type='text']:focus,
+body main.main-content .container .content .comments-area #respond #commentform input[type='email']:focus,
+body main.main-content .container .content .comments-area #respond #commentform textarea:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-body main.main-content .container .content #respond #commentform textarea {
+body main.main-content .container .content .comments-area #respond #commentform textarea {
   height: 150px;
 }
-body main.main-content .container .content #respond #commentform #submit {
+body main.main-content .container .content .comments-area #respond #commentform #submit {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -2038,7 +2068,7 @@ body main.main-content .container .content #respond #commentform #submit {
   border-color: #2e6da4;
   color: #fff;
 }
-body main.main-content .container .content #respond #commentform #submit:hover {
+body main.main-content .container .content .comments-area #respond #commentform #submit:hover {
   background-color: #286090;
   border-color: #204d74;
   color: #fff;

@@ -18,6 +18,11 @@ function avalon_frontpage_settings_page() {
     register_setting('avalon_frontpage_settings_page', 'show_featured_image_in_head');
     
     add_settings_field(
+            'show_head_img_or_featured_img', 'If page don`t have a featured image, use default header image', 'head_img_or_featured_img', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+    );
+    register_setting('avalon_frontpage_settings_page', 'show_head_img_or_featured_img');
+    
+    add_settings_field(
             'show_slideshow', 'Show slideshow', 'avalon_header_slideshow', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_slideshow');
@@ -56,8 +61,8 @@ function avalon_frontpage_property_search_function() {
     if (isset($options) && $options == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" name="show_default_property_search" value="1" ' . checked(1, $options, false) . ' /> '.__('Yes').'</label></p>';
-    echo '<p><label><input type="radio" name="show_default_property_search" value="2" ' . checked(2, $options, false) . ' /> '.__('No').'</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
 }
 
 function featured_image_in_head() {
@@ -65,8 +70,16 @@ function featured_image_in_head() {
     if (isset($options) && $options == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" name="show_featured_image_in_head" value="1" ' . checked(1, $options, false) . ' /> '.__('Yes').'</label></p>';
-    echo '<p><label><input type="radio" name="show_featured_image_in_head" value="2" ' . checked(2, $options, false) . ' /> '.__('No').'</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
+}
+function head_img_or_featured_img() {
+    $options = get_option('show_head_img_or_featured_img');
+    if (isset($options) && $options == '') {
+        $options['value'] = '2';
+    }
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="1" ' . checked(1, $options['value'], false) . ' /> '.__('Yes').'</label></p>';
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="2" ' . checked(2, $options['value'], false) . ' /> '.__('No').'</label></p>';
 }
 
 function avalon_header_slideshow() {
@@ -76,10 +89,10 @@ function avalon_header_slideshow() {
     if (isset($options) && $options['value'] == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input disble" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable slideshow') . '</label></p>';
     
-    echo '<p><label><input type="radio" class="enable" name="show_slideshow[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input enable" name="show_slideshow[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Enable slideshow') . '</label>';
     echo '<br /><div class="enable-content ';
     if ($options['value'] == '2') {
@@ -97,10 +110,10 @@ function avalon_contact_us_area_settings() {
     }
     $title = $options['title'];
     $description = $options['description'];
-    echo '<p><label><input type="radio" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable contact us area') . '</label></p>';
 
-    echo '<p><label><input type="radio" class="enable" name="contact_us_area_settings[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input enable" name="contact_us_area_settings[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Enable contact us area') . '</label></p>';
     echo '<div class="enable-content ';
     if ($options['value'] == '2') {
@@ -119,11 +132,11 @@ function avalon_contact_us_form() {
     $default_email = $options['default_email'];
     $shortcode = esc_attr($options['shortcode']);
     $form_styles = esc_attr($options['styles']);
-    echo '<p><label><input type="radio" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Use default form') . '</label><br />';
     echo '<input type="email" val="'.$default_email.'" name="contact_us_area_form[default_email]" placeholder="'.__('Your email for default form').'" /></p>';
 
-    echo '<p><label><input type="radio" class="enable" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input enable" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Use shortcode') . '</label></p>';
     echo '<div class="enable-content ';
     if ($options['value'] == '2') {
@@ -144,10 +157,10 @@ function avalon_location_section() {
     if (isset($options) && $options['value'] == '') {
         $options['value'] = '1';
     }
-    echo '<p><label><input type="radio" class="disable" name="location_area[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input disable" name="location_area[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable Location area') . '</label></p>';
 
-    echo '<p><label><input type="radio" class="enable" name="location_area[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
+    echo '<p><label><input type="radio" class="show_hide_input enable" name="location_area[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
     echo __('Enable Location area') . '</label></p>';
 
     echo '<div class="enable-content ';
@@ -157,7 +170,7 @@ function avalon_location_section() {
     echo '"><p><label>' . __('Section title') . '</label><br />';
     echo '<input type="text" name="location_area[title]" value="' . $title . '" placeholder="' . __('Section title') . '" /></p>';
 
-    echo '<p><label>' . __('Use google map') . '</label></p>';
+    echo '<p><label><input type="radio" name="location_area[map_img]" value="1" ' . checked(1, $options['map_img'], false) . ' /> ' . __('Use google map') . '</label></p>';
     ?>
     <div class="google-map-box">
         <input id="pac-input" name="location_area[map_code]" value="<?php echo $map_code; ?>" class="controls" type="text" placeholder="<?php _e('Search Box') ?>">
@@ -249,7 +262,7 @@ function avalon_location_section() {
         </script>
     </div>
     <?php
-    echo '<p><label>' . __('or add image') . '</label><br />';
+    echo '<p><input type="radio" name="location_area[map_img]" value="2" ' . checked(2, $options['map_img'], false) . ' /> <label>' . __('or add image') . '</label><br />';
     ?>
     <div class="map-image-select">
         <input type="hidden" name="location_area[map_image]" id="img_path" value="<?php echo $map_image; ?>" />

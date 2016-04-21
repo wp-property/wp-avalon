@@ -64,7 +64,7 @@ jQuery(document).ready(function() {
         jQuery('.map-image-select #map_img').removeAttr('src');
     });
 
-    jQuery(document).on('click', 'input[type="radio"]', function() {
+    jQuery(document).on('click', 'input[type="radio"].show_hide_input', function() {
         if (jQuery(this).hasClass('enable')) {
             jQuery(this).parents('td').find('.enable-content').addClass('active');
         } else {

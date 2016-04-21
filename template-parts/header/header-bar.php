@@ -30,6 +30,7 @@ $CF_styles = $form_options['styles'];
                     <?php
                     if ($form_options['value'] == '1' && (!empty($CF_shortcode))) {
                         $admin_email = $form_options['default_email'];
+                        print_r($admin_email);
                         ?>
                         <form class="header-contact-form" method="POST" action="">
                             <div class="row">
@@ -77,13 +78,11 @@ $CF_styles = $form_options['styles'];
                             <div class="row">
                                 <div class="col-md-12">
                                     <?php
-                                    if (!empty($location_map_code)) :
+                                    if ($location_area['map_img'] == '1' && !empty($location_map_code)) :
                                         ?>
                                         <div class="google-map-box">
-                                            <input id="adress" name="location_area[map_code]" type="hidden" value="<?php echo $location_map_code; ?>" />
+                                            <input id="adress" type="hidden" value="<?php echo $location_map_code; ?>" />
                                             <div id="map" style="width: 100%; height: 300px;"></div>
-                                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places&callback=initAutocomplete"
-                                            async defer></script>
                                             <script type="text/javascript">
                                                 function MapInit() {
                                                     geocoder = new google.maps.Geocoder();
@@ -93,19 +92,15 @@ $CF_styles = $form_options['styles'];
                                                         if (status == google.maps.GeocoderStatus.OK) {
                                                             //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
                                                             map_box.setCenter(results[0].geometry.location);
-                                                            var latlng = new google.maps.LatLng(results[0].geometry.location);
                                                             var marker = new google.maps.Marker({
                                                                 map: map_box,
-                                                                position: results[0].geometry.location,
-                                                                center: latlng
+                                                                position: results[0].geometry.location
                                                             });
-                                                            console.log(results[0]);
                                                         } else {
                                                             alert("Geocode was not successful for the following reason: " + status);
                                                         }
                                                     });
-                                                    map_box = new google.maps.Map(document.getElementById('map'), {
-                                                        center: {lat: 0, lng: 0},
+                                                    map_box = new google.maps.Map(document.getElementById('map'), {center: {lat: 0, lng: 0},
                                                         zoom: 14,
                                                         mapTypeId: google.maps.MapTypeId.ROADMAP
                                                     });
@@ -113,7 +108,7 @@ $CF_styles = $form_options['styles'];
                                             </script>
                                         </div>
                                         <?php
-                                    else :
+                                    elseif ($location_area['map_img'] == '2' && !empty($location_map_image)) :
                                         ?>
                                         <img width="100%" height="auto" src="<?php echo $location_map_image; ?>" alt="Location map" />
                                     <?php endif; ?>

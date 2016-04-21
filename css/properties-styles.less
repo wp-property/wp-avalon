@@ -453,23 +453,30 @@
             list-style: none;
 
             li {
-                margin-top: 5px;
-                margin-bottom: 5px;
+                display: inline-block;
 
                 a {
+                    background-color: #ededed;
+                    color: #414141;
+                    display: inline-block;
                     font-size: 14px;
-                    color: #4a83db;
+                    line-height: 2;
+                    margin: 0 5px 5px 0;
+                    padding: 0 10px;
                     text-decoration: none;
-                    .transition(color, 0.15s, ease-in-out, 0s);
-                    &:hover {
-                        color: #717171;
-                    }
+                    text-transform: uppercase;
                 }
             }
         }
     }
     &.widget_wpp_property_stats {
 
+        .wpp_feature_list {
+            margin-bottom: 15px;
+            &:last-child {
+                margin: 0;
+            }
+        }
         h2 {
             font-size: 18px;
             margin-bottom: 5px;
@@ -488,7 +495,7 @@
                 }
             }
         }
-    }
+    }/*widget_wpp_property_stats*/
     &.widget_wpp_property_overview {
 
         .properties_pagination {
@@ -939,6 +946,59 @@
             }
         }
     }/*shortcode_featured_properties*/
+
+    &.widget_agentwidget {
+
+        .wpp_agent_info_single_wrapper {
+
+            .wpp_agent_info_list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+
+                    &.wpp_agent_stats_display_name {
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    &.wpp_agent_stats_agent_image {
+
+                        img {
+                            .border-radius(100%);
+                            .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.8));
+                            display: block;
+                            margin: 0 auto 10px;
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .wpp_agent_info_list {
+                .clearfix;
+
+                dt {
+                    float: left;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }/*widget_agentwidget*/
+
+    &.widget_gallerypropertieswidget {
+
+        .sidebar_gallery_item {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                margin: 0 auto 10px;
+            }
+        }
+    }/*widget_gallerypropertieswidget*/
+
 }/*widget*/
 
 /* Property page styles
@@ -981,8 +1041,53 @@ article.property-page-template {
             margin-bottom: 20px;
         }
 
+        .feature_lists {
+            text-align: center;
+            .clearfix;
+
+            >div {
+                border: 1px solid #ededed;
+                display: inline-block;
+                height: inherit;
+                margin: 0 1% 20px;
+                vertical-align: top;
+                width: 47%;
+
+                h2 {
+                    border-bottom: 1px solid #ededed;
+                    font-size: 20px !important;
+                    margin: 0;
+                    padding: 10px 0;
+                    text-align: center;
+                }
+                ul {
+                    margin: 0;
+                    padding: 5px 10px 0;
+                    list-style: none;
+
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .property_meta_box {
+            border: 1px solid #ededed;
+            padding: 5px 20px;
+            margin-bottom: 20px;
+
+            h2 {
+                border-bottom: 1px solid #ededed;
+                font-size: 22px !important;
+                padding: 0 0 5px;
+                margin: 0 0 5px;
+                text-transform: uppercase;
+            }
+        }
+
         #property_map,
         .wpp_supermap {
+            .clearfix;
 
             .gm-style-iw,
             .gm-style {
@@ -1068,15 +1173,18 @@ article.property-page-template {
                 list-style: none;
 
                 li {
+                    display: inline-block;
 
                     a {
-                        font-size: 15px;
-                        color: #4983db;
+                        background-color: #ededed;
+                        color: #414141;
+                        display: inline-block;
+                        font-size: 14px;
                         line-height: 2;
+                        margin: 0 5px 5px 0;
+                        padding: 0 10px;
                         text-decoration: none;
-                        &:hover {
-                            text-decoration: underline;
-                        }
+                        text-transform: uppercase;
                     }
                 }
             }

@@ -38,13 +38,18 @@
         <?php
     } else {
         $exist_images_in_head = get_option('show_featured_image_in_head');
-        if ($exist_images_in_head == '1') {
+        $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img');
+        if ($exist_images_in_head['value'] == '1') {
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             if (!empty($featured_image)) {
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
+            } elseif ($show_head_img_or_featured_img['value'] == '1' && (!empty(get_header_image()))) {
+                echo '<div class="secondary-header-image" style="background-image: url(\'' . get_header_image() . '\'); background-size: cover; background-position: center center;"></div>';
             }
         }
-        echo '<div class="container"><h1 class="page-title">' . get_the_title() . '</h1></div>';
+        echo '<div class="container"><h1 class="page-title">' . get_the_title() . '</h1>';
+        the_tagline('<h3 class="page-tagline">', '</h3>');
+        echo '</div>';
     }
     ?>
 </div>
