@@ -428,6 +428,9 @@ function avalon_customize_css() {
         body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button {
             border-left: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color'); ?>;
         }
+        body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper {
+            border-right: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color'); ?>;
+        }
 
         body .header-bar {
             background-color: <?php echo get_theme_mod('avalon_header_bar_bg_color'); ?>;
