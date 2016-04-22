@@ -6,16 +6,23 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
+$contact_us_options = get_option('contact_us_area_settings');
+$login_options = get_option('show_login_register_button');
 ?>
 <div class="na__wrapper">
-    <?php if (is_user_logged_in()) { ?>
-        <a href="<?php echo wp_logout_url(site_url()); ?>" data-wrap="login-bar" class="additional-button ab__logout ab__profile" data-toggle="tooltip" data-placement="bottom" title="Logout">Logout</a>
-    <?php } else { ?>
-        <a href="#login-bar" class="additional-button ab__profile" data-toggle="tooltip" data-placement="bottom" title="Login or register">Login or Register</a>
-    <?php } ?>
-    <?php 
-    $options = get_option('contact_us_area_settings');
-    if ($options['value'] !== '1') { ?>
+    <?php
+    if ($login_options['value'] == '1') :
+        if (is_user_logged_in()) :
+            ?>
+            <a href="<?php echo wp_logout_url(site_url()); ?>" data-wrap="login-bar" class="additional-button ab__logout ab__profile" data-toggle="tooltip" data-placement="bottom" title="Logout">Logout</a>
+        <?php else : ?>
+            <a href="#login-bar" class="additional-button ab__profile" data-toggle="tooltip" data-placement="bottom" title="Login or register">Login or Register</a>
+        <?php
+        endif;
+    endif;
+// -----------------
+    if ($contact_us_options['value'] !== '1') {
+        ?>
         <a href="#contacts-bar" class="additional-button ab__contactus" data-toggle="tooltip" data-placement="bottom" title="Contact us">Contact Us</a>
-    <?php } ?>
+<?php } ?>
 </div>

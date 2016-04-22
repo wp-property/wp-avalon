@@ -19,16 +19,16 @@ jQuery(function() {
     jQuery(document).on('click', '.nav-additional .additional-button:not(.ab__logout)', function() {
         var that = jQuery(this),
                 bar = that.attr('href');
+        if (that.hasClass('active')) {
+            jQuery('.nav-additional .additional-button').removeClass('active');
+            jQuery('.header-bar.active').slideUp('slow', 'swing');
+        } else {
+            jQuery('.nav-additional .additional-button').removeClass('active');
+            that.addClass('active');
+            jQuery('.header-bar.active').slideUp('slow', 'swing');
+            jQuery('.header-bar' + bar).slideToggle('slow', 'swing').addClass('active');
+        }
         if (that.hasClass('ab__contactus')) {
-            if (that.hasClass('active')) {
-                jQuery('.nav-additional .additional-button').removeClass('active');
-                jQuery('.header-bar.active').slideUp('slow', 'swing');
-            } else {
-                jQuery('.nav-additional .additional-button').removeClass('active');
-                that.addClass('active');
-                jQuery('.header-bar.active').slideUp('slow', 'swing');
-                jQuery('.header-bar' + bar).slideToggle('slow', 'swing').addClass('active');
-            }
             MapInit();
         }
     });

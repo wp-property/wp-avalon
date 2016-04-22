@@ -456,7 +456,12 @@ body main.main-content .secondary-header .secondary-header-image:after {
   content: "";
   display: block;
 }
-body main.main-content .secondary-header h1.page-title,
+body main.main-content .secondary-header h1.page-title {
+  color: #FFF;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
 body main.main-content .secondary-header h3.page-tagline {
   color: #FFF;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);

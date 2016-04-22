@@ -256,9 +256,6 @@
   text-align: center;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail {
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
   border-radius: 0px;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
@@ -267,7 +264,23 @@
   display: inline-block;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail:after {
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
+  z-index: 2;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail img {
   -webkit-transition: opacity 0.15s ease-in-out 0s;
@@ -1062,20 +1075,35 @@
 .wpp_widget.widget_latestpropertieswidget .property_widget_block .more {
   text-align: right;
 }
+.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info,
+.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info,
+.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info,
+.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+}
+.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover {
+  background-color: #286090;
+  border-color: #204d74;
+}
 .widget.widget_featuredpropertieswidget .view-all .btn,
 .wpp_widget.widget_featuredpropertieswidget .view-all .btn,
 .widget.widget_latestpropertieswidget .view-all .btn,
 .wpp_widget.widget_latestpropertieswidget .view-all .btn {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #337ab7;
+  border-color: #2e6da4;
   color: #fff;
 }
 .widget.widget_featuredpropertieswidget .view-all .btn:hover,
 .wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover,
 .widget.widget_latestpropertieswidget .view-all .btn:hover,
 .wpp_widget.widget_latestpropertieswidget .view-all .btn:hover {
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .widget .wpp_agents_content_agent_card,
 .wpp_widget .wpp_agents_content_agent_card {
@@ -1403,32 +1431,39 @@ article.property-page-template .property-page-container #property_map .gm-style 
 article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_left_col {
   padding-right: 10px;
 }
-article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox,
-article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox,
-article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox,
-article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox {
+article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_left_col .wpp_google_maps_attribute_row_directions_link,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_left_col .wpp_google_maps_attribute_row_directions_link,
+article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_left_col .wpp_google_maps_attribute_row_directions_link,
+article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_left_col .wpp_google_maps_attribute_row_directions_link {
+  display: none;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul,
+article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul,
+article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li,
-article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li,
-article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li,
-article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li {
+article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li,
+article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li,
+article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li {
+  display: inline-block;
   margin: 0 0 5px;
 }
-article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute,
-article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute,
-article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute,
-article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute {
+article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute,
+article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute,
+article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute {
   position: relative;
   margin: 0 5px 0 0;
   font-weight: 600;
 }
-article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute:after,
-article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute:after,
-article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute:after,
-article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute:after {
+article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute:after,
+article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col ul li .attribute:after {
   content: ":";
   position: relative;
   display: inline-block;
@@ -1496,7 +1531,6 @@ article.property-page-template .property-page-container .community_feature_list 
   margin: 0 5px 5px 0;
   padding: 0 10px;
   text-decoration: none;
-  text-transform: uppercase;
 }
 /* Property page styles */
 /*Property styles*/

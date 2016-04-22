@@ -11,6 +11,11 @@ function avalon_frontpage_settings_page() {
             'show_default_property_search', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_default_property_search');
+    
+    add_settings_field(
+            'show_login_register_button', 'Show Login/Register button in header', 'avalon_login_register_button', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+    );
+    register_setting('avalon_frontpage_settings_page', 'show_login_register_button');
 
     add_settings_field(
             'show_featured_image_in_head', 'Use featured images in header bar', 'featured_image_in_head', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
@@ -63,6 +68,15 @@ function avalon_frontpage_property_search_function() {
     }
     echo '<p><label><input type="radio" name="show_default_property_search[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
     echo '<p><label><input type="radio" name="show_default_property_search[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
+}
+
+function avalon_login_register_button() {
+    $options = get_option('show_login_register_button');
+    if (isset($options) && $options == '') {
+        $options['value'] = '1';
+    }
+    echo '<p><label><input type="radio" name="show_login_register_button[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_login_register_button[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function featured_image_in_head() {
