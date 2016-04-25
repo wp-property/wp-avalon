@@ -38,8 +38,9 @@
         <?php
     else :
         $exist_images_in_head = get_option('show_featured_image_in_head', '1');
+        print_r($exist_images_in_head);
         $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img', '2');
-        if (isset($exist_images_in_head) && $exist_images_in_head['value'] == '1') :
+        if ($exist_images_in_head['value'] == '1') :
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             if (!empty($featured_image)) :
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
