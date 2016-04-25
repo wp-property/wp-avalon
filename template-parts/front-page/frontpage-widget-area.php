@@ -7,7 +7,7 @@
  * @since Avalon 1.0
  */
 $sidebar_name = 'sidebar-frontpage';
-$active_default = get_option('show_default_property_search');
+$active_default = get_option('show_default_property_search', '2');
 if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property') && ($active_default['value'] == '1'))) {
     global $wp_registered_sidebars, $wp_registered_widgets;
     $sidebar_widgets = wp_get_sidebars_widgets();

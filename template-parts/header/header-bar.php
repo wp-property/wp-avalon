@@ -6,9 +6,9 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$area_options = get_option('contact_us_area_settings');
-$form_options = get_option('contact_us_area_form');
-$location_area = get_option('location_area');
+$area_options = get_option('contact_us_area_settings', '2');
+$form_options = get_option('contact_us_area_form', '1');
+$location_area = get_option('location_area', '1');
 $CF_shortcode = $form_options['shortcode'];
 $CF_styles = $form_options['styles'];
 ?>
@@ -28,28 +28,9 @@ $CF_styles = $form_options['styles'];
                 ?>
                 <div class="hbcf__container">
                     <?php
-                    if ($form_options['value'] == '1' && (!empty($CF_shortcode))) {
-                        $admin_email = $form_options['default_email'];
-                        print_r($admin_email);
-                        ?>
-                        <form class="header-contact-form" method="POST" action="">
-                            <div class="row">
-                                <div class="col-md-6"><input type="text" name="name" class="form-control" value="" placeholder="Name" /></div>
-                                <div class="col-md-6"><input type="email" name="email" class="form-control" value="" placeholder="Email" /></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" placeholder=""></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button class="submit-btn btn btn-primary">SEND</button>
-                                </div>
-                            </div>
-                        </form>
-                        <?php
-                    } else {
+                    if ($form_options['value'] == '1') {
+                        get_template_part('template-parts/forms/default-contact-us', 'avalon');
+                    } elseif (!empty($CF_shortcode)) {
                         echo do_shortcode($CF_shortcode);
                         if (!empty($CF_styles)) {
                             ?>

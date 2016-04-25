@@ -6,8 +6,8 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$contact_us_options = get_option('contact_us_area_settings');
-$login_options = get_option('show_login_register_button');
+$contact_us_options = get_option('contact_us_area_settings', '2');
+$login_options = get_option('show_login_register_button', '1');
 ?>
 <div class="na__wrapper">
     <?php

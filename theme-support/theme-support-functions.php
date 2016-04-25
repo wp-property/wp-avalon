@@ -126,10 +126,10 @@ function avalon_contact_us_area_settings() {
     $title = $options['title'];
     $description = $options['description'];
     echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
-    echo __('Disable contact us area') . '</label></p>';
+    echo __('Disable "Contact us" area') . '</label></p>';
 
     echo '<p><label><input type="radio" class="show_hide_input enable" name="contact_us_area_settings[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
-    echo __('Enable contact us area') . '</label></p>';
+    echo __('Enable "Contact us" area') . '</label></p>';
     echo '<div class="enable-content ';
     if ($options['value'] == '2') {
         echo ' active';
@@ -147,12 +147,13 @@ function avalon_contact_us_form() {
     if (!empty($options['default_form_email'])) {
         $default_email = $options['default_form_email'];
     } else {
-        $default_email = '';
+        $default_email = get_option('admin_email');
     }
     $shortcode = esc_attr($options['shortcode']);
     $form_styles = esc_attr($options['styles']);
     echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_form[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Use default form') . '</label><br />';
+    echo '<span>'.__('Default email: Site Admin Email').'</span><br />';
     echo '<input type="text" value="' . $default_email . '" name="contact_us_area_form[default_form_email]" placeholder="' . __('Your email for default form') . '" /></p>';
 
     echo '<p><label><input type="radio" class="show_hide_input enable" name="contact_us_area_form[value]" value="2" ' . checked(2, $options['value'], false) . ' />';

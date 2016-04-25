@@ -18,7 +18,7 @@
         ?>
         <div class="container">
             <?php
-            $slideshow_options = get_option('show_slideshow');
+            $slideshow_options = get_option('show_slideshow', '1');
             $slideshow_shortcode = $slideshow_options['slideshow_shortcode'];
             $slideshow_css = $slideshow_options['slideshow_css'];
             if (isset($slideshow_options) && $slideshow_options['value'] !== '') :
@@ -37,8 +37,8 @@
         </div>
         <?php
     else :
-        $exist_images_in_head = get_option('show_featured_image_in_head');
-        $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img');
+        $exist_images_in_head = get_option('show_featured_image_in_head', '1');
+        $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img', '2');
         if ($exist_images_in_head['value'] == '1') :
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             if (!empty($featured_image)) :
@@ -47,8 +47,15 @@
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . get_header_image() . '\'); background-size: cover; background-position: center center;"></div>';
             endif;
         endif;
-        echo '<div class="container"><h1 class="page-title">' . get_the_title() . '</h1>';
-        the_tagline('<h3 class="page-tagline">', '</h3>');
+        echo '<div class="container">';
+        if (is_page() || is_single()) :
+            echo '<h1 class="page-title">' . get_the_title() . '</h1>';
+            the_tagline('<h3 class="page-tagline">', '</h3>');
+        elseif (is_category()) :
+            echo '<h1 class="page-title">' . single_tag_title() . '</h1>';
+        elseif (is_archive()) :
+            the_archive_title( '<h1 class="page-title">', '</h1>' );
+        endif;
         echo '</div>';
     endif;
     ?>

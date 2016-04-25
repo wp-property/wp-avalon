@@ -156,12 +156,30 @@ body .header-bar .hb__contact-form .hbcf__description {
   font-size: 14px;
   margin-bottom: 10px;
 }
-body .header-bar .hb__contact-form .hbcf__container .form-control {
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .form-control {
   margin-bottom: 10px;
 }
-body .header-bar .hb__contact-form .hbcf__container .submit-btn,
-body .header-bar .hb__contact-form .hbcf__container input[type="submit"] {
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .form-control.error-input {
+  border-color: red;
+}
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .submit-btn,
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form input[type="submit"] {
   float: right;
+}
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .dcf__message_box,
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .dcf__success_message_box {
+  display: none;
+  padding: 5px 0;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  border: 2px solid red;
+}
+body .header-bar .hb__contact-form .hbcf__container .header-contact-form .dcf__success_message_box {
+  border-color: green;
 }
 body .header-bar #loginform p label {
   display: block;

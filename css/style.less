@@ -45,12 +45,33 @@ body {
             }
             .hbcf__container {
 
-                .form-control {
-                    margin-bottom: 10px;
-                }
-                .submit-btn,
-                input[type="submit"] {
-                    float: right;
+                .header-contact-form {
+
+                    .form-control {
+                        margin-bottom: 10px;
+                        &.error-input {
+                            border-color: red;
+                        }
+                    }
+                    .submit-btn,
+                    input[type="submit"] {
+                        float: right;
+                    }
+                    .dcf__message_box,
+                    .dcf__success_message_box {
+                        display: none;
+                        padding: 5px 0;
+                        margin-top: 15px;
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        color: #FFF;
+                        font-size: 20px;
+                        border: 2px solid red;
+                    }
+                    .dcf__success_message_box {
+                        border-color: green;
+                    }
                 }
             }
         }
