@@ -145,7 +145,7 @@ function default_contact_us() {
     $user_name = $data['dcf_user_name'];
     $user_email = $data['dcf_user_email'];
     $user_message = $data['dcf_user_message'];
-    $form_options = get_option('contact_us_area_form', '1');
+    $form_options = get_option('contact_us_area_form', '');
     $default_email = $form_options['default_form_email'];
     if (!empty($default_email)) {
         $form_email = $default_email;

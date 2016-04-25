@@ -8,24 +8,24 @@ function avalon_frontpage_settings_page() {
             'avalon_frontpage_settings_page', __('Main site settings'), 'avalon_settings_section', 'avalon_frontpage_themesupport'
     );
     add_settings_field(
-            'show_default_property_search', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+            'show_default_property_search_value', 'Show default property search tab on front page', 'avalon_frontpage_property_search_function', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
-    register_setting('avalon_frontpage_settings_page', 'show_default_property_search');
+    register_setting('avalon_frontpage_settings_page', 'show_default_property_search_value');
     
     add_settings_field(
-            'show_login_register_button', 'Show Login/Register button in header', 'avalon_login_register_button', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+            'show_login_register_button_value', 'Show Login/Register button in header', 'avalon_login_register_button', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
-    register_setting('avalon_frontpage_settings_page', 'show_login_register_button');
+    register_setting('avalon_frontpage_settings_page', 'show_login_register_button_value');
 
     add_settings_field(
-            'show_featured_image_in_head', 'Use featured images in header bar', 'featured_image_in_head', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+            'show_featured_image_in_head_value', 'Use featured images in header bar', 'featured_image_in_head', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
-    register_setting('avalon_frontpage_settings_page', 'show_featured_image_in_head');
+    register_setting('avalon_frontpage_settings_page', 'show_featured_image_in_head_value');
 
     add_settings_field(
-            'show_head_img_or_featured_img', 'If page don`t have a featured image, use default header image', 'head_img_or_featured_img', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
+            'show_head_img_or_featured_img_value', 'If page don`t have a featured image, use default header image', 'head_img_or_featured_img', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
-    register_setting('avalon_frontpage_settings_page', 'show_head_img_or_featured_img');
+    register_setting('avalon_frontpage_settings_page', 'show_head_img_or_featured_img_value');
 
     add_settings_field(
             'show_slideshow', 'Show slideshow', 'avalon_header_slideshow', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
@@ -62,48 +62,34 @@ function avalon_settings_section() {
 }
 
 function avalon_frontpage_property_search_function() {
-    $options = get_option('show_default_property_search');
-    if (isset($options) && $options == '') {
-        $options['value'] = '1';
-    }
-    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
-    echo '<p><label><input type="radio" name="show_default_property_search[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
+    $val = get_option('show_default_property_search_value', '1');
+    echo '<p><label><input type="radio" name="show_default_property_search_value" value="1" ' . checked(1, $val, false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_default_property_search_value" value="2" ' . checked(2, $val, false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function avalon_login_register_button() {
-    $options = get_option('show_login_register_button');
-    if (isset($options) && $options == '') {
-        $options['value'] = '1';
-    }
-    echo '<p><label><input type="radio" name="show_login_register_button[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
-    echo '<p><label><input type="radio" name="show_login_register_button[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
+    $val = get_option('show_login_register_button_value', '1');
+    echo '<p><label><input type="radio" name="show_login_register_button_value" value="1" ' . checked(1, $val, false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_login_register_button_value" value="2" ' . checked(2, $val, false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function featured_image_in_head() {
-    $options = get_option('show_featured_image_in_head');
-    if (isset($options) && $options == '') {
-        $options['value'] = '1';
-    }
-    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
-    echo '<p><label><input type="radio" name="show_featured_image_in_head[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
+    $val = get_option('show_featured_image_in_head_value', '1');
+    echo '<p><label><input type="radio" name="show_featured_image_in_head_value" value="1" ' . checked(1, $val, false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_featured_image_in_head_value" value="2" ' . checked(2, $val, false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function head_img_or_featured_img() {
-    $options = get_option('show_head_img_or_featured_img');
-    if (isset($options) && $options == '') {
-        $options['value'] = '2';
-    }
-    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="1" ' . checked(1, $options['value'], false) . ' /> ' . __('Yes') . '</label></p>';
-    echo '<p><label><input type="radio" name="show_head_img_or_featured_img[value]" value="2" ' . checked(2, $options['value'], false) . ' /> ' . __('No') . '</label></p>';
+    $val = get_option('show_head_img_or_featured_img_value', '2');
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img_value" value="1" ' . checked(1, $val, false) . ' /> ' . __('Yes') . '</label></p>';
+    echo '<p><label><input type="radio" name="show_head_img_or_featured_img_value" value="2" ' . checked(2, $val, false) . ' /> ' . __('No') . '</label></p>';
 }
 
 function avalon_header_slideshow() {
-    $options = get_option('show_slideshow');
+    $options = get_option('show_slideshow', array('value' => '1'));
     $slideshow_shortcode = $options['slideshow_shortcode'];
     $slideshow_css = $options['slideshow_css'];
-    if (isset($options) && $options['value'] == '') {
-        $options['value'] = '1';
-    }
+    
     echo '<p><label><input type="radio" class="show_hide_input disble" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable slideshow') . '</label></p>';
 
@@ -119,10 +105,7 @@ function avalon_header_slideshow() {
 }
 
 function avalon_contact_us_area_settings() {
-    $options = get_option('contact_us_area_settings');
-    if (isset($options) && $options['value'] == '') {
-        $options['value'] = '2';
-    }
+    $options = get_option('contact_us_area_settings', array('value' => '2'));
     $title = $options['title'];
     $description = $options['description'];
     echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
@@ -140,10 +123,7 @@ function avalon_contact_us_area_settings() {
 }
 
 function avalon_contact_us_form() {
-    $options = get_option('contact_us_area_form');
-    if (isset($options) && $options['value'] == '') {
-        $options['value'] = '1';
-    }
+    $options = get_option('contact_us_area_form', array('value' => '1'));
     if (!empty($options['default_form_email'])) {
         $default_email = $options['default_form_email'];
     } else {
@@ -168,18 +148,12 @@ function avalon_contact_us_form() {
 }
 
 function avalon_location_section() {
-    $options = get_option('location_area');
+    $options = get_option('location_area', array('value' => '1', 'map_img' => '1'));
     $title = $options['title'];
     $map_code = $options['map_code'];
     $map_image = $options['map_image'];
     $location_text = $options['text'];
 
-    if (isset($options) && $options['value'] == '') {
-        $options['value'] = '1';
-    }
-    if (isset($options) && $options['map_img'] == '') {
-        $options['map_img'] = '1';
-    }
     echo '<p><label><input type="radio" class="show_hide_input disable" name="location_area[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
     echo __('Disable Location area') . '</label></p>';
 

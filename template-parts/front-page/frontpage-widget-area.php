@@ -7,8 +7,8 @@
  * @since Avalon 1.0
  */
 $sidebar_name = 'sidebar-frontpage';
-$active_default = get_option('show_default_property_search', '2');
-if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property') && ($active_default['value'] == '1'))) {
+$active_default = get_option('show_default_property_search_value', '1');
+if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property') && ($active_default == '1'))) {
     global $wp_registered_sidebars, $wp_registered_widgets;
     $sidebar_widgets = wp_get_sidebars_widgets();
     $sw__list = $sidebar_widgets[$sidebar_name];
@@ -17,7 +17,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified" role="tablist">
-            <?php if (function_exists('ud_check_wp_property') && ($active_default['value'] == '1')) : ?>
+            <?php if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
                 <li role="presentation" class="active">
                     <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search'); ?></a>
                 </li>
@@ -38,7 +38,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <?php if (function_exists('ud_check_wp_property') && ($active_default['value'] === '1')) : ?>
+            <?php if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
                 <div id="property-search-defaul" role="tabpanel" class="property-search-defaul tab-pane active">
                     <div class="multisidebar-widget widget_text">
                         <h2 class="widget-title"><?php _e('Property search'); ?></h2>

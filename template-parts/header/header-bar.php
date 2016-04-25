@@ -6,9 +6,9 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$area_options = get_option('contact_us_area_settings', '2');
-$form_options = get_option('contact_us_area_form', '1');
-$location_area = get_option('location_area', '1');
+$area_options = get_option('contact_us_area_settings', array('value' => '2'));
+$form_options = get_option('contact_us_area_form', array('value' => '1'));
+$location_area = get_option('location_area', array('value' => '1', 'map_img' => '1'));
 $CF_shortcode = $form_options['shortcode'];
 $CF_styles = $form_options['styles'];
 ?>
