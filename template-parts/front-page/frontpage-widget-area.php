@@ -8,6 +8,7 @@
  */
 $sidebar_name = 'sidebar-frontpage';
 $active_default = get_option('show_default_property_search_value', '1');
+print_r($active_default);
 if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property') && ($active_default == '1'))) {
     global $wp_registered_sidebars, $wp_registered_widgets;
     $sidebar_widgets = wp_get_sidebars_widgets();
