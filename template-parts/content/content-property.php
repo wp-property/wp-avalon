@@ -98,7 +98,9 @@
                     <?php @draw_stats("display=list&make_link=true"); ?>
                 </ul>
             <?php else: ?>
-                <?php @draw_stats("display=list&make_link=true"); ?>
+                <div class="<?php wpp_css('property::property_stats', "property_stats overview_stats groups"); ?>">
+                    <?php @draw_stats("sort_by_groups=true&display=list&make_link=true"); ?>
+                </div>
             <?php endif; ?>
 
             <?php if (!empty($wp_properties['taxonomies'])) : ?>

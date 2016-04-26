@@ -17,7 +17,7 @@ get_header();
 
     <?php get_sidebar(); ?>
 
-    <?php if (is_active_sidebar('sidebar-left')) : ?>
+    <?php if (is_active_sidebar('sidebar-left') || is_active_sidebar('sidebar-right')) : ?>
         <div class="content col-md-8">
         <?php else : ?>
             <div class="content col-md-12">
@@ -33,10 +33,11 @@ get_header();
 
             endif;
             ?>
+
         </div>
 
     </div>
 
-</div>
-
-<?php get_footer(); ?>
+    <?php
+    get_footer();
+    

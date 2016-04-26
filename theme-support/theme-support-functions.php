@@ -26,11 +26,6 @@ function avalon_frontpage_settings_page() {
             'show_head_img_or_featured_img_value', 'If page don`t have a featured image, use default header image', 'head_img_or_featured_img', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
     );
     register_setting('avalon_frontpage_settings_page', 'show_head_img_or_featured_img_value');
-
-    add_settings_field(
-            'show_slideshow', 'Show slideshow', 'avalon_header_slideshow', 'avalon_frontpage_themesupport', 'avalon_frontpage_settings_page'
-    );
-    register_setting('avalon_frontpage_settings_page', 'show_slideshow');
 }
 
 add_action('admin_init', 'avalon_frontpage_settings_page');
@@ -85,27 +80,8 @@ function head_img_or_featured_img() {
     echo '<p><label><input type="radio" name="show_head_img_or_featured_img_value" value="2" ' . checked(2, $val, false) . ' /> ' . __('No') . '</label></p>';
 }
 
-function avalon_header_slideshow() {
-    $options = get_option('show_slideshow', array('value' => '1'));
-    $slideshow_shortcode = $options['slideshow_shortcode'];
-    $slideshow_css = $options['slideshow_css'];
-    
-    echo '<p><label><input type="radio" class="show_hide_input disble" name="show_slideshow[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
-    echo __('Disable slideshow') . '</label></p>';
-
-    echo '<p><label><input type="radio" class="show_hide_input enable" name="show_slideshow[value]" value="2" ' . checked(2, $options['value'], false) . ' />';
-    echo __('Enable slideshow') . '</label>';
-    echo '<br /><div class="enable-content ';
-    if ($options['value'] == '2') {
-        echo ' active';
-    }
-    echo '"><label>' . __('Use shortcode') . ' <br /><input type="text" value="' . $slideshow_shortcode . '" name="show_slideshow[slideshow_shortcode]" placeholder="' . __('Enter slideshow shortcode') . '" /></label>';
-    echo '<br /><label>' . __('Slideshow custom CSS') . ' <br /><textarea name="show_slideshow[slideshow_css]" placeholder="' . __('Enrer your custom CSS styles for slideshow') . '">' . $slideshow_css . '</textarea></label>';
-    echo '</div></p>';
-}
-
 function avalon_contact_us_area_settings() {
-    $options = get_option('contact_us_area_settings', array('value' => '2'));
+    $options = get_option('contact_us_area_settings', array('value' => '2', 'title' => '', 'description' => ''));
     $title = $options['title'];
     $description = $options['description'];
     echo '<p><label><input type="radio" class="show_hide_input disable" name="contact_us_area_settings[value]" value="1" ' . checked(1, $options['value'], false) . ' />';
@@ -123,7 +99,7 @@ function avalon_contact_us_area_settings() {
 }
 
 function avalon_contact_us_form() {
-    $options = get_option('contact_us_area_form', array('value' => '1'));
+    $options = get_option('contact_us_area_form', array('value' => '1', 'default_form_email' => '', 'shortcode' => '', 'shortcode' => ''));
     if (!empty($options['default_form_email'])) {
         $default_email = $options['default_form_email'];
     } else {
@@ -148,7 +124,7 @@ function avalon_contact_us_form() {
 }
 
 function avalon_location_section() {
-    $options = get_option('location_area', array('value' => '1', 'map_img' => '1'));
+    $options = get_option('location_area', array('value' => '1', 'map_img' => '1', 'title' => '', 'map_code' => '', 'map_image' => '', 'text' => ''));
     $title = $options['title'];
     $map_code = $options['map_code'];
     $map_image = $options['map_image'];
