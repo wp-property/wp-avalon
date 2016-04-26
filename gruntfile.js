@@ -22,6 +22,7 @@ module.exports = function build( grunt ) {
         files: {
           'css/style.css': [ 'css/style.less' ],
           'css/responsive.css': [ 'css/responsive.less' ],
+          'css/default-widgets-styles.css': [ 'css/default-widgets-styles.less' ],
           'wp_properties.css': [ 'css/properties-styles.less' ]
         }
       }

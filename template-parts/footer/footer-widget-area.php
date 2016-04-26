@@ -8,11 +8,11 @@
  */
 if (is_active_sidebar('sidebar-footer')) :
     ?>
-    <div class="footer-widget-aria">
+    <div class="footer-widget-area">
         <div class="container">
             <div class="row">
                 <?php dynamic_sidebar('sidebar-footer'); ?>
             </div>
         </div>
     </div>
-<?php endif; ?>
+<?php endif;

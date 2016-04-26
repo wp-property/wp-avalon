@@ -2097,9 +2097,9 @@ body main.main-content .container .content .comments-area #respond #commentform 
   color: #fff;
 }
 body .footer {
-  /*footer-widget-aria*/
+  /*footer-widget-area*/
 }
-body .footer .footer-widget-aria {
+body .footer .footer-widget-area {
   padding: 40px 0;
   position: relative;
   background-color: #fafafa;
@@ -2108,15 +2108,15 @@ body .footer .footer-widget-aria {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-body .footer .footer-widget-aria .col-md-4 {
+body .footer .footer-widget-area .col-md-4 {
   margin-bottom: 20px;
 }
-body .footer .footer-widget-aria .col-md-4 .widget > ul {
+body .footer .footer-widget-area .col-md-4 .widget > ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body .footer .footer-widget-aria .col-md-4 .widget > ul li {
+body .footer .footer-widget-area .col-md-4 .widget > ul li {
   margin: 5px 0;
 }
 body .footer .footer-area {

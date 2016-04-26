@@ -1,0 +1,148 @@
+/*
+Styles for default wordpress widgets
+*/
+.widget_calendar {
+
+    table#wp-calendar {
+        margin: 0 auto;
+        max-width: 400px;
+        text-align: center;
+        width: 100%;
+
+        caption {
+            color: #777;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 0 10px;
+            text-align: center;
+        }
+        th {
+            text-align: center;
+        }
+        th, td {
+            padding: 3px 0;
+        }
+        tbody {
+
+            tr {
+                background-color: #EEE;
+                &:nth-child(2n) {
+                    background-color: #FFF;
+                }
+            }
+        }
+    }
+}/*widget_calendar*/
+
+.widget_archive {
+
+    label.screen-reader-text {
+        display: block;
+    }
+    .bootstrap-select {
+        width: 100% !important;
+        &.btn-group:not(.input-group-btn),
+            &.btn-group[class*="col-"] {
+            width: 100%;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}/*widget_archive*/
+
+.widget_categories {
+
+    label.screen-reader-text {
+        display: block;
+    }
+    .bootstrap-select {
+        width: 100% !important;
+    }
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        >li {
+
+            .children {
+                margin: 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+
+                li {
+
+                    &:before {
+                        content: "- ";
+                        display: inline-block;
+                        margin-left: -5px;
+                        margin-right: 5px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}/*widget_categories*/
+
+.widget_nav_menu {
+
+    ul.menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        >li {
+
+            .sub-menu {
+                margin: 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+
+                li {
+
+                    &:before {
+                        content: "- ";
+                        display: inline-block;
+                        margin-left: -5px;
+                        margin-right: 5px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}/*widget_nav_menu*/
+
+.widget_pages {
+
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        >li {
+
+            .children {
+                margin: 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+
+                li {
+
+                    &:before {
+                        content: "- ";
+                        display: inline-block;
+                        margin-left: -5px;
+                        margin-right: 5px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}/*widget_nav_menu*/
+
