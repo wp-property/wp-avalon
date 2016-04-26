@@ -13,7 +13,7 @@ get_header();
 
     <?php get_sidebar(); ?>
 
-    <?php if (is_active_sidebar('sidebar-left') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
+    <?php if (is_active_sidebar('sidebar-left') || is_active_sidebar('sidebar-right') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
         <div class="content col-md-8">
         <?php else : ?>
             <div class="content col-md-12">

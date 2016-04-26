@@ -1222,7 +1222,14 @@ body main.main-content .container .sidebar ul.sidebar_widget_list li.widget,
 body main.main-content .container .sidebar ul.sidebar_widget_list li.wpp_widget {
   margin-bottom: 20px;
 }
+body main.main-content .container .sidebar.sidebar_left {
+  float: left;
+}
+body main.main-content .container .sidebar.sidebar_right {
+  float: right;
+}
 body main.main-content .container .content {
+  float: left;
   /*Comments styles*/
   /*Comments styles*/
 }

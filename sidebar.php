@@ -1,6 +1,6 @@
 <?php if (is_active_sidebar('sidebar-left')) : ?>
 
-    <aside class="sidebar col-md-4">
+    <aside class="sidebar sidebar_left col-md-4">
 
         <ul class="sidebar_widget_list">
 
@@ -12,7 +12,7 @@
 
 <?php elseif (is_active_sidebar('sidebar-right')) : ?>
 
-    <aside class="sidebar col-md-4">
+    <aside class="sidebar sidebar_right col-md-4">
 
         <ul class="sidebar_widget_list">
 

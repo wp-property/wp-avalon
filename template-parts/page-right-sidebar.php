@@ -10,6 +10,9 @@ get_header();
 ?>
 
 <div class="container">
+
+    <?php get_sidebar(); ?>
+
     <?php if (is_active_sidebar('sidebar-right') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
         <div class="content col-md-8">
         <?php else : ?>
@@ -28,8 +31,6 @@ get_header();
             ?>
         </div>
 
-        <?php get_sidebar(); ?>
-
     </div>
 
-    <?php get_footer(); ?>
+    <?php get_footer();
