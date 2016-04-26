@@ -12,7 +12,12 @@ function property_grid() {
     );
     columns.height(height);
 }
-
+jQuery(window).load(function(){
+    
+//    Properties grid page
+    property_grid();
+    
+});
 jQuery(function() {
 
 //    Header bar
@@ -33,8 +38,6 @@ jQuery(function() {
         }
     });
 
-//    Properties grid page
-    property_grid();
 
 //    Tooltips
     jQuery('[data-toggle="tooltip"]').tooltip();
