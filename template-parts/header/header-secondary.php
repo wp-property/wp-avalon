@@ -18,7 +18,7 @@
         ?>
         <div class="container">
             <?php
-            $slideshow_options = get_option('show_slideshow', array('value' => '1'));
+            $slideshow_options = get_option('show_slideshow', array('value' => '1', 'slideshow_shortcode' => '', 'slideshow_css' => ''));
             $slideshow_shortcode = $slideshow_options['slideshow_shortcode'];
             $slideshow_css = $slideshow_options['slideshow_css'];
             if (isset($slideshow_options) && $slideshow_options['value'] !== '') :
