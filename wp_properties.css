@@ -562,18 +562,21 @@
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties {
-  border-bottom: 1px dashed #cbccd0;
   margin-bottom: 10px;
-  padding-bottom: 5px;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child {
   margin-bottom: 0;
   border: none;
 }
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb {
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image {
+  text-align: center;
+}
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb {
   display: inline-block;
+  height: auto;
   margin-bottom: 5px;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties ul.wp-caption-text,
@@ -1267,6 +1270,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
+  width: 20%;
+  float: left;
+  padding: 0 10px;
+}
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before {
+  display: none;
+}
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
+  display: none;
 }
 .widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list,
 .wpp_widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list {

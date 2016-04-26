@@ -400,17 +400,20 @@
             list-style: none;
 
             li.shortcode_featured_properties  {
-                border-bottom: 1px dashed #cbccd0;
                 margin-bottom: 10px;
-                padding-bottom: 5px;
                 &:last-child {
                     margin-bottom: 0;
                     border: none;
                 }
 
-                .property_overview_thumb {
-                    display: inline-block;
-                    margin-bottom: 5px;
+                .property_image {
+                    text-align: center;
+
+                    .property_overview_thumb {
+                        display: inline-block;
+                        height: auto;
+                        margin-bottom: 5px;
+                    }
                 }
                 ul.wp-caption-text {
                     margin: 0;
@@ -964,8 +967,11 @@
             padding: 0;
             list-style: none;
 
-            li {
-
+            >li {
+                .clearfix-disable;
+                width: 20%;
+                float: left;
+                padding: 0 10px;
             }
         }
     }/*shortcode_featured_properties*/
