@@ -310,6 +310,7 @@ Avalon responsive styles
   body main.main-content .container .frontpage-widgetaria-tabs {
     display: none;
   }
+  body main.main-content .container .content,
   body main.main-content .container .sidebar {
     float: none !important;
   }
