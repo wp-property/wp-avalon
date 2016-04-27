@@ -12,6 +12,15 @@ function property_grid() {
     );
     columns.height(height);
 }
+function initialize() {
+    jQuery( '.wpp-advanced-supermap').each( function( i,e ) {
+      jQuery( e ).wpp_advanced_supermap( {
+        'query': jQuery(e).data( 'query' ) || false,
+        'atts': jQuery(e).data( 'atts' ) || false,
+        'ng_app': jQuery(e).attr( 'ng-app' ) || false
+      } );
+    } );
+  }
 jQuery(window).load(function(){
     
 //    Properties grid page
