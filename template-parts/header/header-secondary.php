@@ -40,6 +40,7 @@
         $exist_images_in_head = get_option('show_featured_image_in_head_value', '1');
         $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img_value', '2');
         if ($exist_images_in_head == '1') :
+            global $post;
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             if (!empty($featured_image)) :
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
