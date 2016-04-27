@@ -47,19 +47,9 @@ jQuery(function() {
     jQuery('.carousel').carousel();
 
 //    Tabs
-    function initialize() {
-        jQuery('.wpp-advanced-supermap').each(function(i, e) {
-            jQuery(e).wpp_advanced_supermap({
-                'query': jQuery(e).data('query') || false,
-                'atts': jQuery(e).data('atts') || false,
-                'ng_app': jQuery(e).attr('ng-app') || false
-            });
-        });
-    }
     jQuery('.nav-tabs a').click(function(e) {
         e.preventDefault();
         jQuery(this).tab('show');
-        initialize();
     });
     if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
         jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
