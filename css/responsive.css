@@ -115,12 +115,21 @@ Avalon responsive styles
   border-color: #204d74;
   color: #fff;
 }
+@media (max-width: 1200px) {
+  /* Max width - 1000px */
+  body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+    width: 46%;
+  }
+}
 @media (max-width: 1000px) {
   /* Max width - 1000px */
   body {
     /* Header
         --------------------------------------------------------------------- */
     /* Header */
+  }
+  body .container {
+    width: 100%;
   }
   body header .container .logotype {
     float: left;
@@ -297,5 +306,11 @@ Avalon responsive styles
   }
   body header .container .navigation-box.active .navigation-wrapper {
     display: block;
+  }
+  body main.main-content .container .frontpage-widgetaria-tabs {
+    display: none;
+  }
+  body main.main-content .container .sidebar {
+    float: none !important;
   }
 }

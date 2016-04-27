@@ -633,17 +633,17 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .select2-container {
   width: 100% !important;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li {
   display: block;
   float: left;
-  width: 90%;
+  width: 90% !important;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit {
-  width: 10%;
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit {
+  width: 10% !important;
   text-align: right;
   vertical-align: bottom;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -669,60 +669,60 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   color: #fff;
   margin-top: 27px;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover {
   background-color: #286090;
   border-color: #204d74;
   color: #fff;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form:before {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form:before {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form:after {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form:after {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group {
   margin: 0 -10px;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li {
   width: 20%;
   min-height: 62px;
   margin-bottom: 15px;
   float: left;
   padding: 0 10px;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li > label {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li > label {
   display: block;
   font-size: 16px;
   font-weight: 500;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap {
   min-height: 35px;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap:before {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap:before {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap:after {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap:after {
   display: block;
   content: "";
   clear: both;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"] {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"] {
   display: block;
   width: 100%;
   height: 34px;
@@ -740,46 +740,46 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"]:focus {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_min,
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_max {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_min,
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_max {
   display: inline-block;
   width: 46%;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap .wpp_multi_checkbox li {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap .wpp_multi_checkbox li {
   display: inline-block;
   margin-right: 5px;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap .wpp_multi_checkbox li label {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap .wpp_multi_checkbox li label {
   font-weight: 400;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_dash,
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .delimiter {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_dash,
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .delimiter {
   display: inline-block;
   width: 2%;
   text-align: center;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
   width: 97%;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
   width: 47%;
   display: inline-block;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements > li {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li {
   display: block;
   width: 100%;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements > li.submit {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit {
   text-align: right;
   vertical-align: bottom;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit {
   margin-top: 26px;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -805,7 +805,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   border-color: #2e6da4;
   color: #fff;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.tab-pane .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover {
   background-color: #286090;
   border-color: #204d74;
   color: #fff;
