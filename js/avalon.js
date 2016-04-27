@@ -49,12 +49,13 @@ jQuery(function() {
     jQuery('.nav-tabs a').click(function(e) {
         e.preventDefault();
         jQuery(this).tab('show');
+        setTimeout("infowindow.open(map,marker);", 1000);
     });
     if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
         jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
     }
 
-//    Frontpage widgetaria tabs
+//    Frontpage widgetaria tabs titles
     jQuery('.tab-content div.tab-pane').each(function() {
         var tab_id = jQuery(this).attr('id'),
                 widget_title = jQuery('.tab-pane#' + tab_id + ' .widget-title').html();
