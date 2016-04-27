@@ -521,6 +521,7 @@
 .widget,
 .wpp_widget {
   background-color: #FFF;
+  overflow: hidden;
   padding: 10px 20px;
   border-radius: 4px;
   -moz-border-radius: 4px;
