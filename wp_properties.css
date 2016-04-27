@@ -556,27 +556,24 @@
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode {
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties {
+  border-bottom: 1px dashed #cbccd0;
   margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties:last-child {
   margin-bottom: 0;
   border: none;
 }
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image {
-  text-align: center;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb {
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_overview_thumb {
   display: inline-block;
-  height: auto;
   margin-bottom: 5px;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties ul.wp-caption-text,
@@ -1114,7 +1111,6 @@
 }
 .widget .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list,
 .wpp_widget .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list {
-  min-height: 0;
   padding: 0 0 0 90px;
 }
 .widget .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list li.wpp_agent_stats_agent_image,
@@ -1270,20 +1266,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
-  width: 20%;
-  float: left;
-  padding: 0 10px;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before {
-  display: none;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
-  display: none;
 }
 .widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list,
 .wpp_widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list {
@@ -1488,7 +1470,7 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
 article.property-page-template .property-page-container .wpp_the_content {
   margin-bottom: 20px;
 }
-article.property-page-template .property-page-container .property_stats.list {
+article.property-page-template .property-page-container ul.property_stats {
   border-top: 1px solid #ededed;
   border-left: 1px solid #ededed;
   border-right: 1px solid #ededed;
@@ -1496,88 +1478,31 @@ article.property-page-template .property-page-container .property_stats.list {
   padding: 0;
   list-style: none;
 }
-article.property-page-template .property-page-container .property_stats.list li {
+article.property-page-template .property-page-container ul.property_stats li {
   border-bottom: 1px solid #ededed;
 }
-article.property-page-template .property-page-container .property_stats.list li:before {
+article.property-page-template .property-page-container ul.property_stats li:before {
   display: block;
   content: "";
   clear: both;
 }
-article.property-page-template .property-page-container .property_stats.list li:after {
+article.property-page-template .property-page-container ul.property_stats li:after {
   display: block;
   content: "";
   clear: both;
 }
-article.property-page-template .property-page-container .property_stats.list li .attribute,
-article.property-page-template .property-page-container .property_stats.list li .value {
+article.property-page-template .property-page-container ul.property_stats li .attribute,
+article.property-page-template .property-page-container ul.property_stats li .value {
   padding: 1em;
   display: block;
   float: left;
   width: 50%;
 }
-article.property-page-template .property-page-container .property_stats.list li .attribute {
+article.property-page-template .property-page-container ul.property_stats li .attribute {
   text-align: right;
   font-weight: 600;
 }
-article.property-page-template .property-page-container .property_stats.list li .value {
-  border-left: 1px solid #ededed;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list {
-  border: 1px solid #ededed;
-  margin-bottom: 10px;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list:before {
-  display: block;
-  content: "";
-  clear: both;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .wpp_stats_group {
-  border-bottom: 1px solid #ededed;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px 0;
-  text-align: center;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li {
-  border-bottom: 1px solid #ededed;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:before {
-  display: block;
-  content: "";
-  clear: both;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:last-child {
-  border: none;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .attribute,
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
-  padding: 1em;
-  display: block;
-  float: left;
-  width: 50%;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .attribute {
-  text-align: right;
-  font-weight: 600;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
+article.property-page-template .property-page-container ul.property_stats li .value {
   border-left: 1px solid #ededed;
 }
 article.property-page-template .property-page-container .property_feature_list h2,

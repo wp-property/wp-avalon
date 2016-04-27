@@ -395,25 +395,22 @@
     .shortcode_featured_properties {
 
         ul.wpp_featured_properties_shortcode {
-            margin: 0 0 0 0;
+            margin: 0;
             padding: 0;
             list-style: none;
 
             li.shortcode_featured_properties  {
+                border-bottom: 1px dashed #cbccd0;
                 margin-bottom: 10px;
+                padding-bottom: 5px;
                 &:last-child {
                     margin-bottom: 0;
                     border: none;
                 }
 
-                .property_image {
-                    text-align: center;
-
-                    .property_overview_thumb {
-                        display: inline-block;
-                        height: auto;
-                        margin-bottom: 5px;
-                    }
+                .property_overview_thumb {
+                    display: inline-block;
+                    margin-bottom: 5px;
                 }
                 ul.wp-caption-text {
                     margin: 0;
@@ -842,7 +839,6 @@
         .wpp_agent_info_single_wrapper {
 
             .wpp_agent_info_list {
-                min-height: 0;
                 padding: 0 0 0 90px;
 
                 li {
@@ -967,11 +963,8 @@
             padding: 0;
             list-style: none;
 
-            >li {
-                .clearfix-disable;
-                width: 20%;
-                float: left;
-                padding: 0 10px;
+            li {
+
             }
         }
     }/*shortcode_featured_properties*/
@@ -1166,83 +1159,34 @@ article.property-page-template {
         .wpp_the_content {
             margin-bottom: 20px;
         }
-        .property_stats {
+        ul.property_stats {
+            border-top: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-right: 1px solid #ededed;
+            margin: 0 0 20px;
+            padding: 0;
+            list-style: none;
 
-            &.list {
-                border-top: 1px solid #ededed;
-                border-left: 1px solid #ededed;
-                border-right: 1px solid #ededed;
-                margin: 0 0 20px;
-                padding: 0;
-                list-style: none;
+            li {
+                .clearfix;
+                border-bottom: 1px solid #ededed;
 
-                li {
-                    .clearfix;
-                    border-bottom: 1px solid #ededed;
-
-                    .attribute,
-                    .value {
-                        padding: 1em;
-                        display: block;
-                        float: left;
-                        width: 50%;
-                    }
-                    .attribute {
-                        text-align: right;
-                        font-weight: 600;
-                    }
-                    .value {
-                        border-left: 1px solid #ededed;
-                    }
+                .attribute,
+                .value {
+                    padding: 1em;
+                    display: block;
+                    float: left;
+                    width: 50%;
                 }
-            }
-            &.groups {
-
-                .wpp_feature_list {
-                    .clearfix;
-                    border: 1px solid #ededed;
-                    margin-bottom: 10px;
-
-                    .wpp_stats_group {
-                        border-bottom: 1px solid #ededed;
-                        font-size: 20px;
-                        text-transform: uppercase;
-                        margin: 0;
-                        padding: 10px 0;
-                        text-align: center;
-                    }
-                    .overview_stats {
-                        margin: 0;
-                        padding: 0;
-                        list-style: none;
-
-                        li {
-                            .clearfix;
-                            border-bottom: 1px solid #ededed;
-                            &:last-child {
-                                border: none;
-                            }
-
-                            .attribute,
-                            .value {
-                                padding: 1em;
-                                display: block;
-                                float: left;
-                                width: 50%;
-                            }
-                            .attribute {
-                                text-align: right;
-                                font-weight: 600;
-                            }
-                            .value {
-                                border-left: 1px solid #ededed;
-                            }
-                        }
-                    }
+                .attribute {
+                    text-align: right;
+                    font-weight: 600;
+                }
+                .value {
+                    border-left: 1px solid #ededed;
                 }
             }
         }
-
         .property_feature_list,
         .community_feature_list {
 
