@@ -286,14 +286,37 @@ Avalon responsive styles
                 }
             }
         }
-    }
+    }/*wpp_property_overview_shortcode*/
+    .shortcode_featured_properties {
+        ul.wpp_featured_properties_shortcode {
+            >li {
+                width: 100%;
+                float: none;
+                text-align: center;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px dashed #ddd;
+                .wp-caption-text {
+                    li {
+                        dl {
+                            dt, dd {
+                                float: none !important;
+                                display: inline-block;
+                                max-width: 49%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }/*shortcode_featured_properties*/
     /*property styles*/
 }
 @media (max-width: 400px) { /* Max width - 320px */
     body {
-        
+
     }
-    
+
     /*property styles*/
     .wpp_property_overview_shortcode {
         .wpp_grid_view {

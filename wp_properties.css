@@ -723,6 +723,10 @@
   padding: 0 10px;
   text-decoration: none;
 }
+.widget.widget_wpp_property_terms .community_feature_list li a:hover,
+.wpp_widget.widget_wpp_property_terms .community_feature_list li a:hover {
+  text-decoration: underline;
+}
 .widget.widget_wpp_property_stats .wpp_feature_list,
 .wpp_widget.widget_wpp_property_stats .wpp_feature_list {
   margin-bottom: 15px;
@@ -1435,6 +1439,19 @@ article.property-page-template .property-page-container .feature_lists > div ul 
 }
 article.property-page-template .property-page-container .feature_lists > div ul li {
   display: inline-block;
+}
+article.property-page-template .property-page-container .feature_lists > div ul li a {
+  background-color: #ededed;
+  color: #414141;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 5px 5px 0;
+  padding: 0 10px;
+  text-decoration: none;
+}
+article.property-page-template .property-page-container .feature_lists > div ul li a:hover {
+  text-decoration: underline;
 }
 article.property-page-template .property-page-container .property_meta_box {
   border: 1px solid #ededed;
