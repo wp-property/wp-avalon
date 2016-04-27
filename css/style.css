@@ -1993,6 +1993,9 @@ body main.main-content .container .content article input[type="submit"]:hover {
   border-color: #204d74;
   color: #fff;
 }
+body main.main-content .container .content .comments-area {
+  margin-bottom: 20px;
+}
 body main.main-content .container .content .comments-area h2.comments-title,
 body main.main-content .container .content .comments-area h2.comment-reply-title {
   font-size: 15px;
