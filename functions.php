@@ -142,7 +142,6 @@ include_once 'theme-support/theme-support-functions.php';
 
 function default_contact_us() {
     parse_str($_POST['data'], $data);
-//    print_r($data);
     $user_name = $data['dcf_user_name'];
     $user_email = $data['dcf_user_email'];
     $user_message = $data['dcf_user_message'];

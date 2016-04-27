@@ -49,8 +49,7 @@ jQuery(function() {
     jQuery('.nav-tabs a').click(function(e) {
         e.preventDefault();
         jQuery(this).tab('show');
-        
-        setTimeout("infowindow.open(map,marker);", 1000);
+        initialize();
     });
     if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
         jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
@@ -121,7 +120,6 @@ jQuery(function() {
             }
         });
         return false;
-//    console.log(avalon_ajax);
 
     });
     jQuery(document).on('focus', '.header-contact-form input.error-input', function() {
