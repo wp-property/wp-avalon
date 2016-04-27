@@ -556,7 +556,7 @@
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode {
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
   list-style: none;
 }
