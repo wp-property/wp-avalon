@@ -501,6 +501,23 @@
   clear: both;
 }
 /*wpp_agents_content_agent_card*/
+.shortcode_featured_properties ul.wpp_featured_properties_shortcode {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
+  width: 20%;
+  float: left;
+  padding: 0 10px;
+}
+.shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before {
+  display: none;
+}
+.shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
+  display: none;
+}
+/*shortcode_featured_properties*/
 .widget,
 .wpp_widget {
   background-color: #FFF;
@@ -518,7 +535,6 @@
   /*widget wpp_agents_content_agent_card*/
   /*Feps widget*/
   /*wpp_feps_form*/
-  /*shortcode_featured_properties*/
   /*widget_agentwidget*/
   /*widget_gallerypropertieswidget*/
 }
@@ -1264,26 +1280,6 @@
 .wpp_widget .wpp_feps_form .wpp_feps_submit_form:hover {
   background-color: #286090;
   border-color: #204d74;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
-  width: 20%;
-  float: left;
-  padding: 0 10px;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before {
-  display: none;
-}
-.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after,
-.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
-  display: none;
 }
 .widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list,
 .wpp_widget.widget_agentwidget .wpp_agent_info_single_wrapper .wpp_agent_info_list {
