@@ -103,6 +103,19 @@
                 </div>
             <?php endif; ?>
 
+            <?php if (is_array($wp_properties['property_meta'])): ?>
+                <?php
+                foreach ($wp_properties['property_meta'] as $meta_slug => $meta_title):
+                    if (empty($post->$meta_slug) || $meta_slug == 'tagline')
+                        continue;
+                    ?>
+                    <div class="property_meta_box">
+                        <h2><?php echo $meta_title; ?></h2>
+                        <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+            
             <?php if (!empty($wp_properties['taxonomies'])) : ?>
                 <div class="feature_lists">
                     <?php foreach ($wp_properties['taxonomies'] as $tax_slug => $tax_data): ?>
@@ -116,19 +129,6 @@
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
-            <?php endif; ?>
-
-            <?php if (is_array($wp_properties['property_meta'])): ?>
-                <?php
-                foreach ($wp_properties['property_meta'] as $meta_slug => $meta_title):
-                    if (empty($post->$meta_slug) || $meta_slug == 'tagline')
-                        continue;
-                    ?>
-                    <div class="property_meta_box">
-                        <h2><?php echo $meta_title; ?></h2>
-                        <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
-                    </div>
-                <?php endforeach; ?>
             <?php endif; ?>
 
             <?php if (WPP_F::get_coordinates()): ?>

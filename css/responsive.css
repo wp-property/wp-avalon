@@ -121,6 +121,7 @@ Avalon responsive styles
     width: 46%;
   }
 }
+/* Max width - 1200px */
 @media (max-width: 1000px) {
   /* Max width - 1000px */
   body {
@@ -314,4 +315,31 @@ Avalon responsive styles
   body main.main-content .container .sidebar {
     float: none !important;
   }
+}
+/* Max width - 1000px */
+@media (max-width: 800px) {
+  /* Max width - 800px */
+}
+@media (max-width: 640px) {
+  /* Max width - 640px */
+  body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li {
+    float: none;
+    width: 100%;
+  }
+  body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
+    width: 100%;
+  }
+  /*property styles*/
+  .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
+    width: 50%;
+  }
+  /*property styles*/
+}
+@media (max-width: 400px) {
+  /* Max width - 320px */
+  /*property styles*/
+  .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
+    width: 100%;
+  }
+  /*property styles*/
 }

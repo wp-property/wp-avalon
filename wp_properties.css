@@ -227,12 +227,12 @@
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
   display: inline-block;
-  float: none;
+  float: left;
   margin-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
   vertical-align: top;
-  width: calc(25% - 3px);
+  width: 25%;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -1446,7 +1446,6 @@ article.property-page-template .property-page-container .property_meta_box h2 {
   font-size: 22px !important;
   padding: 0 0 5px;
   margin: 0 0 5px;
-  text-transform: uppercase;
 }
 article.property-page-template .property-page-container #property_map:before,
 article.property-page-template .property-page-container .wpp_supermap:before {
@@ -1566,7 +1565,6 @@ article.property-page-template .property-page-container .property_stats.groups .
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .wpp_stats_group {
   border-bottom: 1px solid #ededed;
   font-size: 20px;
-  text-transform: uppercase;
   margin: 0;
   padding: 10px 0;
   text-align: center;
@@ -1605,32 +1603,6 @@ article.property-page-template .property-page-container .property_stats.groups .
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
   border-left: 1px solid #ededed;
-}
-article.property-page-template .property-page-container .property_feature_list h2,
-article.property-page-template .property-page-container .community_feature_list h2 {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-article.property-page-template .property-page-container .property_feature_list ul,
-article.property-page-template .property-page-container .community_feature_list ul {
-  margin: 0 0 20px;
-  padding: 0;
-  list-style: none;
-}
-article.property-page-template .property-page-container .property_feature_list ul li,
-article.property-page-template .property-page-container .community_feature_list ul li {
-  display: inline-block;
-}
-article.property-page-template .property-page-container .property_feature_list ul li a,
-article.property-page-template .property-page-container .community_feature_list ul li a {
-  background-color: #ededed;
-  color: #414141;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 2;
-  margin: 0 5px 5px 0;
-  padding: 0 10px;
-  text-decoration: none;
 }
 /* Property page styles */
 /*Property styles*/
