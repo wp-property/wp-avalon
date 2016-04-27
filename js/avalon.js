@@ -136,4 +136,7 @@ jQuery(function() {
 jQuery(document).trigger('wpp_pagination_change_complete', function(e, data) {
     property_grid();
 });
+jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
+    property_grid();
+});
 
