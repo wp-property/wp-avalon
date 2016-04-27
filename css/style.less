@@ -672,6 +672,48 @@ body {
                                     width: 80%;
                                     height: 400px;
                                     overflow: hidden;
+
+                                    .gm-style {
+
+                                        .wpp_google_maps_attribute_row_property_title {
+                                            font-size: 14px;
+                                            margin-bottom: 5px;
+                                            font-weight: 600;
+                                        }
+                                        .wpp_google_maps_infobox_table {
+
+                                            .wpp_google_maps_left_col {
+                                                padding-right: 10px;
+
+                                                .wpp_google_maps_attribute_row_directions_link {
+                                                    display: none;
+                                                }
+                                            }
+                                            .wpp_google_maps_right_col {
+
+                                                .wpp_google_maps_infobox {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    list-style: none;
+
+                                                    li {
+                                                        margin: 0 0 5px;
+
+                                                        .attribute {
+                                                            position: relative;
+                                                            margin: 0 5px 0 0;
+                                                            font-weight: 600;
+                                                            &:after {
+                                                                content: ":";
+                                                                position: relative;
+                                                                display: inline-block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                                 .super_map_list {
 
@@ -906,7 +948,6 @@ body {
                                 }
                             }/*wpp_latest_properties_widget*/
                         }
-
                     }
                 }
             }/*frontpage widgetaria tabs*/

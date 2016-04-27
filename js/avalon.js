@@ -87,7 +87,6 @@ jQuery(function() {
             type: "POST",
             url: ajaxurl,
             beforeSend: function() {
-                jQuery('body').css('cursor', 'wait');
                 /* Check the Name for blank submission*/
                 var user_name = document.forms["header-contact-form"]["dcf_user_name"].value;
                 if (user_name == "" || user_name == null || user_name == 'undefined') {
@@ -105,6 +104,7 @@ jQuery(function() {
                     show_form_message('Please, enter correct email');
                     return false;
                 }
+                jQuery('body').css('cursor', 'wait');
             },
             data: {
                 action: 'default_contact_us',

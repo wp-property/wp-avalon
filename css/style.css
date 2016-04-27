@@ -841,6 +841,35 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   height: 400px;
   overflow: hidden;
 }
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_attribute_row_property_title {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_left_col {
+  padding-right: 10px;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_left_col .wpp_google_maps_attribute_row_directions_link {
+  display: none;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li {
+  margin: 0 0 5px;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute {
+  position: relative;
+  margin: 0 5px 0 0;
+  font-weight: 600;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style .wpp_google_maps_infobox_table .wpp_google_maps_right_col .wpp_google_maps_infobox li .attribute:after {
+  content: ":";
+  position: relative;
+  display: inline-block;
+}
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list {
   overflow-y: scroll;
   float: left;
