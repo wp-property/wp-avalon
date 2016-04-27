@@ -50,6 +50,7 @@ jQuery(function() {
     jQuery('.nav-tabs a').click(function(e) {
         e.preventDefault();
         jQuery(this).tab('show');
+        jQuery(document).trigger('wpp_redraw_supermaps');
     });
     if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
         jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
@@ -84,7 +85,7 @@ jQuery(function() {
 
         jQuery.ajax({
             type: "POST",
-            url: "/wp-admin/admin-ajax.php",
+            url: ajaxurl,
             beforeSend: function() {
                 jQuery('body').css('cursor', 'wait');
                 /* Check the Name for blank submission*/
