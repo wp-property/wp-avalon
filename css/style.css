@@ -1122,7 +1122,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_featured_properties_widget .property_widget_block {
   float: left;
-  width: 20%;
+  width: 20% !important;
   padding: 0 10px;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_featured_properties_widget .property_widget_block:before {

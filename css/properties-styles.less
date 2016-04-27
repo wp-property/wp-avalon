@@ -789,11 +789,34 @@
     &.widget_latestpropertieswidget {
 
         .property_widget_block {
-            border-bottom: 1px dashed #cbccd0;
-            margin-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #c3c5c9;
+            border-radius: 4px;
+            .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.15));
+            height: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+            width: 100% !important;
 
             .thumbnail {
+                border: none;
+                padding: 0;
+                position: relative;
                 margin-bottom: 5px;
+                display: inline-block;
+                &:after {
+                    .box-shadow-inset(0, 2px, 5px, rgba(0, 0, 0, 0.35));
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    z-index: 2;
+                }
             }
             .title {
 
