@@ -133,6 +133,6 @@ jQuery(function() {
     }
 });
 
-jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
+jQuery(document).trigger('wpp_pagination_change_complete', function(e, data) {
     property_grid();
 });
