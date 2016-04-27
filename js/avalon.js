@@ -49,6 +49,7 @@ jQuery(function() {
     jQuery('.nav-tabs a').click(function(e) {
         e.preventDefault();
         jQuery(this).tab('show');
+        
         setTimeout("infowindow.open(map,marker);", 1000);
     });
     if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
