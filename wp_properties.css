@@ -1443,6 +1443,8 @@ article.property-page-template .property-page-container .feature_lists > div ul 
   list-style: none;
 }
 article.property-page-template .property-page-container .feature_lists > div ul li {
+  max-width: 100%;
+  overflow: hidden;
   display: inline-block;
 }
 article.property-page-template .property-page-container .feature_lists > div ul li a {
