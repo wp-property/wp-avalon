@@ -13,7 +13,6 @@ function property_grid() {
         });
         columns.height(height);
     });
-    widgets();
 }
 
 jQuery(window).load(function() {
