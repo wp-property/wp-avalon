@@ -1,19 +1,21 @@
 //    Properties grid page
 function property_grid() {
-    var widgets = jQuery('body .wpp_property_view_result');
-    widgets.each(function(key, value) {
-        var height = 0,
-                columns = jQuery('.all-properties .property', jQuery(value));
-        columns.each(function(key1, value1) {
-            var currentHeight = jQuery(value1).outerHeight();
-            var thatH = jQuery(this).outerHeight();
-            console.log(thatH, 1);
-            console.log(currentHeight, 2);
-            if (currentHeight > height) {
-                height = currentHeight;
-            }
+    jQuery(window).load(function() {
+        var widgets = jQuery('body .wpp_property_view_result');
+        widgets.each(function(key, value) {
+            var height = 0,
+                    columns = jQuery('.all-properties .property', jQuery(value));
+            columns.each(function(key1, value1) {
+                var currentHeight = jQuery(value1).outerHeight();
+                var thatH = jQuery(this).outerHeight();
+                console.log(thatH, 1);
+                console.log(currentHeight, 2);
+                if (currentHeight > height) {
+                    height = currentHeight;
+                }
+            });
+            columns.height(height);
         });
-        columns.height(height);
     });
 }
 
