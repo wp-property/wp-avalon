@@ -7,8 +7,6 @@
  * @since Avalon 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="post-container-box">
-        <div class="post-content"><?php the_content(); ?></div>
-    </div>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+    <?php the_content(); ?>
 </article>
