@@ -521,6 +521,7 @@ function avalon_customize_css() {
             color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
         }
         
+        body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li,
         body input[type="button"],
         body input[type="submit"],
         body input.submit-btn,
@@ -546,6 +547,7 @@ function avalon_customize_css() {
             border-color: <?php echo get_theme_mod('avalon_button_border_color', '#2e6da4'); ?> !important;
             color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?> !important;
         }
+        body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li.active,
         body input[type="button"]:hover,
         body input[type="submit"]:hover,
         body input.submit-btn:hover,

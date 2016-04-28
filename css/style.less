@@ -1297,11 +1297,27 @@ body {
 
                             li {
                                 .border-radius(4px);
-                                float: left;
-                                display: block;
-                                padding: 10px 20px;
+                                .transition(all, 0.15s, ease-in-out, 0s);
+                                background-image: none;
+                                border: 1px solid transparent;
+                                display: inline-block;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 1.42857;
                                 margin-right: 5px;
-                                border: 1px solid #d0d0d0;
+                                margin-bottom: 5px;
+                                padding: 10px 20px;
+                                text-align: center;
+                                vertical-align: middle;
+                                white-space: nowrap;
+                                background-color: #337ab7;
+                                border-color: #2e6da4;
+                                color: #fff;
+                                &.active {
+                                    background-color: #286090;
+                                    border-color: #204d74;
+                                    color: #fff;
+                                }
                             }
                         }
                     }
