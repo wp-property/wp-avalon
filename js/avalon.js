@@ -1,16 +1,19 @@
 //    Properties grid page
 function property_grid() {
-    var height = 0,
-            columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
-    columns.each(function() {
-        var currentHeight = jQuery(this).height();
-        if (currentHeight > height)
-        {
-            height = currentHeight;
-        }
-    }
-    );
-    columns.height(height);
+    var widgets = jQuery('body .wpp_property_overview_shortcode');
+    widgets.each(function() {
+        var height = 0,
+                columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
+        columns.each(function() {
+            var currentHeight = jQuery(this).height();
+            if (currentHeight > height)
+            {
+                height = currentHeight;
+            }
+        });
+        columns.height(height);
+    });
+    widgets();
 }
 
 jQuery(window).load(function() {
@@ -38,11 +41,11 @@ jQuery(function() {
             MapInit();
         }
     });
-    jQuery(document).on('click', '.close-bar-box', function(){
-            jQuery('.nav-additional .additional-button').removeClass('active');
-            jQuery('.header-bar.active').slideUp('slow', 'swing');
-            jQuery('.header-bar').removeClass('active');
-        
+    jQuery(document).on('click', '.close-bar-box', function() {
+        jQuery('.nav-additional .additional-button').removeClass('active');
+        jQuery('.header-bar.active').slideUp('slow', 'swing');
+        jQuery('.header-bar').removeClass('active');
+
     });
 
 
