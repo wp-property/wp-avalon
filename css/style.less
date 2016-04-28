@@ -1328,6 +1328,21 @@ body {
                             padding: 0;
                             list-style: none;
 
+                            &.wpp_feps_subscription_plan_list {
+
+                                .wpp_feps_subscription_plan {
+                                    .transition(margin, 0.15s, ease-in-out, 0s);
+                                    border-left: 4px solid #477fd3;
+                                    cursor: pointer;
+                                    margin-bottom: 20px;
+                                    margin-left: 5px;
+                                    padding: 0 0 0 15px;
+                                    &:hover,
+                                        &.feps_plan_selected {
+                                        margin-left: 15px;
+                                    }
+                                }
+                            }
                             &.feps_property_input_fields {
                                 margin-bottom: 10px;
 
