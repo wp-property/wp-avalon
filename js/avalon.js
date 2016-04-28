@@ -6,9 +6,10 @@ function property_grid() {
                 columns = jQuery('.all-properties .property', jQuery(value));
         columns.each(function(key1, value1) {
             var currentHeight = jQuery(value1).height();
+            var thatH = jQuery(this).height();
+            console.log(thatH);
+            console.log(currentHeight);
             if (currentHeight > height) {
-                var thatH = jQuery(this).height();
-                console.log(thatH);
                 height = currentHeight;
             }
         });
