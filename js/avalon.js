@@ -1,9 +1,9 @@
 //    Properties grid page
 function property_grid() {
     var widgets = jQuery('body .wpp_property_overview_shortcode');
-    widgets.each(function() {
+    widgets.each(function(key, value) {
         var height = 0,
-                columns = jQuery('.wpp_property_overview_shortcode .all-properties .property');
+                columns = jQuery('.wpp_property_overview_shortcode .all-properties .property', jQuery(value));
         columns.each(function() {
             var currentHeight = jQuery(this).height();
             if (currentHeight > height)
