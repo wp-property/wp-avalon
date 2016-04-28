@@ -1,6 +1,6 @@
 //    Properties grid page
 function property_grid() {
-    var widgets = jQuery('body .wpp_property_overview_shortcode');
+    var widgets = jQuery('body .wpp_property_view_result');
     widgets.each(function(key, value) {
         var height = 0,
                 columns = jQuery('.all-properties .property', jQuery(value));
