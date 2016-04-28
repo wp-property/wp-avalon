@@ -1277,6 +1277,9 @@ body main.main-content .container .content h6 {
   font-family: 'Ubuntu', sans-serif;
 }
 body main.main-content .container .content article {
+  /* Single, Post, Archive page container
+                    --------------------------------------------------------- */
+  /* Single, Post, Archive page container */
   /*WPP Supermap page*/
   /*WPP Supermap page*/
   /*Feps listing*/
@@ -1302,6 +1305,83 @@ body main.main-content .container .content article h3 {
 }
 body main.main-content .container .content article h4 {
   font-size: 24px;
+}
+body main.main-content .container .content article .archive-post-box,
+body main.main-content .container .content article .post-container-box {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #c3c5c9;
+}
+body main.main-content .container .content article .archive-post-box .post-featured-image,
+body main.main-content .container .content article .post-container-box .post-featured-image {
+  width: 100%;
+  height: auto;
+}
+body main.main-content .container .content article .archive-post-box .post-featured-image img,
+body main.main-content .container .content article .post-container-box .post-featured-image img {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body main.main-content .container .content article .archive-post-box .post-featured-image a img,
+body main.main-content .container .content article .post-container-box .post-featured-image a img {
+  opacity: 1;
+  -webkit-transition: opacity 0.15s ease-in-out 0s;
+  -moz-transition: opacity 0.15s ease-in-out 0s;
+  -o-transition: opacity 0.15s ease-in-out 0s;
+  transition: opacity 0.15s ease-in-out 0s;
+}
+body main.main-content .container .content article .archive-post-box .post-featured-image a:hover img,
+body main.main-content .container .content article .post-container-box .post-featured-image a:hover img {
+  opacity: 0.8;
+}
+body main.main-content .container .content article .archive-post-box .post-title,
+body main.main-content .container .content article .post-container-box .post-title {
+  padding: 0 20px;
+  margin: 10px 0 20px;
+}
+body main.main-content .container .content article .archive-post-box .post-title a,
+body main.main-content .container .content article .post-container-box .post-title a {
+  color: #333 !important;
+  text-decoration: none;
+}
+body main.main-content .container .content article .archive-post-box .post-title a:hover,
+body main.main-content .container .content article .post-container-box .post-title a:hover {
+  text-decoration: underline;
+}
+body main.main-content .container .content article .archive-post-box .post-date,
+body main.main-content .container .content article .post-container-box .post-date {
+  background-image: url("../images/date-icon.png");
+  background-position: 19px 1px;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  color: #b5b5b5;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  padding: 0 20px 0 45px;
+}
+body main.main-content .container .content article .archive-post-box .post-content,
+body main.main-content .container .content article .post-container-box .post-content {
+  padding: 0 20px 10px;
+}
+body main.main-content .container .content article .archive-post-box .post-tags,
+body main.main-content .container .content article .post-container-box .post-tags {
+  padding: 0 20px 20px;
+}
+body main.main-content .container .content article .archive-post-box .post-tags label,
+body main.main-content .container .content article .post-container-box .post-tags label {
+  background-image: url("../images/tags-icon.png");
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  margin-right: 5px;
+  padding: 0 0 0 25px;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
