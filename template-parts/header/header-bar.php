@@ -14,105 +14,109 @@ $CF_styles = $form_options['styles'];
 ?>
 <div class="header-bar" id="contacts-bar" >
     <div class="container">
-        <div class="col-md-6
-        <?php if ($location_area['value'] == '1') echo ' col-md-offset-3'; ?>
-             ">
-            <div class="hb__contact-form">
-                <div class="hb__title"><?php echo (!empty($area_options['title'])) ? $area_options['title'] : __('CONTACT FORM'); ?></div>
-                <?php
-                if (!empty($area_options['description'])) {
-                    echo '<div class="hbcf__description">';
-                    echo $area_options['description'];
-                    echo '</div>';
-                }
-                ?>
-                <div class="hbcf__container">
+        <button class="close-bar-box"></button>
+        <div class="row">
+            <div class="col-md-6
+            <?php if ($location_area['value'] == '1') echo ' col-md-offset-3'; ?>
+                 ">
+                <div class="hb__contact-form">
+                    <div class="hb__title"><?php echo (!empty($area_options['title'])) ? $area_options['title'] : __('CONTACT FORM'); ?></div>
                     <?php
-                    if ($form_options['value'] == '1') {
-                        get_template_part('template-parts/forms/default-contact-us', 'avalon');
-                    } elseif (!empty($CF_shortcode)) {
-                        echo do_shortcode($CF_shortcode);
-                        if (!empty($CF_styles)) {
-                            ?>
-                            <style type="text/css">
-        <?php echo $CF_styles; ?>
-                            </style>
-                            <?php
-                        }
+                    if (!empty($area_options['description'])) {
+                        echo '<div class="hbcf__description">';
+                        echo $area_options['description'];
+                        echo '</div>';
                     }
                     ?>
+                    <div class="hbcf__container">
+                        <?php
+                        if ($form_options['value'] == '1') {
+                            get_template_part('template-parts/forms/default-contact-us', 'avalon');
+                        } elseif (!empty($CF_shortcode)) {
+                            echo do_shortcode($CF_shortcode);
+                            if (!empty($CF_styles)) {
+                                ?>
+                                <style type="text/css">
+        <?php echo $CF_styles; ?>
+                                </style>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php if ($location_area['value'] == '2') : ?>
-            <div class="col-md-6">
-                <?php
-                $location_title = $location_area['title'];
-                $location_map_code = $location_area['map_code'];
-                $location_map_image = $location_area['map_image'];
-                $location_text = $location_area['text'];
-                ?>
-                <div class="hb__location">
-                    <div class="hb__title"><?php echo (!empty($location_title)) ? $location_title : __('Location & Address'); ?></div>
-                    <div class="hbl__content">
-                        <?php if (!empty($location_map_code) || !empty($location_map_image)) : ?>
+            <?php if ($location_area['value'] == '2') : ?>
+                <div class="col-md-6">
+                    <?php
+                    $location_title = $location_area['title'];
+                    $location_map_code = $location_area['map_code'];
+                    $location_map_image = $location_area['map_image'];
+                    $location_text = $location_area['text'];
+                    ?>
+                    <div class="hb__location">
+                        <div class="hb__title"><?php echo (!empty($location_title)) ? $location_title : __('Location & Address'); ?></div>
+                        <div class="hbl__content">
+                            <?php if (!empty($location_map_code) || !empty($location_map_image)) : ?>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <?php
+                                        if ($location_area['map_img'] == '1' && !empty($location_map_code)) :
+                                            ?>
+                                            <div class="google-map-box">
+                                                <input id="adress" type="hidden" value="<?php echo $location_map_code; ?>" />
+                                                <div id="map" style="width: 100%; height: 300px;"></div>
+                                                <script type="text/javascript">
+                                                    function MapInit() {
+                                                        geocoder = new google.maps.Geocoder();
+                                                        var address = document.getElementById("adress").value;
+
+                                                        geocoder.geocode({'address': address}, function(results, status) {
+                                                            if (status == google.maps.GeocoderStatus.OK) {
+                                                                //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
+                                                                map_box.setCenter(results[0].geometry.location);
+                                                                var marker = new google.maps.Marker({
+                                                                    map: map_box,
+                                                                    position: results[0].geometry.location
+                                                                });
+                                                            } else {
+                                                                alert("Geocode was not successful for the following reason: " + status);
+                                                            }
+                                                        });
+                                                        map_box = new google.maps.Map(document.getElementById('map'), {center: {lat: 0, lng: 0},
+                                                            zoom: 14,
+                                                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                        });
+                                                    }
+                                                </script>
+                                            </div>
+                                            <?php
+                                        elseif ($location_area['map_img'] == '2' && !empty($location_map_image)) :
+                                            ?>
+                                            <img width="100%" height="auto" src="<?php echo $location_map_image; ?>" alt="Location map" />
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                             <div class="row">
                                 <div class="col-md-12">
                                     <?php
-                                    if ($location_area['map_img'] == '1' && !empty($location_map_code)) :
-                                        ?>
-                                        <div class="google-map-box">
-                                            <input id="adress" type="hidden" value="<?php echo $location_map_code; ?>" />
-                                            <div id="map" style="width: 100%; height: 300px;"></div>
-                                            <script type="text/javascript">
-                                                function MapInit() {
-                                                    geocoder = new google.maps.Geocoder();
-                                                    var address = document.getElementById("adress").value;
-
-                                                    geocoder.geocode({'address': address}, function(results, status) {
-                                                        if (status == google.maps.GeocoderStatus.OK) {
-                                                            //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
-                                                            map_box.setCenter(results[0].geometry.location);
-                                                            var marker = new google.maps.Marker({
-                                                                map: map_box,
-                                                                position: results[0].geometry.location
-                                                            });
-                                                        } else {
-                                                            alert("Geocode was not successful for the following reason: " + status);
-                                                        }
-                                                    });
-                                                    map_box = new google.maps.Map(document.getElementById('map'), {center: {lat: 0, lng: 0},
-                                                        zoom: 14,
-                                                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                                                    });
-                                                }
-                                            </script>
-                                        </div>
-                                        <?php
-                                    elseif ($location_area['map_img'] == '2' && !empty($location_map_image)) :
-                                        ?>
-                                        <img width="100%" height="auto" src="<?php echo $location_map_image; ?>" alt="Location map" />
-                                    <?php endif; ?>
+                                    if (!empty($location_text)) :
+                                        echo $location_text;
+                                    endif;
+                                    ?>
                                 </div>
-                            </div>
-                        <?php endif; ?>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <?php
-                                if (!empty($location_text)) :
-                                    echo $location_text;
-                                endif;
-                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 <div class="header-bar" id="login-bar">
     <div class="container">
+        <button class="close-bar-box"></button>
         <div class="row">
             <div class="col-md-6">
                 <div class="hb__loginform">

@@ -30,12 +30,31 @@ Avalon responsive styles
         }
     }
 }/* Max width - 1200px */
+
 @media (max-width: 1000px) { /* Max width - 1000px */
     body {
 
         .container {
             width: 100%;
         }
+
+        /*Header bar*/
+        .header-bar {
+
+            button.close-bar-box {
+                background: url("../images/close-icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+                background-size: 30px auto;
+                border: medium none;
+                cursor: pointer;
+                display: block;
+                height: 30px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30px;
+                z-index: 99;
+            }
+        }/*Header bar*/
 
         /* Header
         --------------------------------------------------------------------- */
@@ -107,6 +126,7 @@ Avalon responsive styles
                                             line-height: 1 !important;
                                             padding: 8px 20px !important;
                                             white-space: unset !important;
+                                            opacity: 1;
                                             color: #FFF;
                                             &:hover {
                                                 background-color: #efefef;
@@ -239,8 +259,11 @@ Avalon responsive styles
                     display: none;
                 }
                 .content,
-                .sidebar {
+                .sidebar,
+                .sidebar.sidebar_left,
+                .sidebar.sidebar_right {
                     float: none !important;
+                    width: 100%;
                 }
             }
         }

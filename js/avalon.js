@@ -38,6 +38,12 @@ jQuery(function() {
             MapInit();
         }
     });
+    jQuery(document).on('click', '.close-bar-box', function(){
+            jQuery('.nav-additional .additional-button').removeClass('active');
+            jQuery('.header-bar.active').slideUp('slow', 'swing');
+            jQuery('.header-bar').removeClass('active');
+        
+    });
 
 
 //    Tooltips

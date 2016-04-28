@@ -139,6 +139,12 @@ body .header-bar {
   line-height: 1.5;
   color: #FFF;
 }
+body .header-bar .container {
+  position: relative;
+}
+body .header-bar button.close-bar-box {
+  display: none;
+}
 body .header-bar a {
   color: #FFF;
   text-decoration: underline;
