@@ -334,6 +334,13 @@ Avalon responsive styles
     float: none !important;
     width: 100%;
   }
+  /* Property styles
+    ------------------------------------------------------------------------- */
+  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .property_image img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  /*shortcode_featured_properties*/
 }
 /* Max width - 1000px */
 @media (max-width: 800px) {
@@ -348,7 +355,8 @@ Avalon responsive styles
   body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
     width: 100%;
   }
-  /*property styles*/
+  /* Property styles
+    ------------------------------------------------------------------------- */
   .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
     width: 50%;
   }

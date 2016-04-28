@@ -268,8 +268,26 @@ Avalon responsive styles
             }
         }
     }
+
+    /* Property styles
+    ------------------------------------------------------------------------- */
+    .shortcode_featured_properties {
+        ul.wpp_featured_properties_shortcode {
+            >li {
+                .property_image {
+                    img {
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                }
+            }
+        }
+    }/*shortcode_featured_properties*/
 }/* Max width - 1000px */
 @media (max-width: 800px) { /* Max width - 800px */
+    body {
+
+    }
 
 }
 @media (max-width: 640px) { /* Max width - 640px */
@@ -298,7 +316,9 @@ Avalon responsive styles
             }
         }
     }
-    /*property styles*/
+
+    /* Property styles
+    ------------------------------------------------------------------------- */
     .wpp_property_overview_shortcode {
         .wpp_grid_view {
             &.wpp_property_view_result {
