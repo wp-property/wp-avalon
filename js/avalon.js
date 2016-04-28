@@ -4,8 +4,9 @@ function property_grid() {
     widgets.each(function(key, value) {
         var height = 0,
                 columns = jQuery('.all-properties .property', jQuery(value));
-        columns.each(function() {
-            var currentHeight = jQuery(this).height();
+                console.log(columns);
+        columns.each(function(key1, value1) {
+            var currentHeight = jQuery(value1).height();
             if (currentHeight > height)
             {
                 height = currentHeight;
