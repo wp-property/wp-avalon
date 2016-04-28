@@ -15,4 +15,5 @@ $date_format = get_option('date_format');
         <div class="post-content"><?php the_content(); ?></div>
         <?php the_tags('<div class="post-tags"><label>Tags: </label>', ', ', '</div>'); ?>
     </div>
+    <?php comments_template(); ?>
 </article>
