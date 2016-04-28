@@ -373,7 +373,6 @@ Avalon responsive styles
   .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .wp-caption-text li dl dd {
     float: none !important;
     display: inline-block;
-    max-width: 49%;
   }
   /*shortcode_featured_properties*/
   /*property styles*/
