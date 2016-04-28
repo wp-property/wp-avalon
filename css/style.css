@@ -1881,6 +1881,9 @@ body main.main-content .container .content article .wpp_feps_form ul.feps_user_i
   border-color: #204d74;
   color: #fff;
 }
+body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_plan_options label {
+  font-weight: normal;
+}
 body main.main-content .container .content article .wpp_feps_form .form-actions input.wpi_checkout_process_payment {
   margin: 0 0 10px;
 }
