@@ -7,6 +7,7 @@ function property_grid() {
                 console.log(columns);
         columns.each(function(key1, value1) {
             var currentHeight = jQuery(value1).height();
+            console.log(currentHeight);
             if (currentHeight > height)
             {
                 height = currentHeight;
