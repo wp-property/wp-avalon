@@ -95,11 +95,11 @@
 
             <?php if (empty($wp_properties['property_groups']) || $wp_properties['configuration']['property_overview']['sort_stats_by_groups'] != 'true') : ?>
                 <ul id="property_stats" class="<?php wpp_css('property::property_stats', "property_stats overview_stats list"); ?>">
-                    <?php @draw_stats("display=list&make_link=true"); ?>
+                    <?php @draw_stats("display=list&make_link=true&hide_false=true"); ?>
                 </ul>
             <?php else: ?>
                 <div id="property_stats_groups" class="<?php wpp_css('property::property_stats', "property_stats overview_stats groups"); ?>">
-                    <?php @draw_stats("sort_by_groups=true&display=list&make_link=true"); ?>
+                    <?php @draw_stats("sort_by_groups=true&display=list&make_link=true&hide_false=true"); ?>
                 </div>
             <?php endif; ?>
 
