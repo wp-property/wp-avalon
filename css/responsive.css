@@ -336,6 +336,9 @@ Avalon responsive styles
   }
   /* Property styles
     ------------------------------------------------------------------------- */
+  .wpp_property_overview_shortcode .wpp_row_view .property_div {
+    width: 47%;
+  }
   .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .property_image img {
     width: 100% !important;
     height: auto !important;
@@ -357,6 +360,9 @@ Avalon responsive styles
   }
   /* Property styles
     ------------------------------------------------------------------------- */
+  .wpp_property_overview_shortcode .wpp_row_view .property_div {
+    width: 100%;
+  }
   .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
     width: 100%;
   }

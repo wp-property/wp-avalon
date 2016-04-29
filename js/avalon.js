@@ -27,7 +27,6 @@ function property_row() {
         });
         columns.height(height);
     });
-    console.log('123');
 }
 
 function property_grid(window_load) {
