@@ -85,10 +85,42 @@
         }
     }
     .wpp_row_view {
+        margin: 0 -15px;
         .clearfix;
-        
+
         .property_div {
+            background-color: #fff;
+            border: 1px solid #dedede;
+            border-radius: 4px;
             float: left;
+            margin: 0 0 15px 15px;
+            padding: 10px;
+            width: 31.6%;
+
+            .wpp_overview_right_column {
+
+                ul.wpp_overview_data {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+
+                        &.property_title {
+                            margin: 0 0 5px;
+
+                            a {
+                                font-size: 16px;
+                                color: #333;
+                            }
+                        }
+                        span.attribute {
+                            font-weight: 600;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
         }
     }
     .wpp_grid_view.wpp_property_view_result {

@@ -211,6 +211,9 @@
   cursor: pointer;
   width: auto;
 }
+.wpp_property_overview_shortcode .wpp_row_view {
+  margin: 0 -15px;
+}
 .wpp_property_overview_shortcode .wpp_row_view:before {
   display: block;
   content: "";
@@ -222,7 +225,29 @@
   clear: both;
 }
 .wpp_property_overview_shortcode .wpp_row_view .property_div {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 4px;
   float: left;
+  margin: 0 0 15px 15px;
+  padding: 10px;
+  width: 31.6%;
+}
+.wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column ul.wpp_overview_data {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column ul.wpp_overview_data li.property_title {
+  margin: 0 0 5px;
+}
+.wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column ul.wpp_overview_data li.property_title a {
+  font-size: 16px;
+  color: #333;
+}
+.wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column ul.wpp_overview_data li span.attribute {
+  font-weight: 600;
+  margin-right: 5px;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result:before {
   display: block;
