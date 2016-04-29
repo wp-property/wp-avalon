@@ -133,16 +133,6 @@ function empty_sidebar($sidebar) {
     }
 }
 
-function avalon_empty_sidebar($sidebar_name) {
-    global $wp_registered_sidebars, $wp_registered_widgets;
-    $sidebar_widgets = wp_get_sidebars_widgets();
-    $sw__list = $sidebar_widgets[$sidebar_name];
-    foreach ($sw__list as $value) {
-        echo '<pre>';
-        print_r($wp_registered_widgets[$value]);
-    }
-}
-
 //Theme customizer
 include_once 'theme-support/theme-customizer.php';
 
