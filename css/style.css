@@ -1725,6 +1725,12 @@ body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_su
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan:hover,
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan.feps_plan_selected {
   border-left: 5px solid #c3c5c9;
+  padding-left: 11px;
+}
+body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan .wpp_feps_label_wrapper {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields {
   margin-bottom: 10px;
@@ -1899,6 +1905,9 @@ body main.main-content .container .content article .wpp_feps_form .form-actions 
   display: block;
   content: "";
   clear: both;
+}
+body main.main-content .container .content article .feps_spc_details .wpp_feps_row_wrapper {
+  margin-bottom: 15px;
 }
 body main.main-content .container .content article > .wpp_shortcode_search:before {
   display: block;
