@@ -101,7 +101,7 @@
 
                 ul.wpp_overview_data {
                     margin: 0;
-                    padding: 0;
+                    padding: 0 0 0 10px;
                     list-style: none;
 
                     li {
@@ -117,6 +117,39 @@
                         span.attribute {
                             font-weight: 600;
                             margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            .wpp_overview_feps_column {
+
+                .wpp_overview_data {
+                    .clearfix-disable;
+                    margin: 0;
+                    padding: 0 0 0 10px;
+                    list-style: none;
+
+                    li {
+
+                        span.attribute {
+                            font-weight: 600;
+                            margin-right: 5px;
+                        }
+                        &.actions {
+
+                            ul {
+                                .clearfix-disable;
+                                margin: 0;
+                                padding: 0 0 0 10px;
+                                list-style: none;
+
+                                li {
+                                    
+                                    a.button {
+                                        .submit-button-style;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
