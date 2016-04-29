@@ -1712,19 +1712,19 @@ body main.main-content .container .content article .wpp_feps_form ul {
   list-style: none;
 }
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan {
-  -webkit-transition: margin 0.15s ease-in-out 0s;
-  -moz-transition: margin 0.15s ease-in-out 0s;
-  -o-transition: margin 0.15s ease-in-out 0s;
-  transition: margin 0.15s ease-in-out 0s;
-  border-left: 4px solid #477fd3;
+  -webkit-transition: border-left 0.15s ease-in-out 0s;
+  -moz-transition: border-left 0.15s ease-in-out 0s;
+  -o-transition: border-left 0.15s ease-in-out 0s;
+  transition: border-left 0.15s ease-in-out 0s;
+  border: 1px solid #c3c5c9;
   cursor: pointer;
   margin-bottom: 20px;
-  margin-left: 5px;
-  padding: 0 0 0 15px;
+  margin-left: 0;
+  padding: 5px 15px;
 }
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan:hover,
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan.feps_plan_selected {
-  margin-left: 15px;
+  border-left: 5px solid #c3c5c9;
 }
 body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields {
   margin-bottom: 10px;

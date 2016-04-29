@@ -1331,15 +1331,15 @@ body {
                             &.wpp_feps_subscription_plan_list {
 
                                 .wpp_feps_subscription_plan {
-                                    .transition(margin, 0.15s, ease-in-out, 0s);
-                                    border-left: 4px solid #477fd3;
+                                    .transition(border-left, 0.15s, ease-in-out, 0s);
+                                    border: 1px solid #c3c5c9;
                                     cursor: pointer;
                                     margin-bottom: 20px;
-                                    margin-left: 5px;
-                                    padding: 0 0 0 15px;
+                                    margin-left: 0;
+                                    padding: 5px 15px;
                                     &:hover,
                                         &.feps_plan_selected {
-                                        margin-left: 15px;
+                                        border-left: 5px solid #c3c5c9;
                                     }
                                 }
                             }
@@ -1431,7 +1431,7 @@ body {
                                 }
                             }
                             &.wpp_feps_plan_options {
-                                
+
                                 label {
                                     font-weight: normal;
                                 }
