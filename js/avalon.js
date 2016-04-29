@@ -13,16 +13,6 @@ function property_height() {
         columns.height(height);
     });
 }
-function property_grid(window_load) {
-    if (!window_load) {
-        property_height();
-    } else {
-        property_height();
-        jQuery(window).load(function() {
-            property_height();
-        });
-    }
-}
 
 function property_row() {
     var widgets = jQuery('body article .wpp_property_overview_shortcode');
@@ -40,11 +30,24 @@ function property_row() {
     console.log('123');
 }
 
+function property_grid(window_load) {
+    if (!window_load) {
+        property_height();
+        property_row();
+    } else {
+        property_height();
+        property_row();
+        jQuery(window).load(function() {
+            property_height();
+            property_row();
+        });
+    }
+}
+
 jQuery(window).load(function() {
 
 //    Properties grid page
     property_grid(false);
-    property_row();
 
 });
 jQuery(function() {
