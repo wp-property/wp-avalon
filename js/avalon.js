@@ -37,6 +37,7 @@ function property_row() {
         });
         columns.height(height);
     });
+    console.log('123');
 }
 
 jQuery(window).load(function() {
