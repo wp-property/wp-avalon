@@ -626,7 +626,6 @@
 .widget,
 .wpp_widget {
   background-color: #FFF;
-  overflow: hidden;
   padding: 10px 20px;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1470,12 +1469,22 @@
 }
 .widget.widget_gallerypropertieswidget .sidebar_gallery_item,
 .wpp_widget.widget_gallerypropertieswidget .sidebar_gallery_item {
+  margin-bottom: 10px;
   text-align: center;
 }
 .widget.widget_gallerypropertieswidget .sidebar_gallery_item a,
 .wpp_widget.widget_gallerypropertieswidget .sidebar_gallery_item a {
   display: inline-block;
-  margin: 0 auto 10px;
+  margin: 0 auto;
+}
+.widget.widget_gallerypropertieswidget .wpp_galleria_wrapper,
+.wpp_widget.widget_gallerypropertieswidget .wpp_galleria_wrapper {
+  margin: 0 auto;
+}
+.widget.widget_gallerypropertieswidget img,
+.wpp_widget.widget_gallerypropertieswidget img {
+  max-width: 100%;
+  height: auto;
 }
 /*widget*/
 /* Property page styles
