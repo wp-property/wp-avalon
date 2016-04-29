@@ -521,9 +521,12 @@ function avalon_customize_css() {
             color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
         }
         
+        .btn-info,
         body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button,
         .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li a.button,
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li,
+        body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn,
+        body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info,
         body input[type="button"],
         body input[type="submit"],
         body input.submit-btn,
@@ -549,9 +552,12 @@ function avalon_customize_css() {
             border-color: <?php echo get_theme_mod('avalon_button_border_color', '#2e6da4'); ?> !important;
             color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?> !important;
         }
+        .btn-info:hover,
         body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover,
         .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li a.button:hover,
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li.active,
+        body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover,
+        body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover,
         body input[type="button"]:hover,
         body input[type="submit"]:hover,
         body input.submit-btn:hover,
