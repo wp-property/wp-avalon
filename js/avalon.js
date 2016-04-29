@@ -30,16 +30,24 @@ function property_row() {
 }
 
 function property_grid(window_load) {
+    var width = jQuery(window).width();
     if (!window_load) {
         property_height();
         property_row();
     } else {
-        property_height();
-        property_row();
-        jQuery(window).load(function() {
+        if (width < 768) {
+            jQuery(window).load(function() {
+                property_height();
+                property_row();
+            });
+        } else {
             property_height();
             property_row();
-        });
+            jQuery(window).load(function() {
+                property_height();
+                property_row();
+            });
+        }
     }
 }
 
