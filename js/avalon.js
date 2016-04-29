@@ -24,10 +24,26 @@ function property_grid(window_load) {
     }
 }
 
+function property_row() {
+    var widgets = jQuery('body article .wpp_property_overview_shortcode');
+    widgets.each(function(key, value) {
+        var height = 0,
+                columns = jQuery('.wpp_row_view .property_div', jQuery(value));
+        columns.each(function(key1, value1) {
+            var currentHeight = jQuery(value1).outerHeight();
+            if (currentHeight > height) {
+                height = currentHeight;
+            }
+        });
+        columns.height(height);
+    });
+}
+
 jQuery(window).load(function() {
 
 //    Properties grid page
     property_grid(false);
+    property_row();
 
 });
 jQuery(function() {
