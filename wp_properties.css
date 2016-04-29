@@ -211,6 +211,19 @@
   cursor: pointer;
   width: auto;
 }
+.wpp_property_overview_shortcode .wpp_row_view:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+.wpp_property_overview_shortcode .wpp_row_view:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.wpp_property_overview_shortcode .wpp_row_view .property_div {
+  float: left;
+}
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result:before {
   display: block;
   content: "";
