@@ -1325,10 +1325,9 @@
 .widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload .qq-upload-button,
 .wpp_widget .wpp_feps_form ul.feps_property_input_fields li .wpp_image_upload .qq-upload-button {
   background-image: none;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #337ab7;
   color: #fff;
-  border: 1px solid transparent;
+  border: 1px solid #2e6da4;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
