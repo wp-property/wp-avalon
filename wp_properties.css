@@ -277,7 +277,7 @@
 }
 .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li a.button {
   border-radius: 4px;
