@@ -501,10 +501,6 @@ function avalon_customize_css() {
             color: <?php echo get_theme_mod('avalon_page_tagline_color', '#FFF'); ?>;
         }
         
-        body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan {
-            border-color: <?php echo get_theme_mod('avalon_header_bg_color', '#477fd3'); ?>;
-        }
-        
         .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
         .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
         .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li.current-page a,
