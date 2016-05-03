@@ -2,7 +2,7 @@
 /*
  * Template name: Page with left sidebar
  * 
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

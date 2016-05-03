@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for property search on front page
+ * Template part for frontpage widget area
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -21,7 +21,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
             $active_tab_head = '';
             if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
                 <li role="presentation" class="active">
-                    <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search'); ?></a>
+                    <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search', 'wp-avalon'); ?></a>
                 </li>
                 <?php
             else :
@@ -43,7 +43,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
             <?php if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
                 <div id="property-search-defaul" role="tabpanel" class="property-search-defaul tab-pane active">
                     <div class="multisidebar-widget widget_text">
-                        <h2 class="widget-title"><?php _e('Property search'); ?></h2>
+                        <h2 class="widget-title"><?php _e('Property search', 'wp-avalon'); ?></h2>
                         <div class="widget-content">
                             <?php echo do_shortcode('[property_search]'); ?>
                         </div>

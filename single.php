@@ -2,7 +2,7 @@
 /**
  * Single page template file
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -29,6 +29,10 @@ get_header();
 
             endif;
             ?>
+
+            <div class="single-post-pagination">
+                <?php the_posts_navigation(); ?>
+            </div>
         </div>
 
     </div>

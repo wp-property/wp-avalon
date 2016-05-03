@@ -2,7 +2,7 @@
 /*
  * Template part for header bar
  * 
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -20,7 +20,7 @@ $CF_styles = $form_options['styles'];
             <?php if ($location_area['value'] == '1') echo ' col-md-offset-3'; ?>
                  ">
                 <div class="hb__contact-form">
-                    <div class="hb__title"><?php echo (!empty($area_options['title'])) ? $area_options['title'] : __('CONTACT FORM'); ?></div>
+                    <div class="hb__title"><?php echo (!empty($area_options['title'])) ? $area_options['title'] : __('CONTACT FORM', 'wp-avalon'); ?></div>
                     <?php
                     if (!empty($area_options['description'])) {
                         echo '<div class="hbcf__description">';
@@ -31,7 +31,7 @@ $CF_styles = $form_options['styles'];
                     <div class="hbcf__container">
                         <?php
                         if ($form_options['value'] == '1') {
-                            get_template_part('template-parts/forms/default-contact-us', 'avalon');
+                            get_template_part('template-parts/forms/default-contact-us', 'wp-avalon');
                         } elseif (!empty($CF_shortcode)) {
                             echo do_shortcode($CF_shortcode);
                             if (!empty($CF_styles)) {
@@ -55,7 +55,7 @@ $CF_styles = $form_options['styles'];
                     $location_text = $location_area['text'];
                     ?>
                     <div class="hb__location">
-                        <div class="hb__title"><?php echo (!empty($location_title)) ? $location_title : __('Location & Address'); ?></div>
+                        <div class="hb__title"><?php echo (!empty($location_title)) ? $location_title : __('Location & Address', 'wp-avalon'); ?></div>
                         <div class="hbl__content">
                             <?php if (!empty($location_map_code) || !empty($location_map_image)) : ?>
                                 <div class="row">

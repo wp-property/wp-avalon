@@ -1,0 +1,389 @@
+# Copyright (C) 2016 Usability Dynamics team
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Avalon 0.1.20160503\n"
+"Report-Msgid-Bugs-To: https://github.com/wp-property/wp-avalon.git"
+"POT-Creation-Date: 2016-05-03 13:18+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-05-03 13:19+0300\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_EN\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: functions.php:58
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:81
+msgid "Footer widget area"
+msgstr ""
+
+#: functions.php:83
+msgid "Appears at the bottom in content on all pages"
+msgstr ""
+
+#: functions.php:90
+msgid "Frontpage multi-sidebar"
+msgstr ""
+
+#: functions.php:92
+msgid "Appears at the top side on frontpage"
+msgstr ""
+
+#: functions.php:99
+msgid "Sidebar Left"
+msgstr ""
+
+#: functions.php:101
+msgid "Appears at the left side on all pages"
+msgstr ""
+
+#: functions.php:108
+msgid "Sidebar Right"
+msgstr ""
+
+#: functions.php:110
+msgid "Appears at the right side on all pages"
+msgstr ""
+
+#: property-overview.php:99
+msgid "Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>."
+msgstr ""
+
+#: template-parts/header/header-bar.php:23
+msgid "CONTACT FORM"
+msgstr ""
+
+#: template-parts/header/header-bar.php:58
+msgid "Location & Address"
+msgstr ""
+
+#: theme-support/theme-customizer.php:7
+msgid "Color Scheme"
+msgstr ""
+
+#: theme-support/theme-customizer.php:18
+msgid "Header background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:29
+msgid "Header top border color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:40
+msgid "Header bottom border color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:51
+msgid "Secondary header background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:62
+msgid "Header bar background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:73
+msgid "Header bar bottom border color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:84
+msgid "Menu text color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:95
+msgid "Single and Page title color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:106
+msgid "Single and Page tagline color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:117
+msgid "Buttons background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:128
+msgid "Buttons border color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:139
+msgid "Buttons text color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:150
+msgid "Buttons hover background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:161
+msgid "Buttons hover border color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:172
+msgid "Buttons hover text color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:183
+msgid "Property sort buttons background color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:194
+msgid "Property sort buttons text color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:205
+msgid "Permalinks color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:216
+msgid "Permalinks hover color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:223
+msgid "Head image settings"
+msgstr ""
+
+#: theme-support/theme-customizer.php:233
+msgid "Blur image"
+msgstr ""
+
+#: theme-support/theme-customizer.php:250
+msgid "Blackout color for header image"
+msgstr ""
+
+#: theme-support/theme-customizer.php:260
+msgid "Blackout opacity (type "0.0-1.0" of opacity)"
+msgstr ""
+
+#: theme-support/theme-customizer.php:273
+msgid "Logotype settings"
+msgstr ""
+
+#: theme-support/theme-customizer.php:283 theme-support/theme-customizer.php:363
+msgid "Logo icon (Recommended height 20px)"
+msgstr ""
+
+#: theme-support/theme-customizer.php:293 theme-support/theme-customizer.php:340 theme-support/theme-customizer.php:373 theme-support/theme-customizer.php:420
+msgid "Margin top in px"
+msgstr ""
+
+#: theme-support/theme-customizer.php:309 theme-support/theme-customizer.php:389
+msgid "Logotype text"
+msgstr ""
+
+#: theme-support/theme-customizer.php:320 theme-support/theme-customizer.php:400
+msgid "Logo Text Color"
+msgstr ""
+
+#: theme-support/theme-customizer.php:330 theme-support/theme-customizer.php:410
+msgid "Or load full logo image instead of logo with text"
+msgstr ""
+
+#: theme-support/theme-customizer.php:353
+msgid "Footer Logotype settings"
+msgstr ""
+
+#: theme-support/theme-customizer.php:433 theme-support/theme-customizer.php:443
+msgid "Copyrights"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:8
+msgid "Main site settings"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:11
+msgid "Show default property search tab on front page"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:16
+msgid "Show Login/Register button in header"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:21
+msgid "Use featured images in header bar"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:26
+msgid "If page don`t have a featured image, use default header image"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:35
+msgid "Settings for \"Contact us\" header area"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:38
+msgid "Contact us area settings"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:43
+msgid "Contact us form settings"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:48
+msgid "Location section"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:61 theme-support/theme-support-functions.php:67 theme-support/theme-support-functions.php:73 theme-support/theme-support-functions.php:79
+msgid "Yes"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:62 theme-support/theme-support-functions.php:68 theme-support/theme-support-functions.php:74 theme-support/theme-support-functions.php:80
+msgid "No"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:88
+msgid "Disable \"Contact us\" area"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:91
+msgid "Enable \"Contact us\" area"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:96 theme-support/theme-support-functions.php:143 theme-support/theme-support-functions.php:144
+msgid "Section title"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:97
+msgid "Section description"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:111
+msgid "Use default form"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:112
+msgid "Default email: Site Admin Email"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:113
+msgid "Your email for default form"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:116
+msgid "Use shortcode"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:121
+msgid "Shortcode"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:121
+msgid "Enter shortcode here"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:122
+msgid "Custom CSS"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:122
+msgid "Custom form css styles"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:134
+msgid "Disable Location area"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:137
+msgid "Enable Location area"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:146
+msgid "Use google map"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:149
+msgid "Search Box"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:238
+msgid "or add image"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:245
+msgid "Select image"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:246
+msgid "Delete image"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:249
+msgid "Location area text section (you can use HTML)"
+msgstr ""
+
+#: theme-support/theme-support-functions.php:250
+msgid "Location area text section"
+msgstr ""
+
+#: comments.php:48
+msgid "Comments are closed."
+msgstr ""
+
+#: property-overview.php:28
+msgid "of"
+msgstr ""
+
+#: template-parts/content/content-property-overview-page.php:14
+msgid "Sorry, we could not find what you were looking for.  Since you are here, take a look at some of our properties."
+msgstr ""
+
+#: template-parts/content/content-property.php:139
+msgid "Return to building page."
+msgstr ""
+
+#: template-parts/forms/default-contact-us.php:8
+msgid "Your Name"
+msgstr ""
+
+#: template-parts/forms/default-contact-us.php:9
+msgid "Your Email"
+msgstr ""
+
+#: template-parts/forms/default-contact-us.php:13
+msgid "Your Message"
+msgstr ""
+
+#: template-parts/forms/default-contact-us.php:18
+msgid "SEND"
+msgstr ""
+
+#: template-parts/front-page/frontpage-widget-area.php:24 template-parts/front-page/frontpage-widget-area.php:44
+msgid "Property search"
+msgstr ""
+
+#: theme-support/theme-support.php:12
+msgid "Theme options"
+msgstr ""
+
+#: theme-support/theme-support.php:15
+msgid "Main settings"
+msgstr ""
+
+#: theme-support/theme-support.php:16
+msgid "Header settings"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Avalon"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/wp-property/wp-avalon.git"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Free, modern and responsive WordPress theme for WP-Property"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Usability Dynamics, Inc."
+msgstr ""

@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for single property page
+ * Template part for single property page container
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -136,7 +136,7 @@
             <?php endif; ?>
 
             <?php if ($post->post_parent): ?>
-                <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', ud_get_wp_property()->domain) ?></a>
+                <a href="<?php echo $post->parent_link; ?>" class="<?php wpp_css('btn', "btn btn-return"); ?>"><?php _e('Return to building page.', 'wp-avalon'); ?></a>
             <?php endif; ?>
 
         </div><!-- .entry-content -->

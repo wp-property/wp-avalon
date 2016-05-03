@@ -2,18 +2,18 @@
 /**
  * Theme support page file
  * 
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
 global $wpdb;
 ?>
 <div class="admin-wrap clearfix">
-    <h1><?php _e('Theme options'); ?></h1>
+    <h1><?php _e('Theme options', 'wp-avalon'); ?></h1>
     <div class="aw__container">
         <ul class="tab-list">
-            <li class="tab-head active" data-click="main_settings">Main settings</li>
-            <li class="tab-head" data-click="header_settings">Header settings</li>
+            <li class="tab-head active" data-click="main_settings"><?php _e('Main settings', 'wp-avalon'); ?></li>
+            <li class="tab-head" data-click="header_settings"><?php _e('Header settings', 'wp-avalon'); ?></li>
         </ul>
         <div class="tab-container">
             <div id="main_settings" class="tab-content active">

@@ -2,7 +2,7 @@
 /**
  * WP-Property Overview Template
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -27,7 +27,7 @@ if (have_properties()) {
                                 <li class="property_title">
                                     <a <?php echo $in_new_window; ?> href="<?php echo $property['permalink']; ?>"><?php echo $property['post_title']; ?></a>
                                     <?php if (!empty($property['is_child'])): ?>
-                                        <?php _e('of', ud_get_wp_property()->domain); ?> <a <?php echo $in_new_window; ?> href='<?php echo $property['parent_link']; ?>'><?php echo $property['parent_title']; ?></a>
+                                        <?php _e('of', 'wp-avalon'); ?> <a <?php echo $in_new_window; ?> href='<?php echo $property['parent_link']; ?>'><?php echo $property['parent_title']; ?></a>
                                     <?php endif; ?>
                                 </li>
 
@@ -96,6 +96,6 @@ if (have_properties()) {
     </div><?php // .wpp_grid_view     ?>
 <?php } else { ?>
     <div class="wpp_nothing_found">
-        <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', ud_get_wp_property()->domain), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>
+        <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', 'wp-avalon'), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>
     </div>
 <?php } ?>

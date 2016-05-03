@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for index.php and archive.php
+ * Template part for index.php and archive.php container
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

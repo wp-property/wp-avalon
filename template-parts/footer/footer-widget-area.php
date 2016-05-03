@@ -1,8 +1,8 @@
 <?php
 /*
  * Template part footer widgets area
- * 
- * @package UD
+ *
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

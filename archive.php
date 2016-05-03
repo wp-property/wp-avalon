@@ -1,8 +1,8 @@
 <?php
 /**
- * Home page template file
+ * Archive page template file
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

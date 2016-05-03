@@ -2,7 +2,7 @@
 /**
  * The template for displaying carousel in header
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

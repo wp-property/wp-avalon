@@ -1,9 +1,8 @@
 <?php
-
 /**
- * Avalon functions
+ * WP Avalon functions 
  * 
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
@@ -13,7 +12,7 @@ function avalon_init() {
     /* JS */
     wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6');
     wp_enqueue_script('bootstrap-select.min', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'));
-    wp_enqueue_script('avalon', get_template_directory_uri() . '/js/avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
+    wp_enqueue_script('wp-avalon', get_template_directory_uri() . '/js/wp-avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
     wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places', array('jquery'));
     wp_localize_script('avalon-ajax', 'avalon_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
@@ -41,9 +40,11 @@ function avalon_admin_init() {
  * @since Avalon 1.0
  */
 function avalon_theme_setup() {
+    load_theme_textdomain( 'wp-avalon', get_template_directory() . '/languages' );
+    add_theme_support('automatic-feed-links');
+    add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('custom-header');
-//    add_theme_support('custom-logo');
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');
@@ -53,7 +54,7 @@ add_action('after_setup_theme', 'avalon_theme_setup');
  * @since Avalon 1.0
  */
 register_nav_menus(array(
-    'primary' => __('Primary Menu', 'avalon'),
+    'primary' => __('Primary Menu', 'wp-avalon'),
 ));
 
 /**
@@ -63,11 +64,11 @@ register_nav_menus(array(
 add_action('admin_menu', 'avalon_theme_support');
 
 function avalon_theme_support() {
-    add_menu_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
+    add_theme_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
 }
 
 function avalon_themesupport() {
-    include TEMPLATEPATH . '/theme-support/theme-support.php';
+    include get_template_directory() . '/theme-support/theme-support.php';
 }
 
 /**
@@ -76,36 +77,36 @@ function avalon_themesupport() {
  */
 function avalon_widgets_init() {
     register_sidebar(array(
-        'name' => __('Footer widget area', 'avalon'),
+        'name' => __('Footer widget area', 'wp-avalon'),
         'id' => 'sidebar-footer',
-        'description' => __('Appears at the bottom of the content on all pages.', 'avalon'),
+        'description' => __('Appears at the bottom in content on all pages', 'wp-avalon'),
         'before_widget' => '<div class="col-md-4"><div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div></div>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'name' => __('Frontpage multi-sidebar', 'avalon'),
+        'name' => __('Frontpage multi-sidebar', 'wp-avalon'),
         'id' => 'sidebar-frontpage',
-        'description' => __('Appears at the top side of the frontpage content.', 'avalon'),
+        'description' => __('Appears at the top side on frontpage', 'wp-avalon'),
         'before_widget' => '<div class="tab-pane" role="tabpanel" id="%1$s"><div class="multisidebar-widget %2$s">',
         'after_widget' => '</div></div>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'name' => __('Sidebar Left', 'avalon'),
+        'name' => __('Sidebar Left', 'wp-avalon'),
         'id' => 'sidebar-left',
-        'description' => __('Appears at the left side of the content on all pages.', 'avalon'),
+        'description' => __('Appears at the left side on all pages', 'wp-avalon'),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'name' => __('Sidebar Right', 'avalon'),
+        'name' => __('Sidebar Right', 'wp-avalon'),
         'id' => 'sidebar-right',
-        'description' => __('Appears at the right side of the content on all pages.', 'avalon'),
+        'description' => __('Appears at the right side on all pages', 'wp-avalon'),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<h2 class="widget-title">',

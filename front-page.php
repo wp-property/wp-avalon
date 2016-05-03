@@ -11,9 +11,7 @@ get_header();
 
 <div class="container">
 
-    <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'avalon'); ?>
-
-    <?php get_template_part('template-parts/front-page/frontpage-featured-items', 'avalon'); ?>
+    <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'wp-avalon'); ?>
 
     <?php get_sidebar(); ?>
 

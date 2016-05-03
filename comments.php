@@ -1,6 +1,10 @@
 <?php
 /**
  * The template for displaying comments
+ * 
+ * @package Usability Dynamics, Inc.
+ * @subpackage Avalon
+ * @since Avalon 1.0
  */
 if (post_password_required()) {
     return;
@@ -14,13 +18,11 @@ if (post_password_required()) {
             <?php
             $comments_number = get_comments_number();
             if (1 === $comments_number) {
-                /* translators: %s: post title */
-                printf(_x('One comment on &ldquo;%s&rdquo;', 'comments title', 'twentysixteen'), get_the_title());
+                printf(_x('One comment on &ldquo;%s&rdquo;', 'comments title', 'wp-avalon'), get_the_title());
             } else {
                 printf(
-                        /* translators: 1: number of comments, 2: post title */
                         _nx(
-                                '%1$s comments on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'twentysixteen'
+                                '%1$s comments on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'wp-avalon'
                         ), number_format_i18n($comments_number), get_the_title()
                 );
             }
@@ -47,7 +49,7 @@ if (post_password_required()) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
         ?>
-        <p class="no-comments"><?php _e('Comments are closed.', 'twentysixteen'); ?></p>
+        <p class="no-comments"><?php _e('Comments are closed.', 'wp-avalon'); ?></p>
     <?php endif; ?>
 
     <?php

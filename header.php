@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The Header for our theme
+ *
+ * @package Usability Dynamics, Inc.
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />
-        <meta name="viewport" content="width=device-width" />
-        <title>
-            <?php
-            if (is_home() || is_front_page()) {
-                echo get_bloginfo('name') . ' - ' . get_bloginfo('description');
-            } else {
-                wp_title('|', true, 'right') . bloginfo('name');
-            }
-            ?>
-        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <?php wp_head(); ?>
@@ -33,10 +32,10 @@
                         </span>
                         <div class="navigation-wrapper row">
                             <div class="site-header-menu col-md-9">
-                                <?php get_template_part('template-parts/navigation/navigation-default', 'avalon'); ?>
+                                <?php get_template_part('template-parts/navigation/navigation-default', 'wp-avalon'); ?>
                             </div>
                             <div class="nav-additional col-md-3">
-                                <?php get_template_part('template-parts/navigation/navigation-additional', 'avalon'); ?>
+                                <?php get_template_part('template-parts/navigation/navigation-additional', 'wp-avalon'); ?>
                             </div>
                         </div>
                     </div>

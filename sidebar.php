@@ -1,4 +1,12 @@
-<?php if (is_active_sidebar('sidebar-left')) : ?>
+<?php
+/**
+ * Template file for displaying sidebar single pages
+ *
+ * @package Usability Dynamics, Inc.
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+if (is_active_sidebar('sidebar-left')) : ?>
 
     <aside class="sidebar sidebar_left col-md-4">
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for page.php
+ * Template part for page.php container
  *
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */

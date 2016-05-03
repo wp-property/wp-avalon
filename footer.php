@@ -1,6 +1,15 @@
+<?php
+/**
+ * The template for displaying the footer
+ * 
+ * @package Usability Dynamics, Inc.
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+?>
 </main><!-- .main-content -->
 <footer class="footer">
-    <?php get_template_part('template-parts/footer/footer-widget-area', 'avalon'); ?>
+    <?php get_template_part('template-parts/footer/footer-widget-area', 'wp-avalon'); ?>
     <div class="footer-area">
         <div class="container">
             <div class="row">

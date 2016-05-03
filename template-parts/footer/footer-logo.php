@@ -1,6 +1,10 @@
 <?php
 /**
  * Template for site logo in footer
+ *
+ * @package Usability Dynamics, Inc.
+ * @subpackage Avalon
+ * @since Avalon 1.0
  */
 ?>
 

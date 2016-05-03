@@ -2,7 +2,7 @@
 /*
  * Template part for navigation in header
  * 
- * @package UD
+ * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
