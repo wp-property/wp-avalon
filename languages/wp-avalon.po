@@ -160,7 +160,7 @@ msgid "Blackout color for header image"
 msgstr ""
 
 #: theme-support/theme-customizer.php:260
-msgid "Blackout opacity (type "0.0-1.0" of opacity)"
+msgid "Blackout opacity (type \"0.0-1.0\" of opacity)"
 msgstr ""
 
 #: theme-support/theme-customizer.php:273

@@ -29,6 +29,21 @@ function property_row() {
     });
 }
 
+function frontpage_headlights() {
+    var widgets = jQuery('body .frontpage-headlights');
+    widgets.each(function(key, value) {
+        var height = 0,
+                columns = jQuery('.fh__box .fhb__excerpt', jQuery(value));
+        columns.each(function(key1, value1) {
+            var currentHeight = jQuery(value1).outerHeight();
+            if (currentHeight > height) {
+                height = currentHeight;
+            }
+        });
+        columns.height(height);
+    });
+}
+
 function property_grid(window_load) {
     var width = jQuery(window).width();
     if (!window_load) {
@@ -55,6 +70,9 @@ jQuery(window).load(function() {
 
 //    Properties grid page
     property_grid(false);
+    
+//    Frontpage headlights
+    frontpage_headlights();
 
 });
 jQuery(function() {

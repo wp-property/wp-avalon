@@ -13,29 +13,22 @@ get_header();
 
     <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'wp-avalon'); ?>
 
-    <?php get_sidebar(); ?>
+    <div class="content col-md-12">
+        <?php
+        if (have_posts()) :
 
-    <?php if (is_active_sidebar('sidebar-left') || is_active_sidebar('sidebar-right')) : ?>
-        <div class="content col-md-8">
-        <?php else : ?>
-            <div class="content col-md-12">
-            <?php endif; ?>
-            <?php
-            if (have_posts()) :
+            while (have_posts()) : the_post();
 
-                while (have_posts()) : the_post();
+                get_template_part('template-parts/content/content', 'front-page');
 
-                    get_template_part('template-parts/content/content', 'front-page');
+            endwhile;
 
-                endwhile;
-
-            endif;
-            ?>
-
-        </div>
+        endif;
+        ?>
 
     </div>
 
-    <?php
-    get_footer();
-    
+</div>
+
+<?php
+get_footer();

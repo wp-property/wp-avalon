@@ -9,15 +9,15 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('Color Scheme', 'wp-avalon')
     ));
-    
-    
+
+
 //    Header colors section
     $wp_customize->add_section('avalon_header_colors_section', array(
         'title' => __('Header colors scheme', 'wp-avalon'),
         'priority' => 30,
         'panel' => 'general_colors'
     ));
-    
+
 //    header bg color
     $wp_customize->add_setting('avalon_header_bg_color', array(
         'default' => '#477fd3',
@@ -84,15 +84,15 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_header_colors_section',
         'settings' => 'avalon_header_bar_border_color',
     )));
-    
-    
+
+
 //    Menu text colors section
     $wp_customize->add_section('avalon_menu_color_scheme', array(
         'title' => __('Menu color scheme', 'wp-avalon'),
         'priority' => 30,
         'panel' => 'general_colors'
     ));
-    
+
 //    Menu text color
     $wp_customize->add_setting('avalon_menu_text_color', array(
         'default' => '#FFFFFF',
@@ -104,15 +104,15 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_menu_color_scheme',
         'settings' => 'avalon_menu_text_color',
     )));
-    
-    
+
+
 //    Post and Page title color section
     $wp_customize->add_section('avalon_postpage_color_scheme', array(
         'title' => __('Post and Page title color scheme', 'wp-avalon'),
         'priority' => 30,
         'panel' => 'general_colors'
     ));
-    
+
 //    Single & Page title color
     $wp_customize->add_setting('avalon_page_title_color', array(
         'default' => '#FFF',
@@ -124,7 +124,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_postpage_color_scheme',
         'settings' => 'avalon_page_title_color',
     )));
-    
+
 //    Single & Page tagline color
     $wp_customize->add_setting('avalon_page_tagline_color', array(
         'default' => '#FFF',
@@ -136,15 +136,15 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_postpage_color_scheme',
         'settings' => 'avalon_page_tagline_color',
     )));
-    
-    
+
+
 //    Buttons color scheme section
     $wp_customize->add_section('avalon_buttons_color_scheme', array(
         'title' => __('Buttons color scheme', 'wp-avalon'),
         'priority' => 30,
         'panel' => 'general_colors'
     ));
-    
+
 //    Button bg color
     $wp_customize->add_setting('avalon_button_bg_color', array(
         'default' => '#337ab7',
@@ -156,7 +156,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_button_bg_color',
     )));
-    
+
 //    Button border color
     $wp_customize->add_setting('avalon_button_border_color', array(
         'default' => '#2e6da4',
@@ -168,7 +168,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_button_border_color',
     )));
-    
+
 //    Button text color
     $wp_customize->add_setting('avalon_button_text_color', array(
         'default' => '#FFF',
@@ -180,7 +180,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_button_text_color',
     )));
-    
+
 //    Button bg color hover
     $wp_customize->add_setting('avalon_hover_button_bg_color', array(
         'default' => '#286090',
@@ -192,7 +192,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_hover_button_bg_color',
     )));
-    
+
 //    Button border color hover
     $wp_customize->add_setting('avalon_hover_button_border_color', array(
         'default' => '#204d74',
@@ -204,7 +204,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_hover_button_border_color',
     )));
-    
+
 //    Button text color hover
     $wp_customize->add_setting('avalon_hover_button_text_color', array(
         'default' => '#FFF',
@@ -216,7 +216,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_hover_button_text_color',
     )));
-    
+
 //    Secondary button text color hover
     $wp_customize->add_setting('avalon_secondary_button_color', array(
         'default' => '#5bc0de',
@@ -228,7 +228,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_secondary_button_color',
     )));
-    
+
 //    Secondary button text color hover
     $wp_customize->add_setting('avalon_secondary_button_text_color', array(
         'default' => '#FFF',
@@ -240,15 +240,15 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_buttons_color_scheme',
         'settings' => 'avalon_secondary_button_text_color',
     )));
-    
-    
+
+
 //    Permalinks color scheme section
     $wp_customize->add_section('avalon_permalinks_color_scheme', array(
         'title' => __('Permalinks color scheme', 'wp-avalon'),
         'priority' => 30,
         'panel' => 'general_colors'
     ));
-    
+
 //    Permalink color
     $wp_customize->add_setting('avalon_permalink_color', array(
         'default' => '#337ab7',
@@ -260,7 +260,7 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_permalinks_color_scheme',
         'settings' => 'avalon_permalink_color',
     )));
-    
+
 //    Permalink hover color
     $wp_customize->add_setting('avalon_permalink_hover_color', array(
         'default' => '#23527c',
@@ -272,8 +272,340 @@ function avalon_customize_register($wp_customize) {
         'section' => 'avalon_permalinks_color_scheme',
         'settings' => 'avalon_permalink_hover_color',
     )));
+
+//    Headlights section
+// -----------------------------------------------------------------------------
+    $wp_customize->add_panel('headlights_panel', array(
+        'priority' => 30,
+        'capability' => 'edit_theme_options',
+        'title' => __('Headlights settings', 'wp-avalon')
+    ));
+
+//    Headlight Settings
+    $wp_customize->add_section('headlights_settings_section', array(
+        'title' => __('Headlight settings', 'wp-avalon'),
+        'panel' => 'headlights_panel',
+        'priority' => 1,
+    ));
+    // disable section
+    $wp_customize->add_setting('headlights_disable_setting', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlights_disable_setting', array(
+        'label' => __('Disable this section', 'wp-avalon'),
+        'section' => 'headlights_settings_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    // section title
+    $wp_customize->add_setting('headlights_title_setting', array(
+        'default' => __('Recommended add-ons', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlights_title_setting', array(
+        'label' => __('Headlight title', 'wp-avalon'),
+        'section' => 'headlights_settings_section',
+        'type' => 'text',
+        'priority' => 2
+    ));
     
-    
+//    Headlight first box
+    $wp_customize->add_section('headlight_1_box_section', array(
+        'title' => __('Headlight first box', 'wp-avalon'),
+        'panel' => 'headlights_panel',
+        'priority' => 2,
+    ));
+    // Enable box 1
+    $wp_customize->add_setting('headlight_1_box_hidden_settings', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlight_1_box_hidden_settings', array(
+        'label' => __('Hide this box', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'checkbox'
+    ));
+    // title 1
+    $wp_customize->add_setting('headlight_1_box_title_settings', array(
+        'default' => 'WP-Property: Walk Score',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_1_box_title_settings', array(
+        'label' => __('Title', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'text'
+    ));
+    // excerpt 1
+    $wp_customize->add_setting('headlight_1_box_excerpt_settings', array(
+        'default' => __('Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_1_box_excerpt_settings', array(
+        'label' => __('Excerpt', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'text'
+    ));
+    // price 1
+    $wp_customize->add_setting('headlight_1_box_price_settings', array(
+        'default' => '$50.00',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_1_box_price_settings', array(
+        'label' => __('Price', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'text'
+    ));
+    // read more 1
+    $wp_customize->add_setting('headlight_1_box_more_settings', array(
+        'default' => 'More details',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_1_box_more_settings', array(
+        'label' => __('Read more button label', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'text'
+    ));
+    // url 1
+    $wp_customize->add_setting('headlight_1_box_url_settings', array(
+        'default' => '#',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_1_box_url_settings', array(
+        'label' => __('Box URL', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+        'type' => 'text'
+    ));
+    // image 1
+    $wp_customize->add_setting('headlight_1_box_image_settings', array(
+        'default' => get_template_directory_uri() . '/images/fhb__image-1.png',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'headlight_1_box_image_settings', array(
+        'label' => __('Image', 'wp-avalon'),
+        'section' => 'headlight_1_box_section',
+    )));
+//    Headlight second box
+    $wp_customize->add_section('headlight_2_box_section', array(
+        'title' => __('Headlight second box', 'wp-avalon'),
+        'panel' => 'headlights_panel',
+        'priority' => 3,
+    ));
+    // Enable box 2
+    $wp_customize->add_setting('headlight_2_box_hidden_settings', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlight_2_box_hidden_settings', array(
+        'label' => __('Hide this box', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'checkbox'
+    ));
+    // title 2
+    $wp_customize->add_setting('headlight_2_box_title_settings', array(
+        'default' => 'WP-Property: Slideshow',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_2_box_title_settings', array(
+        'label' => __('Title', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'text'
+    ));
+    // excerpt 2
+    $wp_customize->add_setting('headlight_2_box_excerpt_settings', array(
+        'default' => __('Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_2_box_excerpt_settings', array(
+        'label' => __('Excerpt', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'text'
+    ));
+    // price 2
+    $wp_customize->add_setting('headlight_2_box_price_settings', array(
+        'default' => '$50.00',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_2_box_price_settings', array(
+        'label' => __('Price', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'text'
+    ));
+    // read more 2
+    $wp_customize->add_setting('headlight_2_box_more_settings', array(
+        'default' => 'More details',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_2_box_more_settings', array(
+        'label' => __('Read more button title', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'text'
+    ));
+    // url 2
+    $wp_customize->add_setting('headlight_2_box_url_settings', array(
+        'default' => '#',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_2_box_url_settings', array(
+        'label' => __('Box URL', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+        'type' => 'text'
+    ));
+    // image 2
+    $wp_customize->add_setting('headlight_2_box_image_settings', array(
+        'default' => get_template_directory_uri() . '/images/fhb__image-2.png',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'headlight_2_box_image_settings', array(
+        'label' => __('Image', 'wp-avalon'),
+        'section' => 'headlight_2_box_section',
+    )));
+//    Headlight third box
+    $wp_customize->add_section('headlight_3_box_section', array(
+        'title' => __('Headlight third box', 'wp-avalon'),
+        'panel' => 'headlights_panel',
+        'priority' => 4,
+    ));
+    // Enable box 3
+    $wp_customize->add_setting('headlight_3_box_hidden_settings', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlight_3_box_hidden_settings', array(
+        'label' => __('Hide this box', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'checkbox'
+    ));
+    // title 3
+    $wp_customize->add_setting('headlight_3_box_title_settings', array(
+        'default' => 'WP-Property: Super Map',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_3_box_title_settings', array(
+        'label' => __('Title', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'text'
+    ));
+    // excerpt 3
+    $wp_customize->add_setting('headlight_3_box_excerpt_settings', array(
+        'default' => __('Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_3_box_excerpt_settings', array(
+        'label' => __('Excerpt', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'text'
+    ));
+    // price 3
+    $wp_customize->add_setting('headlight_3_box_price_settings', array(
+        'default' => '$50.00',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_3_box_price_settings', array(
+        'label' => __('Price', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'text'
+    ));
+    // read more 3
+    $wp_customize->add_setting('headlight_3_box_more_settings', array(
+        'default' => 'More details',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_3_box_more_settings', array(
+        'label' => __('Read more button title', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'text'
+    ));
+    // url 3
+    $wp_customize->add_setting('headlight_3_box_url_settings', array(
+        'default' => '#',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_3_box_url_settings', array(
+        'label' => __('Box URL', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+        'type' => 'text'
+    ));
+    // image 3
+    $wp_customize->add_setting('headlight_3_box_image_settings', array(
+        'default' => get_template_directory_uri() . '/images/fhb__image-3.png',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'headlight_3_box_image_settings', array(
+        'label' => __('Image', 'wp-avalon'),
+        'section' => 'headlight_3_box_section',
+    )));
+//    Headlight fourth box
+    $wp_customize->add_section('headlight_4_box_section', array(
+        'title' => __('Headlight fourth box', 'wp-avalon'),
+        'panel' => 'headlights_panel',
+        'priority' => 5,
+    ));
+    // Enable box 4
+    $wp_customize->add_setting('headlight_4_box_hidden_settings', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlight_4_box_hidden_settings', array(
+        'label' => __('Hide this box', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'checkbox'
+    ));
+    // title 4
+    $wp_customize->add_setting('headlight_4_box_title_settings', array(
+        'default' => 'WP-Property: Importer',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_4_box_title_settings', array(
+        'label' => __('Title', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'text'
+    ));
+    // excerpt 4
+    $wp_customize->add_setting('headlight_4_box_excerpt_settings', array(
+        'default' => __('The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_4_box_excerpt_settings', array(
+        'label' => __('Excerpt', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'text'
+    ));
+    // price 4
+    $wp_customize->add_setting('headlight_4_box_price_settings', array(
+        'default' => '$50.00',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_4_box_price_settings', array(
+        'label' => __('Price', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'text'
+    ));
+    // read more 4
+    $wp_customize->add_setting('headlight_4_box_more_settings', array(
+        'default' => 'More details',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_4_box_more_settings', array(
+        'label' => __('Read more button title', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'text'
+    ));
+    // url 4
+    $wp_customize->add_setting('headlight_4_box_url_settings', array(
+        'default' => '#',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlight_4_box_url_settings', array(
+        'label' => __('Box URL', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+        'type' => 'text'
+    ));
+    // image 4
+    $wp_customize->add_setting('headlight_4_box_image_settings', array(
+        'default' => get_template_directory_uri() . '/images/fhb__image-4.png',
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'headlight_4_box_image_settings', array(
+        'label' => __('Image', 'wp-avalon'),
+        'section' => 'headlight_4_box_section',
+    )));
+
 
 //    Head image settings
     $wp_customize->add_section('avalon_head_image_setting', array(
@@ -579,6 +911,8 @@ function avalon_customize_css() {
         }
 
         .btn-info,
+        body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button,
+        body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button,
         body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button,
         .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li a.button,
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li,
@@ -610,6 +944,8 @@ function avalon_customize_css() {
             color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?> !important;
         }
         .btn-info:hover,
+        body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover,
+        body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover,
         body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover,
         .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_feps_column .wpp_overview_data li.actions ul li a.button:hover,
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li.active,

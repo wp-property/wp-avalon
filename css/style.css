@@ -548,6 +548,8 @@ body main.main-content .container {
   margin-top: 20px;
   /*frontpage widgetaria tabs*/
   /*frontpage widgetaria tabs*/
+  /*Frontpage headlights*/
+  /*Frontpage headlights*/
   /* Sidebar 
             ----------------------------------------------------------------- */
   /*Sidebar*/
@@ -1249,6 +1251,160 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_latest_properties_widget .property_widget_block .wpp_widget_attribute_list li .attribute {
   font-weight: 600;
+}
+body main.main-content .container .frontpage-headlights {
+  margin: 20px auto;
+}
+body main.main-content .container .frontpage-headlights .fh__title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+body main.main-content .container .frontpage-headlights .fh__box {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+}
+body main.main-content .container .frontpage-headlights .fh__box:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .frontpage-headlights .fh__box:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__image {
+  margin: 0 0 10px;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__image a {
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid #CCC;
+  width: 80%;
+  max-width: 300px;
+  -webkit-transition: border-color 0.15s ease-in-out 0s;
+  -moz-transition: border-color 0.15s ease-in-out 0s;
+  -o-transition: border-color 0.15s ease-in-out 0s;
+  transition: border-color 0.15s ease-in-out 0s;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__image a img {
+  padding: 5px;
+  opacity: 1;
+  -webkit-transition: opacity 0.15s ease-in-out 0s;
+  -moz-transition: opacity 0.15s ease-in-out 0s;
+  -o-transition: opacity 0.15s ease-in-out 0s;
+  transition: opacity 0.15s ease-in-out 0s;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__image a:hover {
+  border-color: #477fd3;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__image a:hover img {
+  opacity: 0.85;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__title {
+  margin-bottom: 10px;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__title a {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__excerpt {
+  margin-bottom: 10px;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__price {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 34px;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+  text-decoration: none;
+  max-width: 100%;
+}
+body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
+}
+body main.main-content .container .frontpage-headlights .view-more-headlights {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+  text-decoration: none;
+  max-width: 100%;
+}
+body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
 }
 body main.main-content .container .sidebar ul.sidebar_widget_list {
   margin: 0;
