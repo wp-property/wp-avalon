@@ -149,22 +149,23 @@ include_once 'theme-support/avalon-customizer.php';
 //Settings page functions
 include_once 'theme-support/avalon-theme-support-functions.php';
 
-function avalon_customizer_live_preview()
-{
-	wp_enqueue_script( 
-		  'avalon-theme-customizer',			//Give the script an ID
-		  get_template_directory_uri() . '/js/avalon-customizer.js',//Point to file
-		  array( 'jquery','customize-preview' ),	//Define dependencies
-		  '',						//Define a version (optional) 
-		  true						//Put script in footer?
-	);
+function avalon_customizer_live_preview() {
+    wp_enqueue_script(
+            'avalon-theme-customizer', //Give the script an ID
+            get_template_directory_uri() . '/js/avalon-customizer.js', //Point to file
+            array('jquery', 'customize-preview'), //Define dependencies
+            '', //Define a version (optional) 
+            true      //Put script in footer?
+    );
 }
-add_action( 'customize_preview_init', 'avalon_customizer_live_preview' );
+
+add_action('customize_preview_init', 'avalon_customizer_live_preview');
 
 function avalon_customizer_controls() {
-	wp_enqueue_script( 'avalon-customizer-controls', get_template_directory_uri() . '/js/avalon-customizer-controls.js', array( 'jquery', 'customize-controls' ), false, true );
+    wp_enqueue_script('avalon-customizer-controls', get_template_directory_uri() . '/js/avalon-customizer-controls.js', array('jquery', 'customize-controls'), false, true);
 }
-add_action( 'customize_controls_enqueue_scripts', 'avalon_customizer_controls' );
+
+add_action('customize_controls_enqueue_scripts', 'avalon_customizer_controls');
 
 function default_contact_us() {
     parse_str($_POST['data'], $data);
@@ -236,7 +237,7 @@ add_action('after_switch_theme', 'avalon_register_default_widgets');
 function avalon_register_default_widgets() {
 
     $avalon_frontpage_sidebars = array(
-        'widget-headlights' => 'widget-headlights'
+        'sidebar-headlights' => 'sidebar-headlights'
     );
 
     $active_widgets = get_option('sidebars_widgets');
@@ -244,110 +245,65 @@ function avalon_register_default_widgets() {
     /**
      * Default Headlights widgets
      */
-//    if (empty($active_widgets[$avalon_frontpage_sidebars['widget-headlights']])):
+    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-headlights']])):
 
         $avalon_counter = 1;
 
         /* widget #1 */
-        $active_widgets['widget-headlights'][0] = 'avalon-headlight-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array('title' => 'Title 1', 'text' => ' text 1 ', 'link' => '#', 'image_uri' => get_template_directory_uri() . "/images/fhb__image-1.png");
-        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
-        $avalon_counter++;
-        /* widget #2 */
-        $active_widgets['widget-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array('title' => 'Title 2', 'text' => 'Text 2', 'link' => '#', 'image_uri' => get_template_directory_uri() . "/images/fhb__image-2.png");
-        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
-        $avalon_counter++;
-        /* widget #3 */
-        $active_widgets['widget-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array('title' => 'Title 3', 'text' => 'Text 3', 'link' => '#', 'image_uri' => get_template_directory_uri() . "/images/fhb__image-3.png");
-        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
-        $avalon_counter++;
-        /* widget #4 */
-        $active_widgets['widget-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array('title' => 'Title 4', 'text' => 'Text 4', 'link' => '#', 'image_uri' => get_template_directory_uri() . "/images/fhb__image-4.png");
+        $active_widgets['sidebar-headlights'][0] = 'avalon-headlight-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => 'WP-Property: Walk Score',
+            'text' => 'Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-1.png'
+        );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
         $avalon_counter++;
 
+        /* widget #2 */
+        $active_widgets['sidebar-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => 'WP-Property: Slideshow',
+            'text' => 'Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-2.png'
+        );
+        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        /* widget #3 */
+        $active_widgets['sidebar-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => 'WP-Property: Super Map',
+            'text' => 'Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-3.png'
+        );
+        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        /* widget #4 */
+        $active_widgets['sidebar-headlights'][] = 'avalon-headlight-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => 'WP-Property: Importer',
+            'text' => 'The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-4.png'
+        );
+        update_option('widget_avalon-headlight-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        print_r($active_widgets);
         update_option('sidebars_widgets', $active_widgets);
 
-//    endif;
+    endif;
+}
 
-    /**
-     * Default Testimonials widgets
-     */
-//    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-testimonials']])):
-//
-//        $avalon_counter = 1;
-//
-//        /* testimonial widget #1 */
-//        $active_widgets['sidebar-testimonials'][0] = 'zerif_testim-widget-' . $avalon_counter;
-//        if (file_exists(get_stylesheet_directory_uri() . '/images/testimonial1.jpg')):
-//            $testimonial_content[$avalon_counter] = array('title' => 'Dana Lorem', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_stylesheet_directory_uri() . "/images/testimonial1.jpg");
-//        else:
-//            $testimonial_content[$avalon_counter] = array('title' => 'Dana Lorem', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_template_directory_uri() . "/images/testimonial1.jpg");
-//        endif;
-//        update_option('widget_zerif_testim-widget', $testimonial_content);
-//        $avalon_counter++;
-//
-//        /* testimonial widget #2 */
-//        $active_widgets['sidebar-testimonials'][] = 'zerif_testim-widget-' . $avalon_counter;
-//        if (file_exists(get_stylesheet_directory_uri() . '/images/testimonial2.jpg')):
-//            $testimonial_content[$avalon_counter] = array('title' => 'Linda Guthrie', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_stylesheet_directory_uri() . "/images/testimonial2.jpg");
-//        else:
-//            $testimonial_content[$avalon_counter] = array('title' => 'Linda Guthrie', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_template_directory_uri() . "/images/testimonial2.jpg");
-//        endif;
-//        update_option('widget_zerif_testim-widget', $testimonial_content);
-//        $avalon_counter++;
-//
-//        /* testimonial widget #3 */
-//        $active_widgets['sidebar-testimonials'][] = 'zerif_testim-widget-' . $avalon_counter;
-//        if (file_exists(get_stylesheet_directory_uri() . '/images/testimonial3.jpg')):
-//            $testimonial_content[$avalon_counter] = array('title' => 'Cynthia Henry', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_stylesheet_directory_uri() . "/images/testimonial3.jpg");
-//        else:
-//            $testimonial_content[$avalon_counter] = array('title' => 'Cynthia Henry', 'text' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.', 'image_uri' => get_template_directory_uri() . "/images/testimonial3.jpg");
-//        endif;
-//        update_option('widget_zerif_testim-widget', $testimonial_content);
-//        $avalon_counter++;
-//
-//        update_option('sidebars_widgets', $active_widgets);
-//
-//    endif;
-//
-//    /**
-//     * Default Our Team widgets
-//     */
-//    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-ourteam']])):
-//
-//        $avalon_counter = 1;
-//
-//        /* our team widget #1 */
-//        $active_widgets['sidebar-ourteam'][0] = 'zerif_team-widget-' . $avalon_counter;
-//        $ourteam_content[$avalon_counter] = array('name' => 'ASHLEY SIMMONS', 'position' => 'Project Manager', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque', 'fb_link' => '#', 'tw_link' => '#', 'bh_link' => '#', 'db_link' => '#', 'ln_link' => '#', 'image_uri' => get_template_directory_uri() . "/images/team1.png");
-//        update_option('widget_zerif_team-widget', $ourteam_content);
-//        $avalon_counter++;
-//
-//        /* our team widget #2 */
-//        $active_widgets['sidebar-ourteam'][] = 'zerif_team-widget-' . $avalon_counter;
-//        $ourteam_content[$avalon_counter] = array('name' => 'TIMOTHY SPRAY', 'position' => 'Art Director', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque', 'fb_link' => '#', 'tw_link' => '#', 'bh_link' => '#', 'db_link' => '#', 'ln_link' => '#', 'image_uri' => get_template_directory_uri() . "/images/team2.png");
-//        update_option('widget_zerif_team-widget', $ourteam_content);
-//        $avalon_counter++;
-//
-//        /* our team widget #3 */
-//        $active_widgets['sidebar-ourteam'][] = 'zerif_team-widget-' . $avalon_counter;
-//        $ourteam_content[$avalon_counter] = array('name' => 'TONYA GARCIA', 'position' => 'Account Manager', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque', 'fb_link' => '#', 'tw_link' => '#', 'bh_link' => '#', 'db_link' => '#', 'ln_link' => '#', 'image_uri' => get_template_directory_uri() . "/images/team3.png");
-//        update_option('widget_zerif_team-widget', $ourteam_content);
-//        $avalon_counter++;
-//
-//        /* our team widget #4 */
-//        $active_widgets['sidebar-ourteam'][] = 'zerif_team-widget-' . $avalon_counter;
-//        $ourteam_content[$avalon_counter] = array('name' => 'JASON LANE', 'position' => 'Business Development', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque', 'fb_link' => '#', 'tw_link' => '#', 'bh_link' => '#', 'db_link' => '#', 'ln_link' => '#', 'image_uri' => get_template_directory_uri() . "/images/team4.png");
-//        update_option('widget_zerif_team-widget', $ourteam_content);
-//        $avalon_counter++;
-//
-//        update_option('sidebars_widgets', $active_widgets);
-//
-//    endif;
+add_action('admin_enqueue_scripts', 'avalon_sidebar_headlights_widget_scripts');
+
+function avalon_sidebar_headlights_widget_scripts() {
+    wp_enqueue_media();
+    wp_enqueue_script('avalon_headlights_widget_scripts', get_template_directory_uri() . '/js/widget-media.js', false, '1.0', true);
 }
 
 class sidebar_headlights extends WP_Widget {
@@ -359,68 +315,50 @@ class sidebar_headlights extends WP_Widget {
     }
 
     function widget($args, $instance) {
-
         extract($args);
-
         echo $before_widget;
         ?>
-
         <div class="col-lg-3 col-sm-3">
-
-        <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
-
-                <div class="service-icon">
-
-            <?php if (!empty($instance['link'])) { ?>
-
-                        <a href="<?php echo $instance['link']; ?>"><i class="pixeden" style="background:url(<?php echo esc_url($instance['image_uri']); ?>) no-repeat center;width:100%; height:100%;"></i> <!-- FOCUS ICON--></a>
-
-            <?php } else { ?>
-
-                        <i class="pixeden" style="background:url(<?php echo esc_url($instance['image_uri']); ?>) no-repeat center;width:100%; height:100%;"></i> <!-- FOCUS ICON-->
-
-            <?php } ?>
-
-                </div>
-
-        <?php
-        } elseif (!empty($instance['custom_media_id'])) {
-
-            $zerif_ourfocus_custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-            if (!empty($zerif_ourfocus_custom_media_id) && !empty($zerif_ourfocus_custom_media_id[0])) {
+            <div class="fhwa__box">
+                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
+                    <div class="fhwa__box_icon">
+                        <?php if (!empty($instance['link'])) { ?>
+                            <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
+                        <?php } else { ?>
+                            <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
+                        <?php } ?>
+                    </div>
+                    <?php
+                } elseif (!empty($instance['custom_media_id'])) {
+                    $zerif_ourfocus_custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+                    if (!empty($zerif_ourfocus_custom_media_id) && !empty($zerif_ourfocus_custom_media_id[0])) {
+                        ?>
+                        <div class="fhwa__box_icon">
+                            <?php if (!empty($instance['link'])) { ?>
+                                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>);"></i></a>
+                            <?php } else { ?>
+                                <i style="background-image:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>);"></i>
+                            <?php } ?>
+                        </div>	
+                        <?php
+                    }
+                }
                 ?>
 
-                    <div class="service-icon">
-
-                <?php if (!empty($instance['link'])) { ?>
-
-                            <a href="<?php echo $instance['link']; ?>"><i class="pixeden" style="background:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>) no-repeat center;width:100%; height:100%;"></i> <!-- FOCUS ICON--></a>
-
-                <?php } else { ?>
-
-                            <i class="pixeden" style="background:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>) no-repeat center;width:100%; height:100%;"></i> <!-- FOCUS ICON-->
-
-                <?php } ?>
-
-                    </div>	
-
+                <h3 class="fhwa__box_title">
+                    <?php
+                    if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
+                    endif;
+                    ?>
+                </h3>
                 <?php
-            }
-        }
-        ?>
-
-            <h3 class="red-border-bottom"><?php if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
-        endif; ?></h3>
-            <!-- FOCUS HEADING -->
-
-        <?php
-        if (!empty($instance['text'])) {
-            echo '<p>';
-            echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
-            echo '</p>';
-        }
-        ?>	
-
+                if (!empty($instance['text'])) {
+                    echo '<p>';
+                    echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
+                    echo '</p>';
+                }
+                ?>	
+            </div>
         </div>
 
         <?php
@@ -444,35 +382,45 @@ class sidebar_headlights extends WP_Widget {
 
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
-            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php if (!empty($instance['title'])): echo $instance['title'];
-        endif; ?>" class="widefat">
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
+            if (!empty($instance['title'])): echo $instance['title'];
+            endif;
+            ?>" class="widefat">
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
-            <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>"><?php if (!empty($instance['text'])): echo htmlspecialchars_decode($instance['text']);
-        endif; ?></textarea>
+            <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>"><?php
+                if (!empty($instance['text'])): echo htmlspecialchars_decode($instance['text']);
+                endif;
+                ?></textarea>
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php if (!empty($instance['link'])): echo $instance['link'];
-        endif; ?>" class="widefat">
+            <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
+            if (!empty($instance['link'])): echo $instance['link'];
+            endif;
+            ?>" class="widefat">
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
-        <?php
-        if (!empty($instance['image_uri'])) :
-            echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
-        endif;
-        ?>
+            <?php
+            if (!empty($instance['image_uri'])) :
+                echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
+            endif;
+            ?>
 
-            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php if (!empty($instance['image_uri'])): echo $instance['image_uri'];
-        endif; ?>" style="margin-top:5px;">
+            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
+            if (!empty($instance['image_uri'])): echo $instance['image_uri'];
+            endif;
+            ?>" style="margin-top:5px;">
 
             <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
         </p>
 
-        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-        endif; ?>" />
+        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
+               if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
+               endif;
+               ?>" />
 
         <?php
     }

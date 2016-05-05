@@ -992,15 +992,15 @@ body {
 
                             img {
                                 padding: 5px;
-                                opacity: 1;
-                                .transition(opacity, 0.15s, ease-in-out, 0s);
+                                /*opacity: 1;*/
+                                /*.transition(opacity, 0.15s, ease-in-out, 0s);*/
                                 .border-radius(100%);
                             }
                             &:hover {
                                 border-color: #477fd3;
 
                                 img {
-                                    opacity: 0.85;
+                                    /*opacity: 0.85;*/
                                 }
                             }
                         }
@@ -1065,6 +1065,48 @@ body {
                         margin-bottom: 25px;
                         margin-right: -4px;
                         vertical-align: top;
+
+                        .fhwa__box {
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            margin-bottom: 15px;
+                            padding: 10px;
+                            text-align: center;
+
+                            .fhwa__box_icon {
+                                margin: 0 auto 10px;
+                                height: 150px;
+                                width: 150px;
+                                overflow: hidden;
+                                border: 4px solid #CCC;
+                                .transition(border-color, 0.15s, ease-in-out, 0s);
+                                .border-radius(100%);
+                                &:hover {
+                                    border-color: #477fd3;
+                                }
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                i {
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    .border-radius(100%);
+                                    padding: 4px;
+                                }
+                            }
+                            .fhwa__box_title {
+                                color: #444;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 1.2;
+                                text-decoration: none;
+                            }
+                        }
                     }
                 }
             }/*Frontpage headlights widget area*/
