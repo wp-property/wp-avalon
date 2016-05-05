@@ -605,6 +605,42 @@ function avalon_customize_register($wp_customize) {
         'label' => __('Image', 'wp-avalon'),
         'section' => 'headlight_4_box_section',
     )));
+    
+    //    Headlights widget area
+// -----------------------------------------------------------------------------
+    $wp_customize->add_panel('headlights_widget_area_panel', array(
+        'priority' => 31,
+        'capability' => 'edit_theme_options',
+        'title' => __('Headlights widget area settings', 'wp-avalon')
+    ));
+
+//    Headlight Settings
+    $wp_customize->add_section('headlights_wa_settings_section', array(
+        'title' => __('Area settings', 'wp-avalon'),
+        'panel' => 'headlights_widget_area_panel',
+        'priority' => 1,
+    ));
+    // disable section
+    $wp_customize->add_setting('headlights_wa_disable_setting', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('headlights_wa_disable_setting', array(
+        'label' => __('Disable widget area section', 'wp-avalon'),
+        'section' => 'headlights_wa_settings_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    // section title
+    $wp_customize->add_setting('headlights_wa_title_setting', array(
+        'default' => __('Headlight widget area title', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('headlights_wa_title_setting', array(
+        'label' => __('Headlight widget area title', 'wp-avalon'),
+        'section' => 'headlights_wa_settings_section',
+        'type' => 'text',
+        'priority' => 2
+    ));
 
 
 //    Head image settings

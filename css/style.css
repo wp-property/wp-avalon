@@ -550,6 +550,8 @@ body main.main-content .container {
   /*frontpage widgetaria tabs*/
   /*Frontpage headlights*/
   /*Frontpage headlights*/
+  /*Frontpage headlights widget area*/
+  /*Frontpage headlights widget area*/
   /* Sidebar 
             ----------------------------------------------------------------- */
   /*Sidebar*/
@@ -1405,6 +1407,25 @@ body main.main-content .container .frontpage-headlights .view-more-headlights .v
   background-color: #286090;
   border-color: #204d74;
   color: #fff;
+}
+body main.main-content .container .frontpage-headlights-widget-area {
+  margin: 20px auto;
+}
+body main.main-content .container .frontpage-headlights-widget-area .fhwa__title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+body main.main-content .container .frontpage-headlights-widget-area .fhwa__container {
+  text-align: center;
+}
+body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div {
+  display: inline-block;
+  float: none !important;
+  margin-bottom: 25px;
+  margin-right: -4px;
+  vertical-align: top;
 }
 body main.main-content .container .sidebar ul.sidebar_widget_list {
   margin: 0;
