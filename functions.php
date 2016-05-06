@@ -136,6 +136,7 @@ function empty_sidebar($sidebar) {
         return FALSE;
     }
 }
+
 //Settings page functions
 //include_once 'theme-support/avalon-theme-support-functions.php';
 
@@ -146,14 +147,14 @@ function empty_sidebar($sidebar) {
 include_once 'theme-support/avalon-customizer.php';
 
 function avalon_customizer_live_preview() {
-    wp_enqueue_script( 'avalon-theme-customizer', get_template_directory_uri() . '/js/avalon-customizer.js', array('jquery', 'customize-preview'), '', true );
+    wp_enqueue_script('avalon-theme-customizer', get_template_directory_uri() . '/js/avalon-customizer.js', array('jquery', 'customize-preview'), '', true);
 }
 
 add_action('customize_preview_init', 'avalon_customizer_live_preview');
 
 function avalon_customizer_controls() {
     wp_enqueue_script('avalon-customizer-controls', get_template_directory_uri() . '/js/avalon-customizer-controls.js', array('jquery', 'customize-controls'), false, true);
-    wp_enqueue_style( 'avalon-theme-customizer', get_template_directory_uri() . '/css/avalon-customizer.css' );
+    wp_enqueue_style('avalon-theme-customizer', get_template_directory_uri() . '/css/avalon-customizer.css');
 }
 
 add_action('customize_controls_enqueue_scripts', 'avalon_customizer_controls');
@@ -201,7 +202,8 @@ function avalon_register_widgets() {
 
 
     $avalon_sidebars = array(
-        'sidebar-headlights' => 'sidebar-headlights'
+        'sidebar-headlights' => 'sidebar-headlights',
+        'sidebar-avalon-overview' => 'sidebar-avalon-overview'
     );
 
     /* Register sidebars */
@@ -209,6 +211,8 @@ function avalon_register_widgets() {
 
         if ($avalon_sidebar == 'sidebar-headlights'):
             $avalon_sidebar_name = __('Headlights section widgets', 'wp-avalon');
+        elseif ($avalon_sidebar == 'sidebar-avalon-overview') :
+            $avalon_sidebar_name = __('Custom overview boxes', 'wp-avalon');
         endif;
 
         register_sidebar(
@@ -228,7 +232,8 @@ add_action('after_switch_theme', 'avalon_register_default_widgets');
 function avalon_register_default_widgets() {
 
     $avalon_frontpage_sidebars = array(
-        'sidebar-headlights' => 'sidebar-headlights'
+        'sidebar-headlights' => 'sidebar-headlights',
+        'sidebar-avalon-overview' => 'sidebar-avalon-overview'
     );
 
     $active_widgets = get_option('sidebars_widgets');
@@ -246,6 +251,8 @@ function avalon_register_default_widgets() {
             'title' => 'WP-Property: Walk Score',
             'text' => 'Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.',
             'link' => 'https://www.usabilitydynamics.com/product/wp-property-walkscore',
+            'price' => '$35.00',
+            'more_label' => 'More details',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-1.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -257,6 +264,8 @@ function avalon_register_default_widgets() {
             'title' => 'WP-Property: Slideshow',
             'text' => 'Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.',
             'link' => 'https://www.usabilitydynamics.com/product/wp-property-slideshow',
+            'price' => '$50.00',
+            'more_label' => 'More details',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-2.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -268,6 +277,8 @@ function avalon_register_default_widgets() {
             'title' => 'WP-Property: Super Map',
             'text' => 'Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.',
             'link' => 'https://www.usabilitydynamics.com/product/wp-property-supermap',
+            'price' => '$50.00',
+            'more_label' => 'More details',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-3.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -279,9 +290,76 @@ function avalon_register_default_widgets() {
             'title' => 'WP-Property: Importer',
             'text' => 'The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.',
             'link' => 'https://www.usabilitydynamics.com/product/wp-property-importer',
+            'price' => '$175.00',
+            'more_label' => 'More details',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-4.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        print_r($active_widgets);
+        update_option('sidebars_widgets', $active_widgets);
+
+    endif;
+
+    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-avalon-overview']])):
+
+        $avalon_counter = 1;
+
+        /* widget #1 */
+        $active_widgets['sidebar-avalon-overview'][0] = 'avalon-avalon-overview-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => __('250 S Estes Drive 52'),
+            'location' => 'Chapel Hill,  North Carolina',
+            'bads' => '1',
+            'baths' => '2',
+            'price' => '$79,500',
+            'link' => '#',
+            'image_uri' => ''
+        );
+        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        /* widget #2 */
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => __(''),
+            'location' => '',
+            'bads' => '',
+            'baths' => '',
+            'price' => '',
+            'link' => '',
+            'image_uri' => ''
+        );
+        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        /* widget #3 */
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => __(''),
+            'location' => '',
+            'bads' => '',
+            'baths' => '',
+            'price' => '',
+            'link' => '',
+            'image_uri' => ''
+        );
+        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        $avalon_counter++;
+
+        /* widget #4 */
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
+        $headlight_widget_content[$avalon_counter] = array(
+            'title' => __(''),
+            'location' => '',
+            'bads' => '',
+            'baths' => '',
+            'price' => '',
+            'link' => '',
+            'image_uri' => ''
+        );
+        update_option('widget_avalon-overview-widget', $headlight_widget_content);
         $avalon_counter++;
 
         print_r($active_widgets);
@@ -309,46 +387,37 @@ class sidebar_headlights extends WP_Widget {
         extract($args);
         echo $before_widget;
         ?>
-        <div class="col-lg-3 col-sm-3">
-            <div class="fhwa__box">
-                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
-                    <div class="fhwa__box_icon">
-                        <?php if (!empty($instance['link'])) { ?>
-                            <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
-                        <?php } else { ?>
-                            <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
-                        <?php } ?>
-                    </div>
-                    <?php
-                } elseif (!empty($instance['custom_media_id'])) {
-                    $zerif_ourfocus_custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-                    if (!empty($zerif_ourfocus_custom_media_id) && !empty($zerif_ourfocus_custom_media_id[0])) {
-                        ?>
-                        <div class="fhwa__box_icon">
-                            <?php if (!empty($instance['link'])) { ?>
-                                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>);"></i></a>
-                            <?php } else { ?>
-                                <i style="background-image:url(<?php echo esc_url($zerif_ourfocus_custom_media_id[0]); ?>);"></i>
-                            <?php } ?>
-                        </div>	
-                        <?php
-                    }
-                }
-                ?>
 
-                <h3 class="fhwa__box_title">
-                    <?php
-                    if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
-                    endif;
-                    ?>
-                </h3>
-                <?php
-                if (!empty($instance['text'])) {
-                    echo '<p>';
-                    echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
-                    echo '</p>';
-                }
-                ?>	
+        <div class="property_div property">
+            <div class="property_div_box">
+                <div class="wpp_overview_left_column">
+                    <div class="property_image">
+                        <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php $instance['title']; ?>" href="<?php $instance['image_uri']; ?>">
+                            <img width="300" height="300" style="width:300px;height:300px;" alt="<?php $instance['title']; ?>" src="<?php $instance['image_uri']; ?>">
+                        </a>
+                    </div>
+                </div>
+                <div class="wpp_overview_right_column">
+                    <ul class="wpp_overview_data">
+                        <li class="property_title">
+                            <a href="<?php $instance['link']; ?>"><?php $instance['title']; ?></a>
+                        </li>
+                        <li class="property_address">
+                            <?php $instance['location']; ?>
+                        </li>
+                    </ul>
+                    <div class="property_bottom">
+                        <div class="pb__left">
+                            <ul>
+                                <?php if(!empty($instance['bads'])) : ?><li><label>Beds: </label><?php $instance['bads']; ?></li><?php endif; ?>
+                                <?php if(!empty($instance['baths'])) : ?><li><label>Baths: </label><?php $instance['baths']; ?></li><?php endif; ?>
+                            </ul>
+                        </div>
+                        <div class="pb__right">
+                            <div class="property_price"><?php $instance['price']; ?></div>
+                        </div>
+                    </div>
+                </div>                   
             </div>
         </div>
 
@@ -362,6 +431,8 @@ class sidebar_headlights extends WP_Widget {
         $instance['text'] = stripslashes(wp_filter_post_kses($new_instance['text']));
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['link'] = strip_tags($new_instance['link']);
+        $instance['price'] = strip_tags($new_instance['price']);
+        $instance['more_label'] = strip_tags($new_instance['more_label']);
         $instance['image_uri'] = strip_tags($new_instance['image_uri']);
         $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
 
@@ -386,9 +457,23 @@ class sidebar_headlights extends WP_Widget {
                 ?></textarea>
         </p>
         <p>
+            <label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price', 'wp-avalon'); ?></label><br />
+            <input type="text" name="<?php echo $this->get_field_name('price'); ?>" id="<?php echo $this->get_field_id('price'); ?>" value="<?php
+            if (!empty($instance['price'])): echo $instance['price'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
             <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
             <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
             if (!empty($instance['link'])): echo $instance['link'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('more_label'); ?>"><?php _e('More button label', 'wp-avalon'); ?></label><br />
+            <input type="text" name="<?php echo $this->get_field_name('more_label'); ?>" id="<?php echo $this->get_field_id('more_label'); ?>" value="<?php
+            if (!empty($instance['more_label'])): echo $instance['more_label'];
             endif;
             ?>" class="widefat">
         </p>
