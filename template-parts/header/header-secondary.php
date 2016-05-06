@@ -6,25 +6,27 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
+$header_image = get_theme_mod('header_image', get_template_directory_uri() . '/images/default-header-image.jpg');
 ?>
 <div class="secondary-header <?php if (is_home() || is_front_page()) echo 'sh__frontpage'; ?>">
     <?php
     if (is_home() || is_front_page()) :
-        if (!empty(get_header_image())) :
+        if (!empty($header_image)) :
             ?>
-            <div class="secondary-header-image" style="background-image: url('<?php echo get_header_image(); ?>'); background-size: cover; background-position: center center;"></div>
+            <div class="secondary-header-image" style="background-image: url('<?php echo $header_image; ?>'); background-size: cover; background-position: center center;"></div>
             <?php
         endif;
     else :
-        $exist_images_in_head = get_option('show_featured_image_in_head_value', '1');
-        $show_head_img_or_featured_img = get_option('show_head_img_or_featured_img_value', '2');
+        $exist_images_in_head = get_theme_mod('header_image_show_featured_image_in_head', '1');
         if ($exist_images_in_head == '1') :
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
             if (!empty($featured_image)) :
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
-            elseif ($show_head_img_or_featured_img == '1' && (!empty(get_header_image()))) :
-                echo '<div class="secondary-header-image" style="background-image: url(\'' . get_header_image() . '\'); background-size: cover; background-position: center center;"></div>';
+            elseif (!empty($header_image)) :
+                echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
             endif;
+        elseif (!empty($header_image)) :
+            echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
         endif;
         echo '<div class="container">';
         if (is_page() || is_single()) :

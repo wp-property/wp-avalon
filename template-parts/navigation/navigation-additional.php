@@ -6,8 +6,8 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$contact_us_options_value = get_option('contact_us_area_settings_value', '2');
-$login_options_value = get_option('show_login_register_button_value', '1');
+$login_options_value = get_theme_mod('header_main_show_login_register_button', '1');
+$contact_us_area = get_theme_mod('header_contuctus_disable_settings', '');
 ?>
 <div class="na__wrapper">
     <?php
@@ -21,8 +21,8 @@ $login_options_value = get_option('show_login_register_button_value', '1');
         endif;
     endif;
 // -----------------
-    if ($contact_us_options_value !== '1') {
-        ?>
-        <a href="#contacts-bar" class="additional-button ab__contactus" data-toggle="tooltip" data-placement="bottom" title="Contact us">Contact Us</a>
-<?php } ?>
+    if($contact_us_area != 1) :
+    ?>
+    <a href="#contacts-bar" class="additional-button ab__contactus" data-toggle="tooltip" data-placement="bottom" title="Contact us">Contact Us</a>
+    <?php endif; ?>
 </div>

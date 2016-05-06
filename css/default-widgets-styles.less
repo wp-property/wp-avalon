@@ -1,6 +1,38 @@
 /*
 Styles for default wordpress widgets
 */
+
+@import "components";
+
+.widget {
+    background-color: #FFF;
+    padding: 10px 20px;
+    .border-radius(4px);
+    border: 1px solid #c3c5c9;
+    box-sizing: border-box;
+
+    h3.widget-title,
+    h2.widget-title {
+        background-color: #edeeef;
+        border-bottom: 1px solid #c3c5c9;
+        color: #414141;
+        font-size: 15px !important;
+        font-weight: 600;
+        line-height: 20px;
+        overflow: hidden;
+        height: 20px;
+        padding: 10px 20px;
+        box-sizing: content-box;
+        margin-left: -20px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+        width: 100%;
+        .round-corners(4px, 4px, 0, 0);
+    }
+    ul {
+        padding-left: 25px;
+    }
+}
 .widget_calendar {
 
     table#wp-calendar {
@@ -145,4 +177,27 @@ Styles for default wordpress widgets
         }
     }
 }/*widget_nav_menu*/
+
+.widget_search {
+
+    .searchform {
+        .clearfix;
+
+        .screen-reader-text {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        input[type="text"] {
+            .default-input-style;
+            float: left;
+            width: 73%;
+        }
+        input[type="submit"] {
+            .submit-button-style;
+            float: right;
+            width: 23%;
+        }
+    }
+}/*widget_search*/
 

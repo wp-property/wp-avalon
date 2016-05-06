@@ -1,6 +1,153 @@
 /*
 Styles for default wordpress widgets
 */
+/*Fonts*/
+.glyphicon-font {
+  font-family: 'Glyphicons Halflings';
+}
+.ubuntu-font {
+  font-family: 'Ubuntu', sans-serif;
+}
+/*Fonts*/
+.placeholder::-webkit-input-placeholder {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.placeholder:-moz-placeholder {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.placeholder::-moz-placeholder {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.placeholder:-ms-input-placeholder {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.placeholder:focus::-webkit-input-placeholder {
+  color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.placeholder:focus:-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.placeholder:focus::-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.placeholder:focus:-ms-input-placeholder {
+  color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.clearfix:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.clearfix-disable:before {
+  display: none;
+}
+.clearfix-disable:after {
+  display: none;
+}
+.default-input-style {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.default-input-style:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.submit-button-style {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+}
+.submit-button-style:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
+}
+.widget {
+  background-color: #FFF;
+  padding: 10px 20px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border: 1px solid #c3c5c9;
+  box-sizing: border-box;
+}
+.widget h3.widget-title,
+.widget h2.widget-title {
+  background-color: #edeeef;
+  border-bottom: 1px solid #c3c5c9;
+  color: #414141;
+  font-size: 15px !important;
+  font-weight: 600;
+  line-height: 20px;
+  overflow: hidden;
+  height: 20px;
+  padding: 10px 20px;
+  box-sizing: content-box;
+  margin-left: -20px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+}
+.widget ul {
+  padding-left: 25px;
+}
 .widget_calendar table#wp-calendar {
   margin: 0 auto;
   max-width: 400px;
@@ -104,3 +251,77 @@ Styles for default wordpress widgets
   position: relative;
 }
 /*widget_nav_menu*/
+.widget_search .searchform:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+.widget_search .searchform:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.widget_search .searchform .screen-reader-text {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.widget_search .searchform input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  float: left;
+  width: 73%;
+}
+.widget_search .searchform input[type="text"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.widget_search .searchform input[type="submit"] {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+  float: right;
+  width: 23%;
+}
+.widget_search .searchform input[type="submit"]:hover {
+  background-color: #286090;
+  border-color: #204d74;
+  color: #fff;
+}
+/*widget_search*/

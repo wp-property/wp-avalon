@@ -1,0 +1,8 @@
+/*
+WP Avalon customizer styles
+*/
+
+#customize-theme-controls li#accordion-section-wp_property_disabled_settings_section .accordion-section-title::after {
+    content: "\f160";
+}
+

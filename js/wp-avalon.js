@@ -43,6 +43,20 @@ function frontpage_headlights() {
         columns.height(height);
     });
 }
+function frontpage_headlights_widgets() {
+    var widgets = jQuery('body .frontpage-headlights-widget-area');
+    widgets.each(function(key, value) {
+        var height = 0,
+                columns = jQuery('.fhwa__box > p', jQuery(value));
+        columns.each(function(key1, value1) {
+            var currentHeight = jQuery(value1).outerHeight();
+            if (currentHeight > height) {
+                height = currentHeight;
+            }
+        });
+        columns.height(height);
+    });
+}
 
 function property_grid(window_load) {
     var width = jQuery(window).width();
@@ -73,6 +87,7 @@ jQuery(window).load(function() {
     
 //    Frontpage headlights
     frontpage_headlights();
+    frontpage_headlights_widgets();
 
 });
 jQuery(function() {

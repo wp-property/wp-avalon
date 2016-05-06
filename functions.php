@@ -44,7 +44,10 @@ function avalon_theme_setup() {
     add_theme_support('automatic-feed-links');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('custom-header');
+//    $custom_header_default = array(
+//        'default-image' => get_template_directory_uri() . '/images/default-header-image.jpg'
+//    );
+//    add_theme_support('custom-header', $custom_header_default);
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');
@@ -61,15 +64,15 @@ register_nav_menus(array(
  * Theme support menu.
  * @since Avalon 1.0
  */
-add_action('admin_menu', 'avalon_theme_support');
-
-function avalon_theme_support() {
-    add_theme_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
-}
-
-function avalon_themesupport() {
-    include get_template_directory() . '/theme-support/avalon-theme-support.php';
-}
+//add_action('admin_menu', 'avalon_theme_support');
+//
+//function avalon_theme_support() {
+//    add_theme_page('Theme support', 'Theme support', 'manage_options', 'avalon_themesupport', 'avalon_themesupport', '', 61);
+//}
+//
+//function avalon_themesupport() {
+//    include get_template_directory() . '/theme-support/avalon-theme-support.php';
+//}
 
 /**
  * Registers a widget area.
@@ -112,15 +115,6 @@ function avalon_widgets_init() {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
-//    register_sidebar(array(
-//        'name' => __('Headlights section widgets', 'wp-avalon'),
-//        'id' => 'sidebar-headlights',
-//        'description' => __('Headlights section widgets area', 'wp-avalon'),
-//        'before_widget' => '',
-//        'after_widget' => '',
-//        'before_title' => '<h2 class="widget-title">',
-//        'after_title' => '</h2>',
-//    ));
 }
 
 add_action('widgets_init', 'avalon_widgets_init');
@@ -142,27 +136,24 @@ function empty_sidebar($sidebar) {
         return FALSE;
     }
 }
+//Settings page functions
+//include_once 'theme-support/avalon-theme-support-functions.php';
 
-//Theme customizer
+
+/**
+ * Theme customizer
+ */
 include_once 'theme-support/avalon-customizer.php';
 
-//Settings page functions
-include_once 'theme-support/avalon-theme-support-functions.php';
-
 function avalon_customizer_live_preview() {
-    wp_enqueue_script(
-            'avalon-theme-customizer', //Give the script an ID
-            get_template_directory_uri() . '/js/avalon-customizer.js', //Point to file
-            array('jquery', 'customize-preview'), //Define dependencies
-            '', //Define a version (optional) 
-            true      //Put script in footer?
-    );
+    wp_enqueue_script( 'avalon-theme-customizer', get_template_directory_uri() . '/js/avalon-customizer.js', array('jquery', 'customize-preview'), '', true );
 }
 
 add_action('customize_preview_init', 'avalon_customizer_live_preview');
 
 function avalon_customizer_controls() {
     wp_enqueue_script('avalon-customizer-controls', get_template_directory_uri() . '/js/avalon-customizer-controls.js', array('jquery', 'customize-controls'), false, true);
+    wp_enqueue_style( 'avalon-theme-customizer', get_template_directory_uri() . '/css/avalon-customizer.css' );
 }
 
 add_action('customize_controls_enqueue_scripts', 'avalon_customizer_controls');
@@ -254,7 +245,7 @@ function avalon_register_default_widgets() {
         $headlight_widget_content[$avalon_counter] = array(
             'title' => 'WP-Property: Walk Score',
             'text' => 'Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.',
-            'link' => '#',
+            'link' => 'https://www.usabilitydynamics.com/product/wp-property-walkscore',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-1.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -265,7 +256,7 @@ function avalon_register_default_widgets() {
         $headlight_widget_content[$avalon_counter] = array(
             'title' => 'WP-Property: Slideshow',
             'text' => 'Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.',
-            'link' => '#',
+            'link' => 'https://www.usabilitydynamics.com/product/wp-property-slideshow',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-2.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -276,7 +267,7 @@ function avalon_register_default_widgets() {
         $headlight_widget_content[$avalon_counter] = array(
             'title' => 'WP-Property: Super Map',
             'text' => 'Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.',
-            'link' => '#',
+            'link' => 'https://www.usabilitydynamics.com/product/wp-property-supermap',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-3.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
@@ -287,7 +278,7 @@ function avalon_register_default_widgets() {
         $headlight_widget_content[$avalon_counter] = array(
             'title' => 'WP-Property: Importer',
             'text' => 'The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.',
-            'link' => '#',
+            'link' => 'https://www.usabilitydynamics.com/product/wp-property-importer',
             'image_uri' => get_template_directory_uri() . '/images/fhb__image-4.png'
         );
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
