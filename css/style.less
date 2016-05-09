@@ -15,7 +15,7 @@ License URI:
 body {
     font-family: "Ubuntu",sans-serif !important;
 
-    
+
     /*Default inputs*/
     input[type="text"],
     input[type="tel"],
@@ -33,8 +33,8 @@ body {
         .submit-button-style;
     }
     /*Default inputs*/
-    
-    
+
+
     /*Header bar*/
     .header-bar {
         background-color: #3f72bc;
@@ -390,9 +390,9 @@ body {
         .secondary-header {
             position: relative;
             background-color: #2b5188;
-            height: 175px;
+            height: 400px;
             &.sh__frontpage {
-                height: 275px;
+                height: 600px;
             }
 
             .secondary-header-image {
@@ -401,6 +401,7 @@ body {
                 left: 0;
                 height: 100%;
                 width: 100%;
+                z-index: 1;
 
                 &:after {
                     position: absolute;
@@ -426,58 +427,152 @@ body {
                 position: relative;
                 margin-top: 0;
 
-                .carousel {
-                    .ubuntu-font;
-                    height: 275px;
+                .wellcome-text-box {
+                    .text-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.5));
+                    padding-top: 150px;
+                    color: #FFF;
+                    font-size: 21px;
+                    line-height: 1.5;
+                    font-weight: 500;
+                    text-align: center;
+                    position: relative;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 3;
 
-                    .carousel-inner {
-
-                        .item {
-                            padding-top: 35px;
-
-                            .item-title {
-                                font-size: 41px;
-                                font-weight: 600;
-                                line-height: 1.4;
-                                color: #FFF;
-                                .text-shadow(0, 0, 4px, rgba(0, 0, 0, 0.6));
-                            }
-                            .item-excerpt {
-                                font-size: 15px;
-                                line-height: 1.5;
-                                color: #FFF;
-                                .text-shadow(0, 0, 4px, rgba(0, 0, 0, 0.6));
-                            }
-                        }
+                    h1 {
+                        font-size: 50px;
+                        line-height: 1.6;
+                        color: #fff;
+                        font-weight: 600;
+                        margin: 0 0 15px;
+                        text-align: center;
                     }
-                    .carousel-control {
-                        background: url('../images/carousel-arrows.png') no-repeat;
-                        bottom: 75px;
-                        height: 34px;
-                        top: auto;
-                        width: 34px;
+                    a {
+                        color: #FFF;
+                        text-decoration: underline;
+                    }
 
-                        &.left {
-                            left: 0;
-                            background-position: 0 0;
+                    .wellcome-box-property-search {
+                        color: #000;
+                        text-align: left;
+                        margin-top: 30px;
+                        padding: 0 20px;
 
-                            &:hover {
-                                background-size: 0 -34px;
-                            }
-                        }
-                        &.right {
-                            background-position: -35px 0;
-                            left: 48px;
-                            right: auto;
+                        .wpp_shortcode_search_form {
+                            padding: 10px 20px;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            .border-radius(4px);
+                            .clearfix;
 
-                            &:hover {
-                                background-size: -35px -34px;
+                            .wpp_search_elements {
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+
+                                >li {
+                                    display: block;
+                                    float: left;
+                                    width: 90% !important;
+                                    &.submit {
+                                        width: 10% !important;
+                                        text-align: right;
+                                        vertical-align: bottom;
+
+                                        .submit {
+                                            .submit-button-style;
+                                            margin-top: 27px;
+                                        }
+                                    }
+                                }
+                                ul {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                }
+                                ul.wpp_search_group {
+                                    margin: 0 -10px;
+
+                                    >li {
+                                        width: 20%;
+                                        min-height: 62px;
+                                        margin-bottom: 15px;
+                                        float: left;
+                                        padding: 0 10px;
+
+                                        >label {
+                                            color: #FFF;
+                                            display: block;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                        }
+                                        .wpp_search_attribute_wrap {
+                                            min-height: 35px;
+                                            .clearfix;
+
+                                            input[type="text"] {
+                                                .default-input-style;
+                                                &.wpp_search_input_field_min,
+                                                &.wpp_search_input_field_max {
+                                                    display: inline-block;
+                                                    width: 45%;
+                                                }
+                                            }
+                                            .wpp_multi_checkbox {
+
+                                                li {
+                                                    display: inline-block;
+                                                    margin-right: 5px;
+
+                                                    label {
+                                                        font-weight: 400;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .wpp_dash,
+                                        .delimiter {
+                                            display: inline-block;
+                                            width: 4%;
+                                            text-align: center;
+                                        }
+                                        .bootstrap-select {
+                                            width: 97%;
+                                        }
+                                        &.seach_attribute_price {
+
+                                            .wpp_search_attribute_wrap {
+
+                                                .bootstrap-select {
+                                                    width: 45%;
+                                                    display: inline-block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                >li {
+                                    display: block;
+                                    width: 100%;
+                                    &.submit {
+                                        text-align: right;
+                                        vertical-align: bottom;
+
+                                        .submit {
+                                            margin-top: 30px;
+                                            .submit-button-style;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-        }/*Carousel*/
+        }/*Secondary header*/
 
         /* Container
         --------------------------------------------------------------------- */
@@ -495,6 +590,7 @@ body {
                 margin-top: -73px;
                 margin-bottom: 20px;
                 position: relative;
+                z-index: 3;
 
                 .nav-tabs {
                     border: none;
@@ -1130,6 +1226,207 @@ body {
                     }
                 }
             }/*Frontpage headlights widget area*/
+
+            /*Frontpage overview widget area*/
+            .frontpage-overview-widget-area {
+                margin: 20px auto;
+
+                .fowa__title {
+                    text-align: center;
+                    font-size: 28px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                .fowa__container {
+
+                    .property {
+                        display: inline-block;
+                        float: left;
+                        margin-bottom: 15px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        vertical-align: top;
+                        width: 25%;
+
+                        .property_div_box {
+                            .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.15));
+                            .border-radius(4px);
+                            background-color: #FFF;
+                            border: 1px solid #c3c5c9;
+                            height: 100%;
+                            padding-bottom: 44px;
+                            position: relative;
+                            width: 100%;
+
+                            .wpp_overview_left_column {
+                                padding: 10px;
+
+                                .property_image {
+                                    text-align: center;
+
+                                    a.thumbnail {
+                                        .border-radius(0px);
+                                        border: medium none !important;
+                                        display: inline-block;
+                                        margin: 0 auto;
+                                        padding: 0;
+                                        position: relative;
+                                        height: auto;
+                                        width: auto;
+                                        max-width: 100%;
+                                        &:after {
+                                            .box-shadow-inset(0, 2px, 5px, rgba(0, 0, 0, 0.35));
+                                            content: "";
+                                            display: block;
+                                            height: 100%;
+                                            left: 0;
+                                            position: absolute;
+                                            top: 0;
+                                            width: 100%;
+                                            z-index: 2;
+                                        }
+
+                                        img {
+                                            .transition(opacity, 0.15s, ease-in-out, 0s);
+                                            height: auto !important;
+                                            max-width: 100%;
+                                        }
+                                        &:hover {
+
+                                            img {
+                                                opacity: 0.8;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .wpp_overview_right_column {
+
+                                ul.wpp_overview_data {
+                                    margin: 0 0 10px;
+                                    padding: 0 10px;
+                                    list-style: none;
+
+                                    li {
+                                        color: rgba(65, 65, 65, 0.7);
+                                        font-size: 13px;
+
+                                        a {
+                                            color: rgba(65, 65, 65, 0.7);
+                                        }
+                                        &.property_title {
+                                            margin-bottom: 5px;
+
+                                            a {
+                                                .transition(color, 0.15s, ease-in-out, 0s);
+                                                text-transform: uppercase;
+                                                font-size: 13px;
+                                                color: #414141;
+                                                font-weight: 600;
+                                                text-decoration: none;
+                                                &:hover {
+                                                    color: #4a83db;
+                                                }
+                                            }
+                                        }
+                                        &.child_properties {
+                                            border-top: 1px dashed #cbccd0;
+                                            margin: 6px 0;
+                                            padding: 4px 0 0;
+
+                                            table {
+                                                width: 100%;
+
+                                                .property_child_row {
+                                                    background-color: #efefef;
+                                                    &:nth-child(2n) {
+                                                        background-color: #FFF;
+                                                    }
+                                                    td, th {
+                                                        padding: 3px 5px;
+                                                    }
+                                                    .property_child_price {
+                                                        text-align: right;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        a.button {
+                                            background-color: #5bc0de;
+                                            border-radius: 4px;
+                                            color: #fff !important;
+                                            display: inline-block;
+                                            margin: 5px 0 0;
+                                            padding: 3px 7px;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                                .property_bottom {
+                                    .clearfix;
+                                    .round-corners(0, 0, 4px, 4px);
+                                    background-color: #efefef;
+                                    border-top: 1px solid #c0c2c7;
+                                    height: 45px;
+                                    padding: 0 10px;
+                                    bottom: 0;
+                                    width: 100%;
+                                    position: absolute;
+                                    &:before {
+                                        background-color: #fff;
+                                        border-bottom: 1px solid #c0c2c7;
+                                        border-right: 1px solid #c0c2c7;
+                                        content: "";
+                                        display: block;
+                                        height: 10px;
+                                        position: absolute;
+                                        right: 25px;
+                                        top: -5px;
+                                        .rotate(45deg);
+                                        width: 10px;
+                                    }
+
+                                    .pb__left {
+                                        float: left;
+                                        width: 45%;
+                                        font-size: 10px;
+                                        line-height: 1;
+                                        padding: 7px 0 0;
+                                        color: rgba(65, 65, 65, 0.4);
+
+                                        ul {
+                                            margin: 0;
+                                            padding: 0;
+                                            list-style: none;
+
+                                            li {
+
+                                                label {
+                                                    margin-right: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .pb__right {
+                                        float: right;
+                                        width: 55%;
+                                        text-align: right;
+
+                                        .property_price {
+                                            color: #414141;
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            padding: 10px 0;
+                                            line-height: 14px;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }/*Frontpage overview widget area*/
 
             /* Sidebar 
             ----------------------------------------------------------------- */

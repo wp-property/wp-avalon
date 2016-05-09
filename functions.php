@@ -199,6 +199,7 @@ add_action('widgets_init', 'avalon_register_widgets');
 function avalon_register_widgets() {
 
     register_widget('sidebar_headlights');
+    register_widget('sidebar_avalon_overview');
 
 
     $avalon_sidebars = array(
@@ -212,7 +213,7 @@ function avalon_register_widgets() {
         if ($avalon_sidebar == 'sidebar-headlights'):
             $avalon_sidebar_name = __('Headlights section widgets', 'wp-avalon');
         elseif ($avalon_sidebar == 'sidebar-avalon-overview') :
-            $avalon_sidebar_name = __('Custom overview boxes', 'wp-avalon');
+            $avalon_sidebar_name = __('Default property overview widgets', 'wp-avalon');
         endif;
 
         register_sidebar(
@@ -297,7 +298,6 @@ function avalon_register_default_widgets() {
         update_option('widget_avalon-headlight-widget', $headlight_widget_content);
         $avalon_counter++;
 
-        print_r($active_widgets);
         update_option('sidebars_widgets', $active_widgets);
 
     endif;
@@ -307,72 +307,71 @@ function avalon_register_default_widgets() {
         $avalon_counter = 1;
 
         /* widget #1 */
-        $active_widgets['sidebar-avalon-overview'][0] = 'avalon-avalon-overview-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array(
+        $active_widgets['sidebar-avalon-overview'][0] = 'avalon-property-overview-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
             'title' => __('250 S Estes Drive 52'),
             'location' => 'Chapel Hill,  North Carolina',
             'bads' => '1',
             'baths' => '2',
             'price' => '$79,500',
             'link' => '#',
-            'image_uri' => ''
+            'image_uri' => get_template_directory_uri() . '/images/property_default_image_1.jpeg'
         );
-        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        update_option('widget_avalon-property-overview-widget', $overview_widget_content);
         $avalon_counter++;
 
         /* widget #2 */
-        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array(
-            'title' => __(''),
-            'location' => '',
-            'bads' => '',
-            'baths' => '',
-            'price' => '',
-            'link' => '',
-            'image_uri' => ''
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('2412 Environ Way 2412'),
+            'location' => 'Chapel Hill,  North Carolina',
+            'bads' => '3',
+            'baths' => '2',
+            'price' => '$475.000',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/property_default_image_2.jpeg'
         );
-        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        update_option('widget_avalon-property-overview-widget', $overview_widget_content);
         $avalon_counter++;
 
         /* widget #3 */
-        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array(
-            'title' => __(''),
-            'location' => '',
-            'bads' => '',
-            'baths' => '',
-            'price' => '',
-            'link' => '',
-            'image_uri' => ''
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('5500 Fortunes Ridge Drive 78b'),
+            'location' => 'Durham,  North Carolina',
+            'bads' => '1',
+            'baths' => '1',
+            'price' => '$122.000',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/property_default_image_3.jpeg'
         );
-        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        update_option('widget_avalon-property-overview-widget', $overview_widget_content);
         $avalon_counter++;
 
         /* widget #4 */
-        $active_widgets['sidebar-avalon-overview'][] = 'avalon-avalon-overview-widget-' . $avalon_counter;
-        $headlight_widget_content[$avalon_counter] = array(
-            'title' => __(''),
-            'location' => '',
-            'bads' => '',
-            'baths' => '',
-            'price' => '',
-            'link' => '',
-            'image_uri' => ''
+        $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('424 E Rose Street'),
+            'location' => 'Smithfield,  North Carolina',
+            'bads' => '3',
+            'baths' => '1',
+            'price' => '$99.000',
+            'link' => '#',
+            'image_uri' => get_template_directory_uri() . '/images/property_default_image_4.jpeg'
         );
-        update_option('widget_avalon-overview-widget', $headlight_widget_content);
+        update_option('widget_avalon-property-overview-widget', $overview_widget_content);
         $avalon_counter++;
 
-        print_r($active_widgets);
         update_option('sidebars_widgets', $active_widgets);
 
     endif;
 }
 
-add_action('admin_enqueue_scripts', 'avalon_sidebar_headlights_widget_scripts');
+add_action('admin_enqueue_scripts', 'avalon_sidebar_widget_scripts');
 
-function avalon_sidebar_headlights_widget_scripts() {
+function avalon_sidebar_widget_scripts() {
     wp_enqueue_media();
-    wp_enqueue_script('avalon_headlights_widget_scripts', get_template_directory_uri() . '/js/widget-media.js', false, '1.0', true);
+    wp_enqueue_script('avalon_widget_scripts', get_template_directory_uri() . '/js/widget-media.js', false, '1.0', true);
 }
 
 class sidebar_headlights extends WP_Widget {
@@ -388,36 +387,46 @@ class sidebar_headlights extends WP_Widget {
         echo $before_widget;
         ?>
 
-        <div class="property_div property">
-            <div class="property_div_box">
-                <div class="wpp_overview_left_column">
-                    <div class="property_image">
-                        <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php $instance['title']; ?>" href="<?php $instance['image_uri']; ?>">
-                            <img width="300" height="300" style="width:300px;height:300px;" alt="<?php $instance['title']; ?>" src="<?php $instance['image_uri']; ?>">
-                        </a>
+        <div class="col-lg-3 col-sm-3">
+            <div class="fhwa__box">
+                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
+                    <div class="fhwa__box_icon">
+                        <?php if (!empty($instance['link'])) { ?>
+                            <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
+                        <?php } else { ?>
+                            <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
+                        <?php } ?>
                     </div>
-                </div>
-                <div class="wpp_overview_right_column">
-                    <ul class="wpp_overview_data">
-                        <li class="property_title">
-                            <a href="<?php $instance['link']; ?>"><?php $instance['title']; ?></a>
-                        </li>
-                        <li class="property_address">
-                            <?php $instance['location']; ?>
-                        </li>
-                    </ul>
-                    <div class="property_bottom">
-                        <div class="pb__left">
-                            <ul>
-                                <?php if(!empty($instance['bads'])) : ?><li><label>Beds: </label><?php $instance['bads']; ?></li><?php endif; ?>
-                                <?php if(!empty($instance['baths'])) : ?><li><label>Baths: </label><?php $instance['baths']; ?></li><?php endif; ?>
-                            </ul>
-                        </div>
-                        <div class="pb__right">
-                            <div class="property_price"><?php $instance['price']; ?></div>
-                        </div>
-                    </div>
-                </div>                   
+                    <?php
+                } elseif (!empty($instance['custom_media_id'])) {
+                    $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+                    if (!empty($custom_media_id) && !empty($custom_media_id[0])) {
+                        ?>
+                        <div class="fhwa__box_icon">
+                            <?php if (!empty($instance['link'])) { ?>
+                                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i></a>
+                            <?php } else { ?>
+                                <i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i>
+                            <?php } ?>
+                        </div>	
+                        <?php
+                    }
+                }
+                ?>
+
+                <h3 class="fhwa__box_title">
+                    <?php
+                    if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
+                    endif;
+                    ?>
+                </h3>
+                <?php
+                if (!empty($instance['text'])) {
+                    echo '<p>';
+                    echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
+                    echo '</p>';
+                }
+                ?>	
             </div>
         </div>
 
@@ -474,6 +483,154 @@ class sidebar_headlights extends WP_Widget {
             <label for="<?php echo $this->get_field_id('more_label'); ?>"><?php _e('More button label', 'wp-avalon'); ?></label><br />
             <input type="text" name="<?php echo $this->get_field_name('more_label'); ?>" id="<?php echo $this->get_field_id('more_label'); ?>" value="<?php
             if (!empty($instance['more_label'])): echo $instance['more_label'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
+            <?php
+            if (!empty($instance['image_uri'])) :
+                echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
+            endif;
+            ?>
+
+            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
+            if (!empty($instance['image_uri'])): echo $instance['image_uri'];
+            endif;
+            ?>" style="margin-top:5px;">
+
+            <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+        </p>
+
+        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
+               if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
+               endif;
+               ?>" />
+
+        <?php
+    }
+
+}
+
+class sidebar_avalon_overview extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct(
+                'avalon-property-overview-widget', __('WP Avalon - Property overview widget', 'wp-avalon')
+        );
+    }
+
+    function widget($args, $instance) {
+        extract($args);
+        echo $before_widget;
+        
+        $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"] );
+        ?>
+
+        <div class="property_div property">
+            <div class="property_div_box">
+                <?php if( !empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image') ) : ?>
+                <div class="wpp_overview_left_column">
+                    <div class="property_image">
+                        <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($instance['image_uri']); ?>">
+                            <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>">
+                        </a>
+                    </div>
+                </div>
+                <?php elseif( !empty($custom_media_id) && !empty($custom_media_id[0]) ) : ?>
+                <div class="wpp_overview_left_column">
+                    <div class="property_image">
+                        <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
+                            <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
+                        </a>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <div class="wpp_overview_right_column">
+                    <ul class="wpp_overview_data">
+                        <li class="property_title">
+                            <a href="<?php echo $instance['link']; ?>"><?php echo $instance['title']; ?></a>
+                        </li>
+                        <li class="property_address">
+                            <?php echo $instance['location']; ?>
+                        </li>
+                    </ul>
+                    <div class="property_bottom">
+                        <div class="pb__left">
+                            <ul>
+                                <?php if(!empty($instance['bads'])) : ?><li><label>Beds: </label><?php echo $instance['bads']; ?></li><?php endif; ?>
+                                <?php if(!empty($instance['baths'])) : ?><li><label>Baths: </label><?php echo $instance['baths']; ?></li><?php endif; ?>
+                            </ul>
+                        </div>
+                        <div class="pb__right">
+                            <div class="property_price"><?php echo $instance['price']; ?></div>
+                        </div>
+                    </div>
+                </div>                   
+            </div>
+        </div>
+
+        <?php
+        echo $after_widget;
+    }
+
+    function update($new_instance, $old_instance) {
+
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['location'] = strip_tags($new_instance['location']);
+        $instance['bads'] = strip_tags($new_instance['bads']);
+        $instance['baths'] = strip_tags($new_instance['baths']);
+        $instance['price'] = strip_tags($new_instance['price']);
+        $instance['link'] = strip_tags($new_instance['link']);
+        $instance['image_uri'] = strip_tags($new_instance['image_uri']);
+        $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
+
+        return $instance;
+    }
+
+    function form($instance) {
+        ?>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
+            if (!empty($instance['title'])): echo $instance['title'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('location'); ?>"><?php _e('Location', 'wp-avalon'); ?></label><br/>
+            <input type="text" name="<?php echo $this->get_field_name('location'); ?>" id="<?php echo $this->get_field_id('location'); ?>" value="<?php
+            if (!empty($instance['location'])): echo $instance['location'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('bads'); ?>"><?php _e('Bads', 'wp-avalon'); ?></label><br/>
+            <input type="text" name="<?php echo $this->get_field_name('bads'); ?>" id="<?php echo $this->get_field_id('bads'); ?>" value="<?php
+            if (!empty($instance['bads'])): echo $instance['bads'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('baths'); ?>"><?php _e('Baths', 'wp-avalon'); ?></label><br/>
+            <input type="text" name="<?php echo $this->get_field_name('baths'); ?>" id="<?php echo $this->get_field_id('baths'); ?>" value="<?php
+            if (!empty($instance['baths'])): echo $instance['baths'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price', 'wp-avalon'); ?></label><br />
+            <input type="text" name="<?php echo $this->get_field_name('price'); ?>" id="<?php echo $this->get_field_id('price'); ?>" value="<?php
+            if (!empty($instance['price'])): echo $instance['price'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
+            <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
+            if (!empty($instance['link'])): echo $instance['link'];
             endif;
             ?>" class="widefat">
         </p>

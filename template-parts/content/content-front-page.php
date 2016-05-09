@@ -17,6 +17,8 @@
     
     <?php get_template_part('template-parts/front-page/frontpage-overview-widget-area', 'wp-avalon'); ?>
     
+    <?php get_template_part('template-parts/front-page/frontpage-addons-widget-area', 'wp-avalon'); ?>
+    
     <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
     <?php
     the_post();

@@ -5,11 +5,7 @@ function avalon_customize_register($wp_customize) {
     class WP_Avalon_Theme_Support_WP_Property extends WP_Customize_Control {
 
         public function render_content() {
-            if (function_exists('ud_check_wp_property')) {
-                
-            } else {
-                echo __('Please, install or activate a <a href="https://www.usabilitydynamics.com/product/wp-property">WP Property</a> FREE plugin to use this option ', 'wp-avalon');
-            }
+            echo __('Please, install or activate a <a href="https://www.usabilitydynamics.com/product/wp-property">WP Property</a> FREE plugin to use this option ', 'wp-avalon');
         }
 
     }
@@ -290,7 +286,7 @@ function avalon_customize_register($wp_customize) {
 //    Headlights section
 // -----------------------------------------------------------------------------
     $wp_customize->add_panel('headlights_panel', array(
-        'priority' => 31,
+        'priority' => 32,
         'capability' => 'edit_theme_options',
         'title' => __('Headlights settings', 'wp-avalon')
     ));
@@ -623,7 +619,7 @@ function avalon_customize_register($wp_customize) {
 //    Headlights widget area
 // -----------------------------------------------------------------------------
     $wp_customize->add_panel('headlights_widget_area_panel', array(
-        'priority' => 31,
+        'priority' => 33,
         'capability' => 'edit_theme_options',
         'title' => __('Headlights widget area settings', 'wp-avalon')
     ));
@@ -659,7 +655,7 @@ function avalon_customize_register($wp_customize) {
 //    WP Property settings
     if (function_exists('ud_check_wp_property')) {
         $wp_customize->add_panel('wp_property_settings_control', array(
-            'priority' => 32,
+            'priority' => 33,
             'capability' => 'edit_theme_options',
             'title' => __('WP Property settings', 'wp-avalon')
         ));
@@ -700,7 +696,7 @@ function avalon_customize_register($wp_customize) {
 //  Header settings
 //  --------------------------------------------------------------------------
     $wp_customize->add_panel('header_main_settings_control', array(
-        'priority' => 33,
+        'priority' => 31,
         'capability' => 'edit_theme_options',
         'title' => __('Header settings', 'wp-avalon')
     ));
@@ -747,21 +743,6 @@ function avalon_customize_register($wp_customize) {
         'type' => 'checkbox',
         'priority' => 1
     ));
-    // Blur settings
-    $wp_customize->add_setting('header_image__blur_setting', array(
-        'capability' => 'edit_theme_options',
-        'default' => '0'
-    ));
-    $wp_customize->add_control('header_image__blur_setting', array(
-        'label' => __('Blur image. Default: 0', 'wp-avalon'),
-        'section' => 'header_image_settings_section',
-        'type' => 'range',
-        'input_attrs' => array(
-            'min' => 0,
-            'max' => 5,
-            'step' => 1,
-        ),
-    ));
 //    Blackout color
     $wp_customize->add_setting('header_image__blackout_color', array(
         'default' => '#000000',
@@ -775,7 +756,22 @@ function avalon_customize_register($wp_customize) {
 //    Blackout opacity
     $wp_customize->add_setting('header_image__opacity_setting', array(
         'capability' => 'edit_theme_options',
-        'default' => '0'
+        'default' => '0.3'
+    ));
+    $wp_customize->add_control('header_image__opacity_setting', array(
+        'label' => __('Blackout opacity (type "0.0-1.0" of opacity). Default: 0', 'wp-avalon'),
+        'section' => 'header_image_settings_section',
+        'type' => 'range',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 1,
+            'step' => 0.1,
+        ),
+    ));
+//    Blackout opacity
+    $wp_customize->add_setting('header_image__opacity_setting', array(
+        'capability' => 'edit_theme_options',
+        'default' => '0.3'
     ));
     $wp_customize->add_control('header_image__opacity_setting', array(
         'label' => __('Blackout opacity (type "0.0-1.0" of opacity). Default: 0', 'wp-avalon'),
@@ -788,12 +784,72 @@ function avalon_customize_register($wp_customize) {
         ),
     ));
 
+//    Wellcome section
+    $wp_customize->add_section('header_wellcome_section', array(
+        'title' => __('Wellcome section', 'wp-avalon'),
+        'panel' => 'header_main_settings_control',
+        'description' => '',
+        'priority' => 3,
+    ));
+
+    // Disable wellcome section
+    $wp_customize->add_setting('header_wellcome_disable', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('header_wellcome_disable', array(
+        'label' => __('Disable "Wellcome" section', 'wp-avalon'),
+        'section' => 'header_wellcome_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    // Wellcome title
+    $wp_customize->add_setting('header_wellcome_title', array(
+        'default' => __('Wellcome to WP Avalon', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('header_wellcome_title', array(
+        'label' => __('Wellcome section title', 'wp-avalon'),
+        'section' => 'header_wellcome_section',
+        'type' => 'text',
+        'priority' => 2
+    ));
+    // Wellcome text
+    $wp_customize->add_setting('header_wellcome_text', array(
+        'default' => __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon'),
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('header_wellcome_text', array(
+        'label' => __('Wellcome section text', 'wp-avalon'),
+        'section' => 'header_wellcome_section',
+        'type' => 'textarea',
+        'priority' => 3
+    ));
+    if (function_exists('ud_check_wp_property')) :
+        $wp_customize->add_setting('header_wellcome_property_search_disable', array(
+            'default' => ''
+        ));
+        $wp_customize->add_control('header_wellcome_property_search_disable', array(
+            'label' => __('Disable "Property search" in Wellcome section', 'wp-avalon'),
+            'section' => 'header_wellcome_section',
+            'type' => 'checkbox',
+            'priority' => 4
+        ));
+    else :
+        // disable section
+        $wp_customize->add_setting('header_wellcome_property_search', array(
+            'sanitize_callback' => 'avalon_closed_section'
+        ));
+        $wp_customize->add_control(new WP_Avalon_Theme_Support_WP_Property($wp_customize, 'header_wellcome_property_search', array(
+            'section' => 'header_wellcome_section',
+        )));
+    endif;
+
 //    Logo settings
     $wp_customize->add_section('header_logo_settings', array(
         'title' => __('Logotype settings', 'wp-avalon'),
         'panel' => 'header_main_settings_control',
         'description' => '',
-        'priority' => 3,
+        'priority' => 4,
     ));
 //    Logo icon
     $wp_customize->add_setting('header_logo_icon_settings', array(
@@ -862,12 +918,12 @@ function avalon_customize_register($wp_customize) {
             'step' => 1,
         ),
     ));
-    
+
     // Header Contact us settings
     $wp_customize->add_section('header_contuctus_settings_section', array(
         'title' => __('Contact us settings', 'wp-avalon'),
         'panel' => 'header_main_settings_control',
-        'priority' => 4,
+        'priority' => 5,
     ));
     // Disable "Contact us" area
     $wp_customize->add_setting('header_contuctus_disable_settings', array(
@@ -938,14 +994,14 @@ function avalon_customize_register($wp_customize) {
         'type' => 'textarea',
         'priority' => 6
     ));
-    
+
 
 //  Location area settings
     $wp_customize->add_section('header_location_area_section', array(
         'title' => __('"Location" area settings', 'wp-avalon'),
         'panel' => 'header_main_settings_control',
         'description' => '',
-        'priority' => 5,
+        'priority' => 6,
     ));
     // Disable "Location" area
     $wp_customize->add_setting('header_location_area_settings', array(
@@ -1000,7 +1056,49 @@ function avalon_customize_register($wp_customize) {
         'type' => 'textarea',
         'priority' => 5
     ));
-    
+
+
+//  --------------------------------------------------------------------------
+//  Default property overview settings
+//  --------------------------------------------------------------------------
+    $wp_customize->add_panel('property_overview_area_panel', array(
+        'priority' => 34,
+        'capability' => 'edit_theme_options',
+        'title' => __('Default property overview section', 'wp-avalon')
+    ));
+
+    // Property overview settings
+    $wp_customize->add_section('property_overview_settings_section', array(
+        'title' => __('Settings', 'wp-avalon'),
+        'panel' => 'property_overview_area_panel',
+        'priority' => 1,
+    ));
+    // Show default property overview section
+    $wp_customize->add_setting('property_overview_disable', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('property_overview_disable', array(
+        'label' => __('Disable section', 'wp-avalon'),
+        'section' => 'property_overview_settings_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    $wp_customize->add_setting('property_overview_title', array(
+        'default' => __('Property overview')
+    ));
+    $wp_customize->add_control('property_overview_title', array(
+        'label' => __('Section title', 'wp-avalon'),
+        'section' => 'property_overview_settings_section',
+        'type' => 'text',
+        'priority' => 2
+    ));
+    // Property overview widget area
+    $wp_customize->add_section('property_overview_widget_area', array(
+        'title' => __('Property overview widget area', 'wp-avalon'),
+        'panel' => 'property_overview_settings_control',
+        'priority' => 2,
+    ));
+
 
 //    FOOTER Logo settings
     $wp_customize->add_section('avalon_footer_logo_settings', array(
@@ -1088,7 +1186,7 @@ function avalon_customize_register($wp_customize) {
         'description' => '',
         'priority' => 120,
     ));
-//    Blur settings
+//    copyright settings
     $wp_customize->add_setting('avalon_copyrights_settings', array(
         'default' => '',
         'capability' => 'edit_theme_options',
@@ -1143,14 +1241,9 @@ function avalon_customize_css() {
             background-color: <?php echo get_theme_mod('avalon_secondary_header_bg_color', '#2b5188'); ?>
         }
 
-        body main.main-content .secondary-header .secondary-header-image {
-            -webkit-filter: blur(<?php echo get_theme_mod('header_image__blur_setting', '0'); ?>px);
-            filter: blur(<?php echo get_theme_mod('header_image__blur_setting', '0'); ?>px);
-            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='<?php echo get_theme_mod('header_image__blur_setting', '0'); ?>');
-        }
         body main.main-content .secondary-header .secondary-header-image:after {
             background-color: <?php echo get_theme_mod('header_image__blackout_color', '#000000'); ?>;
-            opacity: <?php echo get_theme_mod('header_image__opacity_setting', '0'); ?>;
+            opacity: <?php echo get_theme_mod('header_image__opacity_setting', '0.3'); ?>;
         }
 
         body main.main-content .secondary-header h1.page-title {
