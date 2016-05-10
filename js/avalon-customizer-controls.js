@@ -7,6 +7,10 @@ jQuery(document).ready(function() {
     /* Move property overview widgets in the overview panel */
     wp.customize.section('sidebar-widgets-sidebar-avalon-overview').panel('property_overview_area_panel');
     wp.customize.section('sidebar-widgets-sidebar-avalon-overview').priority('2');
+    
+    /* Move multi-sidebar area in the panel */
+    wp.customize.section('sidebar-widgets-sidebar-frontpage').panel('frontpage_top_widget_area_panel');
+    wp.customize.section('sidebar-widgets-sidebar-frontpage').priority('2');
 
 });
 

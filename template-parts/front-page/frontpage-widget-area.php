@@ -1,14 +1,14 @@
 <?php
 /**
- * Template part for frontpage widget area
+ * Template part for frontpage multi-sidebar widget area
  *
  * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
 $sidebar_name = 'sidebar-frontpage';
-$active_default = get_theme_mod('wp_property_show_default_property_search', '1');
-if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property') && ($active_default == '1'))) :
+$active_sidebar = get_theme_mod('frontpage_top_widget_area_settings', '');
+if ($active_sidebar != 1 && is_active_sidebar($sidebar_name)) :
     global $wp_registered_sidebars, $wp_registered_widgets;
     $sidebar_widgets = wp_get_sidebars_widgets();
     $sw__list = $sidebar_widgets[$sidebar_name];
@@ -18,15 +18,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified" role="tablist">
             <?php
-            $active_tab_head = '';
-            if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
-                <li role="presentation" class="active">
-                    <a href="#property-search-defaul" aria-controls="property-search-defaul" role="tab" data-toggle="tab"><?php _e('Property search', 'wp-avalon'); ?></a>
-                </li>
-                <?php
-            else :
-                $active_tab_head = 'active';
-            endif;
+            $active_tab_head = 'active';
             foreach ($sw__list as $id) :
                 ?>
                 <li role="presentation" class="<?php echo $active_tab_head; ?>">
@@ -40,19 +32,7 @@ if (is_active_sidebar($sidebar_name) || (function_exists('ud_check_wp_property')
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <?php if (function_exists('ud_check_wp_property') && ($active_default == '1')) : ?>
-                <div id="property-search-defaul" role="tabpanel" class="property-search-defaul tab-pane active">
-                    <div class="multisidebar-widget widget_text">
-                        <h2 class="widget-title"><?php _e('Property search', 'wp-avalon'); ?></h2>
-                        <div class="widget-content">
-                            <?php echo do_shortcode('[property_search]'); ?>
-                        </div>
-                    </div>
-                </div>
-                <?php
-            endif;
-            dynamic_sidebar($sidebar_name);
-            ?>
+            <?php dynamic_sidebar($sidebar_name); ?>
         </div>
     </div>
-<?php endif; ?>
+<?php endif;

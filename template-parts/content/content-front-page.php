@@ -11,8 +11,6 @@
 
     <?php get_template_part('template-parts/front-page/frontpage-top-text-area', 'wp-avalon'); ?>
     
-    <?php get_template_part('template-parts/front-page/frontpage-headlights', 'wp-avalon'); ?>
-    
     <?php get_template_part('template-parts/front-page/frontpage-headlights-widget-area', 'wp-avalon'); ?>
     
     <?php get_template_part('template-parts/front-page/frontpage-overview-widget-area', 'wp-avalon'); ?>

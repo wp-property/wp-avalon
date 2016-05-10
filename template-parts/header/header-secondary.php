@@ -29,7 +29,7 @@ $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disab
                 echo '</div>';
             endif;
         else :
-            echo '<h3>At that place you can enable default property search</h3>';
+            echo '<h3>'.__('At that place you can enable default property search', 'wp-avalon').'</h3>';
         endif;
         echo '</div>';
         echo '</div>';

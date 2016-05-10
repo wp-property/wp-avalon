@@ -72,6 +72,19 @@ jQuery(document).ready(function() {
         }
         google.maps.event.trigger(map_box, 'resize');
     });
+
+    jQuery('.widget-control-save').click(function() {
+        var saveID = jQuery(this).attr('id');
+        var ID = saveID.replace(/-savewidget/, '');
+        console.log('id:'+ID);
+        var numberID = ID + '-the_random_number';
+        console.log('numberID:'+numberID);
+        var randNum = jQuery('#' + numberID).val();
+        console.log('randNum:'+randNum);
+        var textTab = ID + '-wp_editor_' + randNum + '-html';
+        console.log('textTab:'+textTab);
+        jQuery('#' + textTab).trigger('click');
+    });
 });
 
 
