@@ -181,16 +181,17 @@ add_action('widgets_init', 'avalon_register_widgets');
 function avalon_register_widgets() {
 
     register_widget('sidebar_headlights');
-    register_widget('sidebar_avalon_textwidget');
     register_widget('sidebar_avalon_features');
     register_widget('sidebar_avalon_overview');
+    register_widget('sidebar_property_addons');
 
 
     $avalon_sidebars = array(
         'sidebar-headlights' => 'sidebar-headlights',
-        'sidebar-textbox' => 'sidebar-textbox',
         'sidebar-avalon-features' => 'sidebar-avalon-features',
-        'sidebar-avalon-overview' => 'sidebar-avalon-overview'
+        'sidebar-property-description' => 'sidebar-property-description',
+        'sidebar-avalon-overview' => 'sidebar-avalon-overview',
+        'sidebar-property-addons' => 'sidebar-property-addons',
     );
 
     /* Register sidebars */
@@ -198,12 +199,14 @@ function avalon_register_widgets() {
 
         if ($avalon_sidebar == 'sidebar-headlights'):
             $avalon_sidebar_name = __('Headlights section widgets', 'wp-avalon');
-        elseif ($avalon_sidebar == 'sidebar-avalon-textwidget'):
-            $avalon_sidebar_name = __('WP Avalon frontpage text area', 'wp-avalon');
         elseif ($avalon_sidebar == 'sidebar-avalon-features'):
             $avalon_sidebar_name = __('WP Avalon features area', 'wp-avalon');
+        elseif ($avalon_sidebar == 'sidebar-property-description'):
+            $avalon_sidebar_name = __('WP Property description area', 'wp-avalon');
         elseif ($avalon_sidebar == 'sidebar-avalon-overview') :
             $avalon_sidebar_name = __('Default property overview widgets', 'wp-avalon');
+        elseif ($avalon_sidebar == 'sidebar-property-addons') :
+            $avalon_sidebar_name = __('Default property addons widgets', 'wp-avalon');
         endif;
 
         register_sidebar(
@@ -224,9 +227,10 @@ function avalon_register_default_widgets() {
 
     $avalon_frontpage_sidebars = array(
         'sidebar-headlights' => 'sidebar-headlights',
-        'sidebar-textbox' => 'sidebar-textbox',
         'sidebar-avalon-features' => 'sidebar-avalon-features',
-        'sidebar-avalon-overview' => 'sidebar-avalon-overview'
+        'sidebar-property-description' => 'sidebar-property-description',
+        'sidebar-avalon-overview' => 'sidebar-avalon-overview',
+        'sidebar-property-addons' => 'sidebar-property-addons',
     );
 
     $active_widgets = get_option('sidebars_widgets');
@@ -296,12 +300,45 @@ function avalon_register_default_widgets() {
 
     if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-avalon-features']])):
         $avalon_counter = 1;
-        $active_widgets['sidebar-avalon-features'][0] = 'text-avalon-' . $avalon_counter;
+        $active_widgets['sidebar-avalon-features'][0] = 'avalon-fetaures-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('AVALON title', 'wp-avalon'),
-            'text' => __('AVALON text', 'wp-avalon')
+            'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
+            'text' => __('Free WordPress theme special for properties', 'wp-avalon'),
+            'featured-fields-1' => __('It is Free!!!!', 'wp-avalon'),
+            'featured-fields-2' => __('Compatible with WP-Property pluigin and all it’s add-ons', 'wp-avalon'),
+            'featured-fields-3' => __('Grid overview template', 'wp-avalon'),
+            'featured-fields-4' => __('Useful Sidebars and widgets available', 'wp-avalon'),
+            'featured-fields-5' => __('Let\'s you upload a custom logo', 'wp-avalon'),
+            'featured-fields-6' => __(' Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
+            'featured-fields-7' => __('Add your contact and company information', 'wp-avalon'),
+            'featured-fields-8' => __('Fully Responsive', 'wp-avalon'),
+            'featured-fields-9' => __('Available for localization', 'wp-avalon'),
+            'featured-fields-10' => __('Basic free support included', 'wp-avalon'),
         );
-        update_option('widget_text', $overview_widget_content);
+        update_option('widget_avalon-fetaures-widget', $overview_widget_content);
+        $avalon_counter++;
+        update_option('sidebars_widgets', $active_widgets);
+
+    endif;
+
+    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-property-description']])):
+        $avalon_counter = 1;
+        $active_widgets['sidebar-property-description'][0] = 'avalon-fetaures-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP Property. Free WordPress plugin', 'wp-avalon'),
+            'text' => __('Free WordPress plugin. Download <a href="#">HERE</a>', 'wp-avalon'),
+            'featured-fields-1' => __('It is Free!!!!', 'wp-avalon'),
+            'featured-fields-2' => __('Compatible with WP-Property pluigin and all it’s add-ons', 'wp-avalon'),
+            'featured-fields-3' => __('Grid overview template', 'wp-avalon'),
+            'featured-fields-4' => __('Useful Sidebars and widgets available', 'wp-avalon'),
+            'featured-fields-5' => __('Let\'s you upload a custom logo', 'wp-avalon'),
+            'featured-fields-6' => __(' Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
+            'featured-fields-7' => __('Add your contact and company information', 'wp-avalon'),
+            'featured-fields-8' => __('Fully Responsive', 'wp-avalon'),
+            'featured-fields-9' => __('Available for localization', 'wp-avalon'),
+            'featured-fields-10' => __('Basic free support included', 'wp-avalon'),
+        );
+        update_option('widget_avalon-fetaures-widget', $overview_widget_content);
         $avalon_counter++;
         update_option('sidebars_widgets', $active_widgets);
 
@@ -314,7 +351,7 @@ function avalon_register_default_widgets() {
         /* widget #1 */
         $active_widgets['sidebar-avalon-overview'][0] = 'avalon-property-overview-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('250 S Estes Drive 52'),
+            'title' => __('250 S Estes Drive 52', 'wp-avalon'),
             'location' => 'Chapel Hill,  North Carolina',
             'bads' => '1',
             'baths' => '2',
@@ -328,7 +365,7 @@ function avalon_register_default_widgets() {
         /* widget #2 */
         $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('2412 Environ Way 2412'),
+            'title' => __('2412 Environ Way 2412', 'wp-avalon'),
             'location' => 'Chapel Hill,  North Carolina',
             'bads' => '3',
             'baths' => '2',
@@ -342,7 +379,7 @@ function avalon_register_default_widgets() {
         /* widget #3 */
         $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('5500 Fortunes Ridge Drive 78b'),
+            'title' => __('5500 Fortunes Ridge Drive 78b', 'wp-avalon'),
             'location' => 'Durham,  North Carolina',
             'bads' => '1',
             'baths' => '1',
@@ -356,7 +393,7 @@ function avalon_register_default_widgets() {
         /* widget #4 */
         $active_widgets['sidebar-avalon-overview'][] = 'avalon-property-overview-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('424 E Rose Street'),
+            'title' => __('424 E Rose Street', 'wp-avalon'),
             'location' => 'Smithfield,  North Carolina',
             'bads' => '3',
             'baths' => '1',
@@ -365,6 +402,234 @@ function avalon_register_default_widgets() {
             'image_uri' => get_template_directory_uri() . '/images/property_default_image_4.jpeg'
         );
         update_option('widget_avalon-property-overview-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        update_option('sidebars_widgets', $active_widgets);
+
+    endif;
+
+    if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-property-addons']])):
+
+        $avalon_counter = 1;
+
+        /* widget #1 */
+        $active_widgets['sidebar-property-addons'][0] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Walk Score', 'wp-avalon'),
+            'description' => __('Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-walkscore',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-1.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #2 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-CRM: Group Messages', 'wp-avalon'),
+            'description' => __('Send group messages to your users from within your WordPress control panel.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-crm-group-messages',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-5.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #3 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Business Locations', 'wp-avalon'),
+            'description' => __('Free Add-on to manage locations for your business built with WP-Invoice plugin.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-business-locations',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-6.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #4 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Electronic Signature', 'wp-avalon'),
+            'description' => __('Make your clients sign invoices before payment to get secure information that will confirm payment.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-electronic-signature',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-7.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #5 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Paypal Pro', 'wp-avalon'),
+            'description' => __('PayPal Payments Pro has the customization capability, technical maturity, and proven security that is needed to build professional-grade eCommerce sites.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-paypal-pro',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-8.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #6 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: PDF', 'wp-avalon'),
+            'description' => __('Creates PDF versions of your invoices, receipts and that you can easily email and print.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-pdf',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-9.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #7 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Power Tools', 'wp-avalon'),
+            'description' => __('Make you invoicing solutions more powerful with WP-Invoice and Power Tools. Sales charts, import and export ability!', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-power-tools',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-10.jpg'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #8 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Quotes', 'wp-avalon'),
+            'description' => __('The Quotes Add-on let’s you automate your workflow by creating quotes and letting your clients ask questions regarding quotes directly on your website. Once a quote is approved, it is converted to an invoice with a single click.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-quotes',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-11.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #9 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: Single Page Checkout', 'wp-avalon'),
+            'description' => __('Makes it easy to create one-page-checkout forms that can accept a variety of different payment gateways, such as Authorize.net, PayPal and others.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-single-page-checkout',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-12.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #10 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Invoice: USAePay', 'wp-avalon'),
+            'description' => __('USAePay is a payment gateway service provider allowing merchants to accept credit card and electronic check payments through their Web site and mobile devices.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-usa-epay',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-13.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #11 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Agents', 'wp-avalon'),
+            'description' => __('Allows to create new Real Estate agent accounts, associate them with properties, filter properties by agent and more.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-agents',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-14.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #12 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Facebook Tabs', 'wp-avalon'),
+            'description' => __('The Add-on allows you to add a tab with property listings or any other content from your website, on a Facebook Page.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-facebook-tabs',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-15.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #13 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: FEPS', 'wp-avalon'),
+            'description' => __('Allows to create front-end forms that facilitate a simple way for website visitors to submit, edit and delete listings from frontend. Listings can be submitted for free or you can use Sponsored Listings option.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-feps',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #14 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Importer', 'wp-avalon'),
+            'description' => __('The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-importer',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-4.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #15 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: PDF Flyer', 'wp-avalon'),
+            'description' => __('Allows the website owner to quickly generate PDF flyers, or brochures, ready for printing or download.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-pdf-flyer',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-17.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #16 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Power Tools', 'wp-avalon'),
+            'description' => __('Extra functionality which includes capability management, white labeling the control panel, and changes menu titles.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-power-tools',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-18.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #17 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Responsive Slideshow', 'wp-avalon'),
+            'description' => __('Allows you to insert a responsive slideshow into any property page with lightbox option', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-responsive-slideshow',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-19.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #18 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Slideshow', 'wp-avalon'),
+            'description' => __('Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-slideshow',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-2.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #19 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Super Map', 'wp-avalon'),
+            'description' => __('Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-supermap',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-3.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
+        $avalon_counter++;
+
+        /* widget #20 */
+        $active_widgets['sidebar-property-addons'][] = 'avalon-property-addons-widget-' . $avalon_counter;
+        $overview_widget_content[$avalon_counter] = array(
+            'title' => __('WP-Property: Terms', 'wp-avalon'),
+            'description' => __('Create any number of additional taxonomies and categorize your listings into search-friendly terms. ', 'wp-avalon'),
+            'url' => 'https://www.usabilitydynamics.com/product/wp-property-terms',
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-20.png'
+        );
+        update_option('widget_avalon-property-addons-widget', $overview_widget_content);
         $avalon_counter++;
 
         update_option('sidebars_widgets', $active_widgets);
@@ -517,202 +782,36 @@ class sidebar_headlights extends WP_Widget {
 
 }
 
-class sidebar_avalon_textwidget extends WP_Widget {
-
-    public function __construct() {
-        parent::__construct(
-                'avalon-headlight-widget', __('WP Avalon - Headlight widget', 'wp-avalon')
-        );
-    }
-
-    function widget($args, $instance) {
-        extract($args);
-        echo $before_widget;
-        ?>
-
-        <div class="col-lg-3 col-sm-3">
-            <div class="fhwa__box">
-                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
-                    <div class="fhwa__box_icon">
-                        <?php if (!empty($instance['link'])) { ?>
-                            <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
-                        <?php } else { ?>
-                            <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
-                        <?php } ?>
-                    </div>
-                    <?php
-                } elseif (!empty($instance['custom_media_id'])) {
-                    $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-                    if (!empty($custom_media_id) && !empty($custom_media_id[0])) {
-                        ?>
-                        <div class="fhwa__box_icon">
-                            <?php if (!empty($instance['link'])) { ?>
-                                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i></a>
-                            <?php } else { ?>
-                                <i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i>
-                            <?php } ?>
-                        </div>	
-                        <?php
-                    }
-                }
-                ?>
-
-                <h3 class="fhwa__box_title">
-                    <?php
-                    if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
-                    endif;
-                    ?>
-                </h3>
-                <?php
-                if (!empty($instance['text'])) {
-                    echo '<p>';
-                    echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
-                    echo '</p>';
-                }
-                ?>	
-            </div>
-        </div>
-
-        <?php
-        echo $after_widget;
-    }
-
-    function update($new_instance, $old_instance) {
-
-        $instance = $old_instance;
-        $instance['text'] = stripslashes(wp_filter_post_kses($new_instance['text']));
-        $instance['title'] = strip_tags($new_instance['title']);
-        $instance['link'] = strip_tags($new_instance['link']);
-        $instance['price'] = strip_tags($new_instance['price']);
-        $instance['more_label'] = strip_tags($new_instance['more_label']);
-        $instance['image_uri'] = strip_tags($new_instance['image_uri']);
-        $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
-
-        return $instance;
-    }
-
-    function form($instance) {
-        ?>
-
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
-            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
-            if (!empty($instance['title'])): echo $instance['title'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
-            <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>"><?php
-                if (!empty($instance['text'])): echo htmlspecialchars_decode($instance['text']);
-                endif;
-                ?></textarea>
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('price'); ?>" id="<?php echo $this->get_field_id('price'); ?>" value="<?php
-            if (!empty($instance['price'])): echo $instance['price'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
-            if (!empty($instance['link'])): echo $instance['link'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('more_label'); ?>"><?php _e('More button label', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('more_label'); ?>" id="<?php echo $this->get_field_id('more_label'); ?>" value="<?php
-            if (!empty($instance['more_label'])): echo $instance['more_label'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
-            <?php
-            if (!empty($instance['image_uri'])) :
-                echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
-            endif;
-            ?>
-
-            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
-            if (!empty($instance['image_uri'])): echo $instance['image_uri'];
-            endif;
-            ?>" style="margin-top:5px;">
-
-            <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
-        </p>
-
-        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
-        if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-        endif;
-        ?>" />
-
-        <?php
-    }
-
-}
-
 class sidebar_avalon_features extends WP_Widget {
 
     public function __construct() {
         parent::__construct(
-                'avalon-headlight-widget', __('WP Avalon - Headlight widget', 'wp-avalon')
+                'avalon-fetaures-widget', __('WP Avalon - Features widget', 'wp-avalon')
         );
     }
 
     function widget($args, $instance) {
         extract($args);
-        echo $before_widget;
-        ?>
+        $title = $instance['title'];
+        $text = $instance['text'];
 
-        <div class="col-lg-3 col-sm-3">
-            <div class="fhwa__box">
-                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
-                    <div class="fhwa__box_icon">
-                        <?php if (!empty($instance['link'])) { ?>
-                            <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
-                        <?php } else { ?>
-                            <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
-                        <?php } ?>
-                    </div>
-                    <?php
-                } elseif (!empty($instance['custom_media_id'])) {
-                    $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-                    if (!empty($custom_media_id) && !empty($custom_media_id[0])) {
-                        ?>
-                        <div class="fhwa__box_icon">
-                            <?php if (!empty($instance['link'])) { ?>
-                                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i></a>
-                            <?php } else { ?>
-                                <i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i>
-                            <?php } ?>
-                        </div>	
-                        <?php
-                    }
-                }
-                ?>
-
-                <h3 class="fhwa__box_title">
-                    <?php
-                    if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
-                    endif;
-                    ?>
-                </h3>
-                <?php
-                if (!empty($instance['text'])) {
-                    echo '<p>';
-                    echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
-                    echo '</p>';
-                }
-                ?>	
-            </div>
-        </div>
-
-        <?php
-        echo $after_widget;
+        echo '<div class="featured-text-widget">';
+        if (!empty($title)) {
+            echo '<div class="ftw__title">' . $title . '</div>';
+        }
+        if (!empty($text)) {
+            echo '<div class="ftw__content">' . $text . '</div>';
+        }
+        echo '<div class="ftw__features">';
+        echo '<ul>';
+        for ($i = 0; $i < 100; $i++) {
+            if (!empty($instance['featured-fields-' . $i])) {
+                echo '<li>' . $instance['featured-fields-' . $i] . '</li>';
+            }
+        }
+        echo '</ul>';
+        echo '</div>';
+        echo '</div>';
     }
 
     function update($new_instance, $old_instance) {
@@ -720,18 +819,38 @@ class sidebar_avalon_features extends WP_Widget {
         $instance = $old_instance;
         $instance['text'] = stripslashes(wp_filter_post_kses($new_instance['text']));
         $instance['title'] = strip_tags($new_instance['title']);
-        $instance['link'] = strip_tags($new_instance['link']);
-        $instance['price'] = strip_tags($new_instance['price']);
-        $instance['more_label'] = strip_tags($new_instance['more_label']);
-        $instance['image_uri'] = strip_tags($new_instance['image_uri']);
-        $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
-
+        for ($i = 0; $i < 100; $i++) {
+            $instance['featured-fields-' . $i] = $new_instance['featured-fields-' . $i];
+        }
         return $instance;
     }
 
     function form($instance) {
+        $defaults = array('title' => __('', 'wp-avalon'), 'text' => '');
+        for ($i = 0; $i < 100; $i++) {
+            $defaults['dynamic-fields-' . $i] = '';
+        }
+        $instance = wp_parse_args((array) $instance, $defaults);
+        $widget_add_id = $this->id . "-add";
         ?>
+        <!-- inline javascript -->
+        <script>
+            var $ = jQuery.noConflict();
+            $(document).ready(function(e) {
+                $(".<?php echo $widget_add_id; ?>").bind('click', function(e) {
+                    // unhide the following if there is empty value in it.:          
+                    $.each($(".<?php echo $widget_add_id; ?>-input-containers").find('p > input.widefat'), function() {
+                        //console.log($(this).value());
+                        if ($(this).val() == '') {
+                            $(this).show();
+                            return false; // bust out of the each loop if we showed a field
+                        }
+                    });
+                });
 
+                // need to add some logic to reset a field and hide an existing field.
+            });
+        </script>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
             <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
@@ -746,47 +865,26 @@ class sidebar_avalon_features extends WP_Widget {
                 endif;
                 ?></textarea>
         </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('price'); ?>" id="<?php echo $this->get_field_id('price'); ?>" value="<?php
-            if (!empty($instance['price'])): echo $instance['price'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
-            if (!empty($instance['link'])): echo $instance['link'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('more_label'); ?>"><?php _e('More button label', 'wp-avalon'); ?></label><br />
-            <input type="text" name="<?php echo $this->get_field_name('more_label'); ?>" id="<?php echo $this->get_field_id('more_label'); ?>" value="<?php
-            if (!empty($instance['more_label'])): echo $instance['more_label'];
-            endif;
-            ?>" class="widefat">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
-            <?php
-            if (!empty($instance['image_uri'])) :
-                echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
-            endif;
-            ?>
+        <div class="features-list <?php echo $widget_add_id; ?>-input-containers">
+            <label for="features"><?php _e('Features list', 'wp-avalon'); ?></label>
 
-            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
-            if (!empty($instance['image_uri'])): echo $instance['image_uri'];
-            endif;
-            ?>" style="margin-top:5px;">
-
-            <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
-        </p>
-
-        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
-        if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-        endif;
-        ?>" />
+            <p class="clearfix">
+                <?php for ($i = 0; $i < 100; $i++) { ?>          
+                    <input id="<?php echo $this->get_field_id('featured-fields-' . $i); ?>" 
+                           name="<?php echo $this->get_field_name('featured-fields-' . $i); ?>" 
+                           value="<?php echo $instance['featured-fields-' . $i]; ?>" 
+                           class="widefat features-input"
+                           type="text"
+                           <?php
+                           if (empty($instance['featured-fields-' . $i])) {
+                               echo 'style="display:none;"';
+                           }
+                           ?>>
+                       <?php } ?>
+            </p>
+            <span class="button-secondary add-features-input <?php echo $widget_add_id; ?>">Add field</span>
+        </div>
+        <div class="clearfix"></div>
 
         <?php
     }
@@ -813,7 +911,7 @@ class sidebar_avalon_overview extends WP_Widget {
                 <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
                     <div class="wpp_overview_left_column">
                         <div class="property_image">
-                            <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($instance['image_uri']); ?>">
+                            <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($instance['image_uri']); ?>">
                                 <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>">
                             </a>
                         </div>
@@ -821,7 +919,7 @@ class sidebar_avalon_overview extends WP_Widget {
                 <?php elseif (!empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
                     <div class="wpp_overview_left_column">
                         <div class="property_image">
-                            <a rel="" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
+                            <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
                                 <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
                             </a>
                         </div>
@@ -932,10 +1030,108 @@ class sidebar_avalon_overview extends WP_Widget {
         </p>
 
         <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
+        if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
+        endif;
+        ?>" />
+
+        <?php
+    }
+
+}
+
+class sidebar_property_addons extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct(
+                'avalon-property-addons-widget', __('WP Avalon - Property add-ons', 'wp-avalon')
+        );
+    }
+
+    function widget($args, $instance) {
+        extract($args);
+        echo $before_widget;
+
+        $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+        ?>
+        <div class="col-md-4">
+            <div class="property_addon_box">
+                <div class="pab__wrap">
+                    <div class="pab__image">
+                        <a href="<?php echo $instance['url']; ?>">
+                            <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
+                                <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
+                            <?php elseif (!empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
+                                <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
+                            <?php endif; ?>
+                        </a>
+                    </div>
+                    <div class="pab__text">
+                        <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
+                        <div class="pab__excerpt"><?php echo $instance['description']; ?></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+        echo $after_widget;
+    }
+
+    function update($new_instance, $old_instance) {
+
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['description'] = stripslashes(wp_filter_post_kses($new_instance['description']));
+        $instance['url'] = strip_tags($new_instance['url']);
+        $instance['image_uri'] = strip_tags($new_instance['image_uri']);
+        $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
+
+        return $instance;
+    }
+
+    function form($instance) {
+        ?>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
+            if (!empty($instance['title'])): echo $instance['title'];
+            endif;
+            ?>" class="widefat">
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
+            <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>"><?php
+                if (!empty($instance['text'])): echo htmlspecialchars_decode($instance['text']);
+                endif;
+                ?></textarea>
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('url'); ?>"><?php _e('Url', 'wp-avalon'); ?></label><br/>
+            <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('url'); ?>" id="<?php echo $this->get_field_id('url'); ?>"><?php
+                if (!empty($instance['url'])): echo $instance['url'];
+                endif;
+                ?></textarea>
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
+            <?php
+            if (!empty($instance['image_uri'])) :
+                echo '<img class="custom_media_image" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="' . __('Uploaded image', 'wp-avalon') . '" /><br />';
+            endif;
+            ?>
+
+            <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
+            if (!empty($instance['image_uri'])): echo $instance['image_uri'];
+            endif;
+            ?>" style="margin-top:5px;">
+
+            <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+        </p>
+
+        <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
                if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
                endif;
                ?>" />
-
         <?php
     }
 

@@ -733,37 +733,27 @@ function avalon_customize_register($wp_customize) {
 // -----------------------------------------------------------------------------
 //    Fronpage text widget area
 // -----------------------------------------------------------------------------
-    $wp_customize->add_panel('frontpage_text_widget_area_panel', array(
+    $wp_customize->add_panel('frontpage_features_area_panel', array(
         'priority' => 34,
         'capability' => 'edit_theme_options',
-        'title' => __('Frontpage text widget area', 'wp-avalon')
+        'title' => __('Avalon features area', 'wp-avalon')
     ));
     
     // Fronpage top widget area settings
-    $wp_customize->add_section('frontpage_text_widget_area_settings_section', array(
+    $wp_customize->add_section('frontpage_features_area_settings_section', array(
         'title' => __('Area settings', 'wp-avalon'),
-        'panel' => 'frontpage_top_widget_area_panel',
+        'panel' => 'frontpage_features_area_panel',
         'priority' => 1,
     ));
     // disable section
-    $wp_customize->add_setting('frontpage_text_widget_area_settings', array(
+    $wp_customize->add_setting('frontpage_features_area_settings', array(
         'default' => ''
     ));
-    $wp_customize->add_control('frontpage_text_widget_area_settings', array(
+    $wp_customize->add_control('frontpage_features_area_settings', array(
         'label' => __('Disable widget area', 'wp-avalon'),
-        'section' => 'frontpage_text_widget_area_settings_section',
+        'section' => 'frontpage_features_area_settings_section',
         'type' => 'checkbox',
         'priority' => 1
-    ));
-    $wp_customize->add_setting('frontpage_text_widget_area_title', array(
-        'default' => __('WP-Property. FREE plugin for property management.', 'wp-avalon'),
-        'capability' => 'edit_theme_options',
-    ));
-    $wp_customize->add_control('frontpage_text_widget_area_title', array(
-        'label' => __('Widget area title', 'wp-avalon'),
-        'section' => 'frontpage_text_widget_area_settings_section',
-        'type' => 'text',
-        'priority' => 2
     ));
     
     
@@ -805,12 +795,39 @@ function avalon_customize_register($wp_customize) {
         'priority' => 2
     ));
 
+    
+//  --------------------------------------------------------------------------
+//  WP Property desctiption text
+//  --------------------------------------------------------------------------
+    $wp_customize->add_panel('property_description_area_panel', array(
+        'priority' => 36,
+        'capability' => 'edit_theme_options',
+        'title' => __('WP Property desctiption section', 'wp-avalon')
+    ));
+    
+    // WP Property desctiption settings
+    $wp_customize->add_section('property_description_area_section', array(
+        'title' => __('Settings', 'wp-avalon'),
+        'panel' => 'property_overview_area_panel',
+        'priority' => 1,
+    ));
+    // WP Property desctiption section
+    $wp_customize->add_setting('property_description_disable', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('property_description_disable', array(
+        'label' => __('Disable section', 'wp-avalon'),
+        'section' => 'property_description_area_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    
 
 //  --------------------------------------------------------------------------
 //  Default property overview settings
 //  --------------------------------------------------------------------------
     $wp_customize->add_panel('property_overview_area_panel', array(
-        'priority' => 36,
+        'priority' => 37,
         'capability' => 'edit_theme_options',
         'title' => __('Default property overview section', 'wp-avalon')
     ));
@@ -845,6 +862,32 @@ function avalon_customize_register($wp_customize) {
         'title' => __('Property overview widget area', 'wp-avalon'),
         'panel' => 'property_overview_settings_control',
         'priority' => 2,
+    ));
+    
+//  --------------------------------------------------------------------------
+//  Addons section
+//  --------------------------------------------------------------------------
+    $wp_customize->add_panel('addons_area_panel', array(
+        'priority' => 38,
+        'capability' => 'edit_theme_options',
+        'title' => __('Property add-ons section', 'wp-avalon')
+    ));
+
+    // Property overview settings
+    $wp_customize->add_section('addons_settings_section', array(
+        'title' => __('Settings', 'wp-avalon'),
+        'panel' => 'addons_area_panel',
+        'priority' => 1,
+    ));
+    // Show default property overview section
+    $wp_customize->add_setting('addons_disable', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control('addons_disable', array(
+        'label' => __('Disable section', 'wp-avalon'),
+        'section' => 'addons_settings_section',
+        'type' => 'checkbox',
+        'priority' => 1
     ));
 
 

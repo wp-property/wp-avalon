@@ -1,90 +1,35 @@
 /*
 Styles for admin page
 */
-.aw__container {
+.features-list {
 
 }
-.aw__container:after {
-    clear: both;
-    display: block;
-    content: "";
+.features-input {
+    width: 100% !important;
+    margin-bottom: 5px !important;
 }
-.tab-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.tab-list:after {
-    clear: both;
-    display: block;
-    content: "";
-}
-.tab-list li {
+
+.add-features-input {
     cursor: pointer;
+    float: right;
+    margin-left: 0 !important;
+    margin-top: 8px !important;
+    outline: 0 none;
+    transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+}
+.add-features-input:before {
+    content: "\f132";
     display: inline-block;
-    background-color: #f1f1f1;
-    margin: 0 0 -1px;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 1px solid #999;
-    border-radius: 5px 5px 0 0;
-    -o-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
-}
-.tab-list li.active {
-    font-weight: bold;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.tab-container {
-    background-color: #f1f1f1;
-    padding: 0 20px;
-    border-top: 1px solid #999;
-}
-.tab-container:before,
-.tab-container:after {
-    clear: both;
-    display: block;
-    content: "";
-}
-.tab-content {
-    display: none;
-}
-.tab-content.active {
-    display: block;
-}
-
-.tab-content table td .enable-content {
-    display: none;
-    padding: 5px 0 0 20px;
-}
-.tab-content table td .enable-content.active {
-    display: block;
-}
-
-.map-image-select img {
-    max-width: 300px;
-    display: block;
-    margin: 0 0 10px;
-}
-.aw__container input[type="text"],
-.aw__container textarea {
-    width: 550px;
-    height: 30px;
-    padding: 0 10px;
-    border-radius: 5px;
-    -o-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    &#pac-input {
-        width: 400px;
-        top: 9px !important;
-    }
-}
-.aw__container textarea {
-    padding: 5px 10px;
-    min-height: 100px;
+    font: 400 20px/1 dashicons;
+    left: -2px;
+    position: relative;
+    top: -1px;
+    transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    vertical-align: middle;
 }
 
 

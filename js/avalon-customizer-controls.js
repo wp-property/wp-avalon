@@ -11,6 +11,18 @@ jQuery(document).ready(function() {
     /* Move multi-sidebar area in the panel */
     wp.customize.section('sidebar-widgets-sidebar-frontpage').panel('frontpage_top_widget_area_panel');
     wp.customize.section('sidebar-widgets-sidebar-frontpage').priority('2');
+    
+    /* Move Avalon text area in the panel */
+    wp.customize.section('sidebar-widgets-sidebar-avalon-features').panel('frontpage_features_area_panel');
+    wp.customize.section('sidebar-widgets-sidebar-avalon-features').priority('2');
+    
+    /* Move WP property description area in the panel */
+    wp.customize.section('sidebar-widgets-sidebar-property-description').panel('property_description_area_panel');
+    wp.customize.section('sidebar-widgets-sidebar-property-description').priority('2');
+    
+    /* Move property addons area in the panel */
+    wp.customize.section('sidebar-widgets-sidebar-property-addons').panel('addons_area_panel');
+    wp.customize.section('sidebar-widgets-sidebar-property-addons').priority('2');
 
 });
 

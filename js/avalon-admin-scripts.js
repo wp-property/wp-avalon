@@ -73,17 +73,19 @@ jQuery(document).ready(function() {
         google.maps.event.trigger(map_box, 'resize');
     });
 
-    jQuery('.widget-control-save').click(function() {
-        var saveID = jQuery(this).attr('id');
-        var ID = saveID.replace(/-savewidget/, '');
-        console.log('id:'+ID);
-        var numberID = ID + '-the_random_number';
-        console.log('numberID:'+numberID);
-        var randNum = jQuery('#' + numberID).val();
-        console.log('randNum:'+randNum);
-        var textTab = ID + '-wp_editor_' + randNum + '-html';
-        console.log('textTab:'+textTab);
-        jQuery('#' + textTab).trigger('click');
+    jQuery(document).on('click', '.add-features-input', function() {
+        if (jQuery('.features-list').find('p').length <= 1) {
+
+        } else {
+            jQuery(this).parents('.features-list').find('p:last-child').clone();
+        }
+    });
+    jQuery(document).on('click', '.remove-features-input', function() {
+        if (jQuery('.features-list').find('p').length <= 1) {
+            
+        } else {
+            jQuery(this).parents('p').remove();
+        }
     });
 });
 
