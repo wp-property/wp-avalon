@@ -29,7 +29,7 @@ function avalon_customize_register($wp_customize) {
 
 //    header bg color
     $wp_customize->add_setting('avalon_header_bg_color', array(
-        'default' => '#477fd3',
+        'default' => '#19294c',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -40,7 +40,7 @@ function avalon_customize_register($wp_customize) {
     )));
 //    header top border color
     $wp_customize->add_setting('avalon_header_top_border_color', array(
-        'default' => '#679be7',
+        'default' => '#101a30',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -51,7 +51,7 @@ function avalon_customize_register($wp_customize) {
     )));
 //    header bottom border color
     $wp_customize->add_setting('avalon_header_bottom_border_color', array(
-        'default' => '#0d255f',
+        'default' => '#2f3d5d',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -73,7 +73,7 @@ function avalon_customize_register($wp_customize) {
     )));
 //    Header bar bg color
     $wp_customize->add_setting('avalon_header_bar_bg_color', array(
-        'default' => '#4073bf',
+        'default' => '#0b1a3a',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -84,7 +84,7 @@ function avalon_customize_register($wp_customize) {
     )));
 //    Header bar border color
     $wp_customize->add_setting('avalon_header_bar_border_color', array(
-        'default' => '#325280',
+        'default' => '#2f3d5d',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -156,7 +156,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Button bg color
     $wp_customize->add_setting('avalon_button_bg_color', array(
-        'default' => '#337ab7',
+        'default' => '#19294c',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -168,7 +168,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Button border color
     $wp_customize->add_setting('avalon_button_border_color', array(
-        'default' => '#2e6da4',
+        'default' => '#0b1a3a',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -192,7 +192,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Button bg color hover
     $wp_customize->add_setting('avalon_hover_button_bg_color', array(
-        'default' => '#286090',
+        'default' => '#0b1a3a',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -204,7 +204,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Button border color hover
     $wp_customize->add_setting('avalon_hover_button_border_color', array(
-        'default' => '#204d74',
+        'default' => '#0b1a3a',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -228,7 +228,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Secondary button text color hover
     $wp_customize->add_setting('avalon_secondary_button_color', array(
-        'default' => '#5bc0de',
+        'default' => '#19294c',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
     ));
@@ -808,7 +808,7 @@ function avalon_customize_register($wp_customize) {
     // WP Property desctiption settings
     $wp_customize->add_section('property_description_area_section', array(
         'title' => __('Settings', 'wp-avalon'),
-        'panel' => 'property_overview_area_panel',
+        'panel' => 'property_description_area_panel',
         'priority' => 1,
     ));
     // WP Property desctiption section
@@ -1002,26 +1002,26 @@ function avalon_customize_css() {
         body header .container .logotype a span { color:<?php echo get_theme_mod('header_logo_text_color_settings', '#FFF'); ?>; }
 
         body header {
-            background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#477fd3'); ?>;
-            border-bottom: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#0d255f'); ?>;
-            border-top: 1px solid <?php echo get_theme_mod('avalon_header_top_border_color'); ?>;
+            background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+            border-bottom: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#2f3d5d'); ?>;
+            border-top: 1px solid <?php echo get_theme_mod('avalon_header_top_border_color', '#101a30'); ?>;
         }
 
         body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper {
-            border-right: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#0d255f'); ?>;
+            border-right: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#2f3d5d'); ?>;
         }
 
         body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button {
-            border-left: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#0d255f'); ?>;
+            border-left: 1px solid <?php echo get_theme_mod('avalon_header_bottom_border_color', '#2f3d5d'); ?>;
         }
 
         body .header-bar {
-            background-color: <?php echo get_theme_mod('avalon_header_bar_bg_color', '#4073bf'); ?>;
-            border-bottom: 1px solid <?php echo get_theme_mod('avalon_header_bar_border_color', '#325280'); ?>;
+            background-color: <?php echo get_theme_mod('avalon_header_bar_bg_color', '#0b1a3a'); ?>;
+            border-bottom: 1px solid <?php echo get_theme_mod('avalon_header_bar_border_color', '#2f3d5d'); ?>;
         }
         body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button:hover,
         body header .container .navigation-box .navigation-wrapper .nav-additional .na__wrapper .additional-button.active {
-            background-color: <?php echo get_theme_mod('avalon_header_bar_bg_color', '#4073bf'); ?>;
+            background-color: <?php echo get_theme_mod('avalon_header_bar_bg_color', '#0b1a3a'); ?>;
         }
 
         body header .container .navigation-box .navigation-wrapper .site-header-menu .main-navigation ul li a {
@@ -1060,7 +1060,7 @@ function avalon_customize_css() {
         .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button,
         .wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options .wpp_sortable_link,
         .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button {
-            background-color: <?php echo get_theme_mod('avalon_secondary_button_color', '#5bc0de'); ?>;
+            background-color: <?php echo get_theme_mod('avalon_secondary_button_color', '#19294c'); ?>;
             color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
         }
 
@@ -1093,8 +1093,8 @@ function avalon_customize_css() {
         body a.show_more.btn,
         body p.view-all a.btn,
         body p.more a.btn {
-            background-color: <?php echo get_theme_mod('avalon_button_bg_color', '#337ab7'); ?> !important;
-            border-color: <?php echo get_theme_mod('avalon_button_border_color', '#2e6da4'); ?> !important;
+            background-color: <?php echo get_theme_mod('avalon_button_bg_color', '#19294c'); ?> !important;
+            border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?> !important;
             color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?> !important;
         }
         .btn-info:hover,
@@ -1126,8 +1126,8 @@ function avalon_customize_css() {
         body a.show_more.btn:hover,
         body p.view-all a.btn:hover,
         body p.more a.btn:hover {
-            background-color: <?php echo get_theme_mod('avalon_hover_button_bg_color', '#286090'); ?> !important;
-            border-color: <?php echo get_theme_mod('avalon_hover_button_border_color', '#204d74'); ?> !important;
+            background-color: <?php echo get_theme_mod('avalon_hover_button_bg_color', '#0b1a3a'); ?> !important;
+            border-color: <?php echo get_theme_mod('avalon_hover_button_border_color', '#0b1a3a'); ?> !important;
             color: <?php echo get_theme_mod('avalon_hover_button_text_color', '#FFF'); ?> !important;
         }
 

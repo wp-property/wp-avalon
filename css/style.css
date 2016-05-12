@@ -315,10 +315,10 @@ body .header-bar #loginform p #wp-submit:hover {
   border-color: #204d74;
 }
 body header {
-  background-color: #477fd3;
+  background-color: #19294c;
   box-sizing: border-box;
-  border-bottom: 1px solid #0d255f;
-  border-top: 1px solid #679be7;
+  border-bottom: 1px solid #2f3d5d;
+  border-top: 1px solid #101a30;
   position: relative;
   height: 50px;
 }
@@ -1525,21 +1525,20 @@ body main.main-content .container .frontpage-property-description-area .featured
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
-  text-decoration: underline;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__content,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__content {
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 30px;
+  font-size: 20px;
   text-align: center;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features {
-  font-size: 16px;
+  font-size: 18px;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul {
@@ -1552,7 +1551,7 @@ body main.main-content .container .frontpage-property-description-area .featured
   display: inline-block;
   box-sizing: border-box;
   font-weight: 500;
-  margin: 0 0 10px -3px;
+  margin: 0 0 15px -3px;
   width: 50%;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul li:before,
@@ -1562,6 +1561,8 @@ body main.main-content .container .frontpage-property-description-area .featured
   display: inline-block;
   position: relative;
   margin-right: 10px;
+  font-size: 22px;
+  top: 5px;
 }
 body main.main-content .container .frontpage-headlights {
   margin: 20px auto;
@@ -1795,8 +1796,8 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   display: inline-block;
   float: left;
   margin-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   vertical-align: top;
   width: 25%;
 }
@@ -1947,7 +1948,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__left {
   float: left;
-  width: 45%;
+  width: 25%;
   font-size: 12px;
   line-height: 1;
   padding: 7px 0 0;
@@ -1963,12 +1964,12 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right {
   float: right;
-  width: 55%;
+  width: 75%;
   text-align: right;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right .property_price {
   color: #FFF;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   padding: 10px 0;
   line-height: 24px;
@@ -1976,6 +1977,24 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
 }
 body main.main-content .container .frontpage-property-addons-area {
   margin: 0 0 20px;
+}
+body main.main-content .container .frontpage-property-addons-area .row .col-md-4 {
+  padding-bottom: 20px;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box {
+  height: 122px;
+  overflow: hidden;
+  position: relative;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap {
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  height: 100%;
+  padding: 10px;
 }
 body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap .pab__image {
   float: left;
@@ -1994,8 +2013,8 @@ body main.main-content .container .frontpage-property-addons-area .property_addo
 body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap .pab__image img {
   display: block;
   padding: 4px;
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
   border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -2003,6 +2022,27 @@ body main.main-content .container .frontpage-property-addons-area .property_addo
 }
 body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap .pab__text {
   padding-left: 110px;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap .pab__text .pab__title {
+  margin-bottom: 7px;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box .pab__wrap .pab__text .pab__title a {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box:hover {
+  overflow: visible;
+}
+body main.main-content .container .frontpage-property-addons-area .property_addon_box:hover .pab__wrap {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  height: auto;
+  position: absolute;
+  z-index: 2;
 }
 body main.main-content .container .sidebar ul.sidebar_widget_list {
   margin: 0;

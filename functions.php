@@ -325,18 +325,19 @@ function avalon_register_default_widgets() {
         $avalon_counter = 1;
         $active_widgets['sidebar-property-description'][0] = 'avalon-fetaures-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
-            'title' => __('WP Property. Free WordPress plugin', 'wp-avalon'),
-            'text' => __('Free WordPress plugin. Download <a href="#">HERE</a>', 'wp-avalon'),
-            'featured-fields-1' => __('It is Free!!!!', 'wp-avalon'),
-            'featured-fields-2' => __('Compatible with WP-Property pluigin and all it’s add-ons', 'wp-avalon'),
-            'featured-fields-3' => __('Grid overview template', 'wp-avalon'),
-            'featured-fields-4' => __('Useful Sidebars and widgets available', 'wp-avalon'),
-            'featured-fields-5' => __('Let\'s you upload a custom logo', 'wp-avalon'),
-            'featured-fields-6' => __(' Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
-            'featured-fields-7' => __('Add your contact and company information', 'wp-avalon'),
-            'featured-fields-8' => __('Fully Responsive', 'wp-avalon'),
-            'featured-fields-9' => __('Available for localization', 'wp-avalon'),
-            'featured-fields-10' => __('Basic free support included', 'wp-avalon'),
+            'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
+            'text' => __('More than a Plugin – A Real Estate Management System!Dynamic Property Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
+            'featured-fields-1' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
+            'featured-fields-2' => __('Different attributes fields inputs are available: Text Editor, Dropdown Selection, Single Checkbox, Multi-checkbox, Radio, Number, Currency, Oembed, File and Image Upload, URL, Date and Color Pickers, etc.', 'wp-avalon'),
+            'featured-fields-3' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),
+            'featured-fields-4' => __('Customizable widgets: Property Overview, Featured Properties, Property Search, Property Gallery, Child Properties, Property Terms, Property Meta', 'wp-avalon'),
+            'featured-fields-5' => __('Property types follow a hierarchical format, having the ability of inheriting settings - i.e. buildings (or communities) will automatically calculate the price range of all floor-plans below them.', 'wp-avalon'),
+            'featured-fields-6' => __('Pagination and sorting works on search results.', 'wp-avalon'),
+            'featured-fields-7' => __('Available for translation.', 'wp-avalon'),
+            'featured-fields-8' => __('Customizable templates for different property types.', 'wp-avalon'),
+            'featured-fields-9' => __('SEO friendly URLs generated for every property, following the WordPress format.', 'wp-avalon'),
+            'featured-fields-10' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
+            'featured-fields-11' => __('Integrates with Media Library, avoiding the need for additional third-party Gallery plugins.', 'wp-avalon'),
         );
         update_option('widget_avalon-fetaures-widget', $overview_widget_content);
         $avalon_counter++;
@@ -550,7 +551,7 @@ function avalon_register_default_widgets() {
             'title' => __('WP-Property: FEPS', 'wp-avalon'),
             'description' => __('Allows to create front-end forms that facilitate a simple way for website visitors to submit, edit and delete listings from frontend. Listings can be submitted for free or you can use Sponsored Listings option.', 'wp-avalon'),
             'url' => 'https://www.usabilitydynamics.com/product/wp-property-feps',
-            'image_uri' => get_template_directory_uri() . '/images/fhb__image-.png'
+            'image_uri' => get_template_directory_uri() . '/images/fhb__image-16.png'
         );
         update_option('widget_avalon-property-addons-widget', $overview_widget_content);
         $avalon_counter++;
@@ -869,7 +870,7 @@ class sidebar_avalon_features extends WP_Widget {
             <label for="features"><?php _e('Features list', 'wp-avalon'); ?></label>
 
             <p class="clearfix">
-                <?php for ($i = 0; $i < 100; $i++) { ?>          
+                <?php for ($i = 1; $i < 100; $i++) { ?>          
                     <input id="<?php echo $this->get_field_id('featured-fields-' . $i); ?>" 
                            name="<?php echo $this->get_field_name('featured-fields-' . $i); ?>" 
                            value="<?php echo $instance['featured-fields-' . $i]; ?>" 
