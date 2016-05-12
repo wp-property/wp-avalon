@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-
+    
     function box_width() {
         var boxes = jQuery('.frontpage-headlights .fh__container > div').size();
         var box_width = 12 / boxes;

@@ -1540,19 +1540,32 @@ body main.main-content .container .frontpage-avalon-features-area .featured-text
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features {
   font-size: 18px;
 }
+body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features:before,
+body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features:after,
+body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features:after {
+  display: block;
+  content: "";
+  clear: both;
+}
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul {
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0 0;
   list-style: none;
+  width: 50%;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul li,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul li {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   font-weight: 500;
   margin: 0 0 15px -3px;
-  width: 50%;
+  width: 100%;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul li:before,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul li:before {
@@ -1563,6 +1576,14 @@ body main.main-content .container .frontpage-property-description-area .featured
   margin-right: 10px;
   font-size: 22px;
   top: 5px;
+}
+body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul.ftw_features_left,
+body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul.ftw_features_left {
+  float: left;
+}
+body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul.ftw_features_right,
+body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul.ftw_features_right {
+  float: right;
 }
 body main.main-content .container .frontpage-headlights {
   margin: 20px auto;
@@ -1802,13 +1823,9 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   width: 25%;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   background-color: #FFF;
   height: 100%;
   padding-bottom: 44px;
@@ -1816,6 +1833,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   width: 100%;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image {
+  padding: 10px;
   text-align: center;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail {
