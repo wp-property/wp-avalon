@@ -14,17 +14,7 @@ get_header();
     <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'wp-avalon'); ?>
 
     <div class="content col-md-12">
-        <?php
-        if (have_posts()) :
-
-            while (have_posts()) : the_post();
-
-                get_template_part('template-parts/content/content', 'front-page');
-
-            endwhile;
-
-        endif;
-        ?>
+        <?php get_template_part('template-parts/content/content', 'front-page'); ?>
 
     </div>
 

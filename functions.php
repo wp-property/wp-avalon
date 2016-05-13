@@ -965,7 +965,7 @@ class sidebar_avalon_overview extends WP_Widget {
         extract($args);
         echo $before_widget;
 
-        $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+//        $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
         ?>
 
         <div class="property_div property">
@@ -978,11 +978,11 @@ class sidebar_avalon_overview extends WP_Widget {
                             </a>
                         </div>
                     </div>
-                <?php elseif (!empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
+                <?php elseif (!empty(wp_get_attachment_image_src($instance["custom_media_id"])) && !empty(wp_get_attachment_image_src($instance["custom_media_id"])[0])) : ?>
                     <div class="wpp_overview_left_column">
                         <div class="property_image">
-                            <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
-                                <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
+                            <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url(wp_get_attachment_image_src($instance["custom_media_id"])[0]); ?>">
+                                <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url(wp_get_attachment_image_src($instance["custom_media_id"])[0]); ?>">
                             </a>
                         </div>
                     </div>

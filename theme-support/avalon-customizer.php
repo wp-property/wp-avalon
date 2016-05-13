@@ -892,6 +892,33 @@ function avalon_customize_register($wp_customize) {
 
     
 //  --------------------------------------------------------------------------
+//  Front page Container
+//  --------------------------------------------------------------------------
+    $wp_customize->add_panel('avalon_frontpage_container', array(
+        'priority' => 38,
+        'capability' => 'edit_theme_options',
+        'title' => __('Frontpage container section', 'wp-avalon')
+    ));
+    
+    // FOOTER Logo settings
+    $wp_customize->add_section('avalon_frontpage_container_settings', array(
+        'title' => __('Frontpage container settings', 'wp-avalon'),
+        'panel' => 'avalon_frontpage_container',
+        'priority' => 1,
+    ));
+    // Show container
+    $wp_customize->add_setting('avalon_frontpage_container_disable', array(
+        'default' => 1
+    ));
+    $wp_customize->add_control('avalon_frontpage_container_disable', array(
+        'label' => __('Disable default content on front page', 'wp-avalon'),
+        'section' => 'addons_settings_section',
+        'type' => 'checkbox',
+        'priority' => 1
+    ));
+    
+    
+//  --------------------------------------------------------------------------
 //  Footer
 //  --------------------------------------------------------------------------
     $wp_customize->add_panel('avalon_footer_area_panel', array(
