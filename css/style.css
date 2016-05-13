@@ -1512,7 +1512,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 body main.main-content .container .frontpage-avalon-features-area,
 body main.main-content .container .frontpage-property-description-area {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget {
@@ -1523,6 +1523,7 @@ body main.main-content .container .frontpage-property-description-area .featured
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
   padding: 10px 30px 20px;
+  margin-bottom: 20px;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
@@ -1744,7 +1745,7 @@ body main.main-content .container .frontpage-headlights-widget-area .fhwa__title
   text-align: center;
   font-size: 28px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 body main.main-content .container .frontpage-headlights-widget-area .fhwa__container {
   text-align: center;
@@ -1812,7 +1813,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__title {
   text-align: center;
   font-size: 28px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property {
   display: inline-block;

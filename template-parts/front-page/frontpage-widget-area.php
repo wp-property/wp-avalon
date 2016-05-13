@@ -14,25 +14,29 @@ if ($active_sidebar != 1 && is_active_sidebar($sidebar_name)) :
     $sw__list = $sidebar_widgets[$sidebar_name];
     ?>
     <div class="frontpage-widgetaria-tabs">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <?php
+                    $active_tab_head = 'active';
+                    foreach ($sw__list as $id) :
+                        ?>
+                        <li role="presentation" class="<?php echo $active_tab_head; ?>">
+                            <a href="#<?php echo $wp_registered_widgets[$id]['id']; ?>" aria-controls="<?php echo $wp_registered_widgets[$id]['id']; ?>" role="tab" data-toggle="tab"><?php echo $wp_registered_widgets[$id]['name']; ?></a>
+                        </li>
+                        <?php
+                        $active_tab_head = '';
+                    endforeach;
+                    ?>
+                </ul>
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-justified" role="tablist">
-            <?php
-            $active_tab_head = 'active';
-            foreach ($sw__list as $id) :
-                ?>
-                <li role="presentation" class="<?php echo $active_tab_head; ?>">
-                    <a href="#<?php echo $wp_registered_widgets[$id]['id']; ?>" aria-controls="<?php echo $wp_registered_widgets[$id]['id']; ?>" role="tab" data-toggle="tab"><?php echo $wp_registered_widgets[$id]['name']; ?></a>
-                </li>
-                <?php
-                $active_tab_head = '';
-            endforeach;
-            ?>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <?php dynamic_sidebar($sidebar_name); ?>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <?php dynamic_sidebar($sidebar_name); ?>
+                </div>
+            </div>
         </div>
     </div>
-<?php endif;
+    <?php
+ endif;

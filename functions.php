@@ -812,16 +812,20 @@ class sidebar_avalon_features extends WP_Widget {
             echo '<div class="ftw__content">' . $text . '</div>';
         }
         echo '<div class="ftw__features">';
-        echo '<ul class="ftw_features_left">';
-        foreach ($instance['featured-left-fields'] as $value) :
-            echo '<li>' . $value . '</li>';
-        endforeach;
-        echo '</ul>';
-        echo '<ul class="ftw_features_right">';
-        foreach ($instance['featured-right-fields'] as $value) :
-            echo '<li>' . $value . '</li>';
-        endforeach;
-        echo '</ul>';
+        if (!empty($instance['featured-left-fields'])) :
+            echo '<ul class="ftw_features_left">';
+            foreach ($instance['featured-left-fields'] as $value) :
+                echo '<li>' . $value . '</li>';
+            endforeach;
+            echo '</ul>';
+        endif;
+        if (!empty($instance['featured-right-fields'])) :
+            echo '<ul class="ftw_features_right">';
+            foreach ($instance['featured-right-fields'] as $value) :
+                echo '<li>' . $value . '</li>';
+            endforeach;
+            echo '</ul>';
+        endif;
         echo '</div>';
         echo '</div>';
     }
@@ -852,10 +856,13 @@ class sidebar_avalon_features extends WP_Widget {
             $(document).ready(function(e) {
                 $(".<?php echo $widget_id; ?>").on('click', function(e) {
                     if ($(this).hasClass('to-left-side')) {
-                        $('.<?php echo $widget_id; ?>-left-input-containers input.widefat').last().clone().val('').appendTo('.<?php echo $widget_id; ?>-left-input-containers p');
+                        $('.<?php echo $widget_id; ?>-left-input-containers p.features-row').last().clone().find('.widefat').val('').parents('p').appendTo('.<?php echo $widget_id; ?>-left-input-containers div.clearfix');
                     } else {
-                        $('.<?php echo $widget_id; ?>-right-input-containers input.widefat').last().clone().val('').appendTo('.<?php echo $widget_id; ?>-right-input-containers p');
+                        $('.<?php echo $widget_id; ?>-right-input-containers p.features-row').last().clone().find('.widefat').val('').parents('p').appendTo('.<?php echo $widget_id; ?>-right-input-containers div.clearfix');
                     }
+                });
+                $('.remove-feature').live('click', function(){
+                    $(this).parent('p.features-row').remove();
                 });
             });
         </script>
@@ -876,27 +883,33 @@ class sidebar_avalon_features extends WP_Widget {
         <div class="features-list <?php echo $widget_id; ?>-left-input-containers">
             <label for="features"><?php _e('Features list left column', 'wp-avalon'); ?></label>
 
-            <p class="clearfix">
+            <div class="clearfix">
                 <?php
                 if (!empty($instance['featured-left-fields'])) :
                     foreach ($instance['featured-left-fields'] as $key => $value) :
                         ?>
+                        <p class="features-row">
+                            <input type="text" class="widefat features-input"
+                                   value="<?php echo $value; ?>"
+                                   name="<?php echo $this->get_field_name('featured-left-fields[]'); ?>"
+                                   id="<?php echo $this->get_field_id('featured-left-fields-' . $key); ?>" />
+                            <span class="button-secondary remove-feature"></span>
+                        </p>
+                        <?php
+                    endforeach;
+                else :
+                    ?>
+                    <p class="features-row">
                         <input type="text" class="widefat features-input"
-                               value="<?php echo $value; ?>"
+                               value=""
                                name="<?php echo $this->get_field_name('featured-left-fields[]'); ?>"
-                               id="<?php echo $this->get_field_id('featured-left-fields-' . $key); ?>" />
-                               <?php
-                           endforeach;
-                       else :
-                           ?>
-                    <input type="text" class="widefat features-input"
-                           value=""
-                           name="<?php echo $this->get_field_name('featured-left-fields[]'); ?>"
-                           id="<?php echo $this->get_field_id('featured-left-fields-0'); ?>" />
-                       <?php
-                       endif;
-                       ?>
-            </p>
+                               id="<?php echo $this->get_field_id('featured-left-fields-0'); ?>" />
+                        <span class="button-secondary remove-feature"></span>
+                    </p>
+                <?php
+                endif;
+                ?>
+            </div>
             <span class="button-secondary to-left-side add-features-input <?php echo $widget_id; ?>">Add field</span>
         </div>
         <br />
@@ -904,27 +917,33 @@ class sidebar_avalon_features extends WP_Widget {
 
             <label for="features"><?php _e('Features list right column', 'wp-avalon'); ?></label>
 
-            <p class="clearfix">
+            <div class="clearfix">
                 <?php
                 if (!empty($instance['featured-right-fields'])) :
                     foreach ($instance['featured-right-fields'] as $key => $value) :
                         ?>
+                        <p class="features-row">
+                            <input type="text" class="widefat features-input"
+                                   value="<?php echo $value; ?>"
+                                   name="<?php echo $this->get_field_name('featured-right-fields[]'); ?>"
+                                   id="<?php echo $this->get_field_id('featured-right-fields-' . $key); ?>" />
+                            <span class="button-secondary remove-feature"></span>
+                        </p>
+                        <?php
+                    endforeach;
+                else :
+                    ?>
+                    <p class="features-row">
                         <input type="text" class="widefat features-input"
-                               value="<?php echo $value; ?>"
+                               value=""
                                name="<?php echo $this->get_field_name('featured-right-fields[]'); ?>"
-                               id="<?php echo $this->get_field_id('featured-right-fields-' . $key); ?>" />
-                               <?php
-                           endforeach;
-                       else :
-                           ?>
-                    <input type="text" class="widefat features-input"
-                           value=""
-                           name="<?php echo $this->get_field_name('featured-right-fields[]'); ?>"
-                           id="<?php echo $this->get_field_id('featured-right-fields-0'); ?>" />
-                       <?php
-                       endif;
-                       ?>
-            </p>
+                               id="<?php echo $this->get_field_id('featured-right-fields-0'); ?>" />
+                        <span class="button-secondary remove-feature"></span>
+                    </p>
+                <?php
+                endif;
+                ?>
+            </div>
             <span class="button-secondary to-right-side add-features-input <?php echo $widget_id; ?>">Add field</span>
         </div>
         <div style="clear:both;"></div>
