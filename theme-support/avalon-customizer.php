@@ -890,12 +890,21 @@ function avalon_customize_register($wp_customize) {
         'priority' => 1
     ));
 
-
+    
+//  --------------------------------------------------------------------------
+//  Footer
+//  --------------------------------------------------------------------------
+    $wp_customize->add_panel('avalon_footer_area_panel', array(
+        'priority' => 39,
+        'capability' => 'edit_theme_options',
+        'title' => __('Footer section', 'wp-avalon')
+    ));
+    
 //    FOOTER Logo settings
     $wp_customize->add_section('avalon_footer_logo_settings', array(
         'title' => __('Footer Logotype settings', 'wp-avalon'),
-        'description' => '',
-        'priority' => 120,
+        'panel' => 'avalon_footer_area_panel',
+        'priority' => 1,
     ));
 //    Footer Logo icon
     $wp_customize->add_setting('avalon_footer_logo_icon_settings', array(
@@ -974,8 +983,8 @@ function avalon_customize_register($wp_customize) {
 //    Copyrights
     $wp_customize->add_section('avalon_copyrights', array(
         'title' => __('Copyrights', 'wp-avalon'),
-        'description' => '',
-        'priority' => 120,
+        'panel' => 'avalon_footer_area_panel',
+        'priority' => 2,
     ));
 //    copyright settings
     $wp_customize->add_setting('avalon_copyrights_settings', array(

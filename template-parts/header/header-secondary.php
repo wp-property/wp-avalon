@@ -13,7 +13,11 @@ $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disab
 <div class="secondary-header 
 <?php
 if (is_home() || is_front_page()) :
-    echo 'sh__frontpage 11';
+    echo 'sh__frontpage';
+elseif (is_archive()):
+    echo '';
+else :
+    echo '';
 endif;
 ?>
      ">
