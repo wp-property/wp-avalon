@@ -12,7 +12,7 @@ $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disab
 ?>
 <div class="secondary-header 
 <?php
-if (is_home() || is_front_page()) :
+if (is_front_page()) :
     echo 'sh__frontpage';
 elseif (is_archive()):
     echo '';
@@ -22,7 +22,7 @@ endif;
 ?>
      ">
          <?php
-         if (is_home() || is_front_page()) :
+         if (is_front_page()) :
              if (!empty($header_image)) :
                  ?>
             <div class="secondary-header-image" style="background-image: url('<?php echo $header_image; ?>'); background-size: cover; background-position: center center;"></div>
