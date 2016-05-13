@@ -597,7 +597,7 @@ body main.main-content .secondary-header .container .wellcome-text-box h1 {
   margin: 0 0 15px;
   text-align: center;
 }
-body main.main-content .secondary-header .container .wellcome-text-box a {
+body main.main-content .secondary-header .container .wellcome-text-box .wtb__container a {
   color: #FFF;
   text-decoration: underline;
 }

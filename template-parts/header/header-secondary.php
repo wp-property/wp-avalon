@@ -31,7 +31,7 @@ endif;
         echo '<div class="container">';
         echo '<div class="wellcome-text-box">';
         echo '<h1>' . get_theme_mod('header_wellcome_title', __('Wellcome to WP Avalon', 'wp-avalon')) . '</h1>';
-        echo '<p>' . get_theme_mod('header_wellcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon')) . '</p>';
+        echo '<div class="wtb__container"><p>' . get_theme_mod('header_wellcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon')) . '</p></div>';
         if (function_exists('ud_check_wp_property')) :
             if ($wellcome_property_search != 1) :
                 echo '<div class="wellcome-box-property-search">';
