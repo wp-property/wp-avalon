@@ -21,3 +21,8 @@ $date_format = get_option('date_format');
         <?php the_tags('<div class="post-tags"><label>Tags: </label>', ', ', '</div>'); ?>
     </div>
 </article>
+<?php
+if (is_paged()) :
+    get_template_part('paged', 'wp-avalon');
+endif;
+?>
