@@ -22,7 +22,9 @@ $date_format = get_option('date_format');
     </div>
 </article>
 <?php
-if (is_paged()) :
-    get_template_part('paged', 'wp-avalon');
-endif;
+the_posts_pagination(array(
+    'prev_text' => __('Previous page', 'wp-avalon'),
+    'next_text' => __('Next page', 'wp-avalon'),
+    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-avalon') . ' </span>',
+));
 ?>
