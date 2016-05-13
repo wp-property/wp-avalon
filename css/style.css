@@ -568,6 +568,7 @@ body main.main-content .secondary-header h3.page-tagline {
 }
 body main.main-content .secondary-header .container {
   position: relative;
+  z-index: 9;
   margin-top: 0;
 }
 body main.main-content .secondary-header .container .wellcome-text-box {
@@ -1833,7 +1834,6 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   width: 100%;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image {
-  padding: 10px;
   text-align: center;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail {
@@ -1866,7 +1866,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   -o-transition: opacity 0.15s ease-in-out 0s;
   transition: opacity 0.15s ease-in-out 0s;
   height: auto !important;
-  max-width: 100%;
+  width: 100% !important;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail:hover img {
   opacity: 0.8;

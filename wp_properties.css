@@ -344,7 +344,6 @@
   width: 100%;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image {
-  padding: 10px;
   text-align: center;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail {
@@ -367,7 +366,7 @@
   -o-transition: opacity 0.15s ease-in-out 0s;
   transition: opacity 0.15s ease-in-out 0s;
   height: auto !important;
-  max-width: 100%;
+  width: 100% !important;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail:hover img {
   opacity: 0.8;
@@ -669,7 +668,6 @@
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image {
-  padding: 10px;
   text-align: center;
 }
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb,
