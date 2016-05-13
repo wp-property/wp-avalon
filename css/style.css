@@ -1528,9 +1528,9 @@ body main.main-content .container .frontpage-property-description-area .featured
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
   background-color: #19294c;
-  border-radius: 4px 4px 0 0 0px 0px 0px;
-  -moz-border-radius: 4px 4px 0 0 0px 0px 0px;
-  -webkit-border-radius: 4px 4px 0 0 0px 0px 0px;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
   color: #fff;
   font-size: 30px;
   font-weight: 500;
