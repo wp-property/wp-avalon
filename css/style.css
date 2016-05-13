@@ -1527,19 +1527,39 @@ body main.main-content .container .frontpage-property-description-area .featured
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
+  background-color: #19294c;
+  border-radius: 4px 4px 0 0 0px 0px 0px;
+  -moz-border-radius: 4px 4px 0 0 0px 0px 0px;
+  -webkit-border-radius: 4px 4px 0 0 0px 0px 0px;
+  color: #fff;
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
+  padding: 10px 0;
   text-align: center;
+  width: 100%;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__content,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__content {
   margin-bottom: 30px;
+  padding: 0 30px;
   font-size: 20px;
   text-align: center;
 }
+body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__content:after,
+body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__content:after {
+  background-color: #999;
+  bottom: -20px;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+}
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features {
+  padding: 0 30px;
   font-size: 18px;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features:before,

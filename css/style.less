@@ -1091,18 +1091,35 @@ body {
                     margin-bottom: 20px;
 
                     .ftw__title {
+                        background-color: #19294c;
+                        .round-corners(4px 4px 0 0);
+                        color: #fff;
                         font-size: 30px;
                         font-weight: 500;
                         margin-bottom: 20px;
+                        padding: 10px 0;
                         text-align: center;
+                        width: 100%;
                     }
                     .ftw__content {
                         margin-bottom: 30px;
+                        padding: 0 30px;
                         font-size: 20px;
                         text-align: center;
+                        &:after {
+                            background-color: #999;
+                            bottom: -20px;
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            margin: 0 auto;
+                            position: relative;
+                            width: 50%;
+                        }
                     }
                     .ftw__features {
                         .clearfix;
+                        padding: 0 30px;
                         font-size: 18px;
 
                         ul {
