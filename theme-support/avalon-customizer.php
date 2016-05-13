@@ -658,8 +658,8 @@ function avalon_customize_register($wp_customize) {
         'type' => 'textarea',
         'priority' => 5
     ));
-    
-    
+
+
 // -----------------------------------------------------------------------------
 //    WP Property settings
 // -----------------------------------------------------------------------------
@@ -700,8 +700,8 @@ function avalon_customize_register($wp_customize) {
             'section' => 'wp_property_disabled_settings_section',
         )));
     }
-    
-    
+
+
 // -----------------------------------------------------------------------------
 //    Fronpage top widget area
 // -----------------------------------------------------------------------------
@@ -710,7 +710,7 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('Frontpage multi-sidebar widget area', 'wp-avalon')
     ));
-    
+
     // Fronpage top widget area settings
     $wp_customize->add_section('frontpage_top_widget_area_settings_section', array(
         'title' => __('Area settings', 'wp-avalon'),
@@ -727,9 +727,9 @@ function avalon_customize_register($wp_customize) {
         'type' => 'checkbox',
         'priority' => 1
     ));
-    
-    
-    
+
+
+
 // -----------------------------------------------------------------------------
 //    Fronpage text widget area
 // -----------------------------------------------------------------------------
@@ -738,7 +738,7 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('Avalon features area', 'wp-avalon')
     ));
-    
+
     // Fronpage top widget area settings
     $wp_customize->add_section('frontpage_features_area_settings_section', array(
         'title' => __('Area settings', 'wp-avalon'),
@@ -755,9 +755,9 @@ function avalon_customize_register($wp_customize) {
         'type' => 'checkbox',
         'priority' => 1
     ));
-    
-    
-    
+
+
+
 // -----------------------------------------------------------------------------
 //    Headlights widget area
 // -----------------------------------------------------------------------------
@@ -795,7 +795,7 @@ function avalon_customize_register($wp_customize) {
         'priority' => 2
     ));
 
-    
+
 //  --------------------------------------------------------------------------
 //  WP Property desctiption text
 //  --------------------------------------------------------------------------
@@ -804,7 +804,7 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('WP Property desctiption section', 'wp-avalon')
     ));
-    
+
     // WP Property desctiption settings
     $wp_customize->add_section('property_description_area_section', array(
         'title' => __('Settings', 'wp-avalon'),
@@ -821,7 +821,7 @@ function avalon_customize_register($wp_customize) {
         'type' => 'checkbox',
         'priority' => 1
     ));
-    
+
 
 //  --------------------------------------------------------------------------
 //  Default property overview settings
@@ -863,7 +863,7 @@ function avalon_customize_register($wp_customize) {
         'panel' => 'property_overview_settings_control',
         'priority' => 2,
     ));
-    
+
 //  --------------------------------------------------------------------------
 //  Addons section
 //  --------------------------------------------------------------------------
@@ -890,7 +890,7 @@ function avalon_customize_register($wp_customize) {
         'priority' => 1
     ));
 
-    
+
 //  --------------------------------------------------------------------------
 //  Front page Container
 //  --------------------------------------------------------------------------
@@ -899,7 +899,7 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('Frontpage container section', 'wp-avalon')
     ));
-    
+
     // FOOTER Logo settings
     $wp_customize->add_section('avalon_frontpage_container_settings', array(
         'title' => __('Frontpage container settings', 'wp-avalon'),
@@ -916,8 +916,8 @@ function avalon_customize_register($wp_customize) {
         'type' => 'checkbox',
         'priority' => 1
     ));
-    
-    
+
+
 //  --------------------------------------------------------------------------
 //  Footer
 //  --------------------------------------------------------------------------
@@ -926,7 +926,7 @@ function avalon_customize_register($wp_customize) {
         'capability' => 'edit_theme_options',
         'title' => __('Footer section', 'wp-avalon')
     ));
-    
+
 //    FOOTER Logo settings
     $wp_customize->add_section('avalon_footer_logo_settings', array(
         'title' => __('Footer Logotype settings', 'wp-avalon'),
@@ -1079,6 +1079,11 @@ function avalon_customize_css() {
         body main.main-content .secondary-header h3.page-tagline {
             color: <?php echo get_theme_mod('avalon_page_tagline_color', '#FFF'); ?>;
         }
+        body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title, 
+        body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
+            background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+        }
+
 
         .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
         .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
