@@ -303,17 +303,21 @@ function avalon_register_default_widgets() {
         $active_widgets['sidebar-avalon-features'][0] = 'avalon-fetaures-widget-' . $avalon_counter;
         $overview_widget_content[$avalon_counter] = array(
             'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
-            'text' => __('Free WordPress theme special for properties', 'wp-avalon'),
-            'featured-left-fields-1' => __('It is Free!!!!', 'wp-avalon'),
-            'featured-left-fields-2' => __('Grid overview template', 'wp-avalon'),
-            'featured-left-fields-3' => __('Let\'s you upload a custom logo', 'wp-avalon'),
-            'featured-left-fields-4' => __('Add your contact and company information', 'wp-avalon'),
-            'featured-left-fields-5' => __('Available for localization', 'wp-avalon'),
-            'featured-right-fields-1' => __('Compatible with WP-Property pluigin and all it’s add-ons', 'wp-avalon'),
-            'featured-right-fields-2' => __('Useful Sidebars and widgets available', 'wp-avalon'),
-            'featured-right-fields-3' => __(' Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
-            'featured-right-fields-4' => __('Fully Responsive', 'wp-avalon'),
-            'featured-right-fields-5' => __('Basic free support included', 'wp-avalon'),
+            'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
+            'featured-left-fields' => array(
+                '0' => __('It is Free!!!!', 'wp-avalon'),
+                '1' => __('Grid overview template', 'wp-avalon'),
+                '2' => __('Let\'s you upload a custom logo', 'wp-avalon'),
+                '3' => __('Add your contact and company information', 'wp-avalon'),
+                '4' => __('Available for localization', 'wp-avalon'),
+            ),
+            'featured-right-fields' => array(
+                '0' => __('Compatible with WP-Property pluigin and all it\'s add-ons', 'wp-avalon'),
+                '1' => __('Useful Sidebars and widgets available', 'wp-avalon'),
+                '2' => __('Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
+                '3' => __('Fully Responsive', 'wp-avalon'),
+                '4' => __('Basic free support included', 'wp-avalon'),
+            ),
         );
         update_option('widget_avalon-fetaures-widget', $overview_widget_content);
         $avalon_counter++;
@@ -327,17 +331,21 @@ function avalon_register_default_widgets() {
         $overview_widget_content[$avalon_counter] = array(
             'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
             'text' => __('More than a Plugin – A Real Estate Management System!Dynamic Property Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
-            'featured-left-fields-1' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
-            'featured-left-fields-2' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),
-            'featured-left-fields-3' => __('Property types follow a hierarchical format, having the ability of inheriting settings - i.e. buildings (or communities) will automatically calculate the price range of all floor-plans below them.', 'wp-avalon'),
-            'featured-left-fields-4' => __('Available for translation.', 'wp-avalon'),
-            'featured-left-fields-5' => __('SEO friendly URLs generated for every property, following the WordPress format.', 'wp-avalon'),
-            'featured-left-fields-6' => __('Integrates with Media Library, avoiding the need for additional third-party Gallery plugins.', 'wp-avalon'),
-            'featured-right-fields-1' => __('Different attributes fields inputs are available: Text Editor, Dropdown Selection, Single Checkbox, Multi-checkbox, Radio, Number, Currency, Oembed, File and Image Upload, URL, Date and Color Pickers, etc.', 'wp-avalon'),
-            'featured-right-fields-2' => __('Customizable widgets: Property Overview, Featured Properties, Property Search, Property Gallery, Child Properties, Property Terms, Property Meta', 'wp-avalon'),
-            'featured-right-fields-3' => __('Pagination and sorting works on search results.', 'wp-avalon'),
-            'featured-right-fields-4' => __('Customizable templates for different property types.', 'wp-avalon'),
-            'featured-right-fields-5' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
+            'featured-left-fields' => array(
+                '0' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
+                '1' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),
+                '2' => __('Property types follow a hierarchical format, having the ability of inheriting settings - i.e. buildings (or communities) will automatically calculate the price range of all floor-plans below them.', 'wp-avalon'),
+                '3' => __('Available for translation.', 'wp-avalon'),
+                '4' => __('SEO friendly URLs generated for every property, following the WordPress format.', 'wp-avalon'),
+                '5' => __('Integrates with Media Library, avoiding the need for additional third-party Gallery plugins.', 'wp-avalon'),
+            ),
+            'featured-right-fields' => array(
+                '0' => __('Different attributes fields inputs are available: Text Editor, Dropdown Selection, Single Checkbox, Multi-checkbox, Radio, Number, Currency, Oembed, File and Image Upload, URL, Date and Color Pickers, etc.', 'wp-avalon'),
+                '1' => __('Customizable widgets: Property Overview, Featured Properties, Property Search, Property Gallery, Child Properties, Property Terms, Property Meta', 'wp-avalon'),
+                '2' => __('Pagination and sorting works on search results.', 'wp-avalon'),
+                '3' => __('Customizable templates for different property types.', 'wp-avalon'),
+                '4' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
+            ),
         );
         update_option('widget_avalon-fetaures-widget', $overview_widget_content);
         $avalon_counter++;
@@ -805,18 +813,14 @@ class sidebar_avalon_features extends WP_Widget {
         }
         echo '<div class="ftw__features">';
         echo '<ul class="ftw_features_left">';
-        for ($i = 0; $i < 100; $i++) {
-            if (!empty($instance['featured-left-fields-' . $i])) {
-                echo '<li>' . $instance['featured-left-fields-' . $i] . '</li>';
-            }
-        }
+        foreach ($instance['featured-left-fields'] as $value) :
+            echo '<li>' . $value . '</li>';
+        endforeach;
         echo '</ul>';
         echo '<ul class="ftw_features_right">';
-        for ($i = 0; $i < 100; $i++) {
-            if (!empty($instance['featured-right-fields-' . $i])) {
-                echo '<li>' . $instance['featured-right-fields-' . $i] . '</li>';
-            }
-        }
+        foreach ($instance['featured-right-fields'] as $value) :
+            echo '<li>' . $value . '</li>';
+        endforeach;
         echo '</ul>';
         echo '</div>';
         echo '</div>';
@@ -824,42 +828,34 @@ class sidebar_avalon_features extends WP_Widget {
 
     function update($new_instance, $old_instance) {
 
-        $instance = $old_instance;
+        $instance = $new_instance;
         $instance['text'] = stripslashes(wp_filter_post_kses($new_instance['text']));
         $instance['title'] = strip_tags($new_instance['title']);
-        for ($i = 0; $i < 100; $i++) {
-            $instance['featured-left-fields-' . $i] = $new_instance['featured-left-fields-' . $i];
-            $instance['featured-right-fields-' . $i] = $new_instance['featured-right-fields-' . $i];
-        }
+
         return $instance;
     }
 
     function form($instance) {
+        $rand = rand(0, 1000000);
         $defaults = array('title' => __('', 'wp-avalon'), 'text' => '');
-        for ($i = 0; $i < 100; $i++) {
-            $defaults['dynamic-left-fields-' . $i] = '';
-            $defaults['dynamic-right-fields-' . $i] = '';
-        }
+
+        if ($this->get_field_id('-add') == 'widget-avalon-fetaures-widget-__i__-add') :
+            $widget_id = 'widget-avalon-fetaures-widget-' . $rand . '-add';
+        else :
+            $widget_id = $this->get_field_id('-add');
+        endif;
         $instance = wp_parse_args((array) $instance, $defaults);
-        $widget_add_id = $this->id . "-add";
         ?>
         <!-- inline javascript -->
         <script>
             var $ = jQuery.noConflict();
             $(document).ready(function(e) {
-                $(".<?php echo $widget_add_id; ?>").bind('click', function(e) {
-                            console.log('not work');
-                        if($(this).hasClass('to-left-side')) {
-                            console.log('left');
-                        } else {
-                            console.log('right');
-                        }
-                    $.each($(".<?php echo $widget_add_id; ?>-left-input-containers").find('p > input.widefat'), function() {
-                        if ($(this).val() == '') {
-                            $(this).show();
-                            return false;
-                        }
-                    });
+                $(".<?php echo $widget_id; ?>").on('click', function(e) {
+                    if ($(this).hasClass('to-left-side')) {
+                        $('.<?php echo $widget_id; ?>-left-input-containers input.widefat').last().clone().val('').appendTo('.<?php echo $widget_id; ?>-left-input-containers p');
+                    } else {
+                        $('.<?php echo $widget_id; ?>-right-input-containers input.widefat').last().clone().val('').appendTo('.<?php echo $widget_id; ?>-right-input-containers p');
+                    }
                 });
             });
         </script>
@@ -877,57 +873,59 @@ class sidebar_avalon_features extends WP_Widget {
                 endif;
                 ?></textarea>
         </p>
-        <div class="features-list <?php echo $widget_add_id; ?>-left-input-containers">
+        <div class="features-list <?php echo $widget_id; ?>-left-input-containers">
             <label for="features"><?php _e('Features list left column', 'wp-avalon'); ?></label>
 
             <p class="clearfix">
                 <?php
-                $active_left = 'active';
-                for ($i = 1; $i < 100; $i++) {
-                    ?>          
-                    <input id="<?php echo $this->get_field_id('featured-left-fields-' . $i); ?>" 
-                           name="<?php echo $this->get_field_name('featured-left-fields-' . $i); ?>" 
-                           value="<?php echo $instance['featured-left-fields-' . $i]; ?>" 
-                           class="widefat features-input"
-                           type="text"
-                           <?php
-                           if ($active_left != 'active' && empty($instance['featured-left-fields-' . $i])) {
-                               echo 'style="display:none;"';
-                           }
-                           ?>>
-                           <?php
-                           $active_left = '';
-                       }
+                if (!empty($instance['featured-left-fields'])) :
+                    foreach ($instance['featured-left-fields'] as $key => $value) :
+                        ?>
+                        <input type="text" class="widefat features-input"
+                               value="<?php echo $value; ?>"
+                               name="<?php echo $this->get_field_name('featured-left-fields[]'); ?>"
+                               id="<?php echo $this->get_field_id('featured-left-fields-' . $key); ?>" />
+                               <?php
+                           endforeach;
+                       else :
+                           ?>
+                    <input type="text" class="widefat features-input"
+                           value=""
+                           name="<?php echo $this->get_field_name('featured-left-fields[]'); ?>"
+                           id="<?php echo $this->get_field_id('featured-left-fields-0'); ?>" />
+                       <?php
+                       endif;
                        ?>
             </p>
-            <span class="button-secondary to-left-side add-features-input <?php echo $widget_add_id; ?>">Add field</span>
+            <span class="button-secondary to-left-side add-features-input <?php echo $widget_id; ?>">Add field</span>
         </div>
         <br />
-        <div class="features-list <?php echo $widget_add_id; ?>-right-input-containers">
+        <div class="features-list <?php echo $widget_id; ?>-right-input-containers">
 
             <label for="features"><?php _e('Features list right column', 'wp-avalon'); ?></label>
 
             <p class="clearfix">
                 <?php
-                $active_right = 'active';
-                for ($i = 1; $i < 100; $i++) {
-                    ?>          
-                    <input id="<?php echo $this->get_field_id('featured-right-fields-' . $i); ?>" 
-                           name="<?php echo $this->get_field_name('featured-right-fields-' . $i); ?>" 
-                           value="<?php echo $instance['featured-right-fields-' . $i]; ?>" 
-                           class="widefat features-input"
-                           type="text"
-                           <?php
-                           if ($active_right != 'active' && empty($instance['featured-right-fields-' . $i])) {
-                               echo 'style="display:none;"';
-                           }
-                           ?>>
-                           <?php
-                           $active_right = '';
-                       }
+                if (!empty($instance['featured-right-fields'])) :
+                    foreach ($instance['featured-right-fields'] as $key => $value) :
+                        ?>
+                        <input type="text" class="widefat features-input"
+                               value="<?php echo $value; ?>"
+                               name="<?php echo $this->get_field_name('featured-right-fields[]'); ?>"
+                               id="<?php echo $this->get_field_id('featured-right-fields-' . $key); ?>" />
+                               <?php
+                           endforeach;
+                       else :
+                           ?>
+                    <input type="text" class="widefat features-input"
+                           value=""
+                           name="<?php echo $this->get_field_name('featured-right-fields[]'); ?>"
+                           id="<?php echo $this->get_field_id('featured-right-fields-0'); ?>" />
+                       <?php
+                       endif;
                        ?>
             </p>
-            <span class="button-secondary to-right-side add-features-input <?php echo $widget_add_id; ?>">Add field</span>
+            <span class="button-secondary to-right-side add-features-input <?php echo $widget_id; ?>">Add field</span>
         </div>
         <div style="clear:both;"></div>
 

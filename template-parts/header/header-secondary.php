@@ -10,11 +10,16 @@ $header_image = get_theme_mod('header_image', get_template_directory_uri() . '/i
 $wellcome_disable = get_theme_mod('header_wellcome_disable', '');
 $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disable', '');
 ?>
-<div class="secondary-header <?php if (is_home() || is_front_page()) echo 'sh__frontpage'; ?>">
-    <?php
-    if (is_home() || is_front_page()) :
-        if (!empty($header_image)) :
-            ?>
+<div class="secondary-header 
+<?php
+if (is_home() || is_front_page()) : echo 'sh__frontpage';
+endif;
+?>
+     ">
+         <?php
+         if (is_home() || is_front_page()) :
+             if (!empty($header_image)) :
+                 ?>
             <div class="secondary-header-image" style="background-image: url('<?php echo $header_image; ?>'); background-size: cover; background-position: center center;"></div>
             <?php
         endif;
@@ -29,7 +34,7 @@ $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disab
                 echo '</div>';
             endif;
         else :
-            echo '<h3>'.__('At that place you can enable default property search', 'wp-avalon').'</h3>';
+            echo '<h3>' . __('At that place you can enable default property search', 'wp-avalon') . '</h3>';
         endif;
         echo '</div>';
         echo '</div>';
