@@ -25,6 +25,7 @@ function avalon_init() {
 
     /* Fonts */
     wp_enqueue_style('GoogleUbuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700,300,500&subset=latin,cyrillic-ext');
+    wp_enqueue_style('GooglePoppins', 'https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700&');
 }
 
 add_action('admin_enqueue_scripts', 'avalon_admin_init');
