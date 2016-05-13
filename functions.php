@@ -964,9 +964,6 @@ class sidebar_avalon_overview extends WP_Widget {
     function widget($args, $instance) {
         extract($args);
         echo $before_widget;
-        if (!empty($instance['custom_media_id'])) :
-            $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-        endif;
         ?>
 
         <div class="property_div property">
@@ -979,14 +976,19 @@ class sidebar_avalon_overview extends WP_Widget {
                             </a>
                         </div>
                     </div>
-                <?php elseif (!empty($instance['custom_media_id']) && !empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
-                    <div class="wpp_overview_left_column">
-                        <div class="property_image">
-                            <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
-                                <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
-                            </a>
+                    <?php
+                elseif (!empty($instance['custom_media_id'])) :
+                    $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+                    if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
+                        ?>
+                        <div class="wpp_overview_left_column">
+                            <div class="property_image">
+                                <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
+                                    <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 <?php endif; ?>
                 <div class="wpp_overview_right_column">
                     <ul class="wpp_overview_data">
@@ -1124,8 +1126,12 @@ class sidebar_property_addons extends WP_Widget {
                         <a href="<?php echo $instance['url']; ?>">
                             <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
                                 <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                            <?php elseif (!empty($instance['custom_media_id']) && !empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
-                                <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
+                                <?php
+                            elseif (!empty($instance['custom_media_id'])) :
+                                if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
+                                    ?>
+                                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
+                                <?php endif; ?>
                             <?php endif; ?>
                         </a>
                     </div>
