@@ -1847,7 +1847,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   padding: 0;
   position: relative;
   height: auto;
-  width: auto;
+  width: 100%;
   max-width: 100%;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail:after {
