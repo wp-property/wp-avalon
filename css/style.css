@@ -1522,7 +1522,7 @@ body main.main-content .container .frontpage-property-description-area .featured
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
-  padding: 10px 30px 20px;
+  padding: 0 0 20px;
   margin-bottom: 20px;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
