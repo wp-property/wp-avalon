@@ -122,6 +122,11 @@ jQuery(window).load(function() {
     frontpage_headlights_widgets();
     widget_property_height();
 
+//    jQuery('.grid').masonry({
+//        itemSelector: '.grid-item',
+//        columnWidth: 200
+//    });
+
 });
 jQuery(function() {
 
@@ -241,12 +246,15 @@ jQuery(function() {
     function show_form_message(message) {
         jQuery('.header-contact-form .dcf__message_box').html(message).show('400');
     }
+
+//    Flip addons
+    jQuery('.property_addon_box .pab__wrap').flip({
+        trigger: 'hover'
+    });
 });
 
-jQuery(document).trigger('wpp_pagination_change_complete', function(e, data) {
-    property_grid(true);
-});
 jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
     property_grid(true);
+    console.log('bind');
 });
 

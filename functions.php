@@ -13,6 +13,7 @@ function avalon_init() {
     wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6');
     wp_enqueue_script('bootstrap-select.min', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'));
     wp_enqueue_script('wp-avalon', get_template_directory_uri() . '/js/wp-avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
+    wp_enqueue_script('jquery.flip.min', get_template_directory_uri() . '/js/jquery.flip.min.js', array('jquery'));
     wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places', array('jquery'));
     wp_localize_script('avalon-ajax', 'avalon_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
@@ -705,7 +706,15 @@ class sidebar_headlights extends WP_Widget {
                     echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
                     echo '</p>';
                 }
-                ?>	
+                ?>
+                <div class="fhwa__bottom">
+                    <div class="fhwa__price"><?php echo $instance['price']; ?></div>
+                    <div class="fhwa__button">
+                        <?php if (!empty($instance['link'])) : ?>
+                            <a href="<?php echo $instance['link']; ?>" class="btn"><?php echo $instance['more_label']; ?></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1122,22 +1131,27 @@ class sidebar_property_addons extends WP_Widget {
         <div class="col-md-4">
             <div class="property_addon_box">
                 <div class="pab__wrap">
-                    <div class="pab__image">
-                        <a href="<?php echo $instance['url']; ?>">
-                            <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
-                                <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                                <?php
-                            elseif (!empty($instance['custom_media_id'])) :
-                                if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
-                                    ?>
-                                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
+                    <div class="front">
+                        <div class="pab__image">
+                            <a href="<?php echo $instance['url']; ?>">
+                                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
+                                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
+                                    <?php
+                                elseif (!empty($instance['custom_media_id'])) :
+                                    if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
+                                        ?>
+                                        <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
+                                    <?php endif; ?>
                                 <?php endif; ?>
-                            <?php endif; ?>
-                        </a>
-                    </div>
-                    <div class="pab__text">
+                            </a>
+                        </div>
                         <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
-                        <div class="pab__excerpt"><?php echo $instance['description']; ?></div>
+                    </div>
+                    <div class="back">
+                        <div class="pab__excerpt">
+                            <?php echo $instance['description']; ?>
+                            <a href="<?php echo $instance['url']; ?>" class="readmore">View more...</a>
+                        </div>
                     </div>
                 </div>
             </div>

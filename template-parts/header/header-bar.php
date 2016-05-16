@@ -103,7 +103,7 @@ if ($contuctus_disable != 1) :
                                     </div>
                                 <?php endif; ?>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 hbl__description">
                                         <?php
                                         if (!empty($location_text)) :
                                             echo $location_text;
@@ -129,7 +129,7 @@ endif;
                 <div class="hb__loginform">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
-                            <div class="hb__title">Login form</div>
+                            <div class="hb__title"><?php _e('Login form', 'wp-avalon'); ?></div>
                             <?php wp_login_form(); ?>
                         </div>
                     </div>
@@ -140,25 +140,25 @@ endif;
                     <div class="hb__registerform">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <div class="hb__title">Registration form</div>
+                                <div class="hb__title"><?php _e('Registration form', 'wp-avalon'); ?></div>
                                 <div class="hbr__container">
                                     <form action="<?php echo site_url('wp-login.php?action=register') ?>" method="POST">
                                         <p>
-                                            <label for="user_login">Your Login</label>
+                                            <label for="user_login"><?php _e('Your Login', 'wp-avalon'); ?></label>
                                             <input class="form-control" type="text" name="user_login" value="" placeholder="User" />
                                         </p>
                                         <p>
-                                            <label for="user_login">Your Email</label>
+                                            <label for="user_login"><?php _e('Your Email', 'wp-avalon'); ?></label>
                                             <input class="form-control" type="email" name="user_email" value="" placeholder="Email" />
                                         </p>
-                                        <p><button class="btn btn-primary">Register</button></p>
+                                        <p><button class="btn btn-primary"><?php _e('Register', 'wp-avalon'); ?></button></p>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php } else { ?>
-                    <div class="hb__title">Sorry, User can NOT register!</div>
+                    <div class="hb__title"><?php _e('Sorry, User can NOT register!', 'wp-avalon'); ?></div>
                 <?php } ?>
             </div>
         </div>

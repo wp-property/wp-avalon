@@ -592,7 +592,7 @@ body {
                 border-right: 1px solid #d2d3d6;
                 border-bottom: 1px solid #d2d3d6;
                 margin-top: -73px;
-                margin-bottom: 20px;
+                margin-bottom: 50px;
                 position: relative;
                 z-index: 3;
 
@@ -1081,7 +1081,7 @@ body {
             /*frontpage-avalon-features-area && frontpage-property-description-area*/
             .frontpage-avalon-features-area,
             .frontpage-property-description-area {
-                margin: 0 0 40px;
+                margin: 0 0 50px;
 
                 .featured-text-widget {
                     background-color: #fff;
@@ -1097,30 +1097,31 @@ body {
                         font-size: 30px;
                         font-weight: 500;
                         margin-bottom: 20px;
-                        padding: 10px 0;
+                        padding: 20px 0;
                         text-align: center;
                         width: 100%;
                     }
                     .ftw__content {
-                        margin-bottom: 30px;
+                        margin-bottom: 60px;
                         padding: 0 30px;
+                        line-height: 2.5;
                         font-size: 20px;
                         text-align: center;
                         &:after {
-                            background-color: #999;
-                            bottom: -20px;
+                            background-color: #DDD;
+                            bottom: -25px;
                             content: "";
                             display: block;
                             height: 1px;
                             margin: 0 auto;
                             position: relative;
-                            width: 50%;
+                            width: 100%;
                         }
                     }
                     .ftw__features {
                         .clearfix;
                         padding: 0 30px;
-                        font-size: 18px;
+                        font-size: 16px;
 
                         ul {
                             margin: 0;
@@ -1132,16 +1133,19 @@ body {
                                 display: block;
                                 box-sizing: border-box;
                                 font-weight: 500;
-                                margin: 0 0 15px -3px;
+                                margin: 0 0 20px -3px;
+                                padding-left: 30px;
+                                position: relative;
                                 width: 100%;
                                 &:before {
                                     .glyphicon-font;
                                     content:"\e089";
                                     display: inline-block;
-                                    position: relative;
+                                    position: absolute;
                                     margin-right: 10px;
-                                    font-size: 22px;
-                                    top: 5px;
+                                    font-size: 18px;
+                                    top: -1px;
+                                    left: 0;
                                 }
                             }
                             &.ftw_features_left {
@@ -1157,7 +1161,7 @@ body {
 
             /*Frontpage headlights*/
             .frontpage-headlights {
-                margin: 20px auto;
+                margin: 0 0 50px;
 
                 .fh__title {
                     text-align: center;
@@ -1245,13 +1249,13 @@ body {
 
             /*Frontpage headlights widget area*/
             .frontpage-headlights-widget-area {
-                margin: 20px auto;
+                margin: 0 0 50px;
 
                 .fhwa__title {
                     text-align: center;
                     font-size: 28px;
                     font-weight: 500;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                 }
                 .fhwa__container {
                     text-align: center;
@@ -1259,19 +1263,18 @@ body {
                     >div {
                         display: inline-block;
                         float: none !important;
-                        margin-bottom: 25px;
                         margin-right: -4px;
                         vertical-align: top;
 
                         .fhwa__box {
                             border: 1px solid #ccc;
-                            border-radius: 4px;
-                            margin-bottom: 15px;
-                            padding: 10px;
+                            .border-radius(4px);
+                            position: relative;
+                            padding: 40px 20px;
                             text-align: center;
 
                             .fhwa__box_icon {
-                                margin: 0 auto 10px;
+                                margin: 0 auto 30px;
                                 height: 150px;
                                 width: 150px;
                                 overflow: hidden;
@@ -1301,7 +1304,44 @@ body {
                                 font-size: 18px;
                                 font-weight: 500;
                                 line-height: 1.2;
+                                margin: 0 0 20px;
                                 text-decoration: none;
+                            }
+                            p {
+                                font-weight: 500;
+                                line-height: 1.8;
+                                margin-bottom: 0;
+                            }
+                            .fhwa__bottom {
+                                position: absolute;
+                                bottom: 30px;
+                                width: 100%;
+                                padding: 0 20px;
+                                left: 0;
+
+                                .fhwa__price {
+                                    float: left;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    line-height: 32px;
+                                    width: 50%;
+                                }
+                                .fhwa__button {
+                                    float: right;
+                                    width: 50%;
+
+                                    a {
+                                        text-decoration: none;
+                                        background-color: #19294c;
+                                        border-color: #0b1a3a;
+                                        color: #fff;
+                                        &:hover {
+                                            background-color: #0b1a3a;
+                                            border-color: #0b1a3a;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1310,20 +1350,19 @@ body {
 
             /*Frontpage overview widget area*/
             .frontpage-overview-widget-area {
-                margin: 20px auto;
+                margin: 0 0 50px;
 
                 .fowa__title {
                     text-align: center;
                     font-size: 28px;
                     font-weight: 500;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                 }
                 .fowa__container {
 
                     .property {
                         display: inline-block;
                         float: left;
-                        margin-bottom: 15px;
                         padding-left: 15px;
                         padding-right: 15px;
                         vertical-align: top;
@@ -1333,7 +1372,7 @@ body {
                             .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.25));
                             background-color: #FFF;
                             height: 100%;
-                            padding-bottom: 44px;
+                            padding-bottom: 74px;
                             position: relative;
                             width: 100%;
 
@@ -1381,7 +1420,7 @@ body {
 
                                 ul.wpp_overview_data {
                                     margin: 0 0 10px;
-                                    padding: 0 10px;
+                                    padding: 10px;
                                     list-style: none;
 
                                     li {
@@ -1443,8 +1482,8 @@ body {
                                     .clearfix;
                                     background-color: #19294c;
                                     border-top: 1px solid #c0c2c7;
-                                    height: 45px;
-                                    padding: 0 10px;
+                                    height: 75px;
+                                    padding: 10px;
                                     bottom: 0;
                                     width: 100%;
                                     position: absolute;
@@ -1466,7 +1505,7 @@ body {
                                         float: left;
                                         width: 25%;
                                         font-size: 12px;
-                                        line-height: 1;
+                                        line-height: 1.5;
                                         padding: 7px 0 0;
                                         color: #FFF;
 
@@ -1506,9 +1545,15 @@ body {
 
             /*Frontpage property addons area*/
             .frontpage-property-addons-area {
-                margin: 0 0 20px;
+                margin: 0 0 50px;
 
-                .row {
+                .fpaa__title {
+                    text-align: center;
+                    font-size: 28px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                .row.fpaa__container {
 
                     .col-md-4 {
                         padding-bottom: 20px;
@@ -1520,36 +1565,43 @@ body {
                     position: relative;
 
                     .pab__wrap {
-                        .transition(all, 0.15s, ease-in-out, 0s);
-                        background-color: #FFF;
-                        border: 1px solid #ccc;
                         height: 100%;
-                        padding: 10px;
+                        width: 100%;
 
-                        .pab__image {
-                            float: left;
-                            width: 110px;
+                        .front { 
+                            background-color: #FFF;
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            left: 0;
+                            padding: 10px;
+                            top: 0;
 
-                            a {
-                                border: 2px solid #ccc;
-                                display: block;
-                                height: 100px;
-                                width: 100px;
-                                .border-radius(100%);
+                            .pab__image {
+                                display: table-cell;
+                                width: 32%;
+
+                                a {
+                                    border: 2px solid #ccc;
+                                    display: block;
+                                    height: 100px;
+                                    width: 100px;
+                                    .border-radius(100%);
+                                }
+                                img {
+                                    display: block;
+                                    padding: 4px;
+                                    width: 96px;
+                                    height: 96px;
+                                    .border-radius(100%);
+                                }
                             }
-                            img {
-                                display: block;
-                                padding: 4px;
-                                width: 96px;
-                                height: 96px;
-                                .border-radius(100%);
-                            }
-                        }
-                        .pab__text {
-                            padding-left: 110px;
-
                             .pab__title {
-                                margin-bottom: 7px;
+                                box-sizing: border-box;
+                                display: table-cell;
+                                height: inherit;
+                                vertical-align: middle;
+                                padding-left: 10px;
+                                width: 68%;
 
                                 a {
                                     color: #414141;
@@ -1559,19 +1611,20 @@ body {
                                     text-transform: uppercase;
                                 }
                             }
-                            .pab__excerpt {
-
-                            }
                         }
-                    }
-                    &:hover {
-                        overflow: visible;
+                        .back {
+                            background-color: #FFF;
+                            border: 1px solid #ccc;
+                            overflow: hidden;
+                            padding: 10px;
+                            left: 0;
+                            padding: 10px;
+                            top: 0;
 
-                        .pab__wrap {
-                            .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.15));
-                            height: auto;
-                            position: absolute;
-                            z-index: 2;
+                            .pab__excerpt {
+                                overflow-y: auto;
+                                height: 100%;
+                            }
                         }
                     }
                 }
@@ -2233,6 +2286,10 @@ body {
                         .submit-button-style;
                     }
                     /*Defaul styles*/
+
+                    .frontpage-widgets {
+                        margin-top: 40px;
+                    }
                 }
 
                 /*Comments styles*/

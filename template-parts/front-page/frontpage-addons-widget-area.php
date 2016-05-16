@@ -11,6 +11,13 @@ if ($enable_section != 1) :
     ?>
     <div class="frontpage-property-addons-area">
         <div class="row">
+            <div class="col-md-12">
+                <div class="fpaa__title">
+                    <?php echo get_theme_mod('addons_section_title', __('WP Property addons', 'wp-avalon')); ?>
+                </div>
+            </div>
+        </div>
+        <div class="row fpaa__container">
             <?php
             if (is_active_sidebar('sidebar-property-addons')) :
                 dynamic_sidebar('sidebar-property-addons');

@@ -384,7 +384,8 @@ function avalon_customize_register($wp_customize) {
 
     // Disable wellcome section
     $wp_customize->add_setting('header_wellcome_disable', array(
-        'default' => ''
+        'default' => '',
+        'transport'=>'postMessage'
     ));
     $wp_customize->add_control('header_wellcome_disable', array(
         'label' => __('Disable "Wellcome" section', 'wp-avalon'),
@@ -396,6 +397,7 @@ function avalon_customize_register($wp_customize) {
     $wp_customize->add_setting('header_wellcome_title', array(
         'default' => __('Wellcome to WP Avalon', 'wp-avalon'),
         'capability' => 'edit_theme_options',
+        'transport'=>'postMessage'
     ));
     $wp_customize->add_control('header_wellcome_title', array(
         'label' => __('Wellcome section title', 'wp-avalon'),
@@ -407,6 +409,7 @@ function avalon_customize_register($wp_customize) {
     $wp_customize->add_setting('header_wellcome_text', array(
         'default' => __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon'),
         'capability' => 'edit_theme_options',
+        'transport'=>'postMessage'
     ));
     $wp_customize->add_control('header_wellcome_text', array(
         'label' => __('Wellcome section text', 'wp-avalon'),
@@ -416,7 +419,8 @@ function avalon_customize_register($wp_customize) {
     ));
     if (function_exists('ud_check_wp_property')) :
         $wp_customize->add_setting('header_wellcome_property_search_disable', array(
-            'default' => ''
+            'default' => '',
+            'transport'=>'postMessage'
         ));
         $wp_customize->add_control('header_wellcome_property_search_disable', array(
             'label' => __('Disable "Property search" in Wellcome section', 'wp-avalon'),
@@ -436,7 +440,8 @@ function avalon_customize_register($wp_customize) {
         // description
         $wp_customize->add_setting('header_wellcome_property_search_title', array(
             'default' => __('At that place you can enable default property search', 'wp-avalon'),
-            'capability' => 'edit_theme_options'
+            'capability' => 'edit_theme_options',
+            'transport'=>'postMessage'
         ));
         $wp_customize->add_control('header_wellcome_property_search_title', array(
             'label' => __('"Property search" description', 'wp-avalon'),
@@ -529,7 +534,8 @@ function avalon_customize_register($wp_customize) {
     ));
     // Disable "Contact us" area
     $wp_customize->add_setting('header_contuctus_disable_settings', array(
-        'default' => ''
+        'default' => '',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_disable_settings', array(
         'label' => __('Disable "Contact us" area', 'wp-avalon'),
@@ -540,7 +546,8 @@ function avalon_customize_register($wp_customize) {
     // "Contact us" area title
     $wp_customize->add_setting('header_contuctus_title_settings', array(
         'capability' => 'edit_theme_options',
-        'default' => 'CONTACT FORM'
+        'default' => 'CONTACT FORM',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_title_settings', array(
         'label' => __('"Contact us" area title', 'wp-avalon'),
@@ -551,7 +558,8 @@ function avalon_customize_register($wp_customize) {
     // "Contact us" area description
     $wp_customize->add_setting('header_contuctus_description_settings', array(
         'capability' => 'edit_theme_options',
-        'default' => 'Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.'
+        'default' => 'Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_description_settings', array(
         'label' => __('"Contact us" area description', 'wp-avalon'),
@@ -607,7 +615,8 @@ function avalon_customize_register($wp_customize) {
     ));
     // Disable "Location" area
     $wp_customize->add_setting('header_location_area_settings', array(
-        'default' => ''
+        'default' => '',
+        'transport'=>'postMessage'
     ));
     $wp_customize->add_control('header_location_area_settings', array(
         'label' => __('Disable "Location" area', 'wp-avalon'),
@@ -618,7 +627,8 @@ function avalon_customize_register($wp_customize) {
     // "Location" area title
     $wp_customize->add_setting('header_location_area_title', array(
         'capability' => 'edit_theme_options',
-        'default' => __('Location & Address', 'wp-avalon')
+        'default' => __('Location & Address', 'wp-avalon'),
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_location_area_title', array(
         'label' => __('"Location" area title', 'wp-avalon'),
@@ -650,7 +660,8 @@ function avalon_customize_register($wp_customize) {
     // "Location" description
     $wp_customize->add_setting('header_location_area_description', array(
         'capability' => 'edit_theme_options',
-        'default' => __('Here you can add some decription', 'wp-avalon')
+        'default' => __('Here you can add some decription', 'wp-avalon'),
+        'transport'=>'postMessage'
     ));
     $wp_customize->add_control('header_location_area_description', array(
         'label' => __('"Location" area decrpiption', 'wp-avalon'),
@@ -775,7 +786,8 @@ function avalon_customize_register($wp_customize) {
     ));
 // disable section
     $wp_customize->add_setting('headlights_wa_disable_setting', array(
-        'default' => ''
+        'default' => '',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('headlights_wa_disable_setting', array(
         'label' => __('Disable widget area section', 'wp-avalon'),
@@ -787,6 +799,7 @@ function avalon_customize_register($wp_customize) {
     $wp_customize->add_setting('headlights_wa_title_setting', array(
         'default' => __('Headlight widget area title', 'wp-avalon'),
         'capability' => 'edit_theme_options',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('headlights_wa_title_setting', array(
         'label' => __('Headlight widget area title', 'wp-avalon'),
@@ -849,7 +862,7 @@ function avalon_customize_register($wp_customize) {
         'priority' => 1
     ));
     $wp_customize->add_setting('property_overview_title', array(
-        'default' => __('Property overview')
+        'default' => __('Property overview', 'wp-avalon')
     ));
     $wp_customize->add_control('property_overview_title', array(
         'label' => __('Section title', 'wp-avalon'),
@@ -873,13 +886,13 @@ function avalon_customize_register($wp_customize) {
         'title' => __('Property add-ons section', 'wp-avalon')
     ));
 
-    // Property overview settings
+    // Addons settings
     $wp_customize->add_section('addons_settings_section', array(
         'title' => __('Settings', 'wp-avalon'),
         'panel' => 'addons_area_panel',
         'priority' => 1,
     ));
-    // Show default property overview section
+    // Show addons section
     $wp_customize->add_setting('addons_disable', array(
         'default' => ''
     ));
@@ -888,6 +901,16 @@ function avalon_customize_register($wp_customize) {
         'section' => 'addons_settings_section',
         'type' => 'checkbox',
         'priority' => 1
+    ));
+    // Addons section title
+    $wp_customize->add_setting('addons_section_title', array(
+        'default' => __('WP Property addons', 'wp-title')
+    ));
+    $wp_customize->add_control('addons_section_title', array(
+        'label' => __('Section title', 'wp-avalon'),
+        'section' => 'addons_settings_section',
+        'type' => 'text',
+        'priority' => 2
     ));
 
 
@@ -1113,6 +1136,7 @@ function avalon_customize_css() {
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li,
         body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn,
         body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info,
+        body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a,
         body input[type="button"],
         body input[type="submit"],
         body input.submit-btn,
@@ -1146,6 +1170,7 @@ function avalon_customize_css() {
         body main.main-content .container .content article .wpp_feps_sponsored_listing .wpp_feps_step_tabs li.active,
         body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover,
         body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover,
+        body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a:hover,
         body input[type="button"]:hover,
         body input[type="submit"]:hover,
         body input.submit-btn:hover,

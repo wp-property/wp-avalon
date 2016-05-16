@@ -28,21 +28,23 @@ endif;
             <div class="secondary-header-image" style="background-image: url('<?php echo $header_image; ?>'); background-size: cover; background-position: center center;"></div>
             <?php
         endif;
-        echo '<div class="container">';
-        echo '<div class="wellcome-text-box">';
-        echo '<h1>' . get_theme_mod('header_wellcome_title', __('Wellcome to WP Avalon', 'wp-avalon')) . '</h1>';
-        echo '<div class="wtb__container"><p>' . get_theme_mod('header_wellcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon')) . '</p></div>';
-        if (function_exists('ud_check_wp_property')) :
-            if ($wellcome_property_search != 1) :
-                echo '<div class="wellcome-box-property-search">';
-                echo do_shortcode('[property_search]');
-                echo '</div>';
+        if ($wellcome_disable != 1) :
+            echo '<div class="container">';
+            echo '<div class="wellcome-text-box">';
+            echo '<h1>' . get_theme_mod('header_wellcome_title', __('Wellcome to WP Avalon', 'wp-avalon')) . '</h1>';
+            echo '<div class="wtb__container"><p>' . get_theme_mod('header_wellcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon')) . '</p></div>';
+            if (function_exists('ud_check_wp_property')) :
+                if ($wellcome_property_search != 1) :
+                    echo '<div class="wellcome-box-property-search">';
+                    echo do_shortcode('[property_search]');
+                    echo '</div>';
+                endif;
+            else :
+                echo '<h3>' . __('At that place you can enable default property search', 'wp-avalon') . '</h3>';
             endif;
-        else :
-            echo '<h3>' . __('At that place you can enable default property search', 'wp-avalon') . '</h3>';
+            echo '</div>';
+            echo '</div>';
         endif;
-        echo '</div>';
-        echo '</div>';
     else :
         $exist_images_in_head = get_theme_mod('header_image_show_featured_image_in_head', '1');
         if ($exist_images_in_head == '1') :
