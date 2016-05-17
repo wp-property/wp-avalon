@@ -821,16 +821,16 @@ class sidebar_avalon_features extends WP_Widget {
         if (!empty($text)) {
             echo '<div class="ftw__content">' . do_shortcode($text) . '</div>';
         }
-        echo '<div class="ftw__features">';
+        echo '<div class="ftw__features row">';
         if (!empty($instance['featured-left-fields'])) :
-            echo '<ul class="ftw_features_left">';
+            echo '<ul class="ftw_features_left col-md-6">';
             foreach ($instance['featured-left-fields'] as $value) :
                 echo '<li>' . $value . '</li>';
             endforeach;
             echo '</ul>';
         endif;
         if (!empty($instance['featured-right-fields'])) :
-            echo '<ul class="ftw_features_right">';
+            echo '<ul class="ftw_features_right col-md-6">';
             foreach ($instance['featured-right-fields'] as $value) :
                 echo '<li>' . $value . '</li>';
             endforeach;
@@ -976,7 +976,7 @@ class sidebar_avalon_overview extends WP_Widget {
         echo $before_widget;
         ?>
 
-        <div class="property_div property">
+        <div class="property_div property col-md-3">
             <div class="property_div_box">
                 <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
                     <div class="wpp_overview_left_column">

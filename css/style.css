@@ -737,6 +737,7 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_min,
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap input[type="text"].wpp_search_input_field_max {
   display: inline-block;
+  margin-right: -3px;
   width: 45%;
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_search_attribute_wrap .wpp_multi_checkbox li {
@@ -748,16 +749,19 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .wpp_dash,
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .delimiter {
+  color: #fff;
   display: inline-block;
-  width: 4%;
   text-align: center;
+  width: 6%;
+  margin-right: -1px;
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
   width: 97%;
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
-  width: 45%;
   display: inline-block;
+  margin-right: -3px;
+  width: 45%;
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li {
   display: block;
@@ -1587,9 +1591,7 @@ body main.main-content .container .frontpage-property-description-area .featured
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul {
   margin: 0;
-  padding: 0 20px 0 0;
   list-style: none;
-  width: 50%;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul li,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul li {
@@ -1614,11 +1616,11 @@ body main.main-content .container .frontpage-property-description-area .featured
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul.ftw_features_left,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul.ftw_features_left {
-  float: left;
+  /*float: left;*/
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__features ul.ftw_features_right,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__features ul.ftw_features_right {
-  float: right;
+  /*float: right;*/
 }
 body main.main-content .container .frontpage-headlights {
   margin: 0 0 50px;
@@ -1772,7 +1774,7 @@ body main.main-content .container .frontpage-headlights .view-more-headlights .v
   color: #fff;
 }
 body main.main-content .container .frontpage-headlights-widget-area {
-  margin: 0 0 50px;
+  margin: 0 0 30px;
 }
 body main.main-content .container .frontpage-headlights-widget-area .fhwa__title {
   text-align: center;
@@ -1797,6 +1799,7 @@ body main.main-content .container .frontpage-headlights-widget-area .fhwa__conta
   -khtml-border-radius: 4px;
   position: relative;
   padding: 40px 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__box_icon {
@@ -1877,7 +1880,7 @@ body main.main-content .container .frontpage-headlights-widget-area .fhwa__conta
   color: #fff;
 }
 body main.main-content .container .frontpage-overview-widget-area {
-  margin: 0 0 50px;
+  margin: 0 0 30px;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__title {
   text-align: center;
@@ -1886,12 +1889,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__title {
   margin-bottom: 30px;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property {
-  display: inline-block;
-  float: left;
-  padding-left: 15px;
-  padding-right: 15px;
-  vertical-align: top;
-  width: 25%;
+  margin-bottom: 20px;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
