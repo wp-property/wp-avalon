@@ -19,7 +19,7 @@ $location_map_image = get_theme_mod('header_location_area_image', '');
 $location_text = get_theme_mod('header_location_area_description', '');
 if ($contuctus_disable != 1) :
     ?>
-    <div class="header-bar" id="contacts-bar">
+    <div class="header-bar" id="contacts-bar" data-template="template-parts/header/header-bar">
         <div class="container">
             <button class="close-bar-box"></button>
             <div class="row">
@@ -121,7 +121,7 @@ if ($contuctus_disable != 1) :
     <?php
 endif;
 ?>
-<div class="header-bar" id="login-bar">
+<div class="header-bar" id="login-bar" data-template="template-parts/header/header-bar">
     <div class="container">
         <button class="close-bar-box"></button>
         <div class="row">

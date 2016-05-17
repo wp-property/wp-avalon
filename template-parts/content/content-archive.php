@@ -8,7 +8,7 @@
  */
 $date_format = get_option('date_format');
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-template="template-parts/content/content-archive">
     <div class="archive-post-box">
         <div class="post-featured-image">
             <a href="<?php the_permalink(); ?>">

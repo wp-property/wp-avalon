@@ -9,7 +9,7 @@
 $enable_section = get_theme_mod('headlights_wa_disable_setting', '');
 if ($enable_section != 1) :
     ?>
-    <div class="frontpage-headlights-widget-area">
+    <div class="frontpage-headlights-widget-area" data-template="template-parts/front-page/frontpage-headlights-widget-area">
         <div class="row">
             <div class="col-md-12">
                 <div class="fhwa__title">

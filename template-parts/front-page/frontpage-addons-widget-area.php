@@ -9,7 +9,7 @@
 $enable_section = get_theme_mod('addons_disable', '');
 if ($enable_section != 1) :
     ?>
-    <div class="frontpage-property-addons-area">
+    <div class="frontpage-property-addons-area" data-template="template-parts/front-page/frontpage-addons-widget">
         <div class="row">
             <div class="col-md-12">
                 <div class="fpaa__title">

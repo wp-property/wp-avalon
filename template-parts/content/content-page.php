@@ -7,7 +7,7 @@
  * @since Avalon 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-template="template-parts/content/content-page">
     <?php the_content(); ?>
     <?php comments_template(); ?>
 </article>

@@ -13,7 +13,7 @@ if ($active_sidebar != 1 && is_active_sidebar($sidebar_name)) :
     $sidebar_widgets = wp_get_sidebars_widgets();
     $sw__list = $sidebar_widgets[$sidebar_name];
     ?>
-    <div class="frontpage-widgetaria-tabs">
+    <div class="frontpage-widgetaria-tabs" data-template="template-parts/front-page/frontpage-widget-area">
         <div class="row">
             <div class="col-md-12">
                 <!-- Nav tabs -->

@@ -9,7 +9,7 @@
 $enable_section = get_theme_mod('frontpage_features_area_settings', '');
 if ($enable_section != 1) :
     ?>
-    <div class="frontpage-avalon-features-area">
+    <div class="frontpage-avalon-features-area" data-template="template-parts/front-page/frontpage-featured-area">
 
         <?php
         if (is_active_sidebar('sidebar-avalon-features')) :

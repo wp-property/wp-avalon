@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-<div class="container">
+<div class="container" data-template="template-parts/page-no-sidebar">
 
     <div class="content col-md-12">
         <?php

@@ -8,7 +8,7 @@
  */
 $date_format = get_option('date_format');
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-template="template-parts/content/content-single">
     <div class="post-container-box">
         <div class="post-featured-image"><?php the_post_thumbnail(get_the_ID(), 'full'); ?></div>
         <div class="post-date"><?php the_time($date_format); ?></div>

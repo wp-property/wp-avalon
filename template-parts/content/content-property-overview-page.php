@@ -7,7 +7,7 @@
  * @since Avalon 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-template="template-parts/content/content-property-overview-page">
     <div id="wpp_default_overview_page">
         <div class="<?php wpp_css('property_overview_page::entry_content', "entry-content"); ?>">
             <?php if (is_404()): ?>

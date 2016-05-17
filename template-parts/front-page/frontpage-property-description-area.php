@@ -9,7 +9,7 @@
 $enable_section = get_theme_mod('property_description_disable', '');
 if ($enable_section != 1) :
     ?>
-    <div class="frontpage-property-description-area">
+    <div class="frontpage-property-description-area" data-template="template-parts/front-page/frontpage-property-description-area">
 
         <?php
         if (is_active_sidebar('sidebar-property-description')) :

@@ -7,7 +7,7 @@
  * @since Avalon 1.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('property-page-template'); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class('property-page-template'); ?> data-template="template-parts/content/content-property">
     <script type="text/javascript">
         var map;
         var marker;

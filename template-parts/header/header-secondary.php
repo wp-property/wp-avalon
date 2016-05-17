@@ -21,9 +21,9 @@ if ($header_image_disable == 1) :
     else :
         echo '';
     endif;
-    ?>
-    ">
-    <?php
+    
+    echo '" data-template="template-parts/header/header-secondary">';
+    
     if (is_front_page()) :
         if (!empty($header_image)) :
             echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';

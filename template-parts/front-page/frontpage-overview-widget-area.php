@@ -9,7 +9,7 @@
 $enable_section = get_theme_mod('property_overview_disable', '');
 if ($enable_section != 1) :
     ?>
-    <div class="frontpage-overview-widget-area">
+    <div class="frontpage-overview-widget-area" data-template="template-parts/front-page/frontpage-overview-widget-area">
         <div class="row">
             <div class="col-md-12">
                 <div class="fowa__title">

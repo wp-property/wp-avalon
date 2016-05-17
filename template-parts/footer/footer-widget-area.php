@@ -8,7 +8,7 @@
  */
 if (is_active_sidebar('sidebar-footer')) :
     ?>
-    <div class="footer-widget-area">
+    <div class="footer-widget-area" data-template="template-parts/footer/footer-widget-area">
         <div class="container">
             <div class="row">
                 <?php dynamic_sidebar('sidebar-footer'); ?>

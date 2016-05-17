@@ -7,7 +7,7 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-echo '<a href="' . site_url() . '" title="' . get_bloginfo('name') . '">';
+echo '<a href="' . site_url() . '" title="' . get_bloginfo('name') . '" data-template="template-parts/footer/footer-logo">';
 $logo_image = get_theme_mod('footer_logo_big_image_settings', '');
 $icon_url = get_theme_mod('footer_logo_icon_settings', get_template_directory_uri() . '/images/logo-icon.png');
 $logo_text = get_theme_mod('footer_logo_text_settings', 'WP Avalon');

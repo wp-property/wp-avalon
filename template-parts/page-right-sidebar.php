@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-<div class="container">
+<div class="container" data-template="template-parts/page-right-sidebar">
 
     <?php get_sidebar(); ?>
 

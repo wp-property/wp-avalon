@@ -7,7 +7,7 @@
  * @since Avalon 1.0
  */
 ?>
-<article class="frontpage-widgets">
+<article class="frontpage-widgets" data-template="template-parts/content/content-front-page">
 
     <?php get_template_part('template-parts/front-page/frontpage-featured-area', 'wp-avalon'); ?>
 
