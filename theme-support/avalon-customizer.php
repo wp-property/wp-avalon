@@ -12,6 +12,8 @@ function avalon_customize_register($wp_customize) {
 
     $wp_customize->remove_section('colors');
 
+    $shortcode_notice = __('Notice: Shortcodes will be applied after the page reload', 'wp-avalon');
+
 //    COLOR SCHEME
 // -----------------------------------------------------------------------------
     $wp_customize->add_panel('general_colors', array(
@@ -337,7 +339,7 @@ function avalon_customize_register($wp_customize) {
     // Show fetured image in header 
     $wp_customize->add_setting('header_image_disable', array(
         'default' => '1',
-        'transport'=>'postMessage'
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_image_disable', array(
         'label' => __('Show full section with header image', 'wp-avalon'),
@@ -359,7 +361,7 @@ function avalon_customize_register($wp_customize) {
     $wp_customize->add_setting('header_image', array(
         'default' => get_template_directory_uri() . '/images/default-header-image.jpg',
         'capability' => 'edit_theme_options',
-        'transport'=>'postMessage'
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_image', array(
         'label' => __('Header image', 'wp-avalon'),
@@ -371,7 +373,7 @@ function avalon_customize_register($wp_customize) {
         'default' => '#000000',
         'sanitize_callback' => 'sanitize_hex_color',
         'capability' => 'edit_theme_options',
-        'transport'=>'postMessage'
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_image__blackout_color', array(
         'label' => __('Blackout color for header image', 'wp-avalon'),
@@ -382,7 +384,7 @@ function avalon_customize_register($wp_customize) {
     $wp_customize->add_setting('header_image__opacity_setting', array(
         'capability' => 'edit_theme_options',
         'default' => '0.3',
-        'transport'=>'postMessage'
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_image__opacity_setting', array(
         'label' => __('Blackout opacity (type "0.0-1.0" of opacity). Default: 0', 'wp-avalon'),
@@ -435,6 +437,7 @@ function avalon_customize_register($wp_customize) {
     ));
     $wp_customize->add_control('header_wellcome_text', array(
         'label' => __('Wellcome section text', 'wp-avalon'),
+        'description' => $shortcode_notice,
         'section' => 'header_wellcome_section',
         'type' => 'textarea',
         'priority' => 3
@@ -467,6 +470,7 @@ function avalon_customize_register($wp_customize) {
         ));
         $wp_customize->add_control('header_wellcome_property_search_title', array(
             'label' => __('"Property search" description', 'wp-avalon'),
+            'description' => $shortcode_notice,
             'section' => 'header_wellcome_section',
             'type' => 'textarea',
             'priority' => 5
@@ -589,7 +593,7 @@ function avalon_customize_register($wp_customize) {
     // "Contact us" area title
     $wp_customize->add_setting('header_contuctus_title_settings', array(
         'capability' => 'edit_theme_options',
-        'default' => 'CONTACT FORM',
+        'default' => __('CONTACT FORM', 'wp-avalon'),
         'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_title_settings', array(
@@ -601,11 +605,12 @@ function avalon_customize_register($wp_customize) {
     // "Contact us" area description
     $wp_customize->add_setting('header_contuctus_description_settings', array(
         'capability' => 'edit_theme_options',
-        'default' => 'Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.',
+        'default' => __('Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.', 'wp-avalon'),
         'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_description_settings', array(
         'label' => __('"Contact us" area description', 'wp-avalon'),
+        'description' => $shortcode_notice,
         'section' => 'header_contuctus_settings_section',
         'type' => 'textarea',
         'priority' => 3
@@ -621,17 +626,19 @@ function avalon_customize_register($wp_customize) {
         'priority' => 4,
         'type' => 'radio',
         'choices' => array(
-            'default' => 'Use default form (emails will be send to site admin email)',
-            'custom' => 'Use custom form with shortcode',
+            'default' => __('Use default form (emails will be send on site admin email)', 'wp-avalon'),
+            'custom' => __('Use custom form with shortcode', 'wp-avalon'),
         ),
     ));
     // "Contact us" custom form shortcode
     $wp_customize->add_setting('header_contuctus_shortcode_settings', array(
         'capability' => 'edit_theme_options',
-        'default' => ''
+        'default' => '',
+        'transport' => 'postMessage'
     ));
     $wp_customize->add_control('header_contuctus_shortcode_settings', array(
         'label' => __('"Contact us" custom form shortcode', 'wp-avalon'),
+        'description' => $shortcode_notice,
         'section' => 'header_contuctus_settings_section',
         'type' => 'text',
         'priority' => 5
@@ -708,6 +715,7 @@ function avalon_customize_register($wp_customize) {
     ));
     $wp_customize->add_control('header_location_area_description', array(
         'label' => __('"Location" area decrpiption', 'wp-avalon'),
+        'description' => $shortcode_notice,
         'section' => 'header_location_area_section',
         'type' => 'textarea',
         'priority' => 5
@@ -1134,7 +1142,7 @@ function avalon_customize_css() {
         body header .container .logotype a span { 
             color:<?php echo get_theme_mod('header_logo_text_color_settings', '#FFF'); ?>;
         }
-       body .footer .footer-area .logotype a span { 
+        body .footer .footer-area .logotype a span { 
             color:<?php echo get_theme_mod('footer_logo_text_color_settings', '#a7a7a7'); ?>;
         }
 

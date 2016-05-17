@@ -115,13 +115,6 @@ Avalon responsive styles
   border-color: #0b1a3a;
   color: #fff;
 }
-@media (max-width: 1200px) {
-  /* Max width - 1000px */
-  body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
-    width: 46%;
-  }
-}
-/* Max width - 1200px */
 @media (max-width: 1000px) {
   /* Max width - 1000px */
   body {

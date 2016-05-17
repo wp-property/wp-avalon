@@ -36,7 +36,7 @@ if ($contuctus_disable != 1) :
 
                         if (!empty($contuctus_description)) :
                             echo '<div class="hbcf__description">';
-                            echo $contuctus_description;
+                            echo do_shortcode($contuctus_description);
                             echo '</div>';
                         endif;
                         ?>
@@ -106,7 +106,7 @@ if ($contuctus_disable != 1) :
                                     <div class="col-md-12 hbl__description">
                                         <?php
                                         if (!empty($location_text)) :
-                                            echo $location_text;
+                                            echo do_shortcode($location_text);
                                         endif;
                                         ?>
                                     </div>

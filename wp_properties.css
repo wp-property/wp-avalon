@@ -1637,5 +1637,8 @@ article.property-page-template .property-page-container .property_stats.groups .
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
   border-left: 1px solid #ededed;
 }
+article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value iframe {
+  max-width: 100%;
+}
 /* Property page styles */
 /*Property styles*/

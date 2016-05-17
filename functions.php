@@ -819,7 +819,7 @@ class sidebar_avalon_features extends WP_Widget {
             echo '<div class="ftw__title">' . $title . '</div>';
         }
         if (!empty($text)) {
-            echo '<div class="ftw__content">' . $text . '</div>';
+            echo '<div class="ftw__content">' . do_shortcode($text) . '</div>';
         }
         echo '<div class="ftw__features">';
         if (!empty($instance['featured-left-fields'])) :
