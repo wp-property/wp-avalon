@@ -124,7 +124,7 @@ License URI:
   color: #fff;
 }
 body {
-  font-family: "Ubuntu", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   /*Default inputs*/
   /*Default inputs*/
   /*Header bar*/
@@ -613,7 +613,7 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
   padding: 0 20px;
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form {
-  padding: 10px 20px;
+  padding: 1em 1.5em;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   -moz-border-radius: 4px;
