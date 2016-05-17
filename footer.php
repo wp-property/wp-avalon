@@ -22,7 +22,7 @@
                         if (!empty(get_theme_mod('avalon_copyrights_settings'))) :
                             echo get_theme_mod('avalon_copyrights_settings');
                         else :
-                            echo '&copy; ' . date("Y") . ' Unreal Estate. All rights reserved.';
+                            echo '&copy; ' . date("Y") . ' WP Avalon. All rights reserved.';
                         endif;
                         ?>
                     </p>

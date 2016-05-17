@@ -34,6 +34,9 @@ body {
     }
     /*Default inputs*/
 
+    .hidden_block {
+        display: none !important;
+    }
 
     /*Header bar*/
     .header-bar {
@@ -388,6 +391,7 @@ body {
         /* Secondary header
         ----------------------------------------------------------------- */
         .secondary-header {
+            margin-bottom: 20px;
             position: relative;
             background-color: #2b5188;
             height: 400px;
@@ -402,16 +406,16 @@ body {
                 height: 100%;
                 width: 100%;
                 z-index: 1;
-
-                &:after {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    content: "";
-                    display: block;
-                }
+            }
+            .shi__blackout {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+                display: block;
+                z-index: 2;
             }
 
             h1.page-title {
@@ -581,7 +585,6 @@ body {
         /* Container
         --------------------------------------------------------------------- */
         .container {
-            margin-top: 20px;
 
             /*frontpage widgetaria tabs*/
             .frontpage-widgetaria-tabs {
@@ -1428,7 +1431,7 @@ body {
                                         font-size: 13px;
 
                                         a {
-                                            color: rgba(65, 65, 65, 0.7);
+                                            color: rgba(65, 65, 65, 0.7) !important;
                                         }
                                         &.property_title {
                                             margin-bottom: 5px;
@@ -1437,11 +1440,11 @@ body {
                                                 .transition(color, 0.15s, ease-in-out, 0s);
                                                 text-transform: uppercase;
                                                 font-size: 13px;
-                                                color: #414141;
+                                                color: #414141 !important;
                                                 font-weight: 600;
                                                 text-decoration: none;
                                                 &:hover {
-                                                    color: #4a83db;
+                                                    color: #4a83db !important;
                                                 }
                                             }
                                         }
@@ -1604,7 +1607,7 @@ body {
                                 width: 68%;
 
                                 a {
-                                    color: #414141;
+                                    color: #414141 !important;
                                     font-size: 16px;
                                     font-weight: 500;
                                     line-height: 1.2;
@@ -1694,6 +1697,14 @@ body {
 
                 h1, h2, h3, h4, h5, h6 {
                     .ubuntu-font;
+                }
+                a {
+                    color: #337ab7;
+                    text-decoration: none;
+                    &:hover {
+                        color: #23527c;
+                        text-decoration: underline;
+                    }
                 }
 
                 article {
@@ -2287,7 +2298,7 @@ body {
                     }
                     /*Defaul styles*/
 
-                    .frontpage-widgets {
+                    &.frontpage-widgets {
                         margin-top: 40px;
                     }
                 }

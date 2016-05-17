@@ -63,4 +63,10 @@ Styles for admin page
 .customize-control-widget_form .widget-control-save {
     display: block !important;
 }
+li#customize-control-header_logo_icon_settings img.attachment-thumb,
+li#customize-control-footer_logo_icon_settings img.attachment-thumb {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
 

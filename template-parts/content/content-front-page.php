@@ -24,22 +24,27 @@
 <?php
 $content_enable = get_theme_mod('avalon_frontpage_container_disable', 1);
 if ($content_enable != 1) :
+    ?>
+    <div class="frontpage-content-wrapper">
+        <?php
+        if (have_posts()) :
 
-    if (have_posts()) :
-
-        while (have_posts()) : the_post();
-            ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-
-                <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
-                <?php
-                the_post();
-                the_content();
+            while (have_posts()) : the_post();
                 ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
-            </article>
-            <?php
-        endwhile;
-    endif;
+                    <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
+                    <?php
+                    the_post();
+                    the_content();
+                    ?>
+
+                </article>
+                <?php
+            endwhile;
+        endif;
+        ?>
+    </div>
+    <?php
 endif;
 ?>

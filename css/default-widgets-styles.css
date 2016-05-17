@@ -106,13 +106,13 @@ Styles for default wordpress widgets
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #19294c;
+  border-color: #0b1a3a;
   color: #fff;
 }
 .submit-button-style:hover {
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #0b1a3a;
+  border-color: #0b1a3a;
   color: #fff;
 }
 .widget {
@@ -313,15 +313,15 @@ Styles for default wordpress widgets
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #19294c;
+  border-color: #0b1a3a;
   color: #fff;
   float: right;
   width: 23%;
 }
 .widget_search .searchform input[type="submit"]:hover {
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #0b1a3a;
+  border-color: #0b1a3a;
   color: #fff;
 }
 /*widget_search*/

@@ -7,26 +7,27 @@
  * @since Avalon 1.0
  */
 $header_image = get_theme_mod('header_image', get_template_directory_uri() . '/images/default-header-image.jpg');
+$header_image_disable = get_theme_mod('header_image_disable', '1');
 $wellcome_disable = get_theme_mod('header_wellcome_disable', '');
 $wellcome_property_search = get_theme_mod('header_wellcome_property_search_disable', '');
-?>
-<div class="secondary-header 
-<?php
-if (is_front_page()) :
-    echo 'sh__frontpage';
-elseif (is_archive()):
-    echo '';
-else :
-    echo '';
-endif;
-?>
-     ">
-         <?php
-         if (is_front_page()) :
-             if (!empty($header_image)) :
-                 ?>
-            <div class="secondary-header-image" style="background-image: url('<?php echo $header_image; ?>'); background-size: cover; background-position: center center;"></div>
-            <?php
+if ($header_image_disable == 1) :
+
+    echo '<div class="secondary-header ';
+
+    if (is_front_page()) :
+        echo 'sh__frontpage';
+    elseif (is_archive()):
+        echo '';
+    else :
+        echo '';
+    endif;
+    ?>
+    ">
+    <?php
+    if (is_front_page()) :
+        if (!empty($header_image)) :
+            echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
+            echo '<div class="shi__blackout"></div>';
         endif;
         if ($wellcome_disable != 1) :
             echo '<div class="container">';
@@ -51,11 +52,14 @@ endif;
             $featured_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
             if (!empty($featured_image)) :
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
+                echo '<div class="shi__blackout"></div>';
             elseif (!empty($header_image)) :
                 echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
+                echo '<div class="shi__blackout"></div>';
             endif;
         elseif (!empty($header_image)) :
             echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
+            echo '<div class="shi__blackout"></div>';
         endif;
         echo '<div class="container">';
         if (is_page() || is_single()) :
@@ -67,5 +71,7 @@ endif;
         endif;
         echo '</div>';
     endif;
-    ?>
-</div>
+
+    echo '</div>';
+    
+ endif;
