@@ -20,10 +20,9 @@ module.exports = function build( grunt ) {
     less: {
       production: {
         files: {
-          'css/style.css': [ 'css/style.less' ],
-          'css/responsive.css': [ 'css/responsive.less' ],
-          'css/default-widgets-styles.css': [ 'css/default-widgets-styles.less' ],
-          'wp_properties.css': [ 'css/properties-styles.less' ]
+          'static/styles/style.css': [ 'static/styles/src/style.less' ],
+          'static/styles/default-widgets-styles.css': [ 'static/styles/src/default-widgets-styles.less' ],
+          'wp_properties.css': [ 'static/styles/src/properties-styles.less' ]
         }
       }
     },
@@ -35,7 +34,7 @@ module.exports = function build( grunt ) {
       },
       less: {
         files: [
-          'css/*.*'
+          'static/styles/src/*.*'
         ],
         tasks: [ 'less' ]
       }

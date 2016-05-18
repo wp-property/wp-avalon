@@ -233,6 +233,17 @@
   padding: 10px;
   width: 31.6%;
 }
+@media (max-width: 1000px) {
+  .wpp_property_overview_shortcode .wpp_row_view .property_div {
+    width: 47%;
+  }
+}
+@media (max-width: 640px) {
+  .wpp_property_overview_shortcode .wpp_row_view .property_div {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
 .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column ul.wpp_overview_data {
   margin: 0;
   padding: 0 0 0 10px;
@@ -333,13 +344,18 @@
   vertical-align: top;
   width: 25%;
 }
+@media (max-width: 640px) {
+  .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property {
+    width: 100%;
+  }
+}
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   background-color: #FFF;
   height: 100%;
-  padding-bottom: 44px;
+  padding-bottom: 74px;
   position: relative;
   width: 100%;
 }
@@ -373,7 +389,7 @@
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column ul.wpp_overview_data {
   margin: 0 0 10px;
-  padding: 0 10px;
+  padding: 10px;
   list-style: none;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column ul.wpp_overview_data li {
@@ -433,8 +449,8 @@
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom {
   background-color: #19294c;
   border-top: 1px solid #c0c2c7;
-  height: 45px;
-  padding: 0 10px;
+  height: 75px;
+  padding: 10px;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -466,9 +482,9 @@
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom .pb__left {
   float: left;
-  width: 25%;
+  width: 26%;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.5;
   padding: 7px 0 0;
   color: #FFF;
 }
@@ -482,12 +498,12 @@
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right {
   float: right;
-  width: 75%;
+  width: 74%;
   text-align: right;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right .property_price {
   color: #FFF;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   padding: 10px 0;
   line-height: 24px;
@@ -591,6 +607,27 @@
 }
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
   display: none;
+}
+@media (max-width: 1000px) {
+  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .property_image img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 1000px) {
+  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+  }
+  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .wp-caption-text li dl dt,
+  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .wp-caption-text li dl dd {
+    float: none !important;
+    display: inline-block;
+  }
 }
 /*shortcode_featured_properties*/
 .wpp_feps_user_menu ul {
@@ -976,11 +1013,11 @@
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select {
   width: 100%;
   /*                        &:not([class*="col-"]),
-                                                    &:not([class*="form-control"]),
-                                                    &:not(.input-group-btn) {
-                                                    width: 47%;
-                                                    display: inline-block;
-                                                }*/
+                                        &:not([class*="form-control"]),
+                                        &:not(.input-group-btn) {
+                                        width: 47%;
+                                        display: inline-block;
+                                    }*/
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"],
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"] {

@@ -11,12 +11,12 @@ get_header();
 
 <div class="container">
 
-    <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'wp-avalon'); ?>
+  <?php get_template_part('template-parts/front-page/frontpage-widget-area', 'wp-avalon'); ?>
 
-    <div class="content col-md-12">
-        <?php get_template_part('template-parts/content/content', 'front-page'); ?>
+  <div class="content col-md-12">
+    <?php get_template_part('template-parts/content/content', 'front-page'); ?>
 
-    </div>
+  </div>
 
 </div>
 

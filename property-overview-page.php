@@ -12,13 +12,13 @@ get_header();
 
 <div class="container">
 
-    <div class="content col-md-8">
+  <div class="content col-md-8">
 
-        <?php get_template_part('template-parts/content/content', 'property-overview-page'); ?>
+    <?php get_template_part('template-parts/content/content', 'property-overview-page'); ?>
 
-    </div>
+  </div>
 
-    <?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
 </div>
 

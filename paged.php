@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination template file
  *

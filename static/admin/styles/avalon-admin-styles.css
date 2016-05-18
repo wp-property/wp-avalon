@@ -1,0 +1,72 @@
+/*
+Styles for admin page
+*/
+.features-list {
+
+}
+.features-list p {
+  clear: both;
+  margin: 0 0 10px;
+}
+.features-input {
+  width: 85% !important;
+  margin-bottom: 5px !important;
+  float: left;
+}
+.remove-feature {
+  cursor: pointer !important;
+  display: block !important;
+  float: right;
+  height: 26px !important;
+  padding: 0 !important;
+  width: 30px;
+}
+.remove-feature:before {
+  content: "\f132";
+  display: inline-block;
+  font: 400 20px/1 dashicons;
+  left: 2px;
+  position: relative;
+  top: 4px;
+  transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  vertical-align: middle;
+}
+
+.add-features-input {
+  cursor: pointer;
+  float: right;
+  margin-left: 0 !important;
+  margin-top: 8px !important;
+  outline: 0 none;
+  transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+}
+.add-features-input:before {
+  content: "\f132";
+  display: inline-block;
+  font: 400 20px/1 dashicons;
+  left: -2px;
+  position: relative;
+  top: -1px;
+  transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  vertical-align: middle;
+}
+
+.customize-control-widget_form .widget-control-save {
+  display: block !important;
+}
+li#customize-control-header_logo_icon_settings img.attachment-thumb,
+li#customize-control-footer_logo_icon_settings img.attachment-thumb {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+

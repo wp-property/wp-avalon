@@ -11,21 +11,22 @@ get_header();
 
 <div class="container" data-template="template-parts/page-no-sidebar">
 
-    <div class="content col-md-12">
-        <?php
-        if (have_posts()) :
+  <div class="content col-md-12">
+    <?php
+    if (have_posts()) :
 
-            while (have_posts()) : the_post();
+      while (have_posts()) : the_post();
 
-                get_template_part('template-parts/content/content', 'page');
+        get_template_part('template-parts/content/content', 'page');
 
-            endwhile;
+      endwhile;
 
-        endif;
-        ?>
-    </div>
+    endif;
+    ?>
+  </div>
 
 
 </div>
 
-<?php get_footer();
+<?php
+get_footer();

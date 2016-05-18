@@ -11,28 +11,30 @@ get_header();
 
 <div class="container" data-template="template-parts/page-left-sidebar">
 
-    <?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
-    <?php if (is_active_sidebar('sidebar-left') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
-        <div class="content col-md-8">
-        <?php else : ?>
-            <div class="content col-md-12">
-            <?php endif; ?>
-                
-            <?php
-            if (have_posts()) :
+  <?php if (is_active_sidebar('sidebar-left') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
+    <div class="content col-md-8">
+    <?php else : ?>
+      <div class="content col-md-12">
+      <?php endif; ?>
 
-                while (have_posts()) : the_post();
+      <?php
+      if (have_posts()) :
 
-                    get_template_part('template-parts/content/content', 'page');
+        while (have_posts()) : the_post();
 
-                endwhile;
+          get_template_part('template-parts/content/content', 'page');
 
-            endif;
-            ?>
-        </div>
+        endwhile;
 
-
+      endif;
+      ?>
     </div>
 
-    <?php get_footer();
+
+  </div>
+
+  <?php
+  get_footer();
+  

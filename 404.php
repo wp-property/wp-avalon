@@ -11,12 +11,13 @@ get_header();
 
 <div class="container">
 
-    <div class="content col-md-12">
+  <div class="content col-md-12">
 
-        <h1><?php _e('Oops! That page can&rsquo;t be found.', 'wp-avalon'); ?></h1>
-        
-    </div>
+    <h1><?php _e('Oops! That page can&rsquo;t be found.', 'wp-avalon'); ?></h1>
+
+  </div>
 
 </div>
 
-<?php get_footer();
+<?php
+get_footer();
