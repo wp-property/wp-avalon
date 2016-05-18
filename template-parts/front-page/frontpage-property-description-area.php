@@ -16,7 +16,7 @@ if ($enable_section != 1) :
       dynamic_sidebar('sidebar-property-description');
     else :
       the_widget(
-              'sidebar_avalon_features', array(
+              'avalon_widget_features', array(
           'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
           'text' => __('More than a Plugin – A Real Estate Management System!Dynamic Property Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
           'featured-left-fields' => array(

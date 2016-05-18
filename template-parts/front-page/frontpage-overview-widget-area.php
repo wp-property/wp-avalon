@@ -23,7 +23,7 @@ if ($enable_section != 1) :
         dynamic_sidebar('sidebar-avalon-overview');
       else :
 //                Widget #1
-        the_widget('sidebar_avalon_overview', array(
+        the_widget('avalon_widget_overview', array(
             'title' => __('250 S Estes Drive 52', 'wp-avalon'),
             'location' => 'Chapel Hill,  North Carolina',
             'bads' => '1',
@@ -36,7 +36,7 @@ if ($enable_section != 1) :
             'after_widget' => ''
         ));
 //                Widget #2
-        the_widget('sidebar_avalon_overview', array(
+        the_widget('avalon_widget_overview', array(
             'title' => __('2412 Environ Way 2412', 'wp-avalon'),
             'location' => 'Chapel Hill,  North Carolina',
             'bads' => '3',
@@ -49,7 +49,7 @@ if ($enable_section != 1) :
             'after_widget' => ''
         ));
 //                Widget #3
-        the_widget('sidebar_avalon_overview', array(
+        the_widget('avalon_widget_overview', array(
             'title' => __('5500 Fortunes Ridge Drive 78b', 'wp-avalon'),
             'location' => 'Durham,  North Carolina',
             'bads' => '1',
@@ -62,7 +62,7 @@ if ($enable_section != 1) :
             'after_widget' => ''
         ));
 //                Widget #4
-        the_widget('sidebar_avalon_overview', array(
+        the_widget('avalon_widget_overview', array(
             'title' => __('424 E Rose Street', 'wp-avalon'),
             'location' => 'Smithfield,  North Carolina',
             'bads' => '3',

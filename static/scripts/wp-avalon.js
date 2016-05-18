@@ -1,131 +1,125 @@
-//    Properties grid page
-function property_height() {
-  var widgets = jQuery('body .wpp_property_view_result');
-  widgets.each(function(key, value) {
-    var height = 0,
-            columns = jQuery('.all-properties .property', jQuery(value));
-    columns.each(function(key1, value1) {
-      var currentHeight = jQuery(value1).outerHeight();
-      if (currentHeight > height) {
-        height = currentHeight;
-      }
-    });
-    columns.height(height);
-  });
-}
-function widget_property_height() {
-  var widgets = jQuery('body .frontpage-overview-widget-area');
-  widgets.each(function(key, value) {
-    var height = 0,
-            columns = jQuery('.fowa__container .property', jQuery(value));
-    columns.each(function(key1, value1) {
-      var currentHeight = jQuery(value1).outerHeight();
-      if (currentHeight > height) {
-        height = currentHeight;
-      }
-    });
-    columns.height(height);
-  });
-}
-
-function property_row() {
-  var widgets = jQuery('body article .wpp_property_overview_shortcode');
-  widgets.each(function(key, value) {
-    var height = 0,
-            columns = jQuery('.wpp_row_view .property_div', jQuery(value));
-    columns.each(function(key1, value1) {
-      var currentHeight = jQuery(value1).outerHeight();
-      if (currentHeight > height) {
-        height = currentHeight;
-      }
-    });
-    columns.height(height);
-  });
-}
-
-function frontpage_headlights() {
-  var widgets = jQuery('body .frontpage-headlights');
-  widgets.each(function(key, value) {
-    var height = 0,
-            height2 = 0,
-            columns = jQuery('.fh__box', jQuery(value));
-    columns2 = jQuery('.fh__box .fhb__excerpt', jQuery(value));
-    columns.each(function(key1, value1) {
-      var currentHeight = jQuery(value1).outerHeight();
-      if (currentHeight > height) {
-        height = currentHeight;
-      }
-    });
-    columns.height(height);
-    columns2.each(function(key1, value2) {
-      var currentHeight2 = jQuery(value2).outerHeight();
-      if (currentHeight2 > height2) {
-        height2 = currentHeight2;
-      }
-    });
-    columns2.height(height2);
-  });
-}
-function frontpage_headlights_widgets() {
-  var widgets = jQuery('body .frontpage-headlights-widget-area');
-  widgets.each(function(key, value) {
-    var height = 0,
-            height2 = 0,
-            columns = jQuery('.fhwa__box', jQuery(value));
-    columns2 = jQuery('.fhwa__box > p', jQuery(value));
-    columns.each(function(key1, value1) {
-      var currentHeight = jQuery(value1).outerHeight();
-      if (currentHeight > height) {
-        height = currentHeight;
-      }
-    });
-    columns.height(height);
-    columns2.each(function(key1, value2) {
-      var currentHeight2 = jQuery(value2).outerHeight();
-      if (currentHeight2 > height2) {
-        height2 = currentHeight2;
-      }
-    });
-    columns2.height(height2);
-  });
-}
-
-function property_grid(window_load) {
-  var width = jQuery(window).width();
-  if (!window_load) {
-    property_height();
-    property_row();
-  } else {
-    if (width < 768) {
-      jQuery(window).load(function() {
-        property_height();
-        property_row();
+var wp_avalon = {
+  property_height: function property_height() {
+    var widgets = jQuery('body .wpp_property_view_result');
+    widgets.each(function(key, value) {
+      var height = 0,
+              columns = jQuery('.all-properties .property', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
       });
+      columns.height(height);
+    });
+  },
+  widget_property_height: function widget_property_height() {
+    var widgets = jQuery('body .frontpage-overview-widget-area');
+    widgets.each(function(key, value) {
+      var height = 0,
+              columns = jQuery('.fowa__container .property', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
+      });
+      columns.height(height);
+    });
+  },
+  property_row: function property_row() {
+    var widgets = jQuery('body article .wpp_property_overview_shortcode');
+    widgets.each(function(key, value) {
+      var height = 0,
+              columns = jQuery('.wpp_row_view .property_div', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
+      });
+      columns.height(height);
+    });
+  },
+  frontpage_headlights: function frontpage_headlights() {
+    var widgets = jQuery('body .frontpage-headlights');
+    widgets.each(function(key, value) {
+      var height = 0,
+              height2 = 0,
+              columns = jQuery('.fh__box', jQuery(value));
+      columns2 = jQuery('.fh__box .fhb__excerpt', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
+      });
+      columns.height(height);
+      columns2.each(function(key1, value2) {
+        var currentHeight2 = jQuery(value2).outerHeight();
+        if (currentHeight2 > height2) {
+          height2 = currentHeight2;
+        }
+      });
+      columns2.height(height2);
+    });
+  },
+  frontpage_headlights_widgets: function frontpage_headlights_widgets() {
+    var widgets = jQuery('body .frontpage-headlights-widget-area');
+    widgets.each(function(key, value) {
+      var height = 0,
+              height2 = 0,
+              columns = jQuery('.fhwa__box', jQuery(value));
+      columns2 = jQuery('.fhwa__box > p', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
+      });
+      columns.height(height);
+      columns2.each(function(key1, value2) {
+        var currentHeight2 = jQuery(value2).outerHeight();
+        if (currentHeight2 > height2) {
+          height2 = currentHeight2;
+        }
+      });
+      columns2.height(height2);
+    });
+  },
+  property_grid: function property_grid(window_load) {
+    var width = jQuery(window).width();
+    if (!window_load) {
+      wp_avalon.property_height();
+      wp_avalon.property_row();
     } else {
-      property_height();
-      property_row();
-      jQuery(window).load(function() {
-        property_height();
-        property_row();
-      });
+      if (width < 768) {
+        jQuery(window).load(function() {
+          wp_avalon.property_height();
+          wp_avalon.property_row();
+        });
+      } else {
+        wp_avalon.property_height();
+        wp_avalon.property_row();
+        jQuery(window).load(function() {
+          wp_avalon.property_height();
+          wp_avalon.property_row();
+        });
+      }
     }
   }
-}
+};
 
 jQuery(window).load(function() {
 
 //    Properties grid page
-  property_grid(false);
+  wp_avalon.property_grid(false);
 
 //    Frontpage headlights
-  frontpage_headlights();
-  frontpage_headlights_widgets();
-  widget_property_height();
+  wp_avalon.frontpage_headlights();
+  wp_avalon.frontpage_headlights_widgets();
+  wp_avalon.widget_property_height();
 
-//    jQuery('.grid').masonry({
-//        itemSelector: '.grid-item',
-//        columnWidth: 200
-//    });
 
 });
 jQuery(function() {
@@ -254,7 +248,6 @@ jQuery(function() {
 });
 
 jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
-  property_grid(true);
-  console.log('bind');
+  wp_avalon.property_grid(true);
 });
 

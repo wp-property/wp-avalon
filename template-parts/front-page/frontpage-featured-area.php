@@ -16,7 +16,7 @@ if ($enable_section != 1) :
       dynamic_sidebar('sidebar-avalon-features');
     else :
       the_widget(
-              'sidebar_avalon_features', array(
+              'avalon_widget_features', array(
           'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
           'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
           'featured-left-fields' => array(
