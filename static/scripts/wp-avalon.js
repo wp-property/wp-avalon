@@ -1,4 +1,9 @@
 var wp_avalon = {
+  /**
+   * Property boxes equal height
+   * 
+   * @author vorobjov@UD
+   */
   property_height: function property_height() {
     var widgets = jQuery('body .wpp_property_view_result');
     widgets.each(function(key, value) {
@@ -13,6 +18,11 @@ var wp_avalon = {
       columns.height(height);
     });
   },
+  /**
+   * Property boxes equal height in widget
+   * 
+   * @author vorobjov@UD
+   */
   widget_property_height: function widget_property_height() {
     var widgets = jQuery('body .frontpage-overview-widget-area');
     widgets.each(function(key, value) {
@@ -27,6 +37,11 @@ var wp_avalon = {
       columns.height(height);
     });
   },
+  /**
+   * Property boxes equal height for property shortcode
+   * 
+   * @author vorobjov@UD
+   */
   property_row: function property_row() {
     var widgets = jQuery('body article .wpp_property_overview_shortcode');
     widgets.each(function(key, value) {
@@ -41,29 +56,11 @@ var wp_avalon = {
       columns.height(height);
     });
   },
-  frontpage_headlights: function frontpage_headlights() {
-    var widgets = jQuery('body .frontpage-headlights');
-    widgets.each(function(key, value) {
-      var height = 0,
-              height2 = 0,
-              columns = jQuery('.fh__box', jQuery(value));
-      columns2 = jQuery('.fh__box .fhb__excerpt', jQuery(value));
-      columns.each(function(key1, value1) {
-        var currentHeight = jQuery(value1).outerHeight();
-        if (currentHeight > height) {
-          height = currentHeight;
-        }
-      });
-      columns.height(height);
-      columns2.each(function(key1, value2) {
-        var currentHeight2 = jQuery(value2).outerHeight();
-        if (currentHeight2 > height2) {
-          height2 = currentHeight2;
-        }
-      });
-      columns2.height(height2);
-    });
-  },
+  /**
+   * Frontpage headlights equal height
+   * 
+   * @author vorobjov@UD
+   */
   frontpage_headlights_widgets: function frontpage_headlights_widgets() {
     var widgets = jQuery('body .frontpage-headlights-widget-area');
     widgets.each(function(key, value) {
@@ -87,6 +84,11 @@ var wp_avalon = {
       columns2.height(height2);
     });
   },
+  /**
+   * Property grid
+   * 
+   * @author vorobjov@UD
+   */
   property_grid: function property_grid(window_load) {
     var width = jQuery(window).width();
     if (!window_load) {
@@ -116,7 +118,6 @@ jQuery(window).load(function() {
   wp_avalon.property_grid(false);
 
 //    Frontpage headlights
-  wp_avalon.frontpage_headlights();
   wp_avalon.frontpage_headlights_widgets();
   wp_avalon.widget_property_height();
 

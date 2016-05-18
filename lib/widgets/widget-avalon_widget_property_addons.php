@@ -36,8 +36,12 @@ class avalon_widget_property_addons extends WP_Widget {
           </div>
           <div class="back">
             <div class="pab__excerpt">
-              <?php echo $instance['description']; ?>
-              <a href="<?php echo $instance['url']; ?>" class="readmore">View more...</a>
+              <?php
+              if (!empty($instance['description'])) :
+              echo $instance['description'];
+                echo '<a href=' . $instance['url'] . '" class="readmore">View more...</a>';
+              endif;
+              ?>
             </div>
           </div>
         </div>
@@ -78,10 +82,10 @@ class avalon_widget_property_addons extends WP_Widget {
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('url'); ?>"><?php _e('Url', 'wp-avalon'); ?></label><br/>
-      <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('url'); ?>" id="<?php echo $this->get_field_id('url'); ?>"><?php
-        if (!empty($instance['url'])): echo $instance['url'];
-        endif;
-        ?></textarea>
+      <input type="text" name="<?php echo $this->get_field_name('url'); ?>" id="<?php echo $this->get_field_id('url'); ?>" value="<?php
+      if (!empty($instance['url'])): echo $instance['url'];
+      endif;
+      ?>" class="widefat" />
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
