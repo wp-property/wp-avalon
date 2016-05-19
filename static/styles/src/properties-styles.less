@@ -1256,6 +1256,111 @@ article.property-page-template {
       .gm-style-iw,
       .gm-style {
 
+        #infowindow {
+
+          .infowindow_box {
+            .clearfix;
+
+            .infowindow_left {
+              float: left;
+              position: relative;
+              width: 50%;
+
+              .il__image {
+                min-height: 30px;
+              }
+              .il__title {
+                background-color: #919191;
+                color: #FFF;
+                height: auto;
+                padding: 20px;
+                position: relative;
+                width: 100%;
+
+                label {
+                  background-color: #626262;
+                  padding: 5px 10px;
+                  position: absolute;
+                  top: -15px;
+                  right: 10px;
+                }
+                span {
+                  display: block;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 1.2;
+                  padding: 0 0 10px;
+                }
+                a {
+                  font-size: 12px;
+                  color: #FFF;
+                }
+              }
+            }
+            .infowindow_right {
+              font-size: 14px;
+              float: right;
+              width: 45%;
+              &.infowindow_full_width {
+                width: 100%;
+
+                .ib__title {
+                  font-size: 16px;
+                  font-weight: 500;
+                  margin-bottom: 10px;
+                }
+                .ib__location_link {
+                  color: #919191;
+                }
+                .ib__price {
+
+                }
+              }
+              .ir__title {
+                font-weight: 500;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #DDD;
+              }
+              .ir__description {
+                margin-bottom: 20px;
+              }
+              .ir__list {
+                margin: 0 0 20px;
+                padding: 0;
+                list-style: none;
+
+                li {
+                  .clearfix;
+                  line-height: 1.2;
+                  padding-bottom: 5px;
+
+                  label {
+                    display: block;
+                    width: 60%;
+                    float: left;
+                    font-weight: 500;
+                  }
+                  span {
+                    display: block;
+                    width: 40%;
+                    float: right;
+                    text-align: right;
+                  }
+                }
+              }
+              .ir__directions {
+                text-align: center;
+
+                a {
+                  .submit-button-style;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+
+        /*To del*/
         .wpp_google_maps_attribute_row_property_title {
           font-size: 14px;
           margin-bottom: 5px;
@@ -1295,6 +1400,7 @@ article.property-page-template {
             }
           }
         }
+        /*To del*/
       }
     }
 

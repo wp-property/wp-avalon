@@ -1222,7 +1222,10 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
     }
 
-    .btn-info,
+    body .btn-info,
+    body a.btn-info,
+    body .btn.btn-info,
+    body a.btn.btn-info,
     body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button,
     body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button,
     body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button,
@@ -1256,7 +1259,10 @@ function avalon_customize_css() {
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
     }
-    .btn-info:hover,
+    body .btn-info:hover,
+    body a.btn-info:hover,
+    body .btn.btn-info:hover,
+    body a.btn.btn-info:hover,
     body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover,
     body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover,
     body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover,

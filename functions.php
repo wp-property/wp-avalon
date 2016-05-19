@@ -1,5 +1,4 @@
 <?php
-
 /**
  * WP Avalon functions 
  * 
@@ -196,8 +195,6 @@ function default_contact_us() {
 add_action('wp_ajax_default_contact_us', 'default_contact_us');
 add_action('wp_ajax_nopriv_default_contact_us', 'default_contact_us');
 
-
-
 /**
  * Add default widgets
  * 
@@ -205,3 +202,157 @@ add_action('wp_ajax_nopriv_default_contact_us', 'default_contact_us');
  */
 include_once 'lib/widgets/register-default-widgets.php';
 
+/**
+ * Avalon google maps infobox
+ * 
+ * @since Avalon 1.0
+ */
+function avalon_google_maps_infobox($post, $args = false) {
+  global $wp_properties;
+
+  $infobox_attributes = $wp_properties['configuration']['google_maps']['infobox_attributes'];
+  $infobox_settings = $wp_properties['configuration']['google_maps']['infobox_settings'];
+
+  if (empty($wp_properties['configuration']['address_attribute'])) {
+    return;
+  }
+
+  if (empty($post)) {
+    return;
+  }
+
+  if (is_array($post)) {
+    $post = (object) $post;
+  }
+
+  $property = (array) prepare_property_for_display($post, array(
+              'load_gallery' => 'false',
+              'scope' => 'google_map_infobox'
+  ));
+
+  //** Check if we have children */
+  if (
+          !empty($property['children']) && (!isset($wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties']) || $wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties'] != 'true' )
+  ) {
+    foreach ($property['children'] as $child_property) {
+      $child_property = (array) $child_property;
+      $html_child_properties[] = '<li class="infobox_child_property"><a href="' . $child_property['permalink'] . '">' . $child_property['post_title'] . '</a></li>';
+    }
+  }
+
+  if (empty($infobox_attributes)) {
+    $infobox_attributes = array(
+        'price',
+        'bedrooms',
+        'bathrooms');
+  }
+
+  if (empty($infobox_settings)) {
+    $infobox_settings = array(
+        'show_direction_link' => true,
+        'show_property_title' => true
+    );
+  }
+
+  $infobox_style = (!empty($infobox_settings['minimum_box_width']) ) ? 'style="min-width: ' . $infobox_settings['minimum_box_width'] . 'px;"' : '';
+
+  if (!empty($property['featured_image'])) {
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id($property['ID']), 'medium');
+    if (!empty($image) && is_array($image)) {
+      $imageHTML = "<img src=\"{$image[0]}\" alt=\"" . addslashes($post->post_title) . "\" />";
+      if (@$wp_properties['configuration']['property_overview']['fancybox_preview'] == 'true' && !empty($property['featured_image_url'])) {
+        $imageHTML = "<a href=\"{$property['featured_image_url']}\" class=\"fancybox_image\">{$imageHTML}</a>";
+      }
+    }
+  } else {
+    $default_img_url = get_template_directory_uri() . '/static/images/no-avalible-property-image.png';
+    $imageHTML = "<img src=\"{$default_img_url}\" alt=\"\" />";
+  }
+
+  ob_start();
+  ?>
+
+  <div id="infowindow" <?php echo $infobox_style; ?>>
+
+    <div class="infowindow_box">
+      <?php if (!empty($imageHTML)) { ?>
+        <div class="infowindow_left">
+          <div class="il__image">
+            <?php echo $imageHTML; ?>
+          </div>
+          <div class="il__title">
+            <label><?php echo $property['price']; ?></label>
+            <span><?php echo $property['post_title']; ?></span>
+            <a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php echo $property['display_address']; ?></a>
+          </div>
+        </div>
+      <?php } ?>
+
+      <div class="infowindow_right 
+      <?php
+      if (empty($imageHTML)) :
+        echo ' infowindow_full_width';
+      endif;
+      ?>
+           ">
+
+        <?php if (empty($imageHTML)) : ?>
+          <div class="ib__title"><?php echo $property['post_title']; ?></div>
+          <div class="ib__location_link"><a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php echo $property['display_address']; ?></a></div>
+          <div class="ib__price"><?php echo $property['price']; ?></div>
+        <?php endif; ?>
+
+        <?php
+        $content = get_the_content();
+        if (!empty($content)) :
+          echo '<div class="ir__title">' . __('Description', 'wp-avalon') . '</div>';
+          echo '<div class="ir__description">' . substr($content, 0, 100) . '...</div>';
+        endif;
+        ?>
+
+        <?php if (!empty($property['bedrooms']) || !empty($property['bathrooms']) || !empty($property['bathrooms']) || !empty($property['year'])) : ?>
+          <div class="ir__title"><?php _e('Overview', 'wp-avalon'); ?></div>
+        <?php endif; ?>
+
+        <ul class="ir__list">
+          <?php if (!empty($property['bedrooms'])) : ?>
+            <li>
+              <label><?php _e('Bedrooms', 'wp-avalon'); ?></label>
+              <span><?php echo $property['bedrooms']; ?></span>
+            </li>
+            <?php
+          endif;
+          if (!empty($property['bathrooms'])) :
+            ?>
+            <li>
+              <label><?php _e('Bathrooms', 'wp-avalon'); ?></label>
+              <span><?php echo $property['bathrooms']; ?></span>
+            </li>
+            <?php
+          endif;
+          if (!empty($property['year'])) :
+            ?>
+            <li>
+              <label><?php _e('Year of building', 'wp-avalon'); ?></label>
+              <span><?php echo $property['year']; ?></span>
+            </li>
+            <?php
+          endif;
+          ?>
+        </ul>
+        <div class="ir__directions">
+          <a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php _e('Get directions', 'wp-avalon'); ?></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <?php
+  $data = ob_get_contents();
+  $data = preg_replace(array('/[\r\n]+/'), array(""), $data);
+  $data = addslashes($data);
+
+  ob_end_clean();
+
+  return $data;
+}

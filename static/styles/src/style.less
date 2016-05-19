@@ -63,6 +63,16 @@ body {
     }
   }
 
+  a:not([class="btn"]),
+    a:not([class="btn-info"]) {
+    color: #337ab7;
+    text-decoration: none;
+    &:hover {
+      color: #23527c;
+      text-decoration: underline;
+    }
+  }
+
   /*Header bar*/
   .header-bar {
     background-color: #3f72bc;
@@ -1930,14 +1940,6 @@ body {
 
         h1, h2, h3, h4, h5, h6 {
           .ubuntu-font;
-        }
-        a {
-          color: #337ab7;
-          text-decoration: none;
-          &:hover {
-            color: #23527c;
-            text-decoration: underline;
-          }
         }
 
         article {

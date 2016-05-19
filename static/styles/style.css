@@ -223,6 +223,16 @@ body .hidden_block {
     width: 100%;
   }
 }
+body a:not([class="btn"]),
+body a:not([class="btn-info"]) {
+  color: #337ab7;
+  text-decoration: none;
+}
+body a:not([class="btn"]):hover,
+body a:not([class="btn-info"]):hover {
+  color: #23527c;
+  text-decoration: underline;
+}
 body .header-bar {
   background-color: #3f72bc;
   border-bottom: 1px solid #325280;
@@ -2498,14 +2508,6 @@ body main.main-content .container .content h4,
 body main.main-content .container .content h5,
 body main.main-content .container .content h6 {
   font-family: 'Ubuntu', sans-serif;
-}
-body main.main-content .container .content a {
-  color: #337ab7;
-  text-decoration: none;
-}
-body main.main-content .container .content a:hover {
-  color: #23527c;
-  text-decoration: underline;
 }
 body main.main-content .container .content article {
   /* Single, Post, Archive page container

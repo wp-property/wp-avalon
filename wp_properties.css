@@ -1529,6 +1529,215 @@ article.property-page-template .property-page-container .wpp_supermap:after {
   content: "";
   clear: both;
 }
+article.property-page-template .property-page-container #property_map .gm-style-iw,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw,
+article.property-page-template .property-page-container #property_map .gm-style,
+article.property-page-template .property-page-container .wpp_supermap .gm-style {
+  /*To del*/
+  /*To del*/
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box:before,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box:before,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box:before,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box:after,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left {
+  float: left;
+  position: relative;
+  width: 50%;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__image,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__image {
+  min-height: 30px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title {
+  background-color: #919191;
+  color: #FFF;
+  height: auto;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title label,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title label,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title label,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title label {
+  background-color: #626262;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title span,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title span,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title span,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0 0 10px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title a,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title a,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title a,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title a {
+  font-size: 12px;
+  color: #FFF;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right {
+  font-size: 14px;
+  float: right;
+  width: 45%;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width {
+  width: 100%;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__title,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link {
+  color: #919191;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__title,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__description,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__description {
+  margin-bottom: 20px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li {
+  line-height: 1.2;
+  padding-bottom: 5px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li:before,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li:before,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li:before,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li:after,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li:after,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li label,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li label,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li label,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li label {
+  display: block;
+  width: 60%;
+  float: left;
+  font-weight: 500;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span {
+  display: block;
+  width: 40%;
+  float: right;
+  text-align: right;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions {
+  text-align: center;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #19294c;
+  border-color: #0b1a3a;
+  color: #fff;
+  text-decoration: none;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a:hover,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a:hover {
+  background-color: #0b1a3a;
+  border-color: #0b1a3a;
+  color: #fff;
+}
 article.property-page-template .property-page-container #property_map .gm-style-iw .wpp_google_maps_attribute_row_property_title,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw .wpp_google_maps_attribute_row_property_title,
 article.property-page-template .property-page-container #property_map .gm-style .wpp_google_maps_attribute_row_property_title,

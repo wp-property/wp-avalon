@@ -46,7 +46,7 @@
         map = new google.maps.Map(document.getElementById("property_map"), myOptions);
 
         infowindow = new google.maps.InfoWindow({
-          content: '<?php echo WPP_F::google_maps_infobox($post); ?>',
+          content: '<?php echo avalon_google_maps_infobox($post); ?>',
           maxWidth: 500
         });
 
@@ -71,11 +71,6 @@
 
 
   <div class="property-page-container">
-<!--        <div class="<?php wpp_css('property::title', "building_title_wrapper"); ?>">
-          <h1 class="property-title entry-title"><?php the_title(); ?></h1>
-    <?php the_tagline('<h3 class="entry-subtitle">', '</h3>'); ?>
-      </div>-->
-
 
     <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
 
