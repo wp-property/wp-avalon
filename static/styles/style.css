@@ -460,7 +460,6 @@ body header .container .navigation-box .nav-button span:last-child {
 }
 body header .container .navigation-box .navigation-wrapper {
   height: 48px;
-  overflow: hidden;
   /*site-header-menu*/
   /*nav-additional*/
 }

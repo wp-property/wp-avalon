@@ -27,8 +27,15 @@ get_header();
 
         endwhile;
 
-        wp_link_pages();
-
+        the_posts_pagination(array(
+            'prev_text' => __('Previous page', 'wp-avalon'),
+            'next_text' => __('Next page', 'wp-avalon'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-avalon') . ' </span>',
+        ));
+      else :
+        
+        get_template_part('template-parts/content/content', 'none');
+      
       endif;
       ?>
     </div>

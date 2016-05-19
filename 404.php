@@ -13,8 +13,8 @@ get_header();
 
   <div class="content col-md-12">
 
-    <h1><?php _e('Oops! That page can&rsquo;t be found.', 'wp-avalon'); ?></h1>
-
+    <?php get_template_part('template-parts/content/content', 'none'); ?>
+    
   </div>
 
 </div>
