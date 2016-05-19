@@ -15,6 +15,23 @@ License URI:
 body {
   font-family: "Poppins",sans-serif !important;
   font-size: 14px;
+  /* for adaptive menu */
+  &.no-scrolled {
+    position: fixed;
+    overflow: hidden;
+  }
+  &.logged-in {
+    header {
+      .container {
+        .navigation-box {
+          .navigation-wrapper {
+            padding-top: 100px;
+          }
+        }
+      }
+    }
+  }
+  /* for adaptive menu */
 
   /*Default inputs*/
   input[type="text"],
@@ -232,6 +249,7 @@ body {
           width: 50px;
           height: 48px;
           position: relative;
+          z-index: 999;
 
           @media (max-width: 1000px) {
             display: block;
@@ -260,12 +278,16 @@ body {
         .navigation-wrapper {
 
           @media (max-width: 1000px) {
-            background-color: #3f3f3f;
-            display: none;
-            position: absolute;
-            left: 0;
+            .transition(left, 0.2s, ease-in-out, 0s);
+            background-color: #19294c;
+            /*display: none;*/
+            position: fixed;
+            overflow-y: scroll;
+            padding-top: 50px;
+            left: -100%;
             margin: 0;
-            top: 100%;
+            top: 0;
+            height: 100%;
             width: 100%;
             z-index: 99;
           }
@@ -289,6 +311,21 @@ body {
                   float: left;
                   display: block;
                   line-height: 49px;
+                  &.current-menu-item,
+                  &.current-menu-parent,
+                  &.current-menu-ancestor,
+                  &:hover {
+
+                    a {
+                      opacity: 1;
+                    }
+                  }
+                  &:hover {
+
+                    >ul.sub-menu {
+                      display: block;
+                    }
+                  }
 
                   @media (max-width: 1000px) {
                     float: none;
@@ -304,9 +341,9 @@ body {
                     text-decoration: none;
                     @media (max-width: 1000px) {
                       .transition(all, 0.15s, linear, 0s);
-                      font-size: 0.8em;
+                      font-size: 1.2em;
                       line-height: 1 !important;
-                      padding: 0.57em 1.42em !important;
+                      padding: 0.6em 0.4em !important;
                       white-space: unset !important;
                       opacity: 1;
                       color: #FFF;
@@ -355,6 +392,44 @@ body {
                       line-height: 23px;
                       text-align: left;
                       display: block;
+                      &:hover,
+                        &.current-menu-item,
+                        &.current-menu-parent {
+
+                        &:after {
+                          color: #a1a1a1;
+                        }
+                        >a {
+                          background-color: #efefef;
+                          color: #a1a1a1;
+                          @media (max-width: 1000px) {
+                            background-color: transparent !important;
+                            color: #FFF !important;
+                          }
+                        }
+                      }
+                      &:hover { 
+
+                        >ul.sub-menu {
+                          display: block;
+                        }
+                      }
+                      &.menu-item-has-children {
+
+                        &:after {
+                          .glyphicon-font;
+                          display: block;
+                          content:"\e250";
+                          font-size: 10px;
+                          line-height: 33px;
+                          position: absolute;
+                          right: 5px;
+                          top: 0;
+                          @media (max-width: 1000px) {
+                            display: none;
+                          }
+                        }
+                      }
                       @media (max-width: 1000px) {
                         background-color: transparent;
                       }
@@ -397,6 +472,14 @@ body {
 
                         li {
 
+                          &:hover,
+                            &.current-menu-item {
+
+                            >a {
+                              background-color: #efefef;
+                              color: #a1a1a1;
+                            }
+                          }
                           @media (max-width: 1000px) {
                             background-color: transparent;
                           }
@@ -415,69 +498,8 @@ body {
                               } 
                             }
                           }
-                          &:hover,
-                            &.current-menu-item {
-
-                            >a {
-                              background-color: #efefef;
-                              color: #a1a1a1;
-                            }
-                          }
                         }
                       }
-                      &:hover,
-                        &.current-menu-item,
-                        &.current-menu-parent {
-
-                        &:after {
-                          color: #a1a1a1;
-                        }
-                        >a {
-                          background-color: #efefef;
-                          color: #a1a1a1;
-                          @media (max-width: 1000px) {
-                            background-color: transparent !important;
-                            color: #FFF !important;
-                          }
-                        }
-                      }
-                      &:hover { 
-
-                        >ul.sub-menu {
-                          display: block;
-                        }
-                      }
-                      &.menu-item-has-children {
-
-                        &:after {
-                          .glyphicon-font;
-                          display: block;
-                          content:"\e250";
-                          font-size: 10px;
-                          line-height: 33px;
-                          position: absolute;
-                          right: 5px;
-                          top: 0;
-                          @media (max-width: 1000px) {
-                            display: none;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  &.current-menu-item,
-                  &.current-menu-parent,
-                  &.current-menu-ancestor,
-                  &:hover {
-
-                    a {
-                      opacity: 1;
-                    }
-                  }
-                  &:hover {
-
-                    >ul.sub-menu {
-                      display: block;
                     }
                   }
                 }
@@ -566,6 +588,7 @@ body {
             }
             .navigation-wrapper {
               display: block;
+              left: 0;
             }
           }
         }

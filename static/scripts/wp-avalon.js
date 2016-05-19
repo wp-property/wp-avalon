@@ -125,7 +125,11 @@ jQuery(window).load(function() {
 });
 jQuery(function() {
 
-//    Header bar
+  /**
+   * Header bar
+   * 
+   * @author vorobjov@UD
+   */
   jQuery(document).on('click', '.nav-additional .additional-button:not(.ab__logout)', function() {
     var that = jQuery(this),
             bar = that.attr('href');
@@ -146,17 +150,28 @@ jQuery(function() {
     jQuery('.nav-additional .additional-button').removeClass('active');
     jQuery('.header-bar.active').slideUp('slow', 'swing');
     jQuery('.header-bar').removeClass('active');
-
   });
 
 
-//    Tooltips
+  /**
+   * Tooltips init
+   * 
+   * @author vorobjov@UD
+   */
   jQuery('[data-toggle="tooltip"]').tooltip();
 
-//    Carousel
+  /**
+   * Carousel init
+   * 
+   * @author vorobjov@UD
+   */
   jQuery('.carousel').carousel();
 
-//    Tabs
+  /**
+   * Tabs init
+   * 
+   * @author vorobjov@UD
+   */
   jQuery('.nav-tabs a').click(function(e) {
     e.preventDefault();
     jQuery(this).tab('show');
@@ -166,29 +181,50 @@ jQuery(function() {
     jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
   }
 
-//    Frontpage widgetaria tabs titles
+  /**
+   * Frontpage widgetaria tabs titles
+   * 
+   * @author vorobjov@UD
+   */
   jQuery('.tab-content div.tab-pane').each(function() {
     var tab_id = jQuery(this).attr('id'),
             widget_title = jQuery('.tab-pane#' + tab_id + ' .widget-title').html();
     jQuery('.frontpage-widgetaria-tabs .nav-tabs li a[href="#' + tab_id + '"]').html(widget_title);
   });
 
-//    Selectpicker
+  /**
+   * Selectpicker
+   * 
+   * @author vorobjov@UD
+   */
   jQuery('select:not(.selectpicker)').selectpicker({
     style: 'btn-default'
   });
 
-//    Main Navigation (responsive)
+  /** 
+   * Main Navigation (responsive)
+   * 
+   * @author vorobjov@UD
+   */
   jQuery(document).on('click', '.navigation-box .nav-button', function() {
     jQuery('.navigation-box').toggleClass('active');
+    jQuery('body').toggleClass('no-scrolled');
   });
 
-//    Main container height
+  /**
+   * Main container height
+   * 
+   * @author vorobjov@UD
+   */
   var HeaderHeight = jQuery('header.header').height();
   var FooterHeight = jQuery('footer.footer').height();
   jQuery('main.main-content').css('min-height', jQuery(window).height() - HeaderHeight - FooterHeight + 'px');
 
-//    Default "Contact us" form ajax
+  /** 
+   * Default "Contact us" form ajax
+   *  
+   * @author vorobjov@UD
+   */
   jQuery('.header-contact-form .submit-btn').on('click', function() {
 
     var default_contact_us = jQuery('.header-contact-form').serialize();
@@ -237,17 +273,31 @@ jQuery(function() {
     jQuery(this).removeClass('error-input');
     jQuery('.dcf__message_box').hide('400').html('');
   });
-
+  
+  /** 
+   * Show message
+   *  
+   * @author vorobjov@UD
+   */
   function show_form_message(message) {
     jQuery('.header-contact-form .dcf__message_box').html(message).show('400');
   }
 
-//    Flip addons
+  /** 
+   * Flip addons
+   *  
+   * @author vorobjov@UD
+   */
   jQuery('.property_addon_box .pab__wrap').flip({
     trigger: 'hover'
   });
 });
 
+/** 
+ * Property grid after pagination complete
+ *
+ * @author vorobjov@UD
+ */
 jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
   wp_avalon.property_grid(true);
 });
