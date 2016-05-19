@@ -305,7 +305,7 @@ function avalon_google_maps_infobox($post, $args = false) {
         <?php
         $content = get_the_content();
         if (!empty($content)) :
-          echo '<div class="ir__title">' . __('Description', 'wp-avalon') . '</div>';
+          echo '<div class="ir__title ir__title_description">' . __('Description', 'wp-avalon') . '</div>';
           echo '<div class="ir__description">' . substr($content, 0, 100) . '...</div>';
         endif;
         ?>

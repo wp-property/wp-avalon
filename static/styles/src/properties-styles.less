@@ -1265,9 +1265,18 @@ article.property-page-template {
               float: left;
               position: relative;
               width: 50%;
+              @media (max-width: 640px) {
+                float: none;
+                width: 100%;
+                margin-bottom: 15px;
+              }
 
               .il__image {
                 min-height: 30px;
+                @media (max-width: 640px) {
+                  width: 50%;
+                  margin: 0 auto;
+                }
               }
               .il__title {
                 background-color: #919191;
@@ -1276,6 +1285,9 @@ article.property-page-template {
                 padding: 20px;
                 position: relative;
                 width: 100%;
+                @media (max-width: 640px) {
+                  padding: 10px;
+                }
 
                 label {
                   background-color: #626262;
@@ -1290,6 +1302,10 @@ article.property-page-template {
                   font-weight: 500;
                   line-height: 1.2;
                   padding: 0 0 10px;
+                  @media (max-width: 640px) {
+                    font-size: 14px;
+                    padding: 0 0 5px;
+                  }
                 }
                 a {
                   font-size: 12px;
@@ -1301,6 +1317,10 @@ article.property-page-template {
               font-size: 14px;
               float: right;
               width: 45%;
+              @media (max-width: 640px) {
+                float: none;
+                width: 100%;
+              }
               &.infowindow_full_width {
                 width: 100%;
 
@@ -1311,18 +1331,29 @@ article.property-page-template {
                 }
                 .ib__location_link {
                   color: #919191;
+                  margin-bottom: 10px;
                 }
                 .ib__price {
-
+                  font-weight: 600;
+                  font-size: 16px;
+                  margin-bottom: 15px;
                 }
               }
               .ir__title {
                 font-weight: 500;
                 margin-bottom: 10px;
                 border-bottom: 1px solid #DDD;
+                &.ir__title_description {
+                  @media (max-width: 640px) {
+                    display: none;
+                  }
+                }
               }
               .ir__description {
                 margin-bottom: 20px;
+                  @media (max-width: 640px) {
+                    display: none;
+                  }
               }
               .ir__list {
                 margin: 0 0 20px;

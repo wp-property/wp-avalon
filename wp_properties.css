@@ -1560,11 +1560,30 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   position: relative;
   width: 50%;
 }
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__image,
 article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__image {
   min-height: 30px;
+}
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__image,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__image,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__image {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
@@ -1576,6 +1595,14 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   padding: 20px;
   position: relative;
   width: 100%;
+}
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title {
+    padding: 10px;
+  }
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title label,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title label,
@@ -1597,6 +1624,15 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   line-height: 1.2;
   padding: 0 0 10px;
 }
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title span,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title span,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title span,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_left .il__title span {
+    font-size: 14px;
+    padding: 0 0 5px;
+  }
+}
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title a,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_left .il__title a,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_left .il__title a,
@@ -1611,6 +1647,15 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   font-size: 14px;
   float: right;
   width: 45%;
+}
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right {
+    float: none;
+    width: 100%;
+  }
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width,
@@ -1631,6 +1676,15 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style-
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link,
 article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__location_link {
   color: #919191;
+  margin-bottom: 10px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__price,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__price,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__price,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right.infowindow_full_width .ib__price {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title,
@@ -1640,11 +1694,27 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   margin-bottom: 10px;
   border-bottom: 1px solid #DDD;
 }
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title.ir__title_description,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__title.ir__title_description,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__title.ir__title_description,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__title.ir__title_description {
+    display: none;
+  }
+}
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__description,
 article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__description {
   margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__description,
+  article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__description,
+  article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__description {
+    display: none;
+  }
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list,
