@@ -70,7 +70,15 @@ if ($header_image_disable == 1) :
     elseif (is_category()) :
       echo '<h1 class="page-title">' . single_tag_title() . '</h1>';
     elseif (is_archive()) :
-      the_archive_title('<h1 class="page-title">', '</h1>');
+      echo '<h1 class="page-title">' . single_tag_title() . '</h1>';
+    elseif (is_home()) :
+      echo '<h1 class="page-title">';
+      single_post_title();
+      echo '</h1>';
+      if (is_paged()) :
+        $current = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+        echo '<h3 class="page-tagline">Page '.$current.'</h3>';
+      endif;
     endif;
     echo '</div>';
   endif;
