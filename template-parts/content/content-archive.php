@@ -21,10 +21,3 @@ $date_format = get_option('date_format');
     <?php the_tags('<div class="post-tags"><label>Tags: </label>', ', ', '</div>'); ?>
   </div>
 </article>
-<?php
-the_posts_pagination(array(
-    'prev_text' => __('Previous page', 'wp-avalon'),
-    'next_text' => __('Next page', 'wp-avalon'),
-    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-avalon') . ' </span>',
-));
-?>

@@ -28,6 +28,12 @@ get_header();
         endwhile;
 
       endif;
+
+      the_posts_pagination(array(
+          'prev_text' => __('Previous page', 'wp-avalon'),
+          'next_text' => __('Next page', 'wp-avalon'),
+          'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-avalon') . ' </span>',
+      ));
       ?>
     </div>
 
