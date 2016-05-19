@@ -270,6 +270,7 @@
   wp.customize('avalon_header_bg_color', function(value) {
     value.bind(function(newval) {
       $('body header').css('background-color', newval);
+      $('body header .container .navigation-box .navigation-wrapper').css('background-color', newval);
       $('body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title').css('background-color', newval);
       $('body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title').css('background-color', newval);
       $('body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom').css('background-color', newval);

@@ -141,8 +141,10 @@ body.no-scrolled {
   position: fixed;
   overflow: hidden;
 }
-body.logged-in header .container .navigation-box .navigation-wrapper {
-  padding-top: 100px;
+@media (max-width: 1000px) {
+  body.logged-in header .container .navigation-box .navigation-wrapper {
+    padding-top: 100px;
+  }
 }
 body input[type="text"],
 body input[type="tel"],
@@ -447,6 +449,8 @@ body header .container .navigation-box .nav-button span:last-child {
   transition: transform 0.3s ease-in-out 0s;
 }
 body header .container .navigation-box .navigation-wrapper {
+  height: 48px;
+  overflow: hidden;
   /*site-header-menu*/
   /*nav-additional*/
 }

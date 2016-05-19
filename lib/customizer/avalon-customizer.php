@@ -38,6 +38,7 @@ function avalon_customize_register($wp_customize) {
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_header_bg_color', array(
       'label' => __('Header background color', 'wp-avalon'),
+      'description' => __('This color will be used for several blocks on the site: responsive menu background, overview and header.', 'wp-avalon'),
       'section' => 'avalon_header_colors_section',
       'priority' => 1
   )));
@@ -1139,6 +1140,11 @@ function avalon_closed_section($input) {
 function avalon_customize_css() {
   ?>
   <style type="text/css">
+
+    body header .container .navigation-box .navigation-wrapper {
+      background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+    }
+
     body header .container .logotype a span { 
       color:<?php echo get_theme_mod('header_logo_text_color_settings', '#FFF'); ?>;
     }
