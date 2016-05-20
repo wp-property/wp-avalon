@@ -257,7 +257,7 @@ body .header-bar button.close-bar-box {
     height: 30px;
     position: absolute;
     right: 20px;
-    top: 0;
+    top: -25px;
     width: 30px;
     z-index: 99;
   }
