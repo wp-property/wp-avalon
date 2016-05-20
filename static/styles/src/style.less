@@ -1053,41 +1053,166 @@ body {
                   height: 400px;
                   overflow: hidden;
 
-                  .gm-style {
+                  .gm-style,
+                  .gm-style-iw {
 
-                    .wpp_google_maps_attribute_row_property_title {
-                      font-size: 1em;
-                      margin-bottom: 5px;
-                      font-weight: 600;
+                    >div {
+                      max-width: 100% !important;
+                      width: 100%;
                     }
-                    .wpp_google_maps_infobox_table {
 
-                      .wpp_google_maps_left_col {
-                        padding-right: 10px;
+                    #infowindow {
+                      padding: 5px 0;
 
-                        .wpp_google_maps_attribute_row_directions_link {
-                          display: none;
-                        }
-                      }
-                      .wpp_google_maps_right_col {
+                      .infowindow_box {
+                        .clearfix;
 
-                        .wpp_google_maps_infobox {
-                          margin: 0;
-                          padding: 0;
-                          list-style: none;
+                        .infowindow_left {
+                          float: left;
+                          position: relative;
+                          width: 50%;
+                          @media (max-width: 640px) {
+                            float: none;
+                            width: 100%;
+                            margin-bottom: 15px;
+                          }
 
-                          li {
-                            margin: 0 0 5px;
+                          .il__image {
+                            min-height: 30px;
+                            @media (max-width: 640px) {
+                              width: 50%;
+                              margin: 0 auto;
+                            }
 
-                            .attribute {
-                              position: relative;
-                              margin: 0 5px 0 0;
-                              font-weight: 600;
-                              &:after {
-                                content: ":";
-                                position: relative;
-                                display: inline-block;
+                            img.no-photo {
+                              max-width: 70%;
+                              display: block;
+                              margin: 0 auto;
+                            }
+                          }
+                          .il__title {
+                            background-color: #919191;
+                            color: #FFF;
+                            height: auto;
+                            padding: 20px;
+                            position: relative;
+                            width: 100%;
+                            @media (max-width: 640px) {
+                              padding: 10px;
+                            }
+
+                            label {
+                              background-color: #626262;
+                              padding: 5px 10px;
+                              position: absolute;
+                              top: -15px;
+                              right: 10px;
+                            }
+                            span {
+                              display: block;
+                              font-size: 16px;
+                              font-weight: 500;
+                              line-height: 1.2;
+                              padding: 0 0 10px;
+                              @media (max-width: 640px) {
+                                font-size: 14px;
+                                padding: 0 0 5px;
                               }
+                            }
+                            a {
+                              font-size: 12px;
+                              color: #FFF;
+                            }
+                          }
+                        }
+                        .infowindow_right {
+                          font-size: 14px;
+                          float: right;
+                          width: 45%;
+                          @media (max-width: 640px) {
+                            float: none;
+                            width: 100%;
+                          }
+                          &.infowindow_full_width {
+                            width: 100%;
+
+                            .ib__title {
+                              font-size: 16px;
+                              font-weight: 500;
+                              margin-bottom: 10px;
+                            }
+                            .ib__location_link {
+                              color: #919191;
+                              margin-bottom: 10px;
+                            }
+                            .ib__price {
+                              font-weight: 600;
+                              font-size: 16px;
+                              margin-bottom: 15px;
+                            }
+                          }
+                          .ir__title {
+                            font-weight: 500;
+                            margin-bottom: 10px;
+                            border-bottom: 1px solid #DDD;
+                            &.ir__title_description {
+                              @media (max-width: 640px) {
+                                display: none;
+                              }
+                            }
+                          }
+                          .ir__description {
+                            margin-bottom: 15px;
+                            @media (max-width: 640px) {
+                              display: none;
+                            }
+                          }
+                          .ir__list {
+                            margin: 0 0 15px;
+                            padding: 0;
+                            list-style: none;
+
+                            li {
+                              .clearfix;
+                              line-height: 1.2;
+                              padding-bottom: 5px;
+
+                              label {
+                                display: block;
+                                width: 60%;
+                                float: left;
+                                font-weight: 500;
+                              }
+                              span {
+                                display: block;
+                                width: 40%;
+                                float: right;
+                                text-align: right;
+                              }
+                            }
+                          }
+                          .ir__child_properties_list {
+                            margin: 0 0 15px;
+                            padding: 0 0 0 15px;
+                            @media (max-width: 640px) {
+                              display: none;
+                            }
+
+                            li {
+
+                              a {
+                                font-size: 12px;
+                                color: #414141;
+                                font-weight: 400;
+                              }
+                            }
+                          }
+                          .ir__directions {
+                            text-align: center;
+
+                            a {
+                              .submit-button-style;
+                              text-decoration: none;
                             }
                           }
                         }
@@ -2047,41 +2172,166 @@ body {
               &.no_sidebar {
                 width: 100%;
               }
-              .gm-style {
+              .gm-style,
+              .gm-style-iw {
 
-                .wpp_google_maps_attribute_row_property_title {
-                  font-size: 1em;
-                  margin-bottom: 5px;
-                  font-weight: 600;
+                >div {
+                  max-width: 100% !important;
+                  width: 100%;
                 }
-                .wpp_google_maps_infobox_table {
 
-                  .wpp_google_maps_left_col {
-                    padding-right: 10px;
+                #infowindow {
+                  padding: 5px 0;
 
-                    .wpp_google_maps_attribute_row_directions_link {
-                      display: none;
-                    }
-                  }
-                  .wpp_google_maps_right_col {
+                  .infowindow_box {
+                    .clearfix;
 
-                    .wpp_google_maps_infobox {
-                      margin: 0;
-                      padding: 0;
-                      list-style: none;
+                    .infowindow_left {
+                      float: left;
+                      position: relative;
+                      width: 50%;
+                      @media (max-width: 640px) {
+                        float: none;
+                        width: 100%;
+                        margin-bottom: 15px;
+                      }
 
-                      li {
-                        margin: 0 0 5px;
+                      .il__image {
+                        min-height: 30px;
+                        @media (max-width: 640px) {
+                          width: 50%;
+                          margin: 0 auto;
+                        }
 
-                        .attribute {
-                          position: relative;
-                          margin: 0 5px 0 0;
-                          font-weight: 600;
-                          &:after {
-                            content: ":";
-                            position: relative;
-                            display: inline-block;
+                        img.no-photo {
+                          max-width: 70%;
+                          display: block;
+                          margin: 0 auto;
+                        }
+                      }
+                      .il__title {
+                        background-color: #919191;
+                        color: #FFF;
+                        height: auto;
+                        padding: 20px;
+                        position: relative;
+                        width: 100%;
+                        @media (max-width: 640px) {
+                          padding: 10px;
+                        }
+
+                        label {
+                          background-color: #626262;
+                          padding: 5px 10px;
+                          position: absolute;
+                          top: -15px;
+                          right: 10px;
+                        }
+                        span {
+                          display: block;
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 1.2;
+                          padding: 0 0 10px;
+                          @media (max-width: 640px) {
+                            font-size: 14px;
+                            padding: 0 0 5px;
                           }
+                        }
+                        a {
+                          font-size: 12px;
+                          color: #FFF;
+                        }
+                      }
+                    }
+                    .infowindow_right {
+                      font-size: 14px;
+                      float: right;
+                      width: 45%;
+                      @media (max-width: 640px) {
+                        float: none;
+                        width: 100%;
+                      }
+                      &.infowindow_full_width {
+                        width: 100%;
+
+                        .ib__title {
+                          font-size: 16px;
+                          font-weight: 500;
+                          margin-bottom: 10px;
+                        }
+                        .ib__location_link {
+                          color: #919191;
+                          margin-bottom: 10px;
+                        }
+                        .ib__price {
+                          font-weight: 600;
+                          font-size: 16px;
+                          margin-bottom: 15px;
+                        }
+                      }
+                      .ir__title {
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid #DDD;
+                        &.ir__title_description {
+                          @media (max-width: 640px) {
+                            display: none;
+                          }
+                        }
+                      }
+                      .ir__description {
+                        margin-bottom: 15px;
+                        @media (max-width: 640px) {
+                          display: none;
+                        }
+                      }
+                      .ir__list {
+                        margin: 0 0 15px;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                          .clearfix;
+                          line-height: 1.2;
+                          padding-bottom: 5px;
+
+                          label {
+                            display: block;
+                            width: 60%;
+                            float: left;
+                            font-weight: 500;
+                          }
+                          span {
+                            display: block;
+                            width: 40%;
+                            float: right;
+                            text-align: right;
+                          }
+                        }
+                      }
+                      .ir__child_properties_list {
+                        margin: 0 0 15px;
+                        padding: 0 0 0 15px;
+                        @media (max-width: 640px) {
+                          display: none;
+                        }
+
+                        li {
+
+                          a {
+                            font-size: 12px;
+                            color: #414141;
+                            font-weight: 400;
+                          }
+                        }
+                      }
+                      .ir__directions {
+                        text-align: center;
+
+                        a {
+                          .submit-button-style;
+                          text-decoration: none;
                         }
                       }
                     }
@@ -2551,7 +2801,7 @@ body {
             margin: 0 0 10px;
           }
           .nav-links {
-            
+
             .page-numbers {
               border: 1px solid #DDD;
               padding: 5px 10px;

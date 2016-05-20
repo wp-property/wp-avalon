@@ -46,7 +46,7 @@
         map = new google.maps.Map(document.getElementById("property_map"), myOptions);
 
         infowindow = new google.maps.InfoWindow({
-          content: '<?php echo avalon_google_maps_infobox($post); ?>',
+          content: '<?php echo WPP_F::google_maps_infobox($post); ?>',
           maxWidth: 500
         });
 
