@@ -3371,6 +3371,10 @@ body main.main-content .container .content nav.navigation.pagination .nav-links 
   border: 1px solid #DDD;
   padding: 5px 10px;
 }
+body main.main-content .container .content nav.navigation.pagination .nav-links .page-numbers.dots {
+  padding: 0;
+  border: none;
+}
 body main.main-content .container .content .comments-area {
   margin-bottom: 1.42em;
 }
