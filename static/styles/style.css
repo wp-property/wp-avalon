@@ -1429,7 +1429,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 @media (max-width: 1000px) {
   body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map {
-    width: 65%;
+    width: 68%;
   }
 }
 @media (max-width: 640px) {
@@ -1692,7 +1692,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 @media (max-width: 1000px) {
   body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list {
-    width: 35%;
+    width: 32%;
   }
 }
 @media (max-width: 640px) {
@@ -2914,7 +2914,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 }
 @media (max-width: 1000px) {
   body main.main-content .container .content article .wpp_supermap_wrapper .super_map {
-    width: 65%;
+    width: 68%;
   }
 }
 @media (max-width: 640px) {
@@ -3177,7 +3177,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 }
 @media (max-width: 1000px) {
   body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list {
-    width: 35%;
+    width: 32%;
   }
 }
 @media (max-width: 640px) {
