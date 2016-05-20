@@ -1052,6 +1052,16 @@ body {
                   width: 80%;
                   height: 500px;
                   overflow: hidden;
+                  &.no_sidebar {
+                    width: 100%;
+                  }
+                  @media (max-width: 1000px) {
+                    width: 65%;
+                  }
+                  @media (max-width: 640px) {
+                    width: 100%;
+                    float: left;
+                  }
 
                   .gm-style,
                   .gm-style-iw {
@@ -1224,11 +1234,17 @@ body {
                   }
                 }
                 .super_map_list {
-
                   overflow-y: scroll;
                   float: left;
                   height: 500px;
                   width: 20%;
+                  @media (max-width: 1000px) {
+                    width: 35%;
+                  }
+                  @media (max-width: 640px) {
+                    width: 100%;
+                    float: right;
+                  }
 
                   .supermap_filter_wrapper {
 
@@ -2196,6 +2212,13 @@ body {
               &.no_sidebar {
                 width: 100%;
               }
+              @media (max-width: 1000px) {
+                width: 65%;
+              }
+              @media (max-width: 640px) {
+                width: 100%;
+                float: left;
+              }
               .gm-style,
               .gm-style-iw {
 
@@ -2371,6 +2394,13 @@ body {
               float: left;
               height: 500px;
               width: 20%;
+              @media (max-width: 1000px) {
+                width: 35%;
+              }
+              @media (max-width: 640px) {
+                width: 100%;
+                float: right;
+              }
 
               .supermap_filter_wrapper {
 
