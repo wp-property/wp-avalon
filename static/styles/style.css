@@ -2468,6 +2468,8 @@ body main.main-content .container .sidebar.sidebar_right {
 }
 body main.main-content .container .content {
   float: left;
+  /*Navigation*/
+  /*Navigation*/
   /*Comments styles*/
   /*Comments styles*/
 }
@@ -3360,6 +3362,14 @@ body main.main-content .container .content article input[type="submit"]:hover {
 }
 body main.main-content .container .content article.frontpage-widgets {
   margin-top: 2.85em;
+}
+body main.main-content .container .content nav.navigation.pagination .screen-reader-text {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+body main.main-content .container .content nav.navigation.pagination .nav-links .page-numbers {
+  border: 1px solid #DDD;
+  padding: 5px 10px;
 }
 body main.main-content .container .content .comments-area {
   margin-bottom: 1.42em;

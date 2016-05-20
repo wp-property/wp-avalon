@@ -28,9 +28,9 @@ get_header();
         endwhile;
 
         the_posts_pagination(array(
-            'prev_text' => __('Previous page', 'wp-avalon'),
-            'next_text' => __('Next page', 'wp-avalon'),
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wp-avalon') . ' </span>',
+            'prev_text' => __('Previous', 'wp-avalon'),
+            'next_text' => __('Next', 'wp-avalon'),
+            'before_page_number' => '<span class="meta-nav screen-reader-text"></span>',
         ));
       else :
 
