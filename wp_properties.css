@@ -1884,8 +1884,7 @@ article.property-page-template .property-page-container .property_stats.list li 
   border-left: 1px solid #ededed;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list {
-  border: 1px solid #ededed;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list:before {
   display: block;
@@ -1898,11 +1897,11 @@ article.property-page-template .property-page-container .property_stats.groups .
   clear: both;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .wpp_stats_group {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 3px solid #ddd;
+  display: inline-block;
   font-size: 20px;
-  margin: 0;
-  padding: 10px 0;
-  text-align: center;
+  margin: 0 0 10px;
+  padding: 0 0 3px;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats {
   margin: 0;
@@ -1910,7 +1909,7 @@ article.property-page-template .property-page-container .property_stats.groups .
   list-style: none;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li {
-  border-bottom: 1px solid #ededed;
+  background-color: #DDD;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:before {
   display: block;
@@ -1922,22 +1921,18 @@ article.property-page-template .property-page-container .property_stats.groups .
   content: "";
   clear: both;
 }
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:last-child {
-  border: none;
+article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li:nth-child(2n) {
+  background-color: #FFF;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .attribute,
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
   padding: 1em;
   display: block;
-  float: left;
-  width: 50%;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .attribute {
-  text-align: right;
+  float: left;
+  width: 170px;
   font-weight: 600;
-}
-article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value {
-  border-left: 1px solid #ededed;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .overview_stats li .value iframe {
   max-width: 100%;

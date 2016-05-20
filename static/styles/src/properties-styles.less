@@ -1458,15 +1458,14 @@ article.property-page-template {
 
         .wpp_feature_list {
           .clearfix;
-          border: 1px solid #ededed;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
 
           .wpp_stats_group {
-            border-bottom: 1px solid #ededed;
+            border-bottom: 3px solid #ddd;
+            display: inline-block;
             font-size: 20px;
-            margin: 0;
-            padding: 10px 0;
-            text-align: center;
+            margin: 0 0 10px;
+            padding: 0 0 3px;
           }
           .overview_stats {
             margin: 0;
@@ -1475,24 +1474,22 @@ article.property-page-template {
 
             li {
               .clearfix;
-              border-bottom: 1px solid #ededed;
-              &:last-child {
-                border: none;
+              background-color: #DDD;
+              &:nth-child(2n) {
+                background-color: #FFF;
               }
 
               .attribute,
               .value {
                 padding: 1em;
                 display: block;
-                float: left;
-                width: 50%;
               }
               .attribute {
-                text-align: right;
+                float: left;
+                width: 170px;
                 font-weight: 600;
               }
               .value {
-                border-left: 1px solid #ededed;
 
                 iframe {
                   max-width: 100%;
