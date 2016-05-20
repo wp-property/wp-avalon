@@ -1421,7 +1421,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map {
   float: right;
   width: 80%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style > div,
@@ -1669,7 +1669,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list {
   overflow-y: scroll;
   float: left;
-  height: 400px;
+  height: 500px;
   width: 20%;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .hide_filter a {
@@ -2850,7 +2850,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper:after {
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map {
   float: right;
   width: 80%;
-  height: 400px;
+  height: 500px;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map.no_sidebar {
   width: 100%;
@@ -3100,7 +3100,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list {
   overflow-y: scroll;
   float: left;
-  height: 400px;
+  height: 500px;
   width: 20%;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .hide_filter a {
