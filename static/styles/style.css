@@ -138,7 +138,6 @@ body {
   /*Footer*/
 }
 body.no-scrolled {
-  position: fixed;
   overflow: hidden;
 }
 @media (max-width: 1000px) {
