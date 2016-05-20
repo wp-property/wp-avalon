@@ -76,8 +76,10 @@ if ($header_image_disable == 1) :
       single_post_title();
       echo '</h1>';
       if (is_paged()) :
-        $current = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
-        echo '<h3 class="page-tagline">Page '.$current.'</h3>';
+        global $wp_query;
+        $total = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
+        $current = get_query_var('paged') ? intval(get_query_var('paged')) : 1;
+        echo '<h3 class="page-tagline">Page ' . $current . ' of ' . $total . '</h3>';
       endif;
     endif;
     echo '</div>';
