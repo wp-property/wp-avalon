@@ -258,6 +258,10 @@
 .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_left_column .property_image a.thumbnail {
   border: none !important;
 }
+.wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_left_column .property_image a.thumbnail img {
+  width: 100% !important;
+  height: auto !important;
+}
 .wpp_property_overview_shortcode .wpp_row_view .property_div .wpp_overview_right_column {
   margin-left: 110px !important;
 }
