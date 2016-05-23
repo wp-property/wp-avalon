@@ -119,6 +119,7 @@
               a {
                 font-size: 16px;
                 color: #333;
+                font-weight: 600;
               }
             }
             span.attribute {
@@ -138,9 +139,12 @@
 
           li {
 
-            span.attribute {
+            span.attribute  {
               font-weight: 600;
               margin-right: 5px;
+            }
+            span.title {
+              font-weight: 600;
             }
             &.actions {
 
@@ -470,6 +474,7 @@
 }/*shortcode_featured_properties*/
 
 .wpp_feps_user_menu {
+  margin-bottom: 20px;
 
   ul {
     margin: 0 0 15px;
@@ -1043,6 +1048,9 @@
             font-weight: 100;
             text-transform: uppercase;
           }
+          .attribute_description_text {
+            margin-bottom: 10px;
+          }
           .wpp_image_upload {
 
             .qq-upload-drop-area {
@@ -1220,23 +1228,17 @@ article.property-page-template {
     }
 
     .feature_lists {
-      text-align: center;
       .clearfix;
 
       >div {
-        border: 1px solid #ededed;
-        display: inline-block;
-        height: inherit;
-        margin: 0 1% 20px;
-        vertical-align: top;
-        width: 47%;
+        margin: 0 0 20px;
 
         h2 {
-          border-bottom: 1px solid #ededed;
+          border-bottom: 3px solid #ddd;
+          display: inline-block;
           font-size: 20px !important;
-          margin: 0;
-          padding: 10px 0;
-          text-align: center;
+          margin: 0 0 10px;
+          padding: 0 0 3px;
         }
         ul {
           margin: 0;
@@ -1266,15 +1268,16 @@ article.property-page-template {
       }
     }
     .property_meta_box {
-      border: 1px solid #ededed;
-      padding: 5px 20px;
+      /*      border: 1px solid #ededed;
+            padding: 5px 20px;*/
       margin-bottom: 20px;
 
       h2 {
-        border-bottom: 1px solid #ededed;
-        font-size: 22px !important;
-        padding: 0 0 5px;
-        margin: 0 0 5px;
+        border-bottom: 3px solid #ddd;
+        display: inline-block;
+        font-size: 20px !important;
+        margin: 0 0 10px;
+        padding: 0 0 3px;
       }
     }
 

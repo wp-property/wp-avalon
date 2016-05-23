@@ -1222,6 +1222,7 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
     }
 
+    body .wpp_feps_login_box .line .login_link .lost_pass_link,
     body .btn-info,
     body a.btn-info,
     body .btn.btn-info,
@@ -1259,6 +1260,7 @@ function avalon_customize_css() {
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
     }
+    body .wpp_feps_login_box .line .login_link .lost_pass_link:hover,
     body .btn-info:hover,
     body a.btn-info:hover,
     body .btn.btn-info:hover,
