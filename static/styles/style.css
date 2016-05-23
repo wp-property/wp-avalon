@@ -2628,6 +2628,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__left ul li label {
   margin-right: 5px;
+  font-weight: 500;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right {
   float: right;
@@ -2637,7 +2638,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right .property_price {
   color: #FFF;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.71em 0;
   line-height: 1.71em;
   text-align: right;

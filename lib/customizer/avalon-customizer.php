@@ -331,32 +331,11 @@ function avalon_customize_register($wp_customize) {
       'priority' => 1
   ));
 
-  // Header image settings
+  // Header image
   $wp_customize->add_section('header_image_settings_section', array(
-      'title' => __('Header image settings', 'wp-avalon'),
+      'title' => __('Header image', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'priority' => 2,
-  ));
-  // Show fetured image in header 
-  $wp_customize->add_setting('header_image_disable', array(
-      'default' => '1',
-      'transport' => 'postMessage'
-  ));
-  $wp_customize->add_control('header_image_disable', array(
-      'label' => __('Show full section with header image', 'wp-avalon'),
-      'section' => 'header_image_settings_section',
-      'type' => 'checkbox',
-      'priority' => 1
-  ));
-  // Show fetured image in header instead header image 
-  $wp_customize->add_setting('header_image_show_featured_image_in_head', array(
-      'default' => '1',
-  ));
-  $wp_customize->add_control('header_image_show_featured_image_in_head', array(
-      'label' => __('Show fetured image in header instead of header image', 'wp-avalon'),
-      'section' => 'header_image_settings_section',
-      'type' => 'checkbox',
-      'priority' => 2
   ));
   // Header image
   $wp_customize->add_setting('header_image', array(
@@ -367,7 +346,7 @@ function avalon_customize_register($wp_customize) {
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_image', array(
       'label' => __('Header image', 'wp-avalon'),
       'section' => 'header_image_settings_section',
-      'priority' => 3
+      'priority' => 1
   )));
 //    Blackout color
   $wp_customize->add_setting('header_image__blackout_color', array(
@@ -379,7 +358,7 @@ function avalon_customize_register($wp_customize) {
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_image__blackout_color', array(
       'label' => __('Blackout color for header image', 'wp-avalon'),
       'section' => 'header_image_settings_section',
-      'priority' => 4
+      'priority' => 2
   )));
 //    Blackout opacity
   $wp_customize->add_setting('header_image__opacity_setting', array(
@@ -396,7 +375,47 @@ function avalon_customize_register($wp_customize) {
           'max' => 1,
           'step' => 0.1,
       ),
-      'priority' => 5
+      'priority' => 3
+  ));
+  
+  // Header image section settings
+  $wp_customize->add_section('header_image_section_settings', array(
+      'title' => __('Header image section settings', 'wp-avalon'),
+      'panel' => 'header_main_settings_control',
+      'priority' => 3,
+  ));
+  // Show fetured image in header 
+  $wp_customize->add_setting('header_image_disable', array(
+      'default' => '1',
+      'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control('header_image_disable', array(
+      'label' => __('Show "Header Image" section', 'wp-avalon'),
+      'section' => 'header_image_section_settings',
+      'type' => 'checkbox',
+      'priority' => 1
+  ));
+  // Show fetured image in header on page & post page
+  $wp_customize->add_setting('header_image_post_disable', array(
+      'default' => '1',
+      'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control('header_image_post_disable', array(
+      'label' => __('Show "Header image" section on single and post page', 'wp-avalon'),
+      'section' => 'header_image_section_settings',
+      'type' => 'checkbox',
+      'priority' => 2
+  ));
+  // Show fetured image in header instead header image 
+  $wp_customize->add_setting('header_image_show_featured_image_in_head', array(
+      'default' => '1',
+  ));
+  $wp_customize->add_control('header_image_show_featured_image_in_head', array(
+      'label' => __('Show fetured image in header instead of header image', 'wp-avalon'),
+      'description' => __('on single and post page', 'wp-avalon'),
+      'section' => 'header_image_section_settings',
+      'type' => 'checkbox',
+      'priority' => 3
   ));
 
 //    Wellcome section
@@ -404,7 +423,7 @@ function avalon_customize_register($wp_customize) {
       'title' => __('Wellcome section', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
-      'priority' => 3,
+      'priority' => 4,
   ));
 
   // Disable wellcome section
@@ -483,7 +502,7 @@ function avalon_customize_register($wp_customize) {
       'title' => __('Logo settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
-      'priority' => 4,
+      'priority' => 5,
   ));
 //    Logo icon
   $wp_customize->add_setting('header_logo_icon_settings', array(
@@ -578,7 +597,7 @@ function avalon_customize_register($wp_customize) {
   $wp_customize->add_section('header_contuctus_settings_section', array(
       'title' => __('Contact us settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
-      'priority' => 5,
+      'priority' => 6,
   ));
   // Disable "Contact us" area
   $wp_customize->add_setting('header_contuctus_disable_settings', array(
@@ -662,7 +681,7 @@ function avalon_customize_register($wp_customize) {
       'title' => __('"Location" area settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
-      'priority' => 6,
+      'priority' => 7,
   ));
   // Disable "Location" area
   $wp_customize->add_setting('header_location_area_settings', array(
