@@ -480,7 +480,7 @@ function avalon_customize_register($wp_customize) {
 
 //    Logo settings
   $wp_customize->add_section('header_logo_settings', array(
-      'title' => __('Logotype settings', 'wp-avalon'),
+      'title' => __('Logo settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
       'priority' => 4,
@@ -534,7 +534,7 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control('header_logo_text_settings', array(
-      'label' => __('Logotype text', 'wp-avalon'),
+      'label' => __('Logo text', 'wp-avalon'),
       'section' => 'header_logo_settings',
   ));
 //    Logo text color
@@ -1010,7 +1010,7 @@ function avalon_customize_register($wp_customize) {
 
 //    FOOTER Logo settings
   $wp_customize->add_section('footer_logo_settings', array(
-      'title' => __('Footer Logotype settings', 'wp-avalon'),
+      'title' => __('Footer Logo settings', 'wp-avalon'),
       'panel' => 'footer_area_panel',
       'priority' => 1,
   ));
@@ -1066,7 +1066,7 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control('footer_logo_text_settings', array(
-      'label' => __('Logotype text', 'wp-avalon'),
+      'label' => __('Logo text', 'wp-avalon'),
       'section' => 'footer_logo_settings',
       'priority' => 4
   ));

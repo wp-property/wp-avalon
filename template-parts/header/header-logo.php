@@ -16,7 +16,7 @@ $margin_icon = get_theme_mod('header_logo_icon_margin_setting', '-4');
 $margin_right_icon = get_theme_mod('header_logo_icon_margin_right_setting', '5');
 $margin = get_theme_mod('header_logo_img_margin_setting', '0');
 if (!empty($logo_image)) :
-  echo '<img class="full_image_logo" style="margin-top: ' . $margin . 'px" alt="Logotype" src="' . $logo_image . '">';
+  echo '<img class="full_image_logo" style="margin-top: ' . $margin . 'px" alt="Logo" src="' . $logo_image . '">';
 else :
   if (!empty($icon_url)) :
 

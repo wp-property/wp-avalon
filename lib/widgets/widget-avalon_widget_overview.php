@@ -49,7 +49,7 @@ class avalon_widget_overview extends WP_Widget {
           <div class="property_bottom">
             <div class="pb__left">
               <ul>
-                <?php if (!empty($instance['bads'])) : ?><li><label>Beds: </label><?php echo $instance['bads']; ?></li><?php endif; ?>
+                <?php if (!empty($instance['beds'])) : ?><li><label>Beds: </label><?php echo $instance['beds']; ?></li><?php endif; ?>
                 <?php if (!empty($instance['baths'])) : ?><li><label>Baths: </label><?php echo $instance['baths']; ?></li><?php endif; ?>
               </ul>
             </div>
@@ -70,7 +70,7 @@ class avalon_widget_overview extends WP_Widget {
     $instance = $old_instance;
     $instance['title'] = strip_tags($new_instance['title']);
     $instance['location'] = strip_tags($new_instance['location']);
-    $instance['bads'] = strip_tags($new_instance['bads']);
+    $instance['beds'] = strip_tags($new_instance['beds']);
     $instance['baths'] = strip_tags($new_instance['baths']);
     $instance['price'] = strip_tags($new_instance['price']);
     $instance['link'] = strip_tags($new_instance['link']);
@@ -98,9 +98,9 @@ class avalon_widget_overview extends WP_Widget {
       ?>" class="widefat">
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('bads'); ?>"><?php _e('Bads', 'wp-avalon'); ?></label><br/>
-      <input type="text" name="<?php echo $this->get_field_name('bads'); ?>" id="<?php echo $this->get_field_id('bads'); ?>" value="<?php
-      if (!empty($instance['bads'])): echo $instance['bads'];
+      <label for="<?php echo $this->get_field_id('beds'); ?>"><?php _e('Bads', 'wp-avalon'); ?></label><br/>
+      <input type="text" name="<?php echo $this->get_field_name('beds'); ?>" id="<?php echo $this->get_field_id('beds'); ?>" value="<?php
+      if (!empty($instance['beds'])): echo $instance['beds'];
       endif;
       ?>" class="widefat">
     </p>

@@ -139,7 +139,7 @@ add_action('after_switch_theme', function() {
     $overview_widget_content[$avalon_counter] = array(
         'title' => __('250 S Estes Drive 52', 'wp-avalon'),
         'location' => 'Chapel Hill,  North Carolina',
-        'bads' => '1',
+        'beds' => '1',
         'baths' => '2',
         'price' => '$79,500',
         'link' => '#',
@@ -153,7 +153,7 @@ add_action('after_switch_theme', function() {
     $overview_widget_content[$avalon_counter] = array(
         'title' => __('2412 Environ Way 2412', 'wp-avalon'),
         'location' => 'Chapel Hill,  North Carolina',
-        'bads' => '3',
+        'beds' => '3',
         'baths' => '2',
         'price' => '$475.000',
         'link' => '#',
@@ -167,7 +167,7 @@ add_action('after_switch_theme', function() {
     $overview_widget_content[$avalon_counter] = array(
         'title' => __('5500 Fortunes Ridge Drive 78b', 'wp-avalon'),
         'location' => 'Durham,  North Carolina',
-        'bads' => '1',
+        'beds' => '1',
         'baths' => '1',
         'price' => '$122.000',
         'link' => '#',
@@ -181,7 +181,7 @@ add_action('after_switch_theme', function() {
     $overview_widget_content[$avalon_counter] = array(
         'title' => __('424 E Rose Street', 'wp-avalon'),
         'location' => 'Smithfield,  North Carolina',
-        'bads' => '3',
+        'beds' => '3',
         'baths' => '1',
         'price' => '$99.000',
         'link' => '#',
