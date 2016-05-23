@@ -43,18 +43,21 @@ var wp_avalon = {
    * @author vorobjov@UD
    */
   property_row: function property_row() {
-    var widgets = jQuery('body article .wpp_property_overview_shortcode');
-    widgets.each(function(key, value) {
-      var height = 0,
-              columns = jQuery('.wpp_row_view .property_div', jQuery(value));
-      columns.each(function(key1, value1) {
-        var currentHeight = jQuery(value1).outerHeight();
-        if (currentHeight > height) {
-          height = currentHeight;
-        }
+    var widgets = jQuery('body article .wpp_property_overview_shortcode'),
+            width = jQuery(window).width();
+    if (width > 640) {
+      widgets.each(function(key, value) {
+        var height = 0,
+                columns = jQuery('.wpp_row_view .property_div', jQuery(value));
+        columns.each(function(key1, value1) {
+          var currentHeight = jQuery(value1).outerHeight();
+          if (currentHeight > height) {
+            height = currentHeight;
+          }
+        });
+        columns.height(height);
       });
-      columns.height(height);
-    });
+    }
   },
   /**
    * Frontpage headlights equal height
@@ -218,8 +221,8 @@ jQuery(function() {
     jQuery('.navigation-box').toggleClass('active');
     jQuery('body').toggleClass('no-scrolled');
     if (width < 1000) {
-      if(jQuery('.header-bar').hasClass('active')) {
-                jQuery('.header-bar').removeClass('active').hide();
+      if (jQuery('.header-bar').hasClass('active')) {
+        jQuery('.header-bar').removeClass('active').hide();
       }
     }
   });
