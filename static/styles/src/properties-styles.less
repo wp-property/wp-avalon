@@ -32,7 +32,11 @@
         }
         .wpp_sortable_link {
           cursor: pointer;
+          display: inline-block;
           font-size: 100%;
+          font-weight: 600;
+          margin: 0 0 5px;
+          padding: 10px 15px;
         }
       }
     }
@@ -42,8 +46,8 @@
 
       .wpp_pagination_button {
         float: left;
-        padding: 1px 7px;
-        border-radius: 2px;
+        padding: 5px 10px;
+        .border-radius(4px);
         background-color: #5bc0de;
         color: #FFF;
         margin: 0 5px 0 0;
@@ -57,23 +61,23 @@
         float: right;
         height: 10px;
         position: relative;
-        top: 6px;
+        top: 10px;
         width: auto;
 
         .ui-slider-handle {
           .transition(left, 0.15s, ease-in-out, 0s);
-          margin-left: -10px;
+          margin-left: -15px;
           background-color: #FFF;
           border: 1px solid #c6c7ca;
           border-radius: 4px;
           color: #414141;
           font-size: 12px;
           font-weight: 600;
-          height: 22px;
-          line-height: 20px;
-          padding: 0 5px;
+          height: 31px;
+          line-height: 29px;
+          padding: 0 10px;
           position: absolute;
-          top: -7px;
+          top: -11px;
           cursor: pointer;
           width: auto;
 
@@ -107,9 +111,9 @@
       .wpp_overview_left_column {
         width: 110px !important;
         height: 110px !important;
-        
+
         .property_image {
-          
+
           a.thumbnail {
             border: none !important;
           }
