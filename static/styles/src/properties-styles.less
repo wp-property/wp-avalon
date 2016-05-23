@@ -478,6 +478,33 @@
   }
 }/*wpp_feps_user_menu*/
 
+.wpp_feps_login_box {
+  .clearfix;
+  margin-bottom: 30px;
+
+  .line {
+    .clearfix;
+    margin: 0 0 10px;
+    &.login_form_description {
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 0 5px;
+    }
+
+    .submit_button {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+    .login_link {
+
+      .lost_pass_link {
+        .submit-button-style;
+        text-decoration: none;
+      }
+    }
+  }
+}/*wpp_feps_login_box*/
+
 .widget,
 .wpp_widget {
   background-color: #FFF;
@@ -1135,8 +1162,10 @@
       text-align: center;
 
       a {
+        border: medium none;
         display: inline-block;
         margin: 0 auto;
+        padding: 0;
       }
     }
     .wpp_galleria_wrapper {
