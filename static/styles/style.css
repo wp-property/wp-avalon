@@ -3539,6 +3539,7 @@ body main.main-content .container .content article .wpp_feps_form ul.feps_proper
   color: #fff;
 }
 body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-list {
+  margin-bottom: 20px;
   display: table;
   width: 100%;
 }
