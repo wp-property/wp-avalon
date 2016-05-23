@@ -53,12 +53,16 @@ if ($header_image_disable == 1) :
     $exist_images_in_head = get_theme_mod('header_image_show_featured_image_in_head', '1');
     if ($exist_images_in_head == '1') :
       if (is_page() || is_single()) :
-        echo '123';
         $featured_image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
         if (!empty($featured_image)) :
           echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
           echo '<div class="shi__blackout"></div>';
         elseif (!empty($header_image)) :
+          echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
+          echo '<div class="shi__blackout"></div>';
+        endif;
+      elseif (is_home()) :
+        if (!empty($header_image)) :
           echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
           echo '<div class="shi__blackout"></div>';
         endif;
