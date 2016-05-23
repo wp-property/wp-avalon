@@ -2108,7 +2108,7 @@ body main.main-content .container .frontpage-property-description-area .featured
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
   padding: 0 0 1.42em;
-  margin-bottom: 1.42em;
+  margin-bottom: 2em;
 }
 body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
 body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
@@ -2377,7 +2377,7 @@ body main.main-content .container .frontpage-headlights-widget-area .fhwa__conta
   -khtml-border-radius: 4px;
   position: relative;
   padding: 2.86em 1.42em;
-  margin-bottom: 1.42em;
+  margin-bottom: 2em;
   text-align: center;
 }
 body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__box_icon {
@@ -2467,7 +2467,7 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__title {
   margin-bottom: 1em;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property {
-  margin-bottom: 1.42em;
+  margin-bottom: 2em;
 }
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -2652,7 +2652,7 @@ body main.main-content .container .frontpage-property-addons-area .fpaa__title {
   margin-bottom: 1em;
 }
 body main.main-content .container .frontpage-property-addons-area .row.fpaa__container .col-md-4 {
-  padding-bottom: 1.42em;
+  padding-bottom: 2em;
 }
 body main.main-content .container .frontpage-property-addons-area .property_addon_box {
   height: 122px;
