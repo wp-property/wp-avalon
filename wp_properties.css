@@ -1585,6 +1585,7 @@ article.property-page-template .property-page-container .feature_lists:after {
 }
 article.property-page-template .property-page-container .feature_lists > div {
   float: left;
+  text-align: center;
   margin: 0 0 20px;
   padding: 0 20px 0 0;
   width: 50%;
