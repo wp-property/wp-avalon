@@ -19,9 +19,9 @@ add_action('widgets_init', function() {
   foreach ($avalon_sidebars as $avalon_sidebar):
 
     if ($avalon_sidebar == 'sidebar-headlights'):
-      $avalon_sidebar_name = __('Headlights section widgets', 'wp-avalon');
+      $avalon_sidebar_name = __('Focus section area', 'wp-avalon');
     elseif ($avalon_sidebar == 'sidebar-avalon-features'):
-      $avalon_sidebar_name = __('WP Avalon features area', 'wp-avalon');
+      $avalon_sidebar_name = __('About us features', 'wp-avalon');
     elseif ($avalon_sidebar == 'sidebar-property-description'):
       $avalon_sidebar_name = __('WP Property description area', 'wp-avalon');
     elseif ($avalon_sidebar == 'sidebar-avalon-overview') :

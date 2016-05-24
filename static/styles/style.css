@@ -3917,9 +3917,6 @@ body main.main-content .container .content article input[type="submit"]:hover {
   border-color: #0b1a3a;
   color: #fff;
 }
-body main.main-content .container .content article.frontpage-widgets {
-  margin-top: 2.85em;
-}
 body main.main-content .container .content nav.navigation.pagination .screen-reader-text {
   font-size: 20px;
   margin: 0 0 10px;

@@ -851,7 +851,7 @@ function avalon_customize_register($wp_customize) {
   $wp_customize->add_panel('frontpage_features_area_panel', array(
       'priority' => 34,
       'capability' => 'edit_theme_options',
-      'title' => __('Avalon features area', 'wp-avalon')
+      'title' => __('About us section', 'wp-avalon')
   ));
 
   // Fronpage top widget area settings
@@ -880,7 +880,7 @@ function avalon_customize_register($wp_customize) {
   $wp_customize->add_panel('headlights_widget_area_panel', array(
       'priority' => 35,
       'capability' => 'edit_theme_options',
-      'title' => __('Headlights widget area settings', 'wp-avalon')
+      'title' => __('Focus section settings', 'wp-avalon')
   ));
 
 //    Headlight Settings
@@ -895,14 +895,14 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control('headlights_wa_disable_setting', array(
-      'label' => __('Disable widget area section', 'wp-avalon'),
+      'label' => __('Disable widget area', 'wp-avalon'),
       'section' => 'headlights_wa_settings_section',
       'type' => 'checkbox',
       'priority' => 1
   ));
 // section title
   $wp_customize->add_setting('headlights_wa_title_setting', array(
-      'default' => __('Headlight widget area title', 'wp-avalon'),
+      'default' => __('Focus widget area title 1', 'wp-avalon'),
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));

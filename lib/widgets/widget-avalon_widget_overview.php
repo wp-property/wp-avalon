@@ -98,7 +98,7 @@ class avalon_widget_overview extends WP_Widget {
       ?>" class="widefat">
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('beds'); ?>"><?php _e('Bads', 'wp-avalon'); ?></label><br/>
+      <label for="<?php echo $this->get_field_id('beds'); ?>"><?php _e('Beds', 'wp-avalon'); ?></label><br/>
       <input type="text" name="<?php echo $this->get_field_name('beds'); ?>" id="<?php echo $this->get_field_id('beds'); ?>" value="<?php
       if (!empty($instance['beds'])): echo $instance['beds'];
       endif;
