@@ -18,7 +18,7 @@ if (have_properties()) {
 
           <div class="property_div_box">
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php property_overview_image(array('image_type' => 'medium')); ?>
+              <?php property_overview_image(array('image_type' => 'small')); ?>
             </div>
 
             <div class="<?php wpp_css('property_overview::right_column', "wpp_overview_right_column"); ?>">
