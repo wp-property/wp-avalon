@@ -383,11 +383,12 @@ body header .container {
 @media (max-width: 1000px) {
   body header .container .logotype {
     float: left;
+    height: 48px;
   }
 }
 body header .container .logotype a {
   text-decoration: none;
-  line-height: 50px;
+  line-height: 48px;
 }
 body header .container .logotype a img.logo-icon {
   margin-top: -5px;
@@ -526,6 +527,11 @@ body header .container .navigation-box .navigation-wrapper .site-header-menu .ma
   font-size: 0.9em;
   padding: 0 0.7em;
   text-decoration: none;
+}
+@media (max-width: 1200px) {
+  body header .container .navigation-box .navigation-wrapper .site-header-menu .main-navigation ul li a {
+    padding: 0 0.5em;
+  }
 }
 @media (max-width: 1000px) {
   body header .container .navigation-box .navigation-wrapper .site-header-menu .main-navigation ul li a {
@@ -810,10 +816,13 @@ body main.main-content .secondary-header {
   margin-bottom: 1.42em;
   position: relative;
   background-color: #2b5188;
-  height: 400px;
+  height: 300px;
 }
 body main.main-content .secondary-header.sh__frontpage {
   height: 600px;
+}
+body main.main-content .secondary-header.sh__page {
+  height: 300px;
 }
 body main.main-content .secondary-header .secondary-header-image {
   position: absolute;
@@ -1092,6 +1101,7 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
   color: #fff;
 }
 body main.main-content .container {
+  padding-top: 3em;
   /*frontpage widgetaria tabs*/
   /*frontpage widgetaria tabs*/
   /*frontpage-avalon-features-area && frontpage-property-description-area*/
@@ -2750,9 +2760,6 @@ body main.main-content .container .content img {
   max-width: 100%;
   height: auto;
 }
-body main.main-content .container .content .sticky {
-  display: none;
-}
 body main.main-content .container .content .gallery-caption {
   line-height: 1;
 }
@@ -2780,6 +2787,13 @@ body main.main-content .container .content h5,
 body main.main-content .container .content h6 {
   font-family: 'Ubuntu', sans-serif;
 }
+body main.main-content .container .content .page-title h1,
+body main.main-content .container .content h1.entry-title,
+body main.main-content .container .content h1.page-title {
+  font-size: 2.14em;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
 body main.main-content .container .content article {
   /* Single, Post, Archive page container
           --------------------------------------------------------- */
@@ -2797,9 +2811,9 @@ body main.main-content .container .content article {
 body main.main-content .container .content article .page-title h1,
 body main.main-content .container .content article h1.entry-title,
 body main.main-content .container .content article h1.page-title {
-  margin-top: 0;
   font-size: 2.14em;
   font-weight: 600;
+  margin: 0 0 30px;
 }
 body main.main-content .container .content article h2 {
   font-size: 2em;

@@ -14,7 +14,13 @@ get_header();
 
   <div class="content col-md-8">
 
-    <?php get_template_part('template-parts/content/content', 'property-overview-page'); ?>
+    <?php
+    if ($posts_header_image_section_enable != 1) :
+      echo the_title('<h1 class="page-title">', '</h1>');
+    endif;
+
+    get_template_part('template-parts/content/content', 'property-overview-page');
+    ?>
 
   </div>
 

@@ -17,8 +17,16 @@ get_header();
     <div class="content col-md-8">
     <?php else : ?>
       <div class="content col-md-12">
-      <?php endif; ?>
       <?php
+      endif;
+
+      if (get_theme_mod('header_image_post_disable', '1') != 1) :
+        echo '<h1 class="page-title">';
+        single_post_title();
+        echo '</h1>';
+      endif;
+      
+      
       if (have_posts()) :
 
         while (have_posts()) : the_post();
@@ -35,7 +43,7 @@ get_header();
       else :
 
         get_template_part('template-parts/content/content', 'none');
-        
+
       endif;
       ?>
     </div>

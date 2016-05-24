@@ -377,7 +377,7 @@ function avalon_customize_register($wp_customize) {
       ),
       'priority' => 3
   ));
-  
+
   // Header image section settings
   $wp_customize->add_section('header_image_section_settings', array(
       'title' => __('Header image section settings', 'wp-avalon'),
@@ -390,10 +390,27 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control('header_image_disable', array(
-      'label' => __('Show "Header Image" section', 'wp-avalon'),
+      'label' => __('Show "Header Image" section on front page', 'wp-avalon'),
       'section' => 'header_image_section_settings',
       'type' => 'checkbox',
       'priority' => 1
+  ));
+  // Front page header image height
+  $wp_customize->add_setting('header_image_frontpage_height', array(
+      'default' => '600',
+      'capability' => 'edit_theme_options',
+      'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control('header_image_frontpage_height', array(
+      'label' => __('Front page header image height', 'wp-avalon'),
+      'section' => 'header_image_section_settings',
+      'type' => 'number',
+      'input_attrs' => array(
+          'min' => 0,
+          'max' => 1000,
+          'step' => 1,
+      ),
+      'priority' => 2
   ));
   // Show fetured image in header on page & post page
   $wp_customize->add_setting('header_image_post_disable', array(
@@ -404,18 +421,34 @@ function avalon_customize_register($wp_customize) {
       'label' => __('Show "Header image" section on single and post page', 'wp-avalon'),
       'section' => 'header_image_section_settings',
       'type' => 'checkbox',
-      'priority' => 2
+      'priority' => 3
   ));
   // Show fetured image in header instead header image 
   $wp_customize->add_setting('header_image_show_featured_image_in_head', array(
       'default' => '1',
   ));
   $wp_customize->add_control('header_image_show_featured_image_in_head', array(
-      'label' => __('Show fetured image in header instead of header image', 'wp-avalon'),
-      'description' => __('on single and post page', 'wp-avalon'),
+      'label' => __('Show fetured image in header instead of header image (on single and post page)', 'wp-avalon'),
       'section' => 'header_image_section_settings',
       'type' => 'checkbox',
-      'priority' => 3
+      'priority' => 4
+  ));
+  // Single page header image height
+  $wp_customize->add_setting('header_image_single_height', array(
+      'default' => '300',
+      'capability' => 'edit_theme_options',
+      'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control('header_image_single_height', array(
+      'label' => __('Single and post page header image height', 'wp-avalon'),
+      'section' => 'header_image_section_settings',
+      'type' => 'number',
+      'input_attrs' => array(
+          'min' => 0,
+          'max' => 1000,
+          'step' => 1,
+      ),
+      'priority' => 5
   ));
 
 //    Wellcome section
@@ -1241,6 +1274,14 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
     }
 
+    .widget.widget_featuredpropertieswidget .view-all .btn,
+    .wpp_widget.widget_featuredpropertieswidget .view-all .btn,
+    .widget.widget_latestpropertieswidget .view-all .btn,
+    .wpp_widget.widget_latestpropertieswidget .view-all .btn,
+    .widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info,
+    .wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info,
+    .widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info,
+    .wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info,
     body .wpp_feps_login_box .line .login_link .lost_pass_link,
     body .btn-info,
     body a.btn-info,
@@ -1279,6 +1320,14 @@ function avalon_customize_css() {
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
     }
+    .widget.widget_featuredpropertieswidget .view-all .btn:hover,
+    .wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover,
+    .widget.widget_latestpropertieswidget .view-all .btn:hover,
+    .wpp_widget.widget_latestpropertieswidget .view-all .btn:hover,
+    .widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+    .wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+    .widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover,
+    .wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover,
     body .wpp_feps_login_box .line .login_link .lost_pass_link:hover,
     body .btn-info:hover,
     body a.btn-info:hover,

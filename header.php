@@ -21,20 +21,20 @@
     <header class="header">
       <div class="container">
         <div class="row">
-          <div class="logotype col-md-3">
+          <div class="logotype col-md-2">
             <?php get_template_part('template-parts/header/header', 'logo'); ?>
           </div>
-          <div class="navigation-box col-md-9">
+          <div class="navigation-box col-md-10">
             <span class="nav-button">
               <span></span>
               <span></span>
               <span></span>
             </span>
             <div class="navigation-wrapper row">
-              <div class="site-header-menu col-md-9">
+              <div class="site-header-menu col-md-10">
                 <?php get_template_part('template-parts/navigation/navigation-default', 'wp-avalon'); ?>
               </div>
-              <div class="nav-additional col-md-3">
+              <div class="nav-additional col-md-2">
                 <?php get_template_part('template-parts/navigation/navigation-additional', 'wp-avalon'); ?>
               </div>
             </div>

@@ -955,12 +955,12 @@
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button,
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button {
   float: left;
-  padding: 1px 7px;
+  padding: 5px 10px;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -khtml-border-radius: 2px;
-  background-color: #5bc0de;
+  background-color: #19294c;
   color: #FFF;
   margin: 0 5px 0 0;
   cursor: pointer;
@@ -979,7 +979,7 @@
   float: right;
   height: 10px;
   position: relative;
-  top: 6px;
+  top: 10px;
   width: auto;
 }
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_slider .ui-slider-handle,
@@ -988,7 +988,7 @@
   -moz-transition: left 0.15s ease-in-out 0s;
   -o-transition: left 0.15s ease-in-out 0s;
   transition: left 0.15s ease-in-out 0s;
-  margin-left: -10px;
+  margin-left: -15px;
   background-color: #FFF;
   border: 1px solid #c6c7ca;
   border-radius: 4px;
@@ -998,11 +998,11 @@
   color: #414141;
   font-size: 12px;
   font-weight: 600;
-  height: 22px;
-  line-height: 20px;
-  padding: 0 5px;
+  height: 31px;
+  line-height: 29px;
+  padding: 0 10px;
   position: absolute;
-  top: -7px;
+  top: -12px;
   cursor: pointer;
 }
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper,
@@ -1034,13 +1034,14 @@
 }
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a {
-  background-color: #5bc0de;
+  background-color: #19294c;
   border: medium none;
   color: #fff;
   display: block;
   font-size: 14px;
-  padding: 1px 7px;
+  padding: 5px 10px;
   text-decoration: none;
+  margin-bottom: 5px;
 }
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li.current-page a,
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li.current-page a {
@@ -1054,13 +1055,14 @@
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .next-page-btn a,
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .last-page-btn a,
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .last-page-btn a {
-  background-color: #5bc0de;
+  background-color: #19294c;
   border: medium none;
   color: #fff;
   display: block;
   font-size: 14px;
-  padding: 1px 7px;
+  padding: 5px 10px;
   text-decoration: none;
+  margin-bottom: 5px;
 }
 .widget.widget_wpp_property_overview .wpp_property_view_result .all-properties,
 .wpp_widget.widget_wpp_property_overview .wpp_property_view_result .all-properties {
@@ -1088,17 +1090,6 @@
 .widget.wpp_property_attributes .wpp_search_elements li,
 .wpp_widget.wpp_property_attributes .wpp_search_elements li {
   margin-bottom: 15px;
-}
-.widget.wpp_property_attributes .wpp_search_elements li.submit .submit,
-.wpp_widget.wpp_property_attributes .wpp_search_elements li.submit .submit {
-  background-color: #337ab7;
-  border: 1px solid #2e6da4;
-  color: #FFF;
-}
-.widget.wpp_property_attributes .wpp_search_elements li.submit .submit:hover,
-.wpp_widget.wpp_property_attributes .wpp_search_elements li.submit .submit:hover {
-  background-color: #286090;
-  border-color: #204d74;
 }
 .widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
 .wpp_widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select {
@@ -1291,31 +1282,31 @@
 .wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info,
 .widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info,
 .wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #19294c;
+  border-color: #0b1a3a;
   color: #fff;
 }
 .widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
 .wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover,
 .widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover,
 .wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover {
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #0b1a3a;
+  border-color: #0b1a3a;
 }
 .widget.widget_featuredpropertieswidget .view-all .btn,
 .wpp_widget.widget_featuredpropertieswidget .view-all .btn,
 .widget.widget_latestpropertieswidget .view-all .btn,
 .wpp_widget.widget_latestpropertieswidget .view-all .btn {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #19294c;
+  border-color: #0b1a3a;
   color: #fff;
 }
 .widget.widget_featuredpropertieswidget .view-all .btn:hover,
 .wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover,
 .widget.widget_latestpropertieswidget .view-all .btn:hover,
 .wpp_widget.widget_latestpropertieswidget .view-all .btn:hover {
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #0b1a3a;
+  border-color: #0b1a3a;
 }
 .widget .wpp_agents_content_agent_card,
 .wpp_widget .wpp_agents_content_agent_card {

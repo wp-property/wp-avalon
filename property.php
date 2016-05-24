@@ -17,6 +17,10 @@ get_header();
       <div class="content col-md-12">
       <?php endif; ?>
       <?php
+      if (get_theme_mod('header_image_post_disable', '1') != 1) :
+        echo the_title('<h1 class="page-title">', '</h1>');
+      endif;
+
       if (have_posts()) :
 
         while (have_posts()) : the_post();

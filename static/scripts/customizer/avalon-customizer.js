@@ -169,28 +169,48 @@
   wp.customize('header_image_disable', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.secondary-header').addClass('hidden_block');
+        $('.secondary-header.sh__frontpage').addClass('hidden_block');
       } else {
-        $('.secondary-header').removeClass('hidden_block');
+        $('.secondary-header.sh__frontpage').removeClass('hidden_block');
+      }
+    });
+  });
+  wp.customize('header_image_post_disable', function(value) {
+    value.bind(function(newval) {
+      if (newval != '1') {
+        $('.secondary-header.sh__page').addClass('hidden_block');
+        $('#customize-controls #customize-control-header_image_show_featured_image_in_head').addClass('hidden_block');
+        console.log('disable');
+      } else {
+        $('.secondary-header.sh__page').removeClass('hidden_block');
+        $('#customize-controls #customize-control-header_image_show_featured_image_in_head').removeClass('hidden_block');
+        console.log('enable');
       }
     });
   });
   wp.customize('header_image', function(value) {
     value.bind(function(newval) {
-      console.log(newval);
       $('.secondary-header .secondary-header-image').css('background-image', 'url(' + newval + ')');
     });
   });
   wp.customize('header_image__blackout_color', function(value) {
     value.bind(function(newval) {
-      console.log(newval);
       $('.secondary-header .shi__blackout').css('background-color', newval);
     });
   });
   wp.customize('header_image__opacity_setting', function(value) {
     value.bind(function(newval) {
-      console.log(newval);
       $('.secondary-header .shi__blackout').css('opacity', newval);
+    });
+  });
+  wp.customize('header_image_frontpage_height', function(value) {
+    value.bind(function(newval) {
+      $('.secondary-header.sh__frontpage').css('height', newval + 'px');
+    });
+  });
+  wp.customize('header_image_single_height', function(value) {
+    value.bind(function(newval) {
+      $('.secondary-header.sh__page').css('height', newval + 'px');
     });
   });
 

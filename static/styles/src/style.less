@@ -221,10 +221,11 @@ body {
 
         @media (max-width: 1000px) {
           float: left;
+          height: 48px;
         }
         a {
           text-decoration: none;
-          line-height: 50px;
+          line-height: 48px;
 
           img.logo-icon {
             margin-top: -5px;
@@ -351,6 +352,9 @@ body {
                     font-size: 0.9em;
                     padding: 0 0.7em;
                     text-decoration: none;
+                    @media (max-width: 1200px) {
+                      padding: 0 0.5em;
+                    }
                     @media (max-width: 1000px) {
                       .transition(all, 0.15s, linear, 0s);
                       font-size: 1.2em;
@@ -617,9 +621,12 @@ body {
       margin-bottom: 1.42em;
       position: relative;
       background-color: #2b5188;
-      height: 400px;
+      height: 300px;
       &.sh__frontpage {
         height: 600px;
+      }
+      &.sh__page {
+        height: 300px;
       }
 
       .secondary-header-image {
@@ -821,6 +828,7 @@ body {
     /* Container
     --------------------------------------------------------------------- */
     .container {
+      padding-top: 3em;
 
       @media (max-width: 1000px) {
         .content,
@@ -2075,7 +2083,7 @@ body {
         }
 
         .sticky {
-          display: none;
+          
         }
 
         .gallery-caption  {
@@ -2105,15 +2113,22 @@ body {
         h1, h2, h3, h4, h5, h6 {
           .ubuntu-font;
         }
+        .page-title h1,
+        h1.entry-title,
+        h1.page-title {
+          font-size: 2.14em;
+          font-weight: 600;
+          margin: 0 0 30px;
+        }
 
         article {
 
           .page-title h1,
           h1.entry-title,
           h1.page-title {
-            margin-top: 0;
             font-size: 2.14em;
             font-weight: 600;
+            margin: 0 0 30px;
           }
           h2 {
             font-size: 2em;
