@@ -54,7 +54,7 @@ else : // if is front page
     if ($featuret_image_intead_header_image == 1) :
       if (is_page() || is_single()) :
         if (!empty(wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())))) :
-          echo '<div class="secondary-header-image" style="background-image: url(\'' . $featured_image . '\'); background-size: cover; background-position: center center;"></div>';
+          echo '<div class="secondary-header-image" style="background-image: url(\'' . $featuret_image_intead_header_image . '\'); background-size: cover; background-position: center center;"></div>';
           echo '<div class="shi__blackout"></div>';
         elseif (!empty($header_image)) :
           echo '<div class="secondary-header-image" style="background-image: url(\'' . $header_image . '\'); background-size: cover; background-position: center center;"></div>';
