@@ -249,7 +249,7 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
           </div>
           <div class="il__title">
             <?php if (!empty($property['price'])) : ?><label><?php echo $property['price']; ?></label><?php endif; ?>
-            <?php if (!empty($property['post_title'])) : ?><span><?php echo $property['post_title']; ?></span><?php endif; ?>
+            <?php if (!empty($property['post_title'])) : ?><div class="property-title"><a href="<?php echo get_permalink( $property[ 'ID' ] ); ?>"><?php echo $property['post_title']; ?></a></div><?php endif; ?>
             <?php if (!empty($property['display_address']) && !empty($property['latitude']) && !empty($property['longitude'])) : ?><a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php echo $property['display_address']; ?></a><?php endif; ?>
           </div>
         </div>

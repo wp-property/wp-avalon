@@ -667,6 +667,7 @@
         .attribute {
           font-weight: 600;
           margin-right: 5px;
+          word-wrap: break-word;
         }
       }
     }
@@ -1364,15 +1365,19 @@ article.property-page-template {
                   top: -15px;
                   right: 10px;
                 }
-                span {
-                  display: block;
-                  font-size: 16px;
-                  font-weight: 500;
-                  line-height: 1.2;
+                .property-title {
                   padding: 0 0 10px;
                   @media (max-width: 640px) {
-                    font-size: 14px;
                     padding: 0 0 5px;
+                  }
+                  a {
+                    font-size: 16px;
+                    color: #FFF !important;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    @media (max-width: 640px) {
+                      font-size: 14px;
+                    }
                   }
                 }
                 a {
@@ -1544,6 +1549,7 @@ article.property-page-template {
                 float: left;
                 width: 170px;
                 font-weight: 600;
+                word-wrap: break-word;
               }
               .value {
 
