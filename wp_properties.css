@@ -1584,7 +1584,10 @@ article.property-page-template .property-page-container .feature_lists:after {
   clear: both;
 }
 article.property-page-template .property-page-container .feature_lists > div {
+  float: left;
   margin: 0 0 20px;
+  padding: 0 20px 0 0;
+  width: 50%;
 }
 article.property-page-template .property-page-container .feature_lists > div h2 {
   border-bottom: 3px solid #ddd;
