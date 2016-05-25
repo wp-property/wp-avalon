@@ -17,8 +17,16 @@ if (have_properties()) {
         <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
 
           <div class="property_div_box">
+            <?php if ($property['featured'] == 1) : ?>
+              <div class="property_featured_label">
+                <span><?php _e('Featured', 'wp-avalon'); ?></span>
+              </div>
+            <?php endif; ?>
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php property_overview_image(array('image_type' => 'thumbnail')); ?>
+              <?php avalon_property_overview_image(); ?>
+              <?php if (!empty($property['property_type_label'])) : ?>
+                <div class="property_type_label"><?php echo $property['property_type_label']; ?></div>
+              <?php endif; ?>
             </div>
 
             <div class="<?php wpp_css('property_overview::right_column', "wpp_overview_right_column"); ?>">
@@ -68,7 +76,7 @@ if (have_properties()) {
                 <?php endif; ?>
               </ul>
 
-              <?php if (!empty($property['price'])): ?>
+              <?php if (!empty($property['price'])) : ?>
                 <div class="property_bottom">
                   <div class="pb__left">
                     <ul>
@@ -86,14 +94,14 @@ if (have_properties()) {
                 </div>
               <?php endif; ?>
 
-            </div><?php // .wpp_right_column      ?>
-          </div><?php // .property_div_box      ?>
+            </div><?php // .wpp_right_column        ?>
+          </div><?php // .property_div_box        ?>
 
-        </div><?php // .property_div      ?>
+        </div><?php // .property_div        ?>
 
       <?php } /** end of the propertyloop. */ ?>
-    </div><?php // .all-properties     ?>
-  </div><?php // .wpp_grid_view      ?>
+    </div><?php // .all-properties       ?>
+  </div><?php // .wpp_grid_view        ?>
 <?php } else { ?>
   <div class="wpp_nothing_found">
     <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', 'wp-avalon'), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>

@@ -539,7 +539,7 @@ function avalon_customize_register($wp_customize) {
   ));
 //    Logo icon
   $wp_customize->add_setting('header_logo_icon_settings', array(
-      'default' => get_template_directory_uri() . '/static/images/logo-icon.png',
+      'default' => get_template_directory_uri() . '/static/images/logo-icon.svg',
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));
@@ -1068,7 +1068,7 @@ function avalon_customize_register($wp_customize) {
   ));
 //    Footer Logo icon
   $wp_customize->add_setting('footer_logo_icon_settings', array(
-      'default' => get_template_directory_uri() . '/static/images/footer-logo-icon.png',
+      'default' => get_template_directory_uri() . '/static/images/footer-logo-icon.svg',
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));

@@ -82,7 +82,7 @@
 
       <?php if (function_exists('ud_get_wpp_resp_slideshow')) : ?>
         <div class="<?php wpp_css('property::property_responsive_slideshow', "property_responsive_slideshow_box"); ?>">
-          <?php echo do_shortcode('[property_responsive_slideshow]'); ?>
+          <?php echo do_shortcode('[property_responsive_slideshow slider_type=carousel]'); ?>
         </div>
       <?php elseif (!empty(get_the_post_thumbnail(get_the_ID()))) : ?>
         <div class="<?php wpp_css('property::featured_image', "wpp_featured_image"); ?>">
@@ -112,7 +112,9 @@
           ?>
           <div class="property_meta_box">
             <h2><?php echo $meta_title; ?></h2>
-            <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+            <div class="property_meta_box_content">
+              <p><?php echo do_shortcode(html_entity_decode($post->$meta_slug)); ?></p>
+            </div>
           </div>
         <?php endforeach; ?>
       <?php endif; ?>

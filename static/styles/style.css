@@ -404,7 +404,7 @@ body header .container .logotype a span {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   -moz-text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   -webkit-text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1em;
   color: #FFF;
   text-transform: uppercase;
@@ -570,6 +570,8 @@ body header .container .navigation-box .navigation-wrapper .site-header-menu .ma
   position: absolute;
   top: 2px;
   transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   width: 10px;
 }
 @media (max-width: 1000px) {
@@ -4122,7 +4124,7 @@ body .footer .footer-area .logotype a img.full_image_logo {
   line-height: 100%;
 }
 body .footer .footer-area .logotype a span {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.14em;
   color: #a7a7a7;
   text-transform: uppercase;
