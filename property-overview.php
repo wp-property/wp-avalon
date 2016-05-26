@@ -7,7 +7,8 @@
  * @since Avalon 1.0
  */
 if (have_properties()) {
-  $thumbnail_dimentions = WPP_F::get_image_dimensions($wpp_query['thumbnail_size']);
+  global $property;
+//  $thumbnail_dimentions = WPP_F::get_image_dimensions($wpp_query['thumbnail_size']);
   ?>
   <div class="<?php wpp_css('property_overview::grid_view', "wpp_grid_view wpp_property_view_result"); ?>">
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
