@@ -82,7 +82,7 @@
 
       <?php if (function_exists('ud_get_wpp_resp_slideshow')) : ?>
         <div class="<?php wpp_css('property::property_responsive_slideshow', "property_responsive_slideshow_box"); ?>">
-          <?php echo do_shortcode('[property_responsive_slideshow slider_type=carousel]'); ?>
+          <?php echo do_shortcode('[property_responsive_slideshow]'); ?>
         </div>
       <?php elseif (!empty(get_the_post_thumbnail(get_the_ID()))) : ?>
         <div class="<?php wpp_css('property::featured_image', "wpp_featured_image"); ?>">
