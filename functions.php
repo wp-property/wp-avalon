@@ -321,11 +321,12 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
           foreach ($property_stats as $attribute_label => $value) {
 
             $attribute_slug = $labels_to_keys[$attribute_label];
+            $attribute_data = UsabilityDynamics\WPP\Attributes::get_attribute_data($attribute_slug);
 
             if (empty($value)) {
               continue;
             }
-            
+
             if ((!empty($attribute_data['data_input_type']) && $attribute_data['data_input_type'] == 'checkbox' && ( $value == 'true' || $value == 1 ))) {
               if ($wp_properties['configuration']['google_maps']['show_true_as_image'] == 'true') {
                 $value = '<div class="true-checkbox-image"></div>';
