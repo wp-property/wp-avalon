@@ -222,6 +222,24 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
               'scope' => 'google_map_infobox'
   ));
 
+  if (empty($infobox_attributes)) {
+    $infobox_attributes = array(
+        'price',
+        'bedrooms',
+        'bathrooms');
+  }
+
+  $property_stats = array();
+  foreach ($infobox_attributes as $attribute) {
+    if (!empty($wp_properties['property_stats'][$attribute])) {
+      $property_stats[$attribute] = $wp_properties['property_stats'][$attribute];
+    }
+  }
+
+  $property_stats = WPP_F::get_stat_values_and_labels($property, array(
+              'property_stats' => $property_stats
+  ));
+
   //** Check if we have children */
   if (!empty($property['children']) && (!isset($wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties']) || $wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties'] != 'true' )) {
     foreach ($property['children'] as $child_property) {
@@ -280,35 +298,39 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
         endif;
         ?>
 
-        <?php if (!empty($property['bedrooms']) || !empty($property['bathrooms']) || !empty($property['bathrooms']) || !empty($property['year'])) : ?>
-          <div class="ir__title"><?php _e('Overview', 'wp-avalon'); ?></div>
-        <?php endif; ?>
-
-        <ul class="ir__list">
-          <?php if (!empty($property['bedrooms'])) : ?>
-            <li>
-              <label><?php _e('Bedrooms', 'wp-avalon'); ?></label>
-              <span><?php echo $property['bedrooms']; ?></span>
-            </li>
-            <?php
-          endif;
-          if (!empty($property['bathrooms'])) :
-            ?>
-            <li>
-              <label><?php _e('Bathrooms', 'wp-avalon'); ?></label>
-              <span><?php echo $property['bathrooms']; ?></span>
-            </li>
-            <?php
-          endif;
-          if (!empty($property['year'])) :
-            ?>
-            <li>
-              <label><?php _e('Year of building', 'wp-avalon'); ?></label>
-              <span><?php echo $property['year']; ?></span>
-            </li>
-          <?php endif; ?>
-        </ul>
         <?php
+        $attributes = array();
+
+        $labels_to_keys = array_flip($wp_properties['property_stats']);
+
+        if (is_array($property_stats)) {
+          foreach ($property_stats as $attribute_label => $value) {
+
+            $attribute_slug = $labels_to_keys[$attribute_label];
+
+            if (empty($value)) {
+              continue;
+            }
+            // to get attribute label and value translation @auther fadi
+            $attribute_label = apply_filters('wpp::attribute::label', $attribute_label, $attribute_slug);
+            if ($attribute_slug == 'property_type') {
+              $value = apply_filters("wpp_stat_filter_property_type_label", $value);
+            } elseif (!empty($wp_properties["predefined_values"][$attribute_slug])) {
+              $value = apply_filters("wpp::attribute::value", $value, $attribute_slug);
+            }
+
+            $attributes[] = '<li class="' . $attribute_slug . '">';
+            $attributes[] = '<label>' . $attribute_label . '</label>';
+            $attributes[] = '<span>' . $value . '</span>';
+            $attributes[] = '</li>';
+          }
+        }
+        
+        if( count( $attributes ) > 0 ) {
+          echo "<div class='ir__title'>" . __('Overview', 'wp-avalon') . "</div>";
+          echo '<ul class="ir__list">' . implode( '', $attributes ) . '</ul>';
+        }
+
         if (!empty($html_child_properties)) {
           echo '<div class="ir__title">' . __('Child Properties', 'wp-avalon') . '</div>';
           echo '<ul class="ir__child_properties_list">';

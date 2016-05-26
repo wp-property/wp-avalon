@@ -1969,6 +1969,12 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
   content: "";
   clear: both;
 }
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li.price,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li.price,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li.price,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li.price {
+  display: none !important;
+}
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li label,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li label,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li label,

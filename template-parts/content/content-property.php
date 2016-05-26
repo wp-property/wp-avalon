@@ -37,19 +37,14 @@
     function initialize_this_map() {
 <?php if ($coords = WPP_F::get_coordinates()): ?>
         var styles = [{"featureType": "landscape", "stylers": [{"hue": "#FFBB00"}, {"saturation": 43.400000000000006}, {"lightness": 37.599999999999994}, {"gamma": 1}]}, {"featureType": "road.highway", "stylers": [{"hue": "#FFC200"}, {"saturation": -61.8}, {"lightness": 45.599999999999994}, {"gamma": 1}]}, {"featureType": "road.arterial", "stylers": [{"hue": "#FF0300"}, {"saturation": -100}, {"lightness": 51.19999999999999}, {"gamma": 1}]}, {"featureType": "road.local", "stylers": [{"hue": "#FF0300"}, {"saturation": -100}, {"lightness": 52}, {"gamma": 1}]}, {"featureType": "water", "stylers": [{"hue": "#0078FF"}, {"saturation": -13.200000000000003}, {"lightness": 2.4000000000000057}, {"gamma": 1}]}, {"featureType": "poi", "stylers": [{"hue": "#00FF6A"}, {"saturation": -1.0989010989011234}, {"lightness": 11.200000000000017}, {"gamma": 1}]}];
-        var styledMap = new google.maps.StyledMapType(styles, {name: "WP Avalon map styles"});
         var myOptions = {
           zoom: <?php echo (!empty($wp_properties['configuration']['gm_zoom_level']) ? $wp_properties['configuration']['gm_zoom_level'] : 13); ?>,
           center: new google.maps.LatLng(<?php echo $coords['latitude']; ?>,<?php echo $coords['longitude']; ?>),
-          mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-          }
         };
 
         map = new google.maps.Map(document.getElementById("property_map"), myOptions);
 
-        map.mapTypes.set('map_style', styledMap);
-        map.setMapTypeId('map_style');
+        map.setOptions({styles: styles});
 
         infowindow = new google.maps.InfoWindow({
           content: '<?php echo WPP_F::google_maps_infobox($post); ?>',
