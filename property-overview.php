@@ -10,7 +10,7 @@ if (have_properties()) {
   ?>
   <div class="<?php wpp_css('property_overview::grid_view', "wpp_grid_view wpp_property_view_result"); ?>">
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
-      <?php foreach (returned_properties('load_gallery=true') as $property) { ?>
+      <?php foreach (returned_properties('load_gallery=false') as $property) { ?>
 
         <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
 
@@ -28,7 +28,7 @@ if (have_properties()) {
               </div>
             <?php endif; ?>
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php avalon_property_overview_image(array('image_type' => $wpp_query['thumbnail_size'])); ?>
+              <?php property_overview_image(array('image_type' => $wpp_query['thumbnail_size'])); ?>
               <?php if (!empty($property['property_type_label'])) : ?>
                 <div class="property_type_label"><?php echo $property['property_type_label']; ?></div>
               <?php endif; ?>
