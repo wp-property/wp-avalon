@@ -17,7 +17,14 @@ if (have_properties()) {
         <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
 
           <div class="property_div_box">
-            <?php if (isset($property['featured']) && $property['featured'] == 1) : ?>
+            <?php
+            if (isset($property['featured'])) :
+              $featured = $property['featured'];
+            else :
+              $featured = 0;
+            endif;
+            if ($featured == 1) :
+              ?>
               <div class="property_featured_label">
                 <span><?php _e('Featured', 'wp-avalon'); ?></span>
               </div>
@@ -94,14 +101,14 @@ if (have_properties()) {
                 </div>
               <?php endif; ?>
 
-            </div><?php // .wpp_right_column        ?>
-          </div><?php // .property_div_box        ?>
+            </div><?php // .wpp_right_column           ?>
+          </div><?php // .property_div_box           ?>
 
-        </div><?php // .property_div        ?>
+        </div><?php // .property_div           ?>
 
       <?php } /** end of the propertyloop. */ ?>
-    </div><?php // .all-properties       ?>
-  </div><?php // .wpp_grid_view        ?>
+    </div><?php // .all-properties          ?>
+  </div><?php // .wpp_grid_view          ?>
 <?php } else { ?>
   <div class="wpp_nothing_found">
     <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', 'wp-avalon'), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>
