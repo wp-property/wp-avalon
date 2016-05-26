@@ -325,6 +325,17 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
             if (empty($value)) {
               continue;
             }
+            
+            if ((!empty($attribute_data['data_input_type']) && $attribute_data['data_input_type'] == 'checkbox' && ( $value == 'true' || $value == 1 ))) {
+              if ($wp_properties['configuration']['google_maps']['show_true_as_image'] == 'true') {
+                $value = '<div class="true-checkbox-image"></div>';
+              } else {
+                $value = __('Yes', ud_get_wp_property()->domain);
+              }
+            } elseif ($value == 'false') {
+              continue;
+            }
+
             // to get attribute label and value translation @auther fadi
             $attribute_label = apply_filters('wpp::attribute::label', $attribute_label, $attribute_slug);
             if ($attribute_slug == 'property_type') {
@@ -332,7 +343,6 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
             } elseif (!empty($wp_properties["predefined_values"][$attribute_slug])) {
               $value = apply_filters("wpp::attribute::value", $value, $attribute_slug);
             }
-
             $attributes[] = '<li class="' . $attribute_slug . '">';
             $attributes[] = '<label>' . $attribute_label . '</label>';
             $attributes[] = '<span>' . $value . '</span>';
@@ -353,10 +363,13 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
           }
           echo '</ul>';
         }
-        ?>
-        <div class="ir__directions">
-          <a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php _e('Get directions', 'wp-avalon'); ?></a>
-        </div>
+
+        if (!empty($imageHTML) && $infobox_settings['show_direction_link'] == 'true' && !empty($property['latitude']) && !empty($property['longitude'])) {
+          ?>
+          <div class="ir__directions">
+            <a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php _e('Get directions', 'wp-avalon'); ?></a>
+          </div>
+        <?php } ?>
       </div>
     </div>
   </div>
