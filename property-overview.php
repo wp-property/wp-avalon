@@ -28,10 +28,14 @@ if (have_properties()) {
               </div>
             <?php endif; ?>
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php property_overview_image(array('image_type' => 'medium')); ?>
+              <?php
+              if (empty(property_overview_image())) :
+                echo '123';
+              endif;
+              ?>
               <?php if (!empty($property['property_type_label'])) : ?>
                 <div class="property_type_label"><?php echo $property['property_type_label']; ?></div>
-              <?php endif; ?>
+    <?php endif; ?>
             </div>
 
             <div class="<?php wpp_css('property_overview::right_column', "wpp_overview_right_column"); ?>">
@@ -41,16 +45,16 @@ if (have_properties()) {
                   <a <?php echo $in_new_window; ?> href="<?php echo $property['permalink']; ?>"><?php echo $property['post_title']; ?></a>
                   <?php if (!empty($property['is_child'])): ?>
                     <?php _e('of', 'wp-avalon'); ?> <a <?php echo $in_new_window; ?> href='<?php echo $property['parent_link']; ?>'><?php echo $property['parent_title']; ?></a>
-                  <?php endif; ?>
+    <?php endif; ?>
                 </li>
 
-                <?php if (!empty($property['custom_attribute_overview']) || !empty($property['tagline'])): ?>
+                  <?php if (!empty($property['custom_attribute_overview']) || !empty($property['tagline'])): ?>
                   <li class="property_tagline">
                     <?php if (isset($property['custom_attribute_overview']) && $property['custom_attribute_overview']): ?>
                       <?php echo $property['custom_attribute_overview']; ?>
                     <?php elseif ($property['tagline']): ?>
                       <?php echo $property['tagline']; ?>
-                    <?php endif; ?>
+                  <?php endif; ?>
                   </li>
                 <?php endif; ?>
 
@@ -62,26 +66,26 @@ if (have_properties()) {
                   <li class="property_address"><a href="<?php echo $property['permalink']; ?>#property_map"><?php echo $property['display_address']; ?></a></li>
                 <?php endif; ?>
 
-                <?php if ($show_children && !empty($property['children'])): ?>
+    <?php if ($show_children && !empty($property['children'])): ?>
                   <li class="child_properties">
                     <div class="wpd_floorplans_title"><?php echo $child_properties_title; ?></div>
                     <table class="wpp_overview_child_properties_table">
-                      <?php foreach ($property['children'] as $child): ?>
+      <?php foreach ($property['children'] as $child): ?>
                         <tr class="property_child_row">
                           <th class="property_child_title"><a href="<?php echo $child['permalink']; ?>"><?php echo $child['post_title']; ?></a></th>
                           <td class="property_child_price"><?php echo isset($child['price']) ? $child['price'] : ''; ?></td>
                         </tr>
-                      <?php endforeach; ?>
+      <?php endforeach; ?>
                     </table>
                   </li>
                 <?php endif; ?>
 
                 <?php if (!empty($wpp_query['detail_button'])) : ?>
                   <li style="text-align: right;"><a <?php echo $in_new_window; ?> class="button" href="<?php echo $property['permalink']; ?>">More button<?php echo $wpp_query['detail_button'] ?></a></li>
-                <?php endif; ?>
+    <?php endif; ?>
               </ul>
 
-              <?php if (!empty($property['price'])) : ?>
+    <?php if (!empty($property['price'])) : ?>
                 <div class="property_bottom">
                   <div class="pb__left">
                     <ul>
@@ -90,22 +94,22 @@ if (have_properties()) {
                       <?php endif; ?>
                       <?php if (!empty($property['bathrooms'])) : ?>
                         <li><label>Baths: </label><?php echo $property['bathrooms']; ?></li>
-                      <?php endif; ?>
+      <?php endif; ?>
                     </ul>
                   </div>
                   <div class="pb__right">
                     <div class="property_price"><?php echo $property['price']; ?></div>
                   </div>
                 </div>
-              <?php endif; ?>
+    <?php endif; ?>
 
-            </div><?php // .wpp_right_column            ?>
-          </div><?php // .property_div_box            ?>
+            </div><?php // .wpp_right_column              ?>
+          </div><?php // .property_div_box              ?>
 
-        </div><?php // .property_div            ?>
+        </div><?php // .property_div              ?>
 
-      <?php } /** end of the propertyloop. */ ?>
-    </div><?php // .all-properties          ?>
+  <?php } /** end of the propertyloop. */ ?>
+    </div><?php // .all-properties            ?>
   </div><?php // .wpp_grid_view           ?>
 <?php } else { ?>
   <div class="wpp_nothing_found">

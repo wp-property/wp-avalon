@@ -2922,7 +2922,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper:after {
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map {
   float: right;
-  width: 80%;
+  width: 75%;
   height: 500px;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map.no_sidebar {
@@ -3189,7 +3189,7 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
   overflow-y: scroll;
   float: left;
   height: 500px;
-  width: 20%;
+  width: 25%;
 }
 @media (max-width: 1000px) {
   body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list {
