@@ -217,6 +217,10 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
 
   global $wp_properties;
 
+  $map_image_type = $wp_properties['configuration']['single_property_view']['map_image_type'];
+  $infobox_attributes = $wp_properties['configuration']['google_maps']['infobox_attributes'];
+  $infobox_settings = $wp_properties['configuration']['google_maps']['infobox_settings'];
+
   $property = (array) prepare_property_for_display($post, array(
               'load_gallery' => 'false',
               'scope' => 'google_map_infobox'
@@ -228,6 +232,16 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
         'bedrooms',
         'bathrooms');
   }
+
+  if (empty($infobox_settings)) {
+    $infobox_settings = array(
+        'show_direction_link' => true,
+        'show_property_title' => true
+    );
+  }
+
+  $infobox_style = (!empty($infobox_settings['minimum_box_width']) ) ? 'style="min-width: ' . $infobox_settings['minimum_box_width'] . 'px;"' : '';
+
 
   $property_stats = array();
   foreach ($infobox_attributes as $attribute) {
@@ -261,7 +275,7 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
     $imageHTML = "<img class=\"no-photo\" src=\"{$default_img_url}\" alt=\"\" />";
   }
   ?>
-  <div id="infowindow">
+  <div id="infowindow" <?php echo $infobox_style; ?>>
 
     <div class="infowindow_box">
       <?php if (!empty($imageHTML)) { ?>
@@ -325,10 +339,10 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
             $attributes[] = '</li>';
           }
         }
-        
-        if( count( $attributes ) > 0 ) {
+
+        if (count($attributes) > 0) {
           echo "<div class='ir__title'>" . __('Overview', 'wp-avalon') . "</div>";
-          echo '<ul class="ir__list">' . implode( '', $attributes ) . '</ul>';
+          echo '<ul class="ir__list">' . implode('', $attributes) . '</ul>';
         }
 
         if (!empty($html_child_properties)) {
