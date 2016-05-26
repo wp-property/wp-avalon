@@ -347,8 +347,20 @@
 
   wp.customize('avalon_button_bg_color', function(value) {
     value.bind(function(newval) {
-      console.log(newval);
-      $('.btn-info').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn').css('background-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn').css('background-color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn').css('background-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
+      $('body .btn-info').css('background-color', newval);
+      $('body a.btn-info').css('background-color', newval);
+      $('body .btn.btn-info').css('background-color', newval);
+      $('body a.btn.btn-info').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button').css('background-color', newval);
@@ -357,6 +369,7 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
       $('body input[type="button"]').css('background-color', newval);
       $('body input[type="submit"]').css('background-color', newval);
       $('body input.submit-btn').css('background-color', newval);
@@ -382,7 +395,20 @@
   });
   wp.customize('avalon_button_border_color', function(value) {
     value.bind(function(newval) {
-      $('.btn-info').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn').css('border-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn').css('border-color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn').css('border-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn').css('border-color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
+      $('body .btn-info').css('border-color', newval);
+      $('body a.btn-info').css('border-color', newval);
+      $('body .btn.btn-info').css('border-color', newval);
+      $('body a.btn.btn-info').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button').css('border-color', newval);
@@ -391,6 +417,7 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
       $('body input[type="button"]').css('border-color', newval);
       $('body input[type="submit"]').css('border-color', newval);
       $('body input.submit-btn').css('border-color', newval);
@@ -416,7 +443,20 @@
   });
   wp.customize('avalon_button_text_color', function(value) {
     value.bind(function(newval) {
-      $('.btn-info').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn').css('color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn').css('color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn').css('color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn').css('color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
+      $('body .btn-info').css('color', newval);
+      $('body a.btn-info').css('color', newval);
+      $('body .btn.btn-info').css('color', newval);
+      $('body a.btn.btn-info').css('color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button').css('color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button').css('color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button').css('color', newval);
@@ -425,6 +465,7 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
       $('body input[type="button"]').css('color', newval);
       $('body input[type="submit"]').css('color', newval);
       $('body input.submit-btn').css('color', newval);
@@ -450,7 +491,20 @@
   });
   wp.customize('avalon_hover_button_bg_color', function(value) {
     value.bind(function(newval) {
-      $('.btn-info:hover').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('background-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('background-color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn:hover').css('background-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn:hover').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
+      $('body .btn-info:hover').css('background-color', newval);
+      $('body a.btn-info:hover').css('background-color', newval);
+      $('body .btn.btn-info:hover').css('background-color', newval);
+      $('body a.btn.btn-info:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover').css('background-color', newval);
@@ -459,6 +513,7 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a:hover').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
       $('body input[type="button"]:hover').css('background-color', newval);
       $('body input[type="submit"]:hover').css('background-color', newval);
       $('body input.submit-btn:hover').css('background-color', newval);
@@ -484,7 +539,20 @@
   });
   wp.customize('avalon_hover_button_border_color', function(value) {
     value.bind(function(newval) {
-      $('.btn-info:hover').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('border-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('border-color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn:hover').css('border-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn:hover').css('border-color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
+      $('body .btn-info:hover').css('border-color', newval);
+      $('body a.btn-info:hover').css('border-color', newval);
+      $('body .btn.btn-info:hover').css('border-color', newval);
+      $('body a.btn.btn-info:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover').css('border-color', newval);
@@ -493,6 +561,7 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a:hover').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
       $('body input[type="button"]:hover').css('border-color', newval);
       $('body input[type="submit"]:hover').css('border-color', newval);
       $('body input.submit-btn:hover').css('border-color', newval);
@@ -518,7 +587,20 @@
   });
   wp.customize('avalon_hover_button_text_color', function(value) {
     value.bind(function(newval) {
-      $('.btn-info:hover').css('background-color', newval);
+      $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('color', newval);
+      $('.widget.widget_latestpropertieswidget .view-all .btn:hover').css('color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .view-all .btn:hover').css('color', newval);
+      $('.widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
+      $('.wpp_widget.widget_featuredpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
+      $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
+      $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
+      $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('color', newval);
+      $('body .btn-info:hover').css('color', newval);
+      $('body a.btn-info:hover').css('color', newval);
+      $('body .btn.btn-info:hover').css('color', newval);
+      $('body a.btn.btn-info:hover').css('color', newval);
       $('body main.main-content .container .frontpage-headlights .fh__box .fhb__more .fhb__more_button:hover').css('color', newval);
       $('body main.main-content .container .frontpage-headlights .view-more-headlights .view-more-headlights-button:hover').css('color', newval);
       $('body main.main-content .container .content article .wpp_feps_form ul.feps_property_input_fields .qq-upload-button:hover').css('color', newval);
