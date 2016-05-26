@@ -2085,7 +2085,7 @@ body {
         }
 
         .sticky {
-          
+
         }
 
         .gallery-caption  {
@@ -2529,7 +2529,6 @@ body {
                       }
                       &.supermap_list_thumb {
                         cursor: pointer;
-                        margin: 0 0 15px;
                         text-align: center;
 
                         img {
@@ -2539,12 +2538,26 @@ body {
                         }
                       }
                       &.supermap_list_title {
-                        color: #337ab7;
+                        background-color: #919191;
+                        color: #fff;
                         cursor: pointer;
-                        font-size: 1.1em;
+                        display: block;
                         font-weight: 500;
                         line-height: 1.2;
-                        margin: 0 0 10px;
+                        margin: 0 0 1em;
+                        padding: 1.2em 0.5em;
+                        position: relative;
+                        &:after {
+                          background-color: #fff;
+                          bottom: -5px;
+                          content: "";
+                          display: block;
+                          height: 10px;
+                          left: 20px;
+                          position: absolute;
+                          .rotate(45deg);
+                          width: 10px;
+                        }
                       }
                       &.wpp_supermap_attribute_row {
                         .clearfix;

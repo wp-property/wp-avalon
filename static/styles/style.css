@@ -3363,7 +3363,6 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_thumb {
   cursor: pointer;
-  margin: 0 0 15px;
   text-align: center;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_thumb img {
@@ -3372,12 +3371,28 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
   width: 100% !important;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_title {
-  color: #337ab7;
+  background-color: #919191;
+  color: #fff;
   cursor: pointer;
-  font-size: 1.1em;
+  display: block;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0 0 10px;
+  margin: 0 0 1em;
+  padding: 1.2em 0.5em;
+  position: relative;
+}
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_title:after {
+  background-color: #fff;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 10px;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row {
   margin-bottom: 5px;
