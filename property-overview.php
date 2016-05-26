@@ -10,7 +10,7 @@ if (have_properties()) {
   ?>
   <div class="<?php wpp_css('property_overview::grid_view', "wpp_grid_view wpp_property_view_result"); ?>">
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
-      <?php foreach (returned_properties('load_gallery=false') as $property) { ?>
+      <?php foreach (returned_properties('load_gallery=true') as $property) { ?>
 
         <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
 

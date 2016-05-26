@@ -331,6 +331,8 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
 function avalon_property_overview_image($args = '') {
   global $wpp_query, $property;
 
+  print_r($property['permalink']);
+  
   $thumbnail_size = $wpp_query['thumbnail_size'];
 
   $defaults = array(
