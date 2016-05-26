@@ -12,7 +12,8 @@ if (have_properties()) {
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
       <?php
       foreach (returned_properties('load_gallery=false') as $property) :
-        if (isset($property['ID'])) :
+        print_r($property);
+//        if (isset($property['ID'])) :
           ?>
           <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
             <div class="property_div_box">
@@ -106,7 +107,7 @@ if (have_properties()) {
           </div><?php // .property_div                 ?>
 
           <?php
-        endif;
+//        endif;
       endforeach;/** end of the propertyloop. */
       ?>
     </div><?php // .all-properties               ?>
