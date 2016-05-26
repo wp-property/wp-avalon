@@ -1296,13 +1296,17 @@ article.property-page-template {
         &:nth-child(2n) {
           float: right;
         }
+        @media (max-width: 640px) {
+          float: none !important;
+          width: 100%;
+        }
 
         h2 {
           background-color: #19294c;
           .round-corners(4px, 4px, 0, 0);
           color: #fff;
           display: block;
-          font-size: 20px;
+          font-size: 20px !important;
           margin: 0;
           padding: 13px 15px;
           position: relative;
@@ -1354,7 +1358,7 @@ article.property-page-template {
         .round-corners(4px, 4px, 0, 0);
         color: #fff;
         display: block;
-        font-size: 20px;
+        font-size: 20px !important;
         margin: 0;
         padding: 13px 15px;
         position: relative;
@@ -1541,7 +1545,7 @@ article.property-page-template {
                 }
               }
               .ir__directions {
-                text-align: center;
+                text-align: right;
 
                 a {
                   .submit-button-style;

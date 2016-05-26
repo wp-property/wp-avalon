@@ -183,8 +183,8 @@ body {
         #wp-submit {
           .transition(all, 0.15s, ease-in-out, 0s);
           .border-radius(4px);
-          background-color: #337ab7;
-          border: 1px solid #2e6da4;
+          background-color: #19294c;
+          border: 1px solid #0b1a3a;
           color: #fff;
           cursor: pointer;
           display: inline-block;
@@ -1232,7 +1232,7 @@ body {
                             }
                           }
                           .ir__directions {
-                            text-align: center;
+                            text-align: right;
 
                             a {
                               .submit-button-style;
@@ -1373,12 +1373,26 @@ body {
                             }
                           }
                           &.supermap_list_title {
-                            color: #337ab7;
+                            background-color: #919191;
+                            color: #fff;
                             cursor: pointer;
-                            font-size: 1.1em;
+                            display: block;
                             font-weight: 500;
                             line-height: 1.2;
-                            margin: 0 0 0.6em;
+                            margin: 0 0 1em;
+                            padding: 1.2em 0.5em;
+                            position: relative;
+                            &:after {
+                              background-color: #fff;
+                              bottom: -5px;
+                              content: "";
+                              display: block;
+                              height: 10px;
+                              left: 20px;
+                              position: absolute;
+                              .rotate(45deg);
+                              width: 10px;
+                            }
                           }
                           &.wpp_supermap_attribute_row {
                             .clearfix;
@@ -1386,15 +1400,16 @@ body {
 
                             span {
                               float: left;
-                              width: 50%;
+                              width: 45%;
                               &.value {
                                 text-align: right;
+                                width: 55%;
                               }
                             }
                           }
                           &.supermap_list_view_property {
                             margin-top: 0.6em;
-                            text-align: center;
+                            text-align: right;
 
                             a {
                               text-decoration: none;
@@ -2565,15 +2580,16 @@ body {
 
                         span {
                           float: left;
-                          width: 50%;
+                          width: 45%;
                           &.value {
                             text-align: right;
+                            width: 55%;
                           }
                         }
                       }
                       &.supermap_list_view_property {
                         margin-top: 10px;
-                        text-align: center;
+                        text-align: right;
 
                         a {
                           text-decoration: none;

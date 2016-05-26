@@ -340,8 +340,8 @@ body .header-bar #loginform p #wp-submit {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
-  background-color: #337ab7;
-  border: 1px solid #2e6da4;
+  background-color: #19294c;
+  border: 1px solid #0b1a3a;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -1665,7 +1665,7 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions,
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions {
-  text-align: center;
+  text-align: right;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a,
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a {
@@ -1878,12 +1878,28 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   width: 100% !important;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_title {
-  color: #337ab7;
+  background-color: #919191;
+  color: #fff;
   cursor: pointer;
-  font-size: 1.1em;
+  display: block;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0 0 0.6em;
+  margin: 0 0 1em;
+  padding: 1.2em 0.5em;
+  position: relative;
+}
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_title:after {
+  background-color: #fff;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 10px;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row {
   margin-bottom: 0.3em;
@@ -1900,14 +1916,15 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row span {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row span.value {
   text-align: right;
+  width: 55%;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property {
   margin-top: 0.6em;
-  text-align: center;
+  text-align: right;
 }
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property a {
   text-decoration: none;
@@ -3409,14 +3426,15 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row span {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.wpp_supermap_attribute_row span.value {
   text-align: right;
+  width: 55%;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property {
   margin-top: 10px;
-  text-align: center;
+  text-align: right;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property a {
   text-decoration: none;
