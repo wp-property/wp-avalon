@@ -17,7 +17,7 @@ if (have_properties()) {
         <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
 
           <div class="property_div_box">
-            <?php if (!empty($property['featured']) && $property['featured'] == 1) : ?>
+            <?php if (isset($property['featured']) && $property['featured'] == 1) : ?>
               <div class="property_featured_label">
                 <span><?php _e('Featured', 'wp-avalon'); ?></span>
               </div>
