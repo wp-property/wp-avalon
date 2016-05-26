@@ -331,10 +331,10 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
               if ($wp_properties['configuration']['google_maps']['show_true_as_image'] == 'true') {
                 $value = '<div class="true-checkbox-image"></div>';
               } else {
-                $value = __('Yes', ud_get_wp_property()->domain);
+                $value = __('Yes', 'wp-avalon');
               }
             } elseif ($value == 'false') {
-              continue;
+              $value = __('No', 'wp-avalon');
             }
 
             // to get attribute label and value translation @auther fadi
