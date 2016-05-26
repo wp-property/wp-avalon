@@ -2002,20 +2002,23 @@ article.property-page-template .property-page-container .wpp_supermap .gm-style 
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
-article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image {
-  background: url("../images/checkbox.png") no-repeat -16px 0;
-  float: right;
-  height: 16px;
-  width: 16px;
-}
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .false-checkbox-image,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .false-checkbox-image,
 article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .false-checkbox-image,
 article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .false-checkbox-image {
-  background: url("../images/checkbox.png") no-repeat 0 0;
+  background-image: url("static/images/checkbox.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
   float: right;
   height: 16px;
   width: 16px;
+}
+article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
+article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
+article.property-page-template .property-page-container #property_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image,
+article.property-page-template .property-page-container .wpp_supermap .gm-style #infowindow .infowindow_box .infowindow_right .ir__list li span .true-checkbox-image {
+  background-position: -16px 0;
 }
 article.property-page-template .property-page-container #property_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__child_properties_list,
 article.property-page-template .property-page-container .wpp_supermap .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__child_properties_list,

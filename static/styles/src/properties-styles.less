@@ -1526,17 +1526,17 @@ article.property-page-template {
                     float: right;
                     text-align: right;
 
-                    .true-checkbox-image {
-                      background: url("../images/checkbox.png") no-repeat -16px 0;
+                    .true-checkbox-image,
+                    .false-checkbox-image {
+                      background-image: url("static/images/checkbox.png");
+                      background-position: 0 0;
+                      background-repeat: no-repeat;
                       float: right;
                       height: 16px;
                       width: 16px;
                     }
-                    .false-checkbox-image {
-                      background: url("../images/checkbox.png") no-repeat 0 0;
-                      float: right;
-                      height: 16px;
-                      width: 16px;
+                    .true-checkbox-image {
+                      background-position: -16px 0;
                     }
                   }
                 }
