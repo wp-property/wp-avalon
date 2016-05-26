@@ -12,8 +12,7 @@ if (have_properties()) {
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
       <?php
       foreach (returned_properties('load_gallery=false') as $property) :
-        print_r($property);
-//        if (isset($property['ID'])) :
+        if (isset($property['ID'])) :
           ?>
           <div class="<?php wpp_css('property_overview::property_div', "property_div {$property['post_type']}"); ?>">
             <div class="property_div_box">
@@ -101,17 +100,17 @@ if (have_properties()) {
                   </div>
                 <?php endif; ?>
 
-              </div><?php // .wpp_right_column                 ?>
-            </div><?php // .property_div_box                 ?>
+              </div><?php // .wpp_right_column                  ?>
+            </div><?php // .property_div_box                  ?>
 
-          </div><?php // .property_div                 ?>
+          </div><?php // .property_div                  ?>
 
           <?php
-//        endif;
+        endif;
       endforeach;/** end of the propertyloop. */
       ?>
-    </div><?php // .all-properties               ?>
-  </div><?php // .wpp_grid_view              ?>
+    </div><?php // .all-properties                ?>
+  </div><?php // .wpp_grid_view               ?>
 <?php } else { ?>
   <div class="wpp_nothing_found">
     <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', 'wp-avalon'), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>
