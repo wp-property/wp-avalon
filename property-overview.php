@@ -28,7 +28,7 @@ if (have_properties()) {
               </div>
             <?php endif; ?>
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php property_overview_image(array('image_type' => $wpp_query['thumbnail_size'])); ?>
+              <?php property_overview_image(array('image_type' => 'medium')); ?>
               <?php if (!empty($property['property_type_label'])) : ?>
                 <div class="property_type_label"><?php echo $property['property_type_label']; ?></div>
               <?php endif; ?>
