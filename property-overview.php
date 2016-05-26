@@ -7,8 +7,6 @@
  * @since Avalon 1.0
  */
 if (have_properties()) {
-
-  $thumbnail_dimentions = WPP_F::get_image_dimensions($wpp_query['thumbnail_size']);
   ?>
   <div class="<?php wpp_css('property_overview::grid_view', "wpp_grid_view wpp_property_view_result"); ?>">
     <div class="<?php wpp_css('property_overview::all_properties', "all-properties"); ?>">
@@ -30,7 +28,7 @@ if (have_properties()) {
               </div>
             <?php endif; ?>
             <div class="<?php wpp_css('property_overview::left_column', "wpp_overview_left_column"); ?>">
-              <?php avalon_property_overview_image(); ?>
+              <?php avalon_property_overview_image(array('image_type' => $wpp_query['thumbnail_size'])); ?>
               <?php if (!empty($property['property_type_label'])) : ?>
                 <div class="property_type_label"><?php echo $property['property_type_label']; ?></div>
               <?php endif; ?>
@@ -101,14 +99,14 @@ if (have_properties()) {
                 </div>
               <?php endif; ?>
 
-            </div><?php // .wpp_right_column           ?>
-          </div><?php // .property_div_box           ?>
+            </div><?php // .wpp_right_column            ?>
+          </div><?php // .property_div_box            ?>
 
-        </div><?php // .property_div           ?>
+        </div><?php // .property_div            ?>
 
       <?php } /** end of the propertyloop. */ ?>
     </div><?php // .all-properties          ?>
-  </div><?php // .wpp_grid_view          ?>
+  </div><?php // .wpp_grid_view           ?>
 <?php } else { ?>
   <div class="wpp_nothing_found">
     <p><?php echo sprintf(__('Sorry, no properties found - try expanding your search, or <a href="%s">view all</a>.', 'wp-avalon'), site_url() . '/' . $wp_properties['configuration']['base_slug']); ?></p>
