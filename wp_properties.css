@@ -855,6 +855,11 @@
   height: auto;
   margin-bottom: 5px;
 }
+.widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb img,
+.wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties .property_image .property_overview_thumb img {
+  height: auto !important;
+  max-width: 100%;
+}
 .widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties ul.wp-caption-text,
 .wpp_widget .shortcode_featured_properties ul.wpp_featured_properties_shortcode li.shortcode_featured_properties ul.wp-caption-text {
   margin: 0;
