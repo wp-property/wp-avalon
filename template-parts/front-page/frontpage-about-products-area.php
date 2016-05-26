@@ -6,17 +6,17 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$enable_section = get_theme_mod('property_description_disable', '');
+$enable_section = get_theme_mod('about_products_area_disable', '');
 if ($enable_section != 1) :
   ?>
-  <div class="frontpage-property-description-area" data-template="template-parts/front-page/frontpage-property-description-area">
+  <div class="frontpage-about-products-area" data-template="template-parts/front-page/frontpage-about-products-area">
 
     <?php
-    if (is_active_sidebar('sidebar-property-description')) :
-      dynamic_sidebar('sidebar-property-description');
+    if (is_active_sidebar('about-products-section')) :
+      dynamic_sidebar('about-products-section');
     else :
       the_widget(
-              'avalon_widget_features', array(
+              'avalon_aboutus_widget', array(
           'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
           'text' => __('More than a Plugin – A Real Estate Management System!Dynamic Property Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
           'featured-left-fields' => array(

@@ -1,10 +1,10 @@
 <?php
 
-class avalon_widget_headlights extends WP_Widget {
+class avalon_widget_focus extends WP_Widget {
 
   public function __construct() {
     parent::__construct(
-            'avalon-headlight-widget', __('WP Avalon - Headlight widget', 'wp-avalon')
+            'avalon-focus-widget', __('WP Avalon - Focus widget', 'wp-avalon')
     );
   }
 
@@ -14,9 +14,9 @@ class avalon_widget_headlights extends WP_Widget {
     ?>
 
     <div class="col-lg-3 col-sm-3">
-      <div class="fhwa__box">
+      <div class="ffwa__box">
         <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
-          <div class="fhwa__box_icon">
+          <div class="ffwa__box_icon">
             <?php if (!empty($instance['link'])) { ?>
               <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
             <?php } else { ?>
@@ -28,7 +28,7 @@ class avalon_widget_headlights extends WP_Widget {
           $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
           if (!empty($custom_media_id) && !empty($custom_media_id[0])) {
             ?>
-            <div class="fhwa__box_icon">
+            <div class="ffwa__box_icon">
               <?php if (!empty($instance['link'])) { ?>
                 <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i></a>
               <?php } else { ?>
@@ -40,7 +40,7 @@ class avalon_widget_headlights extends WP_Widget {
         }
         ?>
 
-        <h3 class="fhwa__box_title">
+        <h3 class="ffwa__box_title">
           <?php
           if (!empty($instance['title'])): echo apply_filters('widget_title', $instance['title']);
           endif;
@@ -53,9 +53,9 @@ class avalon_widget_headlights extends WP_Widget {
           echo '</p>';
         }
         ?>
-        <div class="fhwa__bottom">
-          <div class="fhwa__price"><?php echo $instance['price']; ?></div>
-          <div class="fhwa__button">
+        <div class="ffwa__bottom">
+          <div class="ffwa__price"><?php echo $instance['price']; ?></div>
+          <div class="ffwa__button">
             <?php if (!empty($instance['link'])) : ?>
               <a href="<?php echo $instance['link']; ?>" class="btn"><?php echo $instance['more_label']; ?></a>
             <?php endif; ?>
@@ -150,5 +150,5 @@ class avalon_widget_headlights extends WP_Widget {
  * Register widget
  */
 add_action('widgets_init', function() {
-  register_widget('avalon_widget_headlights');
+  register_widget('avalon_widget_focus');
 });

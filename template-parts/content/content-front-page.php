@@ -9,15 +9,15 @@
 ?>
 <article class="frontpage-widgets" data-template="template-parts/content/content-front-page">
 
-  <?php get_template_part('template-parts/front-page/frontpage-featured-area', 'wp-avalon'); ?>
+  <?php get_template_part('template-parts/front-page/frontpage-aboutus-area', 'wp-avalon'); ?>
 
-  <?php get_template_part('template-parts/front-page/frontpage-headlights-widget-area', 'wp-avalon'); ?>
+  <?php get_template_part('template-parts/front-page/frontpage-focus-widget-area', 'wp-avalon'); ?>
 
-  <?php get_template_part('template-parts/front-page/frontpage-property-description-area', 'wp-avalon'); ?>
+  <?php get_template_part('template-parts/front-page/frontpage-about-products-area', 'wp-avalon'); ?>
 
   <?php get_template_part('template-parts/front-page/frontpage-overview-widget-area', 'wp-avalon'); ?>
 
-  <?php get_template_part('template-parts/front-page/frontpage-addons-widget-area', 'wp-avalon'); ?>
+  <?php get_template_part('template-parts/front-page/frontpage-flip-widget-area', 'wp-avalon'); ?>
 
 </article>
 

@@ -1,33 +1,33 @@
 <?php
 
-include_once 'widget-avalon_widget_features.php';
-include_once 'widget-avalon_widget_headlights.php';
+include_once 'widget-avalon_widget_aboutus.php';
+include_once 'widget-avalon_widget_focus.php';
 include_once 'widget-avalon_widget_overview.php';
-include_once 'widget-avalon_widget_property_addons.php';
+include_once 'widget-avalon_widget_flip.php';
 
 add_action('widgets_init', function() {
 
   $avalon_sidebars = array(
-      'sidebar-headlights' => 'sidebar-headlights',
-      'sidebar-avalon-features' => 'sidebar-avalon-features',
-      'sidebar-property-description' => 'sidebar-property-description',
-      'sidebar-avalon-overview' => 'sidebar-avalon-overview',
-      'sidebar-property-addons' => 'sidebar-property-addons',
+      'about-us-section' => 'about-us-section',
+      'focus-section' => 'focus-section',
+      'about-products-section' => 'about-products-section',
+      'overview-section' => 'overview-section',
+      'flip-section' => 'flip-section',
   );
 
   /* Register sidebars */
   foreach ($avalon_sidebars as $avalon_sidebar):
 
-    if ($avalon_sidebar == 'sidebar-headlights'):
+    if ($avalon_sidebar == 'focus-section'):
       $avalon_sidebar_name = __('Focus section area', 'wp-avalon');
-    elseif ($avalon_sidebar == 'sidebar-avalon-features'):
-      $avalon_sidebar_name = __('About us features', 'wp-avalon');
-    elseif ($avalon_sidebar == 'sidebar-property-description'):
-      $avalon_sidebar_name = __('WP Property description area', 'wp-avalon');
-    elseif ($avalon_sidebar == 'sidebar-avalon-overview') :
-      $avalon_sidebar_name = __('Default property overview widgets', 'wp-avalon');
-    elseif ($avalon_sidebar == 'sidebar-property-addons') :
-      $avalon_sidebar_name = __('Default property addons widgets', 'wp-avalon');
+    elseif ($avalon_sidebar == 'about-us-section'):
+      $avalon_sidebar_name = __('About us section', 'wp-avalon');
+    elseif ($avalon_sidebar == 'about-products-section'):
+      $avalon_sidebar_name = __('About products', 'wp-avalon');
+    elseif ($avalon_sidebar == 'overview-section') :
+      $avalon_sidebar_name = __('WP-Property overview of listings', 'wp-avalon');
+    elseif ($avalon_sidebar == 'flip-section') :
+      $avalon_sidebar_name = __('Flip widgets section', 'wp-avalon');
     endif;
 
     register_sidebar(

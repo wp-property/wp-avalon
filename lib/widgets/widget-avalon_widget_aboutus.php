@@ -1,10 +1,10 @@
 <?php
 
-class avalon_widget_features extends WP_Widget {
+class avalon_aboutus_widget extends WP_Widget {
 
   public function __construct() {
     parent::__construct(
-            'avalon-fetaures-widget', __('WP Avalon - Features widget', 'wp-avalon')
+            'avalon-aboutus-widget', __('WP Avalon - About us widget', 'wp-avalon')
     );
   }
 
@@ -13,23 +13,23 @@ class avalon_widget_features extends WP_Widget {
     $title = $instance['title'];
     $text = $instance['text'];
 
-    echo '<div class="featured-text-widget">';
+    echo '<div class="aboutus-text-widget">';
     if (!empty($title)) {
-      echo '<div class="ftw__title">' . $title . '</div>';
+      echo '<div class="atw__title">' . $title . '</div>';
     }
     if (!empty($text)) {
-      echo '<div class="ftw__content">' . do_shortcode($text) . '</div>';
+      echo '<div class="atw__content">' . do_shortcode($text) . '</div>';
     }
-    echo '<div class="ftw__features row">';
+    echo '<div class="atw__features row">';
     if (!empty($instance['featured-left-fields'])) :
-      echo '<ul class="ftw_features_left col-md-6">';
+      echo '<ul class="atw_features_left col-md-6">';
       foreach ($instance['featured-left-fields'] as $value) :
         echo '<li>' . $value . '</li>';
       endforeach;
       echo '</ul>';
     endif;
     if (!empty($instance['featured-right-fields'])) :
-      echo '<ul class="ftw_features_right col-md-6">';
+      echo '<ul class="atw_features_right col-md-6">';
       foreach ($instance['featured-right-fields'] as $value) :
         echo '<li>' . $value . '</li>';
       endforeach;
@@ -52,8 +52,8 @@ class avalon_widget_features extends WP_Widget {
     $rand = rand(0, 1000000);
     $defaults = array('title' => __('', 'wp-avalon'), 'text' => '');
 
-    if ($this->get_field_id('-add') == 'widget-avalon-fetaures-widget-__i__-add') :
-      $widget_id = 'widget-avalon-fetaures-widget-' . $rand . '-add';
+    if ($this->get_field_id('-add') == 'avalon-aboutus-widget-fetaures-__i__-add') :
+      $widget_id = 'avalon-aboutus-widget-fetaures-' . $rand . '-add';
     else :
       $widget_id = $this->get_field_id('-add');
     endif;
@@ -162,6 +162,6 @@ class avalon_widget_features extends WP_Widget {
  * Register widget
  */
 add_action('widgets_init', function() {
-  register_widget('avalon_widget_features');
+  register_widget('avalon_aboutus_widget');
 });
 

@@ -4,7 +4,7 @@ class avalon_widget_overview extends WP_Widget {
 
   public function __construct() {
     parent::__construct(
-            'avalon-property-overview-widget', __('WP Avalon - Property overview widget', 'wp-avalon')
+            'avalon-property-overview-widget', __('WP Avalon - Overview widget', 'wp-avalon')
     );
   }
 

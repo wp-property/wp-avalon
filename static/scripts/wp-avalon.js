@@ -65,12 +65,12 @@ var wp_avalon = {
    * @author vorobjov@UD
    */
   frontpage_headlights_widgets: function frontpage_headlights_widgets() {
-    var widgets = jQuery('body .frontpage-headlights-widget-area');
+    var widgets = jQuery('body .frontpage-focus-widget-area');
     widgets.each(function(key, value) {
       var height = 0,
               height2 = 0,
-              columns = jQuery('.fhwa__box', jQuery(value));
-      columns2 = jQuery('.fhwa__box > p', jQuery(value));
+              columns = jQuery('.ffwa__box', jQuery(value));
+      columns2 = jQuery('.ffwa__box > p', jQuery(value));
       columns.each(function(key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {

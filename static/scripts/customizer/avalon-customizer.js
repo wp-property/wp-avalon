@@ -85,29 +85,29 @@
 
 
   /* Avalon features */
-  wp.customize('frontpage_features_area_settings', function(value) {
+  wp.customize('frontpage_aboutus_area_settings', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.frontpage-avalon-features-area').removeClass('hidden_block');
+        $('.frontpage-about-us-area').removeClass('hidden_block');
       } else {
-        $('.frontpage-avalon-features-area').addClass('hidden_block');
+        $('.frontpage-about-us-area').addClass('hidden_block');
       }
     });
   });
 
-  /* Headlights */
-  wp.customize('headlights_wa_disable_setting', function(value) {
+  /* Focus area */
+  wp.customize('focus_section_disable_setting', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.frontpage-headlights-widget-area').removeClass('hidden_block');
+        $('.frontpage-focus-widget-area').removeClass('hidden_block');
       } else {
-        $('.frontpage-headlights-widget-area').addClass('hidden_block');
+        $('.frontpage-focus-widget-area').addClass('hidden_block');
       }
     });
   });
-  wp.customize('headlights_wa_title_setting', function(value) {
+  wp.customize('focus_section_title_setting', function(value) {
     value.bind(function(newval) {
-      $('.fhwa__title').html(newval);
+      $('.frontpage-focus-widget-area .ffwa__title').html(newval);
     });
   });
 
@@ -128,29 +128,29 @@
   });
 
   /* Property description area */
-  wp.customize('property_description_disable', function(value) {
+  wp.customize('about_products_area_disable', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.frontpage-property-description-area').removeClass('hidden_block');
+        $('.frontpage-about-products-area').removeClass('hidden_block');
       } else {
-        $('.frontpage-property-description-area').addClass('hidden_block');
+        $('.frontpage-about-products-area').addClass('hidden_block');
       }
     });
   });
 
-  /* Property add-ons */
-  wp.customize('addons_disable', function(value) {
+  /* Flip area */
+  wp.customize('flip_section_disable', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.frontpage-property-addons-area').removeClass('hidden_block');
+        $('.frontpage-flip-widget-area').removeClass('hidden_block');
       } else {
-        $('.frontpage-property-addons-area').addClass('hidden_block');
+        $('.frontpage-flip-widget-area').addClass('hidden_block');
       }
     });
   });
-  wp.customize('addons_section_title', function(value) {
+  wp.customize('flip_section_title', function(value) {
     value.bind(function(newval) {
-      $('.frontpage-property-addons-area .fpaa__title').html(newval);
+      $('.frontpage-flip-widget-area .ffwa__title').html(newval);
     });
   });
 
@@ -295,6 +295,8 @@
       $('body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title').css('background-color', newval);
       $('body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom').css('background-color', newval);
       $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom').css('background-color', newval);
+      $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .property_featured_label span').css('background-color', newval);
+      $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label').css('background-color', newval);
     });
   });
   wp.customize('avalon_header_top_border_color', function(value) {
@@ -565,7 +567,7 @@
       $('.wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .last-page-btn a').css('background-color', newval);
       $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('background-color', newval);
       $('.wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('background-color', newval);
-      $('.wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options .wpp_sortable_link,').css('background-color', newval);
+      $('.wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options .wpp_sortable_link').css('background-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('background-color', newval);
     });
   });
@@ -585,7 +587,7 @@
       $('.wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .last-page-btn a').css('color', newval);
       $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('color', newval);
       $('.wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('color', newval);
-      $('.wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options .wpp_sortable_link,').css('color', newval);
+      $('.wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options .wpp_sortable_link').css('color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('color', newval);
     });
   });

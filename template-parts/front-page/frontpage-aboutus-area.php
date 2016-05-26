@@ -6,17 +6,17 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$enable_section = get_theme_mod('frontpage_features_area_settings', '');
+$enable_section = get_theme_mod('frontpage_aboutus_area_settings', '');
 if ($enable_section != 1) :
   ?>
-  <div class="frontpage-avalon-features-area" data-template="template-parts/front-page/frontpage-featured-area">
+  <div class="frontpage-about-us-area" data-template="template-parts/front-page/frontpage-about-us-area">
 
     <?php
-    if (is_active_sidebar('sidebar-avalon-features')) :
-      dynamic_sidebar('sidebar-avalon-features');
+    if (is_active_sidebar('about-us-section')) :
+      dynamic_sidebar('about-us-section');
     else :
       the_widget(
-              'avalon_widget_features', array(
+              'avalon_aboutus_widget', array(
           'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
           'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
           'featured-left-fields' => array(

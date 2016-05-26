@@ -1,10 +1,10 @@
 <?php
 
-class avalon_widget_property_addons extends WP_Widget {
+class avalon_flip_widget extends WP_Widget {
 
   public function __construct() {
     parent::__construct(
-            'avalon-property-addons-widget', __('WP Avalon - Property add-ons', 'wp-avalon')
+            'avalon-flip-widget', __('WP Avalon - Flip text widget', 'wp-avalon')
     );
   }
 
@@ -116,6 +116,6 @@ class avalon_widget_property_addons extends WP_Widget {
  * Register widget
  */
 add_action('widgets_init', function() {
-  register_widget('avalon_widget_property_addons');
+  register_widget('avalon_flip_widget');
 });
 
