@@ -198,12 +198,16 @@ add_action('wp_ajax_nopriv_default_contact_us', 'default_contact_us');
 /**
  * Add default widgets
  * 
+ * @author vorobjov@UD
+ * 
  * @since Avalon 1.0
  */
 include_once 'lib/widgets/register-default-widgets.php';
 
 /**
  * Avalon google maps infobox
+ * 
+ * @author vorobjov@UD
  * 
  * @since Avalon 1.0
  */
@@ -328,6 +332,13 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
   return $data;
 }, 10, 2);
 
+/**
+ * Avalon custom property overview image
+ * 
+ * @author vorobjov@UD
+ * 
+ * @since Avalon 1.0
+ */
 function avalon_property_overview_image($args = '') {
   global $wpp_query, $property;
 
