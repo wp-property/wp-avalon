@@ -10,7 +10,7 @@
 echo '<a href="' . site_url() . '" title="' . get_bloginfo('name') . '" data-template="template-parts/footer/footer-logo">';
 $logo_image = get_theme_mod('footer_logo_big_image_settings', '');
 $icon_url = get_theme_mod('footer_logo_icon_settings', get_template_directory_uri() . '/static/images/footer-logo-icon.png');
-$logo_text = get_theme_mod('footer_logo_text_settings', 'WP Avalon');
+$logo_text = get_theme_mod('footer_logo_text_settings', __('WP Avalon', 'wp-avalon'));
 $margin_icon = get_theme_mod('footer_logo_icon_margin_setting', '-4');
 $margin_right_icon = get_theme_mod('footer_logo_icon_margin_right_setting', '5');
 $margin = get_theme_mod('footer_logo_img_margin_setting', '0');

@@ -11,8 +11,6 @@ get_header();
 
 <div class="container" data-template="template-parts/page-right-sidebar">
 
-  <?php get_sidebar(); ?>
-
   <?php if (is_active_sidebar('sidebar-right') || isset($post->property_type) && is_active_sidebar("wpp_sidebar_" . $post->property_type)) : ?>
     <div class="content col-md-8">
     <?php else : ?>
@@ -30,6 +28,8 @@ get_header();
       endif;
       ?>
     </div>
+
+    <?php get_sidebar(); ?>
 
   </div>
 

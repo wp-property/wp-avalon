@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-27 13:42+0300\n"
-"PO-Revision-Date: 2016-05-27 13:42+0300\n"
+"POT-Creation-Date: 2016-05-27 16:35+0300\n"
+"PO-Revision-Date: 2016-05-27 16:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,11 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
+#: footer.php:25
+#, php-format
+msgid "&copy;%s WP Avalon. All rights reserved."
+msgstr ""
+
 #: functions.php:59
 msgid "Primary Menu"
 msgstr ""
@@ -80,6 +85,19 @@ msgstr ""
 
 #: functions.php:98
 msgid "Appears at the right side on all pages"
+msgstr ""
+
+#: functions.php:185
+msgid "Contact form from "
+msgstr ""
+
+#: functions.php:188
+msgid "From:"
+msgstr ""
+
+#: functions.php:190
+#, php-format
+msgid "Mail Sent. Thank you %s, we will contact you shortly."
 msgstr ""
 
 #: functions.php:310
@@ -323,34 +341,42 @@ msgid "Logo settings"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:547
-#: lib/customizer/avalon-customizer.php:1075
-msgid "Logo icon (Recommended height 20px)"
+#: lib/customizer/avalon-customizer.php:1029
+msgid "Logo icon"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:557
 #: lib/customizer/avalon-customizer.php:619
-#: lib/customizer/avalon-customizer.php:1086
-#: lib/customizer/avalon-customizer.php:1153
+#: lib/customizer/avalon-customizer.php:1040
+#: lib/customizer/avalon-customizer.php:1107
 msgid "Margin top in px"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:573
-#: lib/customizer/avalon-customizer.php:1103
+#: lib/customizer/avalon-customizer.php:1057
 msgid "Margin right in px"
 msgstr ""
 
+#. Theme Name of the plugin/theme
+#: lib/customizer/avalon-customizer.php:584
+#: lib/customizer/avalon-customizer.php:1069
+#: template-parts/footer/footer-logo.php:13
+#: template-parts/header/header-logo.php:14
+msgid "WP Avalon"
+msgstr ""
+
 #: lib/customizer/avalon-customizer.php:589
-#: lib/customizer/avalon-customizer.php:1120
+#: lib/customizer/avalon-customizer.php:1074
 msgid "Logo text"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:600
-#: lib/customizer/avalon-customizer.php:1132
+#: lib/customizer/avalon-customizer.php:1086
 msgid "Logo Text Color"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:609
-#: lib/customizer/avalon-customizer.php:1142
+#: lib/customizer/avalon-customizer.php:1096
 msgid "Or load full logo image instead of logo with text"
 msgstr ""
 
@@ -435,108 +461,177 @@ msgstr ""
 msgid "\"Location\" area decrpiption"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:785
-#: lib/customizer/avalon-customizer.php:807
-msgid "WP Property settings"
-msgstr ""
-
-#: lib/customizer/avalon-customizer.php:790
-#: lib/customizer/avalon-customizer.php:859
-#: lib/customizer/avalon-customizer.php:888
-#: lib/customizer/avalon-customizer.php:928
-#: lib/customizer/avalon-customizer.php:956
-#: lib/customizer/avalon-customizer.php:998
-msgid "Settings"
-msgstr ""
-
-#: lib/customizer/avalon-customizer.php:800
-msgid "Show default property search on \"Front page\" widget area"
-msgstr ""
-
-#: lib/customizer/avalon-customizer.php:826
+#: lib/customizer/avalon-customizer.php:784
 msgid "Frontpage multi-sidebar widget area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:831
+#: lib/customizer/avalon-customizer.php:789
 msgid "Area settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:840
+#: lib/customizer/avalon-customizer.php:798
 msgid "Disable widget area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:854
+#: lib/customizer/avalon-customizer.php:812
 #: lib/widgets/widgets-functions.php:24
 msgid "About us section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:869
-#: lib/customizer/avalon-customizer.php:898
-#: lib/customizer/avalon-customizer.php:938
-#: lib/customizer/avalon-customizer.php:966
-#: lib/customizer/avalon-customizer.php:1008
+#: lib/customizer/avalon-customizer.php:817
+#: lib/customizer/avalon-customizer.php:846
+#: lib/customizer/avalon-customizer.php:886
+#: lib/customizer/avalon-customizer.php:914
+#: lib/customizer/avalon-customizer.php:952
+msgid "Settings"
+msgstr ""
+
+#: lib/customizer/avalon-customizer.php:827
+#: lib/customizer/avalon-customizer.php:856
+#: lib/customizer/avalon-customizer.php:896
+#: lib/customizer/avalon-customizer.php:924
+#: lib/customizer/avalon-customizer.php:962
 msgid "Disable section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:883
+#: lib/customizer/avalon-customizer.php:841
 msgid "Focus section settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:905
+#: lib/customizer/avalon-customizer.php:863
 #: template-parts/front-page/frontpage-focus-widget-area.php:16
 msgid "Focus widget area title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:910
-#: lib/customizer/avalon-customizer.php:976
-#: lib/customizer/avalon-customizer.php:1019
+#: lib/customizer/avalon-customizer.php:868
+#: lib/customizer/avalon-customizer.php:934
+#: lib/customizer/avalon-customizer.php:973
 msgid "Section title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:923
+#: lib/customizer/avalon-customizer.php:881
 msgid "About products section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:951
-#: lib/customizer/avalon-customizer.php:972
+#: lib/customizer/avalon-customizer.php:909
+#: lib/customizer/avalon-customizer.php:930
 #: lib/widgets/widgets-functions.php:28
 #: template-parts/front-page/frontpage-overview-widget-area.php:16
 msgid "WP-Property overview of listings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:993
+#: lib/customizer/avalon-customizer.php:947
 #: lib/widgets/widgets-functions.php:30
 msgid "Flip widgets section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1015
+#: lib/customizer/avalon-customizer.php:969
 #: template-parts/front-page/frontpage-flip-widget-area.php:16
 msgid "WP-Property addons"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1032
+#: lib/customizer/avalon-customizer.php:986
 msgid "Frontpage container section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1037
+#: lib/customizer/avalon-customizer.php:991
 msgid "Frontpage container settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1046
+#: lib/customizer/avalon-customizer.php:1000
 msgid "Disable default content on front page"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1059
+#: lib/customizer/avalon-customizer.php:1013
 msgid "Footer section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1064
+#: lib/customizer/avalon-customizer.php:1018
 msgid "Footer Logo settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1166
-#: lib/customizer/avalon-customizer.php:1177
+#: lib/customizer/avalon-customizer.php:1120
+#: lib/customizer/avalon-customizer.php:1131
 msgid "Copyrights"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:25
+#: lib/widgets/register-default-widgets.php:204
+#: template-parts/front-page/frontpage-flip-widget-area.php:27
+#: template-parts/front-page/frontpage-focus-widget-area.php:26
+msgid "WP-Property: Walk Score"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:26
+#: lib/widgets/register-default-widgets.php:205
+#: template-parts/front-page/frontpage-flip-widget-area.php:28
+#: template-parts/front-page/frontpage-focus-widget-area.php:27
+msgid ""
+"Adds Walk Score's and Neighborhood Map's Widgets and Shortcodes to your Site "
+"powered by WP-Property plugin. And allows to sort and search your listings "
+"by Walk Score."
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:29
+#: lib/widgets/register-default-widgets.php:42
+#: lib/widgets/register-default-widgets.php:55
+#: lib/widgets/register-default-widgets.php:68
+#: template-parts/front-page/frontpage-focus-widget-area.php:30
+#: template-parts/front-page/frontpage-focus-widget-area.php:41
+#: template-parts/front-page/frontpage-focus-widget-area.php:52
+#: template-parts/front-page/frontpage-focus-widget-area.php:63
+msgid "More details"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:38
+#: lib/widgets/register-default-widgets.php:391
+#: template-parts/front-page/frontpage-flip-widget-area.php:197
+#: template-parts/front-page/frontpage-focus-widget-area.php:37
+msgid "WP-Property: Slideshow"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:39
+#: lib/widgets/register-default-widgets.php:392
+#: template-parts/front-page/frontpage-flip-widget-area.php:198
+#: template-parts/front-page/frontpage-focus-widget-area.php:38
+msgid ""
+"Allows you to insert a slideshow into any property page, home page, or "
+"virtually anywhere in your blog."
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:51
+#: lib/widgets/register-default-widgets.php:402
+#: template-parts/front-page/frontpage-flip-widget-area.php:207
+#: template-parts/front-page/frontpage-focus-widget-area.php:48
+msgid "WP-Property: Super Map"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:52
+#: lib/widgets/register-default-widgets.php:403
+#: template-parts/front-page/frontpage-flip-widget-area.php:208
+#: template-parts/front-page/frontpage-focus-widget-area.php:49
+msgid ""
+"Lets you put a large interactive map virtually anywhere in your WordPress "
+"setup. The map lets your visitors quickly view the location of all your "
+"properties, and filter them down by attributes."
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:64
+#: lib/widgets/register-default-widgets.php:347
+#: template-parts/front-page/frontpage-flip-widget-area.php:157
+#: template-parts/front-page/frontpage-focus-widget-area.php:59
+msgid "WP-Property: Importer"
+msgstr ""
+
+#: lib/widgets/register-default-widgets.php:65
+#: lib/widgets/register-default-widgets.php:348
+#: template-parts/front-page/frontpage-flip-widget-area.php:158
+#: template-parts/front-page/frontpage-focus-widget-area.php:60
+msgid ""
+"The XMLI Importer enables you to automatically import property listings "
+"directly into your website. This includes MLS, RETS, XML, CSV formats. "
+"Properties are created, merged, removed, or updated according to rules you "
+"specify."
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:82
@@ -705,19 +800,6 @@ msgstr ""
 msgid "424 E Rose Street"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:204
-#: template-parts/front-page/frontpage-flip-widget-area.php:27
-msgid "WP-Property: Walk Score"
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:205
-#: template-parts/front-page/frontpage-flip-widget-area.php:28
-msgid ""
-"Adds Walk Score's and Neighborhood Map's Widgets and Shortcodes to your Site "
-"powered by WP-Property plugin. And allows to sort and search your listings "
-"by Walk Score."
-msgstr ""
-
 #: lib/widgets/register-default-widgets.php:215
 #: template-parts/front-page/frontpage-flip-widget-area.php:37
 msgid "WP-CRM: Group Messages"
@@ -866,20 +948,6 @@ msgid ""
 "submitted for free or you can use Sponsored Listings option."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:347
-#: template-parts/front-page/frontpage-flip-widget-area.php:157
-msgid "WP-Property: Importer"
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:348
-#: template-parts/front-page/frontpage-flip-widget-area.php:158
-msgid ""
-"The XMLI Importer enables you to automatically import property listings "
-"directly into your website. This includes MLS, RETS, XML, CSV formats. "
-"Properties are created, merged, removed, or updated according to rules you "
-"specify."
-msgstr ""
-
 #: lib/widgets/register-default-widgets.php:358
 #: template-parts/front-page/frontpage-flip-widget-area.php:167
 msgid "WP-Property: PDF Flyer"
@@ -914,31 +982,6 @@ msgstr ""
 msgid ""
 "Allows you to insert a responsive slideshow into any property page with "
 "lightbox option"
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:391
-#: template-parts/front-page/frontpage-flip-widget-area.php:197
-msgid "WP-Property: Slideshow"
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:392
-#: template-parts/front-page/frontpage-flip-widget-area.php:198
-msgid ""
-"Allows you to insert a slideshow into any property page, home page, or "
-"virtually anywhere in your blog."
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:402
-#: template-parts/front-page/frontpage-flip-widget-area.php:207
-msgid "WP-Property: Super Map"
-msgstr ""
-
-#: lib/widgets/register-default-widgets.php:403
-#: template-parts/front-page/frontpage-flip-widget-area.php:208
-msgid ""
-"Lets you put a large interactive map virtually anywhere in your WordPress "
-"setup. The map lets your visitors quickly view the location of all your "
-"properties, and filter them down by attributes."
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:413
@@ -1046,14 +1089,6 @@ msgstr ""
 msgid "About products"
 msgstr ""
 
-#: paged.php:11
-msgid "Pages:"
-msgstr ""
-
-#: paged.php:15
-msgid "Page"
-msgstr ""
-
 #: property-overview.php:28
 msgid "Featured"
 msgstr ""
@@ -1088,7 +1123,7 @@ msgid "Your Name"
 msgstr ""
 
 #: template-parts/forms/default-contact-us.php:13
-#: template-parts/header/header-bar.php:151
+#: template-parts/header/header-bar.php:155
 msgid "Your Email"
 msgstr ""
 
@@ -1107,24 +1142,29 @@ msgid ""
 "Service!<br /><br /><strong>Other WP-Property Features</strong>"
 msgstr ""
 
-#: template-parts/header/header-bar.php:132
+#: template-parts/header/header-bar.php:136
 msgid "Login form"
 msgstr ""
 
-#: template-parts/header/header-bar.php:143
+#: template-parts/header/header-bar.php:147
 msgid "Registration form"
 msgstr ""
 
-#: template-parts/header/header-bar.php:147
+#: template-parts/header/header-bar.php:151
 msgid "Your Login"
 msgstr ""
 
-#: template-parts/header/header-bar.php:154
+#: template-parts/header/header-bar.php:158
 msgid "Register"
 msgstr ""
 
-#: template-parts/header/header-bar.php:161
+#: template-parts/header/header-bar.php:165
 msgid "Sorry, User can NOT register!"
+msgstr ""
+
+#: template-parts/header/header-secondary.php:91
+#, php-format
+msgid "Page %s of %s"
 msgstr ""
 
 #: template-parts/navigation/navigation-additional.php:17
@@ -1137,10 +1177,6 @@ msgstr ""
 
 #: template-parts/navigation/navigation-additional.php:24
 msgid "Contact Us"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "WP Avalon"
 msgstr ""
 
 #. Theme URI of the plugin/theme

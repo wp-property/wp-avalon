@@ -21,54 +21,54 @@ add_action('after_switch_theme', function() {
 
     /* widget #1 */
     $active_widgets['focus-section'][0] = 'avalon-focus-widget-' . $avalon_counter;
-    $headlight_widget_content[$avalon_counter] = array(
-        'title' => 'WP-Property: Walk Score',
-        'text' => 'Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.',
+    $focus_widget_content[$avalon_counter] = array(
+        'title' => __('WP-Property: Walk Score', 'wp-avalon'),
+        'text' => __('Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.', 'wp-avalon'),
         'link' => 'https://www.usabilitydynamics.com/product/wp-property-walkscore',
         'price' => '$35.00',
-        'more_label' => 'More details',
+        'more_label' => __('More details', 'wp-avalon'),
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-1.png'
     );
-    update_option('widget_avalon-focus-widget', $headlight_widget_content);
+    update_option('widget_avalon-focus-widget', $focus_widget_content);
     $avalon_counter++;
 
     /* widget #2 */
     $active_widgets['focus-section'][] = 'avalon-focus-widget-' . $avalon_counter;
-    $headlight_widget_content[$avalon_counter] = array(
-        'title' => 'WP-Property: Slideshow',
-        'text' => 'Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.',
+    $focus_widget_content[$avalon_counter] = array(
+        'title' => __('WP-Property: Slideshow', 'wp-avalon'),
+        'text' => __('Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.', 'wp-avalon'),
         'link' => 'https://www.usabilitydynamics.com/product/wp-property-slideshow',
         'price' => '$50.00',
-        'more_label' => 'More details',
+        'more_label' => __('More details', 'wp-avalon'),
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-2.png'
     );
-    update_option('widget_avalon-focus-widget', $headlight_widget_content);
+    update_option('widget_avalon-focus-widget', $focus_widget_content);
     $avalon_counter++;
 
     /* widget #3 */
     $active_widgets['focus-section'][] = 'avalon-focus-widget-' . $avalon_counter;
-    $headlight_widget_content[$avalon_counter] = array(
-        'title' => 'WP-Property: Super Map',
-        'text' => 'Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.',
+    $focus_widget_content[$avalon_counter] = array(
+        'title' => __('WP-Property: Super Map', 'wp-avalon'),
+        'text' => __('Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.', 'wp-avalon'),
         'link' => 'https://www.usabilitydynamics.com/product/wp-property-supermap',
         'price' => '$50.00',
-        'more_label' => 'More details',
+        'more_label' => __('More details', 'wp-avalon'),
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-3.png'
     );
-    update_option('widget_avalon-focus-widget', $headlight_widget_content);
+    update_option('widget_avalon-focus-widget', $focus_widget_content);
     $avalon_counter++;
 
     /* widget #4 */
     $active_widgets['focus-section'][] = 'avalon-focus-widget-' . $avalon_counter;
-    $headlight_widget_content[$avalon_counter] = array(
-        'title' => 'WP-Property: Importer',
-        'text' => 'The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.',
+    $focus_widget_content[$avalon_counter] = array(
+        'title' => __('WP-Property: Importer', 'wp-avalon'),
+        'text' => __('The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.', 'wp-avalon'),
         'link' => 'https://www.usabilitydynamics.com/product/wp-property-importer',
         'price' => '$175.00',
-        'more_label' => 'More details',
+        'more_label' => __('More details', 'wp-avalon'),
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-4.png'
     );
-    update_option('widget_avalon-focus-widget', $headlight_widget_content);
+    update_option('widget_avalon-focus-widget', $focus_widget_content);
     $avalon_counter++;
 
     update_option('sidebars_widgets', $active_widgets);
@@ -78,7 +78,7 @@ add_action('after_switch_theme', function() {
   if (empty($active_widgets[$avalon_frontpage_sidebars['about-us-section']])):
     $avalon_counter = 1;
     $active_widgets['about-us-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $aboutus_widget_content[$avalon_counter] = array(
         'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
         'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
         'featured-left-fields' => array(
@@ -96,7 +96,7 @@ add_action('after_switch_theme', function() {
             '4' => __('Basic free support included', 'wp-avalon'),
         ),
     );
-    update_option('widget_avalon-aboutus-widget', $overview_widget_content);
+    update_option('widget_avalon-aboutus-widget', $aboutus_widget_content);
     $avalon_counter++;
     update_option('sidebars_widgets', $active_widgets);
 
@@ -105,7 +105,7 @@ add_action('after_switch_theme', function() {
   if (empty($active_widgets[$avalon_frontpage_sidebars['about-products-section']])):
     $avalon_counter = 2;
     $active_widgets['about-products-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $about_products_widget_content[$avalon_counter] = array(
         'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
         'text' => __('More than a Plugin – A Real Estate Management System! Dynamic Property Listings – No Coding Required! Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
         'featured-left-fields' => array(
@@ -124,7 +124,7 @@ add_action('after_switch_theme', function() {
             '4' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
         ),
     );
-    update_option('widget_avalon-aboutus-widget', $overview_widget_content);
+    update_option('widget_avalon-aboutus-widget', $about_products_widget_content);
     $avalon_counter++;
     update_option('sidebars_widgets', $active_widgets);
 
@@ -200,222 +200,222 @@ add_action('after_switch_theme', function() {
 
     /* widget #1 */
     $active_widgets['flip-section'][0] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Walk Score', 'wp-avalon'),
         'description' => __('Adds Walk Score\'s and Neighborhood Map\'s Widgets and Shortcodes to your Site powered by WP-Property plugin. And allows to sort and search your listings by Walk Score.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-walkscore',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-1.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #2 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-CRM: Group Messages', 'wp-avalon'),
         'description' => __('Send group messages to your users from within your WordPress control panel.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-crm-group-messages',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-5.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #3 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Business Locations', 'wp-avalon'),
         'description' => __('Free Add-on to manage locations for your business built with WP-Invoice plugin.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-business-locations',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-6.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #4 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Electronic Signature', 'wp-avalon'),
         'description' => __('Make your clients sign invoices before payment to get secure information that will confirm payment.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-electronic-signature',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-7.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #5 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Paypal Pro', 'wp-avalon'),
         'description' => __('PayPal Payments Pro has the customization capability, technical maturity, and proven security that is needed to build professional-grade eCommerce sites.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-paypal-pro',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-8.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #6 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: PDF', 'wp-avalon'),
         'description' => __('Creates PDF versions of your invoices, receipts and that you can easily email and print.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-pdf',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-9.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #7 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Power Tools', 'wp-avalon'),
         'description' => __('Make you invoicing solutions more powerful with WP-Invoice and Power Tools. Sales charts, import and export ability!', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-power-tools',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-10.jpg'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #8 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Quotes', 'wp-avalon'),
         'description' => __('The Quotes Add-on let’s you automate your workflow by creating quotes and letting your clients ask questions regarding quotes directly on your website. Once a quote is approved, it is converted to an invoice with a single click.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-quotes',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-11.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #9 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: Single Page Checkout', 'wp-avalon'),
         'description' => __('Makes it easy to create one-page-checkout forms that can accept a variety of different payment gateways, such as Authorize.net, PayPal and others.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-single-page-checkout',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-12.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #10 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Invoice: USAePay', 'wp-avalon'),
         'description' => __('USAePay is a payment gateway service provider allowing merchants to accept credit card and electronic check payments through their Web site and mobile devices.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-usa-epay',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-13.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #11 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Agents', 'wp-avalon'),
         'description' => __('Allows to create new Real Estate agent accounts, associate them with properties, filter properties by agent and more.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-agents',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-14.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #12 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Facebook Tabs', 'wp-avalon'),
         'description' => __('The Add-on allows you to add a tab with property listings or any other content from your website, on a Facebook Page.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-facebook-tabs',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-15.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #13 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: FEPS', 'wp-avalon'),
         'description' => __('Allows to create front-end forms that facilitate a simple way for website visitors to submit, edit and delete listings from frontend. Listings can be submitted for free or you can use Sponsored Listings option.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-feps',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-16.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #14 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Importer', 'wp-avalon'),
         'description' => __('The XMLI Importer enables you to automatically import property listings directly into your website. This includes MLS, RETS, XML, CSV formats. Properties are created, merged, removed, or updated according to rules you specify.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-importer',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-4.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #15 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: PDF Flyer', 'wp-avalon'),
         'description' => __('Allows the website owner to quickly generate PDF flyers, or brochures, ready for printing or download.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-pdf-flyer',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-17.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #16 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Power Tools', 'wp-avalon'),
         'description' => __('Extra functionality which includes capability management, white labeling the control panel, and changes menu titles.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-power-tools',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-18.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #17 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Responsive Slideshow', 'wp-avalon'),
         'description' => __('Allows you to insert a responsive slideshow into any property page with lightbox option', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-responsive-slideshow',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-19.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #18 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Slideshow', 'wp-avalon'),
         'description' => __('Allows you to insert a slideshow into any property page, home page, or virtually anywhere in your blog.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-slideshow',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-2.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #19 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Super Map', 'wp-avalon'),
         'description' => __('Lets you put a large interactive map virtually anywhere in your WordPress setup. The map lets your visitors quickly view the location of all your properties, and filter them down by attributes.', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-supermap',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-3.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     /* widget #20 */
     $active_widgets['flip-section'][] = 'avalon-flip-widget-' . $avalon_counter;
-    $overview_widget_content[$avalon_counter] = array(
+    $flip_widget_content[$avalon_counter] = array(
         'title' => __('WP-Property: Terms', 'wp-avalon'),
         'description' => __('Create any number of additional taxonomies and categorize your listings into search-friendly terms. ', 'wp-avalon'),
         'url' => 'https://www.usabilitydynamics.com/product/wp-property-terms',
         'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-20.png'
     );
-    update_option('widget_avalon-flip-widget', $overview_widget_content);
+    update_option('widget_avalon-flip-widget', $flip_widget_content);
     $avalon_counter++;
 
     update_option('sidebars_widgets', $active_widgets);

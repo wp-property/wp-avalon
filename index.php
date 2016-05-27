@@ -1,6 +1,6 @@
 <?php
 /**
- * Main template file
+ * Index template file
  *
  * @package Usability Dynamics, Inc.
  * @subpackage Avalon

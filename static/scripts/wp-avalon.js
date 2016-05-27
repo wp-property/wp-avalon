@@ -207,7 +207,7 @@ jQuery(function() {
    * 
    * @author vorobjov@UD
    */
-  jQuery('select:not(.selectpicker)').selectpicker({
+  jQuery('select:not(.selectpicker):not(.wpi_checkout_select_payment_method_dropdown)').selectpicker({
     style: 'btn-default'
   });
 

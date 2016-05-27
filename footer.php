@@ -22,7 +22,7 @@
             if (!empty(get_theme_mod('avalon_copyrights_settings'))) :
               echo get_theme_mod('avalon_copyrights_settings');
             else :
-              echo '&copy; ' . date("Y") . ' WP Avalon. All rights reserved.';
+              printf(__('&copy;%s WP Avalon. All rights reserved.', 'wp-avalon'), date("Y"));
             endif;
             ?>
           </p>

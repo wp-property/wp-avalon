@@ -544,7 +544,7 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo_icon_settings', array(
-      'label' => __('Logo icon (Recommended height 20px)', 'wp-avalon'),
+      'label' => __('Logo icon', 'wp-avalon'),
       'section' => 'header_logo_settings',
   )));
 //    Logo img margin top
@@ -581,7 +581,7 @@ function avalon_customize_register($wp_customize) {
   ));
 //    logo text settings
   $wp_customize->add_setting('header_logo_text_settings', array(
-      'default' => 'WP Avalon',
+      'default' => __('WP Avalon', 'wp-avalon'),
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));
@@ -627,55 +627,55 @@ function avalon_customize_register($wp_customize) {
   ));
 
   // Header Contact us settings
-  $wp_customize->add_section('header_contuctus_settings_section', array(
+  $wp_customize->add_section('header_contactus_settings_section', array(
       'title' => __('Contact us settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'priority' => 6,
   ));
   // Disable "Contact us" area
-  $wp_customize->add_setting('header_contuctus_disable_settings', array(
+  $wp_customize->add_setting('header_contactus_disable_settings', array(
       'default' => '',
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_contuctus_disable_settings', array(
+  $wp_customize->add_control('header_contactus_disable_settings', array(
       'label' => __('Disable "Contact us" area', 'wp-avalon'),
-      'section' => 'header_contuctus_settings_section',
+      'section' => 'header_contactus_settings_section',
       'type' => 'checkbox',
       'priority' => 1
   ));
   // "Contact us" area title
-  $wp_customize->add_setting('header_contuctus_title_settings', array(
+  $wp_customize->add_setting('header_contactus_title_settings', array(
       'capability' => 'edit_theme_options',
       'default' => __('CONTACT FORM', 'wp-avalon'),
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_contuctus_title_settings', array(
+  $wp_customize->add_control('header_contactus_title_settings', array(
       'label' => __('"Contact us" area title', 'wp-avalon'),
-      'section' => 'header_contuctus_settings_section',
+      'section' => 'header_contactus_settings_section',
       'type' => 'text',
       'priority' => 2
   ));
   // "Contact us" area description
-  $wp_customize->add_setting('header_contuctus_description_settings', array(
+  $wp_customize->add_setting('header_contactus_description_settings', array(
       'capability' => 'edit_theme_options',
       'default' => __('Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.', 'wp-avalon'),
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_contuctus_description_settings', array(
+  $wp_customize->add_control('header_contactus_description_settings', array(
       'label' => __('"Contact us" area description', 'wp-avalon'),
       'description' => $shortcode_notice,
-      'section' => 'header_contuctus_settings_section',
+      'section' => 'header_contactus_settings_section',
       'type' => 'textarea',
       'priority' => 3
   ));
   // "Contact us" form options
-  $wp_customize->add_setting('header_contuctus_form_settings', array(
+  $wp_customize->add_setting('header_contactus_form_settings', array(
       'default' => 'default',
       'capability' => 'edit_theme_options'
   ));
-  $wp_customize->add_control('header_contuctus_form_settings', array(
-      'label' => __('Contact us foms settings', 'themename'),
-      'section' => 'header_contuctus_settings_section',
+  $wp_customize->add_control('header_contactus_form_settings', array(
+      'label' => __('Contact us foms settings', 'wp-avalon'),
+      'section' => 'header_contactus_settings_section',
       'priority' => 4,
       'type' => 'radio',
       'choices' => array(
@@ -684,26 +684,26 @@ function avalon_customize_register($wp_customize) {
       ),
   ));
   // "Contact us" custom form shortcode
-  $wp_customize->add_setting('header_contuctus_shortcode_settings', array(
+  $wp_customize->add_setting('header_contactus_shortcode_settings', array(
       'capability' => 'edit_theme_options',
       'default' => '',
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_contuctus_shortcode_settings', array(
+  $wp_customize->add_control('header_contactus_shortcode_settings', array(
       'label' => __('"Contact us" custom form shortcode', 'wp-avalon'),
       'description' => $shortcode_notice,
-      'section' => 'header_contuctus_settings_section',
+      'section' => 'header_contactus_settings_section',
       'type' => 'text',
       'priority' => 5
   ));
   // "Contact us" custom form CSS
-  $wp_customize->add_setting('header_contuctus_css_settings', array(
+  $wp_customize->add_setting('header_contactus_css_settings', array(
       'capability' => 'edit_theme_options',
       'default' => ''
   ));
-  $wp_customize->add_control('header_contuctus_css_settings', array(
+  $wp_customize->add_control('header_contactus_css_settings', array(
       'label' => __('"Contact us" custom form CSS', 'wp-avalon'),
-      'section' => 'header_contuctus_settings_section',
+      'section' => 'header_contactus_settings_section',
       'type' => 'textarea',
       'priority' => 6
   ));
@@ -773,49 +773,7 @@ function avalon_customize_register($wp_customize) {
       'type' => 'textarea',
       'priority' => 5
   ));
-
-
-// -----------------------------------------------------------------------------
-//    WP Property settings
-// -----------------------------------------------------------------------------
-  if (function_exists('ud_check_wp_property')) {
-    $wp_customize->add_panel('wp_property_settings_control', array(
-        'priority' => 32,
-        'capability' => 'edit_theme_options',
-        'title' => __('WP Property settings', 'wp-avalon')
-    ));
-
-    // Main settings
-    $wp_customize->add_section('wp_property_settings_section', array(
-        'title' => __('Settings', 'wp-avalon'),
-        'panel' => 'wp_property_settings_control',
-        'priority' => 1,
-    ));
-
-    // Show default property search
-    $wp_customize->add_setting('wp_property_show_default_property_search', array(
-        'default' => '1'
-    ));
-    $wp_customize->add_control('wp_property_show_default_property_search', array(
-        'label' => __('Show default property search on "Front page" widget area', 'wp-avalon'),
-        'section' => 'wp_property_settings_section',
-        'type' => 'checkbox',
-        'priority' => 1
-    ));
-  } else {
-    $wp_customize->add_section('wp_property_disabled_settings_section', array(
-        'title' => __('WP Property settings', 'wp-avalon'),
-        'priority' => 32,
-    ));
-    // disable section
-    $wp_customize->add_setting('wp_property_disabled_settings_section', array(
-        'sanitize_callback' => 'avalon_closed_section'
-    ));
-    $wp_customize->add_control(new WP_Avalon_Theme_Support_WP_Property($wp_customize, 'wp_property_disabled_settings_section', array(
-        'section' => 'wp_property_disabled_settings_section',
-    )));
-  }
-
+  
 
 // -----------------------------------------------------------------------------
 //    Fronpage top widget area
@@ -978,12 +936,8 @@ function avalon_customize_register($wp_customize) {
       'type' => 'text',
       'priority' => 2
   ));
-  // Property overview widget area
-//  $wp_customize->add_section('property_overview_widget_area', array(
-//      'title' => __('Property overview widget area', 'wp-avalon'),
-//      'panel' => 'property_overview_settings_control',
-//      'priority' => 2,
-//  ));
+  
+  
 //  --------------------------------------------------------------------------
 //  Flip section
 //  --------------------------------------------------------------------------
@@ -1072,7 +1026,7 @@ function avalon_customize_register($wp_customize) {
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_logo_icon_settings', array(
-      'label' => __('Logo icon (Recommended height 20px)', 'wp-avalon'),
+      'label' => __('Logo icon', 'wp-avalon'),
       'section' => 'footer_logo_settings',
       'priority' => 1
   )));
@@ -1112,7 +1066,7 @@ function avalon_customize_register($wp_customize) {
   ));
 //    Footer logo text settings
   $wp_customize->add_setting('footer_logo_text_settings', array(
-      'default' => 'WP Avalon',
+      'default' => __('WP Avalon', 'wp-avalon'),
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));

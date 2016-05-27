@@ -8,7 +8,7 @@
  * @since Avalon 1.0
  */
 $login_options_value = get_theme_mod('header_main_show_login_register_button', '1');
-$contact_us_area = get_theme_mod('header_contuctus_disable_settings', '');
+$contact_us_area = get_theme_mod('header_contactus_disable_settings', '');
 
 echo '<div class="na__wrapper" data-template="template-parts/navigation/navigation-additional">';
 

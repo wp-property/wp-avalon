@@ -87,7 +87,9 @@ else : // if is front page
         global $wp_query;
         $total = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
         $current = get_query_var('paged') ? intval(get_query_var('paged')) : 1;
-        echo '<h3 class="page-tagline">Page ' . $current . ' of ' . $total . '</h3>';
+        echo '<h3 class="page-tagline">';
+        printf(__('Page %s of %s', 'wp-avalon'), $current, $total);
+        echo '</h3>';
       endif;
     endif;
     echo '</div>'; // .container

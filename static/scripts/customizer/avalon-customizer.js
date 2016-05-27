@@ -1,17 +1,17 @@
 (function($) {
 
   /* avalon contact us section */
-  wp.customize('header_contuctus_title_settings', function(value) {
+  wp.customize('header_contactus_title_settings', function(value) {
     value.bind(function(newval) {
       $('.hb__contact-form .hb__title').html(newval);
     });
   });
-  wp.customize('header_contuctus_description_settings', function(value) {
+  wp.customize('header_contactus_description_settings', function(value) {
     value.bind(function(newval) {
       $('.hb__contact-form .hbcf__description').html(newval);
     });
   });
-  wp.customize('header_contuctus_disable_settings', function(value) {
+  wp.customize('header_contactus_disable_settings', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
         $('#contacts-bar').css('display', 'block');

@@ -6,18 +6,18 @@
  * @subpackage Avalon
  * @since Avalon 1.0
  */
-$contuctus_disable = get_theme_mod('header_contuctus_disable_settings', '');
-$contuctus_title = get_theme_mod('header_contuctus_title_settings', __('CONTACT FORM', 'wp-avalon'));
-$contuctus_description = get_theme_mod('header_contuctus_description_settings', __('Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.', 'wp-avalon'));
-$form_settings = get_theme_mod('header_contuctus_form_settings', 'default');
-$CF_shortcode = get_theme_mod('header_contuctus_shortcode_settings', '');
-$CF_styles = get_theme_mod('header_contuctus_css_settings', '');
+$contactus_disable = get_theme_mod('header_contactus_disable_settings', '');
+$contactus_title = get_theme_mod('header_contactus_title_settings', __('CONTACT FORM', 'wp-avalon'));
+$contactus_description = get_theme_mod('header_contactus_description_settings', __('Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.', 'wp-avalon'));
+$form_settings = get_theme_mod('header_contactus_form_settings', 'default');
+$CF_shortcode = get_theme_mod('header_contactus_shortcode_settings', '');
+$CF_styles = get_theme_mod('header_contactus_css_settings', '');
 $location_disable = get_theme_mod('header_location_area_settings', '');
 $location_title = get_theme_mod('header_location_area_title', __('Location & Address', 'wp-avalon'));
 $location_map_code = get_theme_mod('header_location_area_map_location', '');
 $location_map_image = get_theme_mod('header_location_area_image', '');
 $location_text = get_theme_mod('header_location_area_description', '');
-if ($contuctus_disable != 1) :
+if ($contactus_disable != 1) :
   ?>
   <div class="header-bar" id="contacts-bar" data-template="template-parts/header/header-bar">
     <div class="container">
@@ -28,15 +28,15 @@ if ($contuctus_disable != 1) :
              ">
           <div class="hb__contact-form">
             <?php
-            if (!empty($contuctus_title)) :
+            if (!empty($contactus_title)) :
               echo '<div class="hb__title">';
-              echo $contuctus_title;
+              echo $contactus_title;
               echo '</div>';
             endif;
 
-            if (!empty($contuctus_description)) :
+            if (!empty($contactus_description)) :
               echo '<div class="hbcf__description">';
-              echo do_shortcode($contuctus_description);
+              echo do_shortcode($contactus_description);
               echo '</div>';
             endif;
             ?>
@@ -58,7 +58,7 @@ if ($contuctus_disable != 1) :
         </div>
         <?php if ($location_disable != 1) : ?>
           <div class="col-md-6
-          <?php if ($contuctus_disable == 1) echo ' col-md-offset-3'; ?>
+          <?php if ($contactus_disable == 1) echo ' col-md-offset-3'; ?>
                ">
             <div class="hb__location">
               <div class="hb__title"><?php echo $location_title; ?></div>

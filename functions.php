@@ -182,12 +182,12 @@ function default_contact_us() {
     $from = $user_email;
     $name = $user_name;
     $text = $user_message;
-    $subject = 'Contact form from ' . get_bloginfo('name');
+    $subject = __('Contact form from ', 'wp-avalon') . get_bloginfo('name');
     $message = $name . " (" . $from . ") \n\n" . $text;
 
-    $headers = "From:" . $from;
+    $headers = __('From:', 'wp-avalon') . $from;
     wp_mail($to, $subject, $message, $headers);
-    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    printf(__('Mail Sent. Thank you %s, we will contact you shortly.', 'wp-avalon'), $name);
   }
   die();
 }
