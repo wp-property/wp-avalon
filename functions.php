@@ -110,6 +110,16 @@ add_action('widgets_init', 'avalon_widgets_init');
  * 
  * @since Avalon 1.0
  */
+function wp_avalon_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wp_avalon_content_width', 1140 );
+}
+add_action( 'after_setup_theme', 'wp_avalon_content_width', 0 );
+
+/**
+ * Registration redirect
+ * 
+ * @since Avalon 1.0
+ */
 function avalon_registration_redirect($registration_redirect) {
   return site_url();
 }
@@ -419,7 +429,7 @@ function avalon_property_overview_image($args = '') {
     ob_start();
     ?>
     <div class="property_image">
-      <a href="<?php echo $thumbnail_link; ?>" title="<?php echo $property['post_title'] . (!empty($property['parent_title']) ? __(' of ', ud_get_wp_property()->domain) . $property['parent_title'] : "" ); ?>" class="property_overview_thumb property_overview_thumb_<?php echo $thumbnail_size; ?> <?php echo $link_class; ?> thumbnail" rel="<?php echo $property['post_name'] ?>">
+      <a href="<?php echo $thumbnail_link; ?>" title="<?php echo $property['post_title'] . (!empty($property['parent_title']) ? __(' of ', 'wp-avalon') . $property['parent_title'] : "" ); ?>" class="property_overview_thumb property_overview_thumb_<?php echo $thumbnail_size; ?> <?php echo $link_class; ?> thumbnail" rel="<?php echo $property['post_name'] ?>">
         <img width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>" src="<?php echo $image['link']; ?>" alt="<?php echo $property['post_title']; ?>" style="width:<?php echo $image['width']; ?>px;height:<?php echo $image['height']; ?>px;"/>
       </a>
     </div>

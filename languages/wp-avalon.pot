@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-27 16:35+0300\n"
-"PO-Revision-Date: 2016-05-27 16:34+0300\n"
+"POT-Creation-Date: 2016-05-27 17:01+0300\n"
+"PO-Revision-Date: 2016-05-27 17:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -87,44 +87,44 @@ msgstr ""
 msgid "Appears at the right side on all pages"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:195
 msgid "Contact form from "
 msgstr ""
 
-#: functions.php:188
+#: functions.php:198
 msgid "From:"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:200
 #, php-format
 msgid "Mail Sent. Thank you %s, we will contact you shortly."
 msgstr ""
 
-#: functions.php:310
+#: functions.php:320
 msgid "Description"
 msgstr ""
 
-#: functions.php:334
+#: functions.php:344
 msgid "Yes"
 msgstr ""
 
-#: functions.php:340
+#: functions.php:350
 msgid "No"
 msgstr ""
 
-#: functions.php:359
+#: functions.php:369
 msgid "Overview"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:374
 msgid "Child Properties"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:385
 msgid "Get directions"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:432
 msgid " of "
 msgstr ""
 
@@ -1106,6 +1106,16 @@ msgstr ""
 
 #: template-parts/content/content-none.php:12
 msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: template-parts/content/content-page.php:14
+#: template-parts/content/content-single.php:19
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content/content-page.php:18
+#: template-parts/content/content-single.php:23
+msgid "Page"
 msgstr ""
 
 #: template-parts/content/content-property-overview-page.php:14

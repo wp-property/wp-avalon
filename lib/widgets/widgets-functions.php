@@ -1,9 +1,9 @@
 <?php
 
-include_once 'widget-avalon_widget_aboutus.php';
-include_once 'widget-avalon_widget_focus.php';
-include_once 'widget-avalon_widget_overview.php';
-include_once 'widget-avalon_widget_flip.php';
+get_template_part('lib/widgets/widget-avalon_widget_aboutus', 'wp-avalon');
+get_template_part('lib/widgets/widget-avalon_widget_focus', 'wp-avalon');
+get_template_part('lib/widgets/widget-avalon_widget_overview', 'wp-avalon');
+get_template_part('lib/widgets/widget-avalon_widget_flip', 'wp-avalon');
 
 add_action('widgets_init', function() {
 

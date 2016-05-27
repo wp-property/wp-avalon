@@ -966,7 +966,7 @@ function avalon_customize_register($wp_customize) {
   ));
   // Flip section title
   $wp_customize->add_setting('flip_section_title', array(
-      'default' => __('WP-Property addons', 'wp-title'),
+      'default' => __('WP-Property addons', 'wp-avalon'),
       'transport' => 'postMessage'
   ));
   $wp_customize->add_control('flip_section_title', array(
