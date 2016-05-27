@@ -1230,7 +1230,8 @@ function avalon_customize_css() {
       background-color: <?php echo get_theme_mod('avalon_secondary_button_color', '#19294c'); ?>;
       color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
     }
-
+    
+    body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a,
     .widget.widget_featuredpropertieswidget .view-all .btn,
     .wpp_widget.widget_featuredpropertieswidget .view-all .btn,
     .widget.widget_latestpropertieswidget .view-all .btn,
@@ -1278,6 +1279,7 @@ function avalon_customize_css() {
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
     }
+    body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover,
     .widget.widget_featuredpropertieswidget .view-all .btn:hover,
     .wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover,
     .widget.widget_latestpropertieswidget .view-all .btn:hover,
