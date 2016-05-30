@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-27 17:01+0300\n"
-"PO-Revision-Date: 2016-05-27 17:01+0300\n"
+"POT-Creation-Date: 2016-05-30 13:42+0300\n"
+"PO-Revision-Date: 2016-05-30 13:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -454,6 +454,7 @@ msgid "or use image"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:766
+#: template-parts/header/header-bar.php:19
 msgid "Here you can add some decription"
 msgstr ""
 

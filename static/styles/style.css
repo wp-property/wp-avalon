@@ -358,6 +358,9 @@ body .header-bar #loginform p #wp-submit:hover {
   background-color: #286090;
   border-color: #204d74;
 }
+body .header-bar .hb__location .google-map-box {
+  margin-bottom: 15px;
+}
 body header {
   background-color: #19294c;
   box-sizing: border-box;

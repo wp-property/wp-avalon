@@ -16,7 +16,7 @@ $location_disable = get_theme_mod('header_location_area_settings', '');
 $location_title = get_theme_mod('header_location_area_title', __('Location & Address', 'wp-avalon'));
 $location_map_code = get_theme_mod('header_location_area_map_location', '8300 Riverwind Ln #306, Raleigh, NC 27617, USA');
 $location_map_image = get_theme_mod('header_location_area_image', '');
-$location_text = get_theme_mod('header_location_area_description', '');
+$location_text = get_theme_mod('header_location_area_description', __('Here you can add some decription', 'wp-avalon'));
 if ($contactus_disable != 1) :
   ?>
   <div class="header-bar" id="contacts-bar" data-template="template-parts/header/header-bar">
