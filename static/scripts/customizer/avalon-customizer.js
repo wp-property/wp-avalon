@@ -297,6 +297,8 @@
       $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom').css('background-color', newval);
       $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .property_featured_label span').css('background-color', newval);
       $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label').css('background-color', newval);
+      $('body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__title').css('background-color', newval);
+      $('body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__title').css('background-color', newval);
     });
   });
   wp.customize('avalon_header_top_border_color', function(value) {

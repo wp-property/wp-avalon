@@ -1210,6 +1210,11 @@ function avalon_customize_css() {
     .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label {
       background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
     }
+    
+    body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__title, 
+    body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__title {
+      background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+    }
 
     .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
     .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_buttons_wrapper .property-overview-navigation .pages ul li a,
