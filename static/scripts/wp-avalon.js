@@ -247,7 +247,7 @@ jQuery(function() {
 
     jQuery.ajax({
       type: "POST",
-      url: ajaxurl,
+      url: avalon_ajax.ajaxurl,
       beforeSend: function() {
         /* Check the Name for blank submission*/
         var user_name = document.forms["header-contact-form"]["dcf_user_name"].value;

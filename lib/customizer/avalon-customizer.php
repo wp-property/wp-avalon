@@ -742,7 +742,7 @@ function avalon_customize_register($wp_customize) {
   // "Location" adress
   $wp_customize->add_setting('header_location_area_map_location', array(
       'capability' => 'edit_theme_options',
-      'default' => ''
+      'default' => '8300 Riverwind Ln #306, Raleigh, NC 27617, USA'
   ));
   $wp_customize->add_control('header_location_area_map_location', array(
       'label' => __('"Location" adress (for google map)', 'wp-avalon'),
