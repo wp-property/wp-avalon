@@ -3,7 +3,7 @@
 add_action('after_switch_theme', function() {
 
   $avalon_frontpage_sidebars = array(
-      'about-us-section' => 'about-us-section',
+      'aboutus-section' => 'aboutus-section',
       'focus-section' => 'focus-section',
       'about-products-section' => 'about-products-section',
       'sidebar-avalon-overview' => 'sidebar-avalon-overview',
@@ -75,59 +75,60 @@ add_action('after_switch_theme', function() {
 
   endif;
 
-  if (empty($active_widgets[$avalon_frontpage_sidebars['about-us-section']])):
+  if (empty($active_widgets[$avalon_frontpage_sidebars['aboutus-section']]) || empty($active_widgets[$avalon_frontpage_sidebars['about-products-section']])):
+
     $avalon_counter = 1;
-    $active_widgets['about-us-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
-    $aboutus_widget_content[$avalon_counter] = array(
-        'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
-        'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
-        'featured-left-fields' => array(
-            '0' => __('It is Free!!!!', 'wp-avalon'),
-            '1' => __('Grid overview template', 'wp-avalon'),
-            '2' => __('Let\'s you upload a custom logo', 'wp-avalon'),
-            '3' => __('Add your contact and company information', 'wp-avalon'),
-            '4' => __('Available for localization', 'wp-avalon'),
-        ),
-        'featured-right-fields' => array(
-            '0' => __('Compatible with WP-Property pluigin and all it\'s add-ons', 'wp-avalon'),
-            '1' => __('Useful Sidebars and widgets available', 'wp-avalon'),
-            '2' => __('Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
-            '3' => __('Fully Responsive', 'wp-avalon'),
-            '4' => __('Basic free support included', 'wp-avalon'),
-        ),
-    );
-    update_option('widget_avalon-aboutus-widget', $aboutus_widget_content);
-    $avalon_counter++;
+  
+    if (empty($active_widgets[$avalon_frontpage_sidebars['aboutus-section']])) :
+      $active_widgets['aboutus-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
+      $widget_content[$avalon_counter] = array(
+          'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
+          'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
+          'featured-left-fields' => array(
+              '0' => __('It is Free!!!!', 'wp-avalon'),
+              '1' => __('Grid overview template', 'wp-avalon'),
+              '2' => __('Let\'s you upload a custom logo', 'wp-avalon'),
+              '3' => __('Add your contact and company information', 'wp-avalon'),
+              '4' => __('Available for localization', 'wp-avalon'),
+          ),
+          'featured-right-fields' => array(
+              '0' => __('Compatible with WP-Property pluigin and all it\'s add-ons', 'wp-avalon'),
+              '1' => __('Useful Sidebars and widgets available', 'wp-avalon'),
+              '2' => __('Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
+              '3' => __('Fully Responsive', 'wp-avalon'),
+              '4' => __('Basic free support included', 'wp-avalon'),
+          ),
+      );
+      update_option('widget_avalon-aboutus-widget', $widget_content);
+      $avalon_counter++;
+    endif;
+
+    if (empty($active_widgets[$avalon_frontpage_sidebars['about-products-section']])):
+      $active_widgets['about-products-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
+      $widget_content[$avalon_counter] = array(
+          'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
+          'text' => __('More than a Plugin – A Real Estate Management System! Dynamic Property Listings – No Coding Required! Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
+          'featured-left-fields' => array(
+              '0' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
+              '1' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),
+              '2' => __('Property types follow a hierarchical format, having the ability of inheriting settings - i.e. buildings (or communities) will automatically calculate the price range of all floor-plans below them.', 'wp-avalon'),
+              '3' => __('Available for translation.', 'wp-avalon'),
+              '4' => __('SEO friendly URLs generated for every property, following the WordPress format.', 'wp-avalon'),
+              '5' => __('Integrates with Media Library, avoiding the need for additional third-party Gallery plugins.', 'wp-avalon'),
+          ),
+          'featured-right-fields' => array(
+              '0' => __('Different attributes fields inputs are available: Text Editor, Dropdown Selection, Single Checkbox, Multi-checkbox, Radio, Number, Currency, Oembed, File and Image Upload, URL, Date and Color Pickers, etc.', 'wp-avalon'),
+              '1' => __('Customizable widgets: Property Overview, Featured Properties, Property Search, Property Gallery, Child Properties, Property Terms, Property Meta', 'wp-avalon'),
+              '2' => __('Pagination and sorting works on search results.', 'wp-avalon'),
+              '3' => __('Customizable templates for different property types.', 'wp-avalon'),
+              '4' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
+          ),
+      );
+      update_option('widget_avalon-aboutus-widget', $widget_content);
+      $avalon_counter++;
+
+    endif;
     update_option('sidebars_widgets', $active_widgets);
-
-  endif;
-
-  if (empty($active_widgets[$avalon_frontpage_sidebars['about-products-section']])):
-    $avalon_counter = 2;
-    $active_widgets['about-products-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
-    $about_products_widget_content[$avalon_counter] = array(
-        'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
-        'text' => __('More than a Plugin – A Real Estate Management System! Dynamic Property Listings – No Coding Required! Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
-        'featured-left-fields' => array(
-            '0' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
-            '1' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),
-            '2' => __('Property types follow a hierarchical format, having the ability of inheriting settings - i.e. buildings (or communities) will automatically calculate the price range of all floor-plans below them.', 'wp-avalon'),
-            '3' => __('Available for translation.', 'wp-avalon'),
-            '4' => __('SEO friendly URLs generated for every property, following the WordPress format.', 'wp-avalon'),
-            '5' => __('Integrates with Media Library, avoiding the need for additional third-party Gallery plugins.', 'wp-avalon'),
-        ),
-        'featured-right-fields' => array(
-            '0' => __('Different attributes fields inputs are available: Text Editor, Dropdown Selection, Single Checkbox, Multi-checkbox, Radio, Number, Currency, Oembed, File and Image Upload, URL, Date and Color Pickers, etc.', 'wp-avalon'),
-            '1' => __('Customizable widgets: Property Overview, Featured Properties, Property Search, Property Gallery, Child Properties, Property Terms, Property Meta', 'wp-avalon'),
-            '2' => __('Pagination and sorting works on search results.', 'wp-avalon'),
-            '3' => __('Customizable templates for different property types.', 'wp-avalon'),
-            '4' => __('Google Maps API to automatically validate physical addresses behind-the-scenes.', 'wp-avalon'),
-        ),
-    );
-    update_option('widget_avalon-aboutus-widget', $about_products_widget_content);
-    $avalon_counter++;
-    update_option('sidebars_widgets', $active_widgets);
-
   endif;
 
   if (empty($active_widgets[$avalon_frontpage_sidebars['sidebar-avalon-overview']])):

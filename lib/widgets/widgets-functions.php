@@ -8,7 +8,7 @@ get_template_part('lib/widgets/widget-avalon_widget_flip', 'wp-avalon');
 add_action('widgets_init', function() {
 
   $avalon_sidebars = array(
-      'about-us-section' => 'about-us-section',
+      'aboutus-section' => 'aboutus-section',
       'focus-section' => 'focus-section',
       'about-products-section' => 'about-products-section',
       'overview-section' => 'overview-section',
@@ -20,7 +20,7 @@ add_action('widgets_init', function() {
 
     if ($avalon_sidebar == 'focus-section'):
       $avalon_sidebar_name = __('Focus section area', 'wp-avalon');
-    elseif ($avalon_sidebar == 'about-us-section'):
+    elseif ($avalon_sidebar == 'aboutus-section'):
       $avalon_sidebar_name = __('About us section', 'wp-avalon');
     elseif ($avalon_sidebar == 'about-products-section'):
       $avalon_sidebar_name = __('About products', 'wp-avalon');

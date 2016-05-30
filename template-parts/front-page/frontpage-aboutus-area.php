@@ -12,8 +12,8 @@ if ($enable_section != 1) :
   <div class="frontpage-about-us-area" data-template="template-parts/front-page/frontpage-about-us-area">
 
     <?php
-    if (is_active_sidebar('about-us-section')) :
-      dynamic_sidebar('about-us-section');
+    if (is_active_sidebar('aboutus-section')) :
+      dynamic_sidebar('aboutus-section');
     else :
       the_widget(
               'avalon_aboutus_widget', array(
@@ -43,6 +43,7 @@ if ($enable_section != 1) :
 
   </div>
   <?php
+
 
 
 

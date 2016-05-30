@@ -5,8 +5,8 @@ jQuery(document).ready(function() {
   wp.customize.section('sidebar-widgets-sidebar-frontpage').priority('2');
   
   /* Move about us area in the panel */
-  wp.customize.section('sidebar-widgets-about-us-section').panel('frontpage_aboutus_area_panel');
-  wp.customize.section('sidebar-widgets-about-us-section').priority('2');
+  wp.customize.section('sidebar-widgets-aboutus-section').panel('frontpage_aboutus_area_panel');
+  wp.customize.section('sidebar-widgets-aboutus-section').priority('2');
   
   /* Move Focus widgets in the panel */
   wp.customize.section('sidebar-widgets-focus-section').panel('focus_section_panel');
