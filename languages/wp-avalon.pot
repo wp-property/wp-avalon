@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-30 13:42+0300\n"
-"PO-Revision-Date: 2016-05-30 13:42+0300\n"
+"POT-Creation-Date: 2016-05-30 18:03+0300\n"
+"PO-Revision-Date: 2016-05-30 18:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive.php:37 home.php:39 index.php:38
+#: archive.php:37 home.php:39 index.php:38 search.php:37
 msgid "Prev"
 msgstr ""
 
-#: archive.php:38 home.php:40 index.php:39
+#: archive.php:38 home.php:40 index.php:39 search.php:38
 msgid "Next"
 msgstr ""
 
@@ -557,14 +557,14 @@ msgid "Copyrights"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:25
-#: lib/widgets/register-default-widgets.php:204
+#: lib/widgets/register-default-widgets.php:205
 #: template-parts/front-page/frontpage-flip-widget-area.php:27
 #: template-parts/front-page/frontpage-focus-widget-area.php:26
 msgid "WP-Property: Walk Score"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:26
-#: lib/widgets/register-default-widgets.php:205
+#: lib/widgets/register-default-widgets.php:206
 #: template-parts/front-page/frontpage-flip-widget-area.php:28
 #: template-parts/front-page/frontpage-focus-widget-area.php:27
 msgid ""
@@ -585,14 +585,14 @@ msgid "More details"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:38
-#: lib/widgets/register-default-widgets.php:391
+#: lib/widgets/register-default-widgets.php:392
 #: template-parts/front-page/frontpage-flip-widget-area.php:197
 #: template-parts/front-page/frontpage-focus-widget-area.php:37
 msgid "WP-Property: Slideshow"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:39
-#: lib/widgets/register-default-widgets.php:392
+#: lib/widgets/register-default-widgets.php:393
 #: template-parts/front-page/frontpage-flip-widget-area.php:198
 #: template-parts/front-page/frontpage-focus-widget-area.php:38
 msgid ""
@@ -601,14 +601,14 @@ msgid ""
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:51
-#: lib/widgets/register-default-widgets.php:402
+#: lib/widgets/register-default-widgets.php:403
 #: template-parts/front-page/frontpage-flip-widget-area.php:207
 #: template-parts/front-page/frontpage-focus-widget-area.php:48
 msgid "WP-Property: Super Map"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:52
-#: lib/widgets/register-default-widgets.php:403
+#: lib/widgets/register-default-widgets.php:404
 #: template-parts/front-page/frontpage-flip-widget-area.php:208
 #: template-parts/front-page/frontpage-focus-widget-area.php:49
 msgid ""
@@ -618,14 +618,14 @@ msgid ""
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:64
-#: lib/widgets/register-default-widgets.php:347
+#: lib/widgets/register-default-widgets.php:348
 #: template-parts/front-page/frontpage-flip-widget-area.php:157
 #: template-parts/front-page/frontpage-focus-widget-area.php:59
 msgid "WP-Property: Importer"
 msgstr ""
 
 #: lib/widgets/register-default-widgets.php:65
-#: lib/widgets/register-default-widgets.php:348
+#: lib/widgets/register-default-widgets.php:349
 #: template-parts/front-page/frontpage-flip-widget-area.php:158
 #: template-parts/front-page/frontpage-focus-widget-area.php:60
 msgid ""
@@ -635,12 +635,12 @@ msgid ""
 "specify."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:82
+#: lib/widgets/register-default-widgets.php:85
 #: template-parts/front-page/frontpage-aboutus-area.php:20
 msgid "WP Avalon. Free WordPress theme"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:83
+#: lib/widgets/register-default-widgets.php:86
 #: template-parts/front-page/frontpage-aboutus-area.php:21
 msgid ""
 "We designed our Avalon WordPress theme especially for WP-Property plugin. It "
@@ -650,52 +650,52 @@ msgid ""
 "your brand's colors."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:85
+#: lib/widgets/register-default-widgets.php:88
 #: template-parts/front-page/frontpage-aboutus-area.php:23
 msgid "It is Free!!!!"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:86
+#: lib/widgets/register-default-widgets.php:89
 #: template-parts/front-page/frontpage-aboutus-area.php:24
 msgid "Grid overview template"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:87
+#: lib/widgets/register-default-widgets.php:90
 #: template-parts/front-page/frontpage-aboutus-area.php:25
 msgid "Let's you upload a custom logo"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:88
+#: lib/widgets/register-default-widgets.php:91
 #: template-parts/front-page/frontpage-aboutus-area.php:26
 msgid "Add your contact and company information"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:89
+#: lib/widgets/register-default-widgets.php:92
 #: template-parts/front-page/frontpage-aboutus-area.php:27
 msgid "Available for localization"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:92
+#: lib/widgets/register-default-widgets.php:95
 #: template-parts/front-page/frontpage-aboutus-area.php:30
 msgid "Compatible with WP-Property pluigin and all it's add-ons"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:93
+#: lib/widgets/register-default-widgets.php:96
 #: template-parts/front-page/frontpage-aboutus-area.php:31
 msgid "Useful Sidebars and widgets available"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:94
+#: lib/widgets/register-default-widgets.php:97
 #: template-parts/front-page/frontpage-aboutus-area.php:32
 msgid "Adjust the theme to fit your brand's colors"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:95
+#: lib/widgets/register-default-widgets.php:98
 #: template-parts/front-page/frontpage-aboutus-area.php:33
 msgid "Fully Responsive"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:96
+#: lib/widgets/register-default-widgets.php:99
 #: template-parts/front-page/frontpage-aboutus-area.php:34
 msgid "Basic free support included"
 msgstr ""
@@ -781,67 +781,67 @@ msgid ""
 "scenes."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:140
+#: lib/widgets/register-default-widgets.php:141
 #: template-parts/front-page/frontpage-overview-widget-area.php:27
 msgid "250 S Estes Drive 52"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:154
+#: lib/widgets/register-default-widgets.php:155
 #: template-parts/front-page/frontpage-overview-widget-area.php:40
 msgid "2412 Environ Way 2412"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:168
+#: lib/widgets/register-default-widgets.php:169
 #: template-parts/front-page/frontpage-overview-widget-area.php:53
 msgid "5500 Fortunes Ridge Drive 78b"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:182
+#: lib/widgets/register-default-widgets.php:183
 #: template-parts/front-page/frontpage-overview-widget-area.php:66
 msgid "424 E Rose Street"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:215
+#: lib/widgets/register-default-widgets.php:216
 #: template-parts/front-page/frontpage-flip-widget-area.php:37
 msgid "WP-CRM: Group Messages"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:216
+#: lib/widgets/register-default-widgets.php:217
 #: template-parts/front-page/frontpage-flip-widget-area.php:38
 msgid ""
 "Send group messages to your users from within your WordPress control panel."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:226
+#: lib/widgets/register-default-widgets.php:227
 #: template-parts/front-page/frontpage-flip-widget-area.php:47
 msgid "WP-Invoice: Business Locations"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:227
+#: lib/widgets/register-default-widgets.php:228
 #: template-parts/front-page/frontpage-flip-widget-area.php:48
 msgid ""
 "Free Add-on to manage locations for your business built with WP-Invoice "
 "plugin."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:237
+#: lib/widgets/register-default-widgets.php:238
 #: template-parts/front-page/frontpage-flip-widget-area.php:57
 msgid "WP-Invoice: Electronic Signature"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:238
+#: lib/widgets/register-default-widgets.php:239
 #: template-parts/front-page/frontpage-flip-widget-area.php:58
 msgid ""
 "Make your clients sign invoices before payment to get secure information "
 "that will confirm payment."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:248
+#: lib/widgets/register-default-widgets.php:249
 #: template-parts/front-page/frontpage-flip-widget-area.php:67
 msgid "WP-Invoice: Paypal Pro"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:249
+#: lib/widgets/register-default-widgets.php:250
 #: template-parts/front-page/frontpage-flip-widget-area.php:68
 msgid ""
 "PayPal Payments Pro has the customization capability, technical maturity, "
@@ -849,36 +849,36 @@ msgid ""
 "sites."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:259
+#: lib/widgets/register-default-widgets.php:260
 #: template-parts/front-page/frontpage-flip-widget-area.php:77
 msgid "WP-Invoice: PDF"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:260
+#: lib/widgets/register-default-widgets.php:261
 #: template-parts/front-page/frontpage-flip-widget-area.php:78
 msgid ""
 "Creates PDF versions of your invoices, receipts and that you can easily "
 "email and print."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:270
+#: lib/widgets/register-default-widgets.php:271
 #: template-parts/front-page/frontpage-flip-widget-area.php:87
 msgid "WP-Invoice: Power Tools"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:271
+#: lib/widgets/register-default-widgets.php:272
 #: template-parts/front-page/frontpage-flip-widget-area.php:88
 msgid ""
 "Make you invoicing solutions more powerful with WP-Invoice and Power Tools. "
 "Sales charts, import and export ability!"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:281
+#: lib/widgets/register-default-widgets.php:282
 #: template-parts/front-page/frontpage-flip-widget-area.php:97
 msgid "WP-Invoice: Quotes"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:282
+#: lib/widgets/register-default-widgets.php:283
 #: template-parts/front-page/frontpage-flip-widget-area.php:98
 msgid ""
 "The Quotes Add-on let’s you automate your workflow by creating quotes and "
@@ -887,24 +887,24 @@ msgid ""
 "single click."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:292
+#: lib/widgets/register-default-widgets.php:293
 #: template-parts/front-page/frontpage-flip-widget-area.php:107
 msgid "WP-Invoice: Single Page Checkout"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:293
+#: lib/widgets/register-default-widgets.php:294
 #: template-parts/front-page/frontpage-flip-widget-area.php:108
 msgid ""
 "Makes it easy to create one-page-checkout forms that can accept a variety of "
 "different payment gateways, such as Authorize.net, PayPal and others."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:303
+#: lib/widgets/register-default-widgets.php:304
 #: template-parts/front-page/frontpage-flip-widget-area.php:117
 msgid "WP-Invoice: USAePay"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:304
+#: lib/widgets/register-default-widgets.php:305
 #: template-parts/front-page/frontpage-flip-widget-area.php:118
 msgid ""
 "USAePay is a payment gateway service provider allowing merchants to accept "
@@ -912,36 +912,36 @@ msgid ""
 "devices."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:314
+#: lib/widgets/register-default-widgets.php:315
 #: template-parts/front-page/frontpage-flip-widget-area.php:127
 msgid "WP-Property: Agents"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:315
+#: lib/widgets/register-default-widgets.php:316
 #: template-parts/front-page/frontpage-flip-widget-area.php:128
 msgid ""
 "Allows to create new Real Estate agent accounts, associate them with "
 "properties, filter properties by agent and more."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:325
+#: lib/widgets/register-default-widgets.php:326
 #: template-parts/front-page/frontpage-flip-widget-area.php:137
 msgid "WP-Property: Facebook Tabs"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:326
+#: lib/widgets/register-default-widgets.php:327
 #: template-parts/front-page/frontpage-flip-widget-area.php:138
 msgid ""
 "The Add-on allows you to add a tab with property listings or any other "
 "content from your website, on a Facebook Page."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:336
+#: lib/widgets/register-default-widgets.php:337
 #: template-parts/front-page/frontpage-flip-widget-area.php:147
 msgid "WP-Property: FEPS"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:337
+#: lib/widgets/register-default-widgets.php:338
 #: template-parts/front-page/frontpage-flip-widget-area.php:148
 msgid ""
 "Allows to create front-end forms that facilitate a simple way for website "
@@ -949,48 +949,48 @@ msgid ""
 "submitted for free or you can use Sponsored Listings option."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:358
+#: lib/widgets/register-default-widgets.php:359
 #: template-parts/front-page/frontpage-flip-widget-area.php:167
 msgid "WP-Property: PDF Flyer"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:359
+#: lib/widgets/register-default-widgets.php:360
 #: template-parts/front-page/frontpage-flip-widget-area.php:168
 msgid ""
 "Allows the website owner to quickly generate PDF flyers, or brochures, ready "
 "for printing or download."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:369
+#: lib/widgets/register-default-widgets.php:370
 #: template-parts/front-page/frontpage-flip-widget-area.php:177
 msgid "WP-Property: Power Tools"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:370
+#: lib/widgets/register-default-widgets.php:371
 #: template-parts/front-page/frontpage-flip-widget-area.php:178
 msgid ""
 "Extra functionality which includes capability management, white labeling the "
 "control panel, and changes menu titles."
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:380
+#: lib/widgets/register-default-widgets.php:381
 #: template-parts/front-page/frontpage-flip-widget-area.php:187
 msgid "WP-Property: Responsive Slideshow"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:381
+#: lib/widgets/register-default-widgets.php:382
 #: template-parts/front-page/frontpage-flip-widget-area.php:188
 msgid ""
 "Allows you to insert a responsive slideshow into any property page with "
 "lightbox option"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:413
+#: lib/widgets/register-default-widgets.php:414
 #: template-parts/front-page/frontpage-flip-widget-area.php:217
 msgid "WP-Property: Terms"
 msgstr ""
 
-#: lib/widgets/register-default-widgets.php:414
+#: lib/widgets/register-default-widgets.php:415
 #: template-parts/front-page/frontpage-flip-widget-area.php:218
 msgid ""
 "Create any number of additional taxonomies and categorize your listings into "
@@ -1103,6 +1103,19 @@ msgstr ""
 msgid ""
 "Sorry, no properties found - try expanding your search, or <a href=\"%s"
 "\">view all</a>."
+msgstr ""
+
+#: search.php:24
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:43
+msgid "Nothing found"
+msgstr ""
+
+#: search.php:44
+msgid "Go back to home page"
 msgstr ""
 
 #: template-parts/content/content-none.php:12
