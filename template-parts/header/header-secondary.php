@@ -91,6 +91,10 @@ else : // if is front page
         printf(__('Page %s of %s', 'wp-avalon'), $current, $total);
         echo '</h3>';
       endif;
+    elseif (is_search()) :
+      echo '<h1 class="page-title">';
+      printf(__('Search results for: %s', 'wp-avalon'), '<span>' . esc_html(get_search_query()) . '</span>');
+      echo '</h1>';
     endif;
     echo '</div>'; // .container
 

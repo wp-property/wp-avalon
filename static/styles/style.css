@@ -853,6 +853,10 @@ body main.main-content .secondary-header h1.page-title {
   -moz-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   -webkit-text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
+body main.main-content .secondary-header h1.page-title span {
+  font-style: italic;
+  font-weight: 400;
+}
 body main.main-content .secondary-header h3.page-tagline {
   color: #FFF;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -2821,6 +2825,12 @@ body main.main-content .container .content h1.page-title {
   font-size: 2.14em;
   font-weight: 600;
   margin: 0 0 30px;
+}
+body main.main-content .container .content .page-title h1 span,
+body main.main-content .container .content h1.entry-title span,
+body main.main-content .container .content h1.page-title span {
+  font-style: italic;
+  font-weight: 400;
 }
 body main.main-content .container .content article {
   /* Single, Post, Archive page container

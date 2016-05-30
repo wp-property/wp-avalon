@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-30 18:03+0300\n"
+"POT-Creation-Date: 2016-05-30 18:20+0300\n"
 "PO-Revision-Date: 2016-05-30 18:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1105,9 +1105,9 @@ msgid ""
 "\">view all</a>."
 msgstr ""
 
-#: search.php:24
+#: search.php:24 template-parts/header/header-secondary.php:96
 #, php-format
-msgid "Search Results for: %s"
+msgid "Search results for: %s"
 msgstr ""
 
 #: search.php:43

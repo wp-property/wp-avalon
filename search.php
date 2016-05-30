@@ -21,7 +21,7 @@ get_header();
       <?php
       if (get_theme_mod('header_image_post_disable', '1') != 1) :
         echo '<h1 class="page-title">';
-        printf(__('Search Results for: %s', 'wp-avalon'), '<span>' . esc_html(get_search_query()) . '</span>');
+        printf(__('Search results for: %s', 'wp-avalon'), '<span>' . esc_html(get_search_query()) . '</span>');
         echo '</h1>';
       endif;
 
