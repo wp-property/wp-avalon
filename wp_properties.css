@@ -671,7 +671,8 @@
 }
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
   width: 20%;
-  float: left;
+  display: inline-block;
+  margin-right: -4px;
   padding: 0 10px;
 }
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:before {
