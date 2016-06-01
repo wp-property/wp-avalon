@@ -59,7 +59,7 @@ class avalon_flip_widget extends WP_Widget {
 
     $instance = $old_instance;
     $instance['title'] = strip_tags($new_instance['title']);
-    $instance['description'] = stripslashes(wp_filter_post_kses($new_instance['description']));
+    $instance['description'] = strip_tags($new_instance['description']);
     $instance['url'] = strip_tags($new_instance['url']);
     $instance['image_uri'] = strip_tags($new_instance['image_uri']);
     $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
