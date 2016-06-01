@@ -19,27 +19,27 @@ class avalon_flip_widget extends WP_Widget {
       <div class="property_addon_box">
         <div class="pab__wrap">
           <div class="front">
-            <div class="pab__image">
-              <a href="<?php echo $instance['url']; ?>">
-                <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
-                  <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                  <?php
-                elseif (!empty($instance['custom_media_id'])) :
-                  if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
-                    ?>
+            <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image') || !empty($instance['custom_media_id'])) : ?>
+              <div class="pab__image">
+                <a href="<?php echo $instance['url']; ?>">
+                  <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
+                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
+                  <?php elseif (!empty($instance['custom_media_id']) && !empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
                     <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
                   <?php endif; ?>
-                <?php endif; ?>
-              </a>
-            </div>
+                </a>
+              </div>
+            <?php endif; ?>
             <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
           </div>
           <div class="back">
             <div class="pab__excerpt">
               <?php
               if (!empty($instance['description'])) :
-              echo $instance['description'];
-                echo '<a href=' . $instance['url'] . '" class="readmore">View more...</a>';
+                echo $instance['description'];
+                if (!empty($instance['url'])) :
+                  echo '<a href="' . $instance['url'] . '" class="readmore">View more...</a>';
+                endif;
               endif;
               ?>
             </div>
