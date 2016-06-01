@@ -672,6 +672,7 @@
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
   width: 20%;
   display: inline-block;
+  vertical-align: top;
   margin-right: -4px;
   padding: 0 10px;
 }
