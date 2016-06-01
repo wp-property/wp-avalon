@@ -680,11 +680,9 @@
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li:after {
   display: none;
 }
-@media (max-width: 1000px) {
-  .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .property_image img {
-    width: 100% !important;
-    height: auto !important;
-  }
+.shortcode_featured_properties ul.wpp_featured_properties_shortcode > li .property_image img {
+  width: 100% !important;
+  height: auto !important;
 }
 @media (max-width: 1000px) {
   .shortcode_featured_properties ul.wpp_featured_properties_shortcode > li {
