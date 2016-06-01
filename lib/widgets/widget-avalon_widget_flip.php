@@ -29,8 +29,12 @@ class avalon_flip_widget extends WP_Widget {
                   <?php endif; ?>
                 </a>
               </div>
+              <?php
+            endif;
+            if (!empty($instance['title'])) :
+              ?>
+              <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
             <?php endif; ?>
-            <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
           </div>
           <div class="back">
             <div class="pab__excerpt">
