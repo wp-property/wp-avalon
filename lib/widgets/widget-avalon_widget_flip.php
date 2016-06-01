@@ -78,9 +78,9 @@ class avalon_flip_widget extends WP_Widget {
       ?>" class="widefat">
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
-      <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>"><?php
-        if (!empty($instance['text'])): echo htmlspecialchars_decode($instance['text']);
+      <label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
+      <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('description'); ?>" id="<?php echo $this->get_field_id('description'); ?>"><?php
+        if (!empty($instance['description'])): echo htmlspecialchars_decode($instance['description']);
         endif;
         ?></textarea>
     </p>
