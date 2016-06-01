@@ -42,7 +42,7 @@ class avalon_flip_widget extends WP_Widget {
               if (!empty($instance['description'])) :
                 echo $instance['description'];
                 if (!empty($instance['url'])) :
-                  echo '<a href="' . $instance['url'] . '" class="readmore">View more...</a>';
+                  echo ' <a href="' . $instance['url'] . '" class="readmore"> View more...</a>';
                 endif;
               endif;
               ?>

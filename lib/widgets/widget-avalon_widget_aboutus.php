@@ -10,15 +10,13 @@ class avalon_aboutus_widget extends WP_Widget {
 
   function widget($args, $instance) {
     extract($args);
-    $title = $instance['title'];
-    $text = $instance['text'];
 
     echo '<div class="aboutus-text-widget">';
-    if (!empty($title)) {
-      echo '<div class="atw__title">' . $title . '</div>';
+    if (!empty($instance['title'])) {
+      echo '<div class="atw__title">' . $instance['title'] . '</div>';
     }
-    if (!empty($text)) {
-      echo '<div class="atw__content">' . do_shortcode($text) . '</div>';
+    if (!empty($instance['text'])) {
+      echo '<div class="atw__content">' . do_shortcode($instance['text']) . '</div>';
     }
     echo '<div class="atw__features row">';
     if (!empty($instance['featured-left-fields'])) :
