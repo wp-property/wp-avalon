@@ -11,30 +11,33 @@ class avalon_flip_widget extends WP_Widget {
   function widget($args, $instance) {
     extract($args);
     echo $before_widget;
-    if (!empty($instance['custom_media_id'])) :
-      $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-    endif;
     ?>
     <div class="col-md-4">
       <div class="property_addon_box">
         <div class="pab__wrap">
           <div class="front">
-            <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image') || !empty($instance['custom_media_id'])) : ?>
+            <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
               <div class="pab__image">
-                <a href="<?php echo $instance['url']; ?>">
-                  <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
-                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                  <?php elseif (!empty($instance['custom_media_id']) && !empty($custom_media_id) && !empty($custom_media_id[0])) : ?>
-                    <img alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>" />
-                  <?php endif; ?>
-                </a>
+                <?php if (!empty($instance['url'])) : ?>
+                  <a href="<?php echo $instance['url']; ?>">
+                      <img alt="<?php if (!empty($instance['title'])) : echo $instance['title']; endif; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
+                  </a>
+                <?php else : ?>
+                  <img alt="<?php if (!empty($instance['title'])) : echo $instance['title']; endif; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
+                <?php endif; ?>
               </div>
               <?php
             endif;
             if (!empty($instance['title'])) :
               ?>
-              <div class="pab__title"><a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a></div>
-            <?php endif; ?>
+              <div class="pab__title">
+                <?php if (!empty($instance['url'])) : ?>
+                  <a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a>
+                <?php else : ?>
+                  <?php echo $instance['title']; ?>
+              <?php endif; ?>
+              </div>
+    <?php endif; ?>
           </div>
           <div class="back">
             <div class="pab__excerpt">
@@ -42,7 +45,7 @@ class avalon_flip_widget extends WP_Widget {
               if (!empty($instance['description'])) :
                 echo $instance['description'];
                 if (!empty($instance['url'])) :
-                  echo ' <a href="' . $instance['url'] . '" class="readmore"> View more...</a>';
+                  echo ' <a href="' . $instance['url'] . '" class="readmore"> ' . __('View more...', 'wp-avalon') . '</a>';
                 endif;
               endif;
               ?>
@@ -62,7 +65,6 @@ class avalon_flip_widget extends WP_Widget {
     $instance['description'] = strip_tags($new_instance['description']);
     $instance['url'] = strip_tags($new_instance['url']);
     $instance['image_uri'] = strip_tags($new_instance['image_uri']);
-    $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
 
     return $instance;
   }
@@ -106,11 +108,6 @@ class avalon_flip_widget extends WP_Widget {
 
       <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
-
-    <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
-           if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-           endif;
-           ?>" />
     <?php
   }
 

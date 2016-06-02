@@ -15,7 +15,7 @@ class avalon_widget_focus extends WP_Widget {
 
     <div class="col-lg-3 col-sm-3">
       <div class="ffwa__box">
-        <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) { ?>
+        <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
           <div class="ffwa__box_icon">
             <?php if (!empty($instance['link'])) { ?>
               <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i></a>
@@ -23,22 +23,7 @@ class avalon_widget_focus extends WP_Widget {
               <i style="background-image:url(<?php echo esc_url($instance['image_uri']); ?>);"></i>
             <?php } ?>
           </div>
-          <?php
-        } elseif (!empty($instance['custom_media_id'])) {
-          $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-          if (!empty($custom_media_id) && !empty($custom_media_id[0])) {
-            ?>
-            <div class="ffwa__box_icon">
-              <?php if (!empty($instance['link'])) { ?>
-                <a href="<?php echo $instance['link']; ?>"><i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i></a>
-              <?php } else { ?>
-                <i style="background-image:url(<?php echo esc_url($custom_media_id[0]); ?>);"></i>
-              <?php } ?>
-            </div>	
-            <?php
-          }
-        }
-        ?>
+        <?php endif; ?>
 
         <h3 class="ffwa__box_title">
           <?php
@@ -49,15 +34,23 @@ class avalon_widget_focus extends WP_Widget {
         <?php
         if (!empty($instance['text'])) {
           echo '<p>';
-          echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
+          echo apply_filters('widget_title', $instance['text']);
           echo '</p>';
         }
         ?>
         <div class="ffwa__bottom">
-          <div class="ffwa__price"><?php echo $instance['price']; ?></div>
+          <?php if (!empty($instance['price'])) : ?>
+            <div class="ffwa__price"><?php echo $instance['price']; ?></div>
+          <?php endif; ?>
           <div class="ffwa__button">
             <?php if (!empty($instance['link'])) : ?>
-              <a href="<?php echo $instance['link']; ?>" class="btn"><?php echo $instance['more_label']; ?></a>
+              <a href="<?php echo $instance['link']; ?>" class="btn">
+                <?php
+                if (!empty($instance['more_label'])) :
+                  echo $instance['more_label'];
+                endif;
+                ?>
+              </a>
             <?php endif; ?>
           </div>
         </div>
@@ -71,13 +64,12 @@ class avalon_widget_focus extends WP_Widget {
   function update($new_instance, $old_instance) {
 
     $instance = $old_instance;
-    $instance['text'] = stripslashes(wp_filter_post_kses($new_instance['text']));
+    $instance['text'] = strip_tags($new_instance['text']);
     $instance['title'] = strip_tags($new_instance['title']);
     $instance['link'] = strip_tags($new_instance['link']);
     $instance['price'] = strip_tags($new_instance['price']);
     $instance['more_label'] = strip_tags($new_instance['more_label']);
     $instance['image_uri'] = strip_tags($new_instance['image_uri']);
-    $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
 
     return $instance;
   }
@@ -135,11 +127,6 @@ class avalon_widget_focus extends WP_Widget {
 
       <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
-
-    <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
-           if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-           endif;
-           ?>" />
 
     <?php
   }

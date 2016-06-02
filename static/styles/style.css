@@ -2579,9 +2579,6 @@ body main.main-content .container .frontpage-overview-widget-area .fowa__contain
   margin-bottom: 5px;
   font-weight: 600;
 }
-body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column ul.wpp_overview_data li.property_title:hover {
-  color: #4a83db !important;
-}
 body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column ul.wpp_overview_data li.property_title a {
   -webkit-transition: color 0.15s ease-in-out 0s;
   -moz-transition: color 0.15s ease-in-out 0s;
@@ -2749,6 +2746,11 @@ body main.main-content .container .frontpage-flip-widget-area .property_addon_bo
   vertical-align: middle;
   padding-left: 10px;
   width: 68%;
+  color: #414141 !important;
+  font-size: 1.14em;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 body main.main-content .container .frontpage-flip-widget-area .property_addon_box .pab__wrap .front .pab__title a {
   color: #414141 !important;
