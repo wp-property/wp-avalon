@@ -304,6 +304,29 @@ body .header-bar .hb__contact-form .hbcf__container .header-contact-form .dcf__s
 body .header-bar .hb__contact-form .hbcf__container .header-contact-form .dcf__success_message_box {
   border-color: green;
 }
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal .checkbox input[type="checkbox"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal .checkbox-inline input[type="checkbox"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal .radio input[type="radio"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal .radio-inline input[type="radio"] {
+  margin-left: 0;
+  position: relative;
+}
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal input[type="text"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal input[type="tel"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal input[type="email"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal input[type="password"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal input[type="search"],
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal textarea {
+  margin-bottom: 5px;
+}
+body .header-bar .hb__contact-form .hbcf__container .form-horizontal .wp_crm_submit_row {
+  margin-top: 10px;
+}
 body .header-bar #loginform p label {
   display: block;
 }
