@@ -76,8 +76,12 @@ jQuery(document).ready(function() {
   jQuery(document).on('click', '.add-features-input', function() {
     jQuery(this).parents('.features-list').find('p:last-child').clone().find('.widefat').val('').parents('p').appendTo(jQuery(this).parents('.features-list').find('.clearfix'));
   });
-  jQuery(document).on('click', '.remove-features-input', function() {
+  jQuery(document).on('click', '.remove-feature', function() {
+    if (jQuery(this).parents('.clearfix').find('p').length <= 1) {
+      jQuery(this).parents('.clearfix').find('p input.widefat').val('');
+    } else {
       jQuery(this).parents('p').remove();
+    }
   });
 });
 
