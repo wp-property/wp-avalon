@@ -1877,14 +1877,19 @@ body {
                       color: rgba(65, 65, 65, 0.7) !important;
                     }
                     &.property_title {
+                      .transition(color, 0.15s, ease-in-out, 0s);
+                      color: #414141 !important;
+                      text-transform: uppercase;
+                      font-size: 0.9em;
                       margin-bottom: 5px;
+                      font-weight: 600;
+                      &:hover {
+                        color: #4a83db !important;
+                      }
 
                       a {
                         .transition(color, 0.15s, ease-in-out, 0s);
-                        text-transform: uppercase;
-                        font-size: 0.9em;
                         color: #414141 !important;
-                        font-weight: 600;
                         text-decoration: none;
                         &:hover {
                           color: #4a83db !important;
@@ -2146,7 +2151,7 @@ body {
           font-size: 2.14em;
           font-weight: 600;
           margin: 0 0 30px;
-          
+
           span {
             font-style: italic;
             font-weight: 400;
