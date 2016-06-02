@@ -2462,7 +2462,7 @@ body main.main-content .container .frontpage-focus-widget-area .ffwa__container 
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
   position: relative;
-  padding: 2.86em 1.42em 1.3em;
+  padding: 2.86em 1.42em 0;
   text-align: center;
 }
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__box_icon {
@@ -2514,11 +2514,10 @@ body main.main-content .container .frontpage-focus-widget-area .ffwa__container 
   margin-bottom: 0;
 }
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom {
-  position: absolute;
-  bottom: 30px;
+  display: none;
   width: 100%;
+  margin-top: 1em;
   padding: 0 1.42em;
-  left: 0;
 }
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__price {
   float: left;

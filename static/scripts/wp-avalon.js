@@ -64,13 +64,13 @@ var wp_avalon = {
    * 
    * @author vorobjov@UD
    */
-  frontpage_headlights_widgets: function frontpage_headlights_widgets() {
+  frontpage_focus_widgets: function frontpage_focus_widgets() {
     var widgets = jQuery('body .frontpage-focus-widget-area');
     widgets.each(function(key, value) {
       var height = 0,
-//              height2 = 0,
+              height2 = 0,
               columns = jQuery('.ffwa__box', jQuery(value));
-//      columns2 = jQuery('.ffwa__box > p', jQuery(value));
+      columns2 = jQuery('.ffwa__box > p', jQuery(value));
       columns.each(function(key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {
@@ -78,13 +78,13 @@ var wp_avalon = {
         }
       });
       columns.height(height);
-//      columns2.each(function(key1, value2) {
-//        var currentHeight2 = jQuery(value2).outerHeight();
-//        if (currentHeight2 > height2) {
-//          height2 = currentHeight2;
-//        }
-//      });
-//      columns2.height(height2);
+      columns2.each(function(key1, value2) {
+        var currentHeight2 = jQuery(value2).height();
+        if (currentHeight2 > height2) {
+          height2 = currentHeight2;
+        }
+      });
+      columns2.height(height2);
     });
   },
   /**
@@ -121,7 +121,7 @@ jQuery(window).load(function() {
   wp_avalon.property_grid(false);
 
 //    Frontpage headlights
-  wp_avalon.frontpage_headlights_widgets();
+  wp_avalon.frontpage_focus_widgets();
   wp_avalon.widget_property_height();
 
 
