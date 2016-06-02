@@ -1144,6 +1144,24 @@ body main.main-content .container .form-horizontal ul {
   padding: 0;
   list-style: none;
 }
+body main.main-content .container .form-horizontal .checkbox input[type="checkbox"],
+body main.main-content .container .form-horizontal .checkbox-inline input[type="checkbox"],
+body main.main-content .container .form-horizontal .radio input[type="radio"],
+body main.main-content .container .form-horizontal .radio-inline input[type="radio"] {
+  margin-left: 0;
+  position: relative;
+}
+body main.main-content .container .form-horizontal input[type="text"],
+body main.main-content .container .form-horizontal input[type="tel"],
+body main.main-content .container .form-horizontal input[type="email"],
+body main.main-content .container .form-horizontal input[type="password"],
+body main.main-content .container .form-horizontal input[type="search"],
+body main.main-content .container .form-horizontal textarea {
+  margin-bottom: 5px;
+}
+body main.main-content .container .form-horizontal .wp_crm_submit_row {
+  margin-top: 10px;
+}
 body main.main-content .container .frontpage-widgetaria-tabs {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -3949,7 +3967,6 @@ body main.main-content .container .content article textarea {
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  margin-bottom: 5px;
 }
 body main.main-content .container .content article input[type="text"]:focus,
 body main.main-content .container .content article input[type="email"]:focus,

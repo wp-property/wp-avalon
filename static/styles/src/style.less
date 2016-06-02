@@ -849,13 +849,35 @@ body {
           width: 100%;
         }
       }
-      
+
       .form-horizontal {
-        
+
         ul {
           margin: 0;
           padding: 0;
           list-style: none;
+        }
+        .checkbox, 
+        .radio {
+
+        }
+        .checkbox input[type="checkbox"], 
+        .checkbox-inline input[type="checkbox"], 
+        .radio input[type="radio"], 
+        .radio-inline input[type="radio"] {
+          margin-left: 0;
+          position: relative;
+        }
+        input[type="text"], 
+        input[type="tel"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="search"], 
+        textarea {
+          margin-bottom: 5px;
+        }
+        .wp_crm_submit_row {
+          margin-top: 10px;
         }
       }
 
@@ -2945,7 +2967,6 @@ body {
           input[type="password"],
           textarea {
             .default-input-style;
-            margin-bottom: 5px;
           }
           textarea {
             height: 100px;
