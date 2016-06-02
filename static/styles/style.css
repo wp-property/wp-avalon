@@ -2197,8 +2197,7 @@ body main.main-content .container .frontpage-about-products-area .aboutus-text-w
 }
 body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__features,
 body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__features {
-  padding: 0 2.14em;
-  margin-top: 1.7em;
+  padding: 1.7em 2.14em 0;
   font-size: 1.14em;
 }
 body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__features:before,
