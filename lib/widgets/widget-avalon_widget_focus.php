@@ -41,10 +41,16 @@ class avalon_widget_focus extends WP_Widget {
         <?php if (!empty($instance['price']) || !empty($instance['link'])) : ?>
           <div class="ffwa__bottom">
             <?php if (!empty($instance['price'])) : ?>
-              <div class="ffwa__price"><?php echo $instance['price']; ?></div>
-            <?php endif; ?>
-            <div class="ffwa__button">
-              <?php if (!empty($instance['link'])) : ?>
+              <div class="ffwa__price
+              <?php if (empty($instance['link'])) : echo ' ffwa__price_center';
+              endif; ?>
+                   "><?php echo $instance['price']; ?></div>
+                 <?php endif; ?>
+            <?php if (!empty($instance['link'])) : ?>
+              <div class="ffwa__button
+        <?php if (empty($instance['price'])) : echo ' ffwa__button_center';
+        endif; ?>
+                   ">
                 <a href="<?php echo $instance['link']; ?>" class="btn">
                   <?php
                   if (!empty($instance['more_label'])) :
@@ -52,10 +58,10 @@ class avalon_widget_focus extends WP_Widget {
                   endif;
                   ?>
                 </a>
-              <?php endif; ?>
-            </div>
+              </div>
+          <?php endif; ?>
           </div>
-        <?php endif; ?>
+    <?php endif; ?>
       </div>
     </div>
 
@@ -82,9 +88,9 @@ class avalon_widget_focus extends WP_Widget {
     <p>
       <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
       <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
-      if (!empty($instance['title'])): echo $instance['title'];
-      endif;
-      ?>" class="widefat">
+             if (!empty($instance['title'])): echo $instance['title'];
+             endif;
+             ?>" class="widefat">
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
@@ -96,23 +102,23 @@ class avalon_widget_focus extends WP_Widget {
     <p>
       <label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price', 'wp-avalon'); ?></label><br />
       <input type="text" name="<?php echo $this->get_field_name('price'); ?>" id="<?php echo $this->get_field_id('price'); ?>" value="<?php
-      if (!empty($instance['price'])): echo $instance['price'];
-      endif;
-      ?>" class="widefat">
+             if (!empty($instance['price'])): echo $instance['price'];
+             endif;
+             ?>" class="widefat">
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'wp-avalon'); ?></label><br />
       <input type="text" name="<?php echo $this->get_field_name('link'); ?>" id="<?php echo $this->get_field_id('link'); ?>" value="<?php
-      if (!empty($instance['link'])): echo $instance['link'];
-      endif;
-      ?>" class="widefat">
+             if (!empty($instance['link'])): echo $instance['link'];
+             endif;
+             ?>" class="widefat">
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('more_label'); ?>"><?php _e('More button label', 'wp-avalon'); ?></label><br />
       <input type="text" name="<?php echo $this->get_field_name('more_label'); ?>" id="<?php echo $this->get_field_id('more_label'); ?>" value="<?php
-      if (!empty($instance['more_label'])): echo $instance['more_label'];
-      endif;
-      ?>" class="widefat">
+             if (!empty($instance['more_label'])): echo $instance['more_label'];
+             endif;
+             ?>" class="widefat">
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
@@ -123,9 +129,9 @@ class avalon_widget_focus extends WP_Widget {
       ?>
 
       <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
-      if (!empty($instance['image_uri'])): echo $instance['image_uri'];
-      endif;
-      ?>" style="margin-top:5px;">
+             if (!empty($instance['image_uri'])): echo $instance['image_uri'];
+             endif;
+             ?>" style="margin-top:5px;">
 
       <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
