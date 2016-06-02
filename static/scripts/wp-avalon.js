@@ -68,9 +68,9 @@ var wp_avalon = {
     var widgets = jQuery('body .frontpage-focus-widget-area');
     widgets.each(function(key, value) {
       var height = 0,
-              height2 = 0,
+//              height2 = 0,
               columns = jQuery('.ffwa__box', jQuery(value));
-      columns2 = jQuery('.ffwa__box > p', jQuery(value));
+//      columns2 = jQuery('.ffwa__box > p', jQuery(value));
       columns.each(function(key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {
@@ -78,13 +78,13 @@ var wp_avalon = {
         }
       });
       columns.height(height);
-      columns2.each(function(key1, value2) {
-        var currentHeight2 = jQuery(value2).outerHeight();
-        if (currentHeight2 > height2) {
-          height2 = currentHeight2;
-        }
-      });
-      columns2.height(height2);
+//      columns2.each(function(key1, value2) {
+//        var currentHeight2 = jQuery(value2).outerHeight();
+//        if (currentHeight2 > height2) {
+//          height2 = currentHeight2;
+//        }
+//      });
+//      columns2.height(height2);
     });
   },
   /**

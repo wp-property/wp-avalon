@@ -2461,7 +2461,7 @@ body main.main-content .container .frontpage-focus-widget-area .ffwa__container 
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
   position: relative;
-  padding: 2.86em 1.42em;
+  padding: 2.86em 1.42em 1.3em;
   margin-bottom: 2em;
   text-align: center;
 }
