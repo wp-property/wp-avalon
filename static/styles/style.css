@@ -2516,7 +2516,17 @@ body main.main-content .container .frontpage-focus-widget-area .ffwa__container 
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom {
   width: 100%;
   margin-top: 1em;
-  padding: 0 1.42em;
+  padding: 0 1.42em 1em;
+}
+body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom:before {
+  display: block;
+  content: "";
+  clear: both;
+}
+body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__price {
   float: left;
@@ -2794,7 +2804,7 @@ body main.main-content .container .frontpage-flip-widget-area .property_addon_bo
 body main.main-content .container .frontpage-flip-widget-area .property_addon_box .pab__wrap .front .pab__title {
   box-sizing: border-box;
   display: table-cell;
-  height: inherit;
+  height: 100px;
   vertical-align: middle;
   padding-left: 10px;
   width: 68%;
