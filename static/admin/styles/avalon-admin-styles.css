@@ -36,9 +36,6 @@ Styles for admin page
   -webkit-transform: rotate(45deg);
   vertical-align: middle;
 }
-.features-list p:first-child .remove-feature {
-  display: none !important;
-}
 
 .add-features-input {
   cursor: pointer;
