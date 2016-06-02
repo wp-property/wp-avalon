@@ -2524,7 +2524,8 @@ body main.main-content .container .frontpage-focus-widget-area .ffwa__container 
   float: left;
   font-size: 1.42em;
   font-weight: 500;
-  line-height: 2.28em;
+  line-height: 1.7em;
+  text-align: left;
   width: 50%;
 }
 body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button {

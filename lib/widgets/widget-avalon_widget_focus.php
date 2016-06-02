@@ -38,22 +38,24 @@ class avalon_widget_focus extends WP_Widget {
           echo '</p>';
         }
         ?>
-        <div class="ffwa__bottom">
-          <?php if (!empty($instance['price'])) : ?>
-            <div class="ffwa__price"><?php echo $instance['price']; ?></div>
-          <?php endif; ?>
-          <div class="ffwa__button">
-            <?php if (!empty($instance['link'])) : ?>
-              <a href="<?php echo $instance['link']; ?>" class="btn">
-                <?php
-                if (!empty($instance['more_label'])) :
-                  echo $instance['more_label'];
-                endif;
-                ?>
-              </a>
+        <?php if (!empty($instance['price']) || !empty($instance['link'])) : ?>
+          <div class="ffwa__bottom">
+            <?php if (!empty($instance['price'])) : ?>
+              <div class="ffwa__price"><?php echo $instance['price']; ?></div>
             <?php endif; ?>
+            <div class="ffwa__button">
+              <?php if (!empty($instance['link'])) : ?>
+                <a href="<?php echo $instance['link']; ?>" class="btn">
+                  <?php
+                  if (!empty($instance['more_label'])) :
+                    echo $instance['more_label'];
+                  endif;
+                  ?>
+                </a>
+              <?php endif; ?>
+            </div>
           </div>
-        </div>
+        <?php endif; ?>
       </div>
     </div>
 
