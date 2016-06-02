@@ -19,17 +19,21 @@ class avalon_aboutus_widget extends WP_Widget {
       echo '<div class="atw__content">' . do_shortcode($instance['text']) . '</div>';
     }
     echo '<div class="atw__features row">';
-    if (!empty($instance['featured-left-fields'])) :
+    if (!empty($instance['featured-left-fields']) && $instance['featured-left-fields'] != '') :
       echo '<ul class="atw_features_left col-md-6">';
       foreach ($instance['featured-left-fields'] as $value) :
-        echo '<li>' . $value . '</li>';
+        if ($value != '') {
+          echo '<li>' . $value . '</li>';
+        }
       endforeach;
       echo '</ul>';
     endif;
-    if (!empty($instance['featured-right-fields'])) :
+    if (!empty($instance['featured-right-fields']) && $instance['featured-right-fields'] != '') :
       echo '<ul class="atw_features_right col-md-6">';
       foreach ($instance['featured-right-fields'] as $value) :
-        echo '<li>' . $value . '</li>';
+        if ($value != '') {
+          echo '<li>' . $value . '</li>';
+        }
       endforeach;
       echo '</ul>';
     endif;
@@ -57,22 +61,6 @@ class avalon_aboutus_widget extends WP_Widget {
     endif;
     $instance = wp_parse_args((array) $instance, $defaults);
     ?>
-    <!-- inline javascript -->
-    <script>
-      var $ = jQuery.noConflict();
-      $(document).ready(function(e) {
-        $(".<?php echo $widget_id; ?>").on('click', function(e) {
-          if ($(this).hasClass('to-left-side')) {
-            $('.<?php echo $widget_id; ?>-left-input-containers p.features-row').last().clone().find('.widefat').val('').parents('p').appendTo('.<?php echo $widget_id; ?>-left-input-containers div.clearfix');
-          } else {
-            $('.<?php echo $widget_id; ?>-right-input-containers p.features-row').last().clone().find('.widefat').val('').parents('p').appendTo('.<?php echo $widget_id; ?>-right-input-containers div.clearfix');
-          }
-        });
-        $('.remove-feature').live('click', function() {
-          $(this).parent('p.features-row').remove();
-        });
-      });
-    </script>
     <p>
       <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
       <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
@@ -87,7 +75,7 @@ class avalon_aboutus_widget extends WP_Widget {
         endif;
         ?></textarea>
     </p>
-    <div class="features-list <?php echo $widget_id; ?>-left-input-containers">
+    <div class="features-list <?php echo $widget_id; ?>-left-input-containers left-input-containers">
       <label for="features"><?php _e('Features list left column', 'wp-avalon'); ?></label>
       <div class="clearfix">
         <?php
@@ -119,7 +107,7 @@ class avalon_aboutus_widget extends WP_Widget {
       <span class="button-secondary to-left-side add-features-input <?php echo $widget_id; ?>">Add field</span>
     </div>
     <br />
-    <div class="features-list <?php echo $widget_id; ?>-right-input-containers">
+    <div class="features-list <?php echo $widget_id; ?>-right-input-containers right-input-containers">
       <label for="features"><?php _e('Features list right column', 'wp-avalon'); ?></label>
       <div class="clearfix">
         <?php

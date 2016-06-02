@@ -74,18 +74,10 @@ jQuery(document).ready(function() {
   });
 
   jQuery(document).on('click', '.add-features-input', function() {
-    if (jQuery('.features-list').find('p').length <= 1) {
-
-    } else {
-      jQuery(this).parents('.features-list').find('p:last-child').clone();
-    }
+    jQuery(this).parents('.features-list').find('p:last-child').clone().find('.widefat').val('').parents('p').appendTo(jQuery(this).parents('.features-list').find('.clearfix'));
   });
   jQuery(document).on('click', '.remove-features-input', function() {
-    if (jQuery('.features-list').find('p').length <= 1) {
-
-    } else {
       jQuery(this).parents('p').remove();
-    }
   });
 });
 

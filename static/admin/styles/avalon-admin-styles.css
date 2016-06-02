@@ -37,7 +37,7 @@ Styles for admin page
   vertical-align: middle;
 }
 .features-list p:first-child .remove-feature {
-  display: none;
+  display: none !important;
 }
 
 .add-features-input {
