@@ -27,7 +27,7 @@ Styles for admin page
   font: 400 20px/1 dashicons;
   left: 2px;
   position: relative;
-  top: 0;
+  top: 3px;
   transition: all 0.2s ease 0s;
   -moz-transition: all 0.2s ease 0s;
   -webkit-transition: all 0.2s ease 0s;
@@ -35,6 +35,9 @@ Styles for admin page
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   vertical-align: middle;
+}
+.features-list p:first-child .remove-feature {
+  display: none;
 }
 
 .add-features-input {
