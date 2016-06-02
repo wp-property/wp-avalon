@@ -23,29 +23,21 @@ class avalon_widget_overview extends WP_Widget {
               </a>
             </div>
           </div>
-          <?php
-        elseif (!empty($instance['custom_media_id'])) :
-          $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
-          print_r($custom_media_id);
-          if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
-            ?>
-            <div class="wpp_overview_left_column">
-              <div class="property_image">
-                <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($custom_media_id[0]); ?>">
-                  <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($custom_media_id[0]); ?>">
-                </a>
-              </div>
-            </div>
-          <?php endif; ?>
         <?php endif; ?>
         <div class="wpp_overview_right_column">
           <ul class="wpp_overview_data">
             <li class="property_title">
-              <a href="<?php echo $instance['link']; ?>"><?php echo $instance['title']; ?></a>
+              <?php if (!empty($instance['link']) && !empty($instance['title'])) : ?>
+                <a href="<?php echo $instance['link']; ?>"><?php echo $instance['title']; ?></a>
+              <?php elseif (!empty($instance['title'])) : ?>
+                <?php echo $instance['title']; ?>
+              <?php endif; ?>
             </li>
-            <li class="property_address">
-              <?php echo $instance['location']; ?>
-            </li>
+            <?php if (!empty($instance['location'])) : ?>
+              <li class="property_address">
+                <?php echo $instance['location']; ?>
+              </li>
+            <?php endif; ?>
           </ul>
           <div class="property_bottom">
             <div class="pb__left">
@@ -55,7 +47,9 @@ class avalon_widget_overview extends WP_Widget {
               </ul>
             </div>
             <div class="pb__right">
-              <div class="property_price"><?php echo $instance['price']; ?></div>
+              <?php if (!empty($instance['price'])) : ?>
+                <div class="property_price"><?php echo $instance['price']; ?></div>
+              <?php endif; ?>
             </div>
           </div>
         </div>                   
@@ -76,7 +70,6 @@ class avalon_widget_overview extends WP_Widget {
     $instance['price'] = strip_tags($new_instance['price']);
     $instance['link'] = strip_tags($new_instance['link']);
     $instance['image_uri'] = strip_tags($new_instance['image_uri']);
-    $instance['custom_media_id'] = strip_tags($new_instance['custom_media_id']);
 
     return $instance;
   }
@@ -141,11 +134,6 @@ class avalon_widget_overview extends WP_Widget {
 
       <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
-
-    <input class="custom_media_id" id="<?php echo $this->get_field_id('custom_media_id'); ?>" name="<?php echo $this->get_field_name('custom_media_id'); ?>" type="hidden" value="<?php
-           if (!empty($instance["custom_media_id"])): echo $instance["custom_media_id"];
-           endif;
-           ?>" />
 
     <?php
   }
