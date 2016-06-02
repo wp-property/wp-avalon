@@ -1139,6 +1139,11 @@ body main.main-content .container {
     width: 100%;
   }
 }
+body main.main-content .container .form-horizontal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 body main.main-content .container .frontpage-widgetaria-tabs {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -3944,6 +3949,7 @@ body main.main-content .container .content article textarea {
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  margin-bottom: 5px;
 }
 body main.main-content .container .content article input[type="text"]:focus,
 body main.main-content .container .content article input[type="email"]:focus,
