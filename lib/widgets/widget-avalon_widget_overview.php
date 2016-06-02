@@ -26,6 +26,7 @@ class avalon_widget_overview extends WP_Widget {
           <?php
         elseif (!empty($instance['custom_media_id'])) :
           $custom_media_id = wp_get_attachment_image_src($instance["custom_media_id"]);
+          print_r($custom_media_id);
           if (!empty($custom_media_id) && !empty($custom_media_id[0])) :
             ?>
             <div class="wpp_overview_left_column">
