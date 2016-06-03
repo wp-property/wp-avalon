@@ -471,30 +471,45 @@ function avalon_settings() {
 }
 
 function register_avalon_settings() {
+
   register_setting('avalon-settings-group', 'avalon_settings_from_backup');
+  
+  if (isset($_FILES['avalon_settings_from_backup_input']) ) {
+    $file_type = substr($_FILES['avalon_settings_from_backup_input']['name'], -4);
+    if ($file_type == 'json') {
+      $backup_file = $_FILES['avalon_settings_from_backup_input']['tmp_name'];
+      $backup_contents = file_get_contents($backup_file);
+      if (!empty($backup_contents)) {
+        $decoded_settings = json_decode($backup_contents, true);
+      }
+      if (!empty($decoded_settings)) {
+        update_option('theme_mods_wp-avalon', $decoded_settings);
+        add_action('admin_notices', 'avalon_success_settings_message');
+      }
+    } else {
+      add_action('admin_notices', 'avalon_error_settings_message');
+    }
+  }
 }
 
 function avalon_theme_settings() {
   ?>
   <div class="wrap">
     <h2>WP Avalon settings</h2>
-    <form enctype="multipart/form-data" method="post" action="<?php echo admin_url('admin-ajax.php?action=upload_avalon_settings'); ?>"> 
+    <form enctype="multipart/form-data" method="post" action=""> 
       <div class="avalon_settings_block">
-        <h3><?php _e('Restore Backup of WP Avalon Configuration:', 'wp-avalon'); ?></h3>
-        <input name="avalon_settings_from_backup" class="" id="avalon_backup_file" type="file" />
-        <input class="button action" type="submit" value="<?php _e('Submit', 'wp-avalon'); ?>" />
+        <h2><?php _e('Restore Backup of WP Avalon Configuration:', 'wp-avalon'); ?></h2>
+        <input name="avalon_settings_from_backup_input" class="" id="avalon_backup_file" type="file" />
       </div>
+      <br />
+      <div class="avalon_settings_block">
+        <a class="btn btn-default" href="<?php echo admin_url('admin-ajax.php?action=download_avalon_settings'); ?>">
+          <?php _e('Download Backup of Current WP Avalon Configuration', 'wp-avalon'); ?>
+        </a>
+      </div>
+      <br />
+      <input class="button-primary btn" type="submit" value="<?php _e('Save settings', 'wp-avalon'); ?>" />
     </form>
-    <?php
-    if ($_GET['return_message'] == 'updated') {
-      echo '<h1>' . __('Your settings updated.', 'wp-avalon') . '</h1>';
-    } elseif ($_GET['return_message'] == 'crashed') {
-      echo '<h1>' . __('Please, select a correct settings file.', 'wp-avalon') . '</h1>';
-    }
-    ?>
-    <br />
-    <br />
-    <a class="btn btn-default" href="<?php echo admin_url('admin-ajax.php?action=download_avalon_settings'); ?>"><?php _e('Download Backup of Current WP Avalon Configuration.', 'wp-avalon'); ?></a>
   </div>
   <?php
 }
@@ -520,21 +535,18 @@ function download_avalon_settings() {
 
 add_action('wp_ajax_upload_avalon_settings', 'upload_avalon_settings');
 
-function upload_avalon_settings() {
-  $backup_file = $_FILES['avalon_settings_from_backup']['tmp_name'];
-  $backup_contents = file_get_contents($backup_file);
-  if (!empty($backup_contents)) {
-    $decoded_settings = json_decode($backup_contents, true);
-  } else {
-    wp_redirect(admin_url('themes.php?page=avalon_settings_page&return_message=crashed'));
-  }
-  if (!empty($decoded_settings)) {
-    update_option('theme_mods_wp-avalon', $decoded_settings);
+function avalon_success_settings_message() {
+  ?>
+  <div class="notice notice-success is-dismissible">
+    <p><?php _e('Your settings updated!', 'wp-avalon'); ?></p>
+  </div>
+  <?php
+}
 
-    if ($_REQUEST['action'] == 'upload_avalon_settings') {
-      wp_redirect(admin_url('themes.php?page=avalon_settings_page&return_message=updated'));
-      exit;
-    }
-  }
-  die();
+function avalon_error_settings_message() {
+  ?>
+  <div class="notice notice-error is-dismissible">
+    <p><?php _e('Please, select a correct settings file.', 'wp-avalon'); ?></p>
+  </div>
+  <?php
 }
