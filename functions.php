@@ -111,9 +111,10 @@ add_action('widgets_init', 'avalon_widgets_init');
  * @since Avalon 1.0
  */
 function wp_avalon_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_avalon_content_width', 1140 );
+  $GLOBALS['content_width'] = apply_filters('wp_avalon_content_width', 1140);
 }
-add_action( 'after_setup_theme', 'wp_avalon_content_width', 0 );
+
+add_action('after_setup_theme', 'wp_avalon_content_width', 0);
 
 /**
  * Registration redirect
@@ -264,7 +265,7 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
               'property_stats' => $property_stats
   ));
 
-  //** Check if we have children */
+//** Check if we have children */
   if (!empty($property['children']) && (!isset($wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties']) || $wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties'] != 'true' )) {
     foreach ($property['children'] as $child_property) {
       $child_property = (array) $child_property;
@@ -451,4 +452,89 @@ function avalon_property_overview_image($args = '') {
   } else {
     echo $html;
   }
+}
+
+/**
+ * Avalon settings page functions
+ * 
+ * @author vorobjov@UD
+ * 
+ * @since Avalon 1.0
+ */
+add_action('admin_menu', 'avalon_settings');
+
+function avalon_settings() {
+
+  add_submenu_page('themes.php', __('WP Avalon settings', 'wp-avalon'), __('WP Avalon settings', 'wp-avalon'), 'administrator', 'avalon_settings_page', 'avalon_theme_settings');
+
+  add_action('admin_init', 'register_avalon_settings');
+}
+
+function register_avalon_settings() {
+  register_setting('avalon-settings-group', 'avalon_settings_from_backup');
+}
+
+function avalon_theme_settings() {
+  ?>
+  <div class="wrap">
+    <h2>WP Avalon settings</h2>
+    <form enctype="multipart/form-data" method="post" action="<?php echo admin_url('admin-ajax.php?action=upload_avalon_settings'); ?>"> 
+      <div class="avalon_settings_block">
+        <h3><?php _e('Restore Backup of WP Avalon Configuration:', 'wp-avalon'); ?></h3>
+        <input name="avalon_settings_from_backup" class="" id="avalon_backup_file" type="file" />
+        <input class="button action" type="submit" value="<?php _e('Submit', 'wp-avalon'); ?>" />
+      </div>
+    </form>
+    <?php
+    if ($_GET['return_message'] == 'updated') {
+      echo '<h1>' . __('Your settings updated.', 'wp-avalon') . '</h1>';
+    } elseif ($_GET['return_message'] == 'crashed') {
+      echo '<h1>' . __('Please, select a correct settings file.', 'wp-avalon') . '</h1>';
+    }
+    ?>
+    <br />
+    <br />
+    <a class="btn btn-default" href="<?php echo admin_url('admin-ajax.php?action=download_avalon_settings'); ?>"><?php _e('Download Backup of Current WP Avalon Configuration.', 'wp-avalon'); ?></a>
+  </div>
+  <?php
+}
+
+add_action('wp_ajax_download_avalon_settings', 'download_avalon_settings');
+
+function download_avalon_settings() {
+  $sitename = sanitize_key(get_bloginfo('name'));
+  $filename = $sitename . '-wp-avalon.' . date('Y-m-d') . '.json';
+
+  header("Cache-Control: public");
+  header("Content-Description: File Transfer");
+  header("Content-Disposition: attachment; filename=$filename");
+  header("Content-Transfer-Encoding: binary");
+  header('Content-Type: text/plain; charset=' . get_option('blog_charset'), true);
+
+  $data = get_option('theme_mods_wp-avalon');
+
+  echo json_encode($data, JSON_PRETTY_PRINT);
+
+  die();
+}
+
+add_action('wp_ajax_upload_avalon_settings', 'upload_avalon_settings');
+
+function upload_avalon_settings() {
+  $backup_file = $_FILES['avalon_settings_from_backup']['tmp_name'];
+  $backup_contents = file_get_contents($backup_file);
+  if (!empty($backup_contents)) {
+    $decoded_settings = json_decode($backup_contents, true);
+  } else {
+    wp_redirect(admin_url('themes.php?page=avalon_settings_page&return_message=crashed'));
+  }
+  if (!empty($decoded_settings)) {
+    update_option('theme_mods_wp-avalon', $decoded_settings);
+
+    if ($_REQUEST['action'] == 'upload_avalon_settings') {
+      wp_redirect(admin_url('themes.php?page=avalon_settings_page&return_message=updated'));
+      exit;
+    }
+  }
+  die();
 }
