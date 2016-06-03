@@ -1636,6 +1636,13 @@ body {
               position: relative;
               width: 100%;
             }
+            &.disabled_features {
+              margin-bottom: 0.5em;
+              
+              &:after {
+                display: none;
+              }
+            }
             @media (max-width: 640px) {
               line-height: 1.5;
               padding: 0 15px;

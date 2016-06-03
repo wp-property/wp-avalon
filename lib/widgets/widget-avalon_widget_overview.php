@@ -133,6 +133,7 @@ class avalon_widget_overview extends WP_Widget {
       ?>" style="margin-top:5px;">
 
       <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+      <input type="button" class="button button-primary remove_media_button" id="remove_media_button" value="<?php _e('Disable image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
 
     <?php

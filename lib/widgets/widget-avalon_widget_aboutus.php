@@ -16,28 +16,34 @@ class avalon_aboutus_widget extends WP_Widget {
       echo '<div class="atw__title">' . $instance['title'] . '</div>';
     }
     if (!empty($instance['text'])) {
-      echo '<div class="atw__content">' . do_shortcode($instance['text']) . '</div>';
+      echo '<div class="atw__content';
+      if (($instance['featured-left-fields'][0] == '') && ($instance['featured-right-fields'][0] == '')) {
+        echo ' disabled_features ';
+      }
+      echo '">' . do_shortcode($instance['text']) . '</div>';
     }
-    echo '<div class="atw__features row">';
-    if (!empty($instance['featured-left-fields']) && $instance['featured-left-fields'] != '') :
-      echo '<ul class="atw_features_left col-md-6">';
-      foreach ($instance['featured-left-fields'] as $value) :
-        if ($value != '') {
-          echo '<li>' . $value . '</li>';
-        }
-      endforeach;
-      echo '</ul>';
-    endif;
-    if (!empty($instance['featured-right-fields']) && $instance['featured-right-fields'] != '') :
-      echo '<ul class="atw_features_right col-md-6">';
-      foreach ($instance['featured-right-fields'] as $value) :
-        if ($value != '') {
-          echo '<li>' . $value . '</li>';
-        }
-      endforeach;
-      echo '</ul>';
-    endif;
-    echo '</div>';
+    if (($instance['featured-left-fields'][0] != '') && ($instance['featured-right-fields'][0] != '')) {
+      echo '<div class="atw__features row">';
+      if (!empty($instance['featured-left-fields']) && $instance['featured-left-fields'] != '') :
+        echo '<ul class="atw_features_left col-md-6">';
+        foreach ($instance['featured-left-fields'] as $value) :
+          if ($value != '') {
+            echo '<li>' . $value . '</li>';
+          }
+        endforeach;
+        echo '</ul>';
+      endif;
+      if (!empty($instance['featured-right-fields']) && $instance['featured-right-fields'] != '') :
+        echo '<ul class="atw_features_right col-md-6">';
+        foreach ($instance['featured-right-fields'] as $value) :
+          if ($value != '') {
+            echo '<li>' . $value . '</li>';
+          }
+        endforeach;
+        echo '</ul>';
+      endif;
+      echo '</div>';
+    }
     echo '</div>';
   }
 

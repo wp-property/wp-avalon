@@ -58,6 +58,11 @@ jQuery(document).ready(function() {
     url_input: ".map-image-select #img_path",
     image: ".map-image-select #map_img"
   });
+  
+  jQuery(document).on('click', '#remove_media_button', function(){
+    jQuery(this).parent().find('img.custom_media_image').attr('src', '');
+    jQuery(this).parent().find('.custom_media_url.widefat').val('');
+  });
 
   jQuery(document).on('click', '.map-img-delete-button', function() {
     jQuery('.map-image-select #img_path').val('');

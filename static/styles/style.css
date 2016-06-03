@@ -2234,6 +2234,14 @@ body main.main-content .container .frontpage-about-products-area .aboutus-text-w
   position: relative;
   width: 100%;
 }
+body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__content.disabled_features,
+body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__content.disabled_features {
+  margin-bottom: 0.5em;
+}
+body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__content.disabled_features:after,
+body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__content.disabled_features:after {
+  display: none;
+}
 @media (max-width: 640px) {
   body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__content,
   body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__content {
