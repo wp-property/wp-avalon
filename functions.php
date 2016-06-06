@@ -471,8 +471,6 @@ function avalon_settings() {
 }
 
 function register_avalon_settings() {
-
-  register_setting('avalon-settings-group', 'avalon_settings_from_backup');
   
   if (isset($_FILES['avalon_settings_from_backup_input']) ) {
     $file_type = substr($_FILES['avalon_settings_from_backup_input']['name'], -4);
