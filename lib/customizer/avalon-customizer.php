@@ -1333,11 +1333,14 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_hover_button_text_color', '#FFF'); ?>;
     }
 
-    a {
+    body a:not([class="btn"]), 
+    body a:not([class="btn-info"]) {
       color: <?php echo get_theme_mod('avalon_permalink_color', '#337ab7'); ?>;
     }
-    a:focus,
-    a:hover {
+    body a:not([class="btn"]):focus, 
+    body a:not([class="btn-info"]):focus,
+    body a:not([class="btn-info"]):hover,
+    body a:not([class="btn-info"]):hover {
       color: <?php echo get_theme_mod('avalon_permalink_hover_color', '#23527c'); ?>;
     }
 

@@ -180,11 +180,9 @@
       if (newval != '1') {
         $('.secondary-header.sh__page').addClass('hidden_block');
         $('#customize-controls #customize-control-header_image_show_featured_image_in_head').addClass('hidden_block');
-        console.log('disable');
       } else {
         $('.secondary-header.sh__page').removeClass('hidden_block');
         $('#customize-controls #customize-control-header_image_show_featured_image_in_head').removeClass('hidden_block');
-        console.log('enable');
       }
     });
   });
