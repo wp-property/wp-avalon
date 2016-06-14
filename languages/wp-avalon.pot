@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Avalon\n"
-"POT-Creation-Date: 2016-05-30 18:20+0300\n"
-"PO-Revision-Date: 2016-05-30 18:03+0300\n"
+"POT-Creation-Date: 2016-06-14 18:08+0300\n"
+"PO-Revision-Date: 2016-06-14 18:07+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -87,45 +87,69 @@ msgstr ""
 msgid "Appears at the right side on all pages"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:196
 msgid "Contact form from "
 msgstr ""
 
-#: functions.php:198
+#: functions.php:199
 msgid "From:"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:201
 #, php-format
 msgid "Mail Sent. Thank you %s, we will contact you shortly."
 msgstr ""
 
-#: functions.php:320
+#: functions.php:321
 msgid "Description"
 msgstr ""
 
-#: functions.php:344
+#: functions.php:345
 msgid "Yes"
 msgstr ""
 
-#: functions.php:350
+#: functions.php:351
 msgid "No"
 msgstr ""
 
-#: functions.php:369
+#: functions.php:370
 msgid "Overview"
 msgstr ""
 
-#: functions.php:374
+#: functions.php:375
 msgid "Child Properties"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:386
 msgid "Get directions"
 msgstr ""
 
-#: functions.php:432
+#: functions.php:433
 msgid " of "
+msgstr ""
+
+#: functions.php:468
+msgid "WP Avalon settings"
+msgstr ""
+
+#: functions.php:507
+msgid "Restore Backup of WP Avalon Configuration:"
+msgstr ""
+
+#: functions.php:513
+msgid "Download Backup of Current WP Avalon Configuration"
+msgstr ""
+
+#: functions.php:517
+msgid "Save settings"
+msgstr ""
+
+#: functions.php:547
+msgid "Your settings updated!"
+msgstr ""
+
+#: functions.php:555
+msgid "Please, select a correct settings file."
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:8
@@ -252,307 +276,307 @@ msgstr ""
 msgid "Login/Register"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:328
+#: lib/customizer/avalon-customizer.php:329
 msgid "Show Login/Register button"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:336
-#: lib/customizer/avalon-customizer.php:347
+#: lib/customizer/avalon-customizer.php:337
+#: lib/customizer/avalon-customizer.php:349
 msgid "Header image"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:359
+#: lib/customizer/avalon-customizer.php:361
 msgid "Blackout color for header image"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:370
+#: lib/customizer/avalon-customizer.php:373
 msgid "Blackout opacity (type \"0.0-1.0\" of opacity). Default: 0"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:383
+#: lib/customizer/avalon-customizer.php:386
 msgid "Header image section settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:393
+#: lib/customizer/avalon-customizer.php:397
 msgid "Show \"Header Image\" section on front page"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:405
+#: lib/customizer/avalon-customizer.php:410
 msgid "Front page header image height"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:421
+#: lib/customizer/avalon-customizer.php:427
 msgid "Show \"Header image\" section on single and post page"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:431
+#: lib/customizer/avalon-customizer.php:438
 msgid ""
 "Show fetured image in header instead of header image (on single and post "
 "page)"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:443
+#: lib/customizer/avalon-customizer.php:451
 msgid "Single and post page header image height"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:456
+#: lib/customizer/avalon-customizer.php:464
 msgid "Wellcome section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:468
+#: lib/customizer/avalon-customizer.php:477
 msgid "Disable \"Wellcome\" section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:475
+#: lib/customizer/avalon-customizer.php:484
 #: template-parts/header/header-secondary.php:32
 msgid "Wellcome to WP Avalon"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:480
+#: lib/customizer/avalon-customizer.php:490
 msgid "Wellcome section title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:487
+#: lib/customizer/avalon-customizer.php:497
 #: template-parts/header/header-secondary.php:28
 msgid ""
 "WP Avalon - FREE wordpress theme. Created special for using with <a href=\"#"
 "\">wp-property</a> plugin"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:492
+#: lib/customizer/avalon-customizer.php:503
 msgid "Wellcome section text"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:504
+#: lib/customizer/avalon-customizer.php:516
 msgid "Disable \"Property search\" in Wellcome section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:520
+#: lib/customizer/avalon-customizer.php:532
 #: template-parts/header/header-secondary.php:41
 msgid "At that place you can enable default property search"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:525
+#: lib/customizer/avalon-customizer.php:538
 msgid "\"Property search\" description"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:535
+#: lib/customizer/avalon-customizer.php:548
 msgid "Logo settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:547
-#: lib/customizer/avalon-customizer.php:1029
+#: lib/customizer/avalon-customizer.php:561
+#: lib/customizer/avalon-customizer.php:1070
 msgid "Logo icon"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:557
-#: lib/customizer/avalon-customizer.php:619
-#: lib/customizer/avalon-customizer.php:1040
-#: lib/customizer/avalon-customizer.php:1107
+#: lib/customizer/avalon-customizer.php:572
+#: lib/customizer/avalon-customizer.php:638
+#: lib/customizer/avalon-customizer.php:1082
+#: lib/customizer/avalon-customizer.php:1153
 msgid "Margin top in px"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:573
-#: lib/customizer/avalon-customizer.php:1057
+#: lib/customizer/avalon-customizer.php:589
+#: lib/customizer/avalon-customizer.php:1100
 msgid "Margin right in px"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-#: lib/customizer/avalon-customizer.php:584
-#: lib/customizer/avalon-customizer.php:1069
+#: lib/customizer/avalon-customizer.php:600
+#: lib/customizer/avalon-customizer.php:1112
 #: template-parts/footer/footer-logo.php:13
 #: template-parts/header/header-logo.php:14
 msgid "WP Avalon"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:589
-#: lib/customizer/avalon-customizer.php:1074
+#: lib/customizer/avalon-customizer.php:606
+#: lib/customizer/avalon-customizer.php:1118
 msgid "Logo text"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:600
-#: lib/customizer/avalon-customizer.php:1086
+#: lib/customizer/avalon-customizer.php:617
+#: lib/customizer/avalon-customizer.php:1130
 msgid "Logo Text Color"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:609
-#: lib/customizer/avalon-customizer.php:1096
+#: lib/customizer/avalon-customizer.php:627
+#: lib/customizer/avalon-customizer.php:1141
 msgid "Or load full logo image instead of logo with text"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:631
+#: lib/customizer/avalon-customizer.php:650
 msgid "Contact us settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:641
+#: lib/customizer/avalon-customizer.php:661
 msgid "Disable \"Contact us\" area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:649
+#: lib/customizer/avalon-customizer.php:668
 #: template-parts/header/header-bar.php:10
 msgid "CONTACT FORM"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:653
+#: lib/customizer/avalon-customizer.php:674
 msgid "\"Contact us\" area title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:661
+#: lib/customizer/avalon-customizer.php:681
 #: template-parts/header/header-bar.php:11
 msgid ""
 "Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id "
 "tellus nisl. Donec eget nunc eget odio malesuada egestas."
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:665
+#: lib/customizer/avalon-customizer.php:687
 msgid "\"Contact us\" area description"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:677
+#: lib/customizer/avalon-customizer.php:700
 msgid "Contact us foms settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:682
+#: lib/customizer/avalon-customizer.php:705
 msgid "Use default form (emails will be send on site admin email)"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:683
+#: lib/customizer/avalon-customizer.php:706
 msgid "Use custom form with shortcode"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:693
+#: lib/customizer/avalon-customizer.php:717
 msgid "\"Contact us\" custom form shortcode"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:705
+#: lib/customizer/avalon-customizer.php:730
 msgid "\"Contact us\" custom form CSS"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:714
+#: lib/customizer/avalon-customizer.php:739
 msgid "\"Location\" area settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:725
+#: lib/customizer/avalon-customizer.php:751
 msgid "Disable \"Location\" area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:733
+#: lib/customizer/avalon-customizer.php:758
 #: template-parts/header/header-bar.php:16
 msgid "Location & Address"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:737
+#: lib/customizer/avalon-customizer.php:764
 msgid "\"Location\" area title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:748
+#: lib/customizer/avalon-customizer.php:776
 msgid "\"Location\" adress (for google map)"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:759
+#: lib/customizer/avalon-customizer.php:788
 msgid "or use image"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:766
+#: lib/customizer/avalon-customizer.php:796
 #: template-parts/header/header-bar.php:19
 msgid "Here you can add some decription"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:770
+#: lib/customizer/avalon-customizer.php:800
 msgid "\"Location\" area decrpiption"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:784
+#: lib/customizer/avalon-customizer.php:814
 msgid "Frontpage multi-sidebar widget area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:789
+#: lib/customizer/avalon-customizer.php:819
 msgid "Area settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:798
+#: lib/customizer/avalon-customizer.php:829
 msgid "Disable widget area"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:812
+#: lib/customizer/avalon-customizer.php:843
 #: lib/widgets/widgets-functions.php:24
 msgid "About us section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:817
-#: lib/customizer/avalon-customizer.php:846
-#: lib/customizer/avalon-customizer.php:886
-#: lib/customizer/avalon-customizer.php:914
-#: lib/customizer/avalon-customizer.php:952
+#: lib/customizer/avalon-customizer.php:848
+#: lib/customizer/avalon-customizer.php:878
+#: lib/customizer/avalon-customizer.php:920
+#: lib/customizer/avalon-customizer.php:949
+#: lib/customizer/avalon-customizer.php:989
 msgid "Settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:827
-#: lib/customizer/avalon-customizer.php:856
-#: lib/customizer/avalon-customizer.php:896
-#: lib/customizer/avalon-customizer.php:924
-#: lib/customizer/avalon-customizer.php:962
+#: lib/customizer/avalon-customizer.php:859
+#: lib/customizer/avalon-customizer.php:889
+#: lib/customizer/avalon-customizer.php:931
+#: lib/customizer/avalon-customizer.php:960
+#: lib/customizer/avalon-customizer.php:1000
 msgid "Disable section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:841
+#: lib/customizer/avalon-customizer.php:873
 msgid "Focus section settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:863
+#: lib/customizer/avalon-customizer.php:896
 #: template-parts/front-page/frontpage-focus-widget-area.php:16
 msgid "Focus widget area title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:868
-#: lib/customizer/avalon-customizer.php:934
-#: lib/customizer/avalon-customizer.php:973
+#: lib/customizer/avalon-customizer.php:902
+#: lib/customizer/avalon-customizer.php:971
+#: lib/customizer/avalon-customizer.php:1012
 msgid "Section title"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:881
+#: lib/customizer/avalon-customizer.php:915
 msgid "About products section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:909
-#: lib/customizer/avalon-customizer.php:930
+#: lib/customizer/avalon-customizer.php:944
+#: lib/customizer/avalon-customizer.php:966
 #: lib/widgets/widgets-functions.php:28
 #: template-parts/front-page/frontpage-overview-widget-area.php:16
 msgid "WP-Property overview of listings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:947
+#: lib/customizer/avalon-customizer.php:984
 #: lib/widgets/widgets-functions.php:30
 msgid "Flip widgets section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:969
+#: lib/customizer/avalon-customizer.php:1007
 #: template-parts/front-page/frontpage-flip-widget-area.php:16
 msgid "WP-Property addons"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:986
+#: lib/customizer/avalon-customizer.php:1025
 msgid "Frontpage container section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:991
+#: lib/customizer/avalon-customizer.php:1030
 msgid "Frontpage container settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1000
+#: lib/customizer/avalon-customizer.php:1040
 msgid "Disable default content on front page"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1013
+#: lib/customizer/avalon-customizer.php:1053
 msgid "Footer section"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1018
+#: lib/customizer/avalon-customizer.php:1058
 msgid "Footer Logo settings"
 msgstr ""
 
-#: lib/customizer/avalon-customizer.php:1120
-#: lib/customizer/avalon-customizer.php:1131
+#: lib/customizer/avalon-customizer.php:1166
+#: lib/customizer/avalon-customizer.php:1178
 msgid "Copyrights"
 msgstr ""
 
@@ -707,8 +731,8 @@ msgstr ""
 
 #: lib/widgets/register-default-widgets.php:110
 msgid ""
-"More than a Plugin – A Real Estate Management System! Dynamic Property "
-"Listings – No Coding Required! Unparalleled Flexibility – List ANY Product "
+"More than a Plugin - A Real Estate Management System! Dynamic Property "
+"Listings - No Coding Required! Unparalleled Flexibility - List ANY Product "
 "or Service!<br /><br /><strong>Other WP-Property Features</strong>"
 msgstr ""
 
@@ -881,7 +905,7 @@ msgstr ""
 #: lib/widgets/register-default-widgets.php:283
 #: template-parts/front-page/frontpage-flip-widget-area.php:98
 msgid ""
-"The Quotes Add-on let’s you automate your workflow by creating quotes and "
+"The Quotes Add-on let's you automate your workflow by creating quotes and "
 "letting your clients ask questions regarding quotes directly on your "
 "website. Once a quote is approved, it is converted to an invoice with a "
 "single click."
@@ -1001,24 +1025,24 @@ msgstr ""
 msgid "WP Avalon - About us widget"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_aboutus.php:79
-#: lib/widgets/widget-avalon_widget_flip.php:70
+#: lib/widgets/widget-avalon_widget_aboutus.php:71
+#: lib/widgets/widget-avalon_widget_flip.php:76
 #: lib/widgets/widget-avalon_widget_focus.php:89
-#: lib/widgets/widget-avalon_widget_overview.php:87
+#: lib/widgets/widget-avalon_widget_overview.php:81
 msgid "Title"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_aboutus.php:86
-#: lib/widgets/widget-avalon_widget_flip.php:77
+#: lib/widgets/widget-avalon_widget_aboutus.php:78
+#: lib/widgets/widget-avalon_widget_flip.php:83
 #: lib/widgets/widget-avalon_widget_focus.php:96
 msgid "Text"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_aboutus.php:93
+#: lib/widgets/widget-avalon_widget_aboutus.php:85
 msgid "Features list left column"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_aboutus.php:125
+#: lib/widgets/widget-avalon_widget_aboutus.php:117
 msgid "Features list right column"
 msgstr ""
 
@@ -1026,26 +1050,36 @@ msgstr ""
 msgid "WP Avalon - Flip text widget"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_flip.php:84
+#: lib/widgets/widget-avalon_widget_flip.php:48
+msgid "View more..."
+msgstr ""
+
+#: lib/widgets/widget-avalon_widget_flip.php:90
 msgid "Url"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_flip.php:91
+#: lib/widgets/widget-avalon_widget_flip.php:97
 #: lib/widgets/widget-avalon_widget_focus.php:124
-#: lib/widgets/widget-avalon_widget_overview.php:129
+#: lib/widgets/widget-avalon_widget_overview.php:123
 msgid "Image"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_flip.php:94
+#: lib/widgets/widget-avalon_widget_flip.php:100
 #: lib/widgets/widget-avalon_widget_focus.php:127
-#: lib/widgets/widget-avalon_widget_overview.php:132
+#: lib/widgets/widget-avalon_widget_overview.php:126
 msgid "Uploaded image"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_flip.php:103
+#: lib/widgets/widget-avalon_widget_flip.php:109
 #: lib/widgets/widget-avalon_widget_focus.php:136
-#: lib/widgets/widget-avalon_widget_overview.php:141
+#: lib/widgets/widget-avalon_widget_overview.php:135
 msgid "Upload Image"
+msgstr ""
+
+#: lib/widgets/widget-avalon_widget_flip.php:110
+#: lib/widgets/widget-avalon_widget_focus.php:137
+#: lib/widgets/widget-avalon_widget_overview.php:136
+msgid "Disable image"
 msgstr ""
 
 #: lib/widgets/widget-avalon_widget_focus.php:7
@@ -1053,12 +1087,12 @@ msgid "WP Avalon - Focus widget"
 msgstr ""
 
 #: lib/widgets/widget-avalon_widget_focus.php:103
-#: lib/widgets/widget-avalon_widget_overview.php:115
+#: lib/widgets/widget-avalon_widget_overview.php:109
 msgid "Price"
 msgstr ""
 
 #: lib/widgets/widget-avalon_widget_focus.php:110
-#: lib/widgets/widget-avalon_widget_overview.php:122
+#: lib/widgets/widget-avalon_widget_overview.php:116
 msgid "Link"
 msgstr ""
 
@@ -1070,15 +1104,15 @@ msgstr ""
 msgid "WP Avalon - Overview widget"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_overview.php:94
+#: lib/widgets/widget-avalon_widget_overview.php:88
 msgid "Location"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_overview.php:101
+#: lib/widgets/widget-avalon_widget_overview.php:95
 msgid "Beds"
 msgstr ""
 
-#: lib/widgets/widget-avalon_widget_overview.php:108
+#: lib/widgets/widget-avalon_widget_overview.php:102
 msgid "Baths"
 msgstr ""
 
@@ -1161,9 +1195,9 @@ msgstr ""
 
 #: template-parts/front-page/frontpage-about-products-area.php:21
 msgid ""
-"More than a Plugin – A Real Estate Management System!Dynamic Property "
-"Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or "
-"Service!<br /><br /><strong>Other WP-Property Features</strong>"
+"More than a Plugin - A Real Estate Management System!Dynamic Property "
+"Listings - No Coding Required! Unparalleled Flexibility - List ANY Product "
+"or Service!<br /><br /><strong>Other WP-Property Features</strong>"
 msgstr ""
 
 #: template-parts/header/header-bar.php:136

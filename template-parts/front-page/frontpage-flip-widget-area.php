@@ -95,7 +95,7 @@ if ($enable_section != 1) :
         /* widget #8 */
         the_widget('avalon_flip_widget', array(
             'title' => __('WP-Invoice: Quotes', 'wp-avalon'),
-            'description' => __('The Quotes Add-on let’s you automate your workflow by creating quotes and letting your clients ask questions regarding quotes directly on your website. Once a quote is approved, it is converted to an invoice with a single click.', 'wp-avalon'),
+            'description' => __('The Quotes Add-on let\'s you automate your workflow by creating quotes and letting your clients ask questions regarding quotes directly on your website. Once a quote is approved, it is converted to an invoice with a single click.', 'wp-avalon'),
             'url' => 'https://www.usabilitydynamics.com/product/wp-invoice-quotes',
             'image_uri' => get_template_directory_uri() . '/static/images/fhb__image-11.png'
                 ), array(

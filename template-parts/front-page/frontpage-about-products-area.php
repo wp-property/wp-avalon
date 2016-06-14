@@ -18,7 +18,7 @@ if ($enable_section != 1) :
       the_widget(
               'avalon_aboutus_widget', array(
           'title' => __('About WP Property. Free WordPress plugin', 'wp-avalon'),
-          'text' => __('More than a Plugin – A Real Estate Management System!Dynamic Property Listings – No Coding Required!Unparalleled Flexibility – List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
+          'text' => __('More than a Plugin - A Real Estate Management System!Dynamic Property Listings - No Coding Required! Unparalleled Flexibility - List ANY Product or Service!<br /><br /><strong>Other WP-Property Features</strong>', 'wp-avalon'),
           'featured-left-fields' => array(
               '0' => __('Any amount of custom attributes (fields) and property types.', 'wp-avalon'),
               '1' => __('Free and Paid Add-ons and Themes available.', 'wp-avalon'),

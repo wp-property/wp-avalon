@@ -465,18 +465,26 @@ add_action('admin_menu', 'avalon_settings');
 
 function avalon_settings() {
 
-  add_submenu_page('themes.php', __('WP Avalon settings', 'wp-avalon'), __('WP Avalon settings', 'wp-avalon'), 'administrator', 'avalon_settings_page', 'avalon_theme_settings');
+  add_theme_page(__('WP Avalon settings', 'wp-avalon'), __('WP Avalon settings', 'wp-avalon'), 'administrator', 'avalon_settings_page', 'avalon_theme_settings');
 
   add_action('admin_init', 'register_avalon_settings');
 }
 
 function register_avalon_settings() {
-  
-  if (isset($_FILES['avalon_settings_from_backup_input']) ) {
+
+  if (isset($_FILES['avalon_settings_from_backup_input'])) {
+
+    if (!WP_Filesystem($creds)) {
+      request_filesystem_credentials($url, '', true, false, null);
+      return;
+    }
+    global $wp_filesystem;
+    print_r($wp_filesystem->get);
+
     $file_type = substr($_FILES['avalon_settings_from_backup_input']['name'], -4);
     if ($file_type == 'json') {
       $backup_file = $_FILES['avalon_settings_from_backup_input']['tmp_name'];
-      $backup_contents = file_get_contents($backup_file);
+      $backup_contents = $wp_filesystem->get_contents($backup_file);
       if (!empty($backup_contents)) {
         $decoded_settings = json_decode($backup_contents, true);
       }
