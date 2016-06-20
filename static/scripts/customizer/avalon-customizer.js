@@ -497,7 +497,7 @@
   });
   wp.customize('avalon_hover_button_bg_color', function(value) {
     value.bind(function(newval) {
-      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('background-color', newval);
+      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('background-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('background-color', newval);
       $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('background-color', newval);
@@ -547,7 +547,7 @@
   });
   wp.customize('avalon_hover_button_border_color', function(value) {
     value.bind(function(newval) {
-      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('border-color', newval);
+      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('border-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('border-color', newval);
       $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('border-color', newval);
@@ -597,7 +597,7 @@
   });
   wp.customize('avalon_hover_button_text_color', function(value) {
     value.bind(function(newval) {
-      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('color', newval);
+      $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('color', newval);
       $('.wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover').css('color', newval);
