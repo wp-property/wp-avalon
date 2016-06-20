@@ -221,6 +221,16 @@
   cursor: pointer;
   width: auto;
 }
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .wpp_property_overview_shortcode .wpp_row_view {
   margin: 0 -15px;
 }
