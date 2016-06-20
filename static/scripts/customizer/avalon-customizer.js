@@ -347,6 +347,8 @@
 
   wp.customize('avalon_button_bg_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('background-color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('background-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('background-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a').css('background-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn').css('background-color', newval);
@@ -397,6 +399,8 @@
   });
   wp.customize('avalon_button_border_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('border-color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('border-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('border-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a').css('border-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn').css('border-color', newval);
@@ -447,6 +451,8 @@
   });
   wp.customize('avalon_button_text_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button').css('color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a').css('color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a').css('color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn').css('color', newval);
@@ -497,6 +503,8 @@
   });
   wp.customize('avalon_hover_button_bg_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('background-color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('background-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('background-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('background-color', newval);
@@ -547,6 +555,8 @@
   });
   wp.customize('avalon_hover_button_border_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('border-color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('border-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('border-color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('border-color', newval);
@@ -597,6 +607,8 @@
   });
   wp.customize('avalon_hover_button_text_color', function(value) {
     value.bind(function(newval) {
+      $('.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('color', newval);
+      $(' .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_wrapper .wpp_pagination_button:hover').css('color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover').css('color', newval);
       $('body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover').css('color', newval);
       $('.widget.widget_featuredpropertieswidget .view-all .btn:hover').css('color', newval);
