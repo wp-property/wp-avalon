@@ -226,10 +226,43 @@
   padding: 0;
   list-style: none;
 }
-.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation ul {
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages {
+  margin-right: 10px;
+  display: inline-block;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li {
+  display: inline-block;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a {
+  background-color: #19294c;
+  border: medium none;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li.current-page a {
+  font-weight: bold;
+}
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .first-page-btn a,
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .previous-page-btn a,
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .next-page-btn a,
+.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .last-page-btn a {
+  background-color: #19294c;
+  border: medium none;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
 }
 .wpp_property_overview_shortcode .wpp_row_view {
   margin: 0 -15px;
