@@ -1286,6 +1286,9 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_secondary_button_text_color', '#FFF'); ?>;
     }
 
+    body a.reg_link,
+    body .btn-primary,
+    body .header-bar #loginform p #wp-submit,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .first-page-btn a,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .previous-page-btn a,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .next-page-btn a,
@@ -1341,6 +1344,9 @@ function avalon_customize_css() {
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
     }
 
+    body a.reg_link,
+    body .btn-primary:hover,
+    body .header-bar #loginform p #wp-submit:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .first-page-btn a:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .previous-page-btn a:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .next-page-btn a:hover,
