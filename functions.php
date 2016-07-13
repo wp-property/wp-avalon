@@ -121,11 +121,11 @@ add_action('after_setup_theme', 'wp_avalon_content_width', 0);
  * 
  * @since Avalon 1.0
  */
-function avalon_registration_redirect($registration_redirect) {
-  return site_url();
-}
-
-add_filter('registration_redirect', 'avalon_registration_redirect');
+//function avalon_registration_redirect($registration_redirect) {
+//  return site_url();
+//}
+//
+//add_filter('registration_redirect', 'avalon_registration_redirect');
 
 /**
  * Default contact us function
