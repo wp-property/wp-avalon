@@ -789,7 +789,8 @@
   float: left;
   margin: 0 10px 0 0;
 }
-.wpp_feps_login_box .line .login_link .lost_pass_link {
+.wpp_feps_login_box .line .login_link .lost_pass_link,
+.wpp_feps_login_box .line .login_link .reg_link {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -815,7 +816,8 @@
   color: #fff;
   text-decoration: none;
 }
-.wpp_feps_login_box .line .login_link .lost_pass_link:hover {
+.wpp_feps_login_box .line .login_link .lost_pass_link:hover,
+.wpp_feps_login_box .line .login_link .reg_link:hover {
   background-color: #0b1a3a;
   border-color: #0b1a3a;
   color: #fff;
