@@ -815,6 +815,7 @@
   border-color: #0b1a3a;
   color: #fff;
   text-decoration: none;
+  margin-right: 8px;
 }
 .wpp_feps_login_box .line .login_link .lost_pass_link:hover,
 .wpp_feps_login_box .line .login_link .reg_link:hover {
