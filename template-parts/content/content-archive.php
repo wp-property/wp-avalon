@@ -19,5 +19,11 @@ $date_format = get_option('date_format');
     <div class="post-date"><?php the_time($date_format); ?></div>
     <div class="post-content"><?php the_content('Read more...'); ?></div>
     <?php the_tags('<div class="post-tags"><label>Tags: </label>', ', ', '</div>'); ?>
+    <div class="post-comments">
+    <?php if(comments_open()) { ?>
+      <a href="<?php the_permalink(); ?>#comments"><?php comments_number('No comments', 'One comment', '% comments'); ?></a>
+    <?php } ?>
+    </div>
+    <a href="<?php the_permalink(); ?>" class="btn btn-primary post-read-more"><?php _e('Read more...', 'wp-avalon'); ?></a>
   </div>
 </article>

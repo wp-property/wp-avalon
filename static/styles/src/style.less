@@ -2239,6 +2239,10 @@ body {
           margin: 0 auto 1em;
         }
 
+        .alignnone {
+
+        }
+
         h1, h2, h3, h4, h5, h6 {
           .ubuntu-font;
         }
@@ -2289,8 +2293,10 @@ body {
 
               img {
                 margin-bottom: 0.71em;
+                margin-right: auto;
+                margin-left: auto;
                 display: block;
-                width: 100%;
+                max-width: 100%;
                 height: auto;
               }
               a {
@@ -2334,7 +2340,7 @@ body {
               padding: 0.71em 1.42em;
             }
             .post-tags {
-              padding: 0 1.42em 1.42em;
+              padding: 0 1.42em;
 
               label {
                 background-image: url("../images/tags-icon.png");
@@ -2345,6 +2351,25 @@ body {
                 padding: 0 0 0 1.78em;
                 line-height: 1.7;
               }
+            }
+            .post-comments {
+              padding: 0 1.42em 1.42em;
+              a, span {
+                background: url("../images/comments-icon.png") no-repeat 0 4px;
+                padding-left: 25px;
+                color: #333;
+              }
+            }
+            .post-read-more {
+              display: inline-block;
+              float: right;
+              padding: 0.75em 2em;
+              margin-right: 1.42em;
+              margin-bottom: 1.42em;
+              font-size: 1em;
+              color: #FFF;
+              text-decoration: none;
+              font-weight: 600;
             }
           }
           /* Single, Post, Archive page container */

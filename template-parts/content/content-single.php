@@ -26,6 +26,9 @@ $date_format = get_option('date_format');
       ?>
     </div>
     <?php the_tags('<div class="post-tags"><label>Tags: </label>', ', ', '</div>'); ?>
+    <?php if(comments_open()) { ?>
+      <a href="<?php the_permalink(); ?>#comments"><?php comments_number('No comments', 'One comment', '% comments'); ?></a>
+    <?php } ?>
   </div>
   <?php comments_template(); ?>
 </article>

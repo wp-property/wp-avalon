@@ -2960,8 +2960,10 @@ body main.main-content .container .content article .post-container-box .post-fea
 body main.main-content .container .content article .archive-post-box .post-featured-image img,
 body main.main-content .container .content article .post-container-box .post-featured-image img {
   margin-bottom: 0.71em;
+  margin-right: auto;
+  margin-left: auto;
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 body main.main-content .container .content article .archive-post-box .post-featured-image a img,
@@ -3008,7 +3010,7 @@ body main.main-content .container .content article .post-container-box .post-con
 }
 body main.main-content .container .content article .archive-post-box .post-tags,
 body main.main-content .container .content article .post-container-box .post-tags {
-  padding: 0 1.42em 1.42em;
+  padding: 0 1.42em;
 }
 body main.main-content .container .content article .archive-post-box .post-tags label,
 body main.main-content .container .content article .post-container-box .post-tags label {
@@ -3019,6 +3021,30 @@ body main.main-content .container .content article .post-container-box .post-tag
   margin-right: 5px;
   padding: 0 0 0 1.78em;
   line-height: 1.7;
+}
+body main.main-content .container .content article .archive-post-box .post-comments,
+body main.main-content .container .content article .post-container-box .post-comments {
+  padding: 0 1.42em 1.42em;
+}
+body main.main-content .container .content article .archive-post-box .post-comments a,
+body main.main-content .container .content article .post-container-box .post-comments a,
+body main.main-content .container .content article .archive-post-box .post-comments span,
+body main.main-content .container .content article .post-container-box .post-comments span {
+  background: url("../images/comments-icon.png") no-repeat 0 4px;
+  padding-left: 25px;
+  color: #333;
+}
+body main.main-content .container .content article .archive-post-box .post-read-more,
+body main.main-content .container .content article .post-container-box .post-read-more {
+  display: inline-block;
+  float: right;
+  padding: 0.75em 2em;
+  margin-right: 1.42em;
+  margin-bottom: 1.42em;
+  font-size: 1em;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
