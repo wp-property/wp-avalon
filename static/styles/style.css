@@ -3018,6 +3018,7 @@ body main.main-content .container .content article .post-container-box .post-tag
   background-size: 18px auto;
   margin-right: 5px;
   padding: 0 0 0 1.78em;
+  line-height: 1.7;
 }
 body main.main-content .container .content article .wpp_supermap_wrapper {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
