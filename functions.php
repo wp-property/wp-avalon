@@ -133,6 +133,25 @@ function avalon_registration_redirect($registration_redirect)
 }
 
 /**
+ * Registration messages filter
+ *
+ * @since Avalon 1.0
+ */
+function avalon_retrieve_password_message($message, $key, $user_login, $user_data)
+{
+  $message = __('Someone requested that the password be reset for the following account:', 'wp-avalon') . "\r\n\r\n";
+  $message .= network_home_url('/') . "\r\n\r\n";
+  $message .= sprintf(__('Username: %s', 'wp-avalon'), $user_login) . "\r\n\r\n";
+  $message .= __('If this was a mistake, just ignore this email and nothing will happen.', 'wp-avalon') . "\r\n\r\n";
+  $message .= __('To reset your password, visit the following address:', 'wp-avalon') . "\r\n\r\n";
+  $message .= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login') . "\r\n\r\n\r\n";
+  $message .= __('Best regards, ', 'wp-avalon') . get_bloginfo('name');
+  return $message;
+}
+
+add_filter('retrieve_password_message', 'avalon_retrieve_password_message', 10, 4);
+
+/**
  * Default contact us function
  *
  * @author vorobjov@UD
