@@ -29,6 +29,12 @@ get_header();
       
       if (have_posts()) :
 
+        the_posts_pagination(array(
+          'prev_text' => __('Prev', 'wp-avalon'),
+          'next_text' => __('Next', 'wp-avalon'),
+          'before_page_number' => '<span class="meta-nav screen-reader-text"></span>',
+        ));
+        
         while (have_posts()) : the_post();
 
           get_template_part('template-parts/content/content', 'archive');

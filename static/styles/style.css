@@ -4085,9 +4085,17 @@ body main.main-content .container .content article input[type="submit"]:hover {
   border-color: #0b1a3a;
   color: #fff;
 }
+body main.main-content .container .content nav.navigation.pagination {
+  display: block;
+  text-align: center;
+}
 body main.main-content .container .content nav.navigation.pagination .screen-reader-text {
   font-size: 20px;
   margin: 0 0 10px;
+  display: inline-block;
+}
+body main.main-content .container .content nav.navigation.pagination .nav-links {
+  display: inline-block;
 }
 body main.main-content .container .content nav.navigation.pagination .nav-links .page-numbers {
   border: 1px solid #DDD;
