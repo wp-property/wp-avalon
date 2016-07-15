@@ -3267,6 +3267,37 @@ body {
               #submit {
                 .submit-button-style;
               }
+              p {
+                &.comment-form-comment {
+                  float: right;
+                  width: 50%;
+                  padding-left: 1em;
+
+                  textarea {
+                    height: 172px;
+                  }
+                }
+                &.comment-form-author,
+                &.comment-form-email,
+                &.comment-form-url {
+                  float: left;
+                  width: 50%;
+                  padding-right: 1em;
+                }
+                &.form-submit {
+                  clear: both;
+                  &:before {
+                    clear: both;
+                    display: block;
+                    content: '';
+                  }
+                }
+                @media (max-width: 600px) {
+                  float: none !important;
+                  padding: 0 !important;
+                  width: 100% !important;
+                }
+              }
             }
           }
         }

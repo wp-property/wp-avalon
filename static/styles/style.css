@@ -4323,6 +4323,36 @@ body main.main-content .container .content .comments-area #respond #commentform 
   border-color: #0b1a3a;
   color: #fff;
 }
+body main.main-content .container .content .comments-area #respond #commentform p.comment-form-comment {
+  float: right;
+  width: 50%;
+  padding-left: 1em;
+}
+body main.main-content .container .content .comments-area #respond #commentform p.comment-form-comment textarea {
+  height: 172px;
+}
+body main.main-content .container .content .comments-area #respond #commentform p.comment-form-author,
+body main.main-content .container .content .comments-area #respond #commentform p.comment-form-email,
+body main.main-content .container .content .comments-area #respond #commentform p.comment-form-url {
+  float: left;
+  width: 50%;
+  padding-right: 1em;
+}
+body main.main-content .container .content .comments-area #respond #commentform p.form-submit {
+  clear: both;
+}
+body main.main-content .container .content .comments-area #respond #commentform p.form-submit:before {
+  clear: both;
+  display: block;
+  content: '';
+}
+@media (max-width: 600px) {
+  body main.main-content .container .content .comments-area #respond #commentform p {
+    float: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
 body .footer {
   /*footer-widget-area*/
 }
