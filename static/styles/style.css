@@ -4365,6 +4365,11 @@ body .footer .footer-widget-area {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+@media (max-width: 1000px) {
+  body .footer .footer-widget-area {
+    padding: 2.85em 1em;
+  }
+}
 body .footer .footer-widget-area .col-md-4 {
   margin-bottom: 1.42em;
 }
