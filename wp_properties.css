@@ -709,6 +709,18 @@
   content: "";
   clear: both;
 }
+@media (max-width: 480px) {
+  .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list {
+    padding: 0;
+  }
+  .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list li.wpp_agent_stats_agent_image {
+    position: relative;
+    margin: 0 auto 15px;
+  }
+  .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper dl.wpp_agent_info_list {
+    padding: 0;
+  }
+}
 /*wpp_agents_content_agent_card*/
 .shortcode_featured_properties ul.wpp_featured_properties_shortcode {
   margin: 0;
