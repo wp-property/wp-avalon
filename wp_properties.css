@@ -697,6 +697,9 @@
   font-weight: 600;
   margin: 0 0 5px;
 }
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper dl.wpp_agent_info_list {
+  padding-left: 135px;
+}
 .wpp_agents_content_agent_card .wpp_agent_info_single_wrapper dl.wpp_agent_info_list dt {
   float: left;
   margin-right: 5px;
