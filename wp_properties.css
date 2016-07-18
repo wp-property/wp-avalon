@@ -662,16 +662,16 @@
   content: "";
   clear: both;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list {
   min-height: 110px;
   margin: 0 0 10px;
   padding: 0 0 0 135px;
   list-style: none;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list li p {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list li p {
   margin: 0;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list li.wpp_agent_stats_agent_image {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list li.wpp_agent_stats_agent_image {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -686,22 +686,22 @@
   -khtml-border-radius: 100%;
   overflow: hidden;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list li.wpp_agent_stats_agent_image img {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list li.wpp_agent_stats_agent_image img {
   max-width: 100%;
   width: 100%;
   height: auto;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list li.wpp_agent_stats_display_name {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper ul.wpp_agent_info_list li.wpp_agent_stats_display_name {
   font-size: 16px;
   color: #414141;
   font-weight: 600;
   margin: 0 0 5px;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list dt {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper dl.wpp_agent_info_list dt {
   float: left;
   margin-right: 5px;
 }
-.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper .wpp_agent_info_list dd:after {
+.wpp_agents_content_agent_card .wpp_agent_info_single_wrapper dl.wpp_agent_info_list dd:after {
   display: block;
   content: "";
   clear: both;
