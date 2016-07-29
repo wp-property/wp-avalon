@@ -5,6 +5,7 @@
 .panel-grid-cell {
   word-wrap: break-word;
 }
+
 .wpp_property_overview_shortcode {
 
   .properties_pagination {
@@ -87,6 +88,62 @@
         }
       }
     }
+    .wpp_pagination_buttons_wrapper.pagination-numeric {
+
+      ul.property-overview-navigation {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .pages {
+          margin-right: 10px;
+          display: inline-block;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+              display: inline-block;
+
+              a {
+                background-color: #19294c;
+                border: medium none;
+                color: #fff;
+                display: block;
+                font-size: 14px;
+                padding: 5px 10px;
+                text-decoration: none;
+                margin-bottom: 5px;
+              }
+              &.current-page {
+
+                a {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+        .first-page-btn,
+        .previous-page-btn,
+        .next-page-btn,
+        .last-page-btn {
+
+          a {
+            background-color: #19294c;
+            border: medium none;
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
   }
   .wpp_row_view {
     margin: 0 -15px;
@@ -162,7 +219,7 @@
 
           li {
 
-            span.attribute  {
+            span.attribute {
               font-weight: 600;
               margin-right: 5px;
             }
@@ -410,7 +467,9 @@
       }
     }
   }
-}/*wpp_property_overview_shortcode*/
+}
+
+/*wpp_property_overview_shortcode*/
 
 .wpp_agents_content_agent_card {
   .clearfix;
@@ -426,7 +485,7 @@
     .clearfix;
     position: relative;
 
-    .wpp_agent_info_list {
+    ul.wpp_agent_info_list {
       min-height: 110px;
       margin: 0 0 10px;
       padding: 0 0 0 135px;
@@ -468,7 +527,8 @@
         }
       }
     }
-    .wpp_agent_info_list {
+    dl.wpp_agent_info_list {
+      padding-left: 135px;
 
       dt {
         float: left;
@@ -483,8 +543,22 @@
         }
       }
     }
+    @media (max-width: 480px) {
+      ul.wpp_agent_info_list {
+        padding: 0;
+        li.wpp_agent_stats_agent_image {
+          position: relative;
+          margin: 0 auto 15px;
+        }
+      }
+      dl.wpp_agent_info_list {
+        padding: 0;
+      }
+    }
   }
-}/*wpp_agents_content_agent_card*/
+}
+
+/*wpp_agents_content_agent_card*/
 
 .shortcode_featured_properties {
 
@@ -493,7 +567,7 @@
     padding: 0;
     list-style: none;
 
-    >li {
+    > li {
       .clearfix-disable;
       width: 20%;
       display: inline-block;
@@ -502,7 +576,7 @@
       padding: 0 10px;
 
       .property_image {
-        
+
         img {
           /*width: 100% !important;*/
           height: auto !important;
@@ -529,7 +603,9 @@
       }
     }
   }
-}/*shortcode_featured_properties*/
+}
+
+/*shortcode_featured_properties*/
 
 .wpp_feps_user_menu {
   margin-bottom: 20px;
@@ -539,7 +615,9 @@
     padding: 0;
     list-style: none;
   }
-}/*wpp_feps_user_menu*/
+}
+
+/*wpp_feps_user_menu*/
 
 .wpp_feps_login_box {
   .clearfix;
@@ -560,13 +638,17 @@
     }
     .login_link {
 
-      .lost_pass_link {
+      .lost_pass_link,
+      .reg_link {
         .submit-button-style;
         text-decoration: none;
+        margin-right: 8px;
       }
     }
   }
-}/*wpp_feps_login_box*/
+}
+
+/*wpp_feps_login_box*/
 
 .widget,
 .wpp_widget {
@@ -612,7 +694,7 @@
       padding: 0;
       list-style: none;
 
-      li.shortcode_featured_properties  {
+      li.shortcode_featured_properties {
         margin-bottom: 10px;
         &:last-child {
           margin-bottom: 0;
@@ -710,7 +792,8 @@
         }
       }
     }
-  }/*widget_wpp_property_stats*/
+  }
+  /*widget_wpp_property_stats*/
   &.widget_wpp_property_overview {
 
     .properties_pagination {
@@ -788,7 +871,8 @@
             }
           }
         }
-      }/*wpp_pagination_slider_wrapper*/
+      }
+      /*wpp_pagination_slider_wrapper*/
 
       .wpp_pagination_buttons_wrapper {
         margin-top: 10px;
@@ -848,9 +932,11 @@
             }
           }
         }
-      }/*wpp_pagination_buttons_wrapper */
+      }
+      /*wpp_pagination_buttons_wrapper */
 
-    }/*property pagination*/
+    }
+    /*property pagination*/
 
     .wpp_property_view_result {
 
@@ -876,9 +962,11 @@
           }
         }
       }
-    }/*wpp_property_view_result*/
+    }
+    /*wpp_property_view_result*/
 
-  }/*wpp property overview*/
+  }
+  /*wpp property overview*/
 
   &.wpp_property_attributes {
 
@@ -965,7 +1053,8 @@
         }
       }
     }
-  }/*wpp property attributes */
+  }
+  /*wpp property attributes */
 
   &.widget_featuredpropertieswidget,
   &.widget_latestpropertieswidget {
@@ -1054,7 +1143,8 @@
         }
       }
     }
-  }/*widget latestpropertieswidget*/
+  }
+  /*widget latestpropertieswidget*/
 
   .wpp_agents_content_agent_card {
     margin-bottom: 15px;
@@ -1075,7 +1165,8 @@
         }
       }
     }
-  }/*widget wpp_agents_content_agent_card*/
+  }
+  /*widget wpp_agents_content_agent_card*/
 
   /*Feps widget*/
   .wpp_feps_step_tabs {
@@ -1181,7 +1272,8 @@
         border-color: #204d74;
       }
     }
-  }/*wpp_feps_form*/
+  }
+  /*wpp_feps_form*/
 
   &.widget_agentwidget {
 
@@ -1221,7 +1313,8 @@
         }
       }
     }
-  }/*widget_agentwidget*/
+  }
+  /*widget_agentwidget*/
 
   &.widget_gallerypropertieswidget {
 
@@ -1243,9 +1336,12 @@
       max-width: 100%;
       height: auto;
     }
-  }/*widget_gallerypropertieswidget*/
+  }
+  /*widget_gallerypropertieswidget*/
 
-}/*widget*/
+}
+
+/*widget*/
 
 /* Property page styles
 ----------------------------------------------------------------------------- */
@@ -1263,7 +1359,7 @@ article.property-page-template {
     border: 1px solid #c3c5c9;
     box-sizing: border-box;
 
-    .widget, 
+    .widget,
     .wpp_widget {
       background-color: transparent;
       border: medium none;
@@ -1290,7 +1386,7 @@ article.property-page-template {
     .feature_lists {
       .clearfix;
 
-      >div {
+      > div {
         float: left;
         margin: 0 0 20px;
         width: 48%;
@@ -1387,7 +1483,7 @@ article.property-page-template {
       .gm-style-iw,
       .gm-style {
 
-        >div {
+        > div {
           max-width: 100% !important;
           width: 100%;
         }
@@ -1669,6 +1765,7 @@ article.property-page-template {
 
   }
 }
+
 /* Property page styles */
 
 /*Property styles*/

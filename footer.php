@@ -19,7 +19,8 @@
         <div class="copyrights col-md-6">
           <p>
             <?php
-            if (!empty(get_theme_mod('avalon_copyrights_settings'))) :
+            $avalon_copyrights_settings = get_theme_mod('avalon_copyrights_settings');
+            if (!empty($avalon_copyrights_settings)) :
               echo get_theme_mod('avalon_copyrights_settings');
             else :
               printf(__('&copy;%s WP Avalon. All rights reserved.', 'wp-avalon'), date("Y"));

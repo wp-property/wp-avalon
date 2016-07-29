@@ -53,7 +53,8 @@ else : // if is front page
     $featuret_image_intead_header_image = get_theme_mod('header_image_show_featured_image_in_head', '1');
     if ($featuret_image_intead_header_image == 1) :
       if (is_page() || is_single()) :
-        if (!empty(wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())))) :
+        $attach_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+        if (!empty($attach_url)) :
           echo '<div class="secondary-header-image" style="background-image: url(\'' . wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) . '\'); background-size: cover; background-position: center center;"></div>';
           echo '<div class="shi__blackout"></div>';
         elseif (!empty($header_image)) :

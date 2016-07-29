@@ -1,14 +1,15 @@
 <?php
 /**
- * WP Avalon functions 
- * 
+ * WP Avalon functions
+ *
  * @package Usability Dynamics, Inc.
  * @subpackage Avalon
  * @since Avalon 1.0
  */
 add_action('wp_enqueue_scripts', 'avalon_init');
 
-function avalon_init() {
+function avalon_init()
+{
   /* JS */
   wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/static/scripts/bootstrap.min.js', array('jquery'), '3.3.6');
   wp_enqueue_script('bootstrap-select.min', get_template_directory_uri() . '/static/scripts/bootstrap-select.min.js', array('jquery'));
@@ -30,7 +31,8 @@ function avalon_init() {
 
 add_action('admin_enqueue_scripts', 'avalon_admin_init');
 
-function avalon_admin_init() {
+function avalon_admin_init()
+{
   wp_enqueue_script('avalon-admin-scripts', get_template_directory_uri() . '/static/admin/scripts/avalon-admin-scripts.js', array('jquery'), '3.3.6');
   wp_enqueue_style('avalon-admin-styles', get_template_directory_uri() . '/static/admin/styles/avalon-admin-styles.css');
   wp_enqueue_media();
@@ -38,10 +40,11 @@ function avalon_admin_init() {
 
 /**
  * Theme support
- * 
+ *
  * @since Avalon 1.0
  */
-function avalon_theme_setup() {
+function avalon_theme_setup()
+{
   load_theme_textdomain('wp-avalon', get_template_directory() . '/languages');
   add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
@@ -52,54 +55,55 @@ add_action('after_setup_theme', 'avalon_theme_setup');
 
 /**
  * Register menus
- * 
+ *
  * @since Avalon 1.0
  */
 register_nav_menus(array(
-    'primary' => __('Primary Menu', 'wp-avalon'),
+  'primary' => __('Primary Menu', 'wp-avalon'),
 ));
 
 /**
  * Registers a widget area.
- * 
+ *
  * @since Avalon 1.0
  */
-function avalon_widgets_init() {
+function avalon_widgets_init()
+{
   register_sidebar(array(
-      'name' => __('Footer widget area', 'wp-avalon'),
-      'id' => 'sidebar-footer',
-      'description' => __('Appears at the bottom in content on all pages', 'wp-avalon'),
-      'before_widget' => '<div class="col-md-4"><div id="%1$s" class="widget %2$s">',
-      'after_widget' => '</div></div>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>',
+    'name' => __('Footer widget area', 'wp-avalon'),
+    'id' => 'sidebar-footer',
+    'description' => __('Appears at the bottom in content on all pages', 'wp-avalon'),
+    'before_widget' => '<div class="col-md-4"><div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div></div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
   ));
   register_sidebar(array(
-      'name' => __('Frontpage multi-sidebar', 'wp-avalon'),
-      'id' => 'sidebar-frontpage',
-      'description' => __('Appears at the top side on frontpage', 'wp-avalon'),
-      'before_widget' => '<div class="tab-pane" role="tabpanel" id="%1$s"><div class="multisidebar-widget %2$s">',
-      'after_widget' => '</div></div>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>',
+    'name' => __('Frontpage multi-sidebar', 'wp-avalon'),
+    'id' => 'sidebar-frontpage',
+    'description' => __('Appears at the top side on frontpage', 'wp-avalon'),
+    'before_widget' => '<div class="tab-pane" role="tabpanel" id="%1$s"><div class="multisidebar-widget %2$s">',
+    'after_widget' => '</div></div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
   ));
   register_sidebar(array(
-      'name' => __('Sidebar Left', 'wp-avalon'),
-      'id' => 'sidebar-left',
-      'description' => __('Appears at the left side on all pages', 'wp-avalon'),
-      'before_widget' => '<li id="%1$s" class="widget %2$s">',
-      'after_widget' => '</li>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>',
+    'name' => __('Sidebar Left', 'wp-avalon'),
+    'id' => 'sidebar-left',
+    'description' => __('Appears at the left side on all pages', 'wp-avalon'),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
   ));
   register_sidebar(array(
-      'name' => __('Sidebar Right', 'wp-avalon'),
-      'id' => 'sidebar-right',
-      'description' => __('Appears at the right side on all pages', 'wp-avalon'),
-      'before_widget' => '<li id="%1$s" class="widget %2$s">',
-      'after_widget' => '</li>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>',
+    'name' => __('Sidebar Right', 'wp-avalon'),
+    'id' => 'sidebar-right',
+    'description' => __('Appears at the right side on all pages', 'wp-avalon'),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
   ));
 }
 
@@ -107,10 +111,11 @@ add_action('widgets_init', 'avalon_widgets_init');
 
 /**
  * Registration redirect
- * 
+ *
  * @since Avalon 1.0
  */
-function wp_avalon_content_width() {
+function wp_avalon_content_width()
+{
   $GLOBALS['content_width'] = apply_filters('wp_avalon_content_width', 1140);
 }
 
@@ -118,23 +123,43 @@ add_action('after_setup_theme', 'wp_avalon_content_width', 0);
 
 /**
  * Registration redirect
- * 
+ *
  * @since Avalon 1.0
  */
-function avalon_registration_redirect($registration_redirect) {
-  return site_url();
+add_filter('registration_redirect', 'avalon_registration_redirect');
+function avalon_registration_redirect($registration_redirect)
+{
+  return home_url();
 }
 
-add_filter('registration_redirect', 'avalon_registration_redirect');
+/**
+ * Registration messages filter
+ *
+ * @since Avalon 1.0
+ */
+function avalon_retrieve_password_message($message, $key, $user_login, $user_data)
+{
+  $message = __('Someone requested that the password be reset for the following account:', 'wp-avalon') . "\r\n\r\n";
+  $message .= network_home_url('/') . "\r\n\r\n";
+  $message .= sprintf(__('Username: %s', 'wp-avalon'), $user_login) . "\r\n\r\n";
+  $message .= __('If this was a mistake, just ignore this email and nothing will happen.', 'wp-avalon') . "\r\n\r\n";
+  $message .= __('To reset your password, visit the following address:', 'wp-avalon') . "\r\n\r\n";
+  $message .= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login') . "\r\n\r\n\r\n";
+  $message .= __('Best regards, ', 'wp-avalon') . get_bloginfo('name');
+  return $message;
+}
+
+add_filter('retrieve_password_message', 'avalon_retrieve_password_message', 10, 4);
 
 /**
  * Default contact us function
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
-function empty_sidebar($sidebar) {
+function empty_sidebar($sidebar)
+{
   if (is_active_sidebar($sidebar)) {
     return TRUE;
   } else {
@@ -144,25 +169,27 @@ function empty_sidebar($sidebar) {
 
 /**
  * Widget functions
- * 
+ *
  * @since Avalon 1.0
  */
 include_once 'lib/widgets/widgets-functions.php';
 
 /**
  * Theme customizer
- * 
+ *
  * @since Avalon 1.0
  */
 include_once 'lib/customizer/avalon-customizer.php';
 
-function avalon_customizer_live_preview() {
+function avalon_customizer_live_preview()
+{
   wp_enqueue_script('avalon-theme-customizer', get_template_directory_uri() . '/static/scripts/customizer/avalon-customizer.js', array('jquery', 'customize-preview'), '', true);
 }
 
 add_action('customize_preview_init', 'avalon_customizer_live_preview');
 
-function avalon_customizer_controls() {
+function avalon_customizer_controls()
+{
   wp_enqueue_script('avalon-customizer-controls', get_template_directory_uri() . '/static/scripts/customizer/avalon-customizer-controls.js', array('jquery', 'customize-controls'), false, true);
   wp_enqueue_style('avalon-theme-customizer', get_template_directory_uri() . '/static/styles/customizer/avalon-customizer.css');
 }
@@ -171,12 +198,13 @@ add_action('customize_controls_enqueue_scripts', 'avalon_customizer_controls');
 
 /**
  * Default contact us function
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
-function default_contact_us() {
+function default_contact_us()
+{
   parse_str($_POST['data'], $data);
   $user_name = $data['dcf_user_name'];
   $user_email = $data['dcf_user_email'];
@@ -208,21 +236,21 @@ add_action('wp_ajax_nopriv_default_contact_us', 'default_contact_us');
 
 /**
  * Add default widgets
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
 include_once 'lib/widgets/register-default-widgets.php';
 
 /**
  * Avalon google maps infobox
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
-add_filter('wpp_google_maps_infobox', function($data, $post) {
+add_filter('wpp_google_maps_infobox', function ($data, $post) {
 
   ob_start();
 
@@ -232,26 +260,26 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
   $infobox_attributes = $wp_properties['configuration']['google_maps']['infobox_attributes'];
   $infobox_settings = $wp_properties['configuration']['google_maps']['infobox_settings'];
 
-  $property = (array) prepare_property_for_display($post, array(
-              'load_gallery' => 'false',
-              'scope' => 'google_map_infobox'
+  $property = (array)prepare_property_for_display($post, array(
+    'load_gallery' => 'false',
+    'scope' => 'google_map_infobox'
   ));
 
   if (empty($infobox_attributes)) {
     $infobox_attributes = array(
-        'price',
-        'bedrooms',
-        'bathrooms');
+      'price',
+      'bedrooms',
+      'bathrooms');
   }
 
   if (empty($infobox_settings)) {
     $infobox_settings = array(
-        'show_direction_link' => true,
-        'show_property_title' => true
+      'show_direction_link' => true,
+      'show_property_title' => true
     );
   }
 
-  $infobox_style = (!empty($infobox_settings['minimum_box_width']) ) ? 'style="min-width: ' . $infobox_settings['minimum_box_width'] . 'px;"' : '';
+  $infobox_style = (!empty($infobox_settings['minimum_box_width'])) ? 'style="min-width: ' . $infobox_settings['minimum_box_width'] . 'px;"' : '';
 
 
   $property_stats = array();
@@ -262,13 +290,13 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
   }
 
   $property_stats = WPP_F::get_stat_values_and_labels($property, array(
-              'property_stats' => $property_stats
+    'property_stats' => $property_stats
   ));
 
 //** Check if we have children */
-  if (!empty($property['children']) && (!isset($wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties']) || $wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties'] != 'true' )) {
+  if (!empty($property['children']) && (!isset($wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties']) || $wp_properties['configuration']['google_maps']['infobox_settings']['do_not_show_child_properties'] != 'true')) {
     foreach ($property['children'] as $child_property) {
-      $child_property = (array) $child_property;
+      $child_property = (array)$child_property;
       $html_child_properties[] = '<a href="' . $child_property['permalink'] . '">' . $child_property['post_title'] . '</a>';
     }
   }
@@ -296,8 +324,14 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
           </div>
           <div class="il__title">
             <?php if (!empty($property['price'])) : ?><label><?php echo $property['price']; ?></label><?php endif; ?>
-            <?php if (!empty($property['post_title'])) : ?><div class="property-title"><a href="<?php echo get_permalink($property['ID']); ?>"><?php echo $property['post_title']; ?></a></div><?php endif; ?>
-            <?php if (!empty($property['display_address']) && !empty($property['latitude']) && !empty($property['longitude'])) : ?><a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php echo $property['display_address']; ?></a><?php endif; ?>
+            <?php if (!empty($property['post_title'])) : ?>
+              <div class="property-title"><a
+                href="<?php echo get_permalink($property['ID']); ?>"><?php echo $property['post_title']; ?></a>
+              </div><?php endif; ?>
+            <?php if (!empty($property['display_address']) && !empty($property['latitude']) && !empty($property['longitude'])) : ?>
+              <a target="_blank"
+                 href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>"
+                 target="_blank"><?php echo $property['display_address']; ?></a><?php endif; ?>
           </div>
         </div>
       <?php } ?>
@@ -309,9 +343,11 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
       endif;
       ?>
            ">
-             <?php if (empty($imageHTML)) : ?>
+        <?php if (empty($imageHTML)) : ?>
           <div class="ib__title"><?php echo $property['post_title']; ?></div>
-          <div class="ib__location_link"><a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php echo $property['display_address']; ?></a></div>
+          <div class="ib__location_link"><a target="_blank"
+                                            href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>"
+                                            target="_blank"><?php echo $property['display_address']; ?></a></div>
           <div class="ib__price"><?php echo $property['price']; ?></div>
         <?php endif; ?>
 
@@ -338,7 +374,7 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
               continue;
             }
 
-            if ((!empty($attribute_data['data_input_type']) && $attribute_data['data_input_type'] == 'checkbox' && ( $value == 'true' || $value == 1 ))) {
+            if ((!empty($attribute_data['data_input_type']) && $attribute_data['data_input_type'] == 'checkbox' && ($value == 'true' || $value == 1))) {
               if ($wp_properties['configuration']['google_maps']['show_true_as_image'] == 'true') {
                 $value = '<div class="true-checkbox-image"></div>';
               } else {
@@ -383,7 +419,9 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
         if (!empty($imageHTML) && $infobox_settings['show_direction_link'] == 'true' && !empty($property['latitude']) && !empty($property['longitude'])) {
           ?>
           <div class="ir__directions">
-            <a target="_blank" href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>" target="_blank"><?php _e('Get directions', 'wp-avalon'); ?></a>
+            <a target="_blank"
+               href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>"
+               target="_blank"><?php _e('Get directions', 'wp-avalon'); ?></a>
           </div>
         <?php } ?>
       </div>
@@ -399,19 +437,20 @@ add_filter('wpp_google_maps_infobox', function($data, $post) {
 
 /**
  * Avalon custom property overview image
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
-function avalon_property_overview_image($args = '') {
+function avalon_property_overview_image($args = '')
+{
   global $wpp_query, $property;
 
   $thumbnail_size = $wpp_query['thumbnail_size'];
 
   $defaults = array(
-      'return' => 'false',
-      'image_type' => $thumbnail_size,
+    'return' => 'false',
+    'image_type' => $thumbnail_size,
   );
   $args = wp_parse_args($args, $defaults);
 
@@ -430,8 +469,13 @@ function avalon_property_overview_image($args = '') {
     ob_start();
     ?>
     <div class="property_image">
-      <a href="<?php echo $thumbnail_link; ?>" title="<?php echo $property['post_title'] . (!empty($property['parent_title']) ? __(' of ', 'wp-avalon') . $property['parent_title'] : "" ); ?>" class="property_overview_thumb property_overview_thumb_<?php echo $thumbnail_size; ?> <?php echo $link_class; ?> thumbnail" rel="<?php echo $property['post_name'] ?>">
-        <img width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>" src="<?php echo $image['link']; ?>" alt="<?php echo $property['post_title']; ?>" style="width:<?php echo $image['width']; ?>px;height:<?php echo $image['height']; ?>px;"/>
+      <a href="<?php echo $thumbnail_link; ?>"
+         title="<?php echo $property['post_title'] . (!empty($property['parent_title']) ? __(' of ', 'wp-avalon') . $property['parent_title'] : ""); ?>"
+         class="property_overview_thumb property_overview_thumb_<?php echo $thumbnail_size; ?> <?php echo $link_class; ?> thumbnail"
+         rel="<?php echo $property['post_name'] ?>">
+        <img width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>"
+             src="<?php echo $image['link']; ?>" alt="<?php echo $property['post_title']; ?>"
+             style="width:<?php echo $image['width']; ?>px;height:<?php echo $image['height']; ?>px;"/>
       </a>
     </div>
     <?php
@@ -441,7 +485,9 @@ function avalon_property_overview_image($args = '') {
     ob_start();
     ?>
     <div class="property_image">
-      <img class="no_property_image" src="<?php echo get_template_directory_uri() . '/static/images/no-avalible-property-image.png'; ?>" alt="no image" />
+      <img class="no_property_image"
+           src="<?php echo get_template_directory_uri() . '/static/images/no-avalible-property-image.png'; ?>"
+           alt="no image"/>
     </div>
     <?php
     $html = ob_get_contents();
@@ -456,21 +502,23 @@ function avalon_property_overview_image($args = '') {
 
 /**
  * Avalon settings page functions
- * 
+ *
  * @author vorobjov@UD
- * 
+ *
  * @since Avalon 1.0
  */
 add_action('admin_menu', 'avalon_settings');
 
-function avalon_settings() {
+function avalon_settings()
+{
 
   add_theme_page(__('WP Avalon settings', 'wp-avalon'), __('WP Avalon settings', 'wp-avalon'), 'administrator', 'avalon_settings_page', 'avalon_theme_settings');
 
   add_action('admin_init', 'register_avalon_settings');
 }
 
-function register_avalon_settings() {
+function register_avalon_settings()
+{
 
   if (isset($_FILES['avalon_settings_from_backup_input'])) {
 
@@ -498,23 +546,24 @@ function register_avalon_settings() {
   }
 }
 
-function avalon_theme_settings() {
+function avalon_theme_settings()
+{
   ?>
   <div class="wrap">
     <h2>WP Avalon settings</h2>
-    <form enctype="multipart/form-data" method="post" action=""> 
+    <form enctype="multipart/form-data" method="post" action="">
       <div class="avalon_settings_block">
         <h2><?php _e('Restore Backup of WP Avalon Configuration:', 'wp-avalon'); ?></h2>
-        <input name="avalon_settings_from_backup_input" class="" id="avalon_backup_file" type="file" />
+        <input name="avalon_settings_from_backup_input" class="" id="avalon_backup_file" type="file"/>
       </div>
-      <br />
+      <br/>
       <div class="avalon_settings_block">
         <a class="btn btn-default" href="<?php echo admin_url('admin-ajax.php?action=download_avalon_settings'); ?>">
           <?php _e('Download Backup of Current WP Avalon Configuration', 'wp-avalon'); ?>
         </a>
       </div>
-      <br />
-      <input class="button-primary btn" type="submit" value="<?php _e('Save settings', 'wp-avalon'); ?>" />
+      <br/>
+      <input class="button-primary btn" type="submit" value="<?php _e('Save settings', 'wp-avalon'); ?>"/>
     </form>
   </div>
   <?php
@@ -522,7 +571,8 @@ function avalon_theme_settings() {
 
 add_action('wp_ajax_download_avalon_settings', 'download_avalon_settings');
 
-function download_avalon_settings() {
+function download_avalon_settings()
+{
   $sitename = sanitize_key(get_bloginfo('name'));
   $filename = $sitename . '-wp-avalon.' . date('Y-m-d') . '.json';
 
@@ -541,7 +591,8 @@ function download_avalon_settings() {
 
 add_action('wp_ajax_upload_avalon_settings', 'upload_avalon_settings');
 
-function avalon_success_settings_message() {
+function avalon_success_settings_message()
+{
   ?>
   <div class="notice notice-success is-dismissible">
     <p><?php _e('Your settings updated!', 'wp-avalon'); ?></p>
@@ -549,7 +600,8 @@ function avalon_success_settings_message() {
   <?php
 }
 
-function avalon_error_settings_message() {
+function avalon_error_settings_message()
+{
   ?>
   <div class="notice notice-error is-dismissible">
     <p><?php _e('Please, select a correct settings file.', 'wp-avalon'); ?></p>
