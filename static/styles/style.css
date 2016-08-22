@@ -849,6 +849,11 @@ body main.main-content .secondary-header {
 body main.main-content .secondary-header.sh__frontpage {
   height: 600px;
 }
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header.sh__frontpage {
+    height: auto !important;
+  }
+}
 body main.main-content .secondary-header.sh__page {
   height: 300px;
 }
@@ -901,7 +906,6 @@ body main.main-content .secondary-header .container .wellcome-text-box {
   line-height: 1.5;
   font-weight: 500;
   text-align: center;
-  position: relative;
   position: absolute;
   top: 0;
   left: 0;
@@ -909,9 +913,11 @@ body main.main-content .secondary-header .container .wellcome-text-box {
   height: 100%;
   z-index: 3;
 }
-@media (max-width: 640px) {
+@media (max-width: 1000px) {
   body main.main-content .secondary-header .container .wellcome-text-box {
     padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    position: relative;
   }
 }
 body main.main-content .secondary-header .container .wellcome-text-box h1 {
@@ -937,6 +943,11 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
   margin-top: 2.14em;
   padding: 0 1.42em;
 }
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search {
+    padding: 0;
+  }
+}
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form {
   padding: 1em 1.5em;
   background-color: rgba(0, 0, 0, 0.6);
@@ -957,13 +968,18 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
 }
 @media (max-width: 1000px) {
   body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form {
-    display: none;
+    padding: 1em;
   }
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements {
+    padding: 0 0 0 3%;
+  }
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li {
   display: block;
@@ -1006,6 +1022,16 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
   border-color: #0b1a3a;
   color: #fff;
 }
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li {
+    width: 100% !important;
+    float: none;
+  }
+  body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li.submit {
+    width: 100% !important;
+    text-align: left;
+  }
+}
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul {
   margin: 0;
   padding: 0;
@@ -1020,6 +1046,12 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
   margin-bottom: 15px;
   float: left;
   padding: 0 10px;
+}
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li {
+    width: 100%;
+    float: none;
+  }
 }
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li > label {
   color: #FFF;
@@ -1088,7 +1120,8 @@ body main.main-content .secondary-header .container .wellcome-text-box .wellcome
 body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
   width: 97%;
 }
-body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select,
+body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_total_area .wpp_search_attribute_wrap .bootstrap-select {
   display: inline-block;
   margin-right: -3px;
   width: 45%;

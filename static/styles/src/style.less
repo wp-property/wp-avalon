@@ -665,6 +665,9 @@ body {
       height: 300px;
       &.sh__frontpage {
         height: 600px;
+        @media (max-width: 1000px) {
+          height: auto !important;
+        }
       }
       &.sh__page {
         height: 300px;
@@ -716,15 +719,17 @@ body {
           line-height: 1.5;
           font-weight: 500;
           text-align: center;
-          position: relative;
+          //position: relative;
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
           z-index: 3;
-          @media (max-width: 640px) {
+          @media (max-width: 1000px) {
             padding-top: 2.5em;
+            padding-bottom: 2.5em;
+            position: relative;
           }
 
           h1 {
@@ -751,20 +756,25 @@ body {
             text-align: left;
             margin-top: 2.14em;
             padding: 0 1.42em;
-
+            @media (max-width: 1000px) {
+              padding: 0;
+            }
             .wpp_shortcode_search_form {
               padding: 1em 1.5em;
               background-color: rgba(0, 0, 0, 0.6);
               .border-radius(4px);
               .clearfix;
               @media (max-width: 1000px) {
-                display: none;
+                padding: 1em;
               }
 
               .wpp_search_elements {
                 margin: 0;
                 padding: 0;
                 list-style: none;
+                @media (max-width: 1000px) {
+                  padding: 0 0 0 3%;
+                }
 
                 > li {
                   display: block;
@@ -778,6 +788,14 @@ body {
                     .submit {
                       .submit-button-style;
                       margin-top: 27px;
+                    }
+                  }
+                  @media (max-width: 1000px) {
+                    width: 100% !important;
+                    float: none;
+                    &.submit {
+                      width: 100% !important;
+                      text-align: left;
                     }
                   }
                 }
@@ -795,7 +813,10 @@ body {
                     margin-bottom: 15px;
                     float: left;
                     padding: 0 10px;
-
+                    @media (max-width: 1000px) {
+                      width: 100%;
+                      float: none;
+                    }
                     > label {
                       color: #FFF;
                       display: block;
@@ -838,7 +859,8 @@ body {
                     .bootstrap-select {
                       width: 97%;
                     }
-                    &.seach_attribute_price {
+                    &.seach_attribute_price,
+                    &.seach_attribute_total_area {
 
                       .wpp_search_attribute_wrap {
 
