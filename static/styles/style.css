@@ -2958,6 +2958,8 @@ body main.main-content .container .content article {
   /* Defaul styles
           --------------------------------------------------------- */
   /*Defaul styles*/
+  /* Select2 styles */
+  /* Select2 styles */
 }
 body main.main-content .container .content article .page-title h1,
 body main.main-content .container .content article h1.entry-title,
@@ -4056,6 +4058,7 @@ body main.main-content .container .content article p.nocomments {
 body main.main-content .container .content article input[type="text"],
 body main.main-content .container .content article input[type="email"],
 body main.main-content .container .content article input[type="tel"],
+body main.main-content .container .content article input[type="number"],
 body main.main-content .container .content article input[type="password"],
 body main.main-content .container .content article textarea {
   display: block;
@@ -4078,6 +4081,7 @@ body main.main-content .container .content article textarea {
 body main.main-content .container .content article input[type="text"]:focus,
 body main.main-content .container .content article input[type="email"]:focus,
 body main.main-content .container .content article input[type="tel"]:focus,
+body main.main-content .container .content article input[type="number"]:focus,
 body main.main-content .container .content article input[type="password"]:focus,
 body main.main-content .container .content article textarea:focus {
   border-color: #66afe9;
@@ -4117,6 +4121,11 @@ body main.main-content .container .content article input[type="submit"]:hover {
   background-color: #0b1a3a;
   border-color: #0b1a3a;
   color: #fff;
+}
+body main.main-content .container .content article .select2-container .select2-choice {
+  height: 34px;
+  line-height: 34px;
+  text-decoration: none;
 }
 body main.main-content .container .content nav.navigation.pagination {
   display: block;
