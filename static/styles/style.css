@@ -1444,12 +1444,14 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
 body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
   width: 97%;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select,
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.wpp_search_attribute_type_advanced_range_dropdown .wpp_search_attribute_wrap .bootstrap-select {
   width: 47%;
   display: inline-block;
 }
 @media (max-width: 1200px) {
-  body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+  body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select,
+  body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane.property-search-defaul .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.wpp_search_attribute_type_advanced_range_dropdown .wpp_search_attribute_wrap .bootstrap-select {
     width: 46%;
   }
 }
@@ -1893,12 +1895,14 @@ body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-p
   width: 47%;
   display: inline-block;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .bootstrap-select {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .bootstrap-select,
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select {
   display: block;
   float: left;
   width: 47%;
 }
-body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .delimiter {
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .delimiter,
+body main.main-content .container .frontpage-widgetaria-tabs .tab-content .tab-pane .multisidebar-widget .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.wpp_search_attribute_type_advanced_range_dropdown .delimiter {
   display: block;
   float: left;
   width: 6%;
@@ -3475,12 +3479,14 @@ body main.main-content .container .content article .wpp_supermap_wrapper .super_
   width: 47%;
   display: inline-block;
 }
-body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .bootstrap-select {
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .bootstrap-select,
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select {
   display: block;
   float: left;
   width: 47%;
 }
-body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .delimiter {
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.seach_attribute_price .delimiter,
+body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .supermap_filter_wrapper .map_filters .class_wpp_supermap_elements > ul > li.wpp_search_attribute_type_advanced_range_dropdown .delimiter {
   display: block;
   float: left;
   width: 6%;
@@ -3998,7 +4004,8 @@ body main.main-content .container .content article > .wpp_shortcode_search .wpp_
 body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li .bootstrap-select {
   width: 97%;
 }
-body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select {
+body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select,
+body main.main-content .container .content article > .wpp_shortcode_search .wpp_search_elements ul.wpp_search_group > li.wpp_search_attribute_type_advanced_range_dropdown .wpp_search_attribute_wrap .bootstrap-select {
   width: 47%;
   display: inline-block;
 }
