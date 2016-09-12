@@ -459,85 +459,85 @@ function avalon_customize_register($wp_customize) {
       'priority' => 5
   ));
 
-//    Wellcome section
-  $wp_customize->add_section('header_wellcome_section', array(
-      'title' => __('Wellcome section', 'wp-avalon'),
+//    welcome section
+  $wp_customize->add_section('header_welcome_section', array(
+      'title' => __('Welcome section', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
       'priority' => 4,
   ));
 
-  // Disable wellcome section
-  $wp_customize->add_setting('header_wellcome_disable', array(
+  // Disable welcome section
+  $wp_customize->add_setting('header_welcome_disable', array(
       'default' => '',
       'sanitize_callback' => 'avalon_sanitize_callback',
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_wellcome_disable', array(
-      'label' => __('Disable "Wellcome" section', 'wp-avalon'),
-      'section' => 'header_wellcome_section',
+  $wp_customize->add_control('header_welcome_disable', array(
+      'label' => __('Disable "welcome" section', 'wp-avalon'),
+      'section' => 'header_welcome_section',
       'type' => 'checkbox',
       'priority' => 1
   ));
-  // Wellcome title
-  $wp_customize->add_setting('header_wellcome_title', array(
-      'default' => __('Wellcome to WP Avalon', 'wp-avalon'),
+  // welcome title
+  $wp_customize->add_setting('header_welcome_title', array(
+      'default' => __('Welcome to WP Avalon', 'wp-avalon'),
       'sanitize_callback' => 'avalon_sanitize_callback',
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_wellcome_title', array(
-      'label' => __('Wellcome section title', 'wp-avalon'),
-      'section' => 'header_wellcome_section',
+  $wp_customize->add_control('header_welcome_title', array(
+      'label' => __('Welcome section title', 'wp-avalon'),
+      'section' => 'header_welcome_section',
       'type' => 'text',
       'priority' => 2
   ));
-  // Wellcome text
-  $wp_customize->add_setting('header_wellcome_text', array(
+  // welcome text
+  $wp_customize->add_setting('header_welcome_text', array(
       'default' => __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon'),
       'sanitize_callback' => 'avalon_sanitize_callback',
       'capability' => 'edit_theme_options',
       'transport' => 'postMessage'
   ));
-  $wp_customize->add_control('header_wellcome_text', array(
-      'label' => __('Wellcome section text', 'wp-avalon'),
+  $wp_customize->add_control('header_welcome_text', array(
+      'label' => __('Welcome section text', 'wp-avalon'),
       'description' => $shortcode_notice,
-      'section' => 'header_wellcome_section',
+      'section' => 'header_welcome_section',
       'type' => 'textarea',
       'priority' => 3
   ));
   if (function_exists('ud_check_wp_property')) :
-    $wp_customize->add_setting('header_wellcome_property_search_disable', array(
+    $wp_customize->add_setting('header_welcome_property_search_disable', array(
         'default' => '',
         'sanitize_callback' => 'avalon_sanitize_callback',
         'transport' => 'postMessage'
     ));
-    $wp_customize->add_control('header_wellcome_property_search_disable', array(
-        'label' => __('Disable "Property search" in Wellcome section', 'wp-avalon'),
-        'section' => 'header_wellcome_section',
+    $wp_customize->add_control('header_welcome_property_search_disable', array(
+        'label' => __('Disable "Property search" in Welcome section', 'wp-avalon'),
+        'section' => 'header_welcome_section',
         'type' => 'checkbox',
         'priority' => 4
     ));
   else :
     // disable section
-    $wp_customize->add_setting('header_wellcome_property_search', array(
+    $wp_customize->add_setting('header_welcome_property_search', array(
         'sanitize_callback' => 'avalon_closed_section'
     ));
-    $wp_customize->add_control(new WP_Avalon_Theme_Support_WP_Property($wp_customize, 'header_wellcome_property_search', array(
-        'section' => 'header_wellcome_section',
+    $wp_customize->add_control(new WP_Avalon_Theme_Support_WP_Property($wp_customize, 'header_welcome_property_search', array(
+        'section' => 'header_welcome_section',
         'priority' => 4
     )));
     // description
-    $wp_customize->add_setting('header_wellcome_property_search_title', array(
+    $wp_customize->add_setting('header_welcome_property_search_title', array(
         'default' => __('At that place you can enable default property search', 'wp-avalon'),
         'sanitize_callback' => 'avalon_sanitize_callback',
         'capability' => 'edit_theme_options',
         'transport' => 'postMessage'
     ));
-    $wp_customize->add_control('header_wellcome_property_search_title', array(
+    $wp_customize->add_control('header_welcome_property_search_title', array(
         'label' => __('"Property search" description', 'wp-avalon'),
         'description' => $shortcode_notice,
-        'section' => 'header_wellcome_section',
+        'section' => 'header_welcome_section',
         'type' => 'textarea',
         'priority' => 5
     ));
@@ -1294,7 +1294,7 @@ function avalon_customize_css() {
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .next-page-btn a,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .last-page-btn a,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a,
-    body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit,
+    body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit,
     body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a,
     .widget.widget_featuredpropertieswidget .view-all .btn,
     .wpp_widget.widget_featuredpropertieswidget .view-all .btn,
@@ -1352,7 +1352,7 @@ function avalon_customize_css() {
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .next-page-btn a:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .last-page-btn a:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-numeric ul.property-overview-navigation .pages ul li a:hover,
-    body main.main-content .secondary-header .container .wellcome-text-box .wellcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover,
+    body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements > li.submit .submit:hover,
     body main.main-content .container .frontpage-focus-widget-area .ffwa__container > div .ffwa__box .ffwa__bottom .ffwa__button a:hover,
     .widget.widget_featuredpropertieswidget .view-all .btn:hover,
     .wpp_widget.widget_featuredpropertieswidget .view-all .btn:hover,

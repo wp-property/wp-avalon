@@ -10,8 +10,8 @@
 $header_image = get_theme_mod('header_image', get_template_directory_uri() . '/static/images/default-header-image.jpg');
 $frontpage_header_image_section_enable = get_theme_mod('header_image_disable', '1');
 $posts_header_image_section_enable = get_theme_mod('header_image_post_disable', '1');
-$wellcome_section_disable = get_theme_mod('header_wellcome_disable', '');
-$wellcome_property_search = get_theme_mod('header_wellcome_property_search_disable', '');
+$welcome_section_disable = get_theme_mod('header_welcome_disable', '');
+$welcome_property_search = get_theme_mod('header_welcome_property_search_disable', '');
 $header_image_frontpage_height = get_theme_mod('header_image_frontpage_height', '600');
 $header_image_single_height = get_theme_mod('header_image_single_height', '300');
 
@@ -24,26 +24,26 @@ if (is_front_page()) :
       echo '<div class="shi__blackout"></div>';
     endif; // if not empty header image
 
-    if ($wellcome_section_disable != 1) :
-      $wtb__content = get_theme_mod('header_wellcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon'));
+    if ($welcome_section_disable != 1) :
+      $wtb__content = get_theme_mod('header_welcome_text', __('WP Avalon - FREE wordpress theme. Created special for using with <a href="#">wp-property</a> plugin', 'wp-avalon'));
 
       echo '<div class="container">';
-      echo '<div class="wellcome-text-box">';
-      echo '<h1>' . get_theme_mod('header_wellcome_title', __('Wellcome to WP Avalon', 'wp-avalon')) . '</h1>';
+      echo '<div class="welcome-text-box">';
+      echo '<h1>' . get_theme_mod('header_welcome_title', __('Welcome to WP Avalon', 'wp-avalon')) . '</h1>';
       echo '<div class="wtb__container"><p>' . do_shortcode($wtb__content) . '</p></div>';
       if (function_exists('ud_check_wp_property')) :
-        if ($wellcome_property_search != 1) :
-          echo '<div class="wellcome-box-property-search">';
+        if ($welcome_property_search != 1) :
+          echo '<div class="welcome-box-property-search">';
           echo do_shortcode('[property_search]');
           echo '</div>';
         endif;
       else :
-        $header_wellcome_property_search_title = get_theme_mod('header_wellcome_property_search_title', __('At that place you can enable default property search', 'wp-avalon'));
-        echo '<h3>' . do_shortcode($header_wellcome_property_search_title) . '</h3>';
+        $header_welcome_property_search_title = get_theme_mod('header_welcome_property_search_title', __('At that place you can enable default property search', 'wp-avalon'));
+        echo '<h3>' . do_shortcode($header_welcome_property_search_title) . '</h3>';
       endif; // property search box or text box instead of serch box section
-      echo '</div>'; // .wellcome text box
+      echo '</div>'; // .welcome text box
       echo '</div>'; // .container
-    endif; // if wellcome section enable
+    endif; // if welcome section enable
     echo '</div>'; // .header secondary box
   endif; // if header image section enable
 else : // if is front page

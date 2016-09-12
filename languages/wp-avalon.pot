@@ -320,20 +320,20 @@ msgid "Single and post page header image height"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:464
-msgid "Wellcome section"
+msgid "Welcome section"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:477
-msgid "Disable \"Wellcome\" section"
+msgid "Disable \"Welcome\" section"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:484
 #: template-parts/header/header-secondary.php:32
-msgid "Wellcome to WP Avalon"
+msgid "Welcome to WP Avalon"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:490
-msgid "Wellcome section title"
+msgid "Welcome section title"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:497
@@ -344,11 +344,11 @@ msgid ""
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:503
-msgid "Wellcome section text"
+msgid "Welcome section text"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:516
-msgid "Disable \"Property search\" in Wellcome section"
+msgid "Disable \"Property search\" in Welcome section"
 msgstr ""
 
 #: lib/customizer/avalon-customizer.php:532
