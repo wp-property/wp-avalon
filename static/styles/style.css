@@ -1121,7 +1121,8 @@ body main.main-content .secondary-header .container .welcome-text-box .welcome-b
   width: 97%;
 }
 body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_price .wpp_search_attribute_wrap .bootstrap-select,
-body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_total_area .wpp_search_attribute_wrap .bootstrap-select {
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.seach_attribute_total_area .wpp_search_attribute_wrap .bootstrap-select,
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form .wpp_search_elements ul.wpp_search_group > li.wpp_search_attribute_type_advanced_range_dropdown .wpp_search_attribute_wrap .bootstrap-select {
   display: inline-block;
   margin-right: -3px;
   width: 45%;
