@@ -682,7 +682,11 @@ function avalon_header_property_search()
         <form action="<?php echo WPP_F::base_url($wp_properties['configuration']['base_slug']); ?>" method="post"
               class="column-wrapper wpp_search_elements">
           <div class="column col-md-2 <?php echo $field_1_type; ?>_wrapper">
-            <label><?php echo isset( $wp_properties['property_stats'][$field_1] ) ? $wp_properties['property_stats'][$field_1] : ''; ?></label>
+            <label>
+              <?php if (isset($field_1) && $field_1 !== '' && isset($wp_properties['property_stats'][$field_1])) {
+                echo $wp_properties['property_stats'][$field_1];
+              } ?>
+            </label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -696,7 +700,7 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_2_type; ?>_wrapper">
-            <label><?php echo isset( $wp_properties['property_stats'][$field_2] ) ? $wp_properties['property_stats'][$field_2] : ''; ?></label>
+            <label><?php echo isset($wp_properties['property_stats'][$field_2]) ? $wp_properties['property_stats'][$field_2] : ''; ?></label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -710,7 +714,7 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_3_type; ?>_wrapper">
-            <label><?php echo isset( $wp_properties['property_stats'][$field_3] ) ? $wp_properties['property_stats'][$field_3] : ''; ?></label>
+            <label><?php echo isset($wp_properties['property_stats'][$field_3]) ? $wp_properties['property_stats'][$field_3] : ''; ?></label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -724,7 +728,7 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_4_type; ?>_wrapper">
-            <label><?php echo isset( $wp_properties['property_stats'][$field_4] ) ? $wp_properties['property_stats'][$field_4] : ''; ?></label>
+            <label><?php echo isset($wp_properties['property_stats'][$field_4]) ? $wp_properties['property_stats'][$field_4] : ''; ?></label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -738,7 +742,7 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_5_type; ?>_wrapper">
-            <label><?php echo isset( $wp_properties['property_stats'][$field_5] ) ? $wp_properties['property_stats'][$field_5] : ''; ?></label>
+            <label><?php echo isset($wp_properties['property_stats'][$field_5]) ? $wp_properties['property_stats'][$field_5] : ''; ?></label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
