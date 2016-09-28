@@ -683,9 +683,7 @@ function avalon_header_property_search()
               class="column-wrapper wpp_search_elements">
           <div class="column col-md-2 <?php echo $field_1_type; ?>_wrapper">
             <label>
-              <?php if (isset($field_1) && $field_1 !== '') {
-                echo $wp_properties['property_stats'][$field_1];
-              } ?>
+              <?php echo !empty($wp_properties['property_stats'][$field_1]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_1]) : '' ?>
             </label>
             <div class="col-inner">
               <?php
