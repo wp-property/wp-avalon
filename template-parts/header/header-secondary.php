@@ -31,12 +31,10 @@ if (is_front_page()) :
       echo '<div class="welcome-text-box">';
       echo '<h1>' . get_theme_mod('header_welcome_title', __('Welcome to WP Avalon', 'wp-avalon')) . '</h1>';
       echo '<div class="wtb__container"><p>' . do_shortcode($wtb__content) . '</p></div>';
-      if (function_exists('ud_check_wp_property')) :
-        if ($welcome_property_search != 1) :
-          echo '<div class="welcome-box-property-search">';
-          echo do_shortcode('[property_search]');
-          echo '</div>';
-        endif;
+      if (function_exists('avalon_header_property_search')) :
+        echo '<div class="welcome-box-property-search">';
+        echo avalon_header_property_search();
+        echo '</div>';
       else :
         $header_welcome_property_search_title = get_theme_mod('header_welcome_property_search_title', __('At that place you can enable default property search', 'wp-avalon'));
         echo '<h3>' . do_shortcode($header_welcome_property_search_title) . '</h3>';

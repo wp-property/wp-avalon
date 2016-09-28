@@ -752,139 +752,51 @@ body {
           }
 
           .welcome-box-property-search {
-            color: #000;
             text-align: left;
-            margin-top: 2.14em;
-            padding: 0 1.42em;
-            @media (max-width: 1000px) {
-              padding: 0;
-            }
-            .wpp_shortcode_search_form {
-              padding: 1em 1.5em;
+            text-shadow: none;
+            
+            .wpp_search_elements {
               background-color: rgba(0, 0, 0, 0.6);
               .border-radius(4px);
-              .clearfix;
-              @media (max-width: 1000px) {
-                padding: 1em;
+              padding: 1em 0.5em 1.5em;
+              &:after {
+                display: block;
+                content: '';
+                clear: both;
               }
+              .column.col-md-2 {
 
-              .wpp_search_elements {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                @media (max-width: 1000px) {
-                  padding: 0 0 0 3%;
+                label {
+                  color: #fff;
+                  font-size: 16px;
+                  font-weight: 500;
+                  margin-bottom: 0;
+                  margin-top: 5px;
                 }
-
-                > li {
-                  display: block;
-                  float: left;
-                  width: 90% !important;
-                  &.submit {
-                    width: 10% !important;
-                    text-align: right;
-                    vertical-align: bottom;
-
-                    .submit {
-                      .submit-button-style;
-                      margin-top: 27px;
-                    }
-                  }
-                  @media (max-width: 1000px) {
-                    width: 100% !important;
-                    float: none;
-                    &.submit {
-                      width: 100% !important;
-                      text-align: left;
-                    }
-                  }
+                .bootstrap-select {
+                  width: 100% !important;
                 }
-                ul {
-                  margin: 0;
-                  padding: 0;
-                  list-style: none;
-                }
-                ul.wpp_search_group {
-                  margin: 0 -10px;
-
-                  > li {
-                    width: 20%;
-                    min-height: 62px;
-                    margin-bottom: 15px;
-                    float: left;
-                    padding: 0 10px;
-                    @media (max-width: 1000px) {
-                      width: 100%;
-                      float: none;
-                    }
-                    > label {
-                      color: #FFF;
-                      display: block;
-                      font-size: 16px;
-                      font-weight: 500;
-                    }
-                    .wpp_search_attribute_wrap {
-                      min-height: 35px;
-                      .clearfix;
-
-                      input[type="text"] {
-                        .default-input-style;
-                        &.wpp_search_input_field_min,
-                        &.wpp_search_input_field_max {
-                          display: inline-block;
-                          margin-right: -3px;
-                          width: 45%;
-                        }
-                      }
-                      .wpp_multi_checkbox {
-
-                        li {
-                          display: inline-block;
-                          margin-right: 5px;
-
-                          label {
-                            font-weight: 400;
-                          }
-                        }
-                      }
-                    }
-                    .wpp_dash,
-                    .delimiter {
-                      color: #fff;
-                      display: inline-block;
-                      text-align: center;
-                      width: 6%;
-                      margin-right: -1px;
-                    }
-                    .bootstrap-select {
-                      width: 97%;
-                    }
-                    &.seach_attribute_price,
-                    &.seach_attribute_total_area,
-                    &.wpp_search_attribute_type_advanced_range_dropdown {
-
-                      .wpp_search_attribute_wrap {
-
-                        .bootstrap-select {
-                          display: inline-block;
-                          margin-right: -3px;
-                          width: 45%;
-                        }
-                      }
-                    }
-                  }
-                }
-                > li {
-                  display: block;
+                .wpp_search_button.submit.btn {
+                  margin-top: 31px;
                   width: 100%;
-                  &.submit {
-                    text-align: right;
-                    vertical-align: bottom;
-
-                    .submit {
-                      margin-top: 30px;
-                      .submit-button-style;
+                }
+                &.advanced_range_dropdown_wrapper {
+                  .bootstrap-select {
+                    width: 47% !important;
+                    &:first-child {
+                      float: left;
                     }
+                    &:last-child {
+                      float: right;
+                    }
+                  }
+                  .delimiter {
+                    color: #fff;
+                    float: left;
+                    font-size: 14px;
+                    line-height: 34px;
+                    text-align: center;
+                    width: 6%;
                   }
                 }
               }
