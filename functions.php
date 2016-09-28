@@ -49,6 +49,8 @@ function avalon_theme_setup()
   add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+
+  add_image_size( 'avalon-overview-thumbnail', 200, 200, true ); // Property overview thumbnails
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');
@@ -527,7 +529,7 @@ function register_avalon_settings()
       return;
     }
     global $wp_filesystem;
-    print_r($wp_filesystem->get);
+//    print_r($wp_filesystem->get);
 
     $file_type = substr($_FILES['avalon_settings_from_backup_input']['name'], -4);
     if ($file_type == 'json') {
