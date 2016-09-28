@@ -688,8 +688,6 @@ function avalon_header_property_search()
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
-                'type' => 'input',
-                'random_element_id' => 'wpp_search_element_' . rand(1000, 9999),
                 'attrib' => $field_1,
                 'search_values' => $search_values,
                 'value' => isset($_REQUEST['wpp_search'][$field_1]) ? $_REQUEST['wpp_search'][$field_1] : '',
