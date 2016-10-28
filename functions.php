@@ -450,7 +450,7 @@ function avalon_property_overview_image($args = '')
 
   $thumbnail_size = $wpp_query['thumbnail_size'];
 
-  print_r($property['featured_image']);
+  print_r($thumbnail_size);
 
   $defaults = array(
     'return' => 'false',
