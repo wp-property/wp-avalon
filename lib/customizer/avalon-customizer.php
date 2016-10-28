@@ -539,7 +539,7 @@ function avalon_customize_register($wp_customize)
   if (function_exists('ud_check_wp_property')) :
 //    Welcome section. Property search box settings
     $wp_customize->add_section('welcome_property_search_settings', array(
-      'title' => __('Welcome section property search settings', 'wp-avalon'),
+      'title' => __('Home Search settings', 'wp-avalon'),
       'panel' => 'header_main_settings_control',
       'description' => '',
       'priority' => 5,
