@@ -2849,6 +2849,12 @@ body main.main-content .container .content article .post-container-box .post-tit
   color: #333 !important;
   text-decoration: none;
 }
+@media (max-width: 640px) {
+  body main.main-content .container .content article .archive-post-box .post-title a,
+  body main.main-content .container .content article .post-container-box .post-title a {
+    overflow-wrap: break-word;
+  }
+}
 body main.main-content .container .content article .archive-post-box .post-title a:hover,
 body main.main-content .container .content article .post-container-box .post-title a:hover {
   text-decoration: underline;

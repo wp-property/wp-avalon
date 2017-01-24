@@ -2259,6 +2259,9 @@ body {
               a {
                 color: #333 !important;
                 text-decoration: none;
+                @media (max-width: 640px) {
+                  overflow-wrap: break-word;
+                }
                 &:hover {
                   text-decoration: underline;
                 }
