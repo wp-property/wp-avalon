@@ -1050,7 +1050,7 @@ body main.main-content .container .frontpage-widgetaria-tabs {
   border-left: 1px solid #d2d3d6;
   border-right: 1px solid #d2d3d6;
   border-bottom: 1px solid #d2d3d6;
-  margin: -73px 15px 10px;
+  margin: -90px 15px 10px;
   position: relative;
   z-index: 3;
 }
@@ -4295,4 +4295,9 @@ body .footer .footer-area .copyrights {
 }
 body .footer .footer-area .copyrights p {
   margin: 0;
+}
+body.logged-in main.main-content .container .content .comments-area #respond #commentform p.comment-form-comment {
+  padding-left: 0;
+  float: none;
+  width: 100%;
 }
