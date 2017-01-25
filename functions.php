@@ -351,17 +351,15 @@ add_filter('wpp_google_maps_infobox', function ($data, $post) {
                                             href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>"
                                             target="_blank"><?php echo $property['display_address']; ?></a></div>
           <div class="ib__price"><?php echo $property['price']; ?></div>
-        <?php endif; ?>
+        <?php endif;
 
-        <?php
-        $content = strip_shortcodes($property['post_content']);
+        $content = strip_shortcodes($property['post_content']); // removing shortcodes from content
+
         if (!empty($content)) :
           echo '<div class="ir__title ir__title_description">' . __('Description', 'wp-avalon') . '</div>';
           echo '<div class="ir__description">' . substr($content, 0, 100) . '...</div>';
         endif;
-        ?>
-
-        <?php
+        
         $attributes = array();
 
         $labels_to_keys = array_flip($wp_properties['property_stats']);
