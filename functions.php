@@ -354,13 +354,8 @@ add_filter('wpp_google_maps_infobox', function ($data, $post) {
         <?php endif; ?>
 
         <?php
-        $content = $property['post_content'];
-        global $shortcode_tags;
-        $shortcod_names = '';
-        if (!empty($shortcode_tags)) {
-          $shortcod_names = array_keys($shortcode_tags);
-        }
-        if (!empty($content) && !has_shortcode($content, $shortcod_names)) :
+        $content = strip_shortcodes($property['post_content']);
+        if (!empty($content)) :
           echo '<div class="ir__title ir__title_description">' . __('Description', 'wp-avalon') . '</div>';
           echo '<div class="ir__description">' . substr($content, 0, 100) . '...</div>';
         endif;
