@@ -1,0 +1,22 @@
+{
+  "name": "wp-property/wp-avalon",
+  "type": "wordpress-theme",
+  "minimum-stability": "dev",
+  "homepage": "https://www.usabilitydynamics.com/product/wp-avalon",
+  "author": {
+    "name": "UsabilityDynamics, Inc.",
+    "url": "https://www.usabilitydynamics.com"
+  },
+  "archive": {
+    "exclude": [
+      "node_modules",
+      ".gitignore"
+    ]
+  },
+  "extra": {
+    "_build": {
+      "sha": null,
+      "branch": null
+    }
+  }
+}
