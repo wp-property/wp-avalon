@@ -356,6 +356,9 @@ add_filter('wpp_google_maps_infobox', function ($data, $post) {
         <?php
         $content = $property['post_content'];
         global $shortcode_tags;
+        echo '<pre>';
+        print_r($shortcode_tags);
+        echo '</pre>';
         $tagnames = '';
         if (empty($tagnames)) {
           $tagnames = array_keys($shortcode_tags);
