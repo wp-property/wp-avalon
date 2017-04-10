@@ -6,18 +6,16 @@ var wp_avalon = {
    */
   property_height: function property_height() {
     var widgets = jQuery('body .wpp_property_view_result');
-    jQuery('body .wpp_property_view_result .all-properties .property .property_div_box img').load(function () {
-      widgets.each(function (key, value) {
-        var height = 0,
-          columns = jQuery('.all-properties .property', jQuery(value));
-        columns.each(function (key1, value1) {
-          var currentHeight = jQuery(value1).outerHeight();
-          if (currentHeight > height) {
-            height = currentHeight;
-          }
-        });
-        columns.height(height);
+    widgets.each(function(key, value) {
+      var height = 0,
+              columns = jQuery('.all-properties .property', jQuery(value));
+      columns.each(function(key1, value1) {
+        var currentHeight = jQuery(value1).outerHeight();
+        if (currentHeight > height) {
+          height = currentHeight;
+        }
       });
+      columns.height(height);
     });
   },
   /**
@@ -27,10 +25,10 @@ var wp_avalon = {
    */
   widget_property_height: function widget_property_height() {
     var widgets = jQuery('body .frontpage-overview-widget-area');
-    widgets.each(function (key, value) {
+    widgets.each(function(key, value) {
       var height = 0,
-        columns = jQuery('.fowa__container .property', jQuery(value));
-      columns.each(function (key1, value1) {
+              columns = jQuery('.fowa__container .property', jQuery(value));
+      columns.each(function(key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {
           height = currentHeight;
@@ -46,12 +44,12 @@ var wp_avalon = {
    */
   property_row: function property_row() {
     var widgets = jQuery('body article .wpp_property_overview_shortcode'),
-      width = jQuery(window).width();
+            width = jQuery(window).width();
     if (width > 640) {
-      widgets.each(function (key, value) {
+      widgets.each(function(key, value) {
         var height = 0,
-          columns = jQuery('.wpp_row_view .property_div', jQuery(value));
-        columns.each(function (key1, value1) {
+                columns = jQuery('.wpp_row_view .property_div', jQuery(value));
+        columns.each(function(key1, value1) {
           var currentHeight = jQuery(value1).outerHeight();
           if (currentHeight > height) {
             height = currentHeight;
@@ -68,19 +66,19 @@ var wp_avalon = {
    */
   frontpage_focus_widgets: function frontpage_focus_widgets() {
     var widgets = jQuery('body .frontpage-focus-widget-area');
-    widgets.each(function (key, value) {
+    widgets.each(function(key, value) {
       var height = 0,
-        height2 = 0,
-        columns = jQuery('.ffwa__box', jQuery(value));
+              height2 = 0,
+              columns = jQuery('.ffwa__box', jQuery(value));
       columns2 = jQuery('.ffwa__box > p', jQuery(value));
-      columns.each(function (key1, value1) {
+      columns.each(function(key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {
           height = currentHeight;
         }
       });
       columns.height(height);
-      columns2.each(function (key1, value2) {
+      columns2.each(function(key1, value2) {
         var currentHeight2 = jQuery(value2).height();
         if (currentHeight2 > height2) {
           height2 = currentHeight2;
@@ -101,14 +99,14 @@ var wp_avalon = {
       wp_avalon.property_row();
     } else {
       if (width < 768) {
-        jQuery(window).load(function () {
+        jQuery(window).load(function() {
           wp_avalon.property_height();
           wp_avalon.property_row();
         });
       } else {
         wp_avalon.property_height();
         wp_avalon.property_row();
-        jQuery(window).load(function () {
+        jQuery(window).load(function() {
           wp_avalon.property_height();
           wp_avalon.property_row();
         });
@@ -117,7 +115,7 @@ var wp_avalon = {
   }
 };
 
-jQuery(window).load(function () {
+jQuery(window).load(function() {
 
 //    Properties grid page
   wp_avalon.property_grid(false);
@@ -128,17 +126,17 @@ jQuery(window).load(function () {
 
 
 });
-jQuery(function () {
+jQuery(function() {
 
   /**
    * Header bar
    *
    * @author vorobjov@UD
    */
-  jQuery(document).on('click', '.nav-additional .additional-button:not(.ab__logout)', function () {
+  jQuery(document).on('click', '.nav-additional .additional-button:not(.ab__logout)', function() {
     var that = jQuery(this),
-      bar = that.attr('href'),
-      width = jQuery(window).width();
+            bar = that.attr('href'),
+            width = jQuery(window).width();
     if (width > 1000) {
       if (that.hasClass('active')) {
         jQuery('.nav-additional .additional-button').removeClass('active');
@@ -158,7 +156,7 @@ jQuery(function () {
       MapInit();
     }
   });
-  jQuery(document).on('click', '.close-bar-box', function () {
+  jQuery(document).on('click', '.close-bar-box', function() {
     jQuery('.nav-additional .additional-button').removeClass('active');
     jQuery('.header-bar.active').slideUp('slow', 'swing');
     jQuery('.header-bar').removeClass('active');
@@ -184,7 +182,7 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery('.nav-tabs a').click(function (e) {
+  jQuery('.nav-tabs a').click(function(e) {
     e.preventDefault();
     jQuery(this).tab('show');
     jQuery(document).trigger('wpp_redraw_supermaps');
@@ -198,9 +196,9 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery('.tab-content div.tab-pane').each(function () {
+  jQuery('.tab-content div.tab-pane').each(function() {
     var tab_id = jQuery(this).attr('id'),
-      widget_title = jQuery('.tab-pane#' + tab_id + ' .widget-title').html();
+            widget_title = jQuery('.tab-pane#' + tab_id + ' .widget-title').html();
     jQuery('.frontpage-widgetaria-tabs .nav-tabs li a[href="#' + tab_id + '"]').html(widget_title);
   });
 
@@ -218,7 +216,7 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery(document).on('click', '.navigation-box .nav-button', function () {
+  jQuery(document).on('click', '.navigation-box .nav-button', function() {
     var width = jQuery(window).width();
     jQuery('.navigation-box').toggleClass('active');
     jQuery('body').toggleClass('no-scrolled');
@@ -243,14 +241,14 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery('.header-contact-form .submit-btn').on('click', function () {
+  jQuery('.header-contact-form .submit-btn').on('click', function() {
 
     var default_contact_us = jQuery('.header-contact-form').serialize();
 
     jQuery.ajax({
       type: "POST",
       url: avalon_ajax.ajaxurl,
-      beforeSend: function () {
+      beforeSend: function() {
         /* Check the Name for blank submission*/
         var user_name = document.forms["header-contact-form"]["dcf_user_name"].value;
         if (user_name == "" || user_name == null || user_name == 'undefined') {
@@ -274,12 +272,12 @@ jQuery(function () {
         action: 'default_contact_us',
         data: default_contact_us
       },
-      success: function (result) {
+      success: function(result) {
         jQuery('.dcf__success_message_box').html(result).show('400').delay(4000).hide('400');
         jQuery('.header-contact-form .form-control').val('');
         jQuery('body').css('cursor', 'auto');
       },
-      error: function (e) {
+      error: function(e) {
         alert('Error!');
         jQuery('body').css('cursor', 'auto');
       }
@@ -287,7 +285,7 @@ jQuery(function () {
     return false;
 
   });
-  jQuery(document).on('focus', '.header-contact-form input.error-input', function () {
+  jQuery(document).on('focus', '.header-contact-form input.error-input', function() {
     jQuery(this).removeClass('error-input');
     jQuery('.dcf__message_box').hide('400').html('');
   });
@@ -316,7 +314,7 @@ jQuery(function () {
  *
  * @author vorobjov@UD
  */
-jQuery(document).bind('wpp_pagination_change_complete', function (e, data) {
+jQuery(document).bind('wpp_pagination_change_complete', function(e, data) {
   wp_avalon.property_grid(true);
 });
 
