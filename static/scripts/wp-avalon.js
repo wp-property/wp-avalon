@@ -6,8 +6,7 @@ var wp_avalon = {
    */
   property_height: function property_height() {
     var widgets = jQuery('body .wpp_property_view_result');
-    var widget_box = jQuery('body .wpp_property_view_result .all-properties .property .property_div_box');
-    jQuery('img', widget_box).load(function () {
+    jQuery('body .wpp_property_view_result .all-properties .property .property_div_box img').load(function () {
       widgets.each(function (key, value) {
         var height = 0,
           columns = jQuery('.all-properties .property', jQuery(value));
