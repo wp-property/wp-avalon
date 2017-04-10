@@ -78,7 +78,7 @@ if (have_properties()) {
                   <?php endif; ?>
 
                   <?php if (!empty($wpp_query['detail_button'])) : ?>
-                    <li style="text-align: right;"><a <?php echo $in_new_window; ?> class="button" href="<?php echo $property['permalink']; ?>">More button<?php echo $wpp_query['detail_button'] ?></a></li>
+                    <li style="text-align: right;"><a <?php echo $in_new_window; ?> class="button" href="<?php echo $property['permalink']; ?>"><?php echo $wpp_query['detail_button'] ? $wpp_query['detail_button'] : __('More button'); ?></a></li>
                   <?php endif; ?>
                 </ul>
 
