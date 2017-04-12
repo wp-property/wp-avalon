@@ -318,9 +318,7 @@ jQuery(function () {
 jQuery(document).bind('wpp_pagination_change_complete', function (e, data) {
   wp_avalon.property_grid(true);
   jQuery('img').one('load', function () {
-    setTimeout(function () {
-      wp_avalon.property_grid(true)
-    }, 1000);
+    wp_avalon.property_grid(true);
   });
 });
 
