@@ -606,10 +606,14 @@ function avalon_customize_register($wp_customize)
     }
     $_attributes['s'] = __('Full Text', 'wp-avalon');
     $field_types = array(
+      'input' => 'Text Input',
+      'range_input' => 'Text Input Range',
       'range_dropdown' => 'Range Dropdown',
       'advanced_range_dropdown' => 'Advance Range Dropdown',
       'dropdown' => 'Dropdown',
-      'input' => 'Text Input'
+      'checkbox' => 'Single Checkbox',
+      'multi_checkbox' => 'Multi-Checkbox',
+      'range_date' => 'Date Input Range',
     );
 
     $wp_customize->add_control('avalon_search_field_1', array(

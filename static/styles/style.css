@@ -985,6 +985,23 @@ body main.main-content .secondary-header .container .welcome-text-box .welcome-b
   text-align: center;
   width: 6%;
 }
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_search_elements .column.col-md-2.range_input_wrapper input.wpp_search_input_field {
+  width: 47% !important;
+}
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_search_elements .column.col-md-2.range_input_wrapper input.wpp_search_input_field:first-child {
+  float: left;
+}
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_search_elements .column.col-md-2.range_input_wrapper input.wpp_search_input_field:last-child {
+  float: right;
+}
+body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_search_elements .column.col-md-2.range_input_wrapper .wpp_dash {
+  color: #fff;
+  float: left;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: center;
+  width: 6%;
+}
 body main.main-content .container {
   padding-top: 3em;
   /*frontpage widgetaria tabs*/
