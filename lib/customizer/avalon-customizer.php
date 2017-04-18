@@ -1416,6 +1416,10 @@ function avalon_customize_css()
       background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
     }
 
+    article.property-page-template .property-page-container .feature_lists > div h2 {
+      background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+    }
+
     .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .property_featured_label span,
     .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label {
       background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
