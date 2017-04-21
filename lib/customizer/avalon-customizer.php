@@ -306,6 +306,26 @@ function avalon_customize_register($wp_customize)
     'priority' => 2
   )));
 
+  //    Background color section
+  $wp_customize->add_section('avalon_background_color', array(
+    'title' => __('Background color', 'wp-avalon'),
+    'priority' => 6,
+    'panel' => 'general_colors'
+  ));
+
+//    Background color
+  $wp_customize->add_setting('avalon_bg_color', array(
+    'default' => '#edeeef',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_bg_color', array(
+    'label' => __('Background color', 'wp-avalon'),
+    'section' => 'avalon_background_color',
+    'priority' => 1
+  )));
+
 
 //  --------------------------------------------------------------------------
 //  Header settings
@@ -1576,6 +1596,10 @@ function avalon_customize_css()
     body a:not([class="btn-info"]):hover,
     body a:not([class="btn-info"]):hover {
       color: <?php echo get_theme_mod('avalon_permalink_hover_color', '#23527c'); ?>;
+    }
+
+    body main.main-content {
+      background-color: <?php echo get_theme_mod('avalon_bg_color', '#edeeef'); ?>;
     }
 
   </style>

@@ -728,6 +728,13 @@
       $('body main.main-content .container .content a').not('.btn').css('color', newval);
     });
   });
+
+  wp.customize('avalon_bg_color', function(value) {
+    value.bind(function(newval) {
+      $('body main.main-content').css('background-color', newval);
+    });
+  });
+
   wp.customize('avalon_permalink_hover_color', function(value) {
     value.bind(function(newval) {
       $('body main.main-content .container .content a:hover').not('.btn').css('color', newval);
