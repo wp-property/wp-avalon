@@ -681,7 +681,8 @@ function avalon_header_property_search()
               class="column-wrapper wpp_search_elements">
           <div class="column col-md-2 <?php echo $field_1_type; ?>_wrapper">
             <label>
-              <?php echo isset($wp_properties['property_stats'][$field_1]) ? $wp_properties['property_stats'][$field_1] : ''; ?>
+              <?php $label1 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_1]) ? WPP_F::de_slug($field_1) : $wp_properties['property_stats'][$field_1]), $field_1);
+              echo isset($label1) ? $label1 : ''; ?>
             </label>
             <div class="col-inner">
               <?php
@@ -696,7 +697,10 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_2_type; ?>_wrapper">
-            <label><?php echo isset($wp_properties['property_stats'][$field_2]) ? $wp_properties['property_stats'][$field_2] : ''; ?></label>
+            <label>
+              <?php $label2 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_2]) ? WPP_F::de_slug($field_2) : $wp_properties['property_stats'][$field_2]), $field_2);
+              echo isset($label2) ? $label2 : ''; ?>
+            </label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -710,7 +714,10 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_3_type; ?>_wrapper">
-            <label><?php echo isset($wp_properties['property_stats'][$field_3]) ? $wp_properties['property_stats'][$field_3] : ''; ?></label>
+            <label>
+              <?php $label3 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_3]) ? WPP_F::de_slug($field_3) : $wp_properties['property_stats'][$field_3]), $field_3);
+              echo isset($label3) ? $label3 : ''; ?>
+            </label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -724,7 +731,10 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_4_type; ?>_wrapper">
-            <label><?php echo isset($wp_properties['property_stats'][$field_4]) ? $wp_properties['property_stats'][$field_4] : ''; ?></label>
+            <label>
+              <?php $label4 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_4]) ? WPP_F::de_slug($field_4) : $wp_properties['property_stats'][$field_4]), $field_4);
+              echo isset($label4) ? $label4 : ''; ?>
+            </label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
@@ -738,7 +748,10 @@ function avalon_header_property_search()
             </div>
           </div>
           <div class="column col-md-2 <?php echo $field_5_type; ?>_wrapper">
-            <label><?php echo isset($wp_properties['property_stats'][$field_5]) ? $wp_properties['property_stats'][$field_5] : ''; ?></label>
+            <label>
+              <?php $label5 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_5]) ? WPP_F::de_slug($field_5) : $wp_properties['property_stats'][$field_5]), $field_5);
+              echo isset($label5) ? $label5 : ''; ?>
+            </label>
             <div class="col-inner">
               <?php
               wpp_render_search_input(array(
