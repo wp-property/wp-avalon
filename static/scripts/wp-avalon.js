@@ -187,6 +187,7 @@ jQuery(function () {
     e.preventDefault();
     jQuery(this).tab('show');
     jQuery(document).trigger('wpp_redraw_supermaps');
+    jQuery(document).trigger('wpp_pagination_change_complete');
   });
   if (!(jQuery('.frontpage-widgetaria-tabs .tab-content').children('.tab-pane').hasClass('active'))) {
     jQuery('.frontpage-widgetaria-tabs .tab-content .tab-pane:first').addClass('active');
