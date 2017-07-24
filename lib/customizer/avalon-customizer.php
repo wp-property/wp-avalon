@@ -1215,6 +1215,17 @@ function avalon_customize_register($wp_customize)
     'type' => 'checkbox',
     'priority' => 1
   ));
+  // Show title
+  $wp_customize->add_setting('avalon_frontpage_title_disable', array(
+    'sanitize_callback' => 'avalon_sanitize_callback',
+    'default' => 1
+  ));
+  $wp_customize->add_control('avalon_frontpage_title_disable', array(
+    'label' => __('Disable default title on front page', 'wp-avalon'),
+    'section' => 'avalon_frontpage_container_settings',
+    'type' => 'checkbox',
+    'priority' => 2
+  ));
 
 
 //  --------------------------------------------------------------------------
