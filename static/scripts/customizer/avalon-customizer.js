@@ -282,6 +282,24 @@
       $('.footer .copyrights p').html(newval);
     });
   });
+  wp.customize('avalon_copyrights_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area .copyrights').css('color', newval);
+    });
+  });
+
+  /* footer bg color */
+  wp.customize('avalon_footer_bg_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area').css('background-color', newval);
+    });
+  });
+  wp.customize('avalon_footer_border_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area').css('border-top-color', newval);
+    });
+  });
+
 
 
   /* Color scheme */

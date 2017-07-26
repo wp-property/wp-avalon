@@ -1364,6 +1364,50 @@ function avalon_customize_register($wp_customize)
     'settings' => 'avalon_copyrights_settings',
     'priority' => 1
   ));
+//    Copyrigths font color
+  $wp_customize->add_setting('avalon_copyrights_color', array(
+    'default' => '#a7a7a7',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_copyrights_color', array(
+    'label' => __('Top border color', 'wp-avalon'),
+    'section' => 'avalon_copyrights',
+    'priority' => 2
+  )));
+
+
+//    Footer Colors
+  $wp_customize->add_section('avalon_footer_colors', array(
+    'title' => __('Footer background color', 'wp-avalon'),
+    'panel' => 'footer_area_panel',
+    'priority' => 3,
+  ));
+//    Footer bg color
+  $wp_customize->add_setting('avalon_footer_bg_color', array(
+    'default' => '#efefef',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_footer_bg_color', array(
+    'label' => __('Background color', 'wp-avalon'),
+    'section' => 'avalon_footer_colors',
+    'priority' => 1
+  )));
+//    Footer border color
+  $wp_customize->add_setting('avalon_footer_border_color', array(
+    'default' => '#c0c2c7',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_footer_border_color', array(
+    'label' => __('Top border color', 'wp-avalon'),
+    'section' => 'avalon_footer_colors',
+    'priority' => 2
+  )));
 }
 
 add_action('customize_register', 'avalon_customize_register');
@@ -1611,6 +1655,15 @@ function avalon_customize_css()
 
     body main.main-content {
       background-color: <?php echo get_theme_mod('avalon_bg_color', '#edeeef'); ?>;
+    }
+
+    body .footer .footer-area .copyrights {
+      color: <?php echo get_theme_mod('avalon_copyrights_color', '#a7a7a7'); ?>;
+    }
+
+    body .footer .footer-area {
+      background-color: <?php echo get_theme_mod('avalon_footer_bg_color', '#efefef'); ?>;
+      border-top-color: <?php echo get_theme_mod('avalon_footer_border_color', '#c0c2c7'); ?>;
     }
 
   </style>
