@@ -23,6 +23,7 @@
 
 <?php
 $content_enable = get_theme_mod('avalon_frontpage_container_disable', 1);
+$title_enable = get_theme_mod('avalon_frontpage_title_disable', 1);
 if ($content_enable != 1) :
   ?>
   <div class="frontpage-content-wrapper">
@@ -33,11 +34,10 @@ if ($content_enable != 1) :
         ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
-          <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
-          <?php
-          the_post();
-          the_content();
-          ?>
+          <?php if ($title_enable != 1) : ?>
+            <div class="page-title"><?php the_title('<h1>', '</h1>'); ?></div>
+          <?php endif; ?>
+          <?php the_content(); ?>
 
         </article>
         <?php

@@ -49,6 +49,8 @@ function avalon_theme_setup()
   add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+
+  add_image_size('avalon-overview-thumbnail', 200, 200, true); // Property overview thumbnails
 }
 
 add_action('after_setup_theme', 'avalon_theme_setup');
@@ -349,17 +351,15 @@ add_filter('wpp_google_maps_infobox', function ($data, $post) {
                                             href="http://maps.google.com/maps?gl=us&daddr=<?php echo $property['latitude'] ?>,<?php echo $property['longitude']; ?>"
                                             target="_blank"><?php echo $property['display_address']; ?></a></div>
           <div class="ib__price"><?php echo $property['price']; ?></div>
-        <?php endif; ?>
+        <?php endif;
 
-        <?php
-        $content = $property['post_content'];
+        $content = strip_shortcodes($property['post_content']); // removing shortcodes from content
+
         if (!empty($content)) :
           echo '<div class="ir__title ir__title_description">' . __('Description', 'wp-avalon') . '</div>';
           echo '<div class="ir__description">' . substr($content, 0, 100) . '...</div>';
         endif;
-        ?>
-
-        <?php
+        
         $attributes = array();
 
         $labels_to_keys = array_flip($wp_properties['property_stats']);
@@ -527,7 +527,7 @@ function register_avalon_settings()
       return;
     }
     global $wp_filesystem;
-    print_r($wp_filesystem->get);
+//    print_r($wp_filesystem->get);
 
     $file_type = substr($_FILES['avalon_settings_from_backup_input']['name'], -4);
     if ($file_type == 'json') {
@@ -607,4 +607,171 @@ function avalon_error_settings_message()
     <p><?php _e('Please, select a correct settings file.', 'wp-avalon'); ?></p>
   </div>
   <?php
+}
+
+function avalon_header_property_search()
+{
+  global $wp_properties;
+
+  /* Render Header Search widget only if WP-Property plugin is activated! */
+  if (!class_exists('WPP_F')) {
+    return '';
+  }
+
+  $search_enabled = get_theme_mod('avalon_search_enable');
+
+  $field_1 = get_theme_mod('avalon_search_field_1');
+  $field_1_type = get_theme_mod('avalon_search_field_1_type');
+
+  $field_2 = get_theme_mod('avalon_search_field_2');
+  $field_2_type = get_theme_mod('avalon_search_field_2_type');
+
+  $field_3 = get_theme_mod('avalon_search_field_3');
+  $field_3_type = get_theme_mod('avalon_search_field_3_type');
+
+  $field_4 = get_theme_mod('avalon_search_field_4');
+  $field_4_type = get_theme_mod('avalon_search_field_4_type');
+
+  $field_5 = get_theme_mod('avalon_search_field_5');
+  $field_5_type = get_theme_mod('avalon_search_field_5_type');
+
+  // Checking how much advance range dropdown will show
+  $has_advance_range = "";
+  $no_of_advance_range = 0;
+
+  if ($field_1_type == 'advanced_range_dropdown')
+    $no_of_advance_range += 1;
+  if ($field_2_type == 'advanced_range_dropdown')
+    $no_of_advance_range += 1;
+  if ($field_3_type == 'advanced_range_dropdown')
+    $no_of_advance_range += 1;
+  if ($field_4_type == 'advanced_range_dropdown')
+    $no_of_advance_range += 1;
+  if ($field_5_type == 'advanced_range_dropdown')
+    $no_of_advance_range += 1;
+
+  // adding class if has advanced range.
+  if ($no_of_advance_range)
+    $has_advance_range = " has_advance_range_dropdown no_of_advance_range_$no_of_advance_range";
+
+  if (empty($searchable_property_types)) {
+    $searchable_property_types = $wp_properties['searchable_property_types'];
+  } else {
+    $searchable_property_types = explode(",", $searchable_property_types);
+  }
+
+  $search_values = WPP_F::get_search_values(array_filter(array($field_1, $field_2, $field_3, $field_4, $field_5)), $searchable_property_types);
+
+  //** Override search values if they are set in the developer tab */
+  foreach ($search_values as $attrib => $value) {
+    if (!empty($wp_properties['predefined_search_values'][$attrib])) {
+      $maybe_search_values = explode(',', $wp_properties['predefined_search_values'][$attrib]);
+      if (is_array($maybe_search_values)) {
+        $search_values[$attrib] = $maybe_search_values;
+      }
+    }
+  }
+  $html = '';
+  if (!empty($search_enabled)) {
+    ob_start();
+    ?>
+    <div class="container">
+      <div class="row column-wrapper<?php echo $has_advance_range ?>">
+        <form action="<?php echo WPP_F::base_url($wp_properties['configuration']['base_slug']); ?>" method="post"
+              class="column-wrapper wpp_search_elements">
+          <div class="column col-md-2 <?php echo $field_1_type; ?>_wrapper">
+            <label>
+              <?php $label1 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_1]) ? WPP_F::de_slug($field_1) : $wp_properties['property_stats'][$field_1]), $field_1);
+              echo isset($label1) ? $label1 : ''; ?>
+            </label>
+            <div class="col-inner">
+              <?php
+              wpp_render_search_input(array(
+                'attrib' => $field_1,
+                'search_values' => $search_values,
+                'value' => isset($_REQUEST['wpp_search'][$field_1]) ? $_REQUEST['wpp_search'][$field_1] : '',
+                'input_type' => $field_1_type,
+                'placeholder' => !empty($wp_properties['property_stats'][$field_1]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_1]) : ''
+              ));
+              ?>
+            </div>
+          </div>
+          <div class="column col-md-2 <?php echo $field_2_type; ?>_wrapper">
+            <label>
+              <?php $label2 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_2]) ? WPP_F::de_slug($field_2) : $wp_properties['property_stats'][$field_2]), $field_2);
+              echo isset($label2) ? $label2 : ''; ?>
+            </label>
+            <div class="col-inner">
+              <?php
+              wpp_render_search_input(array(
+                'attrib' => $field_2,
+                'search_values' => $search_values,
+                'value' => isset($_REQUEST['wpp_search'][$field_2]) ? $_REQUEST['wpp_search'][$field_2] : '',
+                'input_type' => $field_2_type,
+                'placeholder' => !empty($wp_properties['property_stats'][$field_2]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_2]) : ''
+              ));
+              ?>
+            </div>
+          </div>
+          <div class="column col-md-2 <?php echo $field_3_type; ?>_wrapper">
+            <label>
+              <?php $label3 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_3]) ? WPP_F::de_slug($field_3) : $wp_properties['property_stats'][$field_3]), $field_3);
+              echo isset($label3) ? $label3 : ''; ?>
+            </label>
+            <div class="col-inner">
+              <?php
+              wpp_render_search_input(array(
+                'attrib' => $field_3,
+                'search_values' => $search_values,
+                'value' => isset($_REQUEST['wpp_search'][$field_3]) ? $_REQUEST['wpp_search'][$field_3] : '',
+                'input_type' => $field_3_type,
+                'placeholder' => !empty($wp_properties['property_stats'][$field_3]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_3]) : ''
+              ));
+              ?>
+            </div>
+          </div>
+          <div class="column col-md-2 <?php echo $field_4_type; ?>_wrapper">
+            <label>
+              <?php $label4 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_4]) ? WPP_F::de_slug($field_4) : $wp_properties['property_stats'][$field_4]), $field_4);
+              echo isset($label4) ? $label4 : ''; ?>
+            </label>
+            <div class="col-inner">
+              <?php
+              wpp_render_search_input(array(
+                'attrib' => $field_4,
+                'search_values' => $search_values,
+                'value' => isset($_REQUEST['wpp_search'][$field_4]) ? $_REQUEST['wpp_search'][$field_4] : '',
+                'input_type' => $field_4_type,
+                'placeholder' => !empty($wp_properties['property_stats'][$field_4]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_4]) : ''
+              ));
+              ?>
+            </div>
+          </div>
+          <div class="column col-md-2 <?php echo $field_5_type; ?>_wrapper">
+            <label>
+              <?php $label5 = apply_filters('wpp::search_attribute::label', (empty($wp_properties['property_stats'][$field_5]) ? WPP_F::de_slug($field_5) : $wp_properties['property_stats'][$field_5]), $field_5);
+              echo isset($label5) ? $label5 : ''; ?>
+            </label>
+            <div class="col-inner">
+              <?php
+              wpp_render_search_input(array(
+                'attrib' => $field_5,
+                'search_values' => $search_values,
+                'value' => isset($_REQUEST['wpp_search'][$field_5]) ? $_REQUEST['wpp_search'][$field_5] : '',
+                'input_type' => $field_5_type,
+                'placeholder' => !empty($wp_properties['property_stats'][$field_5]) ? apply_filters('wpp::attribute::label', $wp_properties['property_stats'][$field_5]) : ''
+              ));
+              ?>
+            </div>
+          </div>
+          <div class="column col-md-2">
+            <input type="submit" class="wpp_search_button submit btn" value="<?php _e('Search', 'wpp') ?>"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <?php
+    $html = ob_get_clean();
+  }
+  return $html;
 }

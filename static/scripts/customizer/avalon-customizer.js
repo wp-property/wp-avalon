@@ -48,38 +48,38 @@
     });
   });
 
-  /* Wellcome text box */
-  wp.customize('header_wellcome_disable', function(value) {
+  /* welcome text box */
+  wp.customize('header_welcome_disable', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.wellcome-text-box').removeClass('hidden_block');
+        $('.welcome-text-box').removeClass('hidden_block');
       } else {
-        $('.wellcome-text-box').addClass('hidden_block');
+        $('.welcome-text-box').addClass('hidden_block');
       }
     });
   });
-  wp.customize('header_wellcome_title', function(value) {
+  wp.customize('header_welcome_title', function(value) {
     value.bind(function(newval) {
-      $('.wellcome-text-box h1').html(newval);
+      $('.welcome-text-box h1').html(newval);
     });
   });
-  wp.customize('header_wellcome_text', function(value) {
+  wp.customize('header_welcome_text', function(value) {
     value.bind(function(newval) {
-      $('.wellcome-text-box .wtb__container p').html(newval);
+      $('.welcome-text-box .wtb__container p').html(newval);
     });
   });
-  wp.customize('header_wellcome_property_search_disable', function(value) {
+  wp.customize('header_welcome_property_search_disable', function(value) {
     value.bind(function(newval) {
       if (newval != '1') {
-        $('.wellcome-box-property-search').removeClass('hidden_block');
+        $('.welcome-box-property-search').removeClass('hidden_block');
       } else {
-        $('.wellcome-box-property-search').addClass('hidden_block');
+        $('.welcome-box-property-search').addClass('hidden_block');
       }
     });
   });
-  wp.customize('header_wellcome_property_search_title', function(value) {
+  wp.customize('header_welcome_property_search_title', function(value) {
     value.bind(function(newval) {
-      $('.wellcome-text-box h3').html(newval);
+      $('.welcome-text-box h3').html(newval);
     });
   });
 
@@ -282,6 +282,24 @@
       $('.footer .copyrights p').html(newval);
     });
   });
+  wp.customize('avalon_copyrights_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area .copyrights').css('color', newval);
+    });
+  });
+
+  /* footer bg color */
+  wp.customize('avalon_footer_bg_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area').css('background-color', newval);
+    });
+  });
+  wp.customize('avalon_footer_border_color', function(value) {
+    value.bind(function(newval) {
+      $('body .footer .footer-area').css('border-top-color', newval);
+    });
+  });
+
 
 
   /* Color scheme */
@@ -297,6 +315,7 @@
       $('.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label').css('background-color', newval);
       $('body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__title').css('background-color', newval);
       $('body main.main-content .container .frontpage-about-products-area .aboutus-text-widget .atw__title').css('background-color', newval);
+      $('article.property-page-template .property-page-container .feature_lists > div h2').css('background-color', newval);
     });
   });
   wp.customize('avalon_header_top_border_color', function(value) {
@@ -363,7 +382,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('background-color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('background-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
       $('body a.btn.button').css('background-color', newval);
       $('body .btn-info').css('background-color', newval);
       $('body a.btn-info').css('background-color', newval);
@@ -377,7 +397,6 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('background-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('background-color', newval);
       $('body input[type="button"]').css('background-color', newval);
       $('body input[type="submit"]').css('background-color', newval);
       $('body input.submit-btn').css('background-color', newval);
@@ -419,7 +438,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('border-color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('border-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
       $('body a.btn.button').css('border-color', newval);
       $('body .btn-info').css('border-color', newval);
       $('body a.btn-info').css('border-color', newval);
@@ -433,7 +453,6 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('border-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('border-color', newval);
       $('body input[type="button"]').css('border-color', newval);
       $('body input[type="submit"]').css('border-color', newval);
       $('body input.submit-btn').css('border-color', newval);
@@ -475,7 +494,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info').css('color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link').css('color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
       $('body a.btn.button').css('color', newval);
       $('body .btn-info').css('color', newval);
       $('body a.btn-info').css('color', newval);
@@ -489,7 +509,6 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn').css('color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info').css('color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a').css('color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a').css('color', newval);
       $('body input[type="button"]').css('color', newval);
       $('body input[type="submit"]').css('color', newval);
       $('body input.submit-btn').css('color', newval);
@@ -531,7 +550,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('background-color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('background-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
       $('body a.btn.button:hover').css('background-color', newval);
       $('body .btn-info:hover').css('background-color', newval);
       $('body a.btn-info:hover').css('background-color', newval);
@@ -545,7 +565,6 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover').css('background-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover').css('background-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a:hover').css('background-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('background-color', newval);
       $('body input[type="button"]:hover').css('background-color', newval);
       $('body input[type="submit"]:hover').css('background-color', newval);
       $('body input.submit-btn:hover').css('background-color', newval);
@@ -587,7 +606,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('border-color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('border-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
       $('body a.btn.button:hover').css('border-color', newval);
       $('body .btn-info:hover').css('border-color', newval);
       $('body a.btn-info:hover').css('border-color', newval);
@@ -601,7 +621,6 @@
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .show_more.btn:hover').css('border-color', newval);
       $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map_list .super_map_list_property .property_in_list ul li.supermap_list_view_property .btn-info:hover').css('border-color', newval);
       $('body main.main-content .container .frontpage-headlights-widget-area .fhwa__container > div .fhwa__box .fhwa__bottom .fhwa__button a:hover').css('border-color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('border-color', newval);
       $('body input[type="button"]:hover').css('border-color', newval);
       $('body input[type="submit"]:hover').css('border-color', newval);
       $('body input.submit-btn:hover').css('border-color', newval);
@@ -643,7 +662,8 @@
       $('.widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
       $('.wpp_widget.widget_latestpropertieswidget .property_widget_block .more .btn.btn-info:hover').css('color', newval);
       $('body .wpp_feps_login_box .line .login_link .lost_pass_link:hover').css('color', newval);
-      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a, body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('color', newval);
+      $('body main.main-content .container .content article .wpp_supermap_wrapper .super_map .gm-style-iw #infowindow .infowindow_box .infowindow_right .ir__directions a:hover').css('color', newval);
       $('body a.btn.button:hover').css('color', newval);
       $('body .btn-info:hover').css('color', newval);
       $('body a.btn-info:hover').css('color', newval);
@@ -727,6 +747,13 @@
       $('body main.main-content .container .content a').not('.btn').css('color', newval);
     });
   });
+
+  wp.customize('avalon_bg_color', function(value) {
+    value.bind(function(newval) {
+      $('body main.main-content').css('background-color', newval);
+    });
+  });
+
   wp.customize('avalon_permalink_hover_color', function(value) {
     value.bind(function(newval) {
       $('body main.main-content .container .content a:hover').not('.btn').css('color', newval);

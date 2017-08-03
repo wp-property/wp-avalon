@@ -1192,7 +1192,9 @@
   margin-bottom: 15px;
 }
 .widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
-.wpp_widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select {
+.wpp_widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
+.widget.wpp_property_attributes .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select,
+.wpp_widget.wpp_property_attributes .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select {
   width: 47% !important;
   display: inline-block;
 }
@@ -1218,12 +1220,6 @@
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select,
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select {
   width: 100%;
-  /*                        &:not([class*="col-"]),
-                                        &:not([class*="form-control"]),
-                                        &:not(.input-group-btn) {
-                                        width: 47%;
-                                        display: inline-block;
-                                    }*/
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"],
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"] {
