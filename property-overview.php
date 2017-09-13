@@ -82,7 +82,7 @@ if (have_properties()) {
                   <?php endif; ?>
                 </ul>
 
-                <?php if (!empty($property['price'])) : ?>
+                <?php if (!empty($property['price']) || !empty($property['bedrooms']) || !empty($property['bathrooms'])) : ?>
                   <div class="property_bottom">
                     <div class="pb__left">
                       <ul>
