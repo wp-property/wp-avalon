@@ -1181,48 +1181,72 @@
   margin-bottom: 10px;
   padding-left: 25px;
 }
+.widget.wpp_property_attributes br,
+.wpp_widget.wpp_property_attributes br,
+.widget .wpp_shortcode_search_form br,
+.wpp_widget .wpp_shortcode_search_form br {
+  display: none;
+}
 .widget.wpp_property_attributes .wpp_search_elements,
-.wpp_widget.wpp_property_attributes .wpp_search_elements {
+.wpp_widget.wpp_property_attributes .wpp_search_elements,
+.widget .wpp_shortcode_search_form .wpp_search_elements,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .widget.wpp_property_attributes .wpp_search_elements li,
-.wpp_widget.wpp_property_attributes .wpp_search_elements li {
+.wpp_widget.wpp_property_attributes .wpp_search_elements li,
+.widget .wpp_shortcode_search_form .wpp_search_elements li,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements li {
   margin-bottom: 15px;
 }
 .widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
 .wpp_widget.wpp_property_attributes .wpp_search_elements li.seach_attribute_price .bootstrap-select,
+.widget .wpp_shortcode_search_form .wpp_search_elements li.seach_attribute_price .bootstrap-select,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements li.seach_attribute_price .bootstrap-select,
 .widget.wpp_property_attributes .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select,
-.wpp_widget.wpp_property_attributes .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select {
+.wpp_widget.wpp_property_attributes .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select,
+.widget .wpp_shortcode_search_form .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements li.wpp_search_attribute_type_advanced_range_dropdown .bootstrap-select {
   width: 47% !important;
   display: inline-block;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element {
   margin-bottom: 10px;
   padding-bottom: 15px;
   border-bottom: 1px dashed #cbccd0;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element label.wpp_search_label,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element label.wpp_search_label {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element label.wpp_search_label,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element label.wpp_search_label,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element label.wpp_search_label {
   font-size: 12px;
   color: #b9b9b9;
   text-transform: uppercase;
   font-weight: 100;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .bootstrap-select {
   width: 100%;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"],
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"] {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"],
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"],
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"] {
   display: block;
   width: 100%;
   height: 34px;
@@ -1241,7 +1265,9 @@
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"]:focus,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"]:focus {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"]:focus,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"]:focus,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -1249,36 +1275,52 @@
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_min,
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_min,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_min,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_min,
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_max,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_max {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_max,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_max,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_search_input_field_max {
   width: 48%;
   display: inline-block;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_range_input,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_range_input {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_range_input,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_range_input,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element input[type="text"].wpp_range_input {
   width: 47%;
   display: inline-block;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .delimiter,
 .wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .delimiter,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .delimiter,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .delimiter,
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_dash,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_dash {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_dash,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_dash,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_dash {
   width: 3%;
   display: inline-block;
   text-align: center;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li {
   margin-bottom: 0;
 }
 .widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level,
-.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level {
+.wpp_widget.wpp_property_attributes .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level,
+.widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level,
+.wpp_widget .wpp_shortcode_search_form .wpp_search_elements .wpp_search_group .wpp_search_form_element .wpp_multi_checkbox li .wpp_search_label_second_level {
   font-weight: 400;
 }
 .widget.widget_featuredpropertieswidget .property_widget_block,
