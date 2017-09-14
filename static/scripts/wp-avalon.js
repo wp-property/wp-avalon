@@ -61,6 +61,20 @@ var wp_avalon = {
     }
   },
   /**
+   * Property overview shortcode boxes width for full width widgets
+   *
+   * @author vorobjov@UD
+   */
+  property_widget_grid_width: function property_widget_grid_width() {
+    var widgets = jQuery('body article .widget.widget_wpp_property_overview');
+    widgets.each(function (key, value) {
+      var BoxWidth = jQuery('.wpp_property_view_result', jQuery(value)).width();
+      if (BoxWidth >= 700) {
+        jQuery('.wpp_property_view_result', jQuery(value)).addClass('widget_wpp_grid_view');
+      }
+    });
+  },
+  /**
    * Frontpage headlights equal height
    *
    * @author vorobjov@UD
@@ -119,6 +133,7 @@ var wp_avalon = {
 jQuery(window).load(function () {
 
 //    Properties grid page
+  wp_avalon.property_widget_grid_width();
   wp_avalon.property_grid(false);
 
 //    Frontpage headlights
