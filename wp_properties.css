@@ -140,6 +140,9 @@
   float: left;
   width: 30%;
 }
+.wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_template_view {
+  display: none;
+}
 .wpp_property_overview_shortcode .properties_pagination .wpp_property_results_options .wpp_sorter_options {
   text-align: right;
   display: block;
@@ -1022,6 +1025,10 @@
   width: auto;
   float: none;
   font-weight: 400;
+}
+.widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_status .wpp_property_results_options .wpp_template_view,
+.wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_status .wpp_property_results_options .wpp_template_view {
+  display: none;
 }
 .widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_status .wpp_property_results_options .wpp_sorter_options,
 .wpp_widget.widget_wpp_property_overview .properties_pagination .wpp_pagination_slider_status .wpp_property_results_options .wpp_sorter_options {
