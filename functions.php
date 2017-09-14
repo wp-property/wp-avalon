@@ -463,7 +463,7 @@ function avalon_property_overview_image($args = '')
     $link_class = '';
   }
 
-  $image = !empty($property['featured_image']) ? wpp_get_image_link($property['featured_image'], $thumbnail_size, array('return' => 'array')) : false;
+  $image = !empty($property['featured_image']) ? wp_get_attachment_image_src($property['featured_image'], $thumbnail_size) : false;
 
   if (!empty($image)) {
     ob_start();
@@ -473,9 +473,9 @@ function avalon_property_overview_image($args = '')
          title="<?php echo $property['post_title'] . (!empty($property['parent_title']) ? __(' of ', 'wp-avalon') . $property['parent_title'] : ""); ?>"
          class="property_overview_thumb property_overview_thumb_<?php echo $thumbnail_size; ?> <?php echo $link_class; ?> thumbnail"
          rel="<?php echo $property['post_name'] ?>">
-        <img width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>"
-             src="<?php echo $image['link']; ?>" alt="<?php echo $property['post_title']; ?>"
-             style="width:<?php echo $image['width']; ?>px;height:<?php echo $image['height']; ?>px;"/>
+        <img width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>"
+             src="<?php echo $image[0]; ?>" alt="<?php echo $property['post_title']; ?>"
+             style="width:<?php echo $image[1]; ?>px;height:<?php echo $image[2]; ?>px;"/>
       </a>
     </div>
     <?php
