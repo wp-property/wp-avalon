@@ -1188,6 +1188,18 @@
   margin-bottom: 10px;
   padding-left: 25px;
 }
+.widget.widget_wpp_property_overview .wpp_property_view_result.widget_wpp_grid_view .all-properties,
+.wpp_widget.widget_wpp_property_overview .wpp_property_view_result.widget_wpp_grid_view .all-properties {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.widget.widget_wpp_property_overview .wpp_property_view_result.widget_wpp_grid_view .all-properties .property,
+.wpp_widget.widget_wpp_property_overview .wpp_property_view_result.widget_wpp_grid_view .all-properties .property {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .widget.wpp_property_attributes br,
 .wpp_widget.wpp_property_attributes br,
 .widget .wpp_shortcode_search_form br,
