@@ -1,0 +1,90 @@
+.ffwa__box_wrap {
+  position: relative;
+
+  .ffwa__box {
+    border: 1px solid #ccc;
+    .border-radius(4px);
+    position: relative;
+    padding: 2.86em 1.42em 0;
+    text-align: center;
+
+    .ffwa__box_icon {
+      margin: 0 auto 2.14em;
+      height: 150px;
+      width: 150px;
+      overflow: hidden;
+      border: 4px solid #CCC;
+      .transition(border-color, 0.15s, ease-in-out, 0s);
+      .border-radius(100%);
+      &:hover {
+        border-color: #477fd3;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      i {
+        .border-radius(100%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        height: 100%;
+        padding: 4px;
+        width: 100%;
+      }
+    }
+    .ffwa__box_title {
+      color: #444;
+      font-size: 1.28em;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 1.42em;
+      text-decoration: none;
+    }
+    p {
+      font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+    .ffwa__bottom {
+      .clearfix;
+      width: 100%;
+      margin-top: 1em;
+      padding: 0 1.42em 1em;
+
+      .ffwa__price {
+        float: left;
+        font-size: 1.42em;
+        font-weight: 500;
+        line-height: 1.7em;
+        text-align: left;
+        width: 50%;
+        &.ffwa__price_center {
+          text-align: center;
+          width: 100%;
+        }
+      }
+      .ffwa__button {
+        float: right;
+        width: 50%;
+
+        a {
+          text-decoration: none;
+          background-color: #19294c;
+          border-color: #0b1a3a;
+          color: #fff;
+          &:hover {
+            background-color: #0b1a3a;
+            border-color: #0b1a3a;
+            color: #fff;
+          }
+        }
+        &.ffwa__button_center {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

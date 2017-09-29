@@ -21,11 +21,13 @@ get_header();
       endif;
 
       if (get_theme_mod('header_image_post_disable', '1') != 1) :
-        echo '<h1 class="page-title">';
-        single_post_title();
-        echo '</h1>';
+        if (!hide_page_title()) :
+          echo '<h1 class="page-title">';
+          single_post_title();
+          echo '</h1>';
+        endif;
       endif;
-      
+
       
       if (have_posts()) :
 

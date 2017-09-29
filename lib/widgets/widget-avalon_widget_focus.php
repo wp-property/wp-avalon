@@ -10,10 +10,8 @@ class avalon_widget_focus extends WP_Widget {
 
   function widget($args, $instance) {
     extract($args);
-    echo $before_widget;
     ?>
-
-    <div class="col-lg-3 col-sm-3">
+    <div class="ffwa__box_wrap">
       <div class="ffwa__box">
         <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
           <div class="ffwa__box_icon">
@@ -64,9 +62,7 @@ class avalon_widget_focus extends WP_Widget {
     <?php endif; ?>
       </div>
     </div>
-
     <?php
-    echo $after_widget;
   }
 
   function update($new_instance, $old_instance) {
@@ -133,7 +129,7 @@ class avalon_widget_focus extends WP_Widget {
              endif;
              ?>" style="margin-top:5px;">
 
-      <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+      <input type="button" class="button button-primary custom_media_button" id="custom_media_button" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
       <input type="button" class="button button-primary remove_media_button" id="remove_media_button" value="<?php _e('Disable image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
 

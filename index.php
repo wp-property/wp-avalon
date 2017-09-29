@@ -21,9 +21,11 @@ get_header();
       endif;
 
       if (get_theme_mod('header_image_post_disable', '1') != 1) :
-        echo '<h1 class="page-title">';
-        single_post_title();
-        echo '</h1>';
+        if (!hide_page_title()) :
+          echo '<h1 class="page-title">';
+          single_post_title();
+          echo '</h1>';
+        endif;
       endif;
 
       if (have_posts()) :
@@ -33,7 +35,7 @@ get_header();
           'next_text' => __('Next', 'wp-avalon'),
           'before_page_number' => '<span class="meta-nav screen-reader-text"></span>',
         ));
-        
+
         while (have_posts()) : the_post();
 
           get_template_part('template-parts/content/content', 'archive');

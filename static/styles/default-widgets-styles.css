@@ -134,7 +134,7 @@ Styles for default wordpress widgets
   font-weight: 600;
   line-height: 20px;
   overflow: hidden;
-  height: 20px;
+  min-height: 20px;
   padding: 10px 20px;
   box-sizing: content-box;
   margin-left: -20px;

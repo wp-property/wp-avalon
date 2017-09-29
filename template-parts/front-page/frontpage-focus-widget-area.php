@@ -7,13 +7,14 @@
  * @since Avalon 1.0
  */
 $enable_section = get_theme_mod('focus_section_disable_setting', '');
+$section_title = get_theme_mod('focus_section_title_setting', __('Focus widget area title', 'wp-avalon'));
 if ($enable_section != 1) :
   ?>
   <div class="frontpage-focus-widget-area" data-template="template-parts/front-page/frontpage-focus-widget-area">
     <div class="row">
       <div class="col-md-12">
-        <div class="ffwa__title">
-          <?php echo get_theme_mod('focus_section_title_setting', __('Focus widget area title', 'wp-avalon')); ?>
+        <div class="ffwa__title" style="display: <?php echo $section_title ? 'block' : 'none'; ?>">
+          <?php echo $section_title; ?>
         </div>
       </div>
     </div>

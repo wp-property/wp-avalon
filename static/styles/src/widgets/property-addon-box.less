@@ -1,0 +1,70 @@
+.property_addon_box {
+  height: 122px;
+  overflow: hidden;
+  position: relative;
+
+  .pab__wrap {
+    height: 100%;
+    width: 100%;
+
+    .front {
+      background-color: #FFF;
+      border: 1px solid #ccc;
+      padding: 0.71em;
+      left: 0;
+      top: 0;
+
+      .pab__image {
+        display: table-cell;
+        width: 32%;
+
+        a {
+          border: 2px solid #ccc;
+          display: block;
+          height: 100px;
+          width: 100px;
+          .border-radius(100%);
+        }
+        span {
+          display: block;
+          padding: 4px;
+          width: 96px;
+          height: 96px;
+          .border-radius(100%);
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+      .pab__title {
+        box-sizing: border-box;
+        display: table-cell;
+        height: 100px;
+        vertical-align: middle;
+        padding-left: 10px;
+        width: 68%;
+        color: #414141 !important;
+        font-size: 1.14em;
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-size: 1.14em;
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+    }
+    .back {
+      background-color: #FFF;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      padding: 0.71em;
+      left: 0;
+      top: 0;
+
+      .pab__excerpt {
+        overflow-y: auto;
+        height: 100%;
+      }
+    }
+  }
+}

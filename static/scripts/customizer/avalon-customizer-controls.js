@@ -1,5 +1,9 @@
 jQuery(document).ready(function() {
 
+  /* Move frontpage search sidebar in the panel */
+  wp.customize.section('sidebar-widgets-frontpage-search-bar').panel('welcome_property_search_settings');
+  wp.customize.section('sidebar-widgets-frontpage-search-bar').priority('1');
+
   /* Move multi-sidebar area in the panel */
   wp.customize.section('sidebar-widgets-sidebar-frontpage').panel('frontpage_top_widget_area_panel');
   wp.customize.section('sidebar-widgets-sidebar-frontpage').priority('2');

@@ -311,7 +311,7 @@ msgstr ""
 
 #: lib/customizer/avalon-customizer.php:438
 msgid ""
-"Show fetured image in header instead of header image (on single and post "
+"Show featured image in header instead of header image (on single and post "
 "page)"
 msgstr ""
 

@@ -13,7 +13,7 @@ class avalon_widget_overview extends WP_Widget {
     echo $before_widget;
     ?>
 
-    <div class="property_div property col-md-3">
+    <div class="property_div property avalon_property">
       <div class="property_div_box">
         <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
           <div class="wpp_overview_left_column">
@@ -132,7 +132,7 @@ class avalon_widget_overview extends WP_Widget {
       endif;
       ?>" style="margin-top:5px;">
 
-      <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+      <input type="button" class="button button-primary custom_media_button" id="custom_media_button" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
       <input type="button" class="button button-primary remove_media_button" id="remove_media_button" value="<?php _e('Disable image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
 

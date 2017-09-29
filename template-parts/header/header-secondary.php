@@ -14,6 +14,7 @@ $welcome_section_disable = get_theme_mod('header_welcome_disable', '');
 $welcome_property_search = get_theme_mod('header_welcome_property_search_disable', '');
 $header_image_frontpage_height = get_theme_mod('header_image_frontpage_height', '600');
 $header_image_single_height = get_theme_mod('header_image_single_height', '300');
+$avalon_search_enable = get_theme_mod('avalon_search_enable', '');
 
 if (is_front_page()) :
   if ($frontpage_header_image_section_enable == 1) :
@@ -31,9 +32,9 @@ if (is_front_page()) :
       echo '<div class="welcome-text-box">';
       echo '<h1>' . get_theme_mod('header_welcome_title', __('Welcome to WP Avalon', 'wp-avalon')) . '</h1>';
       echo '<div class="wtb__container"><p>' . do_shortcode($wtb__content) . '</p></div>';
-      if (function_exists('avalon_header_property_search')) :
+      if ($avalon_search_enable == 1) :
         echo '<div class="welcome-box-property-search">';
-        echo avalon_header_property_search();
+        dynamic_sidebar('frontpage-search-bar');
         echo '</div>';
       else :
         $header_welcome_property_search_title = get_theme_mod('header_welcome_property_search_title', __('At that place you can enable default property search', 'wp-avalon'));

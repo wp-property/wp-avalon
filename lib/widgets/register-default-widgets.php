@@ -3,6 +3,7 @@
 add_action('after_switch_theme', function() {
 
   $avalon_frontpage_sidebars = array(
+      'frontpage-search-bar' => 'frontpage-search-bar',
       'aboutus-section' => 'aboutus-section',
       'focus-section' => 'focus-section',
       'about-products-section' => 'about-products-section',
@@ -83,20 +84,18 @@ add_action('after_switch_theme', function() {
       $active_widgets['aboutus-section'][0] = 'avalon-aboutus-widget-' . $avalon_counter;
       $widget_content[$avalon_counter] = array(
           'title' => __('WP Avalon. Free WordPress theme', 'wp-avalon'),
-          'text' => __('We designed our Avalon WordPress theme especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely in any device, desktop or mobile. Customizable sidabars and defferent widgets to suit every taste. All colors from the site are also customizable to to fit your brand\'s colors.', 'wp-avalon'),
+          'text' => __('We designed our Avalon WordPress theme, especially for WP-Property plugin. It has responsive style layouts so that it can be displayed nicely on any device, desktop or mobile. Customizable sidebars and different widgets to suit every taste. All colors from the site are also customizable to fit your brand\'s colors.', 'wp-avalon'),
           'featured-left-fields' => array(
-              '0' => __('It is Free!!!!', 'wp-avalon'),
-              '1' => __('Grid overview template', 'wp-avalon'),
-              '2' => __('Let\'s you upload a custom logo', 'wp-avalon'),
-              '3' => __('Add your contact and company information', 'wp-avalon'),
-              '4' => __('Available for localization', 'wp-avalon'),
+              '0' => __('Grid overview template', 'wp-avalon'),
+              '1' => __('Let\'s you upload a custom logo', 'wp-avalon'),
+              '2' => __('Add your contact and company information', 'wp-avalon'),
+              '3' => __('Available for localization', 'wp-avalon'),
           ),
           'featured-right-fields' => array(
-              '0' => __('Compatible with WP-Property pluigin and all it\'s add-ons', 'wp-avalon'),
+              '0' => __('Compatible with WP-Property plugin and all its add-ons', 'wp-avalon'),
               '1' => __('Useful Sidebars and widgets available', 'wp-avalon'),
               '2' => __('Adjust the theme to fit your brand\'s colors', 'wp-avalon'),
               '3' => __('Fully Responsive', 'wp-avalon'),
-              '4' => __('Basic free support included', 'wp-avalon'),
           ),
       );
       update_option('widget_avalon-aboutus-widget', $widget_content);

@@ -1,43 +1,31 @@
 <?php
 
-class avalon_flip_widget extends WP_Widget {
+class avalon_flip_widget extends WP_Widget
+{
 
-  public function __construct() {
+  public function __construct()
+  {
     parent::__construct(
-            'avalon-flip-widget', __('WP Avalon - Flip text widget', 'wp-avalon')
+      'avalon-flip-widget', __('WP Avalon - Flip text widget', 'wp-avalon')
     );
   }
 
-  function widget($args, $instance) {
+  function widget($args, $instance)
+  {
     extract($args);
-    echo $before_widget;
     ?>
-    <div class="col-md-4">
+    <div class="property_addon_box_wrap">
       <div class="property_addon_box">
         <div class="pab__wrap">
           <div class="front">
             <?php if (!empty($instance['image_uri']) && ($instance['image_uri'] != 'Upload Image')) : ?>
               <div class="pab__image">
-                <?php if (!empty($instance['url'])) : ?>
-                  <a href="<?php echo $instance['url']; ?>">
-                      <img alt="<?php if (!empty($instance['title'])) : echo $instance['title']; endif; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                  </a>
-                <?php else : ?>
-                  <img alt="<?php if (!empty($instance['title'])) : echo $instance['title']; endif; ?>" src="<?php echo esc_url($instance['image_uri']); ?>" />
-                <?php endif; ?>
+                <span style="background-image: url('<?php echo esc_url($instance['image_uri']); ?>')"></span>
               </div>
               <?php
             endif;
-            if (!empty($instance['title'])) :
-              ?>
-              <div class="pab__title">
-                <?php if (!empty($instance['url'])) : ?>
-                  <a href="<?php echo $instance['url']; ?>"><?php echo $instance['title']; ?></a>
-                <?php else : ?>
-                  <?php echo $instance['title']; ?>
-              <?php endif; ?>
-              </div>
-    <?php endif; ?>
+            echo (!empty($instance['title'])) ? '<div class="pab__title">' . $instance['title'] . '</div>' : '';
+            ?>
           </div>
           <div class="back">
             <div class="pab__excerpt">
@@ -55,10 +43,10 @@ class avalon_flip_widget extends WP_Widget {
       </div>
     </div>
     <?php
-    echo $after_widget;
   }
 
-  function update($new_instance, $old_instance) {
+  function update($new_instance, $old_instance)
+  {
 
     $instance = $old_instance;
     $instance['title'] = strip_tags($new_instance['title']);
@@ -69,29 +57,33 @@ class avalon_flip_widget extends WP_Widget {
     return $instance;
   }
 
-  function form($instance) {
+  function form($instance)
+  {
     ?>
 
     <p>
       <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'wp-avalon'); ?></label><br/>
-      <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php
+      <input type="text" name="<?php echo $this->get_field_name('title'); ?>"
+             id="<?php echo $this->get_field_id('title'); ?>" value="<?php
       if (!empty($instance['title'])): echo $instance['title'];
       endif;
       ?>" class="widefat">
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Text', 'wp-avalon'); ?></label><br/>
-      <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('description'); ?>" id="<?php echo $this->get_field_id('description'); ?>"><?php
+      <textarea class="widefat" rows="8" cols="20" name="<?php echo $this->get_field_name('description'); ?>"
+                id="<?php echo $this->get_field_id('description'); ?>"><?php
         if (!empty($instance['description'])): echo htmlspecialchars_decode($instance['description']);
         endif;
         ?></textarea>
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('url'); ?>"><?php _e('Url', 'wp-avalon'); ?></label><br/>
-      <input type="text" name="<?php echo $this->get_field_name('url'); ?>" id="<?php echo $this->get_field_id('url'); ?>" value="<?php
+      <input type="text" name="<?php echo $this->get_field_name('url'); ?>"
+             id="<?php echo $this->get_field_id('url'); ?>" value="<?php
       if (!empty($instance['url'])): echo $instance['url'];
       endif;
-      ?>" class="widefat" />
+      ?>" class="widefat"/>
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image', 'wp-avalon'); ?></label><br/>
@@ -101,13 +93,16 @@ class avalon_flip_widget extends WP_Widget {
       endif;
       ?>
 
-      <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
+      <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>"
+             id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php
       if (!empty($instance['image_uri'])): echo $instance['image_uri'];
       endif;
       ?>" style="margin-top:5px;">
 
-      <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
-      <input type="button" class="button button-primary remove_media_button" id="remove_media_button" value="<?php _e('Disable image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+      <input type="button" class="button button-primary custom_media_button" id="custom_media_button"
+             value="<?php _e('Upload Image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
+      <input type="button" class="button button-primary remove_media_button" id="remove_media_button"
+             value="<?php _e('Disable image', 'wp-avalon'); ?>" style="margin-top:5px;"/>
     </p>
     <?php
   }
@@ -117,7 +112,7 @@ class avalon_flip_widget extends WP_Widget {
 /**
  * Register widget
  */
-add_action('widgets_init', function() {
+add_action('widgets_init', function () {
   register_widget('avalon_flip_widget');
 });
 
