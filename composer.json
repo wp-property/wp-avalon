@@ -5,7 +5,36 @@
   "homepage": "https://www.usabilitydynamics.com/product/wp-avalon",
   "author": {
     "name": "UsabilityDynamics, Inc.",
-    "url": "https://www.usabilitydynamics.com"
+    "email": "info@usabilitydynamics.com",
+    "homepage": "https://www.usabilitydynamics.com",
+    "role": "Developer"
+  },
+  "keywords": [
+    "real estate",
+    "property management",
+    "modern",
+    "customizer",
+    "custom header",
+    "wp-property"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.usabilitydynamics.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wp-property/wp-avalon.git"
+  },
+  "require": {
+    "php": ">=5.3",
+    "usabilitydynamics/lib-utility": "0.3.7",
+    "usabilitydynamics/lib-wp-bootstrap": "1.2.1",
+    "usabilitydynamics/lib-ud-api-client": "1.1.5.1"
+  },
+  "autoload": {
+    "classmap": [ "lib/classes" ]
   },
   "archive": {
     "exclude": [
@@ -14,6 +43,38 @@
     ]
   },
   "extra": {
+    "schemas": {
+      "dependencies" : {
+        "modules": {},
+        "plugins": [
+          {
+            "name": "WP-Property",
+            "slug": "wp-property",
+            "version": "2.0.0",
+            "required": false
+          },
+          {
+            "name": "Jetpack",
+            "slug": "jetpack",
+            "required": false
+          }
+        ]
+      },
+      "licenses" : {
+        "client" : {
+          "slug": "wp-property/wp-avalon",
+          "screen": {
+            "parent": "themes.php",
+            "page_title": "l10n.licenses_page_title",
+            "menu_title": "l10n.licenses_menu_title"
+          }
+        },
+        "product" : {
+          "referrer": false,
+          "product_id": "wp-property/wp-avalon"
+        }
+      }
+    },
     "_build": {
       "sha": null,
       "branch": null
