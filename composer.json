@@ -52,11 +52,6 @@
             "slug": "wp-property",
             "version": "2.0.0",
             "required": false
-          },
-          {
-            "name": "Jetpack",
-            "slug": "jetpack",
-            "required": false
           }
         ]
       },
