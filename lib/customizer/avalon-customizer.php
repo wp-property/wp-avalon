@@ -327,6 +327,40 @@ function avalon_customize_register($wp_customize)
   )));
 
 
+  //    Property overview color section
+  $wp_customize->add_section('avalon_propertyoverview_color', array(
+    'title' => __('Property overview colors', 'wp-avalon'),
+    'priority' => 7,
+    'panel' => 'general_colors'
+  ));
+
+//    Property overview colors
+  $wp_customize->add_setting('avalon_propertyoverview_bg_color', array(
+    'default' => '#19294c',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_propertyoverview_bg_color', array(
+    'label' => __('Background color', 'wp-avalon'),
+    'section' => 'avalon_propertyoverview_color',
+    'priority' => 1
+  )));
+
+//  Property overview text color
+  $wp_customize->add_setting('avalon_propertyoverview_text_color', array(
+    'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_propertyoverview_text_color', array(
+    'label' => __('Text color (footer and labels)', 'wp-avalon'),
+    'section' => 'avalon_propertyoverview_color',
+    'priority' => 2
+  )));
+
+
 //  --------------------------------------------------------------------------
 //  Header settings
 //  --------------------------------------------------------------------------
@@ -1379,9 +1413,7 @@ function avalon_customize_css()
     }
 
     body main.main-content .container .frontpage-avalon-features-area .featured-text-widget .ftw__title,
-    body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title,
-    body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom,
-    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom {
+    body main.main-content .container .frontpage-property-description-area .featured-text-widget .ftw__title {
       background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
     }
 
@@ -1390,8 +1422,17 @@ function avalon_customize_css()
     }
 
     .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .property_featured_label span,
-    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label {
-      background-color: <?php echo get_theme_mod('avalon_header_bg_color', '#19294c'); ?>;
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label,
+    body main.main-content .container .frontpage-overview-widget-area .fowa__container .property .property_div_box .wpp_overview_right_column .property_bottom,
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom {
+      background-color: <?php echo get_theme_mod('avalon_propertyoverview_bg_color', '#19294c'); ?>;
+    }
+
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label,
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .property_featured_label span,
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom .pb__right .property_price,
+    .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_right_column .property_bottom .pb__left {
+      color: <?php echo get_theme_mod('avalon_propertyoverview_text_color', '#FFFFFF'); ?>;
     }
 
     body main.main-content .container .frontpage-about-us-area .aboutus-text-widget .atw__title,
@@ -1472,7 +1513,7 @@ function avalon_customize_css()
     body a.show_more.btn,
     body p.view-all a.btn,
     body p.more a.btn,
-    .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button{
+    .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button {
       background-color: <?php echo get_theme_mod('avalon_button_bg_color', '#19294c'); ?>;
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
       color: <?php echo get_theme_mod('avalon_button_text_color', '#FFF'); ?>;
