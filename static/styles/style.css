@@ -1446,6 +1446,12 @@ body main.main-content .secondary-header .container .welcome-text-box .welcome-b
   width: 20%;
   height: 70px;
 }
+@media (max-width: 1000px) {
+  body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form ul.wpp_search_elements li.wpp_search_group li.wpp_search_form_element {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 body main.main-content .secondary-header .container .welcome-text-box .welcome-box-property-search .wpp_shortcode_search_form ul.wpp_search_elements li.wpp_search_group li.wpp_search_form_element label {
   font-size: 16px;
   font-weight: normal;
