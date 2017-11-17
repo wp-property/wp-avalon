@@ -2777,6 +2777,16 @@ body main.main-content .container .frontpage-widgets .ffwa__box_wrap {
   padding-right: 15px;
   width: 25%;
 }
+@media (max-width: 1000px) {
+  body main.main-content .container .frontpage-widgets .ffwa__box_wrap {
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  body main.main-content .container .frontpage-widgets .ffwa__box_wrap {
+    width: 100%;
+  }
+}
 body main.main-content .container .frontpage-widgets .property.avalon_property {
   width: 25%;
   padding: 0 15px;
@@ -2786,6 +2796,16 @@ body main.main-content .container .frontpage-widgets .property_addon_box_wrap {
   padding: 0 15px 2em 15px;
   position: relative;
   float: left;
+}
+@media (max-width: 1000px) {
+  body main.main-content .container .frontpage-widgets .property_addon_box_wrap {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  body main.main-content .container .frontpage-widgets .property_addon_box_wrap {
+    width: 100%;
+  }
 }
 body main.main-content .container .sidebar ul.sidebar_widget_list {
   margin: 0;
