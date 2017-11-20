@@ -2790,6 +2790,7 @@ body main.main-content .container .frontpage-widgets .ffwa__box_wrap {
 body main.main-content .container .frontpage-widgets .property.avalon_property {
   width: 25%;
   padding: 0 15px;
+  float: left;
 }
 body main.main-content .container .frontpage-widgets .property_addon_box_wrap {
   width: 33.3333%;
