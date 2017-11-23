@@ -213,7 +213,7 @@ function publish_metabox_options()
 
   echo '<div class="misc-pub-section"><ul>';
 
-  if ($post->post_type == 'page') {
+  if (class_exists('WPP_F') && $post->post_type == 'page') {
     echo "<li> " . WPP_F::checkbox("name=hide_page_title&label=" . __('Do not show page title.', 'wp-avalon') . "&value=true", ($hide_page_title == 'true' ? true : false)) . "</li>";
   }
 
