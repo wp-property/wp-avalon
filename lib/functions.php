@@ -175,14 +175,14 @@ function empty_sidebar($sidebar)
  *
  * @since Avalon 1.0
  */
-include_once get_stylesheet_directory() . '/lib/widgets/widgets-functions.php';
+include_once get_template_directory() . '/lib/widgets/widgets-functions.php';
 
 /**
  * Theme customizer
  *
  * @since Avalon 1.0
  */
-include_once get_stylesheet_directory() . '/lib/customizer/avalon-customizer.php';
+include_once get_template_directory() . '/lib/customizer/avalon-customizer.php';
 
 function avalon_customizer_live_preview()
 {
@@ -308,7 +308,7 @@ add_action('wp_ajax_nopriv_default_contact_us', 'default_contact_us');
  *
  * @since Avalon 1.0
  */
-include_once get_stylesheet_directory() . '/lib/widgets/register-default-widgets.php';
+include_once get_template_directory() . '/lib/widgets/register-default-widgets.php';
 
 /**
  * Avalon google maps infobox
