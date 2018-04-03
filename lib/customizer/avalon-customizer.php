@@ -1513,6 +1513,8 @@ function avalon_customize_css()
     body a.show_more.btn,
     body p.view-all a.btn,
     body p.more a.btn,
+    .widget_compare_properties .compare-button,
+    .property-fcp-buttons .fcp-button,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button {
       background-color: <?php echo get_theme_mod('avalon_button_bg_color', '#19294c'); ?>;
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
@@ -1572,6 +1574,8 @@ function avalon_customize_css()
     body a.show_more.btn:hover,
     body p.view-all a.btn:hover,
     body p.more a.btn:hover,
+    .widget_compare_properties .compare-button:hover,
+    .property-fcp-buttons .fcp-button:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button:hover {
       background-color: <?php echo get_theme_mod('avalon_hover_button_bg_color', '#0b1a3a'); ?>;
       border-color: <?php echo get_theme_mod('avalon_hover_button_border_color', '#0b1a3a'); ?>;

@@ -93,6 +93,8 @@ global $wp_properties;
 
   <div class="property-page-container">
 
+    <?php include_once get_template_directory() . '/template-parts/fcp-buttons.php'; ?>
+
     <div class="<?php wpp_css('property::entry_content', "entry-content"); ?>">
 
       <?php if (function_exists('ud_get_wpp_resp_slideshow')) : ?>

@@ -178,6 +178,13 @@ function empty_sidebar($sidebar)
 include_once get_template_directory() . '/lib/widgets/widgets-functions.php';
 
 /**
+ * Favorite and Compare functions
+ *
+ * @since Avalon 1.0
+ */
+include_once get_template_directory() . '/lib/favorites-compare/functions.php';
+
+/**
  * Theme customizer
  *
  * @since Avalon 1.0

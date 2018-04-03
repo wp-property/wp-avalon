@@ -469,6 +469,8 @@
       $('body p.view-all a.btn').css('background-color', newval);
       $('body p.more a.btn').css('background-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button').css('background-color', newval);
+      $('.widget_compare_properties .compare-button').css('background-color', newval);
+      $('.property-fcp-buttons .fcp-button').css('background-color', newval);
     });
   });
   wp.customize('avalon_button_border_color', function (value) {
@@ -526,6 +528,8 @@
       $('body p.view-all a.btn').css('border-color', newval);
       $('body p.more a.btn').css('border-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button').css('border-color', newval);
+      $('.widget_compare_properties .compare-button').css('border-color', newval);
+      $('.property-fcp-buttons .fcp-button').css('border-color', newval);
     });
   });
   wp.customize('avalon_button_text_color', function (value) {
@@ -583,6 +587,8 @@
       $('body p.view-all a.btn').css('color', newval);
       $('body p.more a.btn').css('color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button').css('color', newval);
+      $('.widget_compare_properties .compare-button').css('color', newval);
+      $('.property-fcp-buttons .fcp-button').css('color', newval);
     });
   });
   wp.customize('avalon_hover_button_bg_color', function (value) {
@@ -640,6 +646,8 @@
       $('body p.view-all a.btn:hover').css('background-color', newval);
       $('body p.more a.btn:hover').css('background-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button:hover').css('background-color', newval);
+      $('.widget_compare_properties .compare-button:hover').css('background-color', newval);
+      $('.property-fcp-buttons .fcp-button:hover').css('background-color', newval);
     });
   });
   wp.customize('avalon_hover_button_border_color', function (value) {
@@ -697,6 +705,8 @@
       $('body p.view-all a.btn:hover').css('border-color', newval);
       $('body p.more a.btn:hover').css('border-color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button:hover').css('border-color', newval);
+      $('.widget_compare_properties .compare-button:hover').css('border-color', newval);
+      $('.property-fcp-buttons .fcp-button:hover').css('border-color', newval);
     });
   });
   wp.customize('avalon_hover_button_text_color', function (value) {
@@ -754,6 +764,8 @@
       $('body p.view-all a.btn:hover').css('color', newval);
       $('body p.more a.btn:hover').css('color', newval);
       $('.wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button:hover').css('color', newval);
+      $('.widget_compare_properties .compare-button:hover').css('color', newval);
+      $('.property-fcp-buttons .fcp-button:hover').css('color', newval);
     });
   });
 

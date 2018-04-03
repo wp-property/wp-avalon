@@ -1815,6 +1815,7 @@ article.property-page-template h3.entry-subtitle {
   margin: 10px 0;
 }
 article.property-page-template .property-page-container {
+  position: relative;
   background-color: #FFF;
   padding: 20px;
   border-radius: 4px;

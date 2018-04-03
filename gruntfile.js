@@ -22,6 +22,7 @@ module.exports = function build( grunt ) {
         files: {
           'static/styles/style.css': [ 'static/styles/src/style.less' ],
           'static/styles/default-widgets-styles.css': [ 'static/styles/src/default-widgets-styles.less' ],
+          'static/styles/favorites-compare.css': [ 'static/styles/src/favorites-compare.less' ],
           'wp_properties.css': [ 'static/styles/src/properties-styles.less' ]
         }
       }
