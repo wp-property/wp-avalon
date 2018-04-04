@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Register compare widget
  */
@@ -56,24 +55,26 @@ class Compare_Properties_Widget extends WP_Widget
 
   function widget($args, $instance)
   {
-    echo $args['before_widget'];
-    $compare_val = json_encode($instance['property_stats']);
-    $title = apply_filters('widget_title', $instance['title']);
-    if (!empty($title)) {
-      ?>
-      <h2 class="widget-title"><?php echo $title; ?></h2>
-    <?php } ?>
-    <div class="wc__box wc__compare_box">
-      <div class="wc__box_wrap">
-        <input type='hidden' id="hidden_titles" value='<?php echo $compare_val; ?>'/>
-        <ul class="compare-list property-list">
+    if (true === get_theme_mod('avalon_compare_visibility', true)) { // Show widget if settings == true
+      echo $args['before_widget'];
+      $compare_val = json_encode($instance['property_stats']);
+      $title = apply_filters('widget_title', $instance['title']);
+      if (!empty($title)) {
+        ?>
+        <h2 class="widget-title"><?php echo $title; ?></h2>
+      <?php } ?>
+      <div class="wc__box wc__compare_box">
+        <div class="wc__box_wrap">
+          <input type='hidden' id="hidden_titles" value='<?php echo $compare_val; ?>'/>
+          <ul class="compare-list property-list">
 
-        </ul>
-        <button class="compare-button">Compare</button>
+          </ul>
+          <button class="compare-button"><?php _e('Compare', 'wp-avalon'); ?></button>
+        </div>
       </div>
-    </div>
-    <?php
-    echo $args['after_widget'];
+      <?php
+      echo $args['after_widget'];
+    }
   }
 }
 
@@ -112,21 +113,23 @@ class Favorites_Properties_Widget extends WP_Widget
 
   function widget($args, $instance)
   {
-    echo $args['before_widget'];
-    $title = apply_filters('widget_title', $instance['title']);
-    if (!empty($title)) {
-      ?>
-      <h2 class="widget-title"><?php echo $title; ?></h2>
-    <?php } ?>
-    <div class="wc__box wc__favorites_box">
-      <div class="wc__box_wrap">
-        <ul class="favorites-list property-list">
+    if (true === get_theme_mod('avalon_favorites_visibility', true)) { // Show widget if settings == true
+      echo $args['before_widget'];
+      $title = apply_filters('widget_title', $instance['title']);
+      if (!empty($title)) {
+        ?>
+        <h2 class="widget-title"><?php echo $title; ?></h2>
+      <?php } ?>
+      <div class="wc__box wc__favorites_box">
+        <div class="wc__box_wrap">
+          <ul class="favorites-list property-list">
 
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
-    <?php
-    echo $args['after_widget'];
+      <?php
+      echo $args['after_widget'];
+    }
   }
 }
 

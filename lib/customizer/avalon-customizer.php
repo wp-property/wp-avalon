@@ -1155,12 +1155,138 @@ function avalon_customize_register($wp_customize)
     'priority' => 2
   ));
 
+//  --------------------------------------------------------------------------
+//  Favorites & Compare options
+//  --------------------------------------------------------------------------
+  $wp_customize->add_section('avalon_fcp', array(
+    'title' => __('Favorites & Compare Properties options', 'wp-avalon'),
+    'priority' => 40,
+  ));
+  // Show favorites button and widget
+  $wp_customize->add_setting('avalon_favorites_visibility', array(
+    'sanitize_callback' => 'avalon_sanitize_callback',
+    'default' => 1
+  ));
+  $wp_customize->add_control('avalon_favorites_visibility', array(
+    'label' => __('Favorites: Display widget and button', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'type' => 'checkbox',
+    'priority' => 1
+  ));
+  // Show compare button and widget
+  $wp_customize->add_setting('avalon_compare_visibility', array(
+    'sanitize_callback' => 'avalon_sanitize_callback',
+    'default' => 1
+  ));
+  $wp_customize->add_control('avalon_compare_visibility', array(
+    'label' => __('Compare: Display widget and button', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'type' => 'checkbox',
+    'priority' => 2
+  ));
+  // Colors
+  $wp_customize->add_setting('avalon_compare_widget_bg', array(
+    'default' => '#19294c',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_compare_widget_bg', array(
+    'label' => __('Background color for titles column in Compare widget', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 3
+  )));
+
+  $wp_customize->add_setting('avalon_compare_widget_text', array(
+    'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_compare_widget_text', array(
+    'label' => __('Text and border color for titles column in Compare widget', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 4
+  )));
+
+  $wp_customize->add_setting('avalon_compare_widget_content_bg', array(
+    'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_compare_widget_content_bg', array(
+    'label' => __('Background color for container columns in Compare widget', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 5
+  )));
+
+  $wp_customize->add_setting('avalon_compare_widget_content_text', array(
+    'default' => '#333333',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_compare_widget_content_text', array(
+    'label' => __('Text and border color for container columns in Compare widget', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 6
+  )));
+
+  $wp_customize->add_setting('avalon_fcp_buttons_bg', array(
+    'default' => '#19294c',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_fcp_buttons_bg', array(
+    'label' => __('Background color Favorites and Compare buttons', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 7
+  )));
+
+  $wp_customize->add_setting('avalon_fcp_buttons_text', array(
+    'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_fcp_buttons_text', array(
+    'label' => __('Font color Favorites and Compare buttons', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 8
+  )));
+
+  $wp_customize->add_setting('avalon_fcp_buttons_bg_hover', array(
+    'default' => '#0b1a3a',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_fcp_buttons_bg_hover', array(
+    'label' => __('Background color Favorites and Compare buttons (Hover and Active)', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 9
+  )));
+
+  $wp_customize->add_setting('avalon_fcp_buttons_text_hover', array(
+    'default' => '#FFFFFF',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'capability' => 'edit_theme_options',
+    'transport' => 'postMessage'
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'avalon_fcp_buttons_text_hover', array(
+    'label' => __('Font color Favorites and Compare buttons (Hover and Active)', 'wp-avalon'),
+    'section' => 'avalon_fcp',
+    'priority' => 10
+  )));
+
 
 //  --------------------------------------------------------------------------
 //  Footer
 //  --------------------------------------------------------------------------
   $wp_customize->add_panel('footer_area_panel', array(
-    'priority' => 40,
+    'priority' => 41,
     'capability' => 'edit_theme_options',
     'title' => __('Footer section', 'wp-avalon')
   ));
@@ -1515,6 +1641,7 @@ function avalon_customize_css()
     body p.more a.btn,
     .widget_compare_properties .compare-button,
     .property-fcp-buttons .fcp-button,
+    ..fcp__message-box .fcp__message-box-wraper .fcp__close-message-box,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button {
       background-color: <?php echo get_theme_mod('avalon_button_bg_color', '#19294c'); ?>;
       border-color: <?php echo get_theme_mod('avalon_button_border_color', '#0b1a3a'); ?>;
@@ -1576,6 +1703,7 @@ function avalon_customize_css()
     body p.more a.btn:hover,
     .widget_compare_properties .compare-button:hover,
     .property-fcp-buttons .fcp-button:hover,
+    ..fcp__message-box .fcp__message-box-wraper .fcp__close-message-box:hover,
     .wpp_property_overview_shortcode .properties_pagination .wpp_pagination_buttons_wrapper.pagination-loadmore .wpp_loadmore_button:hover {
       background-color: <?php echo get_theme_mod('avalon_hover_button_bg_color', '#0b1a3a'); ?>;
       border-color: <?php echo get_theme_mod('avalon_hover_button_border_color', '#0b1a3a'); ?>;
@@ -1605,6 +1733,44 @@ function avalon_customize_css()
     body .footer .footer-area {
       background-color: <?php echo get_theme_mod('avalon_footer_bg_color', '#efefef'); ?>;
       border-top-color: <?php echo get_theme_mod('avalon_footer_border_color', '#c0c2c7'); ?>;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper {
+      background-color: <?php echo get_theme_mod('avalon_compare_widget_bg', '#19294c'); ?>;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper,
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper .fcpmb__compare_list div {
+      color: <?php echo get_theme_mod('avalon_compare_widget_text', '#FFFFFF'); ?>;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper .fcpmb__compare_list div {
+      border-top-color: <?php echo get_theme_mod('avalon_compare_widget_text', '#FFFFFF'); ?>;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper {
+      background-color: <?php echo get_theme_mod('avalon_compare_widget_content_bg', '#FFFFFF'); ?>;;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper,
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper .property-box-title a {
+      color: <?php echo get_theme_mod('avalon_compare_widget_content_text', '#333333'); ?>;
+    }
+
+    .fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper > div {
+      border-top-color: <?php echo get_theme_mod('avalon_compare_widget_content_text', '#333333'); ?>;
+    }
+
+    .property-fcp-buttons .fcp-button {
+      background-color: <?php echo get_theme_mod('avalon_fcp_buttons_bg', '#19294c'); ?>;
+      border-color: <?php echo get_theme_mod('avalon_fcp_buttons_bg', '#19294c'); ?>;
+      color: <?php echo get_theme_mod('avalon_fcp_buttons_text', '#FFFFFF'); ?>;
+    }
+    .property-fcp-buttons .fcp-button.active,
+    .property-fcp-buttons .fcp-button:hover {
+      background-color: <?php echo get_theme_mod('avalon_fcp_buttons_bg_hover', '#0b1a3a'); ?>;
+      border-color: <?php echo get_theme_mod('avalon_fcp_buttons_bg_hover', '#0b1a3a'); ?>;
+      color: <?php echo get_theme_mod('avalon_fcp_buttons_text_hover', '#FFFFFF'); ?>;
     }
 
   </style>

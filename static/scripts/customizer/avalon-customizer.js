@@ -829,6 +829,62 @@
     });
   });
 
+  wp.customize('avalon_compare_widget_bg', function (value) {
+    value.bind(function (newval) {
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper').css('background-color', newval);
+    });
+  });
+
+  wp.customize('avalon_compare_widget_text', function (value) {
+    value.bind(function (newval) {
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper').css('color', newval);
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper .fcpmb__compare_list div').css('color', newval);
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__title_column .fcpmb__title_column_wrapper .fcpmb__compare_list div').css('border-top-color', newval);
+    });
+  });
+
+  wp.customize('avalon_compare_widget_content_bg', function (value) {
+    value.bind(function (newval) {
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper').css('background-color', newval);
+    });
+  });
+
+  wp.customize('avalon_compare_widget_content_text', function (value) {
+    value.bind(function (newval) {
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper').css('color', newval);
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper .property-box-title a').css('color', newval);
+      $('.fcp-modal-box .fcpmb__wrapper_overflow .fcpmb__wrapper .fcpmb__content_column .fcpmb-property-box .fcpmb-property-box-wrapper > div').css('border-top-color', newval);
+    });
+  });
+
+  wp.customize('avalon_fcp_buttons_bg', function (value) {
+    value.bind(function (newval) {
+      $('.property-fcp-buttons .fcp-button').css('background-color', newval);
+      $('.property-fcp-buttons .fcp-button').css('border-color', newval);
+    });
+  });
+
+  wp.customize('avalon_fcp_buttons_text', function (value) {
+    value.bind(function (newval) {
+      $('.property-fcp-buttons .fcp-button').css('color', newval);
+    });
+  });
+
+  wp.customize('avalon_fcp_buttons_bg_hover', function (value) {
+    value.bind(function (newval) {
+      $('.property-fcp-buttons .fcp-button:hover').css('background-color', newval);
+      $('.property-fcp-buttons .fcp-button.active').css('background-color', newval);
+      $('.property-fcp-buttons .fcp-button:hover').css('border-color', newval);
+      $('.property-fcp-buttons .fcp-button.active').css('border-color', newval);
+    });
+  });
+
+  wp.customize('avalon_fcp_buttons_text_hover', function (value) {
+    value.bind(function (newval) {
+      $('.property-fcp-buttons .fcp-button:hover').css('color', newval);
+      $('.property-fcp-buttons .fcp-button.active').css('color', newval);
+    });
+  });
 
 })(jQuery);
 

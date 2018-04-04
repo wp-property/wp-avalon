@@ -145,16 +145,123 @@ body.nowrap {
   top: 0;
   .fcpmb__wrapper_overflow {
     position: relative;
-    background-color: #FFF;
-    padding: 20px;
-    .border-radius(4px);
-    border: 1px solid #c3c5c9;
+    background-color: transparent;
+    margin: 50px auto 0;
+    overflow: hidden;
     box-sizing: border-box;
     width: auto;
-    display: inline-block;
+    max-width: 900px;
+    height: auto;
+    max-height: 90%;
+    display: block;
 
     .fcpmb__wrapper {
+      position: relative;
+      height: inherit;
+      overflow-y: scroll;
+      width: ~"calc(100% + 20px)";
 
+      .close-fcp-compare {
+        position: absolute;
+        border: none;
+        background: transparent;
+        color: #FFF;
+        font-size: 2em;
+        top: 0;
+        right: 0;
+        height: 1em;
+        padding: 0;
+        line-height: 1em;
+        width: 1em;
+      }
+
+      .fcpmb__title_column {
+        padding-top: 150px;
+        width: 30%;
+        float: left;
+        @media (max-width: 900px) {
+          display: none;
+        }
+        .fcpmb__title_column_wrapper {
+          background-color: #19294c;
+          color: #FFF;
+          .property-box-title {
+            height: 109px;
+            padding: 46px 20px 36px;
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .fcpmb__compare_list {
+            div {
+              height: 77px;
+              padding: 35px 20px 22px;
+              font-size: 18px;
+              color: #FFF;
+              text-align: left;
+              line-height: 1.1;
+              border-top: 1px solid #FFF;
+            }
+          }
+        }
+      }
+      .fcpmb__content_column {
+        box-sizing: border-box;
+        float: left;
+        width: 70%;
+        padding: 0 30px 0 15px;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        .fcpmb-property-box {
+          width: 50%;
+          float: left;
+          padding: 0 15px;
+
+          .fcpmb-property-box-wrapper {
+            background-color: #FFF;
+            font-size: 18px;
+            overflow: hidden;
+            color: #333;
+
+            > div {
+              border-top: 1px solid #333;
+              box-sizing: border-box;
+              text-align: center;
+              height: 77px;
+              display: table;
+              width: 100%;
+
+              > div {
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+                width: 100%;
+                padding: 0 20px;
+              }
+            }
+
+            .property-box-image {
+              border: medium none;
+              display: block;
+              height: 150px;
+              overflow: hidden;
+              width: 100%;
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            .property-box-title {
+              height: 109px;
+              border: none;
+              a {
+                color: #333;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -178,9 +285,15 @@ body.nowrap {
     box-sizing: border-box;
     width: auto;
     display: inline-block;
+    text-align: center;
 
+    .fcp__text {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
     .fcp__close-message-box {
       .submit-button-style;
+      margin: 0 auto;
     }
   }
 }

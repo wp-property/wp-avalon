@@ -70,7 +70,6 @@ function exist_properties() {
 
 function add_compare_button() {
   var json = JSON.parse(localStorage.getItem("compare_json"));
-  console.log(json.length);
   if (json && json.length >= 2) {
     jQuery('.wc__compare_box .compare-button').addClass('active');
   } else {
@@ -79,6 +78,7 @@ function add_compare_button() {
 }
 
 function fcp_callback_message(message) {
+  jQuery('body').addClass('nowrap');
   jQuery('.fcp__message-box').show();
   jQuery('.fcp__message-box-wraper .fcp__text').html(message);
   jQuery('.fcp__message-box-wraper').css({
@@ -232,8 +232,8 @@ jQuery(document).ready(function () {
       var rows = '';
       for (var i in json) {
         if (typeof json[i].images !== 'undefined') {
-          if (typeof json[i].images.thumbnail !== 'undefined' && json[i].images.thumbnail !== '') {
-            var image = json[i].images.thumbnail;
+          if (typeof json[i].images.medium !== 'undefined' && json[i].images.medium !== '') {
+            var image = json[i].images.medium;
             var img = '<img src="' + image + '" alt="' + json[i].post_title + '" />';
           } else if (typeof json[i].featured_image_url !== 'undefined' && json[i].featured_image_url !== '') {
             var image = json[i].featured_image_url;
@@ -257,7 +257,12 @@ jQuery(document).ready(function () {
             } else if (k == 'price' && json[i]['price'] !== '' && typeof (json[i]['currency'] !== 'undefined')) {
               rows += json[i]['currency'] + json[i]['price'];
             } else {
-              rows += json[i][k];
+              var end = '';
+              if(json[i][k].length > 40) {
+                end = ' ...';
+              }
+              var row_text = json[i][k].substr(0, 40);
+              rows += row_text + end;
             }
           }
           rows += '</div></div>';
@@ -266,7 +271,7 @@ jQuery(document).ready(function () {
       }
       return rows;
     }
-
+    jQuery('body').addClass('nowrap');
     jQuery('.fcp-modal-box').show();
     jQuery('.fcp-modal-box .fcpmb__title_column_wrapper .fcpmb__compare_list').html(modal_titles());
     jQuery('.fcp-modal-box .fcpmb__content_column').html(modal_row());
@@ -274,15 +279,24 @@ jQuery(document).ready(function () {
     event.stopPropagation();
   });
   jQuery(document).on('click', '.fcpmb__wrapper_overflow', function (event) {
+    jQuery('body').removeClass('nowrap');
     event.stopPropagation();
   });
-  jQuery(document).on('click', '.fcp-modal-box, .close-fcp-compare', function () {
+  jQuery(document).on('click', '.fcp-modal-box, .close-fcp-compare', function (event) {
     jQuery('.fcp-modal-box').hide();
+    jQuery('body').removeClass('nowrap');
+    event.preventDefault();
   });
 
-  jQuery(document).on('click', '.fcp__close-message-box', function () {
+  jQuery(document).on('click', '.fcp__close-message-box, .fcp__message-box', function (event) {
     jQuery('.fcp__message-box-wraper').css('top', '0');
     jQuery('.fcp__message-box').hide();
+    jQuery('body').removeClass('nowrap');
+    event.preventDefault();
+  });
+  jQuery(document).on('click', '.fcp__message-box-wraper, .fcpmb__wrapper_overflow', function(event){
+    jQuery('body').removeClass('nowrap');
+    event.stopPropagation();
   });
 
 });
