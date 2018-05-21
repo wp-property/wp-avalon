@@ -57,7 +57,8 @@ class Compare_Properties_Widget extends WP_Widget
   {
     if (true === get_theme_mod('avalon_compare_visibility', true)) { // Show widget if settings == true
       echo $args['before_widget'];
-      $compare_val = json_encode($instance['property_stats']);
+      $property_stats = isset($instance['property_stats']) ? $instance['property_stats'] : '';
+      $compare_val = json_encode($property_stats);
       $title = apply_filters('widget_title', $instance['title']);
       if (!empty($title)) {
         ?>

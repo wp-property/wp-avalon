@@ -255,16 +255,16 @@ function save_post($post_id, $post = false)
 
 add_action('save_post', 'save_post', 10, 2);
 
-if( !function_exists( 'hide_page_title' ) ) {
+if (!function_exists('hide_page_title')) {
   function hide_page_title()
   {
     global $post;
-    if(is_home()) {
-      $post_id = get_option( 'page_for_posts' );
+    if (is_home()) {
+      $post_id = get_option('page_for_posts');
     } else {
       $post_id = $post->ID;
     }
-    if( get_post_meta( $post_id, 'hide_page_title', true ) == 'true' ) {
+    if (get_post_meta($post_id, 'hide_page_title', true) == 'true') {
       return true;
     }
     return false;
@@ -550,6 +550,16 @@ function avalon_property_overview_image($args = '')
              src="<?php echo $image[0]; ?>" alt="<?php echo $property['post_title']; ?>"
              style="width:<?php echo $image[1]; ?>px;height:<?php echo $image[2]; ?>px;"/>
       </a>
+
+      <div class="property-image-hover">
+        <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
+        </button>
+        <button class="fcp-button fcpb-compare" data-click="compare_properties"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
+        </button>
+      </div>
+
     </div>
     <?php
     $html = ob_get_contents();
@@ -561,6 +571,16 @@ function avalon_property_overview_image($args = '')
       <img class="no_property_image"
            src="<?php echo get_template_directory_uri() . '/static/images/no-avalible-property-image.png'; ?>"
            alt="no image"/>
+
+      <div class="property-image-hover">
+        <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
+        </button>
+        <button class="fcp-button fcpb-compare" data-click="compare_properties"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
+        </button>
+      </div>
+
     </div>
     <?php
     $html = ob_get_contents();

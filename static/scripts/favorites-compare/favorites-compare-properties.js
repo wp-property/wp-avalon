@@ -56,7 +56,7 @@ function exist_favorites_properties() {
 function exist_properties() {
   var compareResult = JSON.parse(localStorage.getItem("compare_json"));
   var favoriteResult = JSON.parse(localStorage.getItem("favorites_json"));
-  if (compareResult && 0 == compareResult.length || compareResult == null ) {
+  if (compareResult && 0 == compareResult.length || compareResult == null) {
     no_result('No items to compare', 'compare_properties', 'add');
   } else {
     no_result('', 'compare_properties', 'remove');
@@ -256,9 +256,21 @@ jQuery(document).ready(function () {
               rows += '-';
             } else if (k == 'price' && json[i]['price'] !== '' && typeof (json[i]['currency'] !== 'undefined')) {
               rows += json[i]['currency'] + json[i]['price'];
+            } else if (typeof json[i][k] == 'object') {
+              var row_list = '';
+              var filtered_list = '';
+              for (var p in json[i][k]) {
+                row_list += json[i][k][p] + ', ';
+              }
+              if (row_list.length > 40) {
+                filtered_list = row_list.substr(0, 40) + '...';
+              } else {
+                filtered_list = row_list.substr(0, row_list.length - 2);
+              }
+              rows += filtered_list;
             } else {
               var end = '';
-              if(json[i][k].length > 40) {
+              if (json[i][k].length > 40) {
                 end = ' ...';
               }
               var row_text = json[i][k].substr(0, 40);
@@ -271,6 +283,7 @@ jQuery(document).ready(function () {
       }
       return rows;
     }
+
     jQuery('body').addClass('nowrap');
     jQuery('.fcp-modal-box').show();
     jQuery('.fcp-modal-box .fcpmb__title_column_wrapper .fcpmb__compare_list').html(modal_titles());
@@ -294,7 +307,7 @@ jQuery(document).ready(function () {
     jQuery('body').removeClass('nowrap');
     event.preventDefault();
   });
-  jQuery(document).on('click', '.fcp__message-box-wraper, .fcpmb__wrapper_overflow', function(event){
+  jQuery(document).on('click', '.fcp__message-box-wraper, .fcpmb__wrapper_overflow', function (event) {
     jQuery('body').removeClass('nowrap');
     event.stopPropagation();
   });

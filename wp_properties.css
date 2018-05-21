@@ -504,6 +504,7 @@
   position: relative;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image {
+  position: relative;
   text-align: center;
   min-height: 100px;
 }
@@ -531,6 +532,24 @@
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image a.thumbnail:hover img {
   opacity: 0.8;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover button {
+  background: transparent;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover:hover {
+  opacity: 1;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_type_label {
   background-color: #19294c;
