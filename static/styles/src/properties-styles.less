@@ -357,11 +357,25 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                button {
-                  background: transparent;
-                  border: none;
-                  color: #FFF;
-                  cursor: pointer;
+                font-size: 1.5em;
+                line-height: 100%;
+                .transition(all, 0.15s, ease-in-out, 0s);
+                .property-image-hover-wrap {
+                  position: relative;
+                  top: 50%;
+                  margin-top: -10px;
+
+                  button {
+                    background: transparent;
+                    border: none;
+                    color: #FFF;
+                    cursor: pointer;
+                    .transition(all, 0.15s, ease-in-out, 0s);
+                    &:hover,
+                    &.active {
+                      color: #e95a65;
+                    }
+                  }
                 }
 
                 &:hover {

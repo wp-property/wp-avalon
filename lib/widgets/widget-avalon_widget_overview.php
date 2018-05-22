@@ -20,16 +20,6 @@ class avalon_widget_overview extends WP_Widget {
             <div class="property_image">
               <a rel="<?php echo $instance['title']; ?>" class="property_overview_thumb fancybox_image thumbnail" title="<?php echo $instance['title']; ?>" href="<?php echo esc_url($instance['image_uri']); ?>">
                 <img width="300" height="300" style="width:300px;height:300px;" alt="<?php echo $instance['title']; ?>" src="<?php echo esc_url($instance['image_uri']); ?>">
-
-<!--                <div class="property-image-hover">-->
-<!--                  <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"-->
-<!--                          data-id="--><?php //echo $property['ID']; ?><!--"><i class="fa fa-heart" aria-hidden="true"></i>-->
-<!--                  </button>-->
-<!--                  <button class="fcp-button fcpb-compare" data-click="compare_properties"-->
-<!--                          data-id="--><?php //echo $property['ID']; ?><!--"><i class="fa fa-exchange" aria-hidden="true"></i>-->
-<!--                  </button>-->
-<!--                </div>-->
-
               </a>
             </div>
           </div>
@@ -62,7 +52,7 @@ class avalon_widget_overview extends WP_Widget {
               <?php endif; ?>
             </div>
           </div>
-        </div>                   
+        </div>
       </div>
     </div>
 

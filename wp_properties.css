@@ -541,12 +541,31 @@
   height: 100%;
   top: 0;
   left: 0;
+  font-size: 1.5em;
+  line-height: 100%;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
 }
-.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover button {
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap {
+  position: relative;
+  top: 50%;
+  margin-top: -10px;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button {
   background: transparent;
   border: none;
   color: #FFF;
   cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+}
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button:hover,
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button.active {
+  color: #e95a65;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover:hover {
   opacity: 1;

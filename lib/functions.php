@@ -551,14 +551,7 @@ function avalon_property_overview_image($args = '')
              style="width:<?php echo $image[1]; ?>px;height:<?php echo $image[2]; ?>px;"/>
       </a>
 
-      <div class="property-image-hover">
-        <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
-                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
-        </button>
-        <button class="fcp-button fcpb-compare" data-click="compare_properties"
-                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
-        </button>
-      </div>
+      <?php echo get_fcp_hover_box($property); ?>
 
     </div>
     <?php
@@ -572,14 +565,7 @@ function avalon_property_overview_image($args = '')
            src="<?php echo get_template_directory_uri() . '/static/images/no-avalible-property-image.png'; ?>"
            alt="no image"/>
 
-      <div class="property-image-hover">
-        <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
-                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
-        </button>
-        <button class="fcp-button fcpb-compare" data-click="compare_properties"
-                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
-        </button>
-      </div>
+      <?php echo get_fcp_hover_box($property); ?>
 
     </div>
     <?php
@@ -700,4 +686,19 @@ function avalon_error_settings_message()
     <p><?php _e('Please, select a correct settings file.', 'wp-avalon'); ?></p>
   </div>
   <?php
+}
+
+function get_fcp_hover_box($property) {
+  ?>
+  <div class="property-image-hover">
+    <div class="property-image-hover-wrap">
+      <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
+              data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
+      </button>
+      <button class="fcp-button fcpb-compare" data-click="compare_properties"
+              data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+<?php
 }
