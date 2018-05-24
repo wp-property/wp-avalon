@@ -252,7 +252,7 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery('select:not(.selectpicker):not(.wpi_checkout_select_payment_method_dropdown):not(.rwmb-select-advanced)').selectpicker({
+  jQuery('select:not(.selectpicker):not(.rwmb-select_advanced):not(.wpi_checkout_select_payment_method_dropdown):not(.rwmb-select-advanced)').selectpicker({
     style: 'btn-default'
   });
 
