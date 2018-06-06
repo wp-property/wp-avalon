@@ -692,6 +692,7 @@ function get_fcp_hover_box($property) {
   ?>
   <div class="property-image-hover">
     <div class="property-image-hover-wrap">
+      <a href="<?php the_permalink($property['ID']); ?>" class="property-image-permalink"><i class="fa fa-plus"></i></a>
       <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
               data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
       </button>

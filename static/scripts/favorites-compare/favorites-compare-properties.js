@@ -251,7 +251,7 @@ jQuery(document).ready(function () {
           rows += '<div class="property-box-row"><div>';
           if (typeof json[i][k] != 'undefined') {
             if (json[i][k] == true) {
-              rows += '<div class="true-checkbox-image"></div>';
+              rows += '<div class="true-checkbox-image"><i class="fa fa-check-square"></i></div>';
             } else if (json[i][k] == '') {
               rows += '-';
             } else if (k == 'price' && json[i]['price'] !== '' && typeof (json[i]['currency'] !== 'undefined')) {

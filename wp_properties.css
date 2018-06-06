@@ -553,18 +553,23 @@
   top: 50%;
   margin-top: -10px;
 }
-.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button {
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button,
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap a.property-image-permalink {
   background: transparent;
   border: none;
   color: #FFF;
   cursor: pointer;
+  padding: 0;
+  margin: 0 8px;
   -webkit-transition: all 0.15s ease-in-out 0s;
   -moz-transition: all 0.15s ease-in-out 0s;
   -o-transition: all 0.15s ease-in-out 0s;
   transition: all 0.15s ease-in-out 0s;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button:hover,
-.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button.active {
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap a.property-image-permalink:hover,
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap button.active,
+.wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover .property-image-hover-wrap a.property-image-permalink.active {
   color: #e95a65;
 }
 .wpp_property_overview_shortcode .wpp_grid_view.wpp_property_view_result .all-properties .property .property_div_box .wpp_overview_left_column .property_image .property-image-hover:hover {
