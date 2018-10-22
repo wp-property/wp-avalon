@@ -150,7 +150,7 @@ jQuery(document).ready(function () {
           var not_isset = true;
           for (var i in json) {
             if (json[i].ID == click_id) {
-              fcp_callback_message('You already added this item to Favorites!');
+              fcp_callback_message('You have already added this item to Favorites!');
               not_isset = false;
             }
           }
@@ -170,7 +170,7 @@ jQuery(document).ready(function () {
           } else {
             for (var i in json) {
               if (json[i].ID == click_id) {
-                fcp_callback_message('You already added this item to Compare!');
+                fcp_callback_message('You have already added this item to Compare!');
                 not_isset = false;
               }
             }
