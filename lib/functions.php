@@ -16,7 +16,7 @@ function avalon_init()
   wp_enqueue_script('bootstrap-select.min', get_template_directory_uri() . '/static/scripts/bootstrap-select.min.js', array('jquery'));
   wp_enqueue_script('wp-avalon', get_template_directory_uri() . '/static/scripts/wp-avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
   wp_enqueue_script('jquery.flip.min', get_template_directory_uri() . '/static/scripts/jquery.flip.min.js', array('jquery'));
-  wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places', array('jquery'));
+  // wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUNObksOUAhhcLRd1qGEyL_tnypxhtPPU&libraries=places', array('jquery'));
   wp_localize_script('wp-avalon', 'avalon_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
   /* CSS */
