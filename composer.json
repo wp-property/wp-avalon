@@ -30,8 +30,8 @@
   "require": {
     "php": ">=5.3",
     "usabilitydynamics/lib-utility": "0.3.7",
-    "usabilitydynamics/lib-wp-bootstrap": "1.2.3",
-    "usabilitydynamics/lib-ud-api-client": "1.1.5.1"
+    "usabilitydynamics/lib-wp-bootstrap": "1.2.4",
+    "usabilitydynamics/lib-ud-api-client": "1.1.5.3"
   },
   "autoload": {
     "classmap": [ "lib/classes" ]
