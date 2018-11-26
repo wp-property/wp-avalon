@@ -1165,7 +1165,7 @@ function avalon_customize_register($wp_customize)
   // Show favorites button and widget
   $wp_customize->add_setting('avalon_favorites_visibility', array(
     'sanitize_callback' => 'avalon_sanitize_callback',
-    'default' => 1
+    'default' => true
   ));
   $wp_customize->add_control('avalon_favorites_visibility', array(
     'label' => __('Favorites: Display widget and button', 'wp-avalon'),
@@ -1176,7 +1176,7 @@ function avalon_customize_register($wp_customize)
   // Show compare button and widget
   $wp_customize->add_setting('avalon_compare_visibility', array(
     'sanitize_callback' => 'avalon_sanitize_callback',
-    'default' => 1
+    'default' => true
   ));
   $wp_customize->add_control('avalon_compare_visibility', array(
     'label' => __('Compare: Display widget and button', 'wp-avalon'),
