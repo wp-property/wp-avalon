@@ -17,10 +17,10 @@ function avalon_init()
   wp_enqueue_script('wp-avalon', get_template_directory_uri() . '/static/scripts/wp-avalon.js', array('jquery', 'bootstrap.min', 'bootstrap-select.min'));
   wp_enqueue_script('jquery.flip.min', get_template_directory_uri() . '/static/scripts/jquery.flip.min.js', array('jquery'));
   // Use Google Maps API Key, if provided.
-  if( function_exists('ud_get_wp_property') && ud_get_wp_property( 'configuration.google_maps_api' ) ) {
-    wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js?key='.ud_get_wp_property( 'configuration.google_maps_api' ) );
+  if (function_exists('ud_get_wp_property') && ud_get_wp_property('configuration.google_maps_api')) {
+    wp_enqueue_script('google-maps', 'https://maps.google.com/maps/api/js?key=' . ud_get_wp_property('configuration.google_maps_api'));
   } else {
-    wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js' );
+    wp_enqueue_script('google-maps', 'https://maps.google.com/maps/api/js');
   }
   wp_localize_script('wp-avalon', 'avalon_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
@@ -693,18 +693,24 @@ function avalon_error_settings_message()
   <?php
 }
 
-function get_fcp_hover_box($property) {
+function get_fcp_hover_box($property)
+{
   ?>
   <div class="property-image-hover">
     <div class="property-image-hover-wrap">
       <a href="<?php the_permalink($property['ID']); ?>" class="property-image-permalink"><i class="fa fa-plus"></i></a>
-      <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
-              data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
-      </button>
-      <button class="fcp-button fcpb-compare" data-click="compare_properties"
-              data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
-      </button>
+      <?php if (true === get_theme_mod('avalon_favorites_visibility', true)) { ?>
+        <button class="fcp-button fcpb-favorites" data-click="add-to-favorites"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-heart" aria-hidden="true"></i>
+        </button>
+      <?php } ?>
+
+      <?php if (true === get_theme_mod('avalon_compare_visibility', true)) { ?>
+        <button class="fcp-button fcpb-compare" data-click="compare_properties"
+                data-id="<?php echo $property['ID']; ?>"><i class="fa fa-exchange" aria-hidden="true"></i>
+        </button>
+      <?php } ?>
     </div>
   </div>
-<?php
+  <?php
 }
