@@ -1771,10 +1771,10 @@ body {
           padding-left: 15px;
           padding-right: 15px;
           width: 25%;
-          @media(max-width: 1000px) {
+          @media (max-width: 1000px) {
             width: 50%;
           }
-          @media(max-width: 640px) {
+          @media (max-width: 640px) {
             width: 100%;
           }
         }
@@ -1794,10 +1794,10 @@ body {
           padding: 0 15px 2em 15px;
           position: relative;
           float: left;
-          @media(max-width: 1000px) {
+          @media (max-width: 1000px) {
             width: 50%;
           }
-          @media(max-width: 768px) {
+          @media (max-width: 768px) {
             width: 100%;
           }
         }
@@ -2427,6 +2427,16 @@ body {
               padding: 0;
               list-style: none;
 
+              &.rwmb-input-list.collapse {
+                display: block;
+                li {
+                  input[type="checkbox"] {
+                    position: relative;
+                    margin-right: 5px;
+                    top: 1px;
+                  }
+                }
+              }
               &.wpp_feps_subscription_plan_list {
 
                 .wpp_feps_subscription_plan {

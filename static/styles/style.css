@@ -3630,6 +3630,14 @@ body main.main-content .container .content article .wpp_feps_form ul {
   padding: 0;
   list-style: none;
 }
+body main.main-content .container .content article .wpp_feps_form ul.rwmb-input-list.collapse {
+  display: block;
+}
+body main.main-content .container .content article .wpp_feps_form ul.rwmb-input-list.collapse li input[type="checkbox"] {
+  position: relative;
+  margin-right: 5px;
+  top: 1px;
+}
 body main.main-content .container .content article .wpp_feps_form ul.wpp_feps_subscription_plan_list .wpp_feps_subscription_plan {
   -webkit-transition: border-left 0.15s ease-in-out 0s;
   -moz-transition: border-left 0.15s ease-in-out 0s;
