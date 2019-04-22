@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Register compare widget
  */
@@ -136,8 +137,12 @@ class Favorites_Properties_Widget extends WP_Widget
 
 function FC_Properties_register_widgets()
 {
-  register_widget('Compare_Properties_Widget');
-  register_widget('Favorites_Properties_Widget');
+  if (true === get_theme_mod('avalon_compare_visibility', true)) {
+    register_widget('Compare_Properties_Widget');
+  }
+  if (true === get_theme_mod('avalon_favorites_visibility', true)) {
+    register_widget('Favorites_Properties_Widget');
+  }
 }
 
 add_action('widgets_init', 'FC_Properties_register_widgets');
