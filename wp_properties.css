@@ -2431,6 +2431,7 @@ article.property-page-template .property-page-container .property_stats.groups .
   margin: 0;
   padding: 13px 15px;
   position: relative;
+  text-transform: capitalize;
 }
 article.property-page-template .property-page-container .property_stats.groups .wpp_feature_list .wpp_stats_group:after {
   background-color: #DDD;
