@@ -11,16 +11,16 @@ add_action('wp_enqueue_scripts', 'register_fcp_styles');
 
 function register_fcp_styles()
 {
-  wp_enqueue_style('favorites-compare-properties', get_stylesheet_directory_uri() . '/static/styles/favorites-compare.css');
+  wp_enqueue_style('favorites-compare-properties', get_template_directory_uri() . '/static/styles/favorites-compare.css');
 
-  wp_enqueue_script('spin.min', get_stylesheet_directory_uri() . '/static/scripts/favorites-compare/spin.min.js', array('jquery'));
-  wp_enqueue_script('favorites-compare-properties', get_stylesheet_directory_uri() . '/static/scripts/favorites-compare/favorites-compare-properties.js', array('jquery'));
+  wp_enqueue_script('spin.min', get_template_directory_uri() . '/static/scripts/favorites-compare/spin.min.js', array('jquery'));
+  wp_enqueue_script('favorites-compare-properties', get_template_directory_uri() . '/static/scripts/favorites-compare/favorites-compare-properties.js', array('jquery'));
 }
 
 /**
  * Including F&C widgets
  */
-require_once get_stylesheet_directory() . '/lib/widgets/favorites-compare-widgets.php';
+require_once get_template_directory() . '/lib/widgets/favorites-compare-widgets.php';
 
 add_action('wp_footer', 'avalon_fcp_modal');
 
