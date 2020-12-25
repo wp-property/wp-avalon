@@ -93,7 +93,7 @@ var wp_avalon = {
       var height = 0,
         height2 = 0,
         columns = jQuery('.ffwa__box', jQuery(value)),
-      columns2 = jQuery('.ffwa__box > p', jQuery(value));
+        columns2 = jQuery('.ffwa__box > p', jQuery(value));
       columns.each(function (key1, value1) {
         var currentHeight = jQuery(value1).outerHeight();
         if (currentHeight > height) {
@@ -212,14 +212,18 @@ jQuery(function () {
    *
    * @author vorobjov@UD
    */
-  jQuery('[data-toggle="tooltip"]').tooltip();
+  if (typeof jQuery.fn.tooltip == 'function') {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+  }
 
   /**
    * Carousel init
    *
    * @author vorobjov@UD
    */
-  jQuery('.carousel').carousel();
+  if (typeof jQuery.fn.carousel == 'function') {
+    jQuery('.carousel').carousel();
+  }
 
   /**
    * Tabs init
