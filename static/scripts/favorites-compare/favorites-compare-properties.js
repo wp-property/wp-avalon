@@ -32,6 +32,7 @@ function result_html(result, object) {
     jQuery('.widget_' + object + ' .property-list').append(html);
   }
 }
+
 function no_result(text, object, action) {
   if (action == 'remove') {
     jQuery('.widget_' + object + ' .property-list li.no-result').remove();
@@ -40,12 +41,14 @@ function no_result(text, object, action) {
     jQuery('.widget_' + object + ' .property-list').html(html);
   }
 }
+
 function exist_compare_properties() {
   if (localStorage.getItem("compare_json") !== '' || localStorage.getItem("compare_json") !== null) {
     var result = JSON.parse(localStorage.getItem("compare_json"));
     result_html(result, 'compare_properties');
   }
 }
+
 function exist_favorites_properties() {
   if (localStorage.getItem("favorites_json") !== '' || localStorage.getItem("favorites_json") !== null) {
     var result = JSON.parse(localStorage.getItem("favorites_json"));
@@ -86,6 +89,7 @@ function fcp_callback_message(message) {
     left: (jQuery(window).width() - jQuery('.fcp__message-box-wraper').outerWidth()) / 2 + 'px'
   });
 }
+
 function active_button() {
   var compareJson = JSON.parse(localStorage.getItem("compare_json"));
   var favoritesJson = JSON.parse(localStorage.getItem("favorites_json"));
@@ -165,7 +169,25 @@ jQuery(document).ready(function () {
         if (json && json.length > 0) {
           not_isset = true;
           if (json && json.length >= 2) {
-            fcp_callback_message('You can not add more than two items!');
+            for (var i in json) {
+              if (json[i].ID == click_id) {
+                var exist = true;
+              } else {
+                var exist = false;
+              }
+            }
+            if (exist) {
+              json.splice(i, 1);
+              localStorage["compare_json"] = JSON.stringify(json);
+              add_compare_button();
+              jQuery('.fcp-button.fcpb-compare').removeClass('active');
+              exist_properties();
+              fcp_callback_message('Property deleted from compare list!');
+              document.location.reload();
+            } else {
+              console.log('123123');
+              fcp_callback_message('You can not add more than two items!');
+            }
             not_isset = false;
           } else {
             for (var i in json) {
@@ -198,6 +220,7 @@ jQuery(document).ready(function () {
     add_compare_button();
     jQuery('.fcp-button.fcpb-compare').removeClass('active');
     exist_properties();
+    fcp_callback_message('Property deleted from compare list!');
   });
   jQuery(document).on('click', '.wc__favorites_box .fcp_del_property', function () {
     var this_id = jQuery(this).attr('data-id');
@@ -212,6 +235,7 @@ jQuery(document).ready(function () {
     add_compare_button();
     jQuery('.fcp-button.fcpb-favorites').removeClass('active');
     exist_properties();
+    fcp_callback_message('Property deleted from favorites list!');
   });
 
 
@@ -410,6 +434,7 @@ function add_to_favorite_widget(ID) {
   });
 
 }
+
 function add_to_compare_widget(ID) {
   var id = ID;
   jQuery.ajax({
