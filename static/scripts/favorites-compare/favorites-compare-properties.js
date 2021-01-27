@@ -185,7 +185,6 @@ jQuery(document).ready(function () {
               fcp_callback_message('Property deleted from compare list!');
               document.location.reload();
             } else {
-              console.log('123123');
               fcp_callback_message('You can not add more than two items!');
             }
             not_isset = false;
